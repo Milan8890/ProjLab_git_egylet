@@ -29,7 +29,7 @@ public class Skeleton {
 		System.out.print(s);
 	}
 
-	public static void logFunctionStart(Object o, String functionName, List<String> params) throws Exception {
+	public static void logFunctionStart(Object o, String functionName, List<String> params){
 
 		String params_to_string = "";
 		if (params.size() != 0) {
@@ -42,10 +42,9 @@ public class Skeleton {
 
 		logString("start" + stringHash(o) + "." + functionName + "(" + params_to_string + ")");
 		indentation++;
-		// throw new Exception("Unimplemented");
 	}
 
-	public static void logFunctionEnd() throws Exception {
+	public static void logFunctionEnd(){
 		indentation--;
 		logString("end");
 	}
@@ -57,6 +56,7 @@ public class Skeleton {
 		}
 		logString("Válasz: ");
 		int answer = sc.nextInt();
+		
 		if (answer > options.size()) {
 			answer = options.size();
 		}
@@ -64,6 +64,14 @@ public class Skeleton {
 			answer = 1;
 		}
 
+		return answer;
+	}
+
+	public static int questionValue(String q) {
+		logString("[" + q + "]");
+		logString("Válasz: ");
+
+		int answer = sc.nextInt();
 		return answer;
 	}
 
