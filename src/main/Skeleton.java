@@ -10,8 +10,8 @@ public class Skeleton {
 	// TODO input list
 	// TODO szekvenciaszám?
 
-	static String stringHash(Object o) {
-
+	public static String createNameOfObject(Object o) {
+		// TODO class lecsippantás
 		return o.getClass().toString() + "#" + Integer.toString(o.hashCode() % 1000);
 	}
 
@@ -29,7 +29,22 @@ public class Skeleton {
 		System.out.print(s);
 	}
 
-	public static void logFunctionStart(Object o, String functionName, List<String> params){
+	public static void logFunctionStart(String s, String functionName, List<String> params) {
+		// TODO befaktor
+		String params_to_string = "";
+		if (params.size() != 0) {
+			for (String param : params) {
+				params_to_string += param;
+				params_to_string += ", ";
+			}
+			params_to_string.substring(0, params_to_string.length() - 2);
+		}
+
+		logString("start" + s + "." + functionName + "(" + params_to_string + ")");
+		indentation++;
+	}
+
+	public static void logFunctionStart(Object o, String functionName, List<String> params) {
 
 		String params_to_string = "";
 		if (params.size() != 0) {
@@ -40,11 +55,11 @@ public class Skeleton {
 			params_to_string.substring(0, params_to_string.length() - 2);
 		}
 
-		logString("start" + stringHash(o) + "." + functionName + "(" + params_to_string + ")");
+		logString("start" + createNameOfObject(o) + "." + functionName + "(" + params_to_string + ")");
 		indentation++;
 	}
 
-	public static void logFunctionEnd(){
+	public static void logFunctionEnd() {
 		indentation--;
 		logString("end");
 	}
@@ -56,7 +71,7 @@ public class Skeleton {
 		}
 		logString("Válasz: ");
 		int answer = sc.nextInt();
-		
+
 		if (answer > options.size()) {
 			answer = options.size();
 		}
@@ -76,11 +91,11 @@ public class Skeleton {
 	}
 
 	public static void initObj(Object o) {
-		System.out.println(stringHash(o));
+		System.out.println(createNameOfObject(o));
 	}
 
 	public static void createObj(Object o) {
-		logStringNoBreak(stringHash(o) + "->");
+		logStringNoBreak(createNameOfObject(o) + "->");
 		indentation++;
 	}
 
@@ -95,7 +110,7 @@ public class Skeleton {
 	}
 
 	public static void startUseCase(String useCaseName) {
-		System.out.println("\t--- useCaseName ---");
+		System.out.println("\t--- " + useCaseName + " ---");
 		indentation = 0;
 	}
 }
