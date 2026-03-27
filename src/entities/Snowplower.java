@@ -2,9 +2,14 @@ package entities;
 
 import user.Cleaner;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import equipment.Head;
 import equipment.HeadInventory;
 import playground.Crossing;
+import main.Skeleton;
 
 /**
  * 
@@ -14,15 +19,14 @@ public class Snowplower extends Vehicle {
     Head activeHead;
 public
     void onTick(){
-        System.out.println("Ontick hívódott");
+        //Skeleton.logFunctionStart(this, "OnTick", null);
 
-        System.out.println("Elhagytad a sávot?");
+        Skeleton.questionMultiple("Út végére értél?", Arrays.asList("foo", "bar"));
         boolean elhagyta = false; // TODO
         if(elhagyta){
             //activeHead.clean();
         }
-
-        System.out.println("OnTick visszatér");
+        
 
     }
     /** 
