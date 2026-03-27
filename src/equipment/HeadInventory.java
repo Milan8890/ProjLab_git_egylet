@@ -6,6 +6,7 @@ import java.util.List;
 
 import entities.Snowplower;
 import equipment.heads.*;
+import main.Skeleton;
 /**
  * Fejtároló egy hókotróhoz
  * <p>
@@ -15,6 +16,7 @@ import equipment.heads.*;
  */
 public class HeadInventory {
     Snowplower owner;
+    Head activeHead;
     List<Head> heads;
     List<HeadListing> listings;
 
@@ -61,5 +63,15 @@ public class HeadInventory {
             new HeadListing(new SaltSpreader(), 0),
             new HeadListing(new Dragon(), 0)));
         return ret;
+    }
+    /**
+     * visszaadja a fejtárolóban jelenleg aktív fejet
+     * 
+     * @return a jelenleg aktív fej
+     */
+    public Head getActiveHead() {
+        Skeleton.logFunctionStart(this, "getActiveHead", null);
+        Skeleton.logFunctionEnd();
+        return activeHead;
     }
 }

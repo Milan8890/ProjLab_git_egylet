@@ -46,7 +46,7 @@ public
 
         int answer = Skeleton.questionMultiple("Út végére értél?", Arrays.asList("Igen", "Nem"));
         if(answer==1){
-            //activeHead.clean(); TODO, még nincs implementálva
+            inventory.getActiveHead().clean(); 
         }
         
         Skeleton.logFunctionEnd();
@@ -61,7 +61,7 @@ public
     Cleaner getCleaner(){
         Skeleton.logFunctionStart(this, "getCleaner", null);
         Skeleton.logFunctionEnd();
-        return owner; //TODO
+        return owner;
     }
     /** 
      * visszaadja a headInventory-t
@@ -73,7 +73,7 @@ public
     HeadInventory getHeadInventory(){
         Skeleton.logFunctionStart(this, "getHeadInventory", null);  
         Skeleton.logFunctionEnd();
-        return inventory; //TODO
+        return inventory;
     }
     /** 
      * Visszaadja, hogy mennyi só áll rendelkezésre.
@@ -122,7 +122,7 @@ public
         }
         int answer2 = Skeleton.questionMultiple("Van elég pénz?", Arrays.asList("Igen", "Nem"));
         if(answer2==1){
-            //owner.removeMoney(); TODO
+            owner.removeMoney(); // TODO
         }
         Skeleton.logFunctionEnd();
         return answer2==1;
@@ -144,7 +144,7 @@ public
         }
         int answer2 = Skeleton.questionMultiple("Van elég pénz?", Arrays.asList("Igen", "Nem"));
         if(answer2==1){
-            //owner.removeMoney(); TODO
+            owner.removeMoney(); // TODO
         }
         Skeleton.logFunctionEnd();
         return answer2==1;
@@ -165,20 +165,32 @@ public
         Skeleton.logFunctionStart(this, "useBio", Arrays.asList( Double.toString(bioAmount)));
         Skeleton.logFunctionEnd();
     }
+    /**
+     * Konstruktor segítségével létrehoz egy Hókotrót egy hányó fejjel.
+     * @param owner a játékos aki irányítja a hókotrót
+     * @param base  a kereszteződés ahol a hókotró megjelenik
+     * @return a létrehozott Hókotró
+     */
     static Snowplower createWithEjector(Cleaner owner, Crossing base){
-        //Skeleton.logFunctionStart( "Snowplower", "creatWithEjector", Arrays.asList(owner.toString(), base.toString())); TODO
+        Skeleton.logFunctionStart( "Snowplower", "creatWithEjector", Arrays.asList(owner.toString(), base.toString()));
         Snowplower pl = new Snowplower(owner, base, null);
         HeadInventory inv =HeadInventory.createWithEjector(pl);
         pl.inventory=inv;
-        //Skeleton.logFunctionEnd(); TODO
+        Skeleton.logFunctionEnd();
         return pl;
     }
+    /**
+     * Konstruktor segítségével létrehoz egy Hókotrót egy jégtörő fejjel.
+     * @param owner a játékos aki irányítja a hókotrót
+     * @param base  a kereszteződés ahol a hókotró megjelenik
+     * @return a létrehozott Hókotró
+     */
     static Snowplower createWithBreaker(Cleaner owner, Crossing base){
-        //Skeleton.logFunctionStart( "Snowplower", "creatWithBreaker", Arrays.asList(owner.toString(), base.toString())); TODO
+        Skeleton.logFunctionStart( "Snowplower", "creatWithBreaker", Arrays.asList(owner.toString(), base.toString()));
         Snowplower pl = new Snowplower(owner, base, null);
         HeadInventory inv =HeadInventory.createWithBreaker(pl);
         pl.inventory=inv;
-        //Skeleton.logFunctionEnd(); TODO
+        Skeleton.logFunctionEnd();
         return pl;
     }
 }
