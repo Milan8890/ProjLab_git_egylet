@@ -1,6 +1,9 @@
 package equipment.heads;
+import java.util.List;
+
 import entities.Snowplower;
 import equipment.Head;
+import main.Skeleton;
 import playground.Lane;
 
 
@@ -32,8 +35,19 @@ public class Ejector extends Head {
      * @return a takarítás által kifizetendő pénz.
      */
     public int clean(Lane l){
-        int money = 10;
+        Skeleton.logFunctionStart(this, "clean", List.of(Skeleton.createNameOfObject(l)));
+        
+        double snowAmount = l.cleanSnow();
+        Skeleton.logString("Snow amount: " + snowAmount);
 
+        double length = l.getRoad().getLength();
+        Skeleton.logString("Lane lenght: " + length);
+
+
+        int money = (int) (snowAmount*length);
+        Skeleton.logString("Money: " + money);
+        
+        Skeleton.logFunctionEnd();
         return money;
     }
 }

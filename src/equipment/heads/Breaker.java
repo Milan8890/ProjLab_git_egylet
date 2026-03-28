@@ -1,7 +1,10 @@
 package equipment.heads;
+import java.util.List;
+
 import entities.Snowplower;
 import equipment.Head;
 import playground.Lane;
+import main.Skeleton;
 
 /**
  * Breaker
@@ -32,8 +35,18 @@ public class Breaker extends Head {
      */
     @Override
     public int clean(Lane l) {
-        int money = 10;
+        Skeleton.logFunctionStart(this, "clean", List.of(Skeleton.createNameOfObject(l)));
+        
+        double iceAmount = l.breakIce();
+        Skeleton.logString("Ice amount: " + iceAmount);
 
+        double length = l.getRoad().getLength();
+        Skeleton.logString("Lane lenght: " + length);
+
+        int money = (int) (iceAmount*length)*2;
+        Skeleton.logString("Money: " + money);
+        
+        Skeleton.logFunctionEnd();
         return money;
     }
 }
