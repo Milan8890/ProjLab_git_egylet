@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import entities.*;
+import user.*;
+import playground.*;
+import equipment.*;
+
 public class App {
 	static class NamedFunction {
 		String name;
@@ -69,7 +74,7 @@ public class App {
 		}
 	}
 
-	public static void main(String[] args) throws Exception {
+	public static void menu() {
 		catinit();
 
 		Scanner sc = new Scanner(System.in);
@@ -88,7 +93,24 @@ public class App {
 			}
 			currentCategory.useCases.get(choice).function.run();
 		}
+	}
 
-		// System.out.println(Skeleton.createNameOfObject(currentCategory));
+	static void playerTest(){
+		catinit();
+		BusDriver b = new BusDriver(null, null);
+		Cleaner c = new Cleaner(null, null);
+
+		c.addMoney(500);
+		c.removeMoney(3400);
+		c.buyBreakerSnowplower();
+		c.buyEjectorSnowplower();
+	}
+
+	static void plowerTest(){
+		Snowplower plower1 = Snowplower.createWithBreaker(new Cleaner(null, null), new Crossing());
+		Snowplower plower2 = Snowplower.createWithEjector(new Cleaner(null, null), new Crossing());
+	}
+	public static void main(String[] args) throws Exception {
+		// Itt lehet tesztelni
 	}
 }
