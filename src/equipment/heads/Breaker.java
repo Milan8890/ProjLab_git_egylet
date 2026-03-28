@@ -38,13 +38,10 @@ public class Breaker extends Head {
         Skeleton.logFunctionStart(this, "clean", List.of(Skeleton.createNameOfObject(l)));
         
         double iceAmount = l.breakIce();
-        Skeleton.logString("Ice amount: " + iceAmount);
 
         double length = l.getRoad().getLength();
-        Skeleton.logString("Lane lenght: " + length);
 
         int money = (int) (iceAmount*length)*2;
-        Skeleton.logString("Money: " + money);
         
         Skeleton.logFunctionEnd();
         return money;

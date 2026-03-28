@@ -39,28 +39,22 @@ public class Sweeper extends Head {
         Skeleton.logFunctionStart(this, "clean", List.of(Skeleton.createNameOfObject(l)));
         
         double snowAmount = l.cleanSnow();
-        Skeleton.logString("Snow amount: " + snowAmount);
 
         Road road = l.getRoad();
-        Skeleton.logString("Road: " + Skeleton.createNameOfObject(road));
 
         List<Lane> lanes = road.getLanes();     //erre kéne valamit logolni?
 
         if( lanes.getLast() != l){
-            Skeleton.logString("The lane is a non-siselane.");
 
             int idx = lanes.indexOf(l) + 1;
             lanes.get(idx).addSnow(snowAmount);
         }
         else{
-            Skeleton.logString("The lane is a sidelane.");
         }
 
         double length = road.getLength();
-        Skeleton.logString("Lane lenght: " + length);
 
         int money = (int) (snowAmount*length);
-        Skeleton.logString("Money: " + money);
         
         Skeleton.logFunctionEnd();
         return money;

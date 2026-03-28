@@ -38,14 +38,12 @@ public class Ejector extends Head {
         Skeleton.logFunctionStart(this, "clean", List.of(Skeleton.createNameOfObject(l)));
         
         double snowAmount = l.cleanSnow();
-        Skeleton.logString("Snow amount: " + snowAmount);
 
         double length = l.getRoad().getLength();
         Skeleton.logString("Lane lenght: " + length);
 
 
         int money = (int) (snowAmount*length);
-        Skeleton.logString("Money: " + money);
         
         Skeleton.logFunctionEnd();
         return money;

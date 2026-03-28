@@ -40,15 +40,12 @@ public class SaltSpreader extends Head {
         Skeleton.logFunctionStart(this, "clean", List.of(Skeleton.createNameOfObject(l)));
 
         Cleaner owner = snowplower.getCleaner();
-        Skeleton.logString("Cleaner: " + owner );
 
         double length = l.getRoad().getLenght();
-        Skeleton.logString("Lane lenght: " + length);
 
         l.setSalt(owner);
         
         double saltUsed = length*0.67;
-        Skeleton.logString("Used amount of salt: " + saltUsed);
         
         snowplower.useSalt(saltUsed);
 
@@ -69,19 +66,15 @@ public class SaltSpreader extends Head {
         Skeleton.logFunctionStart(this, "canEnterLane", List.of(Skeleton.createNameOfObject(l)));
 
         if(l.hasSalt() ){
-            Skeleton.logString("The lane is already salty.");
             Skeleton.logFunctionEnd();
             return false;
         }
 
         Road road = l.getRoad();
-        Skeleton.logString("Road: " + Skeleton.createNameOfObject(road));
            
         double lenght = road.getLenght();
-        Skeleton.logString("Length: " + lenght);
 
         double saltAmount = snowplower.getSalt();
-        Skeleton.logString("Salt amount: " + saltAmount);
 
         boolean enter = true;
 

@@ -39,13 +39,10 @@ public class Dragon extends Head {
         Skeleton.logFunctionStart(this, "clean", List.of(Skeleton.createNameOfObject(l)));
          
         double iceAmount = l.meltIce();
-        Skeleton.logString("Ice amount: " + iceAmount);
 
         double snowAmount = l.cleanSnow();
-        Skeleton.logString("Snow amount: " + snowAmount);
 
         double length = l.getRoad().getLength();
-        Skeleton.logString("Lane lenght: " + length);
 
         //A canEnter miatt csak a lenght-hez lehet kötve a számítása,
         // mivel ott ennek az értéke alapján mondja meg, hogy van-e elég,
@@ -53,10 +50,8 @@ public class Dragon extends Head {
         // További kérdés mi legyen itt a konstans szorzó???
         double usedBio = length*2.67;  
         snowplower.useBio(usedBio);
-        Skeleton.logString("Used amount of biokerozin: " + usedBio);
 
         int money = (int) ( (snowAmount*length) + (iceAmount*length)*2 );
-        Skeleton.logString("Money: " + money);
         
         Skeleton.logFunctionEnd();
         return money;
@@ -73,21 +68,16 @@ public class Dragon extends Head {
         Skeleton.logFunctionStart(this, "canEnterLane", List.of(Skeleton.createNameOfObject(l)));
 
         Road road = l.getRoad();
-        Skeleton.logString("Road: " + Skeleton.createNameOfObject(road));
 
         double lenght = road.getLenght();
-        Skeleton.logString("Length: " + lenght);
 
         double bioAmount = snowplower.getBio();
-        Skeleton.logString("Biokerozim amount: " + bioAmount);
 
         boolean enter = true;
         if( bioAmount < lenght*2.67){
             enter = false;
-            Skeleton.logString("There is not enough biokerozin.");
         }
         else{
-            Skeleton.logString("There is enough biokerozin.");
         }
 
         Skeleton.logFunctionEnd();
