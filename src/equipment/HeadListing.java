@@ -15,7 +15,9 @@ public class HeadListing {
      * @param price az ár amit ki kell fizetni érte
      */
     HeadListing(Head h, int price){
+        Skeleton.initSettingUpObjectStart(this);
         head=h;
+        Skeleton.initSettingUpObjectEnd();
     }
     /**
      * visszaadja az árucikkben szereplő fejet

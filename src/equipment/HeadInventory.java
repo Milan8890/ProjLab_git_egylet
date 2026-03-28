@@ -27,6 +27,7 @@ public class HeadInventory {
      * @param ownedHead a fej amit a Hókotró már birtokol, ez lesz az aktív fej is
      */
     private HeadInventory(Snowplower owner, Head ownedHead){
+        Skeleton.initSettingUpObjectStart(this);
         this.owner = owner;
         heads = new ArrayList<>();
         heads.add(ownedHead);
@@ -46,6 +47,7 @@ public class HeadInventory {
             new HeadListing(new Ejector(), 0),
             new HeadListing(new SaltSpreader(), 0),
             new HeadListing(new Dragon(), 0)));
+        Skeleton.initSettingUpObjectEnd();
         return ret;
 
     }
@@ -62,6 +64,7 @@ public class HeadInventory {
             new HeadListing(new Breaker(), 0),
             new HeadListing(new SaltSpreader(), 0),
             new HeadListing(new Dragon(), 0)));
+        Skeleton.initSettingUpObjectEnd();
         return ret;
     }
     /**

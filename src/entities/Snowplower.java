@@ -32,10 +32,12 @@ public
      * @param inventory a fejtároló amivel a hókotró rendelkezik
      */
     Snowplower(Cleaner owner,Crossing spawn, HeadInventory inventory){
+        Skeleton.initSettingUpObjectStart(this);
         this.owner=owner;
         this.inventory = inventory;
         currentLane= null;
         lastCrossing= spawn;
+        Skeleton.initSettingUpObjectEnd();
 
     }
     /**
