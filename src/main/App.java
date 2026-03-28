@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import entities.*;
+import user.*;
+import playground.*;
+import equipment.*;
+
 public class App {
 	static class NamedFunction {
 		String name;
@@ -88,6 +93,17 @@ public class App {
 			}
 			currentCategory.useCases.get(choice).function.run();
 		}
+	}
+
+	static void playerTest(){
+		catinit();
+		BusDriver b = new BusDriver(null, null);
+		Cleaner c = new Cleaner(null, null);
+
+		c.addMoney(500);
+		c.removeMoney(3400);
+		c.buyBreakerSnowplower();
+		c.buyEjectorSnowplower();
 	}
 
 	public static void main(String[] args) throws Exception {
