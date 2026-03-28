@@ -50,3 +50,4 @@ public abstract class Head {
         Skeleton.logFunctionEnd();
         return true;
     }
+}
