@@ -23,7 +23,7 @@ public class Crossing {
 	 * @return a kimenő utakat
 	 */
 	public Set<Road> getOutRoads() {
-		Skeleton.logFunctionStart(this, "getOutRoads", new ArrayList<>());
+		Skeleton.logFunctionStart(this, "getOutRoads", null);
 
 		Skeleton.logFunctionEnd();
 		return outRoads;

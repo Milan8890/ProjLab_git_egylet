@@ -15,7 +15,7 @@ public class Tunnel extends Road {
 	 */
 	@Override
 	public void onTick() {
-		Skeleton.logFunctionStart(this, "onTick", new ArrayList<>());
+		Skeleton.logFunctionStart(this, "onTick", null);
 
 		Skeleton.logFunctionEnd();
 	}

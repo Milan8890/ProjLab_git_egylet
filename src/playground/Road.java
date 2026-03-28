@@ -40,7 +40,7 @@ public class Road {
 	 * rak havat az összes hozzá tartozó sávra
 	 */
 	public void onTick() {
-		Skeleton.logFunctionStart(this, "onTick", new ArrayList<>());
+		Skeleton.logFunctionStart(this, "onTick", null);
 
 		int ans = Skeleton.questionValue("Mennyi havat adjon hozzá a sávokhoz?");
 		for (Lane l : lanes) {
@@ -68,7 +68,7 @@ public class Road {
 	 * @return az út hossza
 	 */
 	public double getLength() {
-		Skeleton.logFunctionStart(this, "getLength", new ArrayList<>());
+		Skeleton.logFunctionStart(this, "getLength", null);
 
 		int ans = Skeleton.questionValue("Milyen hosszú az út?");
 
@@ -82,7 +82,7 @@ public class Road {
 	 * @return a kereszteződés, amiből kiindul
 	 */
 	public Crossing getFromCrossing() {
-		Skeleton.logFunctionStart(this, "getFromCrossing", new ArrayList<>());
+		Skeleton.logFunctionStart(this, "getFromCrossing", null);
 
 		Skeleton.logFunctionEnd();
 		return fromCrossing;
@@ -94,7 +94,7 @@ public class Road {
 	 * @return a kereszteződés, amibe megy
 	 */
 	public Crossing getToCrossing() {
-		Skeleton.logFunctionStart(this, "getToCrossing", new ArrayList<>());
+		Skeleton.logFunctionStart(this, "getToCrossing", null);
 
 		Skeleton.logFunctionEnd();
 		return toCrossing;
@@ -106,7 +106,7 @@ public class Road {
 	 * (Ha nincs másik jármű az úton akkor semmit nem csinál)
 	 */
 	public void crashVehicle() {
-		Skeleton.logFunctionStart(this, "crashVehicle", new ArrayList<>());
+		Skeleton.logFunctionStart(this, "crashVehicle", null);
 		// ???
 		// most akkor a lane-eken lévőt össze kéne szednie, de hogyan?
 		// eltárolják?

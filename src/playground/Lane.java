@@ -65,7 +65,6 @@ public class Lane {
 	public void addVehicle(Vehicle v) {
 		Skeleton.logFunctionStart(this, "addVehicle", Arrays.asList(v.toString()));
 
-		System.out.println("A sávra felkerült a jármű.");
 
 		Skeleton.logFunctionEnd();
 	}
@@ -121,8 +120,7 @@ public class Lane {
 	public double getIce() {
 		Skeleton.logFunctionStart(this, "getIce", null);
 
-		int answer = Skeleton
-				.questionValue("Milyen magas a jég a sávban?");
+		int answer = Skeleton.questionValue("Milyen magas a jég a sávban?");
 
 		Skeleton.logFunctionEnd();
 		return (double) answer;
@@ -158,7 +156,7 @@ public class Lane {
 	 * hó magasságát
 	 */
 	public void trampleSnow() {
-		Skeleton.logFunctionStart(this, "trampleSnow", new ArrayList<>());
+		Skeleton.logFunctionStart(this, "trampleSnow", null);
 		Skeleton.logFunctionEnd();
 	}
 
@@ -169,7 +167,7 @@ public class Lane {
 	 * @return mennyi havat tüntetett el
 	 */
 	public double cleanSnow() {
-		Skeleton.logFunctionStart(this, "cleanSnow", new ArrayList<>());
+		Skeleton.logFunctionStart(this, "cleanSnow", null);
 		int answer = Skeleton
 				.questionValue("Milyen magas volt a hó a sávban takarítás előtt?");
 
@@ -184,7 +182,7 @@ public class Lane {
 	 * @return mennyi jeget tüntetett el
 	 */
 	public double meltIce() {
-		Skeleton.logFunctionStart(this, "meltIce", new ArrayList<>());
+		Skeleton.logFunctionStart(this, "meltIce", null);
 		int answer = Skeleton
 				.questionValue("Milyen magas volt a jég a sávban takarítás előtt?");
 
@@ -202,7 +200,7 @@ public class Lane {
 	 */
 
 	public double breakIce() {
-		Skeleton.logFunctionStart(this, "breakIce", new ArrayList<>());
+		Skeleton.logFunctionStart(this, "breakIce", null);
 		int answer = Skeleton
 				.questionValue("Milyen magas volt a jég a sávban a feltörése előtt?");
 
