@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class Skeleton {
-	static Stack<Object> initStack;
+	static Stack<Object> initStack = new Stack<>();
 
 	static Scanner sc = new Scanner(System.in);
 	static boolean init_log;

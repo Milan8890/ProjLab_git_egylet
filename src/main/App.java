@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import playground.*;
+
 public class App {
 	static class NamedFunction {
 		String name;
@@ -91,6 +93,6 @@ public class App {
 	}
 
 	public static void main(String[] args) throws Exception {
-		// Itt lehet tesztelni
+		Road r = new Road(new Crossing(), new Crossing(), 10, 10.0);
 	}
 }
