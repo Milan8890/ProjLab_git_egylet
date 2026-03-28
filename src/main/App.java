@@ -69,7 +69,7 @@ public class App {
 		}
 	}
 
-	public static void main(String[] args) throws Exception {
+	public static void menu() {
 		catinit();
 
 		Scanner sc = new Scanner(System.in);
@@ -88,7 +88,9 @@ public class App {
 			}
 			currentCategory.useCases.get(choice).function.run();
 		}
+	}
 
-		// System.out.println(Skeleton.createNameOfObject(currentCategory));
+	public static void main(String[] args) throws Exception {
+		// Itt lehet tesztelni
 	}
 }
