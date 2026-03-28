@@ -26,7 +26,9 @@ public class Lane {
 		Cleaner owner;
 
 		Salt(Cleaner c) {
+			Skeleton.initSettingUpObjectStart(this);
 			owner = c;
+			Skeleton.initSettingUpObjectEnd();
 		}
 
 		/**
