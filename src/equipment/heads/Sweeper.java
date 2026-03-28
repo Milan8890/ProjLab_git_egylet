@@ -19,7 +19,6 @@ import playground.Lane;
  */
 public class Sweeper extends Head {
 
-
     /**
      * Konstruktor.
      * 
@@ -66,4 +65,5 @@ public class Sweeper extends Head {
         Skeleton.logFunctionEnd();
         return money;
     }
+
 }

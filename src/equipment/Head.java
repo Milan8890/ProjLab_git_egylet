@@ -27,9 +27,9 @@ public abstract class Head {
      * @param snowplower A hókotró, amelyhez a fej kapcsolódik.
      */
     public Head(Snowplower snowplower) {
-        Skeleton.initObj(this);
+        Skeleton.initSettingUpObjectStart(this);
         this.snowplower = snowplower;
-        Skeleton.initObjFinish();
+        Skeleton.initSettingUpObjectEnd();
     }
 
     /**
@@ -53,4 +53,5 @@ public abstract class Head {
         Skeleton.logFunctionEnd();
         return true;
     }
+
 }

@@ -1,4 +1,5 @@
 package equipment.heads;
+import java.lang.ref.Cleaner;
 import java.util.List;
 
 import entities.Snowplower;
@@ -20,7 +21,6 @@ import playground.Road;
  */
 public class SaltSpreader extends Head {
 
-
     /**
      * Konstruktor.
      * 
@@ -36,14 +36,26 @@ public class SaltSpreader extends Head {
      * @param l a tisztítandó sáv.
      * @return a takarítás által kifizetendő pénz.
      */
-    public int clean(Lane l){   //DIAGRAMMM???
-        
-        throw new UnsupportedOperationException("Unimplemented method 'clean'");
-        
+    public int clean(Lane l){
+        Skeleton.logFunctionStart(this, "clean", List.of(Skeleton.createNameOfObject(l)));
 
+        Cleaner owner = snowplower.getCleaner();
+        Skeleton.logString("Cleaner: " + owner );
 
+        double length = l.getRoad().getLenght();
+        Skeleton.logString("Lane lenght: " + length);
 
+        l.setSalt(owner);
         
+        double saltUsed = length*0.67;
+        Skeleton.logString("Used amount of salt: " + saltUsed);
+        
+        snowplower.useSalt(saltUsed);
+
+        int money = 0;
+
+        Skeleton.logFunctionEnd();
+        return money;       
     }
 
     /**
@@ -56,10 +68,7 @@ public class SaltSpreader extends Head {
     public boolean canEnterLane(Lane l){
         Skeleton.logFunctionStart(this, "canEnterLane", List.of(Skeleton.createNameOfObject(l)));
 
-        boolean salty = l.hasSalt();
-        Skeleton.logString("Is there any salt on the next lane: " + salty);
-
-        if(salty){
+        if(l.hasSalt() ){
             Skeleton.logString("The lane is already salty.");
             Skeleton.logFunctionEnd();
             return false;
@@ -79,7 +88,7 @@ public class SaltSpreader extends Head {
         if(saltAmount < lenght*0.67){ //itt mi legyen a konstans???
             enter = false;
             Skeleton.logString("There is not enough salt.");
-        }null
+        }
         else{
             Skeleton.logString("There is enough salt.");
         }

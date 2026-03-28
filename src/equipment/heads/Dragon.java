@@ -93,4 +93,5 @@ public class Dragon extends Head {
         Skeleton.logFunctionEnd();
         return enter;
     }
+
 }
