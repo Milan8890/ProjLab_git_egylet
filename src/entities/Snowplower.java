@@ -173,7 +173,7 @@ public
      * @param base  a kereszteződés ahol a hókotró megjelenik
      * @return a létrehozott Hókotró
      */
-    static Snowplower createWithEjector(Cleaner owner, Crossing base){
+    public static Snowplower createWithEjector(Cleaner owner, Crossing base){
         Skeleton.logFunctionStart( "Snowplower", "creatWithEjector", Arrays.asList(owner.toString(), base.toString()));
         Snowplower pl = new Snowplower(owner, base, null);
         HeadInventory inv =HeadInventory.createWithEjector(pl);
@@ -187,7 +187,7 @@ public
      * @param base  a kereszteződés ahol a hókotró megjelenik
      * @return a létrehozott Hókotró
      */
-    static Snowplower createWithBreaker(Cleaner owner, Crossing base){
+    public static Snowplower createWithBreaker(Cleaner owner, Crossing base){
         Skeleton.logFunctionStart( "Snowplower", "creatWithBreaker", Arrays.asList(owner.toString(), base.toString()));
         Snowplower pl = new Snowplower(owner, base, null);
         HeadInventory inv =HeadInventory.createWithBreaker(pl);
