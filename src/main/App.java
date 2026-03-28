@@ -106,6 +106,10 @@ public class App {
 		c.buyEjectorSnowplower();
 	}
 
+	static void plowerTest(){
+		Snowplower plower1 = Snowplower.createWithBreaker(new Cleaner(), new Crossing());
+		Snowplower plower2 = Snowplower.createWithEjector(new Cleaner(), new Crossing());
+	}
 	public static void main(String[] args) throws Exception {
 		// Itt lehet tesztelni
 	}
