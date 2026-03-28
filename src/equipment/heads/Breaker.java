@@ -10,7 +10,7 @@ public class Breaker extends Head {
     }
 
     @Override
-    public void clean() {
+    public int clean() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'clean'");
     }
