@@ -2,8 +2,11 @@ package main;
 
 import java.util.List;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Skeleton {
+	static Stack<Object> initStack;
+
 	static Scanner sc = new Scanner(System.in);
 	static boolean init_log;
 	static int indentation;
@@ -111,12 +114,14 @@ public class Skeleton {
 	// új objektum létrehozásakor kell meghívni
 	// pl amikor a város létrehozza az utakat, a város meghívja ezt a függvény,
 	// magát beadva
+	@Deprecated
 	public static void createObj(Object o) {
 		logStringNoBreak(createNameOfObject(o) + "->");
 		indentation++;
 	}
 
 	// Objektum konstruktorjának végén kell meghívni
+	@Deprecated
 	public static void initObjFinish() {
 		indentation--;
 	}
@@ -132,5 +137,24 @@ public class Skeleton {
 	public static void startUseCase(String useCaseName) {
 		System.out.println("\t--- " + useCaseName + " ---");
 		indentation = 0;
+	}
+
+	// új függvény a régi init logging helyett
+	// minden konstruktor elején kell meghívni (csak ott)
+	public static void initSettingUpObjectStart(Object o) {
+		for (int i = 0; i < initStack.size(); i++) {
+			System.out.print("\t");
+		}
+		if (!initStack.isEmpty()) {
+			System.out.println(createNameOfObject(initStack.peek()) + "->");
+		}
+		System.out.println(createNameOfObject(o));
+		initStack.push(o);
+	}
+
+	// új függvény a régi init logging helyett
+	// konstruktor végén/objektum teljes beállítása végén kell meghívni
+	public static void initSettingUpObjectEnd(Object o) {
+		initStack.pop();
 	}
 }
