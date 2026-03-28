@@ -1,6 +1,7 @@
 package equipment.heads;
 import entities.Snowplower;
 import equipment.Head;
+import playground.Lane;
 
 public class Dragon extends Head {
 
@@ -9,7 +10,7 @@ public class Dragon extends Head {
     }
 
     @Override
-    public int clean() {
+    public int clean(Lane l) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'clean'");
     }

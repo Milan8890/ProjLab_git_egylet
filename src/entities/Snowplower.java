@@ -48,7 +48,7 @@ public
 
         int answer = Skeleton.questionMultiple("Út végére értél?", Arrays.asList("Igen", "Nem"));
         if(answer==1){
-            owner.addMoney(inventory.getActiveHead().clean()); 
+            owner.addMoney(inventory.getActiveHead().clean(currentLane)); 
         }
         
         Skeleton.logFunctionEnd();
