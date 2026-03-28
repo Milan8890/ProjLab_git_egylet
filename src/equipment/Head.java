@@ -1,5 +1,7 @@
 package equipment;
 
+import playground.Lane;
+
 public abstract class Head {
-    public abstract void clean();
+    public abstract int clean(Lane l);
 }
