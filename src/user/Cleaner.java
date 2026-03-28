@@ -2,7 +2,7 @@ package user;
 
 public class Cleaner extends Player {
 
-    public void removeMoney() {
+    public boolean removeMoney(int saltPrice) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'removeMoney'");
     }
