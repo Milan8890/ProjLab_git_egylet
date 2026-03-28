@@ -17,7 +17,6 @@ import playground.Crossing;
  * 
  */
 public class Cleaner extends Player {
-    Set<Snowplower> snowplowers;
 
     /**
      * Konstruktor, létrehoz egy új takarító játékost.
@@ -27,7 +26,6 @@ public class Cleaner extends Player {
     public Cleaner(String name, Color color)
     {
         super(name, color);
-        snowplowers = new HashSet<>();
         Skeleton.initSettingUpObjectEnd();
     }
 
@@ -70,7 +68,7 @@ public class Cleaner extends Player {
         //Kéne bázis lekérés?
         // TODO: LE KELL CSERÉLNI A base:
         if(temp)
-            snowplowers.add(Snowplower.createWithBreaker(this, new Crossing()));
+            Snowplower.createWithBreaker(this, new Crossing());
 
         Skeleton.logFunctionEnd();
         return temp;
@@ -90,7 +88,7 @@ public class Cleaner extends Player {
         //Kéne bázis lekérés?
         // TODO: LE KELL CSERÉLNI A base:
         if(temp)
-            snowplowers.add(Snowplower.createWithEjector(this, new Crossing()));
+            Snowplower.createWithEjector(this, new Crossing());
 
         Skeleton.logFunctionEnd();
         return temp;

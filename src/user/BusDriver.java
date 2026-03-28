@@ -13,8 +13,6 @@ import java.awt.Color;
  */
 public class BusDriver extends Player {
 
-    Bus bus;
-
     /**
      * Konstruktor, létrehoz egy új buszvezető játékost.
      * @param name a játékos neve
@@ -23,7 +21,7 @@ public class BusDriver extends Player {
     public BusDriver(String name, Color color)
     {
         super(name, color);
-        this.bus = new Bus();
+        new Bus();
         Skeleton.initSettingUpObjectEnd();
     }
 }
