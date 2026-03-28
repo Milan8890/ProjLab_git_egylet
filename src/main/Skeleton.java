@@ -154,7 +154,7 @@ public class Skeleton {
 
 	// új függvény a régi init logging helyett
 	// konstruktor végén/objektum teljes beállítása végén kell meghívni
-	public static void initSettingUpObjectEnd(Object o) {
+	public static void initSettingUpObjectEnd() {
 		initStack.pop();
 	}
 }
