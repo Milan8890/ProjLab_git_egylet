@@ -47,10 +47,10 @@ public class Sweeper extends Head {
 
         List<Lane> lanes = road.getLanes(); 
 
-        int sideLane = Skeleton.questionValue("Szélső sávban takarít a hókotró (0:nem, 1:igen): ");
+        int sideLane = Skeleton.questionMultiple("Szélső sávban takarít a hókotró: ", List.of("igen", "nem"));
 
         /*lanes.getLast() != l*/
-        if( sideLane == 0 ){
+        if( sideLane == 2 ){
             //int idx = lanes.indexOf(l) + 1;
             //lanes.get(idx).addSnow(snowAmount);
 

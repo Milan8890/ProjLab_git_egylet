@@ -79,10 +79,10 @@ public class Dragon extends Head {
 
         double bioAmount = snowplower.getBio();
 
-        int enter = Skeleton.questionValue("Van elég biokerozinunk (0:nem, 1:igen): ");
+        int enter = Skeleton.questionMultiple("Van elég biokerozinunk: ", List.of("igen", "nem"));
         boolean enterBool;
 
-        if(enter == 0){
+        if(enter == 2){
             enterBool = false;
         }
         else if(enter == 1){
