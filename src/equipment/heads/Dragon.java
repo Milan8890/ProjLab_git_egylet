@@ -1,6 +1,6 @@
 package equipment.heads;
-import java.util.List;
 
+import java.util.List;
 import entities.Snowplower;
 import equipment.Head;
 import main.Skeleton;
@@ -37,6 +37,7 @@ public class Dragon extends Head {
      * @param l a tisztítandó sáv.
      * @return a takarítás által kifizetendő pénz.
      */
+    @Override
     public int clean(Lane l){
         Skeleton.logFunctionStart(this, "clean", List.of(Skeleton.createNameOfObject(l)));
          

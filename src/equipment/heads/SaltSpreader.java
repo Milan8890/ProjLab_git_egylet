@@ -1,7 +1,7 @@
 package equipment.heads;
+
 import java.lang.ref.Cleaner;
 import java.util.List;
-
 import entities.Snowplower;
 import equipment.Head;
 import main.Skeleton;

@@ -1,7 +1,6 @@
 package equipment;
 
 import java.util.List;
-
 import entities.Snowplower;
 import playground.Lane;
 import main.Skeleton;
@@ -51,5 +50,3 @@ public abstract class Head {
         Skeleton.logFunctionEnd();
         return true;
     }
-
-}

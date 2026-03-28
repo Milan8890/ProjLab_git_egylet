@@ -1,6 +1,6 @@
 package equipment.heads;
-import java.util.List;
 
+import java.util.List;
 import entities.Snowplower;
 import equipment.Head;
 import playground.Lane;
