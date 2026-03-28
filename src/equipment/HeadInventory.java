@@ -41,12 +41,12 @@ public class HeadInventory {
      * @return HeadInventory ami a helyes elemeket tartalmazza
      */
     public static HeadInventory createWithBreaker(Snowplower owner){
-        HeadInventory ret = new HeadInventory(owner, new Breaker());
+        HeadInventory ret = new HeadInventory(owner, new Breaker(owner));
         ret.listings = new ArrayList<>(Arrays.asList( 
-            new HeadListing(new Sweeper() , 0), 
-            new HeadListing(new Ejector(), 0),
-            new HeadListing(new SaltSpreader(), 0),
-            new HeadListing(new Dragon(), 0)));
+            new HeadListing(new Sweeper(owner) , 0), 
+            new HeadListing(new Ejector(owner), 0),
+            new HeadListing(new SaltSpreader(owner), 0),
+            new HeadListing(new Dragon(owner), 0)));
         Skeleton.initSettingUpObjectEnd();
         return ret;
 
@@ -58,12 +58,12 @@ public class HeadInventory {
      * @return HeadInventory ami a helyes elemeket tartalmazza
      */
     public static HeadInventory createWithEjector(Snowplower owner) {
-        HeadInventory ret = new HeadInventory(owner, new Ejector());
+        HeadInventory ret = new HeadInventory(owner, new Ejector(owner));
         ret.listings = new ArrayList<>(Arrays.asList( 
-            new HeadListing(new Sweeper() , 0), 
-            new HeadListing(new Breaker(), 0),
-            new HeadListing(new SaltSpreader(), 0),
-            new HeadListing(new Dragon(), 0)));
+            new HeadListing(new Sweeper(owner) , 0), 
+            new HeadListing(new Breaker(owner), 0),
+            new HeadListing(new SaltSpreader(owner), 0),
+            new HeadListing(new Dragon(owner), 0)));
         Skeleton.initSettingUpObjectEnd();
         return ret;
     }
