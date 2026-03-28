@@ -24,7 +24,7 @@ public class Road {
 	public Road(Crossing from, Crossing to, int numOfLanes, double length) {
 		Skeleton.initSettingUpObjectStart(this);
 		lanes = new ArrayList<Lane>();
-		// TODO ez kéne?
+
 		for (int i = 0; i < numOfLanes; i++) {
 			lanes.add(new Lane(this));
 		}

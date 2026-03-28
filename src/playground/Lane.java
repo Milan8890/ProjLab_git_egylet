@@ -2,8 +2,6 @@ package playground;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
 
 import entities.Vehicle;
 import main.Skeleton;
@@ -109,8 +107,6 @@ public class Lane {
 	 */
 	public void setSalt(Cleaner c) {
 		Skeleton.logFunctionStart(this, "setSalt", Arrays.asList(Skeleton.createNameOfObject(c)));
-
-		// TODO Kéne ide dumblog? csak kiírja, hogy "beállítottam a sót"
 
 		salt = new Salt(c);
 
