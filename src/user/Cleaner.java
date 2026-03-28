@@ -27,7 +27,6 @@ public class Cleaner extends Player {
     public Cleaner(String name, Color color)
     {
         super(name, color);
-        Skeleton.initSettingUpObjectStart(this);
         snowplowers = new HashSet<>();
         Skeleton.initSettingUpObjectEnd();
     }

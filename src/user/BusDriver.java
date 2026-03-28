@@ -23,7 +23,6 @@ public class BusDriver extends Player {
     public BusDriver(String name, Color color)
     {
         super(name, color);
-        Skeleton.initSettingUpObjectStart(this);
         this.bus = new Bus();
         Skeleton.initSettingUpObjectEnd();
     }
