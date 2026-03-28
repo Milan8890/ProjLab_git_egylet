@@ -27,6 +27,8 @@ public class Dragon extends Head {
      */ 
     public Dragon(Snowplower snowplower) {
         super(snowplower);
+        Skeleton.initSettingUpObjectStart(this);
+        Skeleton.initSettingUpObjectEnd();
     }
 
     /**
@@ -47,12 +49,15 @@ public class Dragon extends Head {
         //A canEnter miatt csak a lenght-hez lehet kötve a számítása,
         // mivel ott ennek az értéke alapján mondja meg, hogy van-e elég,
         // és nem nézi mellé a hó- és vastagságot.
-        // További kérdés mi legyen itt a konstans szorzó???
-        double usedBio = length*2.67;  
+        // További kérdés mi legyen itt a konstans szorzó?
+        //double usedBio = length*2.67;
+        double usedBio = (double) Skeleton.questionValue("Mennyi biokerozint használjon: ");
+
         snowplower.useBio(usedBio);
 
-        int money = (int) ( (snowAmount*length) + (iceAmount*length)*2 );
-        
+        //int money = (int) (snowAmount*length);
+        int money = Skeleton.questionValue("Mennyi pénzt adjunk a hókotrónak: ");
+
         Skeleton.logFunctionEnd();
         return money;
     }
@@ -73,15 +78,22 @@ public class Dragon extends Head {
 
         double bioAmount = snowplower.getBio();
 
-        boolean enter = true;
-        if( bioAmount < lenght*2.67){
-            enter = false;
+        int enter = Skeleton.questionValue("Van elég biokerozinunk (0:nem, 1:igen): ");
+        boolean enterBool;
+
+        if(enter == 0){
+            enterBool = false;
+        }
+        else if(enter == 1){
+            enterBool = true;
         }
         else{
+            Skeleton.logString("Érvénytelen bemenet, feltételezi, hogy van elég biokerozin.");
+            enterBool = true;
         }
 
         Skeleton.logFunctionEnd();
-        return enter;
+        return enterBool;
     }
 
 }

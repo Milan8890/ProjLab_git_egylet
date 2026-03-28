@@ -26,6 +26,8 @@ public class Ejector extends Head {
      */ 
     public Ejector(Snowplower snowplower) {
         super(snowplower);
+        Skeleton.initSettingUpObjectStart(this);
+        Skeleton.initSettingUpObjectEnd();
     }
 
     /**
@@ -40,10 +42,9 @@ public class Ejector extends Head {
         double snowAmount = l.cleanSnow();
 
         double length = l.getRoad().getLength();
-        Skeleton.logString("Lane lenght: " + length);
 
-
-        int money = (int) (snowAmount*length);
+        //int money = (int) (snowAmount*length);
+        int money = Skeleton.questionValue("Mennyi pénzt adjunk a hókotrónak: ");
         
         Skeleton.logFunctionEnd();
         return money;

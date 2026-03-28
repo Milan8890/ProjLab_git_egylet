@@ -28,6 +28,8 @@ public class SaltSpreader extends Head {
      */ 
     public SaltSpreader(Snowplower snowplower) {
         super(snowplower);
+        Skeleton.initSettingUpObjectStart(this);
+        Skeleton.initSettingUpObjectEnd();
     }
 
     /**
@@ -45,7 +47,8 @@ public class SaltSpreader extends Head {
 
         l.setSalt(owner);
         
-        double saltUsed = length*0.67;
+        //double saltUsed = length*0.67;
+        double saltUsed = (double) Skeleton.questionValue("Mennyi sót használjon: ");
         
         snowplower.useSalt(saltUsed);
 
@@ -65,9 +68,14 @@ public class SaltSpreader extends Head {
     public boolean canEnterLane(Lane l){
         Skeleton.logFunctionStart(this, "canEnterLane", List.of(Skeleton.createNameOfObject(l)));
 
-        if(l.hasSalt() ){
+        int salty = Skeleton.questionValue("Van só a sávon (0:nem, 1:igen): ");
+
+        if(salty == 1){
             Skeleton.logFunctionEnd();
             return false;
+        }
+        else if (salty != 0){ 
+            Skeleton.logString("Érvénytelen bemenet, feltételezi, hogy nincs só a sávon.");
         }
 
         Road road = l.getRoad();
@@ -76,17 +84,22 @@ public class SaltSpreader extends Head {
 
         double saltAmount = snowplower.getSalt();
 
-        boolean enter = true;
+        int enter = Skeleton.questionValue("Van elég só a sáv tisztításához (0:nem, 1:igen): ");
+        boolean enterBool;
+        //if(saltAmount < lenght*0.67){ enter = false; }
 
-        if(saltAmount < lenght*0.67){ //itt mi legyen a konstans???
-            enter = false;
-            Skeleton.logString("There is not enough salt.");
+        if(enter == 0){
+            enterBool = false;
+        }
+        else if(enter == 1){
+            enterBool = true;
         }
         else{
-            Skeleton.logString("There is enough salt.");
+            Skeleton.logString("Érvénytelen bemenet, feltételezi, hogy van elég só.");
+            enterBool = true;
         }
 
         Skeleton.logFunctionEnd();
-        return enter;
+        return enterBool;
     }
 }

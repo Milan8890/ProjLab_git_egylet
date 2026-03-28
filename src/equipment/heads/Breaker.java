@@ -25,6 +25,8 @@ public class Breaker extends Head {
      */ 
     public Breaker(Snowplower snowplower) {
         super(snowplower);
+        Skeleton.initSettingUpObjectStart(this);
+        Skeleton.initSettingUpObjectEnd();
     }
 
     /**
@@ -41,7 +43,8 @@ public class Breaker extends Head {
 
         double length = l.getRoad().getLength();
 
-        int money = (int) (iceAmount*length)*2;
+        //int money =(int) (iceAmount*length)*2;
+        int money = Skeleton.questionValue("Mennyi pénzt adjunk a hókotrónak: "); 
         
         Skeleton.logFunctionEnd();
         return money;
