@@ -65,7 +65,6 @@ public class Lane {
 	public void addVehicle(Vehicle v) {
 		Skeleton.logFunctionStart(this, "addVehicle", Arrays.asList(v.toString()));
 
-
 		Skeleton.logFunctionEnd();
 	}
 
@@ -75,10 +74,9 @@ public class Lane {
 	 * @return van-e beakadt jármű a sávon
 	 */
 	public boolean hasStuckVehicle() {
-		Skeleton.logFunctionStart(this, "hasStuckVehicle", new ArrayList<>());
+		Skeleton.logFunctionStart(this, "hasStuckVehicle", null);
 
-		int ans = Skeleton.questionMultiple("Van a sávon jármű?",
-				Arrays.asList("Igen", "Nem"));
+		int ans = Skeleton.questionMultiple("Van a sávon jármű?", Arrays.asList("Igen", "Nem"));
 
 		Skeleton.logFunctionEnd();
 		return ans == 1;
@@ -90,7 +88,7 @@ public class Lane {
 	 * @return van-e só a sávon
 	 */
 	public boolean hasSalt() {
-		Skeleton.logFunctionStart(this, "hasSalt", new ArrayList<>());
+		Skeleton.logFunctionStart(this, "hasSalt", null);
 
 		int ans = Skeleton.questionMultiple("Van a sávon só?",
 				Arrays.asList("Igen", "Nem"));
@@ -134,8 +132,7 @@ public class Lane {
 	public double getSnow() {
 		Skeleton.logFunctionStart(this, "getSnow", null);
 
-		int answer = Skeleton
-				.questionValue("Milyen magas a jég a sávban?");
+		int answer = Skeleton.questionValue("Milyen magas a jég a sávban?");
 
 		Skeleton.logFunctionEnd();
 		return (double) answer;
@@ -168,8 +165,7 @@ public class Lane {
 	 */
 	public double cleanSnow() {
 		Skeleton.logFunctionStart(this, "cleanSnow", null);
-		int answer = Skeleton
-				.questionValue("Milyen magas volt a hó a sávban takarítás előtt?");
+		int answer = Skeleton.questionValue("Milyen magas volt a hó a sávban takarítás előtt?");
 
 		Skeleton.logFunctionEnd();
 		return (double) answer;
@@ -183,8 +179,7 @@ public class Lane {
 	 */
 	public double meltIce() {
 		Skeleton.logFunctionStart(this, "meltIce", null);
-		int answer = Skeleton
-				.questionValue("Milyen magas volt a jég a sávban takarítás előtt?");
+		int answer = Skeleton.questionValue("Milyen magas volt a jég a sávban takarítás előtt?");
 
 		Skeleton.logFunctionEnd();
 		return (double) answer;
@@ -201,8 +196,7 @@ public class Lane {
 
 	public double breakIce() {
 		Skeleton.logFunctionStart(this, "breakIce", null);
-		int answer = Skeleton
-				.questionValue("Milyen magas volt a jég a sávban a feltörése előtt?");
+		int answer = Skeleton.questionValue("Milyen magas volt a jég a sávban a feltörése előtt?");
 
 		Skeleton.logFunctionEnd();
 		return (double) answer;

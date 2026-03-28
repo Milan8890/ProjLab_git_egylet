@@ -56,7 +56,7 @@ public class Road {
 	 * @return az úthoz tartozó sávok
 	 */
 	public List<Lane> getLanes() {
-		Skeleton.logFunctionStart(this, "getLanes", new ArrayList<>());
+		Skeleton.logFunctionStart(this, "getLanes", null);
 
 		Skeleton.logFunctionEnd();
 		return lanes;
