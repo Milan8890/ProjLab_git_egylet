@@ -42,9 +42,8 @@ public class Skeleton {
 	// első paraméter egy string, ha nem lehetne megadni az objektumot, ami a
 	// függvényt hívta
 	public static void logFunctionStart(String s, String functionName, List<String> params) {
-		// TODO befaktor
 		String params_to_string = "";
-		if (params.size() != 0) {
+		if (params != null && params.size() != 0) {
 			for (String param : params) {
 				params_to_string += param;
 				params_to_string += ", ";
