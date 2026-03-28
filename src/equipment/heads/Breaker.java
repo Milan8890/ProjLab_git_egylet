@@ -44,7 +44,7 @@ public class Breaker extends Head {
         double length = l.getRoad().getLength();
 
         //int money =(int) (iceAmount*length)*2;
-        int money = Skeleton.questionValue("Mennyi pénzt adjunk a hókotrónak: "); 
+        int money = Skeleton.questionValue("Mennyi pénzt adjunk a hókotrónak?"); 
         
         Skeleton.logFunctionEnd();
         return money;

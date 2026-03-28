@@ -52,12 +52,12 @@ public class Dragon extends Head {
         // és nem nézi mellé a hó- és vastagságot.
         // További kérdés mi legyen itt a konstans szorzó?
         //double usedBio = length*2.67;
-        double usedBio = (double) Skeleton.questionValue("Mennyi biokerozint használjon: ");
+        double usedBio = (double) Skeleton.questionValue("Mennyi biokerozint használjon?");
 
         snowplower.useBio(usedBio);
 
         //int money = (int) (snowAmount*length);
-        int money = Skeleton.questionValue("Mennyi pénzt adjunk a hókotrónak: ");
+        int money = Skeleton.questionValue("Mennyi pénzt adjunk a hókotrónak?");
 
         Skeleton.logFunctionEnd();
         return money;
@@ -79,19 +79,8 @@ public class Dragon extends Head {
 
         double bioAmount = snowplower.getBio();
 
-        int enter = Skeleton.questionMultiple("Van elég biokerozinunk: ", List.of("igen", "nem"));
-        boolean enterBool;
-
-        if(enter == 2){
-            enterBool = false;
-        }
-        else if(enter == 1){
-            enterBool = true;
-        }
-        else{
-            Skeleton.logString("Érvénytelen bemenet, feltételezi, hogy van elég biokerozin.");
-            enterBool = true;
-        }
+        int enter = Skeleton.questionMultiple("Van elég biokerozinunk?", List.of("igen", "nem"));
+        boolean enterBool =  (enter == 1);
 
         Skeleton.logFunctionEnd();
         return enterBool;

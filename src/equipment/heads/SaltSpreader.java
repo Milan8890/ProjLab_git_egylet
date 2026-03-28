@@ -48,7 +48,7 @@ public class SaltSpreader extends Head {
         l.setSalt(owner);
         
         //double saltUsed = length*0.67;
-        double saltUsed = (double) Skeleton.questionValue("Mennyi sót használjon: ");
+        double saltUsed = (double) Skeleton.questionValue("Mennyi sót használjon?");
         
         snowplower.useSalt(saltUsed);
 
@@ -68,7 +68,7 @@ public class SaltSpreader extends Head {
     public boolean canEnterLane(Lane l){
         Skeleton.logFunctionStart(this, "canEnterLane", List.of(Skeleton.createNameOfObject(l)));
 
-        int salty = Skeleton.questionMultiple("Van só a sávon: ", List.of("igen", "nem"));
+        int salty = Skeleton.questionMultiple("Van só a sávon?", List.of("igen", "nem"));
 
         if(salty == 1){
             Skeleton.logFunctionEnd();
@@ -84,20 +84,9 @@ public class SaltSpreader extends Head {
 
         double saltAmount = snowplower.getSalt();
 
-        int enter = Skeleton.questionMultiple("Van elég só a sáv tisztításához: ", List.of("igen", "nem"));
-        boolean enterBool;
+        int enter = Skeleton.questionMultiple("Van elég só a sáv tisztításához?", List.of("igen", "nem"));
+        boolean enterBool =  (enter == 1);
         //if(saltAmount < lenght*0.67){ enter = false; }
-
-        if(enter == 2){
-            enterBool = false;
-        }
-        else if(enter == 1){
-            enterBool = true;
-        }
-        else{
-            Skeleton.logString("Érvénytelen bemenet, feltételezi, hogy van elég só.");
-            enterBool = true;
-        }
 
         Skeleton.logFunctionEnd();
         return enterBool;

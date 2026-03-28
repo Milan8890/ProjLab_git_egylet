@@ -45,7 +45,7 @@ public class Ejector extends Head {
         double length = l.getRoad().getLength();
 
         //int money = (int) (snowAmount*length);
-        int money = Skeleton.questionValue("Mennyi pénzt adjunk a hókotrónak: ");
+        int money = Skeleton.questionValue("Mennyi pénzt adjunk a hókotrónak?");
         
         Skeleton.logFunctionEnd();
         return money;

@@ -47,7 +47,7 @@ public class Sweeper extends Head {
 
         List<Lane> lanes = road.getLanes(); 
 
-        int sideLane = Skeleton.questionMultiple("Szélső sávban takarít a hókotró: ", List.of("igen", "nem"));
+        int sideLane = Skeleton.questionMultiple("Szélső sávban takarít a hókotró?", List.of("igen", "nem"));
 
         /*lanes.getLast() != l*/
         if( sideLane == 2 ){
@@ -60,7 +60,7 @@ public class Sweeper extends Head {
         double length = road.getLength();
 
         //int money = (int) (snowAmount*length);
-        int money = Skeleton.questionValue("Mennyi pénzt adjunk a hókotrónak: ");
+        int money = Skeleton.questionValue("Mennyi pénzt adjunk a hókotrónak?");
         
         Skeleton.logFunctionEnd();
         return money;
