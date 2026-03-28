@@ -24,14 +24,13 @@ public class Snowplower extends Vehicle {
     Cleaner owner;
     HeadInventory inventory;
 
-public
     /**
      * Konstruktor
      * @param owner a játékos aki irányítja a hókotrót
      * @param spawn a kereszteződés ahol a hókotró megjelenik
      * @param inventory a fejtároló amivel a hókotró rendelkezik
      */
-    Snowplower(Cleaner owner,Crossing spawn, HeadInventory inventory){
+    private Snowplower(Cleaner owner,Crossing spawn, HeadInventory inventory){
         Skeleton.initSettingUpObjectStart(this);
         this.owner=owner;
         this.inventory = inventory;
@@ -43,12 +42,13 @@ public
     /**
      * Sáv elhagyásakor tisztítja a sávot az aktív fejjel.
      */
+    
     void onTick(){
         Skeleton.logFunctionStart(this, "OnTick", null);
 
         int answer = Skeleton.questionMultiple("Út végére értél?", Arrays.asList("Igen", "Nem"));
         if(answer==1){
-            inventory.getActiveHead().clean(); 
+            owner.addMoney(inventory.getActiveHead().clean(currentLane)); 
         }
         
         Skeleton.logFunctionEnd();
@@ -122,12 +122,10 @@ public
             Skeleton.logFunctionEnd();
             return false;
         }
-        int answer2 = Skeleton.questionMultiple("Van elég pénz?", Arrays.asList("Igen", "Nem"));
-        if(answer2==1){
-            owner.removeMoney(); // TODO
-        }
+        int saltPrice = Skeleton.questionValue("Mennyibe kerül a só?");
+        boolean ret =owner.removeMoney(saltPrice);
         Skeleton.logFunctionEnd();
-        return answer2==1;
+        return ret;
     }
     /**
      * Vesz egy adag kerozint. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem kereszteződésben van.
@@ -144,12 +142,10 @@ public
             Skeleton.logFunctionEnd();
             return false;
         }
-        int answer2 = Skeleton.questionMultiple("Van elég pénz?", Arrays.asList("Igen", "Nem"));
-        if(answer2==1){
-            owner.removeMoney(); // TODO
-        }
+        int bioPrice = Skeleton.questionValue("Mennyibe kerül a kerozin?");
+        boolean ret =owner.removeMoney(bioPrice);
         Skeleton.logFunctionEnd();
-        return answer2==1;
+        return ret;
     }
 
     /**
@@ -173,7 +169,7 @@ public
      * @param base  a kereszteződés ahol a hókotró megjelenik
      * @return a létrehozott Hókotró
      */
-    static Snowplower createWithEjector(Cleaner owner, Crossing base){
+    public static Snowplower createWithEjector(Cleaner owner, Crossing base){
         Skeleton.logFunctionStart( "Snowplower", "creatWithEjector", Arrays.asList(owner.toString(), base.toString()));
         Snowplower pl = new Snowplower(owner, base, null);
         HeadInventory inv =HeadInventory.createWithEjector(pl);
@@ -187,7 +183,7 @@ public
      * @param base  a kereszteződés ahol a hókotró megjelenik
      * @return a létrehozott Hókotró
      */
-    static Snowplower createWithBreaker(Cleaner owner, Crossing base){
+    public static Snowplower createWithBreaker(Cleaner owner, Crossing base){
         Skeleton.logFunctionStart( "Snowplower", "creatWithBreaker", Arrays.asList(owner.toString(), base.toString()));
         Snowplower pl = new Snowplower(owner, base, null);
         HeadInventory inv =HeadInventory.createWithBreaker(pl);
