@@ -69,26 +69,28 @@ public class App {
 		}
 	}
 
-	public static void main(String[] args) throws Exception {
-		catinit();
+	public static void menu() {
+        catinit();
 
-		Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
-		while (true) {
-			for (int i = 0; i < 100; i++) {
-				System.out.println();
-			}
-			draw();
-			int choice = sc.nextInt();
-			if (choice == 100)
-				break;
-			if (currentCategory.useCases.size() <= choice) {
-				System.out.println("Wrong input.");
-				continue;
-			}
-			currentCategory.useCases.get(choice).function.run();
-		}
+        while (true) {
+            for (int i = 0; i < 100; i++) {
+                System.out.println();
+            }
+            draw();
+            int choice = sc.nextInt();
+            if (choice == 100)
+                break;
+            if (currentCategory.useCases.size() <= choice) {
+                System.out.println("Wrong input.");
+                continue;
+            }
+            currentCategory.useCases.get(choice).function.run();
+        }
+    }
 
-		// System.out.println(Skeleton.createNameOfObject(currentCategory));
-	}
+    public static void main(String[] args) throws Exception {
+        // Itt lehet tesztelni
+    }
 }
