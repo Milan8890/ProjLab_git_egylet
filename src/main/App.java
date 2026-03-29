@@ -208,17 +208,8 @@ public class App {
 	 */
 	public static void main(String[] args) throws Exception {
 		// Itt lehet tesztelni
-		// catinit();
+		catinit();
 		// menu();
-
-		//UseCases.purchaseHead_1();
-		//UseCases.vehicleCrash_2();
-		//UseCases.vehicleWaitingDueToCrash_3();
-		//UseCases.vehicleTrampeSnow_4();
-		//UseCases.BusDriverGetsPointForATurn_5();
-		//UseCases.BiokerozinPurchase_6();
-		//UseCases.SaltPurchase_7();
-		//UseCases.SnowplowerPurchaseWithTheChosenHead_8();
 
 	}
 }

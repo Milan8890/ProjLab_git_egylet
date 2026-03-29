@@ -105,11 +105,11 @@ public class UseCases {
         int vehicleType = Skeleton.questionMultiple("Milyen járműről van szó?", Arrays.asList("Autó", "Busz"));
 
         if(vehicleType == 1){ //Autó
-            Skeleton.setAnswerStack(Arrays.asList(2, 1, 1)); //Ha kell, akkor utolsó kettőt kell kivenni.
+            Skeleton.setAnswerStack(Arrays.asList(2, 1)); //Ha kell, akkor utolsó kettőt kell kivenni.
             car.onTick();
         }
         else if(vehicleType == 2){ //Busz
-            Skeleton.setAnswerStack(Arrays.asList(2,1,1)); //Ha kell,akkor utolsó kettőt kell kivenni.
+            Skeleton.setAnswerStack(Arrays.asList(2,1)); //Ha kell,akkor utolsó kettőt kell kivenni.
             bus.onTick();
         }
 	}
@@ -306,7 +306,7 @@ public class UseCases {
 
         Skeleton.startUseCase("Vehicle switches lanes due to deep snow");
 
-        Skeleton.setAnswerStack(Arrays.asList(2, 2, 0, 2, -1, -1, -1, -1, -1));
+        Skeleton.setAnswerStack(Arrays.asList(2, 2, 0, 2));
 
         car.onTick();
     }
