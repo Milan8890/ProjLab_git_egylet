@@ -15,16 +15,16 @@ public class Path {
     }
 
     public void extendPath(Lane l) {
-        Skeleton.logFunctionStart(this, "extendPath", Arrays.asList("l"));
+    Skeleton.logFunctionStart(this, "extendPath", Arrays.asList("l"));
 
-        //Megkérdezzük a sávot, melyik úthoz tartozik
-        Road r = l.getRoad(); 
+    //Megkérdezzük a sávot, melyik úthoz tartozik
+    Road r = l.getRoad(); 
 
-        //Megkérdezzük az utat, honnan indul
-        Crossing c = r.getFromCrossing();
+    //Megkérdezzük az utat, honnan indul
+    Crossing c = r.getFromCrossing();
 
-        System.out.println("Sáv sikeresen hozzáadva az útvonalhoz.");
+    System.out.println("Sáv sikeresen hozzáadva az útvonalhoz.");
 
-        Skeleton.logFunctionEnd();
-    }
+    Skeleton.logFunctionEnd();
+}
 }
