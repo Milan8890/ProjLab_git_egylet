@@ -16,7 +16,10 @@ public class Skeleton {
 	// visszaadja egy objektum "nevét", az objektumot kell beleadni
 	public static String createNameOfObject(Object o) {
 		// TODO class lecsippantás
-		return o.getClass().toString() + "#" + Integer.toString(o.hashCode() % 1000);
+		String temp = o.getClass().toString();
+		temp = temp.substring(temp.lastIndexOf(".") + 1);
+
+		return temp + "#" + Integer.toString(o.hashCode() % 1000);
 	}
 
 	// egy string kiírása megfelelő behúzással
@@ -39,17 +42,16 @@ public class Skeleton {
 	// első paraméter egy string, ha nem lehetne megadni az objektumot, ami a
 	// függvényt hívta
 	public static void logFunctionStart(String s, String functionName, List<String> params) {
-		// TODO befaktor
 		String params_to_string = "";
-		if (params.size() != 0) {
+		if (params != null && params.size() != 0) {
 			for (String param : params) {
 				params_to_string += param;
 				params_to_string += ", ";
 			}
-			params_to_string.substring(0, params_to_string.length() - 2);
+			params_to_string = params_to_string.substring(0, params_to_string.length() - 2);
 		}
 
-		logString("start" + s + "." + functionName + "(" + params_to_string + ")");
+		logString("start " + s + "." + functionName + "(" + params_to_string + ")");
 		indentation++;
 	}
 
@@ -64,10 +66,10 @@ public class Skeleton {
 				params_to_string += param;
 				params_to_string += ", ";
 			}
-			params_to_string.substring(0, params_to_string.length() - 2);
+			params_to_string = params_to_string.substring(0, params_to_string.length() - 2);
 		}
 
-		logString("start" + createNameOfObject(o) + "." + functionName + "(" + params_to_string + ")");
+		logString("start " + createNameOfObject(o) + "." + functionName + "(" + params_to_string + ")");
 		indentation++;
 	}
 
@@ -84,7 +86,7 @@ public class Skeleton {
 		for (int i = 0; i < options.size(); i++) {
 			logString((i + 1) + "." + options.get(i));
 		}
-		logString("Válasz: ");
+		logStringNoBreak("Válasz: ");
 		int answer = sc.nextInt();
 
 		if (answer > options.size()) {
@@ -100,7 +102,7 @@ public class Skeleton {
 	// érték kérdés feltevése
 	public static int questionValue(String q) {
 		logString("[" + q + "]");
-		logString("Válasz: ");
+		logStringNoBreak("Válasz: ");
 
 		int answer = sc.nextInt();
 		return answer;
@@ -146,7 +148,7 @@ public class Skeleton {
 			System.out.print("\t");
 		}
 		if (!initStack.isEmpty()) {
-			System.out.println(createNameOfObject(initStack.peek()) + "->");
+			System.out.print(createNameOfObject(initStack.peek()) + "->");
 		}
 		System.out.println(createNameOfObject(o));
 		initStack.push(o);

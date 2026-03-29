@@ -13,12 +13,16 @@ import main.Skeleton;
  * Tudja melyik hókotrófejet használja éppen a hókotró.<br>
  * Tudja mennyi só, illetve biokerozin van még az egyes fejekhez.<br>
  * 
- * <p></p>
+ * <p>
+ * </p>
  * 
  * Felelősségei: <br>
- *      kotrófejek cserélése, vásárlása. Alapanyag vásárlása, Eldönti, hogy fel tud-e hajtani egy útra.<br>
- *      Útvona követése. Ütközés utáni újraindulás. Nyilvántartja, hogy a jelenlegi úton hol helyezkedik el.<br>
- *      Letaposás végzése. A fej által visszaadott mennyiséggel kifizeti a játékost.<br>
+ * kotrófejek cserélése, vásárlása. Alapanyag vásárlása, Eldönti, hogy fel tud-e
+ * hajtani egy útra.<br>
+ * Útvona követése. Ütközés utáni újraindulás. Nyilvántartja, hogy a jelenlegi
+ * úton hol helyezkedik el.<br>
+ * Letaposás végzése. A fej által visszaadott mennyiséggel kifizeti a
+ * játékost.<br>
  */
 public class Snowplower extends Vehicle {
     Cleaner owner;
