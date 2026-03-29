@@ -25,187 +25,171 @@ import main.Skeleton;
  * játékost.<br>
  */
 public class Snowplower extends Vehicle {
-	Cleaner owner;
-	HeadInventory inventory;
+    Cleaner owner;
 
-	/**
-	 * Konstruktor
-	 * 
-	 * @param owner     a játékos aki irányítja a hókotrót
-	 * @param spawn     a kereszteződés ahol a hókotró megjelenik
-	 * @param inventory a fejtároló amivel a hókotró rendelkezik
-	 */
-	private Snowplower(Cleaner owner, Crossing spawn, HeadInventory inventory) {
-		Skeleton.initSettingUpObjectStart(this);
-		this.owner = owner;
-		this.inventory = inventory;
-		currentLane = null;
-		lastCrossing = spawn;
-		Skeleton.initSettingUpObjectEnd();
+    /**
+     * Konstruktor
+     * 
+     * @param owner a játékos aki irányítja a hókotrót
+     * @param spawn a kereszteződés ahol a hókotró megjelenik
+     * @param inventory a fejtároló amivel a hókotró rendelkezik
+     */
+    private Snowplower(Cleaner owner,Crossing spawn, HeadInventory inventory){
+        Skeleton.initSettingUpObjectStart(this);
+        this.owner=owner;
+        currentLane= null;
+        lastCrossing= spawn;
+        Skeleton.initSettingUpObjectEnd();
 
-	}
+    }
 
-	/**
-	 * Sáv elhagyásakor tisztítja a sávot az aktív fejjel.
-	 */
+    /**
+     * Sáv elhagyásakor tisztítja a sávot az aktív fejjel.
+     */
+    public void onTick(){
+        Skeleton.logFunctionStart(this, "OnTick", null);
+        int answer = Skeleton.questionMultiple("Út végére értél?", Arrays.asList("Igen", "Nem"));
+        if(answer ==1){
+            owner.addMoney(HeadInventory.createWithBreaker(this).getActiveHead().clean(currentLane)); 
+        }
+        super.onTick();
+        Skeleton.logFunctionEnd();
+    }
+    /** 
+     * visszaadja a birtokló játékost
+     * 
+     * 
+     * 
+     * @return A hókotrót birtokló játékos
+     */
+    public Cleaner getCleaner(){
+        Skeleton.logFunctionStart(this, "getCleaner", null);
+        Skeleton.logFunctionEnd();
+        return owner;
+    }
 
-	public void onTick() {
-		Skeleton.logFunctionStart(this, "OnTick", null);
+    /** 
+     * visszaadja a headInventory-t
+     * 
+     * @return HeadInventory
+     */
+    HeadInventory getHeadInventory(){
+        Skeleton.logFunctionStart(this, "getHeadInventory", null);  
+        Skeleton.logFunctionEnd();
+        return HeadInventory.createWithBreaker(this);
+    }
 
-		int answer = Skeleton.questionMultiple("Út végére értél?", Arrays.asList("Igen", "Nem"));
-		if (answer == 1) {
-			owner.addMoney(inventory.getActiveHead().clean(currentLane));
-		}
+    /** 
+     * Visszaadja, hogy mennyi só áll rendelkezésre.
+     * 
+     * @return mennyi Só áll rendelkezésre
+     */
+    double getSalt(){
+        Skeleton.logFunctionStart(this, "getSalt", null);
+        
+        double saltAmount = Skeleton.questionValue("Mennyi só van?");
 
-		Skeleton.logFunctionEnd();
-	}
+        Skeleton.logFunctionEnd();
+        return saltAmount;
+    }
 
-	/**
-	 * visszaadja a birtokló játékost
-	 * 
-	 * 
-	 * 
-	 * @return A hókotrót birtokló játékos
-	 */
-	Cleaner getCleaner() {
-		Skeleton.logFunctionStart(this, "getCleaner", null);
-		Skeleton.logFunctionEnd();
-		return owner;
-	}
+    /** 
+     * Visszaadja, hogy mennyi biokerozin áll rendelkezésre.
+     * 
+     * @return mennyi Biokerozin áll rendelkezésre
+     */
+    double getBio(){
+        Skeleton.logFunctionStart(this, "getBio", null);
+        
+        double bioAmount =Skeleton.questionValue("Mennyi kerozin van?");
 
-	/**
-	 * visszaadja a headInventory-t
-	 * 
-	 * 
-	 * 
-	 * @return HeadInventory
-	 */
-	HeadInventory getHeadInventory() {
-		Skeleton.logFunctionStart(this, "getHeadInventory", null);
-		Skeleton.logFunctionEnd();
-		return inventory;
-	}
+        Skeleton.logFunctionEnd();
+        return bioAmount;
+    }
 
-	/**
-	 * Visszaadja, hogy mennyi só áll rendelkezésre.
-	 * 
-	 * 
-	 * 
-	 * @return mennyi Só áll rendelkezésre
-	 */
-	double getSalt() {
-		Skeleton.logFunctionStart(this, "getSalt", null);
+    /** 
+     * Vesz egy adag sót. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem kereszteződésben van.
+     * 
+     * @return Sikeres volt-e a vásárlás
+     */
+    boolean buySalt(){
+        Skeleton.logFunctionStart(this, "buySalt", null);
+        boolean answer1 = isinCrossing();
+        if(!answer1)
+        {
+            Skeleton.logFunctionEnd();
+            return false;
+        }
+        int saltPrice = Skeleton.questionValue("Mennyibe kerül a só?");
+        boolean ret =owner.removeMoney(saltPrice);
+        Skeleton.logFunctionEnd();
+        return ret;
+    }
 
-		double saltAmount = Skeleton.questionValue("Mennyi só van?");
+    /**
+     * Vesz egy adag kerozint. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem kereszteződésben van.
+     * 
+     * @return Sikeres volt-e a vásárlás
+     */
+    boolean buyBio(){
+        Skeleton.logFunctionStart(this, "buyBio", null);
+        boolean answer1 = isinCrossing();
+        if(!answer1)
+        {
+            Skeleton.logFunctionEnd();
+            return false;
+        }
+        int bioPrice = Skeleton.questionValue("Mennyibe kerül a kerozin?");
+        boolean ret =owner.removeMoney(bioPrice);
+        Skeleton.logFunctionEnd();
+        return ret;
+    }
 
-		Skeleton.logFunctionEnd();
-		return saltAmount;
-	}
+    /**
+     * levonja az elhasznált sót
+     * 
+     * @param saltAmount Az elhasznált só mennyisége
+     */
+    void useSalt(double saltAmount){
+        Skeleton.logFunctionStart(this, "useSalt", Arrays.asList( Double.toString(saltAmount)));
+        Skeleton.logFunctionEnd();
+    }
 
-	/**
-	 * Visszaadja, hogy mennyi biokerozin áll rendelkezésre.
-	 * 
-	 * 
-	 * 
-	 * @return mennyi Biokerozin áll rendelkezésre
-	 */
-	double getBio() {
-		Skeleton.logFunctionStart(this, "getBio", null);
+    /**
+     * levonja az elhasznált kerozint
+     * 
+     * @param bioAmount Az elhasznált kerozin mennyisége
+     */
+    void useBio(double bioAmount){
+        Skeleton.logFunctionStart(this, "useBio", Arrays.asList( Double.toString(bioAmount)));
+        Skeleton.logFunctionEnd();
+    }
 
-		double bioAmount = Skeleton.questionValue("Mennyi kerozin van?");
-
-		Skeleton.logFunctionEnd();
-		return bioAmount;
-	}
-
-	/**
-	 * Vesz egy adag sót. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
-	 * kereszteződésben van.
-	 * 
-	 * 
-	 * 
-	 * @return Sikeres volt-e a vásárlás
-	 */
-	boolean buySalt() {
-		Skeleton.logFunctionStart(this, "buySalt", null);
-		int answer1 = Skeleton.questionMultiple("Kereszteződésben van?", Arrays.asList("Igen", "Nem"));
-		if (answer1 != 1) {
-			Skeleton.logFunctionEnd();
-			return false;
-		}
-		int saltPrice = Skeleton.questionValue("Mennyibe kerül a só?");
-		boolean ret = owner.removeMoney(saltPrice);
-		Skeleton.logFunctionEnd();
-		return ret;
-	}
-
-	/**
-	 * Vesz egy adag kerozint. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
-	 * kereszteződésben van.
-	 * 
-	 * 
-	 * 
-	 * @return Sikeres volt-e a vásárlás
-	 */
-	boolean buyBio() {
-		Skeleton.logFunctionStart(this, "buyBio", null);
-		int answer1 = Skeleton.questionMultiple("Kereszteződésben van?", Arrays.asList("Igen", "Nem"));
-		if (answer1 != 1) {
-			Skeleton.logFunctionEnd();
-			return false;
-		}
-		int bioPrice = Skeleton.questionValue("Mennyibe kerül a kerozin?");
-		boolean ret = owner.removeMoney(bioPrice);
-		Skeleton.logFunctionEnd();
-		return ret;
-	}
-
-	/**
-	 * levonja az elhasznált sót
-	 * 
-	 * 
-	 * 
-	 * @param saltAmount Az elhasznált só mennyisége
-	 */
-	void useSalt(double saltAmount) {
-		Skeleton.logFunctionStart(this, "useSalt", Arrays.asList(Double.toString(saltAmount)));
-		Skeleton.logFunctionEnd();
-	}
-
-	void useBio(double bioAmount) {
-		Skeleton.logFunctionStart(this, "useBio", Arrays.asList(Double.toString(bioAmount)));
-		Skeleton.logFunctionEnd();
-	}
-
-	/**
-	 * Konstruktor segítségével létrehoz egy Hókotrót egy hányó fejjel.
-	 * 
-	 * @param owner a játékos aki irányítja a hókotrót
-	 * @param base  a kereszteződés ahol a hókotró megjelenik
-	 * @return a létrehozott Hókotró
-	 */
-	public static Snowplower createWithEjector(Cleaner owner, Crossing base) {
-		Skeleton.logFunctionStart("Snowplower", "creatWithEjector", Arrays.asList(owner.toString(), base.toString()));
-		Snowplower pl = new Snowplower(owner, base, null);
-		HeadInventory inv = HeadInventory.createWithEjector(pl);
-		pl.inventory = inv;
-		Skeleton.logFunctionEnd();
-		return pl;
-	}
-
-	/**
-	 * Konstruktor segítségével létrehoz egy Hókotrót egy jégtörő fejjel.
-	 * 
-	 * @param owner a játékos aki irányítja a hókotrót
-	 * @param base  a kereszteződés ahol a hókotró megjelenik
-	 * @return a létrehozott Hókotró
-	 */
-	public static Snowplower createWithBreaker(Cleaner owner, Crossing base) {
-		Skeleton.logFunctionStart("Snowplower", "creatWithBreaker", Arrays.asList(owner.toString(), base.toString()));
-		Snowplower pl = new Snowplower(owner, base, null);
-		HeadInventory inv = HeadInventory.createWithBreaker(pl);
-		pl.inventory = inv;
-		Skeleton.logFunctionEnd();
-		return pl;
-	}
+    /**
+     * Konstruktor segítségével létrehoz egy Hókotrót egy hányó fejjel.
+     * 
+     * @param owner a játékos aki irányítja a hókotrót
+     * @param base  a kereszteződés ahol a hókotró megjelenik
+     * @return a létrehozott Hókotró
+     */
+    public static Snowplower createWithEjector(Cleaner owner, Crossing base){
+        Skeleton.logFunctionStart( "Snowplower", "creatWithEjector", Arrays.asList(owner.toString(), base.toString()));
+        Snowplower pl = new Snowplower(owner, base, null);
+        HeadInventory.createWithEjector(pl);
+        Skeleton.logFunctionEnd();
+        return pl;
+    }
+    /**
+     * Konstruktor segítségével létrehoz egy Hókotrót egy jégtörő fejjel.
+     * @param owner a játékos aki irányítja a hókotrót
+     * @param base  a kereszteződés ahol a hókotró megjelenik
+     * @return a létrehozott Hókotró
+     */
+    public static Snowplower createWithBreaker(Cleaner owner, Crossing base){
+        Skeleton.logFunctionStart( "Snowplower", "creatWithBreaker", Arrays.asList(owner.toString(), base.toString()));
+        Snowplower pl = new Snowplower(owner, base, null);
+        HeadInventory.createWithBreaker(pl);
+        Skeleton.logFunctionEnd();
+        return pl;
+    }
 }
