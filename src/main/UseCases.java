@@ -2,6 +2,8 @@ package main;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
+
 import entities.*;
 import playground.*;
 import user.*;
@@ -10,18 +12,30 @@ import equipment.*;
 public class UseCases {
 
 	public static void vehicleCrash_2() {
-		Skeleton.startUseCase("2. Vehicle crash");
+		Skeleton.startInit();
+
 		Car car = Skeleton.Market.car;
 		Road road = Skeleton.Market.road;
 
-		car.onTick(); // Car.java 90-tol 103-ig
+		Skeleton.startUseCase("2. Vehicle crash");
 
-		// ez kell, hogy rajta legyen a vehicle a lane-en
-		Skeleton.Market.lane2.addVehicle(Skeleton.Market.car2);
+		boolean otherVehicle = 1 == Skeleton.questionMultiple("Van másik jármű az úton?", Arrays.asList("Igen", "Nem"));
+
+		if (otherVehicle) {
+			// ez kell, hogy rajta legyen a vehicle a lane-en
+			Skeleton.Market.lane2.addVehicle(Skeleton.Market.car2);
+		}
+
+		Skeleton.setAnswerStack(Arrays.asList(2, 2, 100, 1, 2));
+
+		car.onTick(); // Car.java 90-tol 103-ig
 
 		// A bus-on hogy lesz meghívva a crashedInto, a road crashVehicle fv-nek kene
 		// csinalnia, de az ures.
-		road.crashVehicle(car);
+
+		// ez nem is kell, mert a crashet majd meghívja az elcsúszott jármű
+		// vagy külön use case, amikor ennek van értelme?
+		// road.crashVehicle(car);
 	}
 
 	public static void vehicleWaitingDueToCrash_3() {
