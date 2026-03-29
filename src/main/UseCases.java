@@ -1,6 +1,9 @@
 package main;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.Stack;
+
 import entities.*;
 import playground.*;
 import user.*;
@@ -33,101 +36,122 @@ public class UseCases {
         plower.getHeadInventory().buyListing(headListing);
     }
 
-    public static void vehicleCrash_2() {
-        Skeleton.startUseCase("2. Vehicle crash");
-        Car car = Skeleton.Market.car;
-        Bus bus = Skeleton.Market.bus;
-        Road road = Skeleton.Market.road;
-        Lane lane = Skeleton.Market.lane;
-        Lane lane2 = Skeleton.Market.lane2;
+	public static void vehicleCrash_2() {
+		Skeleton.startInit();
 
-        lane.addVehicle(car);
-        lane2.addVehicle(bus);
+		Car car = Skeleton.Market.car;
+		Road road = Skeleton.Market.road;
 
-        car.onTick(); //Ebben kell ütközeteni, 93-100 sorok.
-    }
+		Skeleton.startUseCase("2. Vehicle crash");
+
+		boolean otherVehicle = 1 == Skeleton.questionMultiple("Van másik jármű az úton?", Arrays.asList("Igen", "Nem"));
+
+		if (otherVehicle){ //Van másik jármű
+			// ez kell, hogy rajta legyen a vehicle a lane-en
+			Skeleton.Market.lane2.addVehicle(Skeleton.Market.car2);
+            Skeleton.setAnswerStack(Arrays.asList(2, 2, 100, 1, 2, 60));
+            car.onTick();
+		}
+        else { //Nincs másik jármű
+            Skeleton.setAnswerStack(Arrays.asList(2, 2, 100, 1, 2));
+            car.onTick();
+        }
+	}
 
     public static void vehicleWaitingDueToCrash_3() {
-        Skeleton.startUseCase("3. Vehicle waiting due to crash");
+        Skeleton.startInit();
         Car car = Skeleton.Market.car;
 
-        car.onTick(); //Nincs kereszteződésben, majd várakozik ütközés után. 74-88 sorok.
-    }
+		Skeleton.startUseCase("3. Vehicle waiting due to crash");
+		
+		car.onTick(); //Nincs kereszteződésben, majd várakozik ütközés után. 74-88 sorok.
+	}
 
-    public static void vehicleTrampeSnow_4(){
-        Skeleton.startUseCase("4. Vehicle trampe snow");
+	public static void vehicleTrampeSnow_4(){
+        Skeleton.startInit();
         Car car = Skeleton.Market.car;
 
-        car.onTick();
+		Skeleton.startUseCase("4. Vehicle trampe snow");
+
+		car.onTick(); // Car.java 134 sor.
     }
 
-    public static void BusDriverGetsPointForATurn_5(){
-        Skeleton.startUseCase("5. Bus driver gets point for a turn");
+	public static void BusDriverGetsPointForATurn_5() {
+        Skeleton.startInit();
         Bus bus = Skeleton.Market.bus;
 
-        bus.onTick(); //Bus.java 112-tol 117-ig
-    }
+		Skeleton.startUseCase("5. Bus driver gets point for a turn");
 
-    public static void BiokerozinPurchase_6(){
-        Skeleton.startUseCase("6. Biokerozin purchase");
+		bus.onTick(); // Bus.java 137 sor.
+	}
+
+	public static void BiokerozinPurchase_6() {
+        Skeleton.startInit();
         Snowplower plower = Skeleton.Market.snowplower;
 
-        //Itt a "felhasználó kerozin vásárlást kezdeményez a hókotróval"-t hogy kéne?
+		Skeleton.startUseCase("6. Biokerozin purchase");
 
-        boolean purchased = plower.buyBio(); //Snowplower.java 130-tol 142-ig
-        if (purchased) {
-            Skeleton.logString("Biokerozin vásárlás sikeres.");
-        } else {
-            Skeleton.logString("Biokerozin vásárlás sikertelen.");
-        }
-    }
+		// Itt a "felhasználó kerozin vásárlást kezdeményez a hókotróval"-t hogy kéne?
 
-    public static void SaltPurchase_7(){
-        Skeleton.startUseCase("7. Salt purchase");
+		boolean purchased = plower.buyBio(); // Snowplower.java 178- 189 sorok.
+		if (purchased) {
+			Skeleton.logString("Biokerozin vásárlás sikeres.");
+		} else {
+			Skeleton.logString("Biokerozin vásárlás sikertelen.");
+		}
+	}
+
+	public static void SaltPurchase_7() {
+        Skeleton.startInit();
         Snowplower plower = Skeleton.Market.snowplower;
 
-        //Itt a "felhasználó só vásárlást kezdeményez a hókotróval"-t hogy kéne?
+		Skeleton.startUseCase("7. Salt purchase");
 
-        boolean purchased = plower.buySalt(); //Snowplower.java 111-tol 123-ig
-        if (purchased) {
-            Skeleton.logString("Só vásárlás sikeres.");
-        } else {
-            Skeleton.logString("Só vásárlás sikertelen.");
-        }
-    }
+		// Itt a "felhasználó só vásárlást kezdeményez a hókotróval"-t hogy kéne?
 
-    public static void SnowplowerPurchaseWithTheChosenHead_8(){
-        Skeleton.startUseCase("8. Snowplower purchase with the chosen head");
+		boolean purchased = plower.buySalt(); // Snowplower.java 159-tol 170-ig
+		if (purchased) {
+			Skeleton.logString("Só vásárlás sikeres.");
+		} else {
+			Skeleton.logString("Só vásárlás sikertelen.");
+		}
+	}
+
+	public static void SnowplowerPurchaseWithTheChosenHead_8() {
+        Skeleton.startInit();
         Cleaner cleaner = Skeleton.Market.cleaner;
-        boolean purchaseConfirmed;
+		boolean purchaseConfirmed;
 
-        int chosenHead = Skeleton.questionMultiple("Milyen fejjel szeretnél hókotrót vásárolni?", List.of("Breaker", "Ejector"));
+		Skeleton.startUseCase("8. Snowplower purchase with the chosen head");
 
-        if(chosenHead == 0) { // Breaker fej
-            purchaseConfirmed = cleaner.buyBreakerSnowplower();
-            if (purchaseConfirmed) {
-                Skeleton.logString("Breaker fejjel ellátott hókotró vásárlása sikeres.");
-            } else {
-                Skeleton.logString("Breaker fejjel ellátott hókotró vásárlása sikertelen.");
-            }
-        }
-        else if(chosenHead == 1) { // Ejector fej
-            purchaseConfirmed = cleaner.buyEjectorSnowplower();
-            if (purchaseConfirmed) {
-                Skeleton.logString("Ejector fejjel ellátott hókotró vásárlása sikeres.");
-            } else {
-                Skeleton.logString("Ejector fejjel ellátott hókotró vásárlása sikertelen.");
-            }
-        }
-    }
+        int chosenHead = Skeleton.questionMultiple("Milyen fejjel szeretnél hókotrót vásárolni?",
+				List.of("Breaker", "Ejector"));
 
+		if (chosenHead == 1) { // Breaker fej
+			purchaseConfirmed = cleaner.buyBreakerSnowplower();
+			if (purchaseConfirmed) {
+				Skeleton.logString("Breaker fejjel ellátott hókotró vásárlása sikeres.");
+			} else {
+				Skeleton.logString("Breaker fejjel ellátott hókotró vásárlása sikertelen.");
+			}
+		}
+        else if (chosenHead == 2) { // Ejector fej
+			purchaseConfirmed = cleaner.buyEjectorSnowplower();
+			if (purchaseConfirmed) {
+				Skeleton.logString("Ejector fejjel ellátott hókotró vásárlása sikeres.");
+			} else {
+				Skeleton.logString("Ejector fejjel ellátott hókotró vásárlása sikertelen.");
+			}
+		}
+	}
 
-    public static void cleaningALane_12(){
-        Snowplower plower = Skeleton.Market.snowplower;
-        plower.onTick();
-    }
-    public static void switchHead_14(){
-        Snowplower plower = Skeleton.Market.snowplower;
-        plower.getHeadInventory().cycleActiveHead();
-    }
+	public static void cleaningALane_12() {
+		Snowplower plower = Skeleton.Market.snowplower;
+		plower.onTick();
+	}
+
+	public static void switchHead_14() {
+		Snowplower plower = Skeleton.Market.snowplower;
+		plower.getHeadInventory().cycleActiveHead();
+	}
 }

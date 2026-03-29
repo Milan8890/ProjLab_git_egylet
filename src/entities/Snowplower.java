@@ -42,7 +42,6 @@ public class Snowplower extends Vehicle {
 		currentLane = null;
 		lastCrossing = spawn;
 		Skeleton.initSettingUpObjectEnd();
-
 	}
 
 	/**
@@ -55,16 +54,18 @@ public class Snowplower extends Vehicle {
 
 		if (isInCrossing) {
 
-			Lane newLane = Skeleton.Market.path.pop();
+			currentLane = Skeleton.Market.path.pop();
 			if (currentLane == null) {
 				Skeleton.logString("Nincs több út beállítva a járműhöz.");
 				Skeleton.logFunctionEnd();
 				return;
 			}
-			newLane.addVehicle(this);
-			currentLane = newLane;
+			currentLane.addVehicle(this);
 
 			Skeleton.logString("A jármű elkezd haladni az új sávon.");
+		}
+		else{
+			currentLane = Skeleton.Market.lane;
 		}
 
 		boolean isWaitingDueToCrash = 1 == Skeleton.questionMultiple("Ütközés után várakozik-e?",
@@ -88,11 +89,10 @@ public class Snowplower extends Vehicle {
 
 		boolean isEndOfRoad = 1 == Skeleton.questionMultiple("A jármű az út végére ért?", Arrays.asList("Igen", "Nem"));
 		if (isEndOfRoad) {
-			owner.addMoney(HeadInventory.createWithBreaker(this).getActiveHead().clean(currentLane));
+			owner.addMoney(Skeleton.Market.headInventory.getActiveHead().clean(currentLane));
 
 			currentLane.removeVehicle(this);
 			currentLane = null;
-
 		}
 
 		Skeleton.logFunctionEnd();

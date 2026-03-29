@@ -1,5 +1,6 @@
 package playground;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -12,6 +13,14 @@ import main.Skeleton;
 public class Path {
 	List<Lane> pathLanes;
 	Crossing lastCrossing;
+
+	public Path() {
+		Skeleton.initSettingUpObjectStart(this);
+		pathLanes = new ArrayList<>();
+		lastCrossing = null;
+		Skeleton.initSettingUpObjectEnd();
+	}
+
 
 	/**
 	 * Visszaadja a következő sávot az útvonalon.

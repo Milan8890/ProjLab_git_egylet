@@ -18,6 +18,8 @@ public class Skeleton {
 	static boolean init_log = true;
 	static int indentation;
 
+	static Stack<Integer> answerStack = new Stack<>();
+
 	// visszaadja egy objektum "nevét", az objektumot kell beleadni
 	public static String createNameOfObject(Object o) {
 		String temp = o.getClass().toString();
@@ -91,7 +93,19 @@ public class Skeleton {
 			logString((i + 1) + "." + options.get(i));
 		}
 		logStringNoBreak("Válasz: ");
-		int answer = sc.nextInt();
+		int answer;
+		if (answerStack.isEmpty()) {
+			answer = sc.nextInt();
+		} else {
+			answer = answerStack.pop();
+			if (answer > options.size()) {
+				answer = options.size();
+			}
+			if (answer < 1) {
+				answer = 1;
+			}
+			System.out.println(options.get(answer - 1));
+		}
 
 		if (answer > options.size()) {
 			answer = options.size();
@@ -108,7 +122,14 @@ public class Skeleton {
 		logString("[" + q + "]");
 		logStringNoBreak("Válasz: ");
 
-		int answer = sc.nextInt();
+		int answer;
+		if (answerStack.isEmpty()) {
+			answer = sc.nextInt();
+		} else {
+			answer = answerStack.pop();
+			System.out.println(answer);
+		}
+
 		return answer;
 	}
 
@@ -136,6 +157,7 @@ public class Skeleton {
 	public static void startInit() {
 		System.out.println("\t--- Initialization ---");
 		init_log = true;
+		Market.resetMarket();
 		indentation = 0;
 	}
 
@@ -149,16 +171,17 @@ public class Skeleton {
 	// új függvény a régi init logging helyett
 	// minden konstruktor elején kell meghívni (csak ott)
 	public static void initSettingUpObjectStart(Object o) {
-		if (!init_log)
-			return;
 
 		for (int i = 0; i < initStack.size(); i++) {
-			System.out.print("\t");
+			if (init_log)
+				System.out.print("\t");
 		}
 		if (!initStack.isEmpty()) {
-			System.out.print(createNameOfObject(initStack.peek()) + "->");
+			if (init_log)
+				System.out.print(createNameOfObject(initStack.peek()) + "->");
 		}
-		System.out.println(createNameOfObject(o));
+		if (init_log)
+			System.out.println(createNameOfObject(o));
 		initStack.push(o);
 	}
 
@@ -168,11 +191,21 @@ public class Skeleton {
 		initStack.pop();
 	}
 
+	public static void setAnswerStack(List<Integer> inputAnswerList) {
+		answerStack.clear();
+		answerStack.addAll(inputAnswerList.reversed());
+	}
+
+	public static void clearAnswerStack() {
+		answerStack.clear();
+	}
+
 	// --------------- HA KELL VALAMI INNEN KÉRD LE -------------------
 	public static class Market {
-		static public City city = new City();
 		static public Crossing crossing = new Crossing();
-		static public Road road = new Road(crossing, crossing, 1, 1);
+		static public Crossing crossing2 = new Crossing();
+		static public Road road = new Road(crossing, crossing2, 1, 1);
+		static public Road road2 = new Road(crossing2, crossing, 2, 1);
 		static public Tunnel tunnel = new Tunnel(crossing, crossing, 1, 1);
 
 		static public Lane lane = new Lane(road);
@@ -181,9 +214,12 @@ public class Skeleton {
 		static public Cleaner cleaner = new Cleaner("a", Color.RED);
 		static public BusDriver busDriver = new BusDriver("b", Color.BLUE);
 
-		static public Bus bus = new Bus(crossing, crossing, busDriver);
+		static public Bus bus = new Bus(crossing, crossing2, busDriver);
+		static public Bus bus2 = new Bus(crossing2, crossing, busDriver);
 		static public Snowplower snowplower = Snowplower.createWithBreaker(cleaner, crossing);
-		static public Car car = new Car(crossing, crossing);
+		static public Snowplower snowplower2 = Snowplower.createWithBreaker(cleaner, crossing2);
+		static public Car car = new Car(crossing, crossing2);
+		static public Car car2 = new Car(crossing2, crossing);
 
 		static public Ejector ejector = new Ejector(snowplower);
 		static public Breaker breaker = new Breaker(snowplower);
@@ -198,7 +234,36 @@ public class Skeleton {
 		static public HeadListing saltSpreaderHeadListing = new HeadListing(saltSpreader, 1);
 		static public HeadListing dragonHeadListing = new HeadListing(dragon, 1);
 
-		// IDE TALÁN MAJD CTOR CUCC
 		static public Path path = new Path();
+
+		public static void resetMarket() {
+			crossing = new Crossing();
+			crossing2 = new Crossing();
+			road = new Road(crossing, crossing2, 1, 1);
+			road2 = new Road(crossing2, crossing, 2, 1);
+			tunnel = new Tunnel(crossing, crossing, 1, 1);
+			lane = new Lane(road);
+			lane2 = new Lane(road);
+			cleaner = new Cleaner("a", Color.RED);
+			busDriver = new BusDriver("b", Color.BLUE);
+			bus = new Bus(crossing, crossing2, busDriver);
+			bus2 = new Bus(crossing2, crossing, busDriver);
+			snowplower = Snowplower.createWithBreaker(cleaner, crossing);
+			snowplower2 = Snowplower.createWithBreaker(cleaner, crossing2);
+			car = new Car(crossing, crossing2);
+			car2 = new Car(crossing2, crossing);
+			ejector = new Ejector(snowplower);
+			breaker = new Breaker(snowplower);
+			sweeper = new Sweeper(snowplower);
+			saltSpreader = new SaltSpreader(snowplower);
+			dragon = new Dragon(snowplower);
+			headInventory = HeadInventory.createWithBreaker(snowplower);
+			breakerHeadListing = new HeadListing(breaker, 1);
+			sweeperHeadListing = new HeadListing(sweeper, 1);
+			ejectorHeadListing = new HeadListing(ejector, 1);
+			saltSpreaderHeadListing = new HeadListing(saltSpreader, 1);
+			dragonHeadListing = new HeadListing(dragon, 1);
+			path = new Path();
+		}
 	}
 }
