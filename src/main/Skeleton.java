@@ -184,7 +184,6 @@ public class Skeleton {
 		static public Cleaner cleaner = new Cleaner("a", Color.RED);
 		static public BusDriver busDriver = new BusDriver("b", Color.BLUE);
 
-
 		static public Bus bus = new Bus(crossing, crossing, busDriver);
 		static public Snowplower snowplower = Snowplower.createWithBreaker(cleaner, crossing);
 		static public Car car = new Car(crossing, crossing);
@@ -194,7 +193,6 @@ public class Skeleton {
 		static public Sweeper sweeper = new Sweeper(snowplower);
 		static public SaltSpreader	saltSpreader = new SaltSpreader(snowplower);
 		static public Dragon dragon = new Dragon(snowplower);
-
 
 		static public HeadInventory headInventory = HeadInventory.createWithBreaker(snowplower);
 		static public HeadListing headListing = new HeadListing(breaker, 1);

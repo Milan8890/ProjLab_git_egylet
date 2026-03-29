@@ -26,7 +26,6 @@ public class Ejector extends Head {
      */ 
     public Ejector(Snowplower snowplower) {
         super(snowplower);
-        Skeleton.initSettingUpObjectStart(this);
         Skeleton.initSettingUpObjectEnd();
     }
 
