@@ -87,7 +87,7 @@ public class Snowplower extends Vehicle {
 
 		boolean isEndOfRoad = 1 == Skeleton.questionMultiple("A jármű az út végére ért?", Arrays.asList("Igen", "Nem"));
 		if (isEndOfRoad) {
-			owner.addMoney(HeadInventory.createWithBreaker(this).getActiveHead().clean(currentLane));
+			owner.addMoney(Skeleton.Market.headInventory.getActiveHead().clean(currentLane));
 
 			currentLane.removeVehicle(this);
 			currentLane = null;
