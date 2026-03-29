@@ -380,6 +380,8 @@ public class UseCases {
 	public static void startingGame_19() {
 		Skeleton.startInit();
 
+		Skeleton.logString("\t--- 19. Starting Game ---");
+
 		int cleanerAmount = Skeleton.questionValue("Mennyi takarító játékos fog játszani?");
 		int busDriverAmount = Skeleton.questionValue("Mennyi buszvezető játékos fog játszani?");
 		City.initCity();

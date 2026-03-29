@@ -79,8 +79,7 @@ public class App {
 		purchuseCat.useCases.add(new NamedFunction("Vissza", () -> currentCategory = categories.get(0), true));
 		purchuseCat.useCases.add(new NamedFunction("Biokerozin vásárlás", UseCases::BiokerozinPurchase_6, false));
 		purchuseCat.useCases.add(new NamedFunction("Só vásárlás", UseCases::SaltPurchase_7, false));
-		purchuseCat.useCases.add(new NamedFunction("Hókotró vásárlás kezdő fej vásárlással",
-				UseCases::SnowplowerPurchaseWithTheChosenHead_8, false));
+		purchuseCat.useCases.add(new NamedFunction("Hókotró vásárlás kezdő fej vásárlással", UseCases::SnowplowerPurchaseWithTheChosenHead_8, false));
 		purchuseCat.useCases.add(new NamedFunction("Hókotró fej vásárlása", UseCases::purchaseHead_1, false));
 
 		// 1
@@ -103,10 +102,13 @@ public class App {
 
 		VehicleBA.useCases.add(new NamedFunction("Vissza", () -> currentCategory = categories.get(2), true));
 		VehicleBA.useCases.add(new NamedFunction("Jármű ütközése", UseCases::vehicleCrash_2, false));
-		VehicleBA.useCases
-				.add(new NamedFunction("Jármű várakozik ütközés miatt", UseCases::vehicleWaitingDueToCrash_3, false));
+		VehicleBA.useCases.add(new NamedFunction("Jármű várakozik ütközés miatt", UseCases::vehicleWaitingDueToCrash_3, false));
 		VehicleBA.useCases.add(new NamedFunction("Jármű letapossa a havat", UseCases::vehicleTrampeSnow_4, false));
-		// IDE KELL _11, _9 _16 _17 _18
+		VehicleBA.useCases.add(new NamedFunction("Jármű kereszteződéshez érve továbbhajt", UseCases::BusCarPathFolowing_11, false));
+		VehicleBA.useCases.add(new NamedFunction("Vezethető jármű útvonalához hozzadunk sávot", UseCases::VehiclePathExtending_9, false));
+		VehicleBA.useCases.add(new NamedFunction("Jármű kiszabadúl", UseCases::vehicleUnblocking_16, false));
+		VehicleBA.useCases.add(new NamedFunction("Jármű behajt a következő sávba", UseCases::vehicleEntersNextLane_17, false));
+		VehicleBA.useCases.add(new NamedFunction("Jármű sávot vált", UseCases::vehicleSwitchesLane_18, false));
 
 		// 3
 		categories.add(VehicleBA);
@@ -115,7 +117,7 @@ public class App {
 		Car.name = "Autó";
 
 		Car.useCases.add(new NamedFunction("Vissza", () -> currentCategory = categories.get(2), true));
-		Car.useCases.add(new NamedFunction("Jármű ütközése", UseCases::vehicleCrash_2, false)); // IDE KELL _13
+		Car.useCases.add(new NamedFunction("Autó útvonalat tervez", UseCases::CarFindingNewPath_13, false));
 
 		// 4
 		categories.add(Car);
@@ -133,11 +135,9 @@ public class App {
 		Snowplower.name = "Hókotró";
 
 		Snowplower.useCases.add(new NamedFunction("Vissza", () -> currentCategory = categories.get(2), true));
-		Snowplower.useCases.add(new NamedFunction("Hókotró vásárlása", UseCases::BusDriverGetsPointForATurn_5, false)); // IDE
-																														// KELL
-																														// _10
-																														// _12
-																														// _14
+		Snowplower.useCases.add(new NamedFunction("Hókotró továbbhajt a megadott útvonalon", UseCases::SnowplowerPathFolowing_10, false));
+		Snowplower.useCases.add(new NamedFunction("Hókotró egy sávot letakarít", UseCases::cleaningALane_12, false));
+		Snowplower.useCases.add(new NamedFunction("Hókotró kotrófejet cserél", UseCases::switchHead_14, false));
 
 		// 6
 		categories.add(Snowplower);
@@ -146,10 +146,8 @@ public class App {
 		GameStart.name = "Játékindítás és környezet";
 
 		GameStart.useCases.add(new NamedFunction("Vissza", () -> currentCategory = categories.get(0), true));
-		GameStart.useCases.add(new NamedFunction("Játékindítás", UseCases::startingGame_19, false)); // IDE
-		GameStart.useCases.add(new NamedFunction("Havazás", () -> currentCategory = categories.get(7), true)); // IDE
-																												// KELL
-																												// _15
+		GameStart.useCases.add(new NamedFunction("Játékindítás", UseCases::startingGame_19, false));
+		GameStart.useCases.add(new NamedFunction("Havazás", UseCases::snowing_15, false));
 
 		// 7
 		categories.add(GameStart);
@@ -209,7 +207,7 @@ public class App {
 	public static void main(String[] args) throws Exception {
 		// Itt lehet tesztelni
 		catinit();
-		// menu();
+		menu();
 
 	}
 }

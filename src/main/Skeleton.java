@@ -123,38 +123,43 @@ public class Skeleton {
 	 * @return A válasz sorszáma (1-től kezdve)
 	 */
 	public static int questionMultiple(String q, List<String> options) {
-		logString("[" + q + "]");
-		for (int i = 0; i < options.size(); i++) {
-			logString((i + 1) + "." + options.get(i));
-		}
-		logStringNoBreak("Válasz: ");
-		int answer;
+        logString("[" + q + "]");
+        for (int i = 0; i < options.size(); i++) {
+            logString((i + 1) + "." + options.get(i));
+        }
+        logStringNoBreak("Válasz: ");
+        int answer;
 
-		if (answerStack.isEmpty()) {
-			answer = sc.nextInt();
-		} else {
-			answer = answerStack.pop();
-			if (answer == -1) {
-				answer = sc.nextInt();
-			}
-			if (answer > options.size()) {
-				answer = options.size();
-			}
-			if (answer < 1) {
-				answer = 1;
-			}
-			System.out.println(options.get(answer - 1));
-		}
+        if (answerStack.isEmpty()) {
+            answer = sc.nextInt();
+        } else {
+            answer = answerStack.pop();
+            boolean fromUser = false;
+            if (answer == -1) {
+                answer = sc.nextInt();
+                fromUser = true;
+            }
+            if (answer > options.size()) {
+                answer = options.size();
+            }
+            if (answer < 1) {
+                answer = 1;
+            }
 
-		if (answer > options.size()) {
-			answer = options.size();
-		}
-		if (answer < 1) {
-			answer = 1;
-		}
+            if (!fromUser) {
+                System.out.println(options.get(answer - 1));
+            }
+        }
 
-		return answer;
-	}
+        if (answer > options.size()) {
+            answer = options.size();
+        }
+        if (answer < 1) {
+            answer = 1;
+        }
+
+        return answer;
+    }
 
 	/**
 	 * Feltesz a felhasználónak egy kérdést, amire egy egész szám a válasz.
@@ -163,22 +168,26 @@ public class Skeleton {
 	 * @return A válasz, mint egész szám
 	 */
 	public static int questionValue(String q) {
-		logString("[" + q + "]");
-		logStringNoBreak("Válasz: ");
+        logString("[" + q + "]");
+        logStringNoBreak("Válasz: ");
 
-		int answer;
-		if (answerStack.isEmpty()) {
-			answer = sc.nextInt();
-		} else {
-			answer = answerStack.pop();
-			if (answer == -1) {
-				answer = sc.nextInt();
-			}
-			System.out.println(answer);
-		}
+        int answer;
+        if (answerStack.isEmpty()) {
+            answer = sc.nextInt();
+        } else {
+            answer = answerStack.pop();
+            boolean fromUser = false;
+            if (answer == -1) {
+                answer = sc.nextInt();
+                fromUser = true;
+            }
+            if (!fromUser) {
+                System.out.println(answer);
+            }
+        }
 
-		return answer;
-	}
+        return answer;
+    }
 
 	/**
 	 * Tesztesetek elején kell hívni. Újra felépíti a közös objektumokat.
