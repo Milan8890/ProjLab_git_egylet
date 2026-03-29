@@ -170,9 +170,10 @@ public class Skeleton {
 
 	// --------------- HA KELL VALAMI INNEN KÉRD LE -------------------
 	public static class Market {
-		static public City city = new City();
 		static public Crossing crossing = new Crossing();
-		static public Road road = new Road(crossing, crossing, 1, 1);
+		static public Crossing crossing2 = new Crossing();
+		static public Road road = new Road(crossing, crossing2, 1, 1);
+		static public Road road2 = new Road(crossing2, crossing, 2, 1);
 		static public Tunnel tunnel = new Tunnel(crossing, crossing, 1, 1);
 
 		static public Lane lane = new Lane(road);
@@ -181,9 +182,12 @@ public class Skeleton {
 		static public Cleaner cleaner = new Cleaner("a", Color.RED);
 		static public BusDriver busDriver = new BusDriver("b", Color.BLUE);
 
-		static public Bus bus = new Bus(crossing, crossing, busDriver);
+		static public Bus bus = new Bus(crossing, crossing2, busDriver);
+		static public Bus bus2 = new Bus(crossing2, crossing, busDriver);
 		static public Snowplower snowplower = Snowplower.createWithBreaker(cleaner, crossing);
-		static public Car car = new Car(crossing, crossing);
+		static public Snowplower snowplower2 = Snowplower.createWithBreaker(cleaner, crossing2);
+		static public Car car = new Car(crossing, crossing2);
+		static public Car car2 = new Car(crossing2, crossing);
 
 		static public Ejector ejector = new Ejector(snowplower);
 		static public Breaker breaker = new Breaker(snowplower);
@@ -198,7 +202,6 @@ public class Skeleton {
 		static public HeadListing saltSpreaderHeadListing = new HeadListing(saltSpreader, 1);
 		static public HeadListing dragonHeadListing = new HeadListing(dragon, 1);
 
-		// IDE TALÁN MAJD CTOR CUCC
 		static public Path path = new Path();
 	}
 }
