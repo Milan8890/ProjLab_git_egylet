@@ -1,5 +1,6 @@
 package main;
 
+import java.awt.Color;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
@@ -26,7 +27,7 @@ public class UseCases {
 			Skeleton.Market.lane2.addVehicle(Skeleton.Market.car2);
 		}
 
-		Skeleton.setAnswerStack(Arrays.asList(2, 2, 100, 1, 2));
+		Skeleton.setAnswerStack(Arrays.asList(2, 2, -1, 1, 2));
 
 		car.onTick(); // Car.java 90-tol 103-ig
 
@@ -113,11 +114,13 @@ public class UseCases {
 			}
 		}
 	}
-    
-     /**
-     * Use case 1: Fej vásárlása
-     * A játékos kiválaszt egy fejet a lehetőségek közül, és megvásárolja azt a hókotrójához. A fej ára levonódik a játékos pénzéből, és a fej hozzáadódik a hókotrónak a fejtárolójához.
-     */
+
+	/**
+	 * Use case 1: Fej vásárlása
+	 * A játékos kiválaszt egy fejet a lehetőségek közül, és megvásárolja azt a
+	 * hókotrójához. A fej ára levonódik a játékos pénzéből, és a fej hozzáadódik a
+	 * hókotrónak a fejtárolójához.
+	 */
 	public static void purchaseHead_1() {
 		Snowplower plower = Skeleton.Market.snowplower;
 
@@ -144,19 +147,44 @@ public class UseCases {
 		plower.getHeadInventory().buyListing(headListing);
 	}
 
-    /**
-     * Use case 12: Sáv letakarítása
-     */
+	/**
+	 * Use case 12: Sáv letakarítása
+	 */
 	public static void cleaningALane_12() {
 		Snowplower plower = Skeleton.Market.snowplower;
 		plower.onTick();
 	}
 
-    /**
-     * Use case 14: Fej váltása
-     */
+	/**
+	 * Use case 14: Fej váltása
+	 */
 	public static void switchHead_14() {
 		Snowplower plower = Skeleton.Market.snowplower;
 		plower.getHeadInventory().cycleActiveHead();
+	}
+
+	public static void startingGame_19() {
+		Skeleton.startInit();
+
+		int cleanerAmount = Skeleton.questionValue("Mennyi takarító játékos fog játszani?");
+		int busDriverAmount = Skeleton.questionValue("Mennyi buszvezető játékos fog játszani?");
+		City.initCity();
+
+		for (int i = 0; i < cleanerAmount; i++) {
+			Cleaner t = new Cleaner("Cleaner " + i, Color.RED);
+			boolean breaker = 1 == Skeleton.questionMultiple("Milyen hókotrója legyen a játékosnak?",
+					Arrays.asList("Breaker", "Ejector"));
+
+			Skeleton.setAnswerStack(Arrays.asList(0, 1));
+
+			if (breaker) {
+				t.buyBreakerSnowplower();
+			} else {
+				t.buyEjectorSnowplower();
+			}
+		}
+		for (int i = 0; i < busDriverAmount; i++) {
+			BusDriver t = new BusDriver("BusDriver " + i, Color.RED);
+		}
 	}
 }
