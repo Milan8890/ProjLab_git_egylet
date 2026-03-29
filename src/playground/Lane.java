@@ -26,6 +26,10 @@ public class Lane {
 	class Salt {
 		Cleaner owner;
 
+		/**
+		 * Konstruktor
+		 * @param c a cleaner, akihez a só tartozik
+		 */
 		Salt(Cleaner c) {
 			Skeleton.initSettingUpObjectStart(this);
 			owner = c;
@@ -47,6 +51,11 @@ public class Lane {
 		}
 	}
 
+	/**
+	 * Konstruktor
+	 * 
+	 * @param r a sávot tartalmazó út. 
+	 */
 	public Lane(Road r) {
 		Skeleton.initSettingUpObjectStart(this);
 
@@ -148,7 +157,7 @@ public class Lane {
 	}
 
 	/**
-	 * 'amount1 mennyiségű havat ad a sávhoz
+	 * amount mennyiségű havat ad a sávhoz
 	 * 
 	 * @param amount a hozzáadott hó mennyisége
 	 */
@@ -167,9 +176,9 @@ public class Lane {
 	}
 
 	/**
-	 * Visszaadja a hozzá tartozó utat
+	 * Visszaadja az utat amihez a sáv tartozik
 	 * 
-	 * @return a hozzá tartozó út
+	 * @return a tartalmazó út
 	 */
 	public Road getRoad() {
 		Skeleton.logFunctionStart(this, "getRoad", null);
@@ -186,10 +195,10 @@ public class Lane {
 	 */
 	public double cleanSnow() {
 		Skeleton.logFunctionStart(this, "cleanSnow", null);
-		int answer = Skeleton.questionValue("Milyen magas volt a hó a sávban takarítás előtt?");
+		double answer = Skeleton.questionValue("Milyen magas volt a hó a sávban takarítás előtt?");
 
 		Skeleton.logFunctionEnd();
-		return (double) answer;
+		return  answer;
 	}
 
 	/**
@@ -200,10 +209,10 @@ public class Lane {
 	 */
 	public double meltIce() {
 		Skeleton.logFunctionStart(this, "meltIce", null);
-		int answer = Skeleton.questionValue("Milyen magas volt a jég a sávban takarítás előtt?");
+		double answer = Skeleton.questionValue("Milyen magas volt a jég a sávban takarítás előtt?");
 
 		Skeleton.logFunctionEnd();
-		return (double) answer;
+		return answer;
 	}
 
 	/**
@@ -222,6 +231,10 @@ public class Lane {
 		return (double) answer;
 	}
 
+	/**
+	 * Visszaadja a sávban lévő járműveket
+	 * @return a sávban lévő járművek halmaza.
+	 */
 	public Set<Vehicle> getVehicles() {
 		Skeleton.logFunctionStart(this, "getVehicles", null);
 

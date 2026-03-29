@@ -2,7 +2,6 @@ package main;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.Stack;
 
 import entities.*;
 import playground.*;
@@ -11,11 +10,20 @@ import equipment.*;
 
 public class UseCases {
 
+      /**
+     * Use case 1: Fej vásárlása
+     * A játékos kiválaszt egy fejet a lehetőségek közül, és megvásárolja azt a hókotrójához. 
+     * A fej ára levonódik a játékos pénzéből, és a fej hozzáadódik a hókotrónak a fejtárolójához.
+     */
+     //Kézi futtatású.
     public static void purchaseHead_1(){
+        Skeleton.startInit();
         Snowplower plower = Skeleton.Market.snowplower;
 
+        Skeleton.startUseCase("1. Purchase head");
         int listing = Skeleton.questionMultiple("Milyen fejet szeretne vásárolni?", Arrays.asList("Jégtörő", "Hányó", "Seprő", "Sószóró", "Sárkány"));
-        HeadListing headListing;
+        
+        HeadListing headListing; 
         switch (listing) {
             case 1:
                 headListing = Skeleton.Market.breakerHeadListing; 
@@ -36,64 +44,129 @@ public class UseCases {
         plower.getHeadInventory().buyListing(headListing);
     }
 
+    /**
+     * Use case 2: Vehicle crash
+     * A jármű megcsúszik, és amennyiben van más jármű az úton, akkor ütközik azzal.
+     */
+    //Kérdés után autómatán fut.
+    // Opcionálisan átírható úgy, hogy különböző fajta járművek ütközzenek (busz).
 	public static void vehicleCrash_2() {
 		Skeleton.startInit();
 
 		Car car = Skeleton.Market.car;
+        Bus bus = Skeleton.Market.bus;
 		Road road = Skeleton.Market.road;
 
 		Skeleton.startUseCase("2. Vehicle crash");
 
-		boolean otherVehicle = 1 == Skeleton.questionMultiple("Van másik jármű az úton?", Arrays.asList("Igen", "Nem"));
+        int vehicleType = Skeleton.questionMultiple("Milyen járműről van szó?", Arrays.asList("Autó", "Busz"));
 
-		if (otherVehicle){ //Van másik jármű
-			// ez kell, hogy rajta legyen a vehicle a lane-en
-			Skeleton.Market.lane2.addVehicle(Skeleton.Market.car2);
-            Skeleton.setAnswerStack(Arrays.asList(2, 2, 100, 1, 2, 60));
+        boolean otherVehicle = 1 == Skeleton.questionMultiple("Van másik jármű az úton?", Arrays.asList("Igen", "Nem"));
+
+        if(vehicleType == 1){ //Autó
+            if (otherVehicle){ //Van másik jármű
+
+            Skeleton.Market.lane2.addVehicle(Skeleton.Market.car2);
+            Skeleton.setAnswerStack(Arrays.asList(2, 2, 100, 1, 2, 60)); //Ha kell, akkor utolsó max az utolsó (idő) egyet kell kivenni.
             car.onTick();
-		}
-        else { //Nincs másik jármű
-            Skeleton.setAnswerStack(Arrays.asList(2, 2, 100, 1, 2));
-            car.onTick();
+		    }
+            else { //Nincs másik jármű
+                Skeleton.setAnswerStack(Arrays.asList(2, 2, 100, 1, 2));
+                car.onTick();
+            }
+        } //Busz
+        else if(vehicleType == 2){ //Busz
+            if (otherVehicle){ //Van másik jármű
+
+                Skeleton.Market.lane2.addVehicle(Skeleton.Market.bus2);
+                Skeleton.setAnswerStack(Arrays.asList(2, 2, 100, 1, 2, 60)); //Ha kell, akkor utolsó max az utolsó (idő) egyet kell kivenni.
+                bus.onTick();
+		    }
+            else { //Nincs másik jármű
+                Skeleton.setAnswerStack(Arrays.asList(2, 2, 100, 1, 2));
+                bus.onTick();
+            }
         }
 	}
 
-    public static void vehicleWaitingDueToCrash_3() {
+    /**
+     * Use case 3: Vehicle waiting due to crash
+     * A jármű várakozik, amíg a baleset miatt az út szabad nem lesz.
+     */
+    //Autómatán fut.
+    public static void vehicleWaitingDueToCrash_3() { 
         Skeleton.startInit();
         Car car = Skeleton.Market.car;
+        Bus bus = Skeleton.Market.bus;
 
 		Skeleton.startUseCase("3. Vehicle waiting due to crash");
-		
-		car.onTick(); //Nincs kereszteződésben, majd várakozik ütközés után. 74-88 sorok.
+
+        int vehicleType = Skeleton.questionMultiple("Milyen járműről van szó?", Arrays.asList("Autó", "Busz"));
+
+        if(vehicleType == 1){ //Autó
+            Skeleton.setAnswerStack(Arrays.asList(2, 1, 1)); //Ha kell, akkor utolsó kettőt kell kivenni.
+            car.onTick();
+        }
+        else if(vehicleType == 2){ //Busz
+            Skeleton.setAnswerStack(Arrays.asList(2,1,1)); //Ha kell,akkor utolsó kettőt kell kivenni.
+            bus.onTick();
+        }
 	}
 
+    /**
+     * Use case 4: Vehicle trampe snow
+     * A jármű elakad a hóban, és amíg el nem akad, addig halad.
+     */
+    //Autómatán fut.
 	public static void vehicleTrampeSnow_4(){
         Skeleton.startInit();
         Car car = Skeleton.Market.car;
+        Bus bus = Skeleton.Market.bus;
 
 		Skeleton.startUseCase("4. Vehicle trampe snow");
 
-		car.onTick(); // Car.java 134 sor.
+        int vehicleType = Skeleton.questionMultiple("Milyen járműről van szó?", Arrays.asList("Autó", "Busz"));
+
+        if(vehicleType == 1){ //Autó
+            Skeleton.setAnswerStack(Arrays.asList(2,2,5,2,10,2,1,2)); //Ha kell,akkor utolsó kettőt kell kivenni.
+		    car.onTick();
+        }
+        else if(vehicleType == 2){ //Busz
+            Skeleton.setAnswerStack(Arrays.asList(2,2,5,2,10,2,1,2)); //Ha kell,akkor utolsó kettőt kell kivenni.
+            bus.onTick();
+        }
+
     }
 
+    /**
+     * Use case 5: Bus driver gets point for a turn
+     * A buszsofőr pontot kap egy fordulóért, amikor a busz eléri az egyik irányú végállomást.
+     */
+    //Autómatán fut.     
 	public static void BusDriverGetsPointForATurn_5() {
         Skeleton.startInit();
         Bus bus = Skeleton.Market.bus;
 
 		Skeleton.startUseCase("5. Bus driver gets point for a turn");
 
-		bus.onTick(); // Bus.java 137 sor.
+        Skeleton.setAnswerStack(Arrays.asList(2,2,5,2,10,2,1,1)); //Ha kell,akkor utolsó egyet kell kivenni.
+		bus.onTick();
 	}
 
+    /**
+     * Use case 6: Biokerozin purchase
+     * A játékos (felhasználó) biokerozint vásárol a hókotrójához.
+     * A biokerozin ára levonódik a játékos pénzéből, és a biokerozin hozzáadódik a hókotrónak az üzemanyagtartályához.
+     */
+    //Kézi futtatású.
 	public static void BiokerozinPurchase_6() {
         Skeleton.startInit();
         Snowplower plower = Skeleton.Market.snowplower;
 
 		Skeleton.startUseCase("6. Biokerozin purchase");
+        Skeleton.setAnswerStack(Arrays.asList(1));
 
-		// Itt a "felhasználó kerozin vásárlást kezdeményez a hókotróval"-t hogy kéne?
-
-		boolean purchased = plower.buyBio(); // Snowplower.java 178- 189 sorok.
+		boolean purchased = plower.buyBio();
 		if (purchased) {
 			Skeleton.logString("Biokerozin vásárlás sikeres.");
 		} else {
@@ -101,15 +174,20 @@ public class UseCases {
 		}
 	}
 
+    /**
+     * Use case 7: Salt purchase
+     * A játékos (felhasználó) sót vásárol a hókotrójához.
+     * A só ára levonódik a játékos pénzéből, és a só hozzáadódik a hókotrónak a sótartályához.
+     */
+    //Kézi futtatású.
 	public static void SaltPurchase_7() {
         Skeleton.startInit();
         Snowplower plower = Skeleton.Market.snowplower;
 
 		Skeleton.startUseCase("7. Salt purchase");
+        Skeleton.setAnswerStack(Arrays.asList(1));
 
-		// Itt a "felhasználó só vásárlást kezdeményez a hókotróval"-t hogy kéne?
-
-		boolean purchased = plower.buySalt(); // Snowplower.java 159-tol 170-ig
+		boolean purchased = plower.buySalt();
 		if (purchased) {
 			Skeleton.logString("Só vásárlás sikeres.");
 		} else {
@@ -117,6 +195,12 @@ public class UseCases {
 		}
 	}
 
+    /**
+     * Use case 8: Snowplower purchase with the chosen head
+     * A játékos kiválaszt egy fejet a lehetőségek közül, és megvásárolja vele rendelkező hókotrót. 
+     * Az új hókotró ára levonódik a játékos pénzéből.
+     */
+     //Kézi futtatású.
 	public static void SnowplowerPurchaseWithTheChosenHead_8() {
         Skeleton.startInit();
         Cleaner cleaner = Skeleton.Market.cleaner;
@@ -144,12 +228,18 @@ public class UseCases {
 			}
 		}
 	}
-
+    
+    /**
+     * Use case 12: Sáv letakarítása
+     */
 	public static void cleaningALane_12() {
 		Snowplower plower = Skeleton.Market.snowplower;
 		plower.onTick();
 	}
 
+    /**
+     * Use case 14: Fej váltása
+     */
 	public static void switchHead_14() {
 		Snowplower plower = Skeleton.Market.snowplower;
 		plower.getHeadInventory().cycleActiveHead();
