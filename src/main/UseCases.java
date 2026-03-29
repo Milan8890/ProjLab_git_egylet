@@ -16,6 +16,9 @@ public class UseCases {
 
 		car.onTick(); // Car.java 90-tol 103-ig
 
+		// ez kell, hogy rajta legyen a vehicle a lane-en
+		Skeleton.Market.lane2.addVehicle(Skeleton.Market.car2);
+
 		// A bus-on hogy lesz meghívva a crashedInto, a road crashVehicle fv-nek kene
 		// csinalnia, de az ures.
 		road.crashVehicle(car);

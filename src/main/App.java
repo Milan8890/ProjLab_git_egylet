@@ -101,6 +101,7 @@ public class App {
 		// Itt lehet tesztelni
 		catinit();
 		// menu();
-		
+
+		UseCases.vehicleCrash_2();
 	}
 }
