@@ -37,6 +37,7 @@ public class App {
 
 	static NamedCategory currentCategory = null;
 
+	//TODO menü szervezése
 	public static void catinit() {
 		NamedCategory mainMenu = new NamedCategory();
 		mainMenu.name = "Főmenü";
@@ -95,23 +96,9 @@ public class App {
 		}
 	}
 
-	static void playerTest() {
-		catinit();
-		BusDriver b = new BusDriver(null, null);
-		Cleaner c = new Cleaner(null, null);
-
-		c.addMoney(500);
-		c.removeMoney(3400);
-		c.buyBreakerSnowplower();
-		c.buyEjectorSnowplower();
-	}
-
-	static void plowerTest() {
-		Snowplower plower1 = Snowplower.createWithBreaker(new Cleaner(null, null), new Crossing());
-		Snowplower plower2 = Snowplower.createWithEjector(new Cleaner(null, null), new Crossing());
-	}
-
 	public static void main(String[] args) throws Exception {
 		// Itt lehet tesztelni
+		catinit();
+		menu();
 	}
 }

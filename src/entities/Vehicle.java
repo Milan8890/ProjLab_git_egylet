@@ -20,6 +20,8 @@ public abstract class Vehicle {
 	Crossing lastCrossing;
 	Lane currentLane;
 	Path path;
+
+	//Ez nem kell
 	int revTimer;
 
 	public void onTick() {
@@ -73,6 +75,28 @@ public abstract class Vehicle {
         System.out.println("A járműbe ütközött egy másik itt fog ragadni ennyi Időre: " + r);
         
         Skeleton.logFunctionEnd();
+    }
+
+	/**
+     * Visszaadja, hogy a jármű jelenleg kereszteződésben várakozik-e.
+     * <p>
+     * Ha a járműnek nincs kijelölt sávja (currentLane értéke null), 
+     * akkor egy kereszteződésben tartózkodik.
+     * * @return true, ha kereszteződésben van, egyébként false.
+     */
+    public boolean isInCrossing() {
+        Skeleton.logFunctionStart(this, "isInCrossing", null);
+        
+        int crossingAnswer = Skeleton.questionMultiple("Kereszteződésben van -e?", Arrays.asList("igen", "nem"));
+        boolean result = (crossingAnswer == 1);
+        if (crossingAnswer == 1) {
+            System.out.println("A jármű jelenleg kereszteződésben tartózkodik");
+        } else {
+            System.out.println("A jármű egy sávon halad");
+        }
+
+        Skeleton.logFunctionEnd();
+        return result;
     }
 
 	/**

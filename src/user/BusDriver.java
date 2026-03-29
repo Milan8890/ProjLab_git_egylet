@@ -20,7 +20,7 @@ public class BusDriver extends Player {
 	 */
 	public BusDriver(String name, Color color) {
 		super(name, color);
-		new Bus();
+		new Bus(Skeleton.Market.crossing, Skeleton.Market.crossing, this);
 		Skeleton.initSettingUpObjectEnd();
 	}
 }

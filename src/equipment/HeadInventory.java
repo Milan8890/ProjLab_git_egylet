@@ -134,7 +134,7 @@ public class HeadInventory {
     public void cycleActiveHead() {
         Skeleton.logFunctionStart(this, "cycleActiveHead", null);
 
-        boolean answer = owner.isinCrossing();
+        boolean answer = owner.isInCrossing();
         if(!answer){
             Skeleton.logFunctionEnd();
             return;
