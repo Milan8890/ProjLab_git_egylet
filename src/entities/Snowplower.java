@@ -42,7 +42,6 @@ public class Snowplower extends Vehicle {
 		currentLane = null;
 		lastCrossing = spawn;
 		Skeleton.initSettingUpObjectEnd();
-
 	}
 
 	/**
@@ -64,6 +63,9 @@ public class Snowplower extends Vehicle {
 			currentLane.addVehicle(this);
 
 			Skeleton.logString("A jármű elkezd haladni az új sávon.");
+		}
+		else{
+			currentLane = Skeleton.Market.lane;
 		}
 
 		boolean isWaitingDueToCrash = 1 == Skeleton.questionMultiple("Ütközés után várakozik-e?",
@@ -91,7 +93,6 @@ public class Snowplower extends Vehicle {
 
 			currentLane.removeVehicle(this);
 			currentLane = null;
-
 		}
 
 		Skeleton.logFunctionEnd();
