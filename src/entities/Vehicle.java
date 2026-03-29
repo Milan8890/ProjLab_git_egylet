@@ -89,5 +89,5 @@ public abstract class Vehicle {
     	path.extendPath(l); 
     
     	Skeleton.logFunctionEnd();
-	}	
+	}
 }
