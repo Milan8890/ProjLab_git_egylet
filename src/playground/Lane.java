@@ -22,8 +22,18 @@ public class Lane {
 	public int getSnow() {
 		Skeleton.logFunctionStart(this, "getSnow", null);
 
-		int answer = Skeleton.questionMultiple("Túl magas -e a hó a sávban?", Arrays.asList("Igen", "Nem"));
+		int snowCm = Skeleton.questionValue("Hány centiméter hó van a sávban?");
 		Skeleton.logFunctionEnd();
-		return answer;
+		return snowCm;
 	}
+
+	public void trampleSnow() {
+        Skeleton.logFunctionStart(this, "trampleSnow", null);
+        
+        int amount = Skeleton.questionValue("Hány centiméterrel csökkenjen a hó a letaposás miatt?");
+        
+        System.out.println("A sávban a hóréteg " + amount + " cm-rel csökkent, a jégréteg harmad ennyivel nőtt.");
+        
+        Skeleton.logFunctionEnd();
+    }
 }

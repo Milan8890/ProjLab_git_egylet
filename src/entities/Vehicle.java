@@ -14,35 +14,35 @@ import playground.Path;
  * 
  * Felelősség <br>
  * Automatikusan követi az utat. Ha túl nagy lenne a hóréteg, elakad. Jeges úton
- * egy
- * adott eséllyel megcsúszik, ezt jelzi az útnak. <br>
- * lastCrossing: Az utolsó kereszteződés, amiben tartózkodott. Azért tárolja, ha
- * nincs
- * megadva sáv, akkor tudjuk, hogy itt tartózkodik. <br>
- * currentLane: Az a sáv, amin éppen van. Ezen keresztül tud a sávval
- * kommunikálni,
- * az úton megcsúszni. Ha értéke null, kereszteződésben van.
+ * egy adott eséllyel megcsúszik, ezt jelzi az útnak.
  */
 public abstract class Vehicle {
 	Crossing lastCrossing;
 	Lane currentLane;
-	double LaneProgress;
 	Path path;
-	boolean isCrashed;
-	boolean isStuck;
 	int revTimer;
 
 	public void onTick() {
 		Skeleton.logFunctionStart(this, "onTick", null);
 
-		int answer1 = Skeleton.questionMultiple("Ütközés után várakozik -e?", Arrays.asList("igen", "Nem"));
-		if (answer1 == 1) {
+		//Döntsük el, hogy korábbi baleset miatt várakozik -e
+		int crashAnswer = Skeleton.questionMultiple("Ütközés után várakozik -e?", Arrays.asList("igen", "Nem"));
+		if (crashAnswer == 1) {
+
+			//Ha igen csökkentsük a várakozásának hátralevő idejét
 			System.out.println("revTimer csökkentésre kerül");
 
-			int answer2 = Skeleton.questionMultiple("Lejárt -e a revTimer ideje?", Arrays.asList("igen", "Nem"));
-			if (answer2 == 1) {
+			//Nézzük meg a csökkentéssel lejárt -e a várakozási ideje
+			int timerAnswer = Skeleton.questionMultiple("Lejárt -e a revTimer ideje?", Arrays.asList("igen", "Nem"));
+			if (timerAnswer == 1) {
+
+				//Ha lejárt a várakozási ideje szabadítsuk fel a baleset alól
 				System.out.println("Felszabadítjuk a balesetből");
 			}
+		}
+		else {
+			//Ha nem volt ütközése tovább haladhat
+			System.out.println("Lane progresst nő");
 		}
 
 		Skeleton.logFunctionEnd();
@@ -61,4 +61,33 @@ public abstract class Vehicle {
 
 		Skeleton.logFunctionEnd();
 	}
+
+
+	/**
+     * Meghívódik, ha egy másik jármű megy neki ennek a járműnek.
+     * @param r A várakozási idő (revTimer)
+     */
+    public void crashedInto(int r) {
+        Skeleton.logFunctionStart(this, "crashedInto", Arrays.asList(String.valueOf(r)));
+        
+        System.out.println("A járműbe ütközött egy másik itt fog ragadni ennyi Időre: " + r);
+        
+        Skeleton.logFunctionEnd();
+    }
+
+	/**
+     * Meghosszabbítja a jármű útvonalát egy új sávval.
+     * <p>
+     * A jármű a feladatot továbbítja a saját Path objektumának, 
+     * amely elvégzi a sáv tényleges hozzáadását.
+     * * @param l Az új sáv (Lane), amivel bővíteni szeretnénk az útvonalat.
+     */
+	public void extendPath(Lane l) {
+    	Skeleton.logFunctionStart(this, "extendPath", Arrays.asList("l"));
+    
+    	// Itt a jármű meghívja a Path-et ezzel a lane-el
+    	path.extendPath(l); 
+    
+    	Skeleton.logFunctionEnd();
+	}	
 }
