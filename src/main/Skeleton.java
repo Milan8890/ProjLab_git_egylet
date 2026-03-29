@@ -15,16 +15,11 @@ public class Skeleton {
 	static Stack<Object> initStack = new Stack<>();
 
 	static Scanner sc = new Scanner(System.in);
-	static boolean init_log;
+	static boolean init_log = true;
 	static int indentation;
-	// TODO input list
-	// TODO szekvenciaszám?
-	// TODO INIT KIKAPCS
 
-			
 	// visszaadja egy objektum "nevét", az objektumot kell beleadni
 	public static String createNameOfObject(Object o) {
-		// TODO class lecsippantás
 		String temp = o.getClass().toString();
 		temp = temp.substring(temp.lastIndexOf(".") + 1);
 
@@ -139,20 +134,24 @@ public class Skeleton {
 
 	// teszteset függvényének elején, az inicializálás kezdetekor kell meghívni
 	public static void startInit() {
-		// TODO kéne neki név?
 		System.out.println("\t--- Initialization ---");
+		init_log = true;
 		indentation = 0;
 	}
 
 	// tesztesetben inicializálás után, a valós teszt kezdése előtt kell meghívni
 	public static void startUseCase(String useCaseName) {
 		System.out.println("\t--- " + useCaseName + " ---");
+		init_log = false;
 		indentation = 0;
 	}
 
 	// új függvény a régi init logging helyett
 	// minden konstruktor elején kell meghívni (csak ott)
 	public static void initSettingUpObjectStart(Object o) {
+		if (!init_log)
+			return;
+
 		for (int i = 0; i < initStack.size(); i++) {
 			System.out.print("\t");
 		}
@@ -169,21 +168,18 @@ public class Skeleton {
 		initStack.pop();
 	}
 
-
-
-
-
-//--------------- HA KELL VALAMI INNEN KÉRD LE -------------------
-	public static class Market{
+	// --------------- HA KELL VALAMI INNEN KÉRD LE -------------------
+	public static class Market {
 		static public City city = new City();
 		static public Crossing crossing = new Crossing();
 		static public Road road = new Road(crossing, crossing, 1, 1);
 		static public Tunnel tunnel = new Tunnel(crossing, crossing, 1, 1);
+
 		static public Lane lane = new Lane(road);
+		static public Lane lane2 = new Lane(road);
 
 		static public Cleaner cleaner = new Cleaner("a", Color.RED);
 		static public BusDriver busDriver = new BusDriver("b", Color.BLUE);
-
 
 		static public Bus bus = new Bus(crossing, crossing, busDriver);
 		static public Snowplower snowplower = Snowplower.createWithBreaker(cleaner, crossing);
@@ -192,9 +188,8 @@ public class Skeleton {
 		static public Ejector ejector = new Ejector(snowplower);
 		static public Breaker breaker = new Breaker(snowplower);
 		static public Sweeper sweeper = new Sweeper(snowplower);
-		static public SaltSpreader	saltSpreader = new SaltSpreader(snowplower);
+		static public SaltSpreader saltSpreader = new SaltSpreader(snowplower);
 		static public Dragon dragon = new Dragon(snowplower);
-
 
 		static public HeadInventory headInventory = HeadInventory.createWithBreaker(snowplower);
 		static public HeadListing breakerHeadListing = new HeadListing(breaker, 1);
@@ -203,7 +198,7 @@ public class Skeleton {
 		static public HeadListing saltSpreaderHeadListing = new HeadListing(saltSpreader, 1);
 		static public HeadListing dragonHeadListing = new HeadListing(dragon, 1);
 
-		//IDE TALÁN MAJD CTOR CUCC
+		// IDE TALÁN MAJD CTOR CUCC
 		static public Path path = new Path();
 	}
 }
