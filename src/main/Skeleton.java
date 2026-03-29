@@ -149,16 +149,17 @@ public class Skeleton {
 	// új függvény a régi init logging helyett
 	// minden konstruktor elején kell meghívni (csak ott)
 	public static void initSettingUpObjectStart(Object o) {
-		if (!init_log)
-			return;
 
 		for (int i = 0; i < initStack.size(); i++) {
-			System.out.print("\t");
+			if (init_log)
+				System.out.print("\t");
 		}
 		if (!initStack.isEmpty()) {
-			System.out.print(createNameOfObject(initStack.peek()) + "->");
+			if (init_log)
+				System.out.print(createNameOfObject(initStack.peek()) + "->");
 		}
-		System.out.println(createNameOfObject(o));
+		if (init_log)
+			System.out.println(createNameOfObject(o));
 		initStack.push(o);
 	}
 
