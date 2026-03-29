@@ -2,10 +2,7 @@ package equipment;
 
 import java.util.Arrays;
 
-import entities.Snowplower;
-import equipment.heads.*;
 import main.Skeleton;
-import user.Cleaner;
 
 /**
  * Eltárolja a vehető fejet és árát.
@@ -34,19 +31,19 @@ public class HeadListing {
         switch (answer) {
             case 1:
                 Skeleton.logFunctionEnd();
-                return new Breaker(null); //TODO null helyére kell a Snowplower
+                return Skeleton.Market.breaker;
             case 2:
                 Skeleton.logFunctionEnd();
-                return new Ejector(null);//TODO null helyére kell a Snowplower
+                return Skeleton.Market.ejector;
             case 3:
                 Skeleton.logFunctionEnd();
-                return new Sweeper(null);//TODO null helyére kell a Snowplower
+                return Skeleton.Market.sweeper;
             case 4:
                 Skeleton.logFunctionEnd();
-                return new SaltSpreader(null);//TODO null helyére kell a Snowplower
+                return Skeleton.Market.saltSpreader;
             default:
                 Skeleton.logFunctionEnd();
-                return new Dragon(null);//TODO null helyére kell a Snowplower
+                return Skeleton.Market.dragon;
         }
     }
     

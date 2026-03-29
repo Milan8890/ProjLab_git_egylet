@@ -37,21 +37,22 @@ public class App {
 
 	static NamedCategory currentCategory = null;
 
-	//TODO menü szervezése
+	// TODO menü szervezése
 	public static void catinit() {
 		NamedCategory mainMenu = new NamedCategory();
 		mainMenu.name = "Főmenü";
 		// mainMenu.useCases.add(new NamedFunction("Vissza", () -> currentCategory =
 		// categories.get(0)));
-		mainMenu.useCases.add(new NamedFunction("Első kategória", () -> currentCategory = categories.get(1)));
-		mainMenu.useCases.add(new NamedFunction("Második kategória", () -> currentCategory = categories.get(2)));
+		mainMenu.useCases.add(new NamedFunction("Vásárlás", () -> currentCategory = categories.get(1)));
+		mainMenu.useCases.add(new NamedFunction("Járművek", () -> currentCategory = categories.get(2)));
+		mainMenu.useCases.add(new NamedFunction("Játékindítás", () -> currentCategory = categories.get(2)));
 		// mainMenu.useCases.add(new NamedFunction("Harmadik kategória", () ->
 		// currentCategory = categories.get(3)));
 
 		categories.add(mainMenu);
 
 		NamedCategory cat1 = new NamedCategory();
-		cat1.name = "Első kategória";
+		cat1.name = "Vásárlás";
 
 		cat1.useCases.add(new NamedFunction("Vissza", () -> currentCategory = categories.get(0)));
 		cat1.useCases.add(new NamedFunction("Hello1", App::hello));
@@ -99,6 +100,7 @@ public class App {
 	public static void main(String[] args) throws Exception {
 		// Itt lehet tesztelni
 		catinit();
-		menu();
+		//menu();
+
 	}
 }

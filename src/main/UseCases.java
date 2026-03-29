@@ -8,30 +8,57 @@ import equipment.*;
 
 public class UseCases {
 
+    public static void purchaseHead_1(){
+        Snowplower plower = Skeleton.Market.snowplower;
+
+        int listing = Skeleton.questionMultiple("Milyen fejet szeretne vásárolni?", Arrays.asList("Jégtörő", "Hányó", "Seprő", "Sószóró", "Sárkány"));
+        HeadListing headListing;
+        switch (listing) {
+            case 1:
+                headListing = Skeleton.Market.breakerHeadListing; 
+                break;
+            case 2:
+                headListing =Skeleton.Market.sweeperHeadListing; 
+                break;
+            case 3:
+                headListing = Skeleton.Market.ejectorHeadListing; 
+                break;
+            case 4:
+                headListing = Skeleton.Market.saltSpreaderHeadListing; 
+                break;
+            default:
+                headListing = Skeleton.Market.dragonHeadListing; 
+                break;
+        }
+        plower.getHeadInventory().buyListing(headListing);
+    }
+
     public static void vehicleCrash_2() {
         Skeleton.startUseCase("2. Vehicle crash");
         Car car = Skeleton.Market.car;
+        Bus bus = Skeleton.Market.bus;
         Road road = Skeleton.Market.road;
+        Lane lane = Skeleton.Market.lane;
+        Lane lane2 = Skeleton.Market.lane2;
 
-        car.onTick(); //Car.java 90-tol 103-ig
+        lane.addVehicle(car);
+        lane2.addVehicle(bus);
 
-        //A bus-on hogy lesz meghívva a crashedInto, a road crashVehicle fv-nek kene csinalnia, de az ures.
-        road.crashVehicle();
+        car.onTick(); //Ebben kell ütközeteni, 93-100 sorok.
     }
 
     public static void vehicleWaitingDueToCrash_3() {
         Skeleton.startUseCase("3. Vehicle waiting due to crash");
         Car car = Skeleton.Market.car;
 
-        //Az Ontick-ben kellene lennie az út megkérdezésének a torlódással kapcsolatban, de nincs benne.
-        car.onTick();
+        car.onTick(); //Nincs kereszteződésben, majd várakozik ütközés után. 74-88 sorok.
     }
 
     public static void vehicleTrampeSnow_4(){
         Skeleton.startUseCase("4. Vehicle trampe snow");
         Car car = Skeleton.Market.car;
 
-        car.onTick(); //Car.java 105-tol 112-ig
+        car.onTick();
     }
 
     public static void BusDriverGetsPointForATurn_5(){
@@ -92,5 +119,15 @@ public class UseCases {
                 Skeleton.logString("Ejector fejjel ellátott hókotró vásárlása sikertelen.");
             }
         }
+    }
+
+
+    public static void cleaningALane_12(){
+        Snowplower plower = Skeleton.Market.snowplower;
+        plower.onTick();
+    }
+    public static void switchHead_14(){
+        Snowplower plower = Skeleton.Market.snowplower;
+        plower.getHeadInventory().cycleActiveHead();
     }
 }
