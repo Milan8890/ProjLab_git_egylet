@@ -25,7 +25,6 @@ public class Breaker extends Head {
      */ 
     public Breaker(Snowplower snowplower) {
         super(snowplower);
-        Skeleton.initSettingUpObjectStart(this);
         Skeleton.initSettingUpObjectEnd();
     }
 

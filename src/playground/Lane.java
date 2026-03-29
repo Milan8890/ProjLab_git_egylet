@@ -37,7 +37,13 @@ public class Lane {
 		 * élettartamát, kifizeti a játékost
 		 */
 		public void onTick() {
-			// TODO owner fizetése ha kész rá a függvény
+			Skeleton.logFunctionStart(this, "onTick", null);
+
+			int meltedSnow = Skeleton.questionValue("Mennyi havat olvasztott le a só?");
+			int meltedIce = Skeleton.questionValue("Mennyi jeget olvasztott le a só?");
+			owner.addMoney(meltedIce + meltedSnow);
+
+			Skeleton.logFunctionEnd();
 		}
 	}
 
@@ -214,5 +220,12 @@ public class Lane {
 
 		Skeleton.logFunctionEnd();
 		return (double) answer;
+	}
+
+	public Set<Vehicle> getVehicles() {
+		Skeleton.logFunctionStart(this, "getVehicles", null);
+
+		Skeleton.logFunctionEnd();
+		return vehicles;
 	}
 }

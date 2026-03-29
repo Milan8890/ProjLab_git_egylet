@@ -72,19 +72,19 @@ public class HeadInventory {
         switch (answer) {
             case 1:
                 Skeleton.logFunctionEnd();
-                return new Breaker(owner);
+                return Skeleton.Market.breaker;
             case 2:
                 Skeleton.logFunctionEnd();
-                return new Ejector(owner);
+                return Skeleton.Market.ejector;
             case 3:
                 Skeleton.logFunctionEnd();
-                return new Sweeper(owner);
+                return Skeleton.Market.sweeper;
             case 4:
                 Skeleton.logFunctionEnd();
-                return new SaltSpreader(owner);
+                return Skeleton.Market.saltSpreader;
             case 5:
                 Skeleton.logFunctionEnd();
-                return new Dragon(owner);
+                return Skeleton.Market.dragon;
         
             default:
                 Skeleton.logFunctionEnd();
@@ -102,26 +102,23 @@ public class HeadInventory {
         int listingCount = Skeleton.questionValue("Hány Listingje van?");
         List<HeadListing> ret = new ArrayList<>();
         for (int i = 0; i < listingCount; i++) {
-            int headType = Skeleton.questionMultiple("Milyen fej Listingje?", Arrays.asList("Jégtörő", "Hányó", "Seprő", "Sószóró", "Sárkány"));
-            int price = Skeleton.questionValue("Mennyibe kerül a fej?");
+            int headType = Skeleton.questionMultiple("Milyen fejnek a Listingje?", Arrays.asList("Jégtörő", "Hányó", "Seprő", "Sószóró", "Sárkány"));
+            //int price = Skeleton.questionValue("Mennyibe kerül a fej?");
             switch (headType) {
                 case 1:
-                    ret.add(new HeadListing(new Breaker(owner), price));
+                    ret.add(Skeleton.Market.breakerHeadListing);
                     break;
                 case 2:
-                    ret.add(new HeadListing(new Ejector(owner), price));
+                    ret.add(Skeleton.Market.ejectorHeadListing);
                     break;
                 case 3:
-                    ret.add(new HeadListing(new Sweeper(owner), price));
+                    ret.add(Skeleton.Market.sweeperHeadListing);
                     break;
                 case 4:
-                    ret.add(new HeadListing(new SaltSpreader(owner), price));
+                    ret.add(Skeleton.Market.saltSpreaderHeadListing);
                     break;
-                case 5:
-                    ret.add(new HeadListing(new Dragon(owner), price));
-                    break;
-            
                 default:
+                    ret.add(Skeleton.Market.dragonHeadListing);
                     break;
             }
         }
@@ -169,8 +166,9 @@ public class HeadInventory {
      */
     public boolean buyListing(HeadListing listing){
         Skeleton.logFunctionStart(this, "buyListing", Arrays.asList(Skeleton.createNameOfObject(listing)));
+        boolean ret = owner.getCleaner().removeMoney(listing.getPrice());
         Skeleton.logFunctionEnd();
-        return owner.getCleaner().removeMoney(listing.getPrice());
+        return ret;
     }
 
 }

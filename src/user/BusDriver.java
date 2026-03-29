@@ -23,4 +23,13 @@ public class BusDriver extends Player {
 		new Bus(Skeleton.Market.crossing, Skeleton.Market.crossing, this);
 		Skeleton.initSettingUpObjectEnd();
 	}
+
+	/**
+	 * Számoljuk a buszvezetők által megtett köröket.
+	 */
+	public void addPoint() {
+		Skeleton.logFunctionStart(this, "addPoint", null);
+
+		Skeleton.logFunctionEnd();
+	}
 }
