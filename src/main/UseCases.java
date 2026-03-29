@@ -244,4 +244,79 @@ public class UseCases {
 		Snowplower plower = Skeleton.Market.snowplower;
 		plower.getHeadInventory().cycleActiveHead();
 	}
+
+    /**
+     * Use case 15: Hóesés
+     * A rendszer bizonyos időközönként növelheti a sávokon található hó mennyiségét.
+     */
+    public static void snowing_15() {
+        Skeleton.startInit();
+        
+        Road road = Skeleton.Market.road;
+
+        Skeleton.startUseCase("Snowing");
+
+        Skeleton.setAnswerStack(Arrays.asList(-1, 1));
+
+        road.onTick();
+    }
+
+    /**
+     * Use case 16: Vehicle unblocking itself during onTick
+     * A hókotró takarítása után egy korábban elakadt jármű a hó eltakarítása miatt már kiszabadulhat.
+     */
+    public static void vehicleUnblocking_16() {
+        Skeleton.startInit();
+
+        Car car = Skeleton.Market.car;
+
+        Skeleton.startUseCase("Vehicle unblocking itself during onTick");
+
+        Skeleton.setAnswerStack(Arrays.asList(2, 2, 0, 2, -1, -1, 2));
+
+        car.onTick();
+    }
+
+    /**
+     * Use case 17: Vehicle enters next lane from crossing
+     * A kereszteződésben tartózkodó jármű (autó vagy busz) megkísérel behajtani a következő sávba.
+     */
+    public static void vehicleEntersNextLane_17() {
+        Skeleton.startInit();
+
+        Car car = Skeleton.Market.car;
+
+        Skeleton.startUseCase("Vehicle enters next lane from crossing");
+
+        Skeleton.setAnswerStack(Arrays.asList(1, -1, 2, 0, 2, -1, 2, 2));
+
+        car.onTick();
+    }
+
+    /**
+     * Use case 18: Vehicle switches lanes due to deep snow
+     * A jármű (autó vagy busz) haladás közben túl mély havat észlel az aktuális sávjában, 
+     * ezért megpróbál átváltani az út egy másik sávjába, hogy tovább haladhasson.
+     */
+    public static void vehicleSwitchesLane_18() {
+        Skeleton.startInit();
+                
+        Car car = Skeleton.Market.car;
+
+        Skeleton.startUseCase("Vehicle switches lanes due to deep snow");
+
+        Skeleton.setAnswerStack(Arrays.asList(2, 2, 0, 2, -1, -1, -1, -1, -1));
+
+        car.onTick();
+    }
+
+
+
+
+
+
+
+
+
+
 }
