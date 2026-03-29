@@ -4,6 +4,9 @@ import java.util.ArrayList;
 
 import main.Skeleton;
 
+/**
+ * Olyan fajta út, amire nem esik rá a hó (mert fedve van).
+ */
 public class Tunnel extends Road {
 	public Tunnel(Crossing from, Crossing to, int numOfLanes, double length) {
 		// elm OK?

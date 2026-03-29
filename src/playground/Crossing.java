@@ -1,6 +1,6 @@
 package playground;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Set;
 
 import main.Skeleton;
@@ -9,7 +9,7 @@ import main.Skeleton;
  * Kereszteződést leíró objektum. Nyilvántartja a belőle induló utakat.
  */
 public class Crossing {
-	Set<Road> outRoads;
+	Set<Road> outRoads = new HashSet<Road>();
 
 	public Crossing() {
 		Skeleton.initSettingUpObjectStart(this);
