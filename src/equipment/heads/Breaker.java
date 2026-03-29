@@ -10,7 +10,7 @@ import main.Skeleton;
  * Breaker
  * <p>
  * 
- * Felelősség <br>
+ * Felelősség: <br>
  * A sávon lévő jég feltörése, és az ezért járó fizetés kiszámítása.
  * 
  * Ősosztályok <br>

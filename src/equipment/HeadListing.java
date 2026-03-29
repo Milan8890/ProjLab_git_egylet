@@ -8,7 +8,6 @@ import main.Skeleton;
  * Eltárolja a vehető fejet és árát.
  */
 public class HeadListing {
-    Head head;
     
     /**
      * Konstruktor

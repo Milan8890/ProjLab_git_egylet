@@ -1,7 +1,6 @@
 package main;
 
-import playground.Lane;
-import playground.Road;
+import java.awt.Color;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
@@ -13,32 +12,6 @@ import equipment.*;
 
 public class UseCases {
     //TODO
-
-    public static void purchaseHead_1() {
-		Snowplower plower = Skeleton.Market.snowplower;
-
-		int listing = Skeleton.questionMultiple("Milyen fejet szeretne vásárolni?",
-				Arrays.asList("Jégtörő", "Hányó", "Seprő", "Sószóró", "Sárkány"));
-		HeadListing headListing;
-		switch (listing) {
-			case 1:
-				headListing = Skeleton.Market.breakerHeadListing;
-				break;
-			case 2:
-				headListing = Skeleton.Market.sweeperHeadListing;
-				break;
-			case 3:
-				headListing = Skeleton.Market.ejectorHeadListing;
-				break;
-			case 4:
-				headListing = Skeleton.Market.saltSpreaderHeadListing;
-				break;
-			default:
-				headListing = Skeleton.Market.dragonHeadListing;
-				break;
-		}
-		plower.getHeadInventory().buyListing(headListing);
-	}
 
 	public static void vehicleCrash_2() {
 		Skeleton.startInit();
@@ -55,7 +28,7 @@ public class UseCases {
 			Skeleton.Market.lane2.addVehicle(Skeleton.Market.car2);
 		}
 
-		Skeleton.setAnswerStack(Arrays.asList(2, 2, 100, 1, 2));
+		Skeleton.setAnswerStack(Arrays.asList(2, 2, -1, 1, 2));
 
 		car.onTick(); // Car.java 90-tol 103-ig
 
@@ -143,11 +116,49 @@ public class UseCases {
 		}
 	}
 
+	/**
+	 * Use case 1: Fej vásárlása
+	 * A játékos kiválaszt egy fejet a lehetőségek közül, és megvásárolja azt a
+	 * hókotrójához. A fej ára levonódik a játékos pénzéből, és a fej hozzáadódik a
+	 * hókotrónak a fejtárolójához.
+	 */
+	public static void purchaseHead_1() {
+		Snowplower plower = Skeleton.Market.snowplower;
+
+		int listing = Skeleton.questionMultiple("Milyen fejet szeretne vásárolni?",
+				Arrays.asList("Jégtörő", "Hányó", "Seprő", "Sószóró", "Sárkány"));
+		HeadListing headListing;
+		switch (listing) {
+			case 1:
+				headListing = Skeleton.Market.breakerHeadListing;
+				break;
+			case 2:
+				headListing = Skeleton.Market.sweeperHeadListing;
+				break;
+			case 3:
+				headListing = Skeleton.Market.ejectorHeadListing;
+				break;
+			case 4:
+				headListing = Skeleton.Market.saltSpreaderHeadListing;
+				break;
+			default:
+				headListing = Skeleton.Market.dragonHeadListing;
+				break;
+		}
+		plower.getHeadInventory().buyListing(headListing);
+	}
+
+	/**
+	 * Use case 12: Sáv letakarítása
+	 */
 	public static void cleaningALane_12() {
 		Snowplower plower = Skeleton.Market.snowplower;
 		plower.onTick();
 	}
 
+	/**
+	 * Use case 14: Fej váltása
+	 */
 	public static void switchHead_14() {
 		Snowplower plower = Skeleton.Market.snowplower;
 		plower.getHeadInventory().cycleActiveHead();
@@ -221,4 +232,28 @@ public class UseCases {
 
         car.onTick();
     }
+	public static void startingGame_19() {
+		Skeleton.startInit();
+
+		int cleanerAmount = Skeleton.questionValue("Mennyi takarító játékos fog játszani?");
+		int busDriverAmount = Skeleton.questionValue("Mennyi buszvezető játékos fog játszani?");
+		City.initCity();
+
+		for (int i = 0; i < cleanerAmount; i++) {
+			Cleaner t = new Cleaner("Cleaner " + i, Color.RED);
+			boolean breaker = 1 == Skeleton.questionMultiple("Milyen hókotrója legyen a játékosnak?",
+					Arrays.asList("Breaker", "Ejector"));
+
+			Skeleton.setAnswerStack(Arrays.asList(0, 1));
+
+			if (breaker) {
+				t.buyBreakerSnowplower();
+			} else {
+				t.buyEjectorSnowplower();
+			}
+		}
+		for (int i = 0; i < busDriverAmount; i++) {
+			BusDriver t = new BusDriver("BusDriver " + i, Color.RED);
+		}
+	}
 }
