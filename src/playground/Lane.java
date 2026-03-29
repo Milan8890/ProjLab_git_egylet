@@ -137,10 +137,10 @@ public class Lane {
 	public double getIce() {
 		Skeleton.logFunctionStart(this, "getIce", null);
 
-		int answer = Skeleton.questionValue("Milyen magas a jég a sávban?");
+		double answer = Skeleton.questionValue("Milyen magas a jég a sávban?");
 
 		Skeleton.logFunctionEnd();
-		return (double) answer;
+		return answer;
 	}
 
 	/**
@@ -151,10 +151,10 @@ public class Lane {
 	public double getSnow() {
 		Skeleton.logFunctionStart(this, "getSnow", null);
 
-		int answer = Skeleton.questionValue("Milyen magas a jég a sávban?");
+		double answer = Skeleton.questionValue("Milyen magas a hó a sávban?");
 
 		Skeleton.logFunctionEnd();
-		return (double) answer;
+		return answer;
 	}
 
 	/**
