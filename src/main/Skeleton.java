@@ -11,6 +11,11 @@ import user.*;
 import equipment.*;
 import equipment.heads.*;
 
+/**
+ * A fejlesztés ezen fázisában a program irányítására használt osztály.<br>
+ * Kezeli a logolást, eltárolja a közös objektumokat teszteléshez, és kezeli a
+ * felhasználó és modell közötti kapcsolatot.
+ */
 public class Skeleton {
 	static Stack<Object> initStack = new Stack<>();
 
@@ -20,7 +25,12 @@ public class Skeleton {
 
 	static Stack<Integer> answerStack = new Stack<>();
 
-	// visszaadja egy objektum "nevét", az objektumot kell beleadni
+	/**
+	 * Visszaadja az objektum "olvasható nevét"
+	 * 
+	 * @param o Az objektum
+	 * @return Az objektum olvasható neve, mint string
+	 */
 	public static String createNameOfObject(Object o) {
 		String temp = o.getClass().toString();
 		temp = temp.substring(temp.lastIndexOf(".") + 1);
@@ -28,7 +38,11 @@ public class Skeleton {
 		return temp + "#" + Integer.toString(o.hashCode() % 1000);
 	}
 
-	// egy string kiírása megfelelő behúzással
+	/**
+	 * Logol egy stringet a megfelelő behúzással.
+	 * 
+	 * @param s A string
+	 */
 	public static void logString(String s) {
 		for (int i = 0; i < indentation; i++) {
 			System.out.print("\t");
@@ -36,7 +50,11 @@ public class Skeleton {
 		System.out.println(s);
 	}
 
-	// egy string kiírása behúzás nélkül
+	/**
+	 * Logol egy stringet a megfelelő behúzással, sortörés nélkül.
+	 * 
+	 * @param s A string
+	 */
 	public static void logStringNoBreak(String s) {
 		for (int i = 0; i < indentation; i++) {
 			System.out.print("\t");
@@ -44,9 +62,15 @@ public class Skeleton {
 		System.out.print(s);
 	}
 
-	// függvény elindulásakor kell hívni
-	// első paraméter egy string, ha nem lehetne megadni az objektumot, ami a
-	// függvényt hívta
+	/**
+	 * Logolja egy függvény kezdetét.<br>
+	 * Ez a verzió egy stringet kér be az osztály helyett, így statikus függvényeket
+	 * is lehet logolni.
+	 * 
+	 * @param s            A hívó osztály neve
+	 * @param functionName A függvény neve
+	 * @param params       A függvény paraméterei (értékei stringként)
+	 */
 	public static void logFunctionStart(String s, String functionName, List<String> params) {
 		String params_to_string = "";
 		if (params != null && params.size() != 0) {
@@ -61,9 +85,13 @@ public class Skeleton {
 		indentation++;
 	}
 
-	// függvény elindulásakor kell hívni
-	// első Object paraméter `this`, hogy ki tudjuk írni melyik osztály hívta a
-	// függvényt
+	/**
+	 * Logolja egy függvény kezdetét.
+	 * 
+	 * @param o            A hívó osztály
+	 * @param functionName A függvény neve
+	 * @param params       A függvény paraméterei (értékei stringként)
+	 */
 	public static void logFunctionStart(Object o, String functionName, List<String> params) {
 
 		String params_to_string = "";
@@ -79,14 +107,21 @@ public class Skeleton {
 		indentation++;
 	}
 
-	// függvény hívásának végekor kell hívni
+	/**
+	 * Logolja egy függvény végét.
+	 */
 	public static void logFunctionEnd() {
 		indentation--;
 		logString("end");
 	}
 
-	// multiple choice kérdés feltevése
-	// első paraméter a kérdés, második egy lista a választási lehetőségekről
+	/**
+	 * Feltesz a felhasználónak egy több választási lehetőségből álló kérdést.
+	 * 
+	 * @param q       A kérdés
+	 * @param options A választási lehetőségek
+	 * @return A válasz sorszáma (1-től kezdve)
+	 */
 	public static int questionMultiple(String q, List<String> options) {
 		logString("[" + q + "]");
 		for (int i = 0; i < options.size(); i++) {
@@ -121,7 +156,12 @@ public class Skeleton {
 		return answer;
 	}
 
-	// érték kérdés feltevése
+	/**
+	 * Feltesz a felhasználónak egy kérdést, amire egy egész szám a válasz.
+	 * 
+	 * @param q A kérdés
+	 * @return A válasz, mint egész szám
+	 */
 	public static int questionValue(String q) {
 		logString("[" + q + "]");
 		logStringNoBreak("Válasz: ");
@@ -140,27 +180,9 @@ public class Skeleton {
 		return answer;
 	}
 
-	// konstuktor elején kell meghívni
-	public static void initObj(Object o) {
-		System.out.println(createNameOfObject(o));
-	}
-
-	// új objektum létrehozásakor kell meghívni
-	// pl amikor a város létrehozza az utakat, a város meghívja ezt a függvény,
-	// magát beadva
-	@Deprecated
-	public static void createObj(Object o) {
-		logStringNoBreak(createNameOfObject(o) + "->");
-		indentation++;
-	}
-
-	// Objektum konstruktorjának végén kell meghívni
-	@Deprecated
-	public static void initObjFinish() {
-		indentation--;
-	}
-
-	// teszteset függvényének elején, az inicializálás kezdetekor kell meghívni
+	/**
+	 * Tesztesetek elején kell hívni. Újra felépíti a közös objektumokat.
+	 */
 	public static void startInit() {
 		System.out.println("\t--- Initialization ---");
 		init_log = true;
@@ -168,15 +190,22 @@ public class Skeleton {
 		indentation = 0;
 	}
 
-	// tesztesetben inicializálás után, a valós teszt kezdése előtt kell meghívni
+	/**
+	 * Az inicializálás után, a UseCase-ek kezdetén kell hívni.
+	 * 
+	 * @param useCaseName A UseCase neve.
+	 */
 	public static void startUseCase(String useCaseName) {
 		System.out.println("\t--- " + useCaseName + " ---");
 		init_log = false;
 		indentation = 0;
 	}
 
-	// új függvény a régi init logging helyett
-	// minden konstruktor elején kell meghívni (csak ott)
+	/**
+	 * Objektumok felállításának elején kell hívni (általában konstruktor elején).
+	 * 
+	 * @param o Az objektum
+	 */
 	public static void initSettingUpObjectStart(Object o) {
 
 		for (int i = 0; i < initStack.size(); i++) {
@@ -192,22 +221,35 @@ public class Skeleton {
 		initStack.push(o);
 	}
 
-	// új függvény a régi init logging helyett
-	// konstruktor végén/objektum teljes beállítása végén kell meghívni
+	/**
+	 * Objektum felállításának a végén kell hívni. Gyakran nem a konstruktor végén.
+	 */
 	public static void initSettingUpObjectEnd() {
 		initStack.pop();
 	}
 
+	/**
+	 * Beállít egy listát, amivel automatikusan válaszol a feltett kérdésekre.<br>
+	 * A "-1"-es érték azt jelenti, hogy nem használ automatikus válaszolást.
+	 * 
+	 * @param inputAnswerList A válaszok listája.
+	 */
 	public static void setAnswerStack(List<Integer> inputAnswerList) {
 		answerStack.clear();
 		answerStack.addAll(inputAnswerList.reversed());
 	}
 
+	/**
+	 * Törli a beállított válaszokat.
+	 */
 	public static void clearAnswerStack() {
 		answerStack.clear();
 	}
 
 	// --------------- HA KELL VALAMI INNEN KÉRD LE -------------------
+	/**
+	 * Közös objektumok tára.
+	 */
 	public static class Market {
 		static public Crossing crossing = new Crossing();
 		static public Crossing crossing2 = new Crossing();
@@ -243,6 +285,9 @@ public class Skeleton {
 
 		static public Path path = new Path();
 
+		/**
+		 * Közös objektumok újraépítése.
+		 */
 		public static void resetMarket() {
 			crossing = new Crossing();
 			crossing2 = new Crossing();
