@@ -40,9 +40,13 @@ public class Road {
 		Skeleton.logFunctionStart(this, "onTick", null);
 
 		int ans = Skeleton.questionValue("Mennyi havat adjon hozzá a sávokhoz?");
+
+		//LEHET HOGY MARKET-BE KLLE TÖBB LANE
 		List<Lane> lanes = new ArrayList<Lane>();
-		lanes.add(new Lane(this));
-		lanes.add(new Lane(this));
+		int laneNum = Skeleton.questionValue("Hány sávja van az útnak?");
+		for (int i = 0; i < laneNum; i++) {
+			lanes.add(Skeleton.Market.lane);
+		}
 
 		for (Lane l : lanes) {
 			l.addSnow((double) ans);
@@ -59,10 +63,12 @@ public class Road {
 	public List<Lane> getLanes() {
 		Skeleton.logFunctionStart(this, "getLanes", null);
 
-		//KELL???
+		//LEHET HOGY MARKET-BE KLLE TÖBB LANE
 		List<Lane> lanes = new ArrayList<Lane>();
-		lanes.add(new Lane(this));
-		lanes.add(new Lane(this));
+		int laneNum = Skeleton.questionValue("Hány sávja van az útnak?");
+		for (int i = 0; i < laneNum; i++) {
+			lanes.add(Skeleton.Market.lane);
+		}
 
 		Skeleton.logFunctionEnd();
 		return lanes;

@@ -173,7 +173,7 @@ public class Skeleton {
 
 
 //--------------- HA KELL VALAMI INNEN KÉRD LE -------------------
-	static class Market{
+	public static class Market{
 		static public City city = new City();
 		static public Crossing crossing = new Crossing();
 		static public Road road = new Road(crossing, crossing, 1, 1);
