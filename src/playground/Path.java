@@ -15,6 +15,7 @@ public class Path {
 	}
 
 	public void extendPath(Lane l) {
+		// LOL
 		Skeleton.logFunctionStart(this, "extendPath", Arrays.asList("l"));
 
 		// Megkérdezzük a sávot, melyik úthoz tartozik
