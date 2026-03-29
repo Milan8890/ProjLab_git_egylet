@@ -5,26 +5,26 @@ import java.util.Arrays;
 import main.Skeleton;
 
 public class Path {
-    public Lane pop(){
-        Skeleton.logFunctionStart(this, "pop", null);
-        
-        Lane nextLane = new Lane(Skeleton.Market.road); 
-        
-        Skeleton.logFunctionEnd();
-        return nextLane;
-    }
+	public Lane pop() {
+		Skeleton.logFunctionStart(this, "pop", null);
 
-    public void extendPath(Lane l) {
-        Skeleton.logFunctionStart(this, "extendPath", Arrays.asList("l"));
+		Lane nextLane = new Lane(Skeleton.Market.road);
 
-        //Megkérdezzük a sávot, melyik úthoz tartozik
-        Road r = l.getRoad(); 
+		Skeleton.logFunctionEnd();
+		return nextLane;
+	}
 
-        //Megkérdezzük az utat, honnan indul
-        Crossing c = r.getFromCrossing();
+	public void extendPath(Lane l) {
+		Skeleton.logFunctionStart(this, "extendPath", Arrays.asList("l"));
 
-        System.out.println("Sáv sikeresen hozzáadva az útvonalhoz.");
+		// Megkérdezzük a sávot, melyik úthoz tartozik
+		Road r = l.getRoad();
 
-        Skeleton.logFunctionEnd();
-    }
+		// Megkérdezzük az utat, honnan indul
+		Crossing c = r.getFromCrossing();
+
+		System.out.println("Sáv sikeresen hozzáadva az útvonalhoz.");
+
+		Skeleton.logFunctionEnd();
+	}
 }

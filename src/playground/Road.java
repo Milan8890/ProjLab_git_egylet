@@ -2,11 +2,8 @@ package playground;
 
 import main.Skeleton;
 
-import java.rmi.server.SkeletonMismatchException;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.naming.LimitExceededException;
 
 /**
  * A sávokat tartalmazza, valamint egy referenciát a kereszteződésre amiből
@@ -41,7 +38,7 @@ public class Road {
 
 		int ans = Skeleton.questionValue("Mennyi havat adjon hozzá a sávokhoz?");
 
-		//LEHET HOGY MARKET-BE KLLE TÖBB LANE
+		// LEHET HOGY MARKET-BE KELL TÖBB LANE
 		List<Lane> lanes = new ArrayList<Lane>();
 		int laneNum = Skeleton.questionValue("Hány sávja van az útnak?");
 		for (int i = 0; i < laneNum; i++) {
@@ -63,7 +60,7 @@ public class Road {
 	public List<Lane> getLanes() {
 		Skeleton.logFunctionStart(this, "getLanes", null);
 
-		//LEHET HOGY MARKET-BE KLLE TÖBB LANE
+		// LEHET HOGY MARKET-BE KLLE TÖBB LANE
 		List<Lane> lanes = new ArrayList<Lane>();
 		int laneNum = Skeleton.questionValue("Hány sávja van az útnak?");
 		for (int i = 0; i < laneNum; i++) {
