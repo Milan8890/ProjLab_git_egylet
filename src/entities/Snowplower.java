@@ -13,33 +13,29 @@ import main.Skeleton;
  * Tudja melyik hókotrófejet használja éppen a hókotró.<br>
  * Tudja mennyi só, illetve biokerozin van még az egyes fejekhez.<br>
  * 
- * <p>
- * </p>
+ * <p></p>
  * 
  * Felelősségei: <br>
- * kotrófejek cserélése, vásárlása. Alapanyag vásárlása, Eldönti, hogy fel tud-e
- * hajtani egy útra.<br>
- * Útvona követése. Ütközés utáni újraindulás. Nyilvántartja, hogy a jelenlegi
- * úton hol helyezkedik el.<br>
- * Letaposás végzése. A fej által visszaadott mennyiséggel kifizeti a
- * játékost.<br>
+ *      kotrófejek cserélése, vásárlása. Alapanyag vásárlása, Eldönti, hogy fel tud-e hajtani egy útra.<br>
+ *      Útvona követése. Ütközés utáni újraindulás. Nyilvántartja, hogy a jelenlegi úton hol helyezkedik el.<br>
+ *      Letaposás végzése. A fej által visszaadott mennyiséggel kifizeti a játékost.<br>
  */
 public class Snowplower extends Vehicle {
     Cleaner owner;
 
-	/**
-	 * Konstruktor
-	 * 
-	 * @param owner     a játékos aki irányítja a hókotrót
-	 * @param spawn     a kereszteződés ahol a hókotró megjelenik
-	 * @param inventory a fejtároló amivel a hókotró rendelkezik
-	 */
-	private Snowplower(Cleaner owner, Crossing spawn) {
-		Skeleton.initSettingUpObjectStart(this);
-		this.owner = owner;
-		currentLane = null;
-		lastCrossing = spawn;
-		Skeleton.initSettingUpObjectEnd();
+    /**
+     * Konstruktor
+     * 
+     * @param owner a játékos aki irányítja a hókotrót
+     * @param spawn a kereszteződés ahol a hókotró megjelenik
+     * @param inventory a fejtároló amivel a hókotró rendelkezik
+     */
+    private Snowplower(Cleaner owner,Crossing spawn){
+        Skeleton.initSettingUpObjectStart(this);
+        this.owner=owner;
+        currentLane= null;
+        lastCrossing= spawn;
+        Skeleton.initSettingUpObjectEnd();
 
     }
 
@@ -73,7 +69,7 @@ public class Snowplower extends Vehicle {
      * 
      * @return HeadInventory
      */
-    HeadInventory getHeadInventory(){
+    public HeadInventory getHeadInventory(){
         Skeleton.logFunctionStart(this, "getHeadInventory", null);  
         Skeleton.logFunctionEnd();
         return HeadInventory.createWithBreaker(this);
@@ -112,7 +108,7 @@ public class Snowplower extends Vehicle {
      * 
      * @return Sikeres volt-e a vásárlás
      */
-    boolean buySalt(){
+    public boolean buySalt(){
         Skeleton.logFunctionStart(this, "buySalt", null);
         boolean answer1 = isinCrossing();
         if(!answer1)
@@ -131,7 +127,7 @@ public class Snowplower extends Vehicle {
      * 
      * @return Sikeres volt-e a vásárlás
      */
-    boolean buyBio(){
+    public boolean buyBio(){
         Skeleton.logFunctionStart(this, "buyBio", null);
         boolean answer1 = isinCrossing();
         if(!answer1)
@@ -145,17 +141,15 @@ public class Snowplower extends Vehicle {
         return ret;
     }
 
-	/**
-	 * levonja az elhasznált sót
-	 * 
-	 * 
-	 * 
-	 * @param saltAmount Az elhasznált só mennyisége
-	 */
-	public void useSalt(double saltAmount) {
-		Skeleton.logFunctionStart(this, "useSalt", Arrays.asList(Double.toString(saltAmount)));
-		Skeleton.logFunctionEnd();
-	}
+    /**
+     * levonja az elhasznált sót
+     * 
+     * @param saltAmount Az elhasznált só mennyisége
+     */
+    public void useSalt(double saltAmount){
+        Skeleton.logFunctionStart(this, "useSalt", Arrays.asList( Double.toString(saltAmount)));
+        Skeleton.logFunctionEnd();
+    }
 
     /**
      * levonja az elhasznált kerozint
@@ -167,35 +161,31 @@ public class Snowplower extends Vehicle {
         Skeleton.logFunctionEnd();
     }
 
-	/**
-	 * Konstruktor segítségével létrehoz egy Hókotrót egy hányó fejjel.
-	 * 
-	 * @param owner a játékos aki irányítja a hókotrót
-	 * @param base  a kereszteződés ahol a hókotró megjelenik
-	 * @return a létrehozott Hókotró
-	 */
-	public static Snowplower createWithEjector(Cleaner owner, Crossing base) {
-		Skeleton.logFunctionStart("Snowplower", "creatWithEjector", Arrays.asList(owner.toString(), base.toString()));
-		Snowplower pl = new Snowplower(owner, base);
-		HeadInventory inv = HeadInventory.createWithEjector(pl);
-		pl.inventory = inv;
-		Skeleton.logFunctionEnd();
-		return pl;
-	}
-
-	/**
-	 * Konstruktor segítségével létrehoz egy Hókotrót egy jégtörő fejjel.
-	 * 
-	 * @param owner a játékos aki irányítja a hókotrót
-	 * @param base  a kereszteződés ahol a hókotró megjelenik
-	 * @return a létrehozott Hókotró
-	 */
-	public static Snowplower createWithBreaker(Cleaner owner, Crossing base) {
-		Skeleton.logFunctionStart("Snowplower", "creatWithBreaker", Arrays.asList(owner.toString(), base.toString()));
-		Snowplower pl = new Snowplower(owner, base);
-		HeadInventory inv = HeadInventory.createWithBreaker(pl);
-		pl.inventory = inv;
-		Skeleton.logFunctionEnd();
-		return pl;
-	}
+    /**
+     * Konstruktor segítségével létrehoz egy Hókotrót egy hányó fejjel.
+     * 
+     * @param owner a játékos aki irányítja a hókotrót
+     * @param base  a kereszteződés ahol a hókotró megjelenik
+     * @return a létrehozott Hókotró
+     */
+    public static Snowplower createWithEjector(Cleaner owner, Crossing base){
+        Skeleton.logFunctionStart( "Snowplower", "creatWithEjector", Arrays.asList(owner.toString(), base.toString()));
+        Snowplower pl = new Snowplower(owner, base);
+        HeadInventory.createWithEjector(pl);
+        Skeleton.logFunctionEnd();
+        return pl;
+    }
+    /**
+     * Konstruktor segítségével létrehoz egy Hókotrót egy jégtörő fejjel.
+     * @param owner a játékos aki irányítja a hókotrót
+     * @param base  a kereszteződés ahol a hókotró megjelenik
+     * @return a létrehozott Hókotró
+     */
+    public static Snowplower createWithBreaker(Cleaner owner, Crossing base){
+        Skeleton.logFunctionStart( "Snowplower", "creatWithBreaker", Arrays.asList(owner.toString(), base.toString()));
+        Snowplower pl = new Snowplower(owner, base);
+        HeadInventory.createWithBreaker(pl);
+        Skeleton.logFunctionEnd();
+        return pl;
+    }
 }
