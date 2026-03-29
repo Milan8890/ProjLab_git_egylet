@@ -1,5 +1,96 @@
 package main;
 
+import java.util.List;
+import entities.*;
+import playground.*;
+import user.*;
+import equipment.*;
+
 public class UseCases {
-    //TODO
+
+    public static void vehicleCrash_2() {
+        Skeleton.startUseCase("2. Vehicle crash");
+        Car car = Skeleton.Market.car;
+        Road road = Skeleton.Market.road;
+
+        car.onTick(); //Car.java 90-tol 103-ig
+
+        //A bus-on hogy lesz meghívva a crashedInto, a road crashVehicle fv-nek kene csinalnia, de az ures.
+        road.crashVehicle();
+    }
+
+    public static void vehicleWaitingDueToCrash_3() {
+        Skeleton.startUseCase("3. Vehicle waiting due to crash");
+        Car car = Skeleton.Market.car;
+
+        //Az Ontick-ben kellene lennie az út megkérdezésének a torlódással kapcsolatban, de nincs benne.
+        car.onTick();
+    }
+
+    public static void vehicleTrampeSnow_4(){
+        Skeleton.startUseCase("4. Vehicle trampe snow");
+        Car car = Skeleton.Market.car;
+
+        car.onTick(); //Car.java 105-tol 112-ig
+    }
+
+    public static void BusDriverGetsPointForATurn_5(){
+        Skeleton.startUseCase("5. Bus driver gets point for a turn");
+        Bus bus = Skeleton.Market.bus;
+
+        bus.onTick(); //Bus.java 112-tol 117-ig
+    }
+
+    public static void BiokerozinPurchase_6(){
+        Skeleton.startUseCase("6. Biokerozin purchase");
+        Snowplower plower = Skeleton.Market.snowplower;
+
+        //Itt a "felhasználó kerozin vásárlást kezdeményez a hókotróval"-t hogy kéne?
+
+        boolean purchased = plower.buyBio(); //Snowplower.java 130-tol 142-ig
+        if (purchased) {
+            Skeleton.logString("Biokerozin vásárlás sikeres.");
+        } else {
+            Skeleton.logString("Biokerozin vásárlás sikertelen.");
+        }
+    }
+
+    public static void SaltPurchase_7(){
+        Skeleton.startUseCase("7. Salt purchase");
+        Snowplower plower = Skeleton.Market.snowplower;
+
+        //Itt a "felhasználó só vásárlást kezdeményez a hókotróval"-t hogy kéne?
+
+        boolean purchased = plower.buySalt(); //Snowplower.java 111-tol 123-ig
+        if (purchased) {
+            Skeleton.logString("Só vásárlás sikeres.");
+        } else {
+            Skeleton.logString("Só vásárlás sikertelen.");
+        }
+    }
+
+    public static void SnowplowerPurchaseWithTheChosenHead_8(){
+        Skeleton.startUseCase("8. Snowplower purchase with the chosen head");
+        Cleaner cleaner = Skeleton.Market.cleaner;
+        boolean purchaseConfirmed;
+
+        int chosenHead = Skeleton.questionMultiple("Milyen fejjel szeretnél hókotrót vásárolni?", List.of("Breaker", "Ejector"));
+
+        if(chosenHead == 0) { // Breaker fej
+            purchaseConfirmed = cleaner.buyBreakerSnowplower();
+            if (purchaseConfirmed) {
+                Skeleton.logString("Breaker fejjel ellátott hókotró vásárlása sikeres.");
+            } else {
+                Skeleton.logString("Breaker fejjel ellátott hókotró vásárlása sikertelen.");
+            }
+        }
+        else if(chosenHead == 1) { // Ejector fej
+            purchaseConfirmed = cleaner.buyEjectorSnowplower();
+            if (purchaseConfirmed) {
+                Skeleton.logString("Ejector fejjel ellátott hókotró vásárlása sikeres.");
+            } else {
+                Skeleton.logString("Ejector fejjel ellátott hókotró vásárlása sikertelen.");
+            }
+        }
+    }
 }
