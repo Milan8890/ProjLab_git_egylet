@@ -94,10 +94,14 @@ public class Skeleton {
 		}
 		logStringNoBreak("Válasz: ");
 		int answer;
+
 		if (answerStack.isEmpty()) {
 			answer = sc.nextInt();
 		} else {
 			answer = answerStack.pop();
+			if (answer == -1) {
+				answer = sc.nextInt();
+			}
 			if (answer > options.size()) {
 				answer = options.size();
 			}
@@ -127,6 +131,9 @@ public class Skeleton {
 			answer = sc.nextInt();
 		} else {
 			answer = answerStack.pop();
+			if (answer == -1) {
+				answer = sc.nextInt();
+			}
 			System.out.println(answer);
 		}
 

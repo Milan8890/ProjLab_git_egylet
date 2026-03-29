@@ -28,6 +28,7 @@ public class Lane {
 
 		/**
 		 * Konstruktor
+		 * 
 		 * @param c a cleaner, akihez a só tartozik
 		 */
 		Salt(Cleaner c) {
@@ -54,7 +55,7 @@ public class Lane {
 	/**
 	 * Konstruktor
 	 * 
-	 * @param r a sávot tartalmazó út. 
+	 * @param r a sávot tartalmazó út.
 	 */
 	public Lane(Road r) {
 		Skeleton.initSettingUpObjectStart(this);
@@ -81,7 +82,7 @@ public class Lane {
 	 * @param v A jármű, amit hozzá fog adni a sávhoz.
 	 */
 	public void addVehicle(Vehicle v) {
-		Skeleton.logFunctionStart(this, "addVehicle", Arrays.asList(v.toString()));
+		Skeleton.logFunctionStart(this, "addVehicle", Arrays.asList(Skeleton.createNameOfObject(v)));
 		vehicles.add(v);
 		Skeleton.logFunctionEnd();
 	}
@@ -198,7 +199,7 @@ public class Lane {
 		double answer = Skeleton.questionValue("Milyen magas volt a hó a sávban takarítás előtt?");
 
 		Skeleton.logFunctionEnd();
-		return  answer;
+		return answer;
 	}
 
 	/**
@@ -233,6 +234,7 @@ public class Lane {
 
 	/**
 	 * Visszaadja a sávban lévő járműveket
+	 * 
 	 * @return a sávban lévő járművek halmaza.
 	 */
 	public Set<Vehicle> getVehicles() {
