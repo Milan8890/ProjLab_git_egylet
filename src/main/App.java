@@ -9,22 +9,44 @@ import user.*;
 import playground.*;
 import equipment.*;
 
+/**
+ * main osztály, itt lehet tesztelni a kódot, illetve itt van egy egyszerű menü is, amivel a különböző use case-eket lehet elindítani.
+ */
 public class App {
+
+	/**
+	 * függvényhez rendelünk egy nevet, hogy a logolásnál használni tudjuk
+	 */
 	static class NamedFunction {
 		String name;
 		Runnable function;
 
+		/**
+		 * Konstruktor
+		 * @param name a függvény neve, amit a logolásnál használunk
+		 * @param function a függvény, amit a névvel meghívunk
+		 */
 		public NamedFunction(String name, Runnable function) {
 			this.name = name;
 			this.function = function;
 		}
 	}
 
+	/**
+	 * Kategóriákba rendezve tároljuk a különböző use case-eket, hogy a menüben megjeleníthessük őket.
+	 */
 	static class NamedCategory {
+		/**
+		 * A kategória neve, amit a menüben megjelenítünk
+		 */
 		public String name;
+		/**
+		 * A kategóriába tartozó use case-ek, amiket a menüben megjelenítünk 
+		 */
 		public List<NamedFunction> useCases = new ArrayList<>();
 	}
 
+	
 	public static void hello() {
 		System.out.println("hello");
 	}
@@ -37,7 +59,9 @@ public class App {
 
 	static NamedCategory currentCategory = null;
 
-	// TODO menü szervezése
+	/**
+	 * A menü kategóriáinak és use case-einek inicializálása.
+	 */
 	public static void catinit() {
 		NamedCategory mainMenu = new NamedCategory();
 		mainMenu.name = "Főmenü";
@@ -69,6 +93,9 @@ public class App {
 		currentCategory = categories.get(0);
 	}
 
+	/**
+	 * A menü kirajzolása, a jelenlegi kategória neve és a hozzá tartozó use case-ek megjelenítése.
+	 */
 	public static void draw() {
 		System.out.println(currentCategory.name);
 		for (int i = 0; i < currentCategory.useCases.size(); i++) {
@@ -76,6 +103,9 @@ public class App {
 		}
 	}
 
+	/**
+	 * A menü kezelése, a felhasználó bemenetétől függően a megfelelő use case-ek meghívása.
+	 */
 	public static void menu() {
 		catinit();
 
@@ -97,6 +127,11 @@ public class App {
 		}
 	}
 
+	/**
+	 * A main függvény, innen lehet elindítani a programot.
+	 * @param args a parancssori argumentumok, amiket a program indításakor meg lehet adni
+	 * @throws Exception ha valami hiba történik a program futása közben
+	 */
 	public static void main(String[] args) throws Exception {
 		// Itt lehet tesztelni
 		catinit();

@@ -113,7 +113,11 @@ public class UseCases {
 			}
 		}
 	}
-
+    
+     /**
+     * Use case 1: Fej vásárlása
+     * A játékos kiválaszt egy fejet a lehetőségek közül, és megvásárolja azt a hókotrójához. A fej ára levonódik a játékos pénzéből, és a fej hozzáadódik a hókotrónak a fejtárolójához.
+     */
 	public static void purchaseHead_1() {
 		Snowplower plower = Skeleton.Market.snowplower;
 
@@ -140,11 +144,17 @@ public class UseCases {
 		plower.getHeadInventory().buyListing(headListing);
 	}
 
+    /**
+     * Use case 12: Sáv letakarítása
+     */
 	public static void cleaningALane_12() {
 		Snowplower plower = Skeleton.Market.snowplower;
 		plower.onTick();
 	}
 
+    /**
+     * Use case 14: Fej váltása
+     */
 	public static void switchHead_14() {
 		Snowplower plower = Skeleton.Market.snowplower;
 		plower.getHeadInventory().cycleActiveHead();

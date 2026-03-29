@@ -14,6 +14,9 @@ public class Path {
 	List<Lane> pathLanes;
 	Crossing lastCrossing;
 
+	/**
+	 * Konstruktor
+	 */
 	public Path() {
 		Skeleton.initSettingUpObjectStart(this);
 		pathLanes = new ArrayList<>();
@@ -25,7 +28,7 @@ public class Path {
 	/**
 	 * Visszaadja a következő sávot az útvonalon.
 	 * 
-	 * @return A következő sáv az úton. Ha az útnak vége, akkor null.
+	 * @return A következő sáv az útvonalon. Ha az útvonalnak vége, akkor null.
 	 */
 	public Lane pop() {
 		Skeleton.logFunctionStart(this, "pop", null);
@@ -48,7 +51,7 @@ public class Path {
 	}
 
 	/**
-	 * Út hosszabbítása. Ha nem lehet az adott sávval folytatni az utat, akkor
+	 * Útvonal hosszabbítása. Ha nem lehet az adott sávval folytatni az utat, akkor
 	 * hamissal tér vissza.
 	 * 
 	 * @param l A sáv, amit hozzá szeretnénk adni.
@@ -78,6 +81,9 @@ public class Path {
 		return isConnected;
 	}
 
+	/**
+	 * Útvonal törlése, minden sáv eltávolítása az útvonalból, és a végpont nullázása.
+	 */
 	public void clear() {
 		Skeleton.logFunctionStart(this, "clear", null);
 		pathLanes.clear();
