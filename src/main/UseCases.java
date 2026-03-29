@@ -11,6 +11,37 @@ import equipment.*;
 
 public class UseCases {
 
+    
+    
+     /**
+     * Use case 1: Fej vásárlása
+     * A játékos kiválaszt egy fejet a lehetőségek közül, és megvásárolja azt a hókotrójához. A fej ára levonódik a játékos pénzéből, és a fej hozzáadódik a hókotrónak a fejtárolójához.
+     */
+	public static void purchaseHead_1() {
+		Snowplower plower = Skeleton.Market.snowplower;
+
+		int listing = Skeleton.questionMultiple("Milyen fejet szeretne vásárolni?",
+				Arrays.asList("Jégtörő", "Hányó", "Seprő", "Sószóró", "Sárkány"));
+		HeadListing headListing;
+		switch (listing) {
+			case 1:
+				headListing = Skeleton.Market.breakerHeadListing;
+				break;
+			case 2:
+				headListing = Skeleton.Market.sweeperHeadListing;
+				break;
+			case 3:
+				headListing = Skeleton.Market.ejectorHeadListing;
+				break;
+			case 4:
+				headListing = Skeleton.Market.saltSpreaderHeadListing;
+				break;
+			default:
+				headListing = Skeleton.Market.dragonHeadListing;
+				break;
+		}
+		plower.getHeadInventory().buyListing(headListing);
+	}
 	public static void vehicleCrash_2() {
 		Skeleton.startInit();
 
@@ -113,49 +144,81 @@ public class UseCases {
 			}
 		}
 	}
-    
-     /**
-     * Use case 1: Fej vásárlása
-     * A játékos kiválaszt egy fejet a lehetőségek közül, és megvásárolja azt a hókotrójához. A fej ára levonódik a játékos pénzéből, és a fej hozzáadódik a hókotrónak a fejtárolójához.
+    /**
+     * Use case 9: User adding a lane to the path of a vehicle
      */
-	public static void purchaseHead_1() {
-		Snowplower plower = Skeleton.Market.snowplower;
+    public static void VehiclePathExtending_9(){
+        Skeleton.Market.resetMarket();
+        Skeleton.startUseCase("9. User adding a lane to the path of a vehicle");
+        Vehicle vehicle;
+        int vehicleChoice = Skeleton.questionMultiple("Melyik járműhöz szeretnél új sávot hozzáadni?", Arrays.asList("Bus", "Snowplower"));
+        if(vehicleChoice == 1){
+            vehicle = Skeleton.Market.bus;
+        }
+        else{
+            vehicle = Skeleton.Market.snowplower;
+        }
 
-		int listing = Skeleton.questionMultiple("Milyen fejet szeretne vásárolni?",
-				Arrays.asList("Jégtörő", "Hányó", "Seprő", "Sószóró", "Sárkány"));
-		HeadListing headListing;
-		switch (listing) {
-			case 1:
-				headListing = Skeleton.Market.breakerHeadListing;
-				break;
-			case 2:
-				headListing = Skeleton.Market.sweeperHeadListing;
-				break;
-			case 3:
-				headListing = Skeleton.Market.ejectorHeadListing;
-				break;
-			case 4:
-				headListing = Skeleton.Market.saltSpreaderHeadListing;
-				break;
-			default:
-				headListing = Skeleton.Market.dragonHeadListing;
-				break;
-		}
-		plower.getHeadInventory().buyListing(headListing);
-	}
+        vehicle.extendPath(Skeleton.Market.lane);
+    }
+    /**
+     * Use case 10: Snowplower leaving a Crossing on the set Path
+     */
+    public static void SnowplowerPathFolowing_10(){
+        Skeleton.Market.resetMarket();
+        Skeleton.setAnswerStack(Arrays.asList(1/*, -1, 2, 2 */ ));
+        Skeleton.startUseCase("10. Snowplower leaving a Crossing on the set Path");
+        Snowplower plower = Skeleton.Market.snowplower;
+
+        plower.onTick();
+
+    }
+
+    /**
+     * Use case 11: Bus or Car leaving a Crossing on the set Path
+     */
+    public static void BusCarPathFolowing_11(){
+        Skeleton.Market.resetMarket();
+        Skeleton.startUseCase("11. Bus and Car leaving a Crossing on the set Path");
+        Vehicle vehicle;
+        int vehicleChoice = Skeleton.questionMultiple("Melyik járművet szeretnéd tesztelni?", Arrays.asList("Bus", "Car"));
+        if(vehicleChoice == 1){
+            vehicle = Skeleton.Market.bus;
+        }
+        else{
+            vehicle = Skeleton.Market.car;
+        }
+        
+        Skeleton.setAnswerStack(Arrays.asList(/*-1,*/1/*, -1, 2, 0, 2, 0, 2, 2 */ )); //TODO ezt fel kell majd tenni a szokásos helyre, de most csak így mükszik.
+        vehicle.onTick();
+    }
+
+
 
     /**
      * Use case 12: Sáv letakarítása
      */
 	public static void cleaningALane_12() {
+        Skeleton.Market.resetMarket();
 		Snowplower plower = Skeleton.Market.snowplower;
+        Skeleton.setAnswerStack(Arrays.asList(2, 2, 1));
+        Skeleton.startUseCase("12. Cleaning a lane");
 		plower.onTick();
 	}
+
+    public static void CarFindingNewPath_13() {
+        Skeleton.Market.resetMarket();
+        Car car = Skeleton.Market.car;
+        Skeleton.setAnswerStack(Arrays.asList(1, 3));
+        Skeleton.startUseCase("13. Car finding new path");
+        car.onTick();
+    }
 
     /**
      * Use case 14: Fej váltása
      */
 	public static void switchHead_14() {
+        Skeleton.Market.resetMarket();
 		Snowplower plower = Skeleton.Market.snowplower;
 		plower.getHeadInventory().cycleActiveHead();
 	}

@@ -38,6 +38,7 @@ public class Car extends Vehicle {
 	public Car(Crossing home, Crossing work) {
 		Skeleton.initSettingUpObjectStart(this);
 		this.home = home;
+		this.lastCrossing = home;
 		this.work = work;
 		Skeleton.initSettingUpObjectEnd();
 	}
@@ -58,10 +59,14 @@ public class Car extends Vehicle {
 		boolean isInCrossing = isInCrossing();
 
 		if (isInCrossing) {
-
 			currentLane = Skeleton.Market.path.pop();
 			if (currentLane == null) {
-				Skeleton.logString("Nincs több út beállítva a járműhöz.");
+				boolean isGoingToWork = 1 == Skeleton.questionMultiple("A jármű merre felé megy?", Arrays.asList("Munkahely", "Otthon"));
+				if (isGoingToWork) {
+					City.shortestPathFrom(lastCrossing, work);
+				} else {
+					City.shortestPathFrom(lastCrossing, home);
+				}
 				Skeleton.logFunctionEnd();
 				return;
 			}

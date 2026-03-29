@@ -70,9 +70,9 @@ public class Path {
 				Arrays.asList("Igen", "Nem"));
 
 		if (isConnected) {
-			Skeleton.logString("Út sikeresen hozzáadva az útvonalhoz.");
 			pathLanes.add(l);
 			lastCrossing = r.getToCrossing();
+			Skeleton.logString("Út sikeresen hozzáadva az útvonalhoz.");
 		} else {
 			Skeleton.logString("Nincs összekötve az eddigi útvonallal a sáv, sikertelen hozzáadás.");
 		}
