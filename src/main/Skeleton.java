@@ -192,7 +192,11 @@ public class Skeleton {
 		static public Dragon dragon = new Dragon(snowplower);
 
 		static public HeadInventory headInventory = HeadInventory.createWithBreaker(snowplower);
-		static public HeadListing headListing = new HeadListing(breaker, 1);
+		static public HeadListing breakerHeadListing = new HeadListing(breaker, 1);
+		static public HeadListing sweeperHeadListing = new HeadListing(sweeper, 1);
+		static public HeadListing ejectorHeadListing = new HeadListing(ejector, 1);
+		static public HeadListing saltSpreaderHeadListing = new HeadListing(saltSpreader, 1);
+		static public HeadListing dragonHeadListing = new HeadListing(dragon, 1);
 
 		// IDE TALÁN MAJD CTOR CUCC
 		static public Path path = new Path();
