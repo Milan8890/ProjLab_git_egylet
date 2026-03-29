@@ -2,6 +2,8 @@ package playground;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 import entities.Vehicle;
 import main.Skeleton;
@@ -14,8 +16,7 @@ import user.Cleaner;
  */
 public class Lane {
 	Road road;
-	// Set<Vehicle> vehicles = new HashSet<>();
-	Salt salt = null;
+	Set<Vehicle> vehicles = new HashSet<>();
 
 	/**
 	 * Sót reprezentáló belső osztály.
@@ -55,7 +56,7 @@ public class Lane {
 	 */
 	public void removeVehicle(Vehicle v) {
 		Skeleton.logFunctionStart(this, "removeVehicle", Arrays.asList(Skeleton.createNameOfObject(v)));
-
+		vehicles.remove(v);
 		Skeleton.logFunctionEnd();
 	}
 
@@ -66,7 +67,7 @@ public class Lane {
 	 */
 	public void addVehicle(Vehicle v) {
 		Skeleton.logFunctionStart(this, "addVehicle", Arrays.asList(v.toString()));
-
+		vehicles.add(v);
 		Skeleton.logFunctionEnd();
 	}
 
@@ -107,7 +108,7 @@ public class Lane {
 	public void setSalt(Cleaner c) {
 		Skeleton.logFunctionStart(this, "setSalt", Arrays.asList(Skeleton.createNameOfObject(c)));
 
-		salt = new Salt(c);
+		new Salt(c);
 
 		Skeleton.logFunctionEnd();
 	}
@@ -160,6 +161,18 @@ public class Lane {
 	}
 
 	/**
+	 * Visszaadja a hozzá tartozó utat
+	 * 
+	 * @return a hozzá tartozó út
+	 */
+	public Road getRoad() {
+		Skeleton.logFunctionStart(this, "getRoad", null);
+
+		Skeleton.logFunctionEnd();
+		return road;
+	}
+
+	/**
 	 * Beállítja a hó magasságát 0-ra, és visszaajda, ezzel mennyi havat tüntetett
 	 * el.
 	 * 
@@ -195,7 +208,6 @@ public class Lane {
 	 * 
 	 * @return mennyi jeget tört fel
 	 */
-
 	public double breakIce() {
 		Skeleton.logFunctionStart(this, "breakIce", null);
 		int answer = Skeleton.questionValue("Milyen magas volt a jég a sávban a feltörése előtt?");

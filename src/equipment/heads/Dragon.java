@@ -75,7 +75,7 @@ public class Dragon extends Head {
 
         Road road = l.getRoad();
 
-        double lenght = road.getLenght();
+        double lenght = road.getLength();
 
         double bioAmount = snowplower.getBio();
 

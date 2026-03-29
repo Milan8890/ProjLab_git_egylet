@@ -1,8 +1,15 @@
 package main;
 
+import java.awt.Color;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Stack;
+
+import playground.*;
+import entities.*;
+import user.*;
+import equipment.*;
+import equipment.heads.*;
 
 public class Skeleton {
 	static Stack<Object> initStack = new Stack<>();
@@ -158,5 +165,40 @@ public class Skeleton {
 	// konstruktor végén/objektum teljes beállítása végén kell meghívni
 	public static void initSettingUpObjectEnd() {
 		initStack.pop();
+	}
+
+
+
+
+
+
+//--------------- HA KELL VALAMI INNEN KÉRD LE -------------------
+	public static class Market{
+		static public City city = new City();
+		static public Crossing crossing = new Crossing();
+		static public Road road = new Road(crossing, crossing, 1, 1);
+		static public Tunnel tunnel = new Tunnel(crossing, crossing, 1, 1);
+		static public Lane lane = new Lane(road);
+
+		static public Cleaner cleaner = new Cleaner("a", Color.RED);
+		static public BusDriver busDriver = new BusDriver("b", Color.BLUE);
+
+
+		static public Bus bus = new Bus();
+		static public Snowplower snowplower = Snowplower.createWithBreaker(cleaner, crossing);
+		static public Car car = new Car();
+
+		static public Ejector ejector = new Ejector(snowplower);
+		static public Breaker breaker = new Breaker(snowplower);
+		static public Sweeper sweeper = new Sweeper(snowplower);
+		static public SaltSpreader	saltSpreader = new SaltSpreader(snowplower);
+		static public Dragon dragon = new Dragon(snowplower);
+
+
+		static public HeadInventory headInventory = HeadInventory.createWithBreaker(snowplower);
+		static public HeadListing headListing = new HeadListing(breaker, 1);
+
+		//IDE TALÁN MAJD CTOR CUCC
+		static public Path path = new Path();
 	}
 }

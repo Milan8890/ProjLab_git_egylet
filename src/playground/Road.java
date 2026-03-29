@@ -16,17 +16,14 @@ import javax.naming.LimitExceededException;
  * járműbe, és jelzi nekik. Havazást szimulálva havat rak a sávjaira.
  */
 public class Road {
-	// Lehet nem kell?
-	List<Lane> lanes;
 	Crossing fromCrossing;
 	Crossing toCrossing;
 
 	public Road(Crossing from, Crossing to, int numOfLanes, double length) {
 		Skeleton.initSettingUpObjectStart(this);
-		lanes = new ArrayList<Lane>();
 
 		for (int i = 0; i < numOfLanes; i++) {
-			lanes.add(new Lane(this));
+			new Lane(this);
 		}
 
 		fromCrossing = from;
@@ -43,6 +40,14 @@ public class Road {
 		Skeleton.logFunctionStart(this, "onTick", null);
 
 		int ans = Skeleton.questionValue("Mennyi havat adjon hozzá a sávokhoz?");
+
+		//LEHET HOGY MARKET-BE KLLE TÖBB LANE
+		List<Lane> lanes = new ArrayList<Lane>();
+		int laneNum = Skeleton.questionValue("Hány sávja van az útnak?");
+		for (int i = 0; i < laneNum; i++) {
+			lanes.add(Skeleton.Market.lane);
+		}
+
 		for (Lane l : lanes) {
 			l.addSnow((double) ans);
 		}
@@ -57,6 +62,13 @@ public class Road {
 	 */
 	public List<Lane> getLanes() {
 		Skeleton.logFunctionStart(this, "getLanes", null);
+
+		//LEHET HOGY MARKET-BE KLLE TÖBB LANE
+		List<Lane> lanes = new ArrayList<Lane>();
+		int laneNum = Skeleton.questionValue("Hány sávja van az útnak?");
+		for (int i = 0; i < laneNum; i++) {
+			lanes.add(Skeleton.Market.lane);
+		}
 
 		Skeleton.logFunctionEnd();
 		return lanes;
