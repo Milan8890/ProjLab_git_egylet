@@ -46,8 +46,8 @@ public class UseCases {
         plower.getHeadInventory().cycleActiveHead();
     }
 
-        public static void snowing_15() {
-        Skeleton.startUseCase("Snowing (15)");
+    public static void snowing_15() {
+        Skeleton.startUseCase("Snowing");
 
         Road road = Skeleton.Market.road;
         road.onTick();
@@ -56,7 +56,7 @@ public class UseCases {
     }
 
     public static void vehicleUnblocking_16() {
-        Skeleton.startUseCase("Vehicle unblocking itself during onTick (16)");
+        Skeleton.startUseCase("Vehicle unblocking itself during onTick");
         Car car = Skeleton.Market.car;
         car.onTick();
 
@@ -64,7 +64,7 @@ public class UseCases {
     }
 
     public static void vehicleEntersNextLane_17() {
-        Skeleton.startUseCase("Vehicle enters next lane from crossing (17)");
+        Skeleton.startUseCase("Vehicle enters next lane from crossing");
         Car car = Skeleton.Market.car;
         car.onTick();
 
@@ -72,7 +72,7 @@ public class UseCases {
     }
 
     public static void vehicleSwitchesLane_18() {
-        Skeleton.startUseCase("Vehicle switches lanes due to deep snow (18)");
+        Skeleton.startUseCase("Vehicle switches lanes due to deep snow");
 
         Car car = Skeleton.Market.car;
         car.onTick();
