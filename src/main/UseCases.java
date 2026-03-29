@@ -1,5 +1,6 @@
 package main;
 
+import java.awt.Color;
 import java.util.Arrays;
 import java.util.List;
 
@@ -69,7 +70,7 @@ public class UseCases {
             Skeleton.Market.lane2.addVehicle(Skeleton.Market.car2);
             Skeleton.setAnswerStack(Arrays.asList(2, 2, 100, 1, 2, 60)); //Ha kell, akkor utolsó max az utolsó (idő) egyet kell kivenni.
             car.onTick();
-		    }
+		        }
             else { //Nincs másik jármű
                 Skeleton.setAnswerStack(Arrays.asList(2, 2, 100, 1, 2));
                 car.onTick();
@@ -237,9 +238,9 @@ public class UseCases {
 		plower.onTick();
 	}
 
-    /**
-     * Use case 14: Fej váltása
-     */
+	/**
+	 * Use case 14: Fej váltása
+	 */
 	public static void switchHead_14() {
 		Snowplower plower = Skeleton.Market.snowplower;
 		plower.getHeadInventory().cycleActiveHead();
@@ -310,13 +311,28 @@ public class UseCases {
         car.onTick();
     }
 
+	public static void startingGame_19() {
+		Skeleton.startInit();
 
+		int cleanerAmount = Skeleton.questionValue("Mennyi takarító játékos fog játszani?");
+		int busDriverAmount = Skeleton.questionValue("Mennyi buszvezető játékos fog játszani?");
+		City.initCity();
 
+		for (int i = 0; i < cleanerAmount; i++) {
+			Cleaner t = new Cleaner("Cleaner " + i, Color.RED);
+			boolean breaker = 1 == Skeleton.questionMultiple("Milyen hókotrója legyen a játékosnak?",
+					Arrays.asList("Breaker", "Ejector"));
 
+			Skeleton.setAnswerStack(Arrays.asList(0, 1));
 
-
-
-
-
-
+			if (breaker) {
+				t.buyBreakerSnowplower();
+			} else {
+				t.buyEjectorSnowplower();
+			}
+		}
+		for (int i = 0; i < busDriverAmount; i++) {
+			BusDriver t = new BusDriver("BusDriver " + i, Color.RED);
+		}
+	}
 }
