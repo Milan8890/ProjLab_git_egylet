@@ -99,9 +99,6 @@ public class App {
 	public static void main(String[] args) throws Exception {
 		// Itt lehet tesztelni
 		catinit();
-
-		//UseCases.purchaseHead_1();
-		UseCases.cleaningALane_12();
 		//menu();
 
 	}

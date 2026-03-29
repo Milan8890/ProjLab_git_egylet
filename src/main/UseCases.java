@@ -37,5 +37,10 @@ public class UseCases {
         Snowplower plower = Skeleton.Market.snowplower;
         plower.onTick();
     }
+    public static void switchHead_14(){
+        Snowplower plower = Skeleton.Market.snowplower;
+        plower.getHeadInventory().cycleActiveHead();
+    }
+
 
 }
