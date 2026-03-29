@@ -135,8 +135,8 @@ public class App {
 	public static void main(String[] args) throws Exception {
 		// Itt lehet tesztelni
 		catinit();
-		UseCases.switchHead_14();
-		//menu();
+		// menu();
 
+		UseCases.vehicleCrash_2();
 	}
 }
