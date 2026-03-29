@@ -149,9 +149,9 @@ public class UseCases {
      * Use case 9: User adding a lane to the path of a vehicle
      */
     public static void VehiclePathExtending_9(){
-        Skeleton.Market.resetMarket();
-        Skeleton.startUseCase("9. User adding a lane to the path of a vehicle");
+        Skeleton.startInit();
         Vehicle vehicle;
+        Skeleton.startUseCase("9. User adding a lane to the path of a vehicle");
         int vehicleChoice = Skeleton.questionMultiple("Melyik járműhöz szeretnél új sávot hozzáadni?", Arrays.asList("Bus", "Snowplower"));
         if(vehicleChoice == 1){
             vehicle = Skeleton.Market.bus;
@@ -166,7 +166,7 @@ public class UseCases {
      * Use case 10: Snowplower leaving a Crossing on the set Path
      */
     public static void SnowplowerPathFolowing_10(){
-        Skeleton.Market.resetMarket();
+        Skeleton.startInit();
         Skeleton.setAnswerStack(Arrays.asList(1/*, -1, 2, 2 */ ));
         Skeleton.startUseCase("10. Snowplower leaving a Crossing on the set Path");
         Snowplower plower = Skeleton.Market.snowplower;
@@ -179,7 +179,7 @@ public class UseCases {
      * Use case 11: Bus or Car leaving a Crossing on the set Path
      */
     public static void BusCarPathFolowing_11(){
-        Skeleton.Market.resetMarket();
+        Skeleton.startInit();
         Skeleton.startUseCase("11. Bus and Car leaving a Crossing on the set Path");
         Vehicle vehicle;
         int vehicleChoice = Skeleton.questionMultiple("Melyik járművet szeretnéd tesztelni?", Arrays.asList("Bus", "Car"));
@@ -200,15 +200,18 @@ public class UseCases {
 	 * Use case 12: Sáv letakarítása
 	 */
 	public static void cleaningALane_12() {
-        Skeleton.Market.resetMarket();
+        Skeleton.startInit();
 		Snowplower plower = Skeleton.Market.snowplower;
         Skeleton.setAnswerStack(Arrays.asList(2, 2, 1));
         Skeleton.startUseCase("12. Cleaning a lane");
 		plower.onTick();
 	}
 
+    /**
+     * Use case 13: Car finding new path
+     */
     public static void CarFindingNewPath_13() {
-        Skeleton.Market.resetMarket();
+        Skeleton.startInit();
         Car car = Skeleton.Market.car;
         Skeleton.setAnswerStack(Arrays.asList(1, 3));
         Skeleton.startUseCase("13. Car finding new path");
@@ -219,8 +222,9 @@ public class UseCases {
      * Use case 14: Fej váltása
      */
 	public static void switchHead_14() {
-        Skeleton.Market.resetMarket();
+        Skeleton.startInit();
 		Snowplower plower = Skeleton.Market.snowplower;
+        Skeleton.startUseCase("14. Snowplower Switches active head");
 		plower.getHeadInventory().cycleActiveHead();
 	}
 
