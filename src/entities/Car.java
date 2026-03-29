@@ -56,7 +56,7 @@ public class Car extends Vehicle {
             Lane nextLane = path.pop();
 
             //Kérdezzük meg a sávtól túl magas -e ott a hó
-            int snowCm = nextLane.getSnow();
+            double snowCm = nextLane.getSnow();
             int snowAnswer = Skeleton.questionMultiple("Elakad az autó " + snowCm + " cm hóban?",Arrays.asList("Igen", "Nem"));
             if(snowAnswer == 1) {
                 System.out.println("A hó túl magas a sávba lépéshez, az autó a kereszteződésben marad.");

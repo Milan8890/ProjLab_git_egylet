@@ -19,7 +19,9 @@ public class Skeleton {
 	static int indentation;
 	// TODO input list
 	// TODO szekvenciaszám?
+	// TODO INIT KIKAPCS
 
+			
 	// visszaadja egy objektum "nevét", az objektumot kell beleadni
 	public static String createNameOfObject(Object o) {
 		// TODO class lecsippantás
@@ -68,7 +70,7 @@ public class Skeleton {
 	public static void logFunctionStart(Object o, String functionName, List<String> params) {
 
 		String params_to_string = "";
-		if (params.size() != 0) {
+		if (params != null && params.size() != 0) {
 			for (String param : params) {
 				params_to_string += param;
 				params_to_string += ", ";
@@ -171,7 +173,6 @@ public class Skeleton {
 
 
 
-
 //--------------- HA KELL VALAMI INNEN KÉRD LE -------------------
 	public static class Market{
 		static public City city = new City();
@@ -184,9 +185,9 @@ public class Skeleton {
 		static public BusDriver busDriver = new BusDriver("b", Color.BLUE);
 
 
-		static public Bus bus = new Bus();
+		static public Bus bus = new Bus(crossing, crossing, busDriver);
 		static public Snowplower snowplower = Snowplower.createWithBreaker(cleaner, crossing);
-		static public Car car = new Car();
+		static public Car car = new Car(crossing, crossing);
 
 		static public Ejector ejector = new Ejector(snowplower);
 		static public Breaker breaker = new Breaker(snowplower);

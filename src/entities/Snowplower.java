@@ -110,7 +110,7 @@ public class Snowplower extends Vehicle {
      */
     public boolean buySalt(){
         Skeleton.logFunctionStart(this, "buySalt", null);
-        boolean answer1 = isinCrossing();
+        boolean answer1 = isInCrossing();
         if(!answer1)
         {
             Skeleton.logFunctionEnd();
@@ -129,7 +129,7 @@ public class Snowplower extends Vehicle {
      */
     public boolean buyBio(){
         Skeleton.logFunctionStart(this, "buyBio", null);
-        boolean answer1 = isinCrossing();
+        boolean answer1 = isInCrossing();
         if(!answer1)
         {
             Skeleton.logFunctionEnd();

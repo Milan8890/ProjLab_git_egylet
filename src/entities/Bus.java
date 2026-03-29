@@ -7,6 +7,7 @@ import playground.City;
 import playground.Crossing;
 import playground.City;
 import playground.Path;
+import user.BusDriver;
 import playground.Lane;
 
 /**
@@ -25,15 +26,19 @@ public class Bus extends Vehicle {
     Crossing stationA;
     Crossing stationB;
 
+    BusDriver owner;
+
     /**
      * Konstruktor
      * @param stationA az egyik végállomás 
      * @param stationB: az egyik végállomás
+     * @param owner: a busz vezetője
      */
-    public Bus(Crossing stationA, Crossing stationB) {
+    public Bus(Crossing stationA, Crossing stationB, BusDriver owner) {
         Skeleton.initSettingUpObjectStart(this);
         this.stationA = stationA;
         this.stationB = stationB;
+        this.owner = owner;
         Skeleton.initSettingUpObjectEnd();
     }
 
@@ -49,7 +54,7 @@ public class Bus extends Vehicle {
             Lane nextLane = path.pop();
 
             //Kérdezzük meg a sávtól túl magas -e ott a hó
-            int snowCm = nextLane.getSnow();
+            double snowCm = nextLane.getSnow();
             int snowAnswer = Skeleton.questionMultiple("Elakad a busz " + snowCm + " cm hóban?",Arrays.asList("Igen", "Nem"));
             if(snowAnswer == 1) {
                 System.out.println("A hó túl magas a sávba lépéshez, a busz a kereszteződésben marad.");
