@@ -1,6 +1,6 @@
 package equipment.heads;
 
-import java.lang.ref.Cleaner;
+import user.Cleaner;
 import java.util.List;
 import entities.Snowplower;
 import equipment.Head;
@@ -43,7 +43,7 @@ public class SaltSpreader extends Head {
 
         Cleaner owner = snowplower.getCleaner();
 
-        double length = l.getRoad().getLenght();
+        double length = l.getRoad().getLength();
 
         l.setSalt(owner);
         
@@ -68,19 +68,16 @@ public class SaltSpreader extends Head {
     public boolean canEnterLane(Lane l){
         Skeleton.logFunctionStart(this, "canEnterLane", List.of(Skeleton.createNameOfObject(l)));
 
-        int salty = Skeleton.questionMultiple("Van só a sávon?", List.of("igen", "nem"));
+        int salty = l.hasSalt() ? 1 : 2;
 
         if(salty == 1){
             Skeleton.logFunctionEnd();
             return false;
         }
-        else if (salty != 2){ 
-            Skeleton.logString("Érvénytelen bemenet, feltételezi, hogy nincs só a sávon.");
-        }
 
         Road road = l.getRoad();
            
-        double lenght = road.getLenght();
+        double lenght = road.getLength();
 
         double saltAmount = snowplower.getSalt();
 

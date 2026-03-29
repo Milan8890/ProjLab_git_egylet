@@ -5,6 +5,7 @@ import entities.Snowplower;
 import equipment.Head;
 import main.Skeleton;
 import playground.Lane;
+import playground.Road;
 
 /**
  * Sweeper
@@ -65,5 +66,4 @@ public class Sweeper extends Head {
         Skeleton.logFunctionEnd();
         return money;
     }
-
 }

@@ -18,7 +18,7 @@ public abstract class Head {
     /**
      * A hókotró, akihez ez a fej tartozik.
      */
-    private Snowplower snowplower;
+    protected Snowplower snowplower;
 
     /**
      * Konstruktor.

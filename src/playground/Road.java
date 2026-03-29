@@ -16,17 +16,14 @@ import javax.naming.LimitExceededException;
  * járműbe, és jelzi nekik. Havazást szimulálva havat rak a sávjaira.
  */
 public class Road {
-	// Lehet nem kell?
-	List<Lane> lanes;
 	Crossing fromCrossing;
 	Crossing toCrossing;
 
 	public Road(Crossing from, Crossing to, int numOfLanes, double length) {
 		Skeleton.initSettingUpObjectStart(this);
-		lanes = new ArrayList<Lane>();
 
 		for (int i = 0; i < numOfLanes; i++) {
-			lanes.add(new Lane(this));
+			new Lane(this);
 		}
 
 		fromCrossing = from;
@@ -43,6 +40,10 @@ public class Road {
 		Skeleton.logFunctionStart(this, "onTick", null);
 
 		int ans = Skeleton.questionValue("Mennyi havat adjon hozzá a sávokhoz?");
+		List<Lane> lanes = new ArrayList<Lane>();
+		lanes.add(new Lane(this));
+		lanes.add(new Lane(this));
+
 		for (Lane l : lanes) {
 			l.addSnow((double) ans);
 		}
@@ -57,6 +58,11 @@ public class Road {
 	 */
 	public List<Lane> getLanes() {
 		Skeleton.logFunctionStart(this, "getLanes", null);
+
+		//KELL???
+		List<Lane> lanes = new ArrayList<Lane>();
+		lanes.add(new Lane(this));
+		lanes.add(new Lane(this));
 
 		Skeleton.logFunctionEnd();
 		return lanes;

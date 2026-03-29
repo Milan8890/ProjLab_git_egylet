@@ -35,10 +35,9 @@ public class Snowplower extends Vehicle {
 	 * @param spawn     a kereszteződés ahol a hókotró megjelenik
 	 * @param inventory a fejtároló amivel a hókotró rendelkezik
 	 */
-	private Snowplower(Cleaner owner, Crossing spawn, HeadInventory inventory) {
+	private Snowplower(Cleaner owner, Crossing spawn) {
 		Skeleton.initSettingUpObjectStart(this);
 		this.owner = owner;
-		this.inventory = inventory;
 		currentLane = null;
 		lastCrossing = spawn;
 		Skeleton.initSettingUpObjectEnd();
@@ -67,7 +66,7 @@ public class Snowplower extends Vehicle {
 	 * 
 	 * @return A hókotrót birtokló játékos
 	 */
-	Cleaner getCleaner() {
+	public Cleaner getCleaner() {
 		Skeleton.logFunctionStart(this, "getCleaner", null);
 		Skeleton.logFunctionEnd();
 		return owner;
@@ -80,7 +79,7 @@ public class Snowplower extends Vehicle {
 	 * 
 	 * @return HeadInventory
 	 */
-	HeadInventory getHeadInventory() {
+	public HeadInventory getHeadInventory() {
 		Skeleton.logFunctionStart(this, "getHeadInventory", null);
 		Skeleton.logFunctionEnd();
 		return inventory;
@@ -93,7 +92,7 @@ public class Snowplower extends Vehicle {
 	 * 
 	 * @return mennyi Só áll rendelkezésre
 	 */
-	double getSalt() {
+	public double getSalt() {
 		Skeleton.logFunctionStart(this, "getSalt", null);
 
 		double saltAmount = Skeleton.questionValue("Mennyi só van?");
@@ -109,7 +108,7 @@ public class Snowplower extends Vehicle {
 	 * 
 	 * @return mennyi Biokerozin áll rendelkezésre
 	 */
-	double getBio() {
+	public double getBio() {
 		Skeleton.logFunctionStart(this, "getBio", null);
 
 		double bioAmount = Skeleton.questionValue("Mennyi kerozin van?");
@@ -126,7 +125,7 @@ public class Snowplower extends Vehicle {
 	 * 
 	 * @return Sikeres volt-e a vásárlás
 	 */
-	boolean buySalt() {
+	public boolean buySalt() {
 		Skeleton.logFunctionStart(this, "buySalt", null);
 		int answer1 = Skeleton.questionMultiple("Kereszteződésben van?", Arrays.asList("Igen", "Nem"));
 		if (answer1 != 1) {
@@ -147,7 +146,7 @@ public class Snowplower extends Vehicle {
 	 * 
 	 * @return Sikeres volt-e a vásárlás
 	 */
-	boolean buyBio() {
+	public boolean buyBio() {
 		Skeleton.logFunctionStart(this, "buyBio", null);
 		int answer1 = Skeleton.questionMultiple("Kereszteződésben van?", Arrays.asList("Igen", "Nem"));
 		if (answer1 != 1) {
@@ -167,12 +166,12 @@ public class Snowplower extends Vehicle {
 	 * 
 	 * @param saltAmount Az elhasznált só mennyisége
 	 */
-	void useSalt(double saltAmount) {
+	public void useSalt(double saltAmount) {
 		Skeleton.logFunctionStart(this, "useSalt", Arrays.asList(Double.toString(saltAmount)));
 		Skeleton.logFunctionEnd();
 	}
 
-	void useBio(double bioAmount) {
+	public void useBio(double bioAmount) {
 		Skeleton.logFunctionStart(this, "useBio", Arrays.asList(Double.toString(bioAmount)));
 		Skeleton.logFunctionEnd();
 	}
@@ -186,7 +185,7 @@ public class Snowplower extends Vehicle {
 	 */
 	public static Snowplower createWithEjector(Cleaner owner, Crossing base) {
 		Skeleton.logFunctionStart("Snowplower", "creatWithEjector", Arrays.asList(owner.toString(), base.toString()));
-		Snowplower pl = new Snowplower(owner, base, null);
+		Snowplower pl = new Snowplower(owner, base);
 		HeadInventory inv = HeadInventory.createWithEjector(pl);
 		pl.inventory = inv;
 		Skeleton.logFunctionEnd();
@@ -202,7 +201,7 @@ public class Snowplower extends Vehicle {
 	 */
 	public static Snowplower createWithBreaker(Cleaner owner, Crossing base) {
 		Skeleton.logFunctionStart("Snowplower", "creatWithBreaker", Arrays.asList(owner.toString(), base.toString()));
-		Snowplower pl = new Snowplower(owner, base, null);
+		Snowplower pl = new Snowplower(owner, base);
 		HeadInventory inv = HeadInventory.createWithBreaker(pl);
 		pl.inventory = inv;
 		Skeleton.logFunctionEnd();
