@@ -15,6 +15,9 @@ import main.Skeleton;
  * A vehető fejek nyilvántartása, megvett fejek tárolása, aktív fej nyilvántartása. Új fej vételének lebonyolítása.
  */
 public class HeadInventory {
+    /**
+     * A Hókotró amihez a fejtároló tartozik
+     */
     Snowplower owner;
 
     /**

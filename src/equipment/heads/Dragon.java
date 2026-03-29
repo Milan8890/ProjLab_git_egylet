@@ -11,7 +11,7 @@ import playground.Road;
  * Dragon
  * <p>
  * 
- * Felelősség <br>
+ * Felelősség: <br>
  * A jég és hó elolvasztása, és az ezért járó fizetés kiszámítása.
  * Elhasználja a biokerozint a hókotróból.
  * 

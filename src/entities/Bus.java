@@ -48,6 +48,16 @@ public class Bus extends Vehicle {
 		Skeleton.initSettingUpObjectEnd();
 	}
 
+	/**
+	 * A busz léptetéskor történő lehetőségeit kezeli:<br>
+	 * -Ha kereszteződésben van, kezeli az új sávba hajtás lehetőségét az ottani hó
+	 * magasságtól függően.<br>
+	 * -Ha sávban halad, akkor kezeli a túl magas hó miatti elakadást, ezután a takarítás miatti
+	 * felszabadítást.<br>
+	 * -Kezeli még az elcsúszást jeges úton, az emiatti baleseteket<br>
+	 * -Kezeli ha útról kereszteződésbe ér, és azt ha ez éppen a stationA, vagy
+	 * stationB.<br>
+	 */
 	public void onTick() {
 		Skeleton.logFunctionStart(this, "onTick", null);
 
