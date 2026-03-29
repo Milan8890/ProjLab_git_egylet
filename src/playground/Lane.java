@@ -141,7 +141,7 @@ public class Lane {
 	public double getSnow() {
 		Skeleton.logFunctionStart(this, "getSnow", null);
 
-		int answer = Skeleton.questionValue("Milyen magas a jég a sávban?");
+		int answer = Skeleton.questionValue("Milyen magas a hó a sávban?");
 
 		Skeleton.logFunctionEnd();
 		return (double) answer;

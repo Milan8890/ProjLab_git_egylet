@@ -171,44 +171,54 @@ public class UseCases {
 		Skeleton.setAnswerStack(Arrays.asList(2, 2, 100, 1, 2));
 
 		car.onTick(); // Car.java 90-tol 103-ig
-
-		// A bus-on hogy lesz meghívva a crashedInto, a road crashVehicle fv-nek kene
-		// csinalnia, de az ures.
-
-		// ez nem is kell, mert a crashet majd meghívja az elcsúszott jármű
-		// vagy külön use case, amikor ennek van értelme?
-		// road.crashVehicle(car);
     */
 
     public static void snowing_15() {
+        Skeleton.startInit();
+        
+        Road road = Skeleton.Market.road;
+
         Skeleton.startUseCase("Snowing");
 
-        Road road = Skeleton.Market.road;
+        Skeleton.setAnswerStack(Arrays.asList(-1, 1));
+
         road.onTick();
 
-        Skeleton.logFunctionEnd();
     }
 
     public static void vehicleUnblocking_16() {
-        Skeleton.startUseCase("Vehicle unblocking itself during onTick");
-        Car car = Skeleton.Market.car;
-        car.onTick();
+        Skeleton.startInit();
 
-        Skeleton.logFunctionEnd();
+        Car car = Skeleton.Market.car;
+
+        Skeleton.startUseCase("Vehicle unblocking itself during onTick");
+
+        Skeleton.setAnswerStack(Arrays.asList(2, 2, 0, 2, -1, -1, 2));
+
+        car.onTick();
     }
 
     public static void vehicleEntersNextLane_17() {
-        Skeleton.startUseCase("Vehicle enters next lane from crossing");
-        Car car = Skeleton.Market.car;
-        car.onTick();
+        Skeleton.startInit();
 
-        Skeleton.logFunctionEnd();
+        Car car = Skeleton.Market.car;
+
+        Skeleton.startUseCase("Vehicle enters next lane from crossing");
+
+        Skeleton.setAnswerStack(Arrays.asList(1, -1, 2, 0, 2, -1, 2, 2));
+
+        car.onTick();
     }
 
     public static void vehicleSwitchesLane_18() {
+        Skeleton.startInit();
+                
+        Car car = Skeleton.Market.car;
+
         Skeleton.startUseCase("Vehicle switches lanes due to deep snow");
 
-        Car car = Skeleton.Market.car;
+        Skeleton.setAnswerStack(Arrays.asList(2, 2, 0, 2, -1, -1, -1, -1, -1));
+
         car.onTick();
     }
 }
