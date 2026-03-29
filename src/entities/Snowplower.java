@@ -110,8 +110,8 @@ public class Snowplower extends Vehicle {
      */
     boolean buySalt(){
         Skeleton.logFunctionStart(this, "buySalt", null);
-        int answer1 = Skeleton.questionMultiple("Kereszteződésben van?", Arrays.asList("Igen", "Nem"));
-        if(answer1!=1)
+        boolean answer1 = isinCrossing();
+        if(!answer1)
         {
             Skeleton.logFunctionEnd();
             return false;
@@ -129,8 +129,8 @@ public class Snowplower extends Vehicle {
      */
     boolean buyBio(){
         Skeleton.logFunctionStart(this, "buyBio", null);
-        int answer1 = Skeleton.questionMultiple("Kereszteződésben van?", Arrays.asList("Igen", "Nem"));
-        if(answer1!=1)
+        boolean answer1 = isinCrossing();
+        if(!answer1)
         {
             Skeleton.logFunctionEnd();
             return false;

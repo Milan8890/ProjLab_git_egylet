@@ -134,8 +134,8 @@ public class HeadInventory {
     public void cycleActiveHead() {
         Skeleton.logFunctionStart(this, "cycleActiveHead", null);
 
-        int answer =Skeleton.questionMultiple("Kereszteződésben vagyunk?", Arrays.asList("Igen", "Nem"));
-        if(answer == 2){
+        boolean answer = owner.isinCrossing();
+        if(!answer){
             Skeleton.logFunctionEnd();
             return;
         }

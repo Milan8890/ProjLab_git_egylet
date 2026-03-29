@@ -10,4 +10,8 @@ public abstract class Vehicle {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'onTick'");
     }
+    public boolean isinCrossing() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'onTick'");
+    }
 }
