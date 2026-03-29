@@ -55,14 +55,13 @@ public class Snowplower extends Vehicle {
 
 		if (isInCrossing) {
 
-			Lane newLane = Skeleton.Market.path.pop();
+			currentLane = Skeleton.Market.path.pop();
 			if (currentLane == null) {
 				Skeleton.logString("Nincs több út beállítva a járműhöz.");
 				Skeleton.logFunctionEnd();
 				return;
 			}
-			newLane.addVehicle(this);
-			currentLane = newLane;
+			currentLane.addVehicle(this);
 
 			Skeleton.logString("A jármű elkezd haladni az új sávon.");
 		}
