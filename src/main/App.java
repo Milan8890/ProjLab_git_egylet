@@ -65,7 +65,7 @@ public class App {
 		// categories.get(0)));
 		mainMenu.useCases.add(new NamedFunction("Vásárlás", () -> currentCategory = categories.get(1), true));
 		mainMenu.useCases.add(new NamedFunction("Járművek", () -> currentCategory = categories.get(2), true));
-		mainMenu.useCases.add(new NamedFunction("Játékindítás és környezet", () -> currentCategory = categories.get(7), true)); // IDE KELL _19
+		mainMenu.useCases.add(new NamedFunction("Játékindítás és környezet", () -> currentCategory = categories.get(7), true));
 
 		//0
 		categories.add(mainMenu);
@@ -83,29 +83,29 @@ public class App {
 		categories.add(purchuseCat);
 
 
-		NamedCategory Járművek = new NamedCategory();
-		Járművek.name = "Járművek";
+		NamedCategory Vechicles = new NamedCategory();
+		Vechicles.name = "Járművek";
 
-		Járművek.useCases.add(new NamedFunction("Vissza", () -> currentCategory = categories.get(0), true));
-		Járművek.useCases.add(new NamedFunction("Jármű (busz/autó)", () -> currentCategory = categories.get(3), true));
-		Járművek.useCases.add(new NamedFunction("Autó", () -> currentCategory = categories.get(4), true));
-		Járművek.useCases.add(new NamedFunction("Busz", () -> currentCategory = categories.get(5), true));
-		Járművek.useCases.add(new NamedFunction("Hókotró", () -> currentCategory = categories.get(6), true));
+		Vechicles.useCases.add(new NamedFunction("Vissza", () -> currentCategory = categories.get(0), true));
+		Vechicles.useCases.add(new NamedFunction("Jármű (busz/autó)", () -> currentCategory = categories.get(3), true));
+		Vechicles.useCases.add(new NamedFunction("Autó", () -> currentCategory = categories.get(4), true));
+		Vechicles.useCases.add(new NamedFunction("Busz", () -> currentCategory = categories.get(5), true));
+		Vechicles.useCases.add(new NamedFunction("Hókotró", () -> currentCategory = categories.get(6), true));
 
 		//2
-		categories.add(Járművek);
+		categories.add(Vechicles);
 
-		NamedCategory JárműBA = new NamedCategory();
-		JárműBA.name = "Jármű (busz/autó)";
+		NamedCategory VehicleBA = new NamedCategory();
+		VehicleBA.name = "Jármű (busz/autó)";
 
-		JárműBA.useCases.add(new NamedFunction("Vissza", () -> currentCategory = categories.get(2), true));
-		JárműBA.useCases.add(new NamedFunction("Jármű ütközése", UseCases::vehicleCrash_2, false));
-		JárműBA.useCases.add(new NamedFunction("Jármű evárakozik ütközés miatt", UseCases::vehicleWaitingDueToCrash_3, false));
-		JárműBA.useCases.add(new NamedFunction("Jármű letapossa a havat", UseCases::vehicleTrampeSnow_4, false));
+		VehicleBA.useCases.add(new NamedFunction("Vissza", () -> currentCategory = categories.get(2), true));
+		VehicleBA.useCases.add(new NamedFunction("Jármű ütközése", UseCases::vehicleCrash_2, false));
+		VehicleBA.useCases.add(new NamedFunction("Jármű várakozik ütközés miatt", UseCases::vehicleWaitingDueToCrash_3, false));
+		VehicleBA.useCases.add(new NamedFunction("Jármű letapossa a havat", UseCases::vehicleTrampeSnow_4, false));
 		// IDE KELL _11, _9 _16 _17 _18
 
 		//3
-		categories.add(JárműBA);
+		categories.add(VehicleBA);
 
 		NamedCategory Car = new NamedCategory();
 		Car.name = "Autó";
@@ -146,9 +146,6 @@ public class App {
 		//7
 		categories.add(GameStart);
 
-
-		//_15
-
 		currentCategory = categories.get(0);
 	}
 
@@ -182,13 +179,14 @@ public class App {
 				System.out.println("Wrong input.");
 				continue;
 			}
-			currentCategory.useCases.get(choice).function.run();
 
-			if(!currentCategory.useCases.get(choice).isMenuNavigation)
+			boolean isNotMenuNavigation = !currentCategory.useCases.get(choice).isMenuNavigation;
+			currentCategory.useCases.get(choice).function.run();
+			if(isNotMenuNavigation)
 			{
 				sc.nextLine();
 				sc.nextLine();
-			}		
+			}	
 		}
 	}
 
@@ -200,7 +198,6 @@ public class App {
 	public static void main(String[] args) throws Exception {
 		// Itt lehet tesztelni
 		catinit();
-		// menu();
 		menu();
 	}
 }
