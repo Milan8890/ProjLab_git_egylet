@@ -17,13 +17,9 @@ public class Skeleton {
 	static Scanner sc = new Scanner(System.in);
 	static boolean init_log = true;
 	static int indentation;
-	// TODO input list
-	// TODO szekvenciaszám?
-	// TODO INIT KIKAPCS
 
 	// visszaadja egy objektum "nevét", az objektumot kell beleadni
 	public static String createNameOfObject(Object o) {
-		// TODO class lecsippantás
 		String temp = o.getClass().toString();
 		temp = temp.substring(temp.lastIndexOf(".") + 1);
 
@@ -155,6 +151,7 @@ public class Skeleton {
 	public static void initSettingUpObjectStart(Object o) {
 		if (!init_log)
 			return;
+
 		for (int i = 0; i < initStack.size(); i++) {
 			System.out.print("\t");
 		}
@@ -177,7 +174,9 @@ public class Skeleton {
 		static public Crossing crossing = new Crossing();
 		static public Road road = new Road(crossing, crossing, 1, 1);
 		static public Tunnel tunnel = new Tunnel(crossing, crossing, 1, 1);
+
 		static public Lane lane = new Lane(road);
+		static public Lane lane2 = new Lane(road);
 
 		static public Cleaner cleaner = new Cleaner("a", Color.RED);
 		static public BusDriver busDriver = new BusDriver("b", Color.BLUE);

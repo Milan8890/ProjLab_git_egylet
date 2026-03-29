@@ -3,7 +3,12 @@ package playground;
 import main.Skeleton;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
+import entities.*;
 
 /**
  * A sávokat tartalmazza, valamint egy referenciát a kereszteződésre amiből
@@ -17,6 +22,7 @@ public class Road {
 	Crossing toCrossing;
 
 	public Road(Crossing from, Crossing to, int numOfLanes, double length) {
+
 		Skeleton.initSettingUpObjectStart(this);
 
 		for (int i = 0; i < numOfLanes; i++) {
@@ -29,7 +35,6 @@ public class Road {
 		Skeleton.initSettingUpObjectEnd();
 	}
 
-	// TODO ennyi elég?
 	/**
 	 * rak havat az összes hozzá tartozó sávra
 	 */
@@ -60,11 +65,13 @@ public class Road {
 	public List<Lane> getLanes() {
 		Skeleton.logFunctionStart(this, "getLanes", null);
 
-		// LEHET HOGY MARKET-BE KLLE TÖBB LANE
 		List<Lane> lanes = new ArrayList<Lane>();
-		int laneNum = Skeleton.questionValue("Hány sávja van az útnak?");
-		for (int i = 0; i < laneNum; i++) {
-			lanes.add(Skeleton.Market.lane);
+		int laneNum = Skeleton.questionMultiple("Hány sávja van az útnak?", Arrays.asList("1", "2"));
+
+		lanes.add(Skeleton.Market.lane);
+
+		if (laneNum > 1) {
+			lanes.add(Skeleton.Market.lane2);
 		}
 
 		Skeleton.logFunctionEnd();
@@ -113,15 +120,30 @@ public class Road {
 	 * Egy megcsúszott jármű hívja meg, összeütközteti azt egy másik járművel.
 	 * <p>
 	 * (Ha nincs másik jármű az úton akkor semmit nem csinál)
+	 * 
+	 * @param v
 	 */
-	public void crashVehicle() {
+	public void crashVehicle(Vehicle v) {
 		Skeleton.logFunctionStart(this, "crashVehicle", null);
-		// ???
-		// most akkor a lane-eken lévőt össze kéne szednie, de hogyan?
-		// eltárolják?
-		// kéne központi objektumtár?
 
-		// TODO ha kész a lane
+		Set<Vehicle> vehicles = new HashSet<>();
+
+		for (Lane l : this.getLanes()) {
+			vehicles.addAll(l.getVehicles());
+		}
+
+		for (Vehicle tempv : vehicles) {
+			if (v != tempv) {
+				int val = Skeleton.questionValue("Mennyi ideig legyenek ütközve a járművek?");
+
+				v.crashed(val);
+				tempv.crashedInto(val);
+
+				Skeleton.logFunctionEnd();
+				return;
+			}
+		}
+
 		Skeleton.logFunctionEnd();
 	}
 
