@@ -21,6 +21,14 @@ public class Road {
 	Crossing fromCrossing;
 	Crossing toCrossing;
 
+	/**
+	 * Út létrehozása
+	 * 
+	 * @param from       Kiinduló kereszteződés
+	 * @param to         Végző kereszteződés
+	 * @param numOfLanes Sávok száma
+	 * @param length     Út hossza
+	 */
 	public Road(Crossing from, Crossing to, int numOfLanes, double length) {
 
 		Skeleton.initSettingUpObjectStart(this);

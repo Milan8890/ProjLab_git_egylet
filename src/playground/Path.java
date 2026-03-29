@@ -5,13 +5,18 @@ import java.util.List;
 
 import main.Skeleton;
 
+/**
+ * Leírja a beállított útvonalat (egymás után következő sávokat), amit a jármű
+ * automatikusan követ.
+ */
 public class Path {
 	List<Lane> pathLanes;
 	Crossing lastCrossing;
 
 	/**
+	 * Visszaadja a következő sávot az útvonalon.
 	 * 
-	 * @return
+	 * @return A következő sáv az úton. Ha az útnak vége, akkor null.
 	 */
 	public Lane pop() {
 		Skeleton.logFunctionStart(this, "pop", null);
@@ -33,8 +38,14 @@ public class Path {
 		return nextLane;
 	}
 
+	/**
+	 * Út hosszabbítása. Ha nem lehet az adott sávval folytatni az utat, akkor
+	 * hamissal tér vissza.
+	 * 
+	 * @param l A sáv, amit hozzá szeretnénk adni.
+	 * @return Sikerült-e hozzáadni a sávot
+	 */
 	public boolean extendPath(Lane l) {
-		// LOL
 		Skeleton.logFunctionStart(this, "extendPath", Arrays.asList(Skeleton.createNameOfObject(l)));
 
 		// Megkérdezzük a sávot, melyik úthoz tartozik
@@ -47,8 +58,11 @@ public class Path {
 				Arrays.asList("Igen", "Nem"));
 
 		if (isConnected) {
+			Skeleton.logString("Út sikeresen hozzáadva az útvonalhoz.");
 			pathLanes.add(l);
 			lastCrossing = r.getToCrossing();
+		} else {
+			Skeleton.logString("Nincs összekötve az eddigi útvonallal a sáv, sikertelen hozzáadás.");
 		}
 
 		Skeleton.logFunctionEnd();
