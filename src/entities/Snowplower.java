@@ -46,7 +46,8 @@ public class Snowplower extends Vehicle {
         Skeleton.logFunctionStart(this, "OnTick", null);
         int answer = Skeleton.questionMultiple("Út végére értél?", Arrays.asList("Igen", "Nem"));
         if(answer ==1){
-            owner.addMoney(HeadInventory.createWithBreaker(this).getActiveHead().clean(currentLane)); 
+            currentLane = Skeleton.Market.lane;
+            owner.addMoney(Skeleton.Market.headInventory.getActiveHead().clean(currentLane)); 
         }
         super.onTick();
         Skeleton.logFunctionEnd();
@@ -71,8 +72,9 @@ public class Snowplower extends Vehicle {
      */
     public HeadInventory getHeadInventory(){
         Skeleton.logFunctionStart(this, "getHeadInventory", null);  
+        HeadInventory ret = Skeleton.Market.headInventory;
         Skeleton.logFunctionEnd();
-        return HeadInventory.createWithBreaker(this);
+        return ret;
     }
 
     /** 
@@ -169,7 +171,7 @@ public class Snowplower extends Vehicle {
      * @return a létrehozott Hókotró
      */
     public static Snowplower createWithEjector(Cleaner owner, Crossing base){
-        Skeleton.logFunctionStart( "Snowplower", "creatWithEjector", Arrays.asList(owner.toString(), base.toString()));
+        Skeleton.logFunctionStart( "Snowplower", "createWithEjector", Arrays.asList(Skeleton.createNameOfObject(owner), Skeleton.createNameOfObject(base)));
         Snowplower pl = new Snowplower(owner, base);
         HeadInventory.createWithEjector(pl);
         Skeleton.logFunctionEnd();
@@ -182,7 +184,7 @@ public class Snowplower extends Vehicle {
      * @return a létrehozott Hókotró
      */
     public static Snowplower createWithBreaker(Cleaner owner, Crossing base){
-        Skeleton.logFunctionStart( "Snowplower", "creatWithBreaker", Arrays.asList(owner.toString(), base.toString()));
+        Skeleton.logFunctionStart( "Snowplower", "createWithBreaker", Arrays.asList(Skeleton.createNameOfObject(owner), Skeleton.createNameOfObject(base)));
         Snowplower pl = new Snowplower(owner, base);
         HeadInventory.createWithBreaker(pl);
         Skeleton.logFunctionEnd();
