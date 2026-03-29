@@ -100,7 +100,8 @@ public class App {
 	public static void main(String[] args) throws Exception {
 		// Itt lehet tesztelni
 		catinit();
-		//menu();
+		// menu();
 
+		UseCases.vehicleCrash_2();
 	}
 }
