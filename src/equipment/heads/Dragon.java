@@ -27,7 +27,6 @@ public class Dragon extends Head {
      */ 
     public Dragon(Snowplower snowplower) {
         super(snowplower);
-        Skeleton.initSettingUpObjectStart(this);
         Skeleton.initSettingUpObjectEnd();
     }
 

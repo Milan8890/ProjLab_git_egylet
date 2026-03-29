@@ -27,7 +27,6 @@ public class Sweeper extends Head {
      */ 
     public Sweeper(Snowplower snowplower) {
         super(snowplower);
-        Skeleton.initSettingUpObjectStart(this);
         Skeleton.initSettingUpObjectEnd();
     }
 

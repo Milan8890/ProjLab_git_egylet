@@ -28,7 +28,6 @@ public class SaltSpreader extends Head {
      */ 
     public SaltSpreader(Snowplower snowplower) {
         super(snowplower);
-        Skeleton.initSettingUpObjectStart(this);
         Skeleton.initSettingUpObjectEnd();
     }
 
