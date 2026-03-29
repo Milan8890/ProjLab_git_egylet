@@ -214,7 +214,7 @@ public class Snowplower extends Vehicle {
 	 * @return a létrehozott Hókotró
 	 */
 	public static Snowplower createWithEjector(Cleaner owner, Crossing base) {
-		Skeleton.logFunctionStart("Snowplower", "creatWithEjector", Arrays.asList(Skeleton.createNameOfObject(owner), Skeleton.createNameOfObject(base)));
+		Skeleton.logFunctionStart("Snowplower", "createWithEjector", Arrays.asList(Skeleton.createNameOfObject(owner), Skeleton.createNameOfObject(base)));
 		Snowplower pl = new Snowplower(owner, base);
 		HeadInventory.createWithEjector(pl);
 		Skeleton.logFunctionEnd();
@@ -229,7 +229,7 @@ public class Snowplower extends Vehicle {
 	 * @return a létrehozott Hókotró
 	 */
 	public static Snowplower createWithBreaker(Cleaner owner, Crossing base) {
-		Skeleton.logFunctionStart("Snowplower", "creatWithBreaker", Arrays.asList(Skeleton.createNameOfObject(owner), Skeleton.createNameOfObject(base)));
+		Skeleton.logFunctionStart("Snowplower", "createWithBreaker", Arrays.asList(Skeleton.createNameOfObject(owner), Skeleton.createNameOfObject(base)));
 		Snowplower pl = new Snowplower(owner, base);
 		HeadInventory.createWithBreaker(pl);
 		Skeleton.logFunctionEnd();
