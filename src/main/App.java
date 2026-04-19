@@ -1,5 +1,6 @@
 package main;
 
+import java.lang.reflect.Field;
 import java.nio.file.attribute.UserDefinedFileAttributeView;
 import java.util.ArrayList;
 import java.util.List;
@@ -207,10 +208,29 @@ public class App {
 	 * @throws Exception ha valami hiba történik a program futása közben
 	 */
 	public static void main(String[] args) throws Exception {
+		Scanner sc = new Scanner(System.in);
+
+		String line = sc.nextLine();
+
+		System.out.println("A bemenet: " + line);
+
 		// Itt lehet tesztelni
 		// catinit();
 		// menu();
 
-		UseCases.vehicleCrash_2();
+		// UseCases.vehicleCrash_2();
+		// Vehicle v = new Snowplower(null, null);
+		// v.onTick();
+
+		// System.out.println("ASd");
+
+		// Vehicle v = new Bus(null, null, null);
+		// Field field1 = v.getClass().getDeclaredField("lol");
+		// field1.setAccessible(true);
+
+		// System.out.println(field1.get(v));
+		// field1.set(v, "asd");
+		// System.out.println(field1.get(v));
+
 	}
 }

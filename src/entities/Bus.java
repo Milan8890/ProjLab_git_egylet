@@ -28,6 +28,8 @@ import playground.Lane;
  * Vechicle
  */
 public class Bus extends Vehicle {
+	private String lol = "aolikwjdklawj";
+
 	Crossing stationA;
 	Crossing stationB;
 
@@ -52,7 +54,8 @@ public class Bus extends Vehicle {
 	 * A busz léptetéskor történő lehetőségeit kezeli:<br>
 	 * -Ha kereszteződésben van, kezeli az új sávba hajtás lehetőségét az ottani hó
 	 * magasságtól függően.<br>
-	 * -Ha sávban halad, akkor kezeli a túl magas hó miatti elakadást, ezután a takarítás miatti
+	 * -Ha sávban halad, akkor kezeli a túl magas hó miatti elakadást, ezután a
+	 * takarítás miatti
 	 * felszabadítást.<br>
 	 * -Kezeli még az elcsúszást jeges úton, az emiatti baleseteket<br>
 	 * -Kezeli ha útról kereszteződésbe ér, és azt ha ez éppen a stationA, vagy

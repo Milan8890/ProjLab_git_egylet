@@ -20,10 +20,70 @@ public abstract class Vehicle {
 	Crossing lastCrossing;
 	Lane currentLane;
 
+	protected boolean canEnterLane(Lane l) {
+		return true;
+	}
+
+	// A beállított útvonalat követi.
+	// Leveszi a következő lane-t, arra átvált, elindul rajta.
+	// Ha nem OK a path, mert van rajta ütközött jármű, stb, akkor törli a path-et.
+
+	// Autónál ha üres a path amikor crossingban van, újratervez
+	protected void followPath() {
+		if (this.isInCrossing()) {
+		}
+	}
+
+	// kell revive?
+
+	// Ütközés után vár, ha eltelt az idő újraéled.
+
+	// Újraéledés hogyan? Legyen egy revive függvény?
+	// Ha vár, akkor hogyan jelzi az onTick-nek?
+	protected void waitAfterCrash() {
+
+	}
+
+	// Ha van azon a sávon ütközés, ahol ő van, akkor vár.
+
+	// HA STUCK, MENGÉZNI
+	protected void waitBecauseOfStuck() {
+
+	}
+
+	// Ha túl magas a hó, sávot próbál váltani, vagy megakad benne
+	protected void stuckInSnow() {
+
+	}
+
+	// Jeges felületen megcsúszik a jármű
+	protected void slipOnIce() {
+
+	}
+
+	// Dolgok amiket pluszban csinál, ha egy kereszteződésbe ér
+	// Mindenhol külön át lesz definiálva, de megmarad üresen, ha lenne egy random
+	// másik jármű típus, amin nem kell átírni.
+	protected void reachedCrossing() {
+
+	}
+
+	// Úton haladás, és annak végére érés
+	protected void moveOnLane() {
+		reachedCrossing();
+	}
+
 	/**
 	 * Minden órajelkor meghívódó absztrakt függvény, mert minden jármű mást csinál.
 	 */
-	abstract public void onTick();
+	public void onTick() {
+		followPath();
+		waitAfterCrash();
+		waitBecauseOfStuck();
+		stuckInSnow();
+		slipOnIce();
+		moveOnLane();
+	}
 
 	/**
 	 * Meghívódik, ha a jármű beleütközik valamibe.

@@ -27,6 +27,11 @@ import main.Skeleton;
 public class Snowplower extends Vehicle {
 	Cleaner owner;
 
+	@Override
+	protected void stuckInSnow() {
+		System.out.println("Hókotró stuckInSnow");
+	}
+
 	/**
 	 * Konstruktor
 	 * 
@@ -34,7 +39,7 @@ public class Snowplower extends Vehicle {
 	 * @param spawn     a kereszteződés ahol a hókotró megjelenik
 	 * @param inventory a fejtároló amivel a hókotró rendelkezik
 	 */
-	private Snowplower(Cleaner owner, Crossing spawn) {
+	public Snowplower(Cleaner owner, Crossing spawn) {
 		Skeleton.initSettingUpObjectStart(this);
 		this.owner = owner;
 		currentLane = null;
@@ -42,59 +47,61 @@ public class Snowplower extends Vehicle {
 		Skeleton.initSettingUpObjectEnd();
 	}
 
-	/**
-	 * Sáv elhagyásakor tisztítja a sávot az aktív fejjel.
-	 */
-	public void onTick() {
-		Skeleton.logFunctionStart(this, "onTick", null);
+	// /**
+	// * Sáv elhagyásakor tisztítja a sávot az aktív fejjel.
+	// */
+	// public void onTick() {
+	// Skeleton.logFunctionStart(this, "onTick", null);
 
-		boolean isInCrossing = isInCrossing();
+	// boolean isInCrossing = isInCrossing();
 
-		if (isInCrossing) {
+	// if (isInCrossing) {
 
-			currentLane = Skeleton.Market.path.pop();
-			if (currentLane == null) {
-				Skeleton.logString("Nincs több út beállítva a járműhöz.");
-				Skeleton.logFunctionEnd();
-				return;
-			}
-			currentLane.addVehicle(this);
+	// currentLane = Skeleton.Market.path.pop();
+	// if (currentLane == null) {
+	// Skeleton.logString("Nincs több út beállítva a járműhöz.");
+	// Skeleton.logFunctionEnd();
+	// return;
+	// }
+	// currentLane.addVehicle(this);
 
-			Skeleton.logString("A jármű elkezd haladni az új sávon.");
-		}
-		else{
-			currentLane = Skeleton.Market.lane;
-		}
+	// Skeleton.logString("A jármű elkezd haladni az új sávon.");
+	// } else {
+	// currentLane = Skeleton.Market.lane;
+	// }
 
-		boolean isWaitingDueToCrash = 1 == Skeleton.questionMultiple("Ütközés után várakozik-e?",
-				Arrays.asList("Igen", "Nem"));
+	// boolean isWaitingDueToCrash = 1 == Skeleton.questionMultiple("Ütközés után
+	// várakozik-e?",
+	// Arrays.asList("Igen", "Nem"));
 
-		if (isWaitingDueToCrash) {
-			Skeleton.logString("RevTimer csökkentve.");
+	// if (isWaitingDueToCrash) {
+	// Skeleton.logString("RevTimer csökkentve.");
 
-			boolean isCrashOver = 1 == Skeleton.questionMultiple("Lejárt az ütközési idő?",
-					Arrays.asList("Igen", "Nem"));
+	// boolean isCrashOver = 1 == Skeleton.questionMultiple("Lejárt az ütközési
+	// idő?",
+	// Arrays.asList("Igen", "Nem"));
 
-			if (isCrashOver) {
-				Skeleton.logString("A jármű felépült.");
-			}
+	// if (isCrashOver) {
+	// Skeleton.logString("A jármű felépült.");
+	// }
 
-			Skeleton.logFunctionEnd();
-			return;
-		}
+	// Skeleton.logFunctionEnd();
+	// return;
+	// }
 
-		Skeleton.logString("Lane progress nő");
+	// Skeleton.logString("Lane progress nő");
 
-		boolean isEndOfRoad = 1 == Skeleton.questionMultiple("A jármű az út végére ért?", Arrays.asList("Igen", "Nem"));
-		if (isEndOfRoad) {
-			owner.addMoney(Skeleton.Market.headInventory.getActiveHead().clean(currentLane));
+	// boolean isEndOfRoad = 1 == Skeleton.questionMultiple("A jármű az út végére
+	// ért?", Arrays.asList("Igen", "Nem"));
+	// if (isEndOfRoad) {
+	// owner.addMoney(Skeleton.Market.headInventory.getActiveHead().clean(currentLane));
 
-			currentLane.removeVehicle(this);
-			currentLane = null;
-		}
+	// currentLane.removeVehicle(this);
+	// currentLane = null;
+	// }
 
-		Skeleton.logFunctionEnd();
-	}
+	// Skeleton.logFunctionEnd();
+	// }
 
 	/**
 	 * visszaadja a birtokló játékost
@@ -214,7 +221,8 @@ public class Snowplower extends Vehicle {
 	 * @return a létrehozott Hókotró
 	 */
 	public static Snowplower createWithEjector(Cleaner owner, Crossing base) {
-		Skeleton.logFunctionStart("Snowplower", "createWithEjector", Arrays.asList(Skeleton.createNameOfObject(owner), Skeleton.createNameOfObject(base)));
+		Skeleton.logFunctionStart("Snowplower", "createWithEjector",
+				Arrays.asList(Skeleton.createNameOfObject(owner), Skeleton.createNameOfObject(base)));
 		Snowplower pl = new Snowplower(owner, base);
 		HeadInventory.createWithEjector(pl);
 		Skeleton.logFunctionEnd();
@@ -229,7 +237,8 @@ public class Snowplower extends Vehicle {
 	 * @return a létrehozott Hókotró
 	 */
 	public static Snowplower createWithBreaker(Cleaner owner, Crossing base) {
-		Skeleton.logFunctionStart("Snowplower", "createWithBreaker", Arrays.asList(Skeleton.createNameOfObject(owner), Skeleton.createNameOfObject(base)));
+		Skeleton.logFunctionStart("Snowplower", "createWithBreaker",
+				Arrays.asList(Skeleton.createNameOfObject(owner), Skeleton.createNameOfObject(base)));
 		Snowplower pl = new Snowplower(owner, base);
 		HeadInventory.createWithBreaker(pl);
 		Skeleton.logFunctionEnd();
