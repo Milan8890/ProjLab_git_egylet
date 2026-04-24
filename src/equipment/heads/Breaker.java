@@ -24,8 +24,7 @@ public class Breaker extends Head {
      * @param snowplower A tulajdonos hókotró.
      */ 
     public Breaker(Snowplower snowplower) {
-        super(snowplower);
-        Skeleton.initSettingUpObjectEnd();
+
     }
 
     /**
@@ -36,16 +35,6 @@ public class Breaker extends Head {
      */
     @Override
     public int clean(Lane l) {
-        Skeleton.logFunctionStart(this, "clean", List.of(Skeleton.createNameOfObject(l)));
         
-        double iceAmount = l.breakIce();
-
-        double length = l.getRoad().getLength();
-
-        //int money =(int) (iceAmount*length)*2;
-        int money = Skeleton.questionValue("Mennyi pénzt adjunk a hókotrónak?"); 
-        
-        Skeleton.logFunctionEnd();
-        return money;
     }
 }
