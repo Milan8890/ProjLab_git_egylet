@@ -1,6 +1,5 @@
 package entities;
 
-import main.Skeleton;
 import java.util.Arrays;
 
 import playground.City;
@@ -31,9 +30,7 @@ public abstract class Vehicle {
 	 * @param r Mennyi ideig marad mozgásképtelen (revTimer)
 	 */
 	public void crashed(int r) {
-		Skeleton.logFunctionStart(this, "crashed", Arrays.asList(String.valueOf(r)));
 
-		Skeleton.logFunctionEnd();
 	}
 
 	/**
@@ -42,9 +39,7 @@ public abstract class Vehicle {
 	 * @param r A várakozási idő (revTimer)
 	 */
 	public void crashedInto(int r) {
-		Skeleton.logFunctionStart(this, "crashedInto", Arrays.asList(String.valueOf(r)));
 
-		Skeleton.logFunctionEnd();
 	}
 
 	/**
@@ -55,14 +50,7 @@ public abstract class Vehicle {
 	 * * @return true, ha kereszteződésben van, egyébként false.
 	 */
 	public boolean isInCrossing() {
-		Skeleton.logFunctionStart(this, "isInCrossing", null);
 
-		int crossingAnswer = Skeleton.questionMultiple("Kereszteződésben van-e?", Arrays.asList("Igen", "Nem"));
-
-		boolean result = (crossingAnswer == 1);
-
-		Skeleton.logFunctionEnd();
-		return result;
 	}
 
 	/**
@@ -73,11 +61,6 @@ public abstract class Vehicle {
 	 * * @param l Az új sáv (Lane), amivel bővíteni szeretnénk az útvonalat.
 	 */
 	public void extendPath(Lane l) {
-		Skeleton.logFunctionStart(this, "extendPath", Arrays.asList(Skeleton.createNameOfObject(l)));
 
-		// Itt a jármű meghívja a Path-et ezzel a lane-el
-		Skeleton.Market.path.extendPath(l);
-
-		Skeleton.logFunctionEnd();
 	}
 }

@@ -26,8 +26,7 @@ public class Sweeper extends Head {
      * @param snowplower A tulajdonos hókotró.
      */ 
     public Sweeper(Snowplower snowplower) {
-        super(snowplower);
-        Skeleton.initSettingUpObjectEnd();
+       
     }
 
     /**
@@ -39,30 +38,6 @@ public class Sweeper extends Head {
      */
     @Override
     public int clean(Lane l){
-        Skeleton.logFunctionStart(this, "clean", List.of(Skeleton.createNameOfObject(l)));
-        
-        double snowAmount = l.cleanSnow();
-
-        Road road = l.getRoad();
-
-        List<Lane> lanes = road.getLanes(); 
-
-        int sideLane = Skeleton.questionMultiple("Szélső sávban takarít a hókotró?", List.of("igen", "nem"));
-
-        /*lanes.getLast() != l*/
-        if( sideLane == 2 ){
-            //int idx = lanes.indexOf(l) + 1;
-            //lanes.get(idx).addSnow(snowAmount);
-
-            l.addSnow(snowAmount); //Önmagára hívja meg, mivel ez egy biztosan létező sáv.            
-        }
-
-        double length = road.getLength();
-
-        //int money = (int) (snowAmount*length);
-        int money = Skeleton.questionValue("Mennyi pénzt adjunk a hókotrónak?");
-        
-        Skeleton.logFunctionEnd();
-        return money;
+       
     }
 }

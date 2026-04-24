@@ -26,8 +26,7 @@ public class Dragon extends Head {
      * @param snowplower A tulajdonos hókotró.
      */ 
     public Dragon(Snowplower snowplower) {
-        super(snowplower);
-        Skeleton.initSettingUpObjectEnd();
+
     }
 
     /**
@@ -38,28 +37,7 @@ public class Dragon extends Head {
      */
     @Override
     public int clean(Lane l){
-        Skeleton.logFunctionStart(this, "clean", List.of(Skeleton.createNameOfObject(l)));
-         
-        double iceAmount = l.meltIce();
-
-        double snowAmount = l.cleanSnow();
-
-        double length = l.getRoad().getLength();
-
-        //A canEnter miatt csak a lenght-hez lehet kötve a számítása,
-        // mivel ott ennek az értéke alapján mondja meg, hogy van-e elég,
-        // és nem nézi mellé a hó- és vastagságot.
-        // További kérdés mi legyen itt a konstans szorzó?
-        //double usedBio = length*2.67;
-        double usedBio = (double) Skeleton.questionValue("Mennyi biokerozint használjon?");
-
-        snowplower.useBio(usedBio);
-
-        //int money = (int) (snowAmount*length);
-        int money = Skeleton.questionValue("Mennyi pénzt adjunk a hókotrónak?");
-
-        Skeleton.logFunctionEnd();
-        return money;
+        
     }
 
     /**
@@ -70,19 +48,7 @@ public class Dragon extends Head {
      */
     @Override
     public boolean canEnterLane(Lane l){
-        Skeleton.logFunctionStart(this, "canEnterLane", List.of(Skeleton.createNameOfObject(l)));
-
-        Road road = l.getRoad();
-
-        double lenght = road.getLength();
-
-        double bioAmount = snowplower.getBio();
-
-        int enter = Skeleton.questionMultiple("Van elég biokerozinunk?", List.of("igen", "nem"));
-        boolean enterBool =  (enter == 1);
-
-        Skeleton.logFunctionEnd();
-        return enterBool;
+    
     }
 
 }

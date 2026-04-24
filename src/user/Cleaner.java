@@ -6,7 +6,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import entities.Snowplower;
-import main.Skeleton;
 import playground.Crossing;
 
 /**
@@ -24,8 +23,7 @@ public class Cleaner extends Player {
 	 * @param color a játékos színe
 	 */
 	public Cleaner(String name, Color color) {
-		super(name, color);
-		Skeleton.initSettingUpObjectEnd();
+		
 	}
 
 	/**
@@ -34,8 +32,7 @@ public class Cleaner extends Player {
 	 * @param m az hozzáadandó pénz összege
 	 */
 	public void addMoney(int m) {
-		Skeleton.logFunctionStart(this, "addMoney", Arrays.asList(Integer.toString(m)));
-		Skeleton.logFunctionEnd();
+
 	}
 
 	/**
@@ -47,10 +44,7 @@ public class Cleaner extends Player {
 	 * @return true, ha sikerült az eltávolítás, false egyébként
 	 */
 	public boolean removeMoney(int m) {
-		Skeleton.logFunctionStart(this, "removeMoney", Arrays.asList(Integer.toString(m)));
-		int ans = Skeleton.questionMultiple("Van elég pénz?", Arrays.asList("Igen", "Nem"));
-		Skeleton.logFunctionEnd();
-		return ans == 1;
+	
 	}
 
 	/**
@@ -59,16 +53,7 @@ public class Cleaner extends Player {
 	 * @return true, ha sikerült a vásárlás, false egyébként
 	 */
 	public boolean buyBreakerSnowplower() {
-		Skeleton.logFunctionStart(this, "buyBreakerSnowplower", null);
-
-		int val = Skeleton.questionValue("Mennyibe kerül?");
-		boolean temp = removeMoney(val);
-
-		if (temp)
-			Snowplower.createWithBreaker(this, new Crossing());
-
-		Skeleton.logFunctionEnd();
-		return temp;
+		
 	}
 
 	/**
@@ -77,16 +62,7 @@ public class Cleaner extends Player {
 	 * @return true, ha sikerült a vásárlás, false egyébként
 	 */
 	public boolean buyEjectorSnowplower() {
-		Skeleton.logFunctionStart(this, "buyEjectorSnowplower", null);
-
-		int val = Skeleton.questionValue("Mennyibe kerül?");
-		boolean temp = removeMoney(val);
-
-		if (temp)
-			Snowplower.createWithEjector(this, new Crossing());
-
-		Skeleton.logFunctionEnd();
-		return temp;
+		
 	}
 
 }

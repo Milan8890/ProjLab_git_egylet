@@ -27,8 +27,7 @@ public class SaltSpreader extends Head {
      * @param snowplower A tulajdonos hókotró.
      */ 
     public SaltSpreader(Snowplower snowplower) {
-        super(snowplower);
-        Skeleton.initSettingUpObjectEnd();
+
     }
 
     /**
@@ -38,23 +37,7 @@ public class SaltSpreader extends Head {
      * @return a takarítás által kifizetendő pénz.
      */
     public int clean(Lane l){
-        Skeleton.logFunctionStart(this, "clean", List.of(Skeleton.createNameOfObject(l)));
-
-        Cleaner owner = snowplower.getCleaner();
-
-        double length = l.getRoad().getLength();
-
-        l.setSalt(owner);
-        
-        //double saltUsed = length*0.67;
-        double saltUsed = (double) Skeleton.questionValue("Mennyi sót használjon?");
-        
-        snowplower.useSalt(saltUsed);
-
-        int money = 0;
-
-        Skeleton.logFunctionEnd();
-        return money;       
+     
     }
 
     /**
@@ -65,26 +48,6 @@ public class SaltSpreader extends Head {
      */
     @Override
     public boolean canEnterLane(Lane l){
-        Skeleton.logFunctionStart(this, "canEnterLane", List.of(Skeleton.createNameOfObject(l)));
 
-        int salty = l.hasSalt() ? 1 : 2;
-
-        if(salty == 1){
-            Skeleton.logFunctionEnd();
-            return false;
-        }
-
-        Road road = l.getRoad();
-           
-        double lenght = road.getLength();
-
-        double saltAmount = snowplower.getSalt();
-
-        int enter = Skeleton.questionMultiple("Van elég só a sáv tisztításához?", List.of("igen", "nem"));
-        boolean enterBool =  (enter == 1);
-        //if(saltAmount < lenght*0.67){ enter = false; }
-
-        Skeleton.logFunctionEnd();
-        return enterBool;
     }
 }

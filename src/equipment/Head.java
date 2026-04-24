@@ -3,7 +3,7 @@ package equipment;
 import java.util.List;
 import entities.Snowplower;
 import playground.Lane;
-import main.Skeleton;
+
 
 /**
  * A hókotró fejét reprezentáló absztrakt osztály.
@@ -26,8 +26,7 @@ public abstract class Head {
      * @param snowplower A hókotró, amelyhez a fej kapcsolódik.
      */
     public Head(Snowplower snowplower) {
-        Skeleton.initSettingUpObjectStart(this);
-        this.snowplower = snowplower;
+        
     }
 
     /**
@@ -46,9 +45,6 @@ public abstract class Head {
      * @return {@code true}, ha befordulhat a sávra, egyébként {@code false}. 
     */
     public boolean canEnterLane(Lane l) {
-        Skeleton.logFunctionStart(this, "canEnterLane", List.of(Skeleton.createNameOfObject(l)));
-
-        Skeleton.logFunctionEnd();
-        return true;
+        
     }
 }

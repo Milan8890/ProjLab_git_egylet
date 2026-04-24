@@ -3,9 +3,7 @@ package entities;
 import java.util.Arrays;
 import java.util.List;
 
-import javax.swing.plaf.basic.BasicSplitPaneUI.BasicHorizontalLayoutManager;
 
-import main.Skeleton;
 import playground.City;
 import playground.Crossing;
 import playground.City;
@@ -33,121 +31,11 @@ public class Bus extends Vehicle {
 
 	BusDriver owner;
 
-	/**
-	 * Konstruktor
-	 * 
-	 * @param stationA  az egyik végállomás
-	 * @param stationB: az egyik végállomás
-	 * @param owner:    a busz vezetője
-	 */
 	public Bus(Crossing stationA, Crossing stationB, BusDriver owner) {
-		Skeleton.initSettingUpObjectStart(this);
-		this.stationA = stationA;
-		this.stationB = stationB;
-		this.owner = owner;
-		Skeleton.initSettingUpObjectEnd();
+
 	}
-
-	/**
-	 * A busz léptetéskor történő lehetőségeit kezeli:<br>
-	 * -Ha kereszteződésben van, kezeli az új sávba hajtás lehetőségét az ottani hó
-	 * magasságtól függően.<br>
-	 * -Ha sávban halad, akkor kezeli a túl magas hó miatti elakadást, ezután a takarítás miatti
-	 * felszabadítást.<br>
-	 * -Kezeli még az elcsúszást jeges úton, az emiatti baleseteket<br>
-	 * -Kezeli ha útról kereszteződésbe ér, és azt ha ez éppen a stationA, vagy
-	 * stationB.<br>
-	 */
+	
 	public void onTick() {
-		Skeleton.logFunctionStart(this, "onTick", null);
 
-		boolean isInCrossing = isInCrossing();
-
-		if (isInCrossing) {
-			currentLane = Skeleton.Market.path.pop();
-			if (currentLane == null) {
-				Skeleton.logString("Nincs több út beállítva a járműhöz.");
-				Skeleton.logFunctionEnd();
-				return;
-			}
-			currentLane.addVehicle(this);
-
-			Skeleton.logString("A jármű elkezd haladni az új sávon.");
-		} else {
-			currentLane = Skeleton.Market.lane;
-		}
-
-		boolean isWaitingDueToCrash = 1 == Skeleton.questionMultiple("Ütközés után várakozik-e?",
-				Arrays.asList("Igen", "Nem"));
-
-		if (isWaitingDueToCrash) {
-			Skeleton.logString("RevTimer csökkentve.");
-
-			boolean isCrashOver = 1 == Skeleton.questionMultiple("Lejárt az ütközési idő?",
-					Arrays.asList("Igen", "Nem"));
-
-			if (isCrashOver) {
-				Skeleton.logString("A jármű felépült.");
-			}
-
-			Skeleton.logFunctionEnd();
-			return;
-		}
-
-		double ice = currentLane.getIce();
-
-		boolean isSlipping = 1 == Skeleton.questionMultiple("Megcsúszik a jármű " + ice + " vastag jégen?",
-				Arrays.asList("Igen", "Nem"));
-
-		if (isSlipping) {
-			currentLane.getRoad().crashVehicle(this);
-			Skeleton.logFunctionEnd();
-			return;
-		}
-
-		double snow = currentLane.getSnow();
-
-		boolean isStuckInSnow = 1 == Skeleton.questionMultiple("Megakadt " + snow + " vastag hóban a jármű?",
-				Arrays.asList("Igen", "Nem"));
-
-		if (isStuckInSnow) {
-			List<Lane> neighbourLanes = currentLane.getRoad().getLanes();
-			for (Lane l : neighbourLanes) {
-				if (currentLane != l) {
-					double tempSnow = l.getSnow();
-					boolean switchLane = 1 == Skeleton.questionMultiple(
-							"Át tud hajtani az autó " + tempSnow + " vastag hórétegre?",
-							Arrays.asList("Igen", "Nem"));
-
-					if (switchLane) {
-						currentLane.removeVehicle(this);
-						l.addVehicle(this);
-						currentLane = l;
-						Skeleton.logFunctionEnd();
-						return;
-					}
-				}
-			}
-
-			Skeleton.logFunctionEnd();
-			return;
-		}
-
-		Skeleton.logString("Lane progress nő");
-
-		boolean isEndOfRoad = 1 == Skeleton.questionMultiple("A jármű az út végére ért?", Arrays.asList("Igen", "Nem"));
-		if (isEndOfRoad) {
-			currentLane.trampleSnow();
-			currentLane.removeVehicle(this);
-			currentLane = null;
-
-			boolean finished = 1 == Skeleton.questionMultiple("A busz a célpontjához ért, és befejezett egy kört?",
-					Arrays.asList("Igen", "Nem"));
-			if (finished) {
-				owner.addPoint();
-			}
-		}
-
-		Skeleton.logFunctionEnd();
 	}
 }

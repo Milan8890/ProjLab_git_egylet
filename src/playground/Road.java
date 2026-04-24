@@ -1,7 +1,5 @@
 package playground;
 
-import main.Skeleton;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -31,38 +29,13 @@ public class Road {
 	 */
 	public Road(Crossing from, Crossing to, int numOfLanes, double length) {
 
-		Skeleton.initSettingUpObjectStart(this);
-
-		for (int i = 0; i < numOfLanes; i++) {
-			new Lane(this);
-		}
-
-		fromCrossing = from;
-		toCrossing = to;
-
-		Skeleton.initSettingUpObjectEnd();
 	}
 
 	/**
 	 * rak havat az összes hozzá tartozó sávra
 	 */
 	public void onTick() {
-		Skeleton.logFunctionStart(this, "onTick", null);
-
-		int ans = Skeleton.questionValue("Mennyi havat adjon hozzá a sávokhoz?");
-
-		// LEHET HOGY MARKET-BE KELL TÖBB LANE
-		List<Lane> lanes = new ArrayList<Lane>();
-		int laneNum = Skeleton.questionValue("Hány sávja van az útnak?");
-		for (int i = 0; i < laneNum; i++) {
-			lanes.add(Skeleton.Market.lane);
-		}
-
-		for (Lane l : lanes) {
-			l.addSnow((double) ans);
-		}
-
-		Skeleton.logFunctionEnd();
+		
 	}
 
 	/**
@@ -71,19 +44,7 @@ public class Road {
 	 * @return az úthoz tartozó sávok
 	 */
 	public List<Lane> getLanes() {
-		Skeleton.logFunctionStart(this, "getLanes", null);
-
-		List<Lane> lanes = new ArrayList<Lane>();
-		int laneNum = Skeleton.questionMultiple("Hány sávja van az útnak?", Arrays.asList("1", "2"));
-
-		lanes.add(Skeleton.Market.lane);
-
-		if (laneNum > 1) {
-			lanes.add(Skeleton.Market.lane2);
-		}
-
-		Skeleton.logFunctionEnd();
-		return lanes;
+	
 	}
 
 	/**
@@ -92,12 +53,7 @@ public class Road {
 	 * @return az út hossza
 	 */
 	public double getLength() {
-		Skeleton.logFunctionStart(this, "getLength", null);
 
-		int ans = Skeleton.questionValue("Milyen hosszú az út?");
-
-		Skeleton.logFunctionEnd();
-		return (double) ans;
 	}
 
 	/**
@@ -106,10 +62,7 @@ public class Road {
 	 * @return a kereszteződés, amiből kiindul
 	 */
 	public Crossing getFromCrossing() {
-		Skeleton.logFunctionStart(this, "getFromCrossing", null);
 
-		Skeleton.logFunctionEnd();
-		return fromCrossing;
 	}
 
 	/**
@@ -118,10 +71,7 @@ public class Road {
 	 * @return a kereszteződés, amibe megy
 	 */
 	public Crossing getToCrossing() {
-		Skeleton.logFunctionStart(this, "getToCrossing", null);
 
-		Skeleton.logFunctionEnd();
-		return toCrossing;
 	}
 
 	/**
@@ -132,27 +82,7 @@ public class Road {
 	 * @param v
 	 */
 	public void crashVehicle(Vehicle v) {
-		Skeleton.logFunctionStart(this, "crashVehicle", null);
-
-		Set<Vehicle> vehicles = new HashSet<>();
-
-		for (Lane l : this.getLanes()) {
-			vehicles.addAll(l.getVehicles());
-		}
-
-		for (Vehicle tempv : vehicles) {
-			if (v != tempv) {
-				int val = Skeleton.questionValue("Mennyi ideig legyenek ütközve a járművek?");
-
-				v.crashed(val);
-				tempv.crashedInto(val);
-
-				Skeleton.logFunctionEnd();
-				return;
-			}
-		}
-
-		Skeleton.logFunctionEnd();
+		
 	}
 
 }

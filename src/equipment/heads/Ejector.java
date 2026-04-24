@@ -25,8 +25,7 @@ public class Ejector extends Head {
      * @param snowplower A tulajdonos hókotró.
      */ 
     public Ejector(Snowplower snowplower) {
-        super(snowplower);
-        Skeleton.initSettingUpObjectEnd();
+
     }
 
     /**
@@ -37,16 +36,6 @@ public class Ejector extends Head {
      */
     @Override
     public int clean(Lane l){
-        Skeleton.logFunctionStart(this, "clean", List.of(Skeleton.createNameOfObject(l)));
-        
-        double snowAmount = l.cleanSnow();
-
-        double length = l.getRoad().getLength();
-
-        //int money = (int) (snowAmount*length);
-        int money = Skeleton.questionValue("Mennyi pénzt adjunk a hókotrónak?");
-        
-        Skeleton.logFunctionEnd();
-        return money;
+     
     }
 }

@@ -2,15 +2,12 @@ package playground;
 
 import java.util.ArrayList;
 
-import main.Skeleton;
-
 /**
  * Olyan fajta út, amire nem esik rá a hó (mert fedve van).
  */
 public class Tunnel extends Road {
 	public Tunnel(Crossing from, Crossing to, int numOfLanes, double length) {
-		// elm OK?
-		super(from, to, numOfLanes, length);
+
 	}
 
 	/**
@@ -18,8 +15,6 @@ public class Tunnel extends Road {
 	 */
 	@Override
 	public void onTick() {
-		Skeleton.logFunctionStart(this, "onTick", null);
 
-		Skeleton.logFunctionEnd();
 	}
 }
