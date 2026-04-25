@@ -48,8 +48,6 @@ public class Snowplower extends Vehicle {
 	/**
 	 * visszaadja a birtokló játékost
 	 * 
-	 * 
-	 * 
 	 * @return A hókotrót birtokló játékos
 	 */
 	public Cleaner getCleaner() {
