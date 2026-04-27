@@ -2,16 +2,25 @@ package user;
 import java.awt.Color;
 import java.util.HashSet;
 
+
 /**
- * A játékosok ősosztálya. Nincs saját függvénye csak belső állapotot tárolna
+ * A játékosok ősosztálya. Nincs saját függvénye csak belső állapotot tárolna.
+ * <p>
+ * 
+ * Felelősség <br>
+ * Tárolja a játékos nevét.
  */
 public abstract class Player{
     /**
-     * Konstruktor, beállítja a játékos nevét és színét
-     * @param name
-     * @param color
+     * A játékos neve.
      */
-    Player(String name, Color color) {
-       
+    String name;
+    
+    /**
+     * Konstruktor, beállítja a játékos nevét.
+     * @param name
+     */
+    Player(String name ) {
+        this.name = name;
     }
 }

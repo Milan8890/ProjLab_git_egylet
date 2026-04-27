@@ -13,8 +13,8 @@ import playground.Road;
  * 
  * Felelősség <br>
  * A hó arrébbsöprése a sávról, és az ezért járó fizetés kiszámítása.
- * Eltűnteti a jelenlegi sávról, és áthelyezi a mellette lévőre.
- * 
+ * Eltűnteti a jelenlegi sávról, és áthelyezi a mellette lévőre, a külső sávról csak eltünteti.
+ *
  * Ősosztályok <br>
  * Head
  */
@@ -26,7 +26,7 @@ public class Sweeper extends Head {
      * @param snowplower A tulajdonos hókotró.
      */ 
     public Sweeper(Snowplower snowplower) {
-       
+        super(snowplower);
     }
 
     /**
@@ -38,6 +38,23 @@ public class Sweeper extends Head {
      */
     @Override
     public int clean(Lane l){
-       
+        double payPerMeter;    
+
+       if(l.getRoad().getLanes().indexOf(l) == l.getRoad().getLanes().size() - 1){
+            l.addSnow(0);
+            payPerMeter = 1; //Ezt kell átírni. Más pénz, mert letolta az útról, kell ilyen?
+       }
+       else{
+            Lane nextLane = l.getRoad().getLanes().get(l.getRoad().getLanes().indexOf(l) + 1);
+            nextLane.addSnow(nextLane.getSnow() + l.getSnow());
+            l.addSnow(0);
+
+            payPerMeter = 0.6; //Ezt kell átírni, Más pénz, mert csak másik sávra tolta.
+       }
+
+       //Ide kéne még valami ice/snowLevel elem a képletbe?
+        int payment = (int) (l.getRoad().getLength() * payPerMeter);
+        return payment;
+
     }
 }

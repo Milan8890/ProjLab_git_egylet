@@ -24,7 +24,7 @@ public class Breaker extends Head {
      * @param snowplower A tulajdonos hókotró.
      */ 
     public Breaker(Snowplower snowplower) {
-
+        super(snowplower);
     }
 
     /**
@@ -35,6 +35,10 @@ public class Breaker extends Head {
      */
     @Override
     public int clean(Lane l) {
+        l.addSnow(l.breakIce());
+        double payPerMeter = 0.5;    //Ezt kell átírni.
         
+        double payment = l.breakIce()* l.getRoad().getLength() * payPerMeter;
+        return (int)payment ; //0.5 szorzó van a tesztben is.
     }
 }

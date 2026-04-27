@@ -26,7 +26,7 @@ public class Dragon extends Head {
      * @param snowplower A tulajdonos hókotró.
      */ 
     public Dragon(Snowplower snowplower) {
-
+        super(snowplower);
     }
 
     /**
@@ -37,7 +37,13 @@ public class Dragon extends Head {
      */
     @Override
     public int clean(Lane l){
-        
+        double iceAmount = l.meltIce();
+        double snowAmount = l.cleanSnow();
+        double payPerMeterIce = 0.5;    //Ezt kell átírni.
+        double payPerMeterSnow = 1;      //Ezt kell átírni.
+
+        double payment = (iceAmount * payPerMeterIce + snowAmount * payPerMeterSnow)* l.getRoad().getLength(); // 1 jég = 0.5 pénz, 1 hó = 1 pénz, ez van tesztben
+        return (int) payment;
     }
 
     /**
@@ -48,7 +54,12 @@ public class Dragon extends Head {
      */
     @Override
     public boolean canEnterLane(Lane l){
-    
+        double snowConsume = 1;         //Ezt a 2 értéket kell átírni a megfelelő fogyasztási konstansokra.
+        double iceConsume = 0.5;
+
+        double neededAmount = (l.getSnow() * snowConsume + l.getIce() * iceConsume) * l.getRoad().getLength();
+
+        return neededAmount <= snowplower.getBio();
     }
 
 }

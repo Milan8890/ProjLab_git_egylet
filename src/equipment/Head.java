@@ -10,7 +10,8 @@ import playground.Lane;
  * <p> 
  *
  * Felelősség <br>
- * Típus szerint a sáv tisztítása, az ezért járó pénz kiszámítása, és a sávra befordulás jogának ellenőrzése.
+ * Tisztítófejek őseként szolgáló absztrakt osztály. 
+ * Típus szerint a sáv tisztítása, ezért járó pénz kiszámítása, és a sávra ráhajtás engedélyezése/tiltása. 
  * A fejek ismerik a hókotrót, amelyhez tartoznak, így tudják fogyasztani annak alapanyagait.
  */
 public abstract class Head {
@@ -26,11 +27,12 @@ public abstract class Head {
      * @param snowplower A hókotró, amelyhez a fej kapcsolódik.
      */
     public Head(Snowplower snowplower) {
-        
+        this.snowplower = snowplower;
     }
 
     /**
-     * Típus szerint a sáv tisztítása, ezért járó pénz kiszámítása.
+     * Fej típustól függ, a visszaadott pénzérték függ az eltakarított hó és jég vastagságától,
+     * valamint a sáv útjának hosszától.
      * Absztrakt metódus, itt  nincs implementálva.
      * 
      * @param l A tisztítandó sáv (Lane).
@@ -45,6 +47,6 @@ public abstract class Head {
      * @return {@code true}, ha befordulhat a sávra, egyébként {@code false}. 
     */
     public boolean canEnterLane(Lane l) {
-        
+        return true;
     }
 }
