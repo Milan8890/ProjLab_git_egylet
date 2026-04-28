@@ -10,7 +10,7 @@ SUCCESS=true
 cat "$INPUT_FILE" | java -cp bin main.App > "$OUTPUT_FILE"
 
 if grep -q "A bemenet: Valami Amerika" "$OUTPUT_FILE"; then
-    SUCCESS=true
+
 else
     SUCCESS=false
 fi
