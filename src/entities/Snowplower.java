@@ -5,6 +5,7 @@ import java.util.Arrays;
 
 import equipment.HeadInventory;
 import playground.Crossing;
+import playground.Lane;
 import main.Skeleton;
 
 /**
@@ -25,7 +26,26 @@ import main.Skeleton;
  * játékost.<br>
  */
 public class Snowplower extends Vehicle {
+	/**
+	 * A hókotrót birtokló takarító.
+	 */
 	Cleaner owner;
+	/**
+	 * Inventory ami tartalmazza a megvett és megvehető árucikkeket.
+	 */
+	HeadInventory headInventory;
+	/**
+	 * A só állománya, ezt használja a sószórófej.
+	 */
+	double saltAmount;
+	/**
+	 * A biokerozin állománya, ezt használja a sárkány fej.
+	 */
+	double bioAmount;
+	/**
+	 * A zuzalék állománya, ezt használja a zuzalékszóró fej.
+	 */
+	double gravelAmount;
 
 	/**
 	 * Konstruktor
@@ -35,20 +55,52 @@ public class Snowplower extends Vehicle {
 	 * @param inventory a fejtároló amivel a hókotró rendelkezik
 	 */
 	private Snowplower(Cleaner owner, Crossing spawn) {
+		this.owner = owner;
+	}
 
+
+	/**
+	 * Visszaadja, hogy behajthat-e az adott sávra a hókotrófeje szerint.
+	 */
+	@Override
+	public boolean canEnterLane(Lane l) {
+		return  headInventory.getActiveHead().canEnterLane(l);
 	}
 
 	/**
-	 * Sáv elhagyásakor tisztítja a sávot az aktív fejjel.
+	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel tér vissza.
 	 */
-	public void onTick() {
-		
+	public boolean stepWaitBecauseOfStuck() {
+		return  true;
+	}
+
+	/**
+	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel tér vissza.
+	 */
+	public boolean stepStuckInSnow() {
+		return  true;
+	}
+
+	
+	/**
+	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel tér vissza.
+	 */
+	public boolean stepSlipOnIce() {
+		return  true;
+	}
+
+	/**
+	 * Az aktív fejével letakarítja a sávot amin van, majd meghívja az őse reachedCrossing()-ját.
+	 */
+	public void reachedCrossing() {
+		int payment = headInventory.getActiveHead().cleanLane( /*LANE*/); //Hogy kéne átadni a sávot?
+		reachedCrossing();
+
+		return;
 	}
 
 	/**
 	 * visszaadja a birtokló játékost
-	 * 
-	 * 
 	 * 
 	 * @return A hókotrót birtokló játékos
 	 */
@@ -62,7 +114,7 @@ public class Snowplower extends Vehicle {
 	 * @return HeadInventory
 	 */
 	public HeadInventory getHeadInventory() {
-	
+		return headInventory;
 	}
 
 	/**
@@ -71,7 +123,7 @@ public class Snowplower extends Vehicle {
 	 * @return mennyi Só áll rendelkezésre
 	 */
 	public double getSalt() {
-
+		return saltAmount;
 	}
 
 	/**
@@ -80,17 +132,33 @@ public class Snowplower extends Vehicle {
 	 * @return mennyi Biokerozin áll rendelkezésre
 	 */
 	public double getBio() {
-
+		return bioAmount;
 	}
 
+	/**
+	 * Visszaadja, hogy mennyi zuzalék áll rendelkezésre.
+	 * 
+	 * @return mennyi zuzalék áll rendelkezésre
+	 */
+	public double getGravel() {
+		return gravelAmount;
+	}
+	
 	/**
 	 * Vesz egy adag sót. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
 	 * kereszteződésben van.
 	 * 
 	 * @return Sikeres volt-e a vásárlás
 	 */
-	public boolean buySalt() {
-
+	public boolean buySalt() { 
+		int price = 25;		//25 pénzért vesz 10kg sót, ez így jó?
+		if(owner.removeMoney(price)){
+			saltAmount += 10;
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 
 	/**
@@ -100,7 +168,31 @@ public class Snowplower extends Vehicle {
 	 * @return Sikeres volt-e a vásárlás
 	 */
 	public boolean buyBio() {
+		int price = 25;		//25 pénzért vesz 10l biot, ez így jó?
+		if(owner.removeMoney(price)){
+			bioAmount += 10;
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
 
+	/**
+	 * Vesz egy adag zuzalékot. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
+	 * kereszteződésben van.
+	 * 
+	 * @return Sikeres volt-e a vásárlás
+	 */
+	public boolean buyGravel() {
+		int price = 25;		//25 pénzért vesz 50kg zuzalékot, ez így jó?
+		if(owner.removeMoney(price)){
+			gravelAmount += 50;
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 
 	/**
@@ -108,8 +200,8 @@ public class Snowplower extends Vehicle {
 	 * 
 	 * @param saltAmount Az elhasznált só mennyisége
 	 */
-	public void useSalt(double saltAmount) {
-
+	public void useSalt(double a) {
+		saltAmount -= a; //Ennyi?
 	}
 
 	/**
@@ -117,12 +209,28 @@ public class Snowplower extends Vehicle {
 	 * 
 	 * @param bioAmount Az elhasznált kerozin mennyisége
 	 */
-	public void useBio(double bioAmount) {
-
+	public void useBio(double a) {
+		bioAmount -= a; //Ennyi?
 	}
 
 	/**
-	 * Konstruktor segítségével létrehoz egy Hókotrót egy hányó fejjel.
+	 * levonja az elhasznált kerozint
+	 * 
+	 * @param bioAmount Az elhasznált kerozin mennyisége
+	 */
+	public void useGravel(double a) {
+		gravelAmount -= a; //Ennyi?
+	}
+
+	/**
+	 * Sáv elhagyásakor tisztítja a sávot az aktív fejjel.
+	 */
+	public void onTick() {
+		
+	}
+
+	/**
+	 * Létrehoz és visszaad egy új hókotrót hányó fejjel.
 	 * 
 	 * @param owner a játékos aki irányítja a hókotrót
 	 * @param base  a kereszteződés ahol a hókotró megjelenik
@@ -133,7 +241,7 @@ public class Snowplower extends Vehicle {
 	}
 
 	/**
-	 * Konstruktor segítségével létrehoz egy Hókotrót egy jégtörő fejjel.
+	 * Létrehoz és visszaad egy új hókotrót jégtörő fejjel.
 	 * 
 	 * @param owner a játékos aki irányítja a hókotrót
 	 * @param base  a kereszteződés ahol a hókotró megjelenik

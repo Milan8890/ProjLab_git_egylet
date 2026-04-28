@@ -25,7 +25,7 @@ public class Ejector extends Head {
      * @param snowplower A tulajdonos hókotró.
      */ 
     public Ejector(Snowplower snowplower) {
-
+        super(snowplower);
     }
 
     /**
@@ -36,6 +36,9 @@ public class Ejector extends Head {
      */
     @Override
     public int clean(Lane l){
-     
+      double payPerMeter = 1;    //Ezt kell átírni.
+
+      double payment = l.cleanSnow() * l.getRoad().getLength() * payPerMeter;
+      return (int) payment;
     }
 }

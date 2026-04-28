@@ -12,19 +12,29 @@ import java.awt.Color;
  */
 public class BusDriver extends Player {
 	/**
+	 * A játékos pontjainak száma.
+	 */
+	int point;
+	/**
+	 * A játékoshoz tartozó busz.
+	 */
+	Bus bus;
+	
+	/**
 	 * Konstruktor, létrehoz egy új buszvezető játékost.
 	 * 
 	 * @param name  a játékos neve
-	 * @param color a játékos színe
 	 */
-	public BusDriver(String name, Color color) {
-		
+	public BusDriver(String name) {
+		super(name);
+		point = 0;
 	}
 
 	/**
-	 * Számoljuk a buszvezetők által megtett köröket.
+	 * Ad pontot a játékosnak.
 	 */
 	public void addPoint() {
-	
+		point++;
 	}
+
 }
