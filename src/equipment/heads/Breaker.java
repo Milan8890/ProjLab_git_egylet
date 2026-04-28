@@ -35,10 +35,11 @@ public class Breaker extends Head {
      */
     @Override
     public int clean(Lane l) {
-        l.addSnow(l.breakIce());
+        double iceAmount = l.breakIce();
+        l.addSnow(iceAmount);
         double payPerMeter = 0.5;    //Ezt kell átírni.
         
-        double payment = l.breakIce()* l.getRoad().getLength() * payPerMeter;
+        double payment = iceAmount * l.getRoad().getLength() * payPerMeter;
         return (int)payment ; //0.5 szorzó van a tesztben is.
     }
 }

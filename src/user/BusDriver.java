@@ -27,6 +27,7 @@ public class BusDriver extends Player {
 	 */
 	public BusDriver(String name) {
 		super(name);
+		point = 0;
 	}
 
 	/**

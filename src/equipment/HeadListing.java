@@ -23,8 +23,8 @@ public class HeadListing {
      * @param price az ár amit ki kell fizetni érte
      */
     public HeadListing(Head h, int price){
-        Skeleton.initSettingUpObjectStart(this);
-        Skeleton.initSettingUpObjectEnd();
+        head = h;
+        this.price = price;
     }
 
     /**
