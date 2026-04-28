@@ -20,7 +20,7 @@ public abstract class Player{
      * Konstruktor, beállítja a játékos nevét.
      * @param name
      */
-    Player(String name ) {
+    Player(String name) {
         this.name = name;
     }
 }

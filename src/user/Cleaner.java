@@ -34,7 +34,6 @@ public class Cleaner extends Player {
 	 * @param name  a játékos neve
 	 */
 	public Cleaner(String name) {
-		
 	}
 
 	/**

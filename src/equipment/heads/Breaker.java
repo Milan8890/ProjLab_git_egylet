@@ -36,7 +36,6 @@ public class Breaker extends Head {
     @Override
     public int clean(Lane l) {
         double iceAmount = l.breakIce();
-        l.addSnow(iceAmount);
         double payPerMeter = 0.5;    //Ezt kell átírni.
         
         double payment = iceAmount * l.getRoad().getLength() * payPerMeter;
