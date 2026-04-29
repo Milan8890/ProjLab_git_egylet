@@ -6,7 +6,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 import entities.Vehicle;
-import main.Skeleton;
 import user.Cleaner;
 
 /**
@@ -32,9 +31,7 @@ public class Lane {
 		 * @param c a cleaner, akihez a só tartozik
 		 */
 		Salt(Cleaner c) {
-			Skeleton.initSettingUpObjectStart(this);
-			owner = c;
-			Skeleton.initSettingUpObjectEnd();
+
 		}
 
 		/**
@@ -42,13 +39,7 @@ public class Lane {
 		 * élettartamát, kifizeti a játékost
 		 */
 		public void onTick() {
-			Skeleton.logFunctionStart(this, "onTick", null);
-
-			int meltedSnow = Skeleton.questionValue("Mennyi havat olvasztott le a só?");
-			int meltedIce = Skeleton.questionValue("Mennyi jeget olvasztott le a só?");
-			owner.addMoney(meltedIce + meltedSnow);
-
-			Skeleton.logFunctionEnd();
+		
 		}
 	}
 
@@ -58,11 +49,7 @@ public class Lane {
 	 * @param r a sávot tartalmazó út.
 	 */
 	public Lane(Road r) {
-		Skeleton.initSettingUpObjectStart(this);
 
-		road = r;
-
-		Skeleton.initSettingUpObjectEnd();
 	}
 
 	/**
@@ -71,9 +58,7 @@ public class Lane {
 	 * @param v A jármű, amit le fog venni a sávról.
 	 */
 	public void removeVehicle(Vehicle v) {
-		Skeleton.logFunctionStart(this, "removeVehicle", Arrays.asList(Skeleton.createNameOfObject(v)));
-		vehicles.remove(v);
-		Skeleton.logFunctionEnd();
+
 	}
 
 	/**
@@ -82,9 +67,6 @@ public class Lane {
 	 * @param v A jármű, amit hozzá fog adni a sávhoz.
 	 */
 	public void addVehicle(Vehicle v) {
-		Skeleton.logFunctionStart(this, "addVehicle", Arrays.asList(Skeleton.createNameOfObject(v)));
-		vehicles.add(v);
-		Skeleton.logFunctionEnd();
 	}
 
 	/**
@@ -93,12 +75,7 @@ public class Lane {
 	 * @return van-e beakadt jármű a sávon
 	 */
 	public boolean hasStuckVehicle() {
-		Skeleton.logFunctionStart(this, "hasStuckVehicle", null);
 
-		int ans = Skeleton.questionMultiple("Van a sávon jármű?", Arrays.asList("Igen", "Nem"));
-
-		Skeleton.logFunctionEnd();
-		return ans == 1;
 	}
 
 	/**
@@ -107,13 +84,7 @@ public class Lane {
 	 * @return van-e só a sávon
 	 */
 	public boolean hasSalt() {
-		Skeleton.logFunctionStart(this, "hasSalt", null);
 
-		int ans = Skeleton.questionMultiple("Van a sávon só?",
-				Arrays.asList("Igen", "Nem"));
-
-		Skeleton.logFunctionEnd();
-		return ans == 1;
 	}
 
 	/**
@@ -122,11 +93,7 @@ public class Lane {
 	 * @param c a cleaner, akinek a sója rákerül a sávra
 	 */
 	public void setSalt(Cleaner c) {
-		Skeleton.logFunctionStart(this, "setSalt", Arrays.asList(Skeleton.createNameOfObject(c)));
 
-		new Salt(c);
-
-		Skeleton.logFunctionEnd();
 	}
 
 	/**
@@ -135,12 +102,7 @@ public class Lane {
 	 * @return a jég magassága
 	 */
 	public double getIce() {
-		Skeleton.logFunctionStart(this, "getIce", null);
 
-		int answer = Skeleton.questionValue("Milyen magas a jég a sávban?");
-
-		Skeleton.logFunctionEnd();
-		return (double) answer;
 	}
 
 	/**
@@ -149,12 +111,7 @@ public class Lane {
 	 * @return a hó magassága
 	 */
 	public double getSnow() {
-		Skeleton.logFunctionStart(this, "getSnow", null);
 
-		int answer = Skeleton.questionValue("Milyen magas a hó a sávban?");
-
-		Skeleton.logFunctionEnd();
-		return (double) answer;
 	}
 
 	/**
@@ -163,8 +120,7 @@ public class Lane {
 	 * @param amount a hozzáadott hó mennyisége
 	 */
 	public void addSnow(double amount) {
-		Skeleton.logFunctionStart(this, "addSnow", Arrays.asList(Double.toString(amount)));
-		Skeleton.logFunctionEnd();
+
 	}
 
 	/**
@@ -172,8 +128,7 @@ public class Lane {
 	 * hó magasságát
 	 */
 	public void trampleSnow() {
-		Skeleton.logFunctionStart(this, "trampleSnow", null);
-		Skeleton.logFunctionEnd();
+
 	}
 
 	/**
@@ -182,10 +137,7 @@ public class Lane {
 	 * @return a tartalmazó út
 	 */
 	public Road getRoad() {
-		Skeleton.logFunctionStart(this, "getRoad", null);
 
-		Skeleton.logFunctionEnd();
-		return road;
 	}
 
 	/**
@@ -195,11 +147,7 @@ public class Lane {
 	 * @return mennyi havat tüntetett el
 	 */
 	public double cleanSnow() {
-		Skeleton.logFunctionStart(this, "cleanSnow", null);
-		double answer = Skeleton.questionValue("Milyen magas volt a hó a sávban takarítás előtt?");
 
-		Skeleton.logFunctionEnd();
-		return answer;
 	}
 
 	/**
@@ -209,11 +157,7 @@ public class Lane {
 	 * @return mennyi jeget tüntetett el
 	 */
 	public double meltIce() {
-		Skeleton.logFunctionStart(this, "meltIce", null);
-		double answer = Skeleton.questionValue("Milyen magas volt a jég a sávban takarítás előtt?");
 
-		Skeleton.logFunctionEnd();
-		return answer;
 	}
 
 	/**
@@ -225,11 +169,7 @@ public class Lane {
 	 * @return mennyi jeget tört fel
 	 */
 	public double breakIce() {
-		Skeleton.logFunctionStart(this, "breakIce", null);
-		int answer = Skeleton.questionValue("Milyen magas volt a jég a sávban a feltörése előtt?");
 
-		Skeleton.logFunctionEnd();
-		return (double) answer;
 	}
 
 	/**
@@ -238,9 +178,6 @@ public class Lane {
 	 * @return a sávban lévő járművek halmaza.
 	 */
 	public Set<Vehicle> getVehicles() {
-		Skeleton.logFunctionStart(this, "getVehicles", null);
 
-		Skeleton.logFunctionEnd();
-		return vehicles;
 	}
 }

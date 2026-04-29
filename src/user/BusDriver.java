@@ -1,6 +1,5 @@
 package user;
 
-import main.Skeleton;
 import entities.Bus;
 import java.awt.Color;
 
@@ -19,17 +18,13 @@ public class BusDriver extends Player {
 	 * @param color a játékos színe
 	 */
 	public BusDriver(String name, Color color) {
-		super(name, color);
-		new Bus(Skeleton.Market.crossing, Skeleton.Market.crossing, this);
-		Skeleton.initSettingUpObjectEnd();
+		
 	}
 
 	/**
 	 * Számoljuk a buszvezetők által megtett köröket.
 	 */
 	public void addPoint() {
-		Skeleton.logFunctionStart(this, "addPoint", null);
-
-		Skeleton.logFunctionEnd();
+	
 	}
 }
