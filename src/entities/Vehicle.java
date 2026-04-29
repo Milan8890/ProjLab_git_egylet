@@ -33,15 +33,15 @@ public abstract class Vehicle {
 	 */
 	Path path;
 	/**
-	 * Be van-e ragadva az autó.
+	 * Be van-e ragadva a jármű.
 	 */
 	boolean isStuck;
 	/**
-	 * Az autó éppen karambolban van-e.
+	 * A jármű éppen balesetben van-e.
 	 */
 	boolean isChrashed;
 	/**
-	 * Mennyi ideig nem fog még tudni menni egy karambol után.
+	 * Mennyi ideig nem fog még tudni menni a baleset után.
 	 */
 	int revTimer;
 
