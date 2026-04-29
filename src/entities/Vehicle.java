@@ -16,8 +16,49 @@ import playground.Path;
  * egy adott eséllyel megcsúszik, ezt jelzi az útnak.
  */
 public abstract class Vehicle {
+	/**
+	 * A legutóbbi kereszteződés, amin volt.
+	 */
 	Crossing lastCrossing;
+	/**
+	 * Az a sáv amin éppen megy.
+	 */
 	Lane currentLane;
+	/**
+	 * Éppen hol tart az sávon amin megy.
+	 */
+	double laneProgress;
+	/**
+	 * Hozzá tartozó útvonalterv.
+	 */
+	Path path;
+	/**
+	 * Be van-e ragadva az autó.
+	 */
+	boolean isStuck;
+	/**
+	 * Az autó éppen karambolban van-e.
+	 */
+	boolean isChrashed;
+	/**
+	 * Mennyi ideig nem fog még tudni menni egy karambol után.
+	 */
+	int revTimer;
+
+	/**
+	 * Konstruktor
+	 * 
+	 * @param lastCrossing  A legutóbbi kereszteződés, amin volt. 
+	 */
+	public Vehicle(Crossing lastCrossing) {
+		this.lastCrossing = lastCrossing;
+		this.currentLane = null;
+		this.laneProgress = 0.0;
+		this.path = new Path();
+		this.isStuck = false;
+		this.isChrashed = false; 
+		this.revTimer = 0;
+	}
 
 	/**
 	 * Minden órajelkor meghívódó absztrakt függvény, mert minden jármű mást csinál.
