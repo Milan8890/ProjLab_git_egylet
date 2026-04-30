@@ -13,6 +13,6 @@ import equipment.*;
 public class App {
 
 	public static void main(String[] args) throws Exception {
-
+		System.out.println("Végre fordul ez a szutyok");
 	}
 }
