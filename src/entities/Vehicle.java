@@ -39,7 +39,7 @@ public abstract class Vehicle {
 	/**
 	 * A jármű éppen balesetben van-e.
 	 */
-	boolean Chrashed;
+	boolean isCrashed;
 	/**
 	 * Mennyi ideig nem fog még tudni menni a baleset után.
 	 */
@@ -48,7 +48,7 @@ public abstract class Vehicle {
 	/**
 	 * Konstruktor
 	 * 
-	 * @param lastCrossing  A legutóbbi kereszteződés, amin volt. 
+	 * @param lastCrossing A legutóbbi kereszteződés, amin volt.
 	 */
 	public Vehicle(Crossing lastCrossing) {
 		this.lastCrossing = lastCrossing;
@@ -56,7 +56,7 @@ public abstract class Vehicle {
 		this.laneProgress = 0.0;
 		this.path = new Path();
 		this.isStuck = false;
-		this.Chrashed = false; 
+		this.isCrashed = false;
 		this.revTimer = 0;
 	}
 
@@ -79,27 +79,29 @@ public abstract class Vehicle {
 	}
 
 	/**
-     * Megkísérel ráhajtani a következő sávra az útvonalterv alapján.
-     * @return Igaz, ha sikerült a haladás, egyébként hamis.
-     */
-    protected boolean stepFollowPath() {
-        throw new UnsupportedOperationException("Még nincs kész");
-    }
-
-    /**
-     * Kezeli az ütközés utáni kényszerpihenőt.
-     * @return Igaz, ha a jármű újra mozgásképes, egyébként hamis.
-     */
-    protected boolean stepWaitAfterCrash() {
-        throw new UnsupportedOperationException("Még nincs kész");
-    }
+	 * Megkísérel ráhajtani a következő sávra az útvonalterv alapján.
+	 * 
+	 * @return Igaz, ha sikerült a haladás, egyébként hamis.
+	 */
+	protected boolean stepFollowPath() {
+		throw new UnsupportedOperationException("Még nincs kész");
+	}
 
 	/**
-     * Kezeli a kereszteződés elérését.
-     */
-    protected void reachedCrossing() {
-        throw new UnsupportedOperationException("Még nincs kész");
-    }
+	 * Kezeli az ütközés utáni kényszerpihenőt.
+	 * 
+	 * @return Igaz, ha a jármű újra mozgásképes, egyébként hamis.
+	 */
+	protected boolean stepWaitAfterCrash() {
+		throw new UnsupportedOperationException("Még nincs kész");
+	}
+
+	/**
+	 * Kezeli a kereszteződés elérését.
+	 */
+	protected void reachedCrossing() {
+		throw new UnsupportedOperationException("Még nincs kész");
+	}
 
 	/**
 	 * Visszaadja, hogy a jármű jelenleg kereszteződésben várakozik-e.
