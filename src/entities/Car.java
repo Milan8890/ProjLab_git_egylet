@@ -25,11 +25,29 @@ import playground.Lane;
  * Vechicle
  */
 public class Car extends Vehicle {
+	/**
+	 * A gépjármű otthona.
+	 */
 	Crossing home;
+	/**
+	 * A gépjármű munkahelye.
+	 */
 	Crossing work;
+	/**
+	 * Jelzi, hogy a gépjármű hazafelé tart-e.
+	 */
+	boolean isGoingHome;
 
+	/**
+     * Konstruktor, beállítja az autó otthonát és munkahelyét.
+	 * 
+     * @param home
+	 * @param work
+     */
 	public Car(Crossing home, Crossing work) {
-
+		this.home = home;
+		this.work = work;
+		this.isGoingHome = false;
 	}
 
 	public void onTick() {

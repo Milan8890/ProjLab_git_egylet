@@ -11,13 +11,26 @@ import equipment.heads.*;
  * <p>
  * 
  * Felelősség <br>
- * A vehető fejek nyilvántartása, megvett fejek tárolása, aktív fej nyilvántartása. Új fej vételének lebonyolítása.
+ * A vehető fejek nyilvántartása, megvett fejek tárolása, aktív fej nyilvántartása.
+ * Új fej vételének lebonyolítása.
  */
 public class HeadInventory {
     /**
      * A Hókotró amihez a fejtároló tartozik
      */
-    Snowplower owner;
+    Snowplower snowplower;
+    /**
+     * A Hókotró által birtokolt fejek listája.
+     */
+    List<Head> heads;
+    /**
+     * A Hókotró által megvásárolható fejek listája.
+     */
+    List<HeadListing> shop;
+    /**
+     * A Hókotró által jelenleg használt fej.
+     */
+    Head activeHead;
 
     /**
      * Konstruktor
@@ -25,10 +38,13 @@ public class HeadInventory {
      * @param owner a Hókotró aminek tároljuk a fejeit
      * @param ownedHead a fej amit a Hókotró már birtokol, ez lesz az aktív fej is
      */
-    private HeadInventory(Snowplower owner, Head ownedHead){
-
-
+    private HeadInventory(Snowplower snowplower, Head activeHead){
+        this.snowplower = snowplower;
+        this.activeHead = activeHead;
+        this.heads = new ArrayList<>();
+        this.shop = new ArrayList<>();
     }
+    
     /**
      * Konstruál egy Hókotróhoz egy fejtárolót aminek jégtörő feje van
      * 
@@ -38,6 +54,7 @@ public class HeadInventory {
     public static HeadInventory createWithBreaker(Snowplower owner){
 
     }
+
     /**
      * Konstruál egy Hókotróhoz egy fejtárolót aminek hányó feje van
      * 
@@ -47,28 +64,32 @@ public class HeadInventory {
     public static HeadInventory createWithEjector(Snowplower owner) {
 
     }
+
     /**
-     * visszaadja a fejtárolóban jelenleg aktív fejet
+     * Visszaadja a fejtárolóban jelenleg aktív fejet
      * 
      * @return a jelenleg aktív fej
      */
     public Head getActiveHead() {
-
+        return activeHead;
     }
 
     /**
-     * visszadja a fejtárolóban jelenleg megvehető Listingeket
+     * Visszadja a fejtárolóban jelenleg megvehető Listingeket
      * @return a jelenleg megvehető Listingek
      */
     public List<HeadListing> getShop() {
-
+        return shop;
     }
+
     /**
-     * Átváltja az aktív fejet a következőre a fejtárolóban
+     * Az aktív fejet a következő megvásárolt fejre váltja.
      */
     public void cycleActiveHead() {
-
+        int idx = heads.indexOf(activeHead);
+        activeHead = heads.get((idx + 1) % heads.size());
     }
+
     /**
      * Megvásárol egy fejet a listing alapján, ha van elég pénze a játékosnak
      * @param listing a megvásárolni kívánt fej listingje

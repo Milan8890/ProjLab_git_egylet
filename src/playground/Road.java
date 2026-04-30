@@ -12,12 +12,28 @@ import entities.*;
  * A sávokat tartalmazza, valamint egy referenciát a kereszteződésre amiből
  * kiindul, és amibe érkezik.
  * <p>
+ * 
+ * Felelősség <br>
  * Ha egy jármű megcsúszik az úton, akkor eldönti hogy beleütközik-e egy másik
  * járműbe, és jelzi nekik. Havazást szimulálva havat rak a sávjaira.
  */
 public class Road {
+	/**
+	 * Az úthoz tartozó sávok listája.
+	 */
+	List<Lane> lanes;
+	/**
+	 * A kereszteződés, amiből kiindul.
+	 */
 	Crossing fromCrossing;
+	/**
+	 * A kereszteződés, amibe érkezik.
+	 */
 	Crossing toCrossing;
+	/**
+	 * Az út hossza.
+	 */
+	double length;
 
 	/**
 	 * Út létrehozása
@@ -28,7 +44,13 @@ public class Road {
 	 * @param length     Út hossza
 	 */
 	public Road(Crossing from, Crossing to, int numOfLanes, double length) {
-		throw new UnsupportedOperationException("Még nincs kész");
+		this.fromCrossing = from;
+		this.toCrossing = to;
+		this.length = length;
+		this.lanes = new ArrayList<>(numOfLanes);
+		for (int i = 0; i < numOfLanes; i++) {
+			lanes.add(new Lane(this));
+		}
 	}
 
 	/**
@@ -44,7 +66,7 @@ public class Road {
 	 * @return az úthoz tartozó sávok
 	 */
 	public List<Lane> getLanes() {
-		throw new UnsupportedOperationException("Még nincs kész");
+		return lanes;
 	}
 
 	/**
@@ -53,7 +75,7 @@ public class Road {
 	 * @return az út hossza
 	 */
 	public double getLength() {
-		throw new UnsupportedOperationException("Még nincs kész");
+		return length;
 	}
 
 	/**
@@ -62,7 +84,7 @@ public class Road {
 	 * @return a kereszteződés, amiből kiindul
 	 */
 	public Crossing getFromCrossing() {
-		throw new UnsupportedOperationException("Még nincs kész");
+		return fromCrossing;
 	}
 
 	/**
@@ -71,7 +93,7 @@ public class Road {
 	 * @return a kereszteződés, amibe megy
 	 */
 	public Crossing getToCrossing() {
-		throw new UnsupportedOperationException("Még nincs kész");
+		return toCrossing;
 	}
 
 	/**

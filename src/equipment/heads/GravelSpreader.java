@@ -4,41 +4,40 @@ import user.Cleaner;
 import java.util.List;
 import entities.Snowplower;
 import equipment.Head;
-import main.Skeleton;
 import playground.Lane;
 import playground.Road;
 
 /**
- * SaltSpreader
+ * GravelSpreader
  * <p>
  * 
  * Felelősség <br>
- * Só elhelyezése a sávon, és az azért járó fizetés kiszámítása.
- * Elhasználja a sót a hókotróból.
+ * Zúzalék elhelyezése a sávon, és az azért járó fizetés kiszámítása. 
+ * Elhasználja a zúzalékot a hókotróból.
  * 
  * Ősosztályok <br>
  * Head
  */
-public class SaltSpreader extends Head {
+public class GravelSpreader extends Head {
 
     /**
      * Konstruktor.
      * 
      * @param snowplower A tulajdonos hókotró.
      */ 
-    public SaltSpreader(Snowplower snowplower) {
+    public GravelSpreader(Snowplower snowplower) {
         super(snowplower);
     }
 
     /**
-     * Az “l” sávra leszórja a sót, és visszaadja a takarítás által kifizetendő pénzt.
+     * Rak zúzalékot az “l” sávra, visszaadja a takarítás által kifizetendő pénzt.
      * 
      * @param l a tisztítandó sáv.
      * @return a takarítás által kifizetendő pénz.
      */
     public int clean(Lane l){
-        l.setSalt(snowplower.getCleaner());
-        double payPerMeter = 1;    //Ezt kell átírni, hogy 1 méter sózásért mennyi pénz jár.
+        l.setGravel(true);
+        double payPerMeter = 1;    //Ezt kell átírni, nem tudom mi egyáltalán a gravelnél a fizetési pénz.
 
         //Ide kéne még valami ice/snowLevel elem a képletbe?
         int payment = (int) (l.getRoad().getLength() * payPerMeter);
@@ -47,16 +46,18 @@ public class SaltSpreader extends Head {
 
     /**
      * Visszaadja, hogy befordulhat-e az adott sávra a hókotró.
+     * Hamissal tér vissza, ha nincs elég zúzalék a sáv tisztításához, vagy ha már van zúzalék a sávon.
      * 
      * @param l a vizsgált sáv.
      * @return Hamissal tér vissza, ha nincs elég biokerozin a sáv tisztításához, egyébként igazzal.
      */
     @Override
     public boolean canEnterLane(Lane l){
-        if(l.hasSalt()) return false;
-        double saltConsume = 1;   //Ezt kell átírni, hogy 1 méterre mennyi só kerül.
-        double neededSalt = l.getRoad().getLength() * saltConsume;
+        if(l.hasGravel()) return false;
 
-        return snowplower.getSalt() >= neededSalt;
+        double gravelConsume = 1;   //Ezt kell átírni, hogy 1 méterre mennyi kő kerül.
+        double neededGravel = l.getRoad().getLength() * gravelConsume;
+
+        return snowplower.getGravel() >= neededGravel;
     }
 }
