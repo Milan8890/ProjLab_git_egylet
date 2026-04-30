@@ -28,14 +28,14 @@ public class Road {
 	 * @param length     Út hossza
 	 */
 	public Road(Crossing from, Crossing to, int numOfLanes, double length) {
-
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 	/**
 	 * rak havat az összes hozzá tartozó sávra
 	 */
 	public void onTick() {
-		
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class Road {
 	 * @return az úthoz tartozó sávok
 	 */
 	public List<Lane> getLanes() {
-	
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 	/**
@@ -53,7 +53,7 @@ public class Road {
 	 * @return az út hossza
 	 */
 	public double getLength() {
-
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 	/**
@@ -62,7 +62,7 @@ public class Road {
 	 * @return a kereszteződés, amiből kiindul
 	 */
 	public Crossing getFromCrossing() {
-
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 	/**
@@ -71,7 +71,7 @@ public class Road {
 	 * @return a kereszteződés, amibe megy
 	 */
 	public Crossing getToCrossing() {
-
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 	/**
@@ -82,7 +82,7 @@ public class Road {
 	 * @param v
 	 */
 	public void crashVehicle(Vehicle v) {
-		
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 }

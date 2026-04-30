@@ -23,7 +23,8 @@ public class Cleaner extends Player {
 	 * @param color a játékos színe
 	 */
 	public Cleaner(String name, Color color) {
-		
+		super(null, null);
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 	/**
@@ -32,7 +33,7 @@ public class Cleaner extends Player {
 	 * @param m az hozzáadandó pénz összege
 	 */
 	public void addMoney(int m) {
-
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 	/**
@@ -44,7 +45,7 @@ public class Cleaner extends Player {
 	 * @return true, ha sikerült az eltávolítás, false egyébként
 	 */
 	public boolean removeMoney(int m) {
-	
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 	/**
@@ -53,7 +54,7 @@ public class Cleaner extends Player {
 	 * @return true, ha sikerült a vásárlás, false egyébként
 	 */
 	public boolean buyBreakerSnowplower() {
-		
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 	/**
@@ -62,7 +63,7 @@ public class Cleaner extends Player {
 	 * @return true, ha sikerült a vásárlás, false egyébként
 	 */
 	public boolean buyEjectorSnowplower() {
-		
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 }

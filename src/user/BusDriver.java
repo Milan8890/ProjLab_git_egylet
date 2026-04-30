@@ -18,13 +18,14 @@ public class BusDriver extends Player {
 	 * @param color a játékos színe
 	 */
 	public BusDriver(String name, Color color) {
-		
+		super(null, null);
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 	/**
 	 * Számoljuk a buszvezetők által megtett köröket.
 	 */
 	public void addPoint() {
-	
+
 	}
 }

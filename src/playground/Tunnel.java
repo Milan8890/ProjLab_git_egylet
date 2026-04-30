@@ -7,7 +7,8 @@ import java.util.ArrayList;
  */
 public class Tunnel extends Road {
 	public Tunnel(Crossing from, Crossing to, int numOfLanes, double length) {
-
+		super(null, null, 0, 0);
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 	/**
@@ -15,6 +16,6 @@ public class Tunnel extends Road {
 	 */
 	@Override
 	public void onTick() {
-
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 }
