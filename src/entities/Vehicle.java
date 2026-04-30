@@ -39,7 +39,7 @@ public abstract class Vehicle {
 	/**
 	 * A jármű éppen balesetben van-e.
 	 */
-	boolean isChrashed;
+	boolean Chrashed;
 	/**
 	 * Mennyi ideig nem fog még tudni menni a baleset után.
 	 */
@@ -56,14 +56,9 @@ public abstract class Vehicle {
 		this.laneProgress = 0.0;
 		this.path = new Path();
 		this.isStuck = false;
-		this.isChrashed = false; 
+		this.Chrashed = false; 
 		this.revTimer = 0;
 	}
-
-	/**
-	 * Minden órajelkor meghívódó absztrakt függvény, mert minden jármű mást csinál.
-	 */
-	abstract public void onTick();
 
 	/**
 	 * Meghívódik, ha a jármű beleütközik valamibe.
@@ -71,7 +66,7 @@ public abstract class Vehicle {
 	 * @param r Mennyi ideig marad mozgásképtelen (revTimer)
 	 */
 	public void crashed(int r) {
-
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 	/**
@@ -80,8 +75,31 @@ public abstract class Vehicle {
 	 * @param r A várakozási idő (revTimer)
 	 */
 	public void crashedInto(int r) {
-
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
+
+	/**
+     * Megkísérel ráhajtani a következő sávra az útvonalterv alapján.
+     * @return Igaz, ha sikerült a haladás, egyébként hamis.
+     */
+    protected boolean stepFollowPath() {
+        throw new UnsupportedOperationException("Még nincs kész");
+    }
+
+    /**
+     * Kezeli az ütközés utáni kényszerpihenőt.
+     * @return Igaz, ha a jármű újra mozgásképes, egyébként hamis.
+     */
+    protected boolean stepWaitAfterCrash() {
+        throw new UnsupportedOperationException("Még nincs kész");
+    }
+
+	/**
+     * Kezeli a kereszteződés elérését.
+     */
+    protected void reachedCrossing() {
+        throw new UnsupportedOperationException("Még nincs kész");
+    }
 
 	/**
 	 * Visszaadja, hogy a jármű jelenleg kereszteződésben várakozik-e.
@@ -91,7 +109,7 @@ public abstract class Vehicle {
 	 * * @return true, ha kereszteződésben van, egyébként false.
 	 */
 	public boolean isInCrossing() {
-
+		return currentLane == null;
 	}
 
 	/**
@@ -102,6 +120,6 @@ public abstract class Vehicle {
 	 * * @param l Az új sáv (Lane), amivel bővíteni szeretnénk az útvonalat.
 	 */
 	public void extendPath(Lane l) {
-
+		this.path.extendPath(l);
 	}
 }

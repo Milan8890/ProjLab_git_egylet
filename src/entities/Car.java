@@ -55,7 +55,9 @@ public class Car extends Vehicle {
      * Meghívja az őse stepFollowPath()-jét, és ha ezután is 
      * kereszteződésben van (azaz nem tudott ráhajtani a sávra ami meg volt adva), akkor a 
      * City-től kér egy új útvonalat, abból a kereszteződésből amiben van, abba ami a 
-     * célpontja. Visszatérési értéke az őshívás visszatérési értéke.
+     * célpontja.
+	 * 
+	 * @return Igaz, ha az ősosztály hívása sikeres volt, egyébként hamis.
      */
     @Override
     protected boolean stepFollowPath() {
@@ -63,9 +65,7 @@ public class Car extends Vehicle {
 
         if (!success && isInCrossing()) {
             Crossing target = isGoingHome ? home : work;
-            this.path = City.shortestPathFrom(this.lastCrossing, target);
-            
-            return super.stepFollowPath();
+            this.path = City.shortestPathFrom(this.lastCrossing, target);      
         }
         return success;
     }
@@ -73,17 +73,20 @@ public class Car extends Vehicle {
 	/**
  	* Meghívja az őse stepWaitAfterCrash() metódusát, majd 
  	* ha éppen felépült az ütközésből, akkor beállítja a helyzetét az otthonára, 
- 	* és beállítja hogy a munkája felé megy. Visszatérési értéke az őshívás visszatérési értéke.
+ 	* és beállítja hogy a munkája felé megy.
+	*
+	* @return Igaz, ha az autó már nincs mozgásképtelen állapotban, egyébként hamis.
  	*/
 	@Override
 	protected boolean stepWaitAfterCrash() {
     	boolean recovered = super.stepWaitAfterCrash();
+		//Ezen kéna javítani, hogy az IsCrashed-et állítsa false-ra
 
-    	if (recovered && this.isChrashed) { 
+    	if (recovered && this.Chrashed) { 
     	    this.lastCrossing = home;
         	this.isGoingHome = false;
         	this.currentLane = null;
-        	this.isChrashed = false;
+        	this.Chrashed = false;
         	this.path.clear();
     	}
 
