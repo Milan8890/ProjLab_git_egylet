@@ -3,10 +3,10 @@ package entities;
 import user.Cleaner;
 import java.util.Arrays;
 
+import equipment.Head;
 import equipment.HeadInventory;
 import playground.Crossing;
 import playground.Lane;
-import main.Skeleton;
 
 /**
  * 
@@ -56,6 +56,10 @@ public class Snowplower extends Vehicle {
 	 */
 	private Snowplower(Cleaner owner, Crossing spawn) {
 		this.owner = owner;
+		this.lastCrossing = spawn;
+		saltAmount=0;
+		bioAmount=0;
+		gravelAmount=0;
 	}
 
 
@@ -70,6 +74,7 @@ public class Snowplower extends Vehicle {
 	/**
 	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel tér vissza.
 	 */
+	@Override
 	public boolean stepWaitBecauseOfStuck() {
 		return  true;
 	}
@@ -77,6 +82,7 @@ public class Snowplower extends Vehicle {
 	/**
 	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel tér vissza.
 	 */
+	@Override
 	public boolean stepStuckInSnow() {
 		return  true;
 	}
@@ -85,6 +91,7 @@ public class Snowplower extends Vehicle {
 	/**
 	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel tér vissza.
 	 */
+	@Override
 	public boolean stepSlipOnIce() {
 		return  true;
 	}
@@ -92,11 +99,10 @@ public class Snowplower extends Vehicle {
 	/**
 	 * Az aktív fejével letakarítja a sávot amin van, majd meghívja az őse reachedCrossing()-ját.
 	 */
+	@Override
 	public void reachedCrossing() {
-		int payment = headInventory.getActiveHead().cleanLane( /*LANE*/); //Hogy kéne átadni a sávot?
-		reachedCrossing();
-
-		return;
+		headInventory.getActiveHead().clean(currentLane); //Hogy kéne átadni a sávot?
+		super.reachedCrossing();
 	}
 
 	/**
@@ -144,6 +150,10 @@ public class Snowplower extends Vehicle {
 		return gravelAmount;
 	}
 	
+
+	private static final int saltPrice = 25; 
+	private static final int saltAmountPerPurchase = 10; //TODO: ezt ki kéne szervezni valszeg innen, de itthagyom
+	
 	/**
 	 * Vesz egy adag sót. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
 	 * kereszteződésben van.
@@ -151,9 +161,8 @@ public class Snowplower extends Vehicle {
 	 * @return Sikeres volt-e a vásárlás
 	 */
 	public boolean buySalt() { 
-		int price = 25;		//25 pénzért vesz 10kg sót, ez így jó?
-		if(owner.removeMoney(price)){
-			saltAmount += 10;
+		if(owner.removeMoney(saltPrice)){
+			saltAmount += saltAmountPerPurchase;
 			return true;
 		}
 		else{
@@ -161,16 +170,18 @@ public class Snowplower extends Vehicle {
 		}
 	}
 
+	private static final int bioPrice = 25; //25 pénzért vesz 10l biot, ez így jó? 
+	private static final int bioAmountPerPurchase = 10; //TODO: ezt ki kéne szervezni valszeg innen, de itthagyom
+	
 	/**
 	 * Vesz egy adag kerozint. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
 	 * kereszteződésben van.
 	 * 
 	 * @return Sikeres volt-e a vásárlás
 	 */
-	public boolean buyBio() {
-		int price = 25;		//25 pénzért vesz 10l biot, ez így jó?
-		if(owner.removeMoney(price)){
-			bioAmount += 10;
+	public boolean buyBio() {	
+		if(owner.removeMoney(bioPrice)){
+			bioAmount += bioAmountPerPurchase;
 			return true;
 		}
 		else{
@@ -178,6 +189,10 @@ public class Snowplower extends Vehicle {
 		}
 	}
 
+
+	private static final int gravelPrice = 25; //25 pénzért vesz 50kg zuzalékot, ez így jó?
+	private static final int gravelAmountPerPurchase = 50; //TODO: ezt ki kéne szervezni valszeg innen, de itthagyom
+	
 	/**
 	 * Vesz egy adag zuzalékot. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
 	 * kereszteződésben van.
@@ -185,9 +200,8 @@ public class Snowplower extends Vehicle {
 	 * @return Sikeres volt-e a vásárlás
 	 */
 	public boolean buyGravel() {
-		int price = 25;		//25 pénzért vesz 50kg zuzalékot, ez így jó?
-		if(owner.removeMoney(price)){
-			gravelAmount += 50;
+		if(owner.removeMoney(gravelPrice)){
+			gravelAmount += gravelAmountPerPurchase;
 			return true;
 		}
 		else{
@@ -223,13 +237,6 @@ public class Snowplower extends Vehicle {
 	}
 
 	/**
-	 * Sáv elhagyásakor tisztítja a sávot az aktív fejjel.
-	 */
-	public void onTick() {
-		
-	}
-
-	/**
 	 * Létrehoz és visszaad egy új hókotrót hányó fejjel.
 	 * 
 	 * @param owner a játékos aki irányítja a hókotrót
@@ -237,7 +244,9 @@ public class Snowplower extends Vehicle {
 	 * @return a létrehozott Hókotró
 	 */
 	public static Snowplower createWithEjector(Cleaner owner, Crossing base) {
-
+		Snowplower sp = new Snowplower(owner, base);
+		sp.headInventory = HeadInventory.createWithEjector(sp);
+		return sp;
 	}
 
 	/**
@@ -248,6 +257,8 @@ public class Snowplower extends Vehicle {
 	 * @return a létrehozott Hókotró
 	 */
 	public static Snowplower createWithBreaker(Cleaner owner, Crossing base) {
-
+		Snowplower sp = new Snowplower(owner, base);
+		sp.headInventory = HeadInventory.createWithBreaker(sp);
+		return sp;
 	}
 }
