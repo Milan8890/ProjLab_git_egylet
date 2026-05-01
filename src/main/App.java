@@ -10,13 +10,9 @@ import user.*;
 import playground.*;
 import equipment.*;
 
-/**
- * main osztály, itt lehet tesztelni a kódot, illetve itt van egy egyszerű menü
- * is, amivel a különböző use case-eket lehet elindítani.
- */
 public class App {
 
 	public static void main(String[] args) throws Exception {
-
+		System.out.println("Végre fordul ez a szutyok");
 	}
 }

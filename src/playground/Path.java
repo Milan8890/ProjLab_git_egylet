@@ -26,7 +26,7 @@ public class Path {
 	 * Konstruktor
 	 */
 	public Path() {
-	
+
 	}
 
 	/**
@@ -37,11 +37,12 @@ public class Path {
 	 * @return Sikerült-e hozzáadni a sávot
 	 */
 	public boolean extendPath(Lane l) {
-		
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 	/**
-	 * Útvonal törlése, minden sáv eltávolítása az útvonalból, és a végpont nullázása.
+	 * Útvonal törlése, minden sáv eltávolítása az útvonalból, és a végpont
+	 * nullázása.
 	 */
 	public void clear() {
 		pathLanes.clear();
