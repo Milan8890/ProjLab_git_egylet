@@ -73,6 +73,7 @@ public class Snowplower extends Vehicle {
 
 	/**
 	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel tér vissza.
+	 * @return true
 	 */
 	@Override
 	public boolean stepWaitBecauseOfStuck() {
@@ -81,6 +82,7 @@ public class Snowplower extends Vehicle {
 
 	/**
 	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel tér vissza.
+	 * @return true
 	 */
 	@Override
 	public boolean stepStuckInSnow() {
@@ -90,6 +92,7 @@ public class Snowplower extends Vehicle {
 	
 	/**
 	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel tér vissza.
+	 * @return true
 	 */
 	@Override
 	public boolean stepSlipOnIce() {
@@ -101,7 +104,7 @@ public class Snowplower extends Vehicle {
 	 */
 	@Override
 	public void reachedCrossing() {
-		headInventory.getActiveHead().clean(currentLane); //Hogy kéne átadni a sávot?
+		owner.addMoney(headInventory.getActiveHead().clean(currentLane)); //Hogy kéne átadni a sávot?
 		super.reachedCrossing();
 	}
 
@@ -151,8 +154,8 @@ public class Snowplower extends Vehicle {
 	}
 	
 
-	private static final int saltPrice = 25; 
-	private static final int saltAmountPerPurchase = 10; //TODO: ezt ki kéne szervezni valszeg innen, de itthagyom
+	private static final int SALTPRICE = 25; 
+	private static final int SALTAMOUNTPERPURCHASE = 10; //TODO: ezt ki kéne szervezni valszeg innen, de itthagyom
 	
 	/**
 	 * Vesz egy adag sót. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
@@ -161,8 +164,8 @@ public class Snowplower extends Vehicle {
 	 * @return Sikeres volt-e a vásárlás
 	 */
 	public boolean buySalt() { 
-		if(owner.removeMoney(saltPrice)){
-			saltAmount += saltAmountPerPurchase;
+		if(owner.removeMoney(SALTPRICE)){
+			saltAmount += SALTAMOUNTPERPURCHASE;
 			return true;
 		}
 		else{
@@ -170,8 +173,8 @@ public class Snowplower extends Vehicle {
 		}
 	}
 
-	private static final int bioPrice = 25; //25 pénzért vesz 10l biot, ez így jó? 
-	private static final int bioAmountPerPurchase = 10; //TODO: ezt ki kéne szervezni valszeg innen, de itthagyom
+	private static final int BIOPRICE = 25; //25 pénzért vesz 10l biot, ez így jó? 
+	private static final int BIOAMOUNTPERPURCHASE = 10; //TODO: ezt ki kéne szervezni valszeg innen, de itthagyom
 	
 	/**
 	 * Vesz egy adag kerozint. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
@@ -180,8 +183,8 @@ public class Snowplower extends Vehicle {
 	 * @return Sikeres volt-e a vásárlás
 	 */
 	public boolean buyBio() {	
-		if(owner.removeMoney(bioPrice)){
-			bioAmount += bioAmountPerPurchase;
+		if(owner.removeMoney(BIOPRICE)){
+			bioAmount += BIOAMOUNTPERPURCHASE;
 			return true;
 		}
 		else{
@@ -190,8 +193,8 @@ public class Snowplower extends Vehicle {
 	}
 
 
-	private static final int gravelPrice = 25; //25 pénzért vesz 50kg zuzalékot, ez így jó?
-	private static final int gravelAmountPerPurchase = 50; //TODO: ezt ki kéne szervezni valszeg innen, de itthagyom
+	private static final int GRAVELPRICE = 25; //25 pénzért vesz 50kg zuzalékot, ez így jó?
+	private static final int GRAVELAMOUNTPERPURCHASE = 50; //TODO: ezt ki kéne szervezni valszeg innen, de itthagyom
 	
 	/**
 	 * Vesz egy adag zuzalékot. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
@@ -200,8 +203,8 @@ public class Snowplower extends Vehicle {
 	 * @return Sikeres volt-e a vásárlás
 	 */
 	public boolean buyGravel() {
-		if(owner.removeMoney(gravelPrice)){
-			gravelAmount += gravelAmountPerPurchase;
+		if(owner.removeMoney(GRAVELPRICE)){
+			gravelAmount += GRAVELAMOUNTPERPURCHASE;
 			return true;
 		}
 		else{
