@@ -14,6 +14,7 @@ if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 
 else
     SUCCESS=false
+	echo "Didn't find line $TESTED_LINE"
 fi
 
 if [ "$SUCCESS" = true ]; then
