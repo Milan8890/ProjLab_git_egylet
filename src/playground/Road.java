@@ -5,8 +5,11 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import entities.*;
+import main.App;
 
 /**
  * A sávokat tartalmazza, valamint egy referenciát a kereszteződésre amiből
@@ -44,6 +47,8 @@ public class Road {
 	 * @param length     Út hossza
 	 */
 	public Road(Crossing from, Crossing to, int numOfLanes, double length) {
+		App.CreateObject(this);
+		Logger.getGlobal().log(Level.INFO, "[Obj] created between [Obj] and [Obj]", new Object[] { this, from, to });
 		this.fromCrossing = from;
 		this.toCrossing = to;
 		this.length = length;

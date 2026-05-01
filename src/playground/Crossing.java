@@ -2,6 +2,10 @@ package playground;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import main.App;
 
 /**
  * Kereszteződést leíró objektum.
@@ -19,7 +23,8 @@ public class Crossing {
 	 * Konstruktor, létrehoz egy új kereszteződést.
 	 */
 	public Crossing() {
-	
+		App.CreateObject(this);
+		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
 
 	/**
@@ -39,5 +44,5 @@ public class Crossing {
 	public void addOutRoad(Road r) {
 		outRoads.add(r);
 	}
-	
+
 }
