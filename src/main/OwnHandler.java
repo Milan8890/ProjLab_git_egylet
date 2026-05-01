@@ -8,6 +8,8 @@ public class OwnHandler extends Handler {
 
 	@Override
 	public void publish(LogRecord record) {
+		
+		
 		String message = record.getMessage();
 		Object[] args = record.getParameters();
 		for (Object object : args) {

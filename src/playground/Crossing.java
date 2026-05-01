@@ -23,7 +23,12 @@ public class Crossing {
 	 * Konstruktor, létrehoz egy új kereszteződést.
 	 */
 	public Crossing() {
-		App.CreateObject(this);
+		// App.CreateObject(this);
+
+		Logger.getGlobal().log(Level.FINEST, "Started creating [Obj]...", this);
+
+		// param param
+
 		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
 
