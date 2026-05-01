@@ -53,7 +53,9 @@ public abstract class Vehicle {
 	 * Sorban meghívja az alábbi függvényeket.
 	 * Az egyes lépések igazzal térnek vissza, ha futhat tovább a többi lépés, hamissal, ha nem
 	 */
-	abstract protected void onTick();
+	protected void onTick(){
+		throw new UnsupportedOperationException("Még nincs kész");
+	}
 
 	/**
 	 * Ha kereszteződésben van a jármű, akkor lekéri a következő sávot amire be van állítva hogy hajtson. 
