@@ -3,6 +3,8 @@ package equipment;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import entities.Snowplower;
 import equipment.heads.*;
@@ -45,6 +47,10 @@ public class HeadInventory {
 		this.activeHead = activeHead;
 		this.heads = new ArrayList<>();
 		this.shop = new ArrayList<>();
+		// TODO
+		// Nincs belerakva a heads-be az active head, és a shop-ba a többi fej?
+		// Vagy nem tudom, akkor nem kell az activeHead paraméter
+		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
 
 	/**

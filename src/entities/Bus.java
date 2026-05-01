@@ -2,7 +2,8 @@ package entities;
 
 import java.util.Arrays;
 import java.util.List;
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import playground.City;
 import playground.Crossing;
@@ -35,41 +36,43 @@ public class Bus extends Vehicle {
 	 */
 	Crossing stationB;
 	/**
-	 * A busz tulajdonosa.
+	 * A busz vezetője.
 	 */
-	BusDriver owner;
+	BusDriver driver;
 	/**
 	 * Jelzi, hogy a busz éppen melyik végállomás felé tart.
 	 */
 	boolean isCurrentDestinationA;
 
 	/**
-     * Konstruktor.
-     * 
-     * @param stationA A busz első megállója.
-     * @param stationB A busz második megállója.
-     * @param owner    A busz tulajdonosa.
-     */
+	 * Konstruktor.
+	 * 
+	 * @param stationA A busz első megállója.
+	 * @param stationB A busz második megállója.
+	 * @param owner    A busz vezetője.
+	 */
 	public Bus(Crossing stationA, Crossing stationB, BusDriver owner) {
 		this.stationA = stationA;
 		this.stationB = stationB;
-		this.owner = owner;
+		this.driver = owner;
+		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
-	
+
 	/**
-     * Meghívja az őse reachedCrossing metódusát, utána ha az egyik végállomáshoz ért, 
-	 * akkor a sofőrnek ad egy pontot, és átállítja, hogy a másik végállomás felé menjen
-     */
+	 * Meghívja az őse reachedCrossing metódusát, utána ha az egyik végállomáshoz
+	 * ért,
+	 * akkor a sofőrnek ad egy pontot, és átállítja, hogy a másik végállomás felé
+	 * menjen
+	 */
 	public void reachedCrossing() {
 		super.reachedCrossing();
 
-		if(this.stationA.equals(this.lastCrossing) && this.isCurrentDestinationA) {
-			owner.addPoint();
+		if (this.stationA.equals(this.lastCrossing) && this.isCurrentDestinationA) {
+			driver.addPoint();
 			this.isCurrentDestinationA = false;
 
-		}
-		else if(this.stationB.equals(this.lastCrossing) && !this.isCurrentDestinationA) {
-			owner.addPoint();
+		} else if (this.stationB.equals(this.lastCrossing) && !this.isCurrentDestinationA) {
+			driver.addPoint();
 			this.isCurrentDestinationA = true;
 		}
 	}

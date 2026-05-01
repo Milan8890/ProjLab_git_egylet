@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import entities.Snowplower;
 import playground.Crossing;
@@ -34,9 +36,8 @@ public class Cleaner extends Player {
 	 * @param name a játékos neve
 	 */
 	public Cleaner(String name, Color color) {
-		super(null);
-		throw new UnsupportedOperationException("Még nincs kész");
-		// BTW ide ki kell venni a color-t
+		super(name);
+		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
 
 	/**

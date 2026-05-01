@@ -2,6 +2,8 @@ package entities;
 
 import user.Cleaner;
 import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import equipment.HeadInventory;
 import playground.Crossing;
@@ -28,7 +30,7 @@ public class Snowplower extends Vehicle {
 	/**
 	 * A hókotrót birtokló takarító.
 	 */
-	Cleaner owner;
+	Cleaner cleaner;
 	/**
 	 * Inventory ami tartalmazza a megvett és megvehető árucikkeket.
 	 */
@@ -53,8 +55,10 @@ public class Snowplower extends Vehicle {
 	 * @param spawn     a kereszteződés ahol a hókotró megjelenik
 	 * @param inventory a fejtároló amivel a hókotró rendelkezik
 	 */
-	private Snowplower(Cleaner owner, Crossing spawn) {
-		this.owner = owner;
+	// TODO vissza privátra
+	public Snowplower(Cleaner owner, Crossing spawn) {
+		this.cleaner = owner;
+		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
 
 	/**
@@ -105,7 +109,7 @@ public class Snowplower extends Vehicle {
 	 * @return A hókotrót birtokló játékos
 	 */
 	public Cleaner getCleaner() {
-		return owner;
+		return cleaner;
 	}
 
 	/**
@@ -152,7 +156,7 @@ public class Snowplower extends Vehicle {
 	 */
 	public boolean buySalt() {
 		int price = 25; // 25 pénzért vesz 10kg sót, ez így jó?
-		if (owner.removeMoney(price)) {
+		if (cleaner.removeMoney(price)) {
 			saltAmount += 10;
 			return true;
 		} else {
@@ -168,7 +172,7 @@ public class Snowplower extends Vehicle {
 	 */
 	public boolean buyBio() {
 		int price = 25; // 25 pénzért vesz 10l biot, ez így jó?
-		if (owner.removeMoney(price)) {
+		if (cleaner.removeMoney(price)) {
 			bioAmount += 10;
 			return true;
 		} else {
@@ -184,7 +188,7 @@ public class Snowplower extends Vehicle {
 	 */
 	public boolean buyGravel() {
 		int price = 25; // 25 pénzért vesz 50kg zuzalékot, ez így jó?
-		if (owner.removeMoney(price)) {
+		if (cleaner.removeMoney(price)) {
 			gravelAmount += 50;
 			return true;
 		} else {

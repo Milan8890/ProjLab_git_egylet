@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import entities.Vehicle;
 import user.Cleaner;
@@ -25,11 +27,11 @@ public class Lane {
 	/**
 	 * A sávonn lévő hó magassága.
 	 */
-	double snowLevel;
+	double snowLevel = 0;
 	/**
 	 * A sávon lévő jég magassága.
 	 */
-	double iceLevel;
+	double iceLevel = 0;
 	/**
 	 * A sávban lévő járművek halmaza.
 	 */
@@ -72,7 +74,7 @@ public class Lane {
 		 * élettartamát, kifizeti a játékost
 		 */
 		public void onTick() {
-		
+
 		}
 	}
 
@@ -83,6 +85,7 @@ public class Lane {
 	 */
 	public Lane(Road r) {
 		road = r;
+		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
 
 	/**

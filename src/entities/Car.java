@@ -3,6 +3,8 @@ package entities;
 import java.lang.runtime.SwitchBootstraps;
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import playground.City;
 import playground.Crossing;
@@ -39,15 +41,16 @@ public class Car extends Vehicle {
 	boolean isGoingHome;
 
 	/**
-     * Konstruktor, beállítja az autó otthonát és munkahelyét.
+	 * Konstruktor, beállítja az autó otthonát és munkahelyét.
 	 * 
-     * @param home
+	 * @param home
 	 * @param work
-     */
+	 */
 	public Car(Crossing home, Crossing work) {
 		this.home = home;
 		this.work = work;
 		this.isGoingHome = false;
+		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
 
 	public void onTick() {

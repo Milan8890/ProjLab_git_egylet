@@ -3,7 +3,8 @@ package playground;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Egy jármű által követett útvonalat leíró osztály.
@@ -26,7 +27,10 @@ public class Path {
 	 * Konstruktor
 	 */
 	public Path() {
-
+		pathLanes = new ArrayList<>();
+		lastCrossing = null;
+		Logger.getGlobal().severe("Path-en még csiszolni kell (kezdési ellenőrzés)");
+		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
 
 	/**

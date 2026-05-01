@@ -47,8 +47,6 @@ public class Road {
 	 * @param length     Út hossza
 	 */
 	public Road(Crossing from, Crossing to, int numOfLanes, double length) {
-		App.CreateObject(this);
-		Logger.getGlobal().log(Level.INFO, "[Src] created between [Obj] and [Obj]", new Object[] { from, to });
 
 		this.fromCrossing = from;
 		this.toCrossing = to;
@@ -57,6 +55,10 @@ public class Road {
 		for (int i = 0; i < numOfLanes; i++) {
 			lanes.add(new Lane(this));
 		}
+
+		Logger.getGlobal().log(Level.INFO,
+				"[Obj] created between [Obj] and [Obj] with length " + this.length + " and " + numOfLanes + " lanes",
+				new Object[] { this, from, to });
 	}
 
 	/**
