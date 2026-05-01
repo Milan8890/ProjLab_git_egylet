@@ -1,10 +1,8 @@
 package playground;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import java.util.random.RandomGenerator;
 
 import entities.*;
 
@@ -18,6 +16,9 @@ import entities.*;
  * járműbe, és jelzi nekik. Havazást szimulálva havat rak a sávjaira.
  */
 public class Road {
+	private static final int ONTICKSNOW = 1;
+	private static final double SNOWCHANCE = 0.1;
+	private static final int REVTIME = 12;
 	/**
 	 * Az úthoz tartozó sávok listája.
 	 */
@@ -57,7 +58,12 @@ public class Road {
 	 * rak havat az összes hozzá tartozó sávra
 	 */
 	public void onTick() {
-		throw new UnsupportedOperationException("Még nincs kész");
+		if(RandomGenerator.getDefault().nextDouble()<SNOWCHANCE){
+			for(Lane lane : lanes){
+				if(!lane.hasSalt())
+					lane.addSnow(ONTICKSNOW);
+			}
+		}
 	}
 
 	/**
@@ -104,7 +110,15 @@ public class Road {
 	 * @param v
 	 */
 	public void crashVehicle(Vehicle v) {
-		throw new UnsupportedOperationException("Még nincs kész");
+		for(Lane lane : lanes){
+			for(Vehicle other : lane.getVehicles()){
+				if(other!=v){
+					other.crashed(REVTIME);
+					v.crashedInto(REVTIME);
+					return;
+				}
+			}
+		}
 	}
 
 }
