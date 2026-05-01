@@ -17,6 +17,6 @@ public class Tunnel extends Road {
 	 */
 	@Override
 	public void onTick() {
-
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 }

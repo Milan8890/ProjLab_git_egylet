@@ -10,8 +10,8 @@ import playground.City;
  * Egyik játékos fajta, hókotrókat irányít.
  * 
  * Felelősségei: <br>
- * Játékos pénzének kezelése. 
- * Új hókotró vásárlása. 
+ * Játékos pénzének kezelése.
+ * Új hókotró vásárlása.
  * Játékos Hókotróinak nyilvántartása.
  * 
  */
@@ -34,7 +34,7 @@ public class Cleaner extends Player {
 	/**
 	 * Konstruktor, létrehoz egy új takarító játékost.
 	 * 
-	 * @param name  a játékos neve
+	 * @param name a játékos neve
 	 */
 	public Cleaner(String name) {
 		super(name);
@@ -43,7 +43,7 @@ public class Cleaner extends Player {
 	}
 
 	/**
-	 * Hozzáad pénzt a játékoshoz	
+	 * Hozzáad pénzt a játékoshoz
 	 * 
 	 * @param m az hozzáadandó pénz összege
 	 */
@@ -60,19 +60,19 @@ public class Cleaner extends Player {
 	 * @return true, ha sikerült az eltávolítás, false egyébként
 	 */
 	public boolean removeMoney(int m) {
-		if(money >= m){
+		if (money >= m) {
 			money -= m;
 			return true;
-		}
-		else{
+		} else {
 			return false;
 		}
 	}
 
 	/**
-	 * Ha van elég pénze a játékosnak levonja egy új hókotró árát, 
+	 * Ha van elég pénze a játékosnak levonja egy új hókotró árát,
 	 * a hókotróihoz hozzáad egy új törő fejes hókotrót,
-	 * és Igaz értékkel tér vissza, ha nincs akkor nem von le pénzt és visszatér hamissal.
+	 * és Igaz értékkel tér vissza, ha nincs akkor nem von le pénzt és visszatér
+	 * hamissal.
 	 * 
 	 * @return true, ha sikerült a vásárlás, false egyébként
 	 */
@@ -89,7 +89,8 @@ public class Cleaner extends Player {
 	/**
 	 * Ha van elég pénze a játékosnak levonja egy új hókotró árát,
 	 * a hókotróihoz hozzáad egy új hányó fejes hókotrót,
-	 * és Igaz értékkel tér vissza, ha nincs akkor nem von le pénzt és visszatér hamissal.
+	 * és Igaz értékkel tér vissza, ha nincs akkor nem von le pénzt és visszatér
+	 * hamissal.
 	 * 
 	 * @return true, ha sikerült a vásárlás, false egyébként
 	 */

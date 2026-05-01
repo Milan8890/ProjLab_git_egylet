@@ -57,7 +57,7 @@ public class Road {
 	 * rak havat az összes hozzá tartozó sávra
 	 */
 	public void onTick() {
-		
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 	/**
@@ -104,7 +104,7 @@ public class Road {
 	 * @param v
 	 */
 	public void crashVehicle(Vehicle v) {
-		
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
 }
