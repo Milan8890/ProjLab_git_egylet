@@ -26,15 +26,15 @@ import playground.Lane;
  */
 public class Car extends Vehicle {
 	/**
-	 * Az autó otthona.
+	 * A gépjármű otthona.
 	 */
 	Crossing home;
 	/**
-	 * Az autó munkahelye.
+	 * A gépjármű munkahelye.
 	 */
 	Crossing work;
 	/**
-	 * Jelzi, hogy az autó hazafelé tart-e.
+	 * Jelzi, hogy a gépjármű hazafelé tart-e.
 	 */
 	boolean isGoingHome;
 

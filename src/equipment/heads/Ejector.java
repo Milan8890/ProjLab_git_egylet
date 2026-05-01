@@ -3,9 +3,7 @@ package equipment.heads;
 import java.util.List;
 import entities.Snowplower;
 import equipment.Head;
-import main.Skeleton;
 import playground.Lane;
-
 
 /**
  * Ejector
@@ -19,23 +17,27 @@ import playground.Lane;
  */
 public class Ejector extends Head {
 
-    /**
-     * Konstruktor.
-     * 
-     * @param snowplower A tulajdonos hókotró.
-     */ 
-    public Ejector(Snowplower snowplower) {
+	/**
+	 * Konstruktor.
+	 * 
+	 * @param snowplower A tulajdonos hókotró.
+	 */
+	public Ejector(Snowplower snowplower) {
+		super(snowplower);
+	}
 
-    }
+	/**
+	 * Az “l” sávról letakarítja a havat, visszaadja a takarítás által kifizetendő
+	 * pénzt.
+	 * 
+	 * @param l a tisztítandó sáv.
+	 * @return a takarítás által kifizetendő pénz.
+	 */
+	@Override
+	public int clean(Lane l) {
+		double payPerMeter = 1; // Ezt kell átírni.
 
-    /**
-     * Az “l” sávról letakarítja a havat, visszaadja a takarítás által kifizetendő pénzt.
-     * 
-     * @param l a tisztítandó sáv.
-     * @return a takarítás által kifizetendő pénz.
-     */
-    @Override
-    public int clean(Lane l){
-     
-    }
+		double payment = l.cleanSnow() * l.getRoad().getLength() * payPerMeter;
+		return (int) payment;
+	}
 }

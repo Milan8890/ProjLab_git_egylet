@@ -4,7 +4,6 @@ import java.util.List;
 import entities.Snowplower;
 import equipment.Head;
 import playground.Lane;
-import main.Skeleton;
 
 /**
  * Breaker
@@ -18,23 +17,28 @@ import main.Skeleton;
  */
 public class Breaker extends Head {
 
-    /**
-     * Konstruktor.
-     * 
-     * @param snowplower A tulajdonos hókotró.
-     */ 
-    public Breaker(Snowplower snowplower) {
+	/**
+	 * Konstruktor.
+	 * 
+	 * @param snowplower A tulajdonos hókotró.
+	 */
+	public Breaker(Snowplower snowplower) {
+		super(snowplower);
+	}
 
-    }
+	/**
+	 * Az “l” sávról letakarítja a jeget, visszaadja a takarítás által kifizetendő
+	 * pénzt.
+	 * 
+	 * @param l a tisztítandó sáv.
+	 * @return a takarítás által kifizetendő pénz.
+	 */
+	@Override
+	public int clean(Lane l) {
+		double iceAmount = l.breakIce();
+		double payPerMeter = 0.5; // Ezt kell átírni.
 
-    /**
-     * Az “l” sávról letakarítja a jeget, visszaadja a takarítás által kifizetendő pénzt.
-     * 
-     * @param l a tisztítandó sáv.
-     * @return a takarítás által kifizetendő pénz.
-     */
-    @Override
-    public int clean(Lane l) {
-        
-    }
+		double payment = iceAmount * l.getRoad().getLength() * payPerMeter;
+		return (int) payment; // 0.5 szorzó van a tesztben is.
+	}
 }

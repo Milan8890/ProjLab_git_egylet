@@ -9,13 +9,39 @@ import entities.Vehicle;
 import user.Cleaner;
 
 /**
+ * A sávot reprezentáló osztály.
+ * <p>
+ * 
+ * Felelősség <br>
  * Tárolja a rajta lévő sót. Ismeri a rajta lévő autókat, ez alapján jelezni
  * tudja, ha valamelyik elakadna. Képes a rajta lévő hó és jég mennyiségének
  * változtatására a leírt folyamatok mentén.
  */
 public class Lane {
+	/**
+	 * A sávot tartalmazó út.
+	 */
 	Road road;
+	/**
+	 * A sávonn lévő hó magassága.
+	 */
+	double snowLevel;
+	/**
+	 * A sávon lévő jég magassága.
+	 */
+	double iceLevel;
+	/**
+	 * A sávban lévő járművek halmaza.
+	 */
 	Set<Vehicle> vehicles = new HashSet<>();
+	/**
+	 * A sávon lévő só.
+	 */
+	Salt salt = null;
+	/**
+	 * Van-e a sávon zúzott kő.
+	 */
+	boolean hasGravel = false;
 
 	/**
 	 * Sót reprezentáló belső osztály.
@@ -23,7 +49,14 @@ public class Lane {
 	 * Olvasztja a havat és jeget, kifizeti a játékost.
 	 */
 	class Salt {
+		/**
+		 * A sót birtokló cleaner.
+		 */
 		Cleaner owner;
+		/**
+		 * A só élettartama, meddig marad a sávon
+		 */
+		double lifetime;
 
 		/**
 		 * Konstruktor
@@ -31,7 +64,7 @@ public class Lane {
 		 * @param c a cleaner, akihez a só tartozik
 		 */
 		Salt(Cleaner c) {
-
+			owner = c;
 		}
 
 		/**
@@ -49,7 +82,7 @@ public class Lane {
 	 * @param r a sávot tartalmazó út.
 	 */
 	public Lane(Road r) {
-
+		road = r;
 	}
 
 	/**
@@ -58,7 +91,7 @@ public class Lane {
 	 * @param v A jármű, amit le fog venni a sávról.
 	 */
 	public void removeVehicle(Vehicle v) {
-
+		vehicles.remove(v);
 	}
 
 	/**
@@ -67,6 +100,7 @@ public class Lane {
 	 * @param v A jármű, amit hozzá fog adni a sávhoz.
 	 */
 	public void addVehicle(Vehicle v) {
+		vehicles.add(v);
 	}
 
 	/**
@@ -75,7 +109,12 @@ public class Lane {
 	 * @return van-e beakadt jármű a sávon
 	 */
 	public boolean hasStuckVehicle() {
-
+		for (Vehicle v : vehicles) {
+			if (v.isStuck()) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	/**
@@ -84,7 +123,7 @@ public class Lane {
 	 * @return van-e só a sávon
 	 */
 	public boolean hasSalt() {
-
+		return salt != null;
 	}
 
 	/**
@@ -93,7 +132,25 @@ public class Lane {
 	 * @param c a cleaner, akinek a sója rákerül a sávra
 	 */
 	public void setSalt(Cleaner c) {
+		salt = new Salt(c);
+	}
 
+	/**
+	 * Visszaadja, van-e rajta zúzott kő
+	 * 
+	 * @return van-e zúzott kő a sávon
+	 */
+	public boolean hasGravel() {
+		return hasGravel;
+	}
+
+	/**
+	 * A zúzott követ rak a sávra
+	 * 
+	 * @param b logikai érték, ami jelzi, hogy a zúzott kő rákerül-e a sávra
+	 */
+	public void setGravel(boolean b) {
+		hasGravel = b;
 	}
 
 	/**
@@ -102,7 +159,7 @@ public class Lane {
 	 * @return a jég magassága
 	 */
 	public double getIce() {
-
+		return iceLevel;
 	}
 
 	/**
@@ -111,7 +168,7 @@ public class Lane {
 	 * @return a hó magassága
 	 */
 	public double getSnow() {
-
+		return snowLevel;
 	}
 
 	/**
@@ -120,7 +177,7 @@ public class Lane {
 	 * @param amount a hozzáadott hó mennyisége
 	 */
 	public void addSnow(double amount) {
-
+		snowLevel += amount;
 	}
 
 	/**
@@ -128,7 +185,8 @@ public class Lane {
 	 * hó magasságát
 	 */
 	public void trampleSnow() {
-
+		iceLevel += snowLevel;
+		snowLevel = 0;
 	}
 
 	/**
@@ -137,7 +195,7 @@ public class Lane {
 	 * @return a tartalmazó út
 	 */
 	public Road getRoad() {
-
+		return road;
 	}
 
 	/**
@@ -147,7 +205,9 @@ public class Lane {
 	 * @return mennyi havat tüntetett el
 	 */
 	public double cleanSnow() {
-
+		double removedSnow = snowLevel;
+		snowLevel = 0;
+		return removedSnow;
 	}
 
 	/**
@@ -157,7 +217,9 @@ public class Lane {
 	 * @return mennyi jeget tüntetett el
 	 */
 	public double meltIce() {
-
+		double removedIce = iceLevel;
+		iceLevel = 0;
+		return removedIce;
 	}
 
 	/**
@@ -169,7 +231,10 @@ public class Lane {
 	 * @return mennyi jeget tört fel
 	 */
 	public double breakIce() {
-
+		double brokenIce = iceLevel;
+		snowLevel += iceLevel;
+		iceLevel = 0;
+		return brokenIce;
 	}
 
 	/**
@@ -178,6 +243,6 @@ public class Lane {
 	 * @return a sávban lévő járművek halmaza.
 	 */
 	public Set<Vehicle> getVehicles() {
-
+		return vehicles;
 	}
 }

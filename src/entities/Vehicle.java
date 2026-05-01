@@ -12,8 +12,11 @@ import playground.Path;
  * <p>
  * 
  * Felelősség <br>
- * Automatikusan követi az utat. Ha túl nagy lenne a hóréteg, elakad. Jeges úton
- * egy adott eséllyel megcsúszik, ezt jelzi az útnak.
+ * Járművek absztrakt ősosztálya, egy alapvető viselkedést implementál, amit a leszármazottak felülírhatnak:
+ * Automatikusan követi az utat. Ha túl nagy lenne a hóréteg, elakad.
+ * Jeges úton egy adott eséllyel megcsúszik, ezt jelzi az útnak.
+ * Ütközés kezelése. Nyilvántartja, hogy a jelenlegi úton hol helyezkedik el.
+ * Letaposás végzése.
  */
 public abstract class Vehicle {
 	/**
@@ -25,23 +28,23 @@ public abstract class Vehicle {
 	 */
 	Lane currentLane;
 	/**
-	 * Éppen hol tart az sávon amin megy.
+	 * Éppen hol tart az úton ahol megy.
 	 */
 	double laneProgress;
 	/**
-	 * Hozzá tartozó útvonalterv.
+	 * Hozzá tartozó útvonal.
 	 */
 	Path path;
 	/**
-	 * Be van-e ragadva a jármű.
+	 * Be van-e ragadva az autó (karambol vagy hóba), lezárja a sávot.
 	 */
 	boolean isStuck;
 	/**
-	 * A jármű éppen balesetben van-e.
+	 * Az autó éppen karambolban van-e, emiatt nem záródik le a sáv.
 	 */
 	boolean isCrashed;
 	/**
-	 * Mennyi ideig nem fog még tudni menni a baleset után.
+	 * Mennyi ideig nem fog még mozogni egy karambol után.
 	 */
 	int revTimer;
 
@@ -61,9 +64,9 @@ public abstract class Vehicle {
 	}
 
 	/**
-	 * Meghívódik, ha a jármű beleütközik valamibe.
-	 * 
-	 * @param r Mennyi ideig marad mozgásképtelen (revTimer)
+	 * Ha kereszteződésben van a jármű, akkor lekéri a következő sávot amire be van állítva hogy hajtson. 
+	 * Ha van ilyen és nincs lezárva, akkor ráhajt és visszatér true-val,
+	 * különben törli a beállított útvonalát, és false-al tér vissza.
 	 */
 	public void crashed(int r) {
 		throw new UnsupportedOperationException("Még nincs kész");
@@ -77,6 +80,69 @@ public abstract class Vehicle {
 	public void crashedInto(int r) {
 		throw new UnsupportedOperationException("Még nincs kész");
 	}
+	protected boolean stepFollowPath() {
+
+		return true;
+	}
+
+	/**
+	 * Az egyes járművekben definiálandó virtuális függvény. Visszaadja, hogy az adott jármű behajthat-e a sávra.
+	 */
+	protected boolean canEnterLane(Lane l) {
+		return true;	//mivel minden csak a kotró hsználja ott felül van írva, a többinek jó a true
+	}
+
+	/**
+	 * Ha éppen Ütközött állapotban van a jármű, 
+	 * akkor csökkenti azt az időt ameddig még ütközött állapotban van.
+	 * Ez után, ha ez az idő 0-ra csökkent, akkor true-val tér vissza, különben false-val. 
+	 * Ha nem volt ütközött állapotban, true-val tér vissza.
+	 */
+	protected boolean stepWaitAfterCrash() {
+
+		return true;
+	}
+
+	/**
+	 * Ha a sávon van más jármű ami eltorlaszolja az utat, akkor false-al, különben true-val tér vissza.
+	 */
+	protected boolean stepWaitBecauseOfStuck(){
+
+		return true;
+	}
+
+	/**
+	 * Ha túl magas a hó abban a sávban amin van, akkor megnézi hogy van-e az úton másik sáv ahol nem túl mély a hó.
+	 * Ha van, akkor átmegy rá. Ha nincs, akkor a Stuck állapotot beállítja true értékre, és visszatér false-val.
+	 * Ha sikeresen tud tovább haladni, visszatér true-val.
+	 */
+	protected boolean stepStuckInSnow() {
+
+		return true;
+	}
+
+	/**
+	 * Ha a sávon amin halad a jármű egy határérték felett van a jég mennyisége,
+	 * és azt nem védi zuzalék, akkor egy megadott eséllyel meghívja az út crashVehicle() függvényét paraméterül megadva önmagát.
+	 * Ez után ellenőrzi azt, hogy ütköztek-e belé. Ha igen, false-al tér vissza, ha nem, true-val.
+	 */
+	protected boolean stepSlipOnIce() {
+
+		return true;
+	}
+
+	/**
+	 *  Halad a jármű az úton egy megadott mennyiséget. Ha ezzel az út végére ér, akkor meghívja a reachedCrossing() metódust.
+	 */
+	protected void stepMoveOnLane() {
+
+	}
+
+	/**
+	 * Leveszi magát a sávról aminek a végére ért, és beállítja a helyzetét arra a kereszteződésbe,
+	 * ami annak az útnak a végpontja, ami tartalmazza a sávját.
+	*/
+	protected void reachedCrossing() {
 
 	/**
 	 * Megkísérel ráhajtani a következő sávra az útvonalterv alapján.
@@ -104,6 +170,13 @@ public abstract class Vehicle {
 	}
 
 	/**
+	 * Visszaadja, hogy el van-e akadva.
+	 */
+	public boolean isStuck() {
+		return isStuck;
+	}
+
+	/**
 	 * Visszaadja, hogy a jármű jelenleg kereszteződésben várakozik-e.
 	 * <p>
 	 * Ha a járműnek nincs kijelölt sávja (currentLane értéke null),
@@ -115,13 +188,34 @@ public abstract class Vehicle {
 	}
 
 	/**
-	 * Meghosszabbítja a jármű útvonalát egy új sávval.
+	 * Hozzáadja a path-hez az “l” sávot.
 	 * <p>
 	 * A jármű a feladatot továbbítja a saját Path objektumának,
 	 * amely elvégzi a sáv tényleges hozzáadását.
-	 * * @param l Az új sáv (Lane), amivel bővíteni szeretnénk az útvonalat.
+	 * @param l Az új sáv (Lane), amivel bővíteni szeretnénk az útvonalat.
+	 */
+	public boolean extendPath(Lane l) {
+		return path.extendPath(l);
+	}
+
+	/**
+	 * Meghívódik, ha ő karambolozik bele valamibe, isCrashed igaz lesz.
+	 * 
+	 * @param r A várakozási idő (revTimer)
+	 */
+	public void crashedInto(int r) {
+
+	}
+
+	/**
+	 * Meghívódik ha neki ütköznek, isStuck és isCrashed igaz lesz.
+	 * 
+	 * @param r Mennyi ideig marad mozgásképtelen (revTimer)
 	 */
 	public void extendPath(Lane l) {
 		this.path.extendPath(l);
+	public void crashed(int r) {
+
 	}
+
 }
