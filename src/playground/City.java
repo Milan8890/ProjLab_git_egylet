@@ -11,9 +11,11 @@ import playground.Crossing;
  * <p>
  * 
  * Felelősség <br>
- * Utak, kereszteződések felvétele, autók felvétele, hókotróbázis kijelölése, azaz város inicializálása.
+ * Utak, kereszteződések felvétele, autók felvétele, hókotróbázis kijelölése,
+ * azaz város inicializálása.
  * Autók számára legrövidebb járható út számolása.
- * Mivel a játék folyamán csak egy várost fogunk használni, és sok helyről szeretnénk elérni, statikus osztály lesz.
+ * Mivel a játék folyamán csak egy várost fogunk használni, és sok helyről
+ * szeretnénk elérni, statikus osztály lesz.
  */
 public class City {
 	/**
@@ -56,11 +58,12 @@ public class City {
 
 	/**
 	 * A városban két kereszteződés között a legrövidebb útvonalat adja vissza.
+	 * 
 	 * @param from a kiindulási kereszteződés
-	 * @param to a célkereszteződés
+	 * @param to   a célkereszteződés
 	 * @return a két kereszteződés közötti legrövidebb Path
 	 */
 	public static Path shortestPathFrom(Crossing from, Crossing to) {
-
+		throw new UnsupportedOperationException("Még nincs kész");
 	}
 }

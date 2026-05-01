@@ -62,13 +62,12 @@ public class Snowplower extends Vehicle {
 		gravelAmount=0;
 	}
 
-
 	/**
 	 * Visszaadja, hogy behajthat-e az adott sávra a hókotrófeje szerint.
 	 */
 	@Override
 	public boolean canEnterLane(Lane l) {
-		return  headInventory.getActiveHead().canEnterLane(l);
+		return headInventory.getActiveHead().canEnterLane(l);
 	}
 
 	/**
@@ -77,7 +76,7 @@ public class Snowplower extends Vehicle {
 	 */
 	@Override
 	public boolean stepWaitBecauseOfStuck() {
-		return  true;
+		return true;
 	}
 
 	/**
@@ -86,21 +85,21 @@ public class Snowplower extends Vehicle {
 	 */
 	@Override
 	public boolean stepStuckInSnow() {
-		return  true;
+		return true;
 	}
 
-	
 	/**
 	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel tér vissza.
 	 * @return true
 	 */
 	@Override
 	public boolean stepSlipOnIce() {
-		return  true;
+		return true;
 	}
 
 	/**
-	 * Az aktív fejével letakarítja a sávot amin van, majd meghívja az őse reachedCrossing()-ját.
+	 * Az aktív fejével letakarítja a sávot amin van, majd meghívja az őse
+	 * reachedCrossing()-ját.
 	 */
 	@Override
 	public void reachedCrossing() {
@@ -167,8 +166,7 @@ public class Snowplower extends Vehicle {
 		if(owner.removeMoney(SALTPRICE)){
 			saltAmount += SALTAMOUNTPERPURCHASE;
 			return true;
-		}
-		else{
+		} else {
 			return false;
 		}
 	}
@@ -186,8 +184,7 @@ public class Snowplower extends Vehicle {
 		if(owner.removeMoney(BIOPRICE)){
 			bioAmount += BIOAMOUNTPERPURCHASE;
 			return true;
-		}
-		else{
+		} else {
 			return false;
 		}
 	}
@@ -206,8 +203,7 @@ public class Snowplower extends Vehicle {
 		if(owner.removeMoney(GRAVELPRICE)){
 			gravelAmount += GRAVELAMOUNTPERPURCHASE;
 			return true;
-		}
-		else{
+		} else {
 			return false;
 		}
 	}
@@ -218,7 +214,7 @@ public class Snowplower extends Vehicle {
 	 * @param saltAmount Az elhasznált só mennyisége
 	 */
 	public void useSalt(double a) {
-		saltAmount -= a; //Ennyi?
+		saltAmount -= a; // Ennyi?
 	}
 
 	/**
@@ -227,7 +223,7 @@ public class Snowplower extends Vehicle {
 	 * @param bioAmount Az elhasznált kerozin mennyisége
 	 */
 	public void useBio(double a) {
-		bioAmount -= a; //Ennyi?
+		bioAmount -= a; // Ennyi?
 	}
 
 	/**
@@ -236,7 +232,7 @@ public class Snowplower extends Vehicle {
 	 * @param bioAmount Az elhasznált kerozin mennyisége
 	 */
 	public void useGravel(double a) {
-		gravelAmount -= a; //Ennyi?
+		gravelAmount -= a; // Ennyi?
 	}
 
 	/**
