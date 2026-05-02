@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.HexFormat;
 import java.util.Map.Entry;
 import java.util.logging.Handler;
+import java.util.logging.Level;
 import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
@@ -16,6 +17,7 @@ import entities.Snowplower;
 import equipment.Head;
 import equipment.HeadInventory;
 import equipment.HeadListing;
+import equipment.heads.Breaker;
 import playground.Crossing;
 import playground.Lane;
 import playground.Path;
@@ -37,9 +39,11 @@ public class OwnHandler extends Handler {
 	@Override
 	public void publish(LogRecord record) {
 
-		// TODO severe-nél menjen egy error, amire a tesztek szűrnek
-
 		String message = record.getMessage();
+
+		if (record.getLevel() == Level.SEVERE) {
+			message = "[ERROR]" + message;
+		}
 
 		Object[] args = record.getParameters();
 
@@ -71,13 +75,18 @@ public class OwnHandler extends Handler {
 	}
 
 	private Object forceGetField(Object o, String fieldName) {
-		try {
-			Field field = o.getClass().getDeclaredField(fieldName);
-			field.setAccessible(true);
-			return field.get(o);
-		} catch (Exception e) {
-			Logger.getGlobal().severe("No such field " + fieldName + " in forceGetField");
+		Class<?> currentClass = o.getClass();
+		while (currentClass != null) {
+			try {
+				Field field = currentClass.getDeclaredField(fieldName);
+				field.setAccessible(true);
+				return field.get(o);
+			} catch (Exception e) {
+				currentClass = currentClass.getSuperclass();
+			}
 		}
+
+		Logger.getGlobal().severe("No such field " + fieldName + " in forceGetField");
 		return null;
 	}
 
@@ -91,12 +100,10 @@ public class OwnHandler extends Handler {
 		if (!objectMap.containsKey(o)) {
 			addObject(o);
 		}
-
 		return objectMap.get(o);
 	}
 
 	private void addObject(Object obj) {
-
 		switch (obj) {
 			case Cleaner o -> createSingle(o);
 			case BusDriver o -> createSingle(o);
@@ -146,7 +153,6 @@ public class OwnHandler extends Handler {
 	// ID eleje az owner ID-je
 	public void createFromOwnerPlusID(Object o, String ownerFieldName) {
 		String name = getTypename(o);
-
 		Object owner = forceGetField(o, ownerFieldName);
 		String ownerName = getOrCreateObjectName(owner);
 		String ID = ownerName.substring(getTypename(owner).length());

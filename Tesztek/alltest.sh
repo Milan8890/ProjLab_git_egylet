@@ -9,7 +9,7 @@ FAILED_COUNT=0
 TOTAL_TESTS=0
 
 
-TEST_FOLDERS=("ValamiBeszedesNev" "MasikBeszedesNev")
+TEST_FOLDERS=("01HokotroFejvaltas")
 
 echo -e "Running all tests\n"
 

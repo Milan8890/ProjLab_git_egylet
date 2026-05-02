@@ -28,6 +28,7 @@ public class App {
 		OwnHandler ownHandler = new OwnHandler(proto.objectMap);
 		Logger.getGlobal().addHandler(ownHandler);
 
+		proto.readCommandsFromCommandLine();
 		// Cleaner cleaner1 = new Cleaner("Asd", null);
 		// System.out.println(cleaner1.hashCode());
 		// Cleaner cleaner2 = new Cleaner("Asd", null);
