@@ -21,7 +21,7 @@ public class Crossing {
 	 * Konstruktor, létrehoz egy új kereszteződést.
 	 */
 	public Crossing() {
-	
+		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
 
 	/**
@@ -43,5 +43,5 @@ public class Crossing {
 		Logger.getGlobal().log(Level.INFO, "[Obj] added [Obj] to outgoing roads" , new Object[] {this, r});
 		outRoads.add(r);
 	}
-	
+
 }

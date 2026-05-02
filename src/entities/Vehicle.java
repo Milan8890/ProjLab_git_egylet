@@ -13,7 +13,8 @@ import playground.Path;
  * <p>
  * 
  * Felelősség <br>
- * Járművek absztrakt ősosztálya, egy alapvető viselkedést implementál, amit a leszármazottak felülírhatnak:
+ * Járművek absztrakt ősosztálya, egy alapvető viselkedést implementál, amit a
+ * leszármazottak felülírhatnak:
  * Automatikusan követi az utat. Ha túl nagy lenne a hóréteg, elakad.
  * Jeges úton egy adott eséllyel megcsúszik, ezt jelzi az útnak.
  * Ütközés kezelése. Nyilvántartja, hogy a jelenlegi úton hol helyezkedik el.
@@ -22,8 +23,8 @@ import playground.Path;
 public abstract class Vehicle {
 	protected static final double MAX_SNOW_LEVEL = 10.0;
 	protected static final double SNOW_COVER_LEVEL = 5.0;
-    protected static final double ICE_DANGER_LIMIT = 5.0;
-    protected static final double SLIP_CHANCE = 0.8;
+	protected static final double ICE_DANGER_LIMIT = 5.0;
+	protected static final double SLIP_CHANCE = 0.8;
 	/**
 	 * A legutóbbi kereszteződés, amin volt.
 	 */
@@ -62,40 +63,40 @@ public abstract class Vehicle {
 		this.lastCrossing = lastCrossing;
 		this.currentLane = null;
 		this.laneProgress = 0.0;
-		this.path = new Path();
+		this.path = new Path(this);
 		this.isStuck = false;
 		this.isCrashed = false;
 		this.revTimer = 0;
 	}
 
 	/**
-	 * Minden órajelkor meghívódó függvény, kezeli a járművek mozgását. 
-	 * Sorban meghívja az alábbi függvényeket. Az egyes lépések igazzal 
+	 * Minden órajelkor meghívódó függvény, kezeli a járművek mozgását.
+	 * Sorban meghívja az alábbi függvényeket. Az egyes lépések igazzal
 	 * térnek vissza, ha futhat tovább a többi lépés, hamissal, ha nem.
 	 */
 	protected void onTick() {
-        if (!stepFollowPath()) {
-            return;
-        }
+		if (!stepFollowPath()) {
+			return;
+		}
 
-        if (!stepWaitAfterCrash()) {
-            return;
-        }
+		if (!stepWaitAfterCrash()) {
+			return;
+		}
 
-        if (!stepWaitBecauseOfStuck()) {
-            return;
-        }
+		if (!stepWaitBecauseOfStuck()) {
+			return;
+		}
 
-        if (!stepStuckInSnow()) {
-            return;
-        }
+		if (!stepStuckInSnow()) {
+			return;
+		}
 
-        if (!stepSlipOnIce()) {
-            return;
-        }
+		if (!stepSlipOnIce()) {
+			return;
+		}
 
-        stepMoveOnLane();
-    }
+		stepMoveOnLane();
+	}
 
 	/**
 	 * Meghívódik, ha a jármű beleütközik valamibe.
@@ -104,7 +105,7 @@ public abstract class Vehicle {
 	 */
 	public void crashed(int r) {
 		this.isCrashed = true;
-        this.revTimer = r;
+		this.revTimer = r;
 	}
 
 	/**
@@ -114,8 +115,8 @@ public abstract class Vehicle {
 	 */
 	public void crashedInto(int r) {
 		this.isCrashed = true;
-        this.isStuck = true;
-        this.revTimer = r;
+		this.isStuck = true;
+		this.revTimer = r;
 	}
 
 	/**
@@ -124,67 +125,69 @@ public abstract class Vehicle {
 	 * @return Igaz, ha sikerült a haladás, egyébként hamis.
 	 */
 	protected boolean stepFollowPath() {
-        if (!isInCrossing()) {
-            return true;
-        }
+		if (!isInCrossing()) {
+			return true;
+		}
 
-        Lane nextLane = path.pop();
+		Lane nextLane = path.pop();
 
-        if (nextLane == null) {
-            return false;
-        }
+		if (nextLane == null) {
+			return false;
+		}
 
-        if (canEnterLane(nextLane)) {
-            this.currentLane = nextLane;
-            this.currentLane.addVehicle(this);
-            this.laneProgress = 0.0;
-            
-            return true;
+		if (canEnterLane(nextLane)) {
+			this.currentLane = nextLane;
+			this.currentLane.addVehicle(this);
+			this.laneProgress = 0.0;
 
-        } else {
-            path.clear();
+			return true;
 
-            return false;
-        }
-    }
+		} else {
+			path.clear();
+
+			return false;
+		}
+	}
 
 	/**
-	 * Az egyes járművekben definiálandó virtuális függvény. Visszaadja, hogy az adott jármű behajthat-e a sávra.
+	 * Az egyes járművekben definiálandó virtuális függvény. Visszaadja, hogy az
+	 * adott jármű behajthat-e a sávra.
 	 */
 	protected boolean canEnterLane(Lane l) {
-        if (l.hasStuckVehicle()) {
-            return false;
-        }
-        if (l.getSnow() > MAX_SNOW_LEVEL) {
-            return false;
-        }
-        return true;
-    }
+		if (l.hasStuckVehicle()) {
+			return false;
+		}
+		if (l.getSnow() > MAX_SNOW_LEVEL) {
+			return false;
+		}
+		return true;
+	}
 
 	/**
-	 *  Halad a jármű az úton egy megadott mennyiséget. Ha ezzel az út végére ér, akkor meghívja a reachedCrossing() metódust.
+	 * Halad a jármű az úton egy megadott mennyiséget. Ha ezzel az út végére ér,
+	 * akkor meghívja a reachedCrossing() metódust.
 	 */
 	protected void stepMoveOnLane() {
-        double speed = 1.0;
-        
-        this.laneProgress += speed;
+		double speed = 1.0;
 
-        if (this.laneProgress >= this.currentLane.getRoad().getLength()) {
-            reachedCrossing();
-        }
-    }
+		this.laneProgress += speed;
+
+		if (this.laneProgress >= this.currentLane.getRoad().getLength()) {
+			reachedCrossing();
+		}
+	}
 
 	/**
 	 * Kezeli a kereszteződés elérését.
 	 */
 	protected void reachedCrossing() {
-        this.lastCrossing = this.currentLane.getRoad().getToCrossing();
+		this.lastCrossing = this.currentLane.getRoad().getToCrossing();
 
-        this.currentLane.removeVehicle(this);
+		this.currentLane.removeVehicle(this);
 
-        this.currentLane = null;
-        this.laneProgress = 0.0;
-    }
+		this.currentLane = null;
+		this.laneProgress = 0.0;
+	}
 
 	/**
 	 * Visszaadja, hogy el van-e akadva.
@@ -209,6 +212,7 @@ public abstract class Vehicle {
 	 * <p>
 	 * A jármű a feladatot továbbítja a saját Path objektumának,
 	 * amely elvégzi a sáv tényleges hozzáadását.
+	 * 
 	 * @param l Az új sáv (Lane), amivel bővíteni szeretnénk az útvonalat.
 	 */
 	public boolean extendPath(Lane l) {
@@ -221,90 +225,95 @@ public abstract class Vehicle {
 	 * @return Igaz, ha a jármű újra mozgásképes, egyébként hamis.
 	 */
 	protected boolean stepWaitAfterCrash() {
-        if (isCrashed) {
-            revTimer--;
-            if (revTimer <= 0) {
-                revive();
-                isCrashed = false;
-                return true;
-            }
-            return false;
-        }
-        return true;
-    }
-
-    /**
-     * A baleset utáni felépülés pillanatában végrehajtandó feladatok.
-     * Alapértelmezetten üres, a leszármazottak (pl. Car) definiálják felül.
-     */
-    protected void revive() {
-    }
+		if (isCrashed) {
+			revTimer--;
+			if (revTimer <= 0) {
+				revive();
+				isCrashed = false;
+				return true;
+			}
+			return false;
+		}
+		return true;
+	}
 
 	/**
-	 * Ha a sávon van más jármű ami eltorlaszolja az utat, akkor false-al, különben true-val tér vissza.
+	 * A baleset utáni felépülés pillanatában végrehajtandó feladatok.
+	 * Alapértelmezetten üres, a leszármazottak (pl. Car) definiálják felül.
 	 */
-	protected boolean stepWaitBecauseOfStuck(){
-        if (isInCrossing()) {
-            return true;
-        }
-        if (currentLane.hasStuckVehicle()) {
-            return false;
-        }
-        return true;
-    }
+	protected void revive() {
+	}
 
 	/**
-	 * Ha túl magas a hó abban a sávban amin van, akkor megnézi hogy van-e az úton másik sáv ahol nem túl mély a hó.
-	 * Ha van, akkor átmegy rá. Ha nincs, akkor a Stuck állapotot beállítja true értékre, és visszatér false-val.
+	 * Ha a sávon van más jármű ami eltorlaszolja az utat, akkor false-al, különben
+	 * true-val tér vissza.
+	 */
+	protected boolean stepWaitBecauseOfStuck() {
+		if (isInCrossing()) {
+			return true;
+		}
+		if (currentLane.hasStuckVehicle()) {
+			return false;
+		}
+		return true;
+	}
+
+	/**
+	 * Ha túl magas a hó abban a sávban amin van, akkor megnézi hogy van-e az úton
+	 * másik sáv ahol nem túl mély a hó.
+	 * Ha van, akkor átmegy rá. Ha nincs, akkor a Stuck állapotot beállítja true
+	 * értékre, és visszatér false-val.
 	 * Ha sikeresen tud tovább haladni, visszatér true-val.
 	 */
 	protected boolean stepStuckInSnow() {
-        if (currentLane.getSnow() <= MAX_SNOW_LEVEL) {
-            this.isStuck = false;
-            return true;
-        }
+		if (currentLane.getSnow() <= MAX_SNOW_LEVEL) {
+			this.isStuck = false;
+			return true;
+		}
 
-        List<Lane> allLanes = currentLane.getRoad().getLanes();
+		List<Lane> allLanes = currentLane.getRoad().getLanes();
 
-        for (int i = 0; i < allLanes.size(); i++) {
-            Lane l = allLanes.get(i);
-            
-            if (l != currentLane && l.getSnow() <= MAX_SNOW_LEVEL) {
-                currentLane.removeVehicle(this);
-                this.currentLane = l;
-                this.currentLane.addVehicle(this);
-                
-                this.isStuck = false;
-                return true;
-            }
-        }
+		for (int i = 0; i < allLanes.size(); i++) {
+			Lane l = allLanes.get(i);
 
-        this.isStuck = true;
-        return false;
-    }
+			if (l != currentLane && l.getSnow() <= MAX_SNOW_LEVEL) {
+				currentLane.removeVehicle(this);
+				this.currentLane = l;
+				this.currentLane.addVehicle(this);
+
+				this.isStuck = false;
+				return true;
+			}
+		}
+
+		this.isStuck = true;
+		return false;
+	}
 
 	/**
 	 * Ha a sávon amin halad a jármű egy határérték felett van a jég mennyisége,
-	 * és azt nem védi zuzalék, akkor egy megadott eséllyel meghívja az út crashVehicle() függvényét paraméterül megadva önmagát.
-	 * Ez után ellenőrzi azt, hogy ütköztek-e belé. Ha igen, false-al tér vissza, ha nem, true-val.
+	 * és azt nem védi zuzalék, akkor egy megadott eséllyel meghívja az út
+	 * crashVehicle() függvényét paraméterül megadva önmagát.
+	 * Ez után ellenőrzi azt, hogy ütköztek-e belé. Ha igen, false-al tér vissza, ha
+	 * nem, true-val.
 	 */
 	protected boolean stepSlipOnIce() {
-        if (currentLane.getIce() > ICE_DANGER_LIMIT) {
-            
-            if (currentLane.hasGravel() && currentLane.getSnow() <= SNOW_COVER_LEVEL) {
-                    return true;
-            }
+		if (currentLane.getIce() > ICE_DANGER_LIMIT) {
 
-            // TODO: Random hívás központosítása a tesztelhetőség miatt
-            if (Math.random() < SLIP_CHANCE) {
-                currentLane.getRoad().crashVehicle(this);
+			if (currentLane.hasGravel() && currentLane.getSnow() <= SNOW_COVER_LEVEL) {
+				return true;
+			}
 
-                if (this.isCrashed) {
-                    return false;
-                }
-            }
-        }
+			// TODO: Random hívás központosítása a tesztelhetőség miatt
+			if (Math.random() < SLIP_CHANCE) {
+				currentLane.getRoad().crashVehicle(this);
 
-        return true;
-    }
+				if (this.isCrashed) {
+					return false;
+				}
+			}
+		}
+
+		return true;
+	}
 }

@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import entities.Vehicle;
 
 /**
  * Egy jármű által követett útvonalat leíró osztály.
@@ -15,6 +16,8 @@ import java.util.logging.Logger;
  * Útvonal helyességének ellenőrzése, nyilvántartása.
  */
 public class Path {
+	Vehicle vehicle;
+
 	/**
 	 * Azok a sávok, amin a jármű végig fog menni.
 	 */
@@ -27,8 +30,12 @@ public class Path {
 	/**
 	 * Konstruktor
 	 */
-	public Path() {
-
+	public Path(Vehicle v) {
+		vehicle = v;
+		pathLanes = new ArrayList<>();
+		lastCrossing = null;
+		Logger.getGlobal().severe("Path-en még csiszolni kell (kezdési ellenőrzés)");
+		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
 
 	/**
@@ -39,8 +46,9 @@ public class Path {
 	 * @return Sikerült-e hozzáadni a sávot
 	 */
 	public boolean extendPath(Lane l) {
-		Logger.getGlobal().log(Level.INFO, "[Obj] extended with [Obj] successfully" , new Object[] {this, l});
-		Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t extend with [Obj], because it’s not connected" , new Object[] {this, l});
+		Logger.getGlobal().log(Level.INFO, "[Obj] extended with [Obj] successfully", new Object[] { this, l });
+		Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t extend with [Obj], because it’s not connected",
+				new Object[] { this, l });
 
 		throw new UnsupportedOperationException("Még nincs kész");
 	}
@@ -50,7 +58,7 @@ public class Path {
 	 * nullázása.
 	 */
 	public void clear() {
-		Logger.getGlobal().log(Level.INFO, "[Obj] cleared" , new Object[] {this});
+		Logger.getGlobal().log(Level.INFO, "[Obj] cleared", new Object[] { this });
 
 		pathLanes.clear();
 		lastCrossing = null;
@@ -63,13 +71,13 @@ public class Path {
 	 */
 	public Lane pop() {
 		if (pathLanes.isEmpty()) {
-			Logger.getGlobal().log(Level.INFO, "[Obj] has no next lane" , new Object[] {this});
+			Logger.getGlobal().log(Level.INFO, "[Obj] has no next lane", new Object[] { this });
 			return null;
 		}
 
 		Lane l = pathLanes.remove(pathLanes.size() - 1);
 
-		Logger.getGlobal().log(Level.INFO, "[Obj] returned next lane [Obj]" , new Object[] {this, l});
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned next lane [Obj]", new Object[] { this, l });
 		return l;
 	}
 }

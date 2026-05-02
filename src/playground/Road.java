@@ -8,6 +8,7 @@ import java.util.logging.Logger;
 import java.util.random.RandomGenerator;
 
 import entities.*;
+import main.App;
 
 /**
  * A sávokat tartalmazza, valamint egy referenciát a kereszteződésre amiből
@@ -48,6 +49,7 @@ public class Road {
 	 * @param length     Út hossza
 	 */
 	public Road(Crossing from, Crossing to, int numOfLanes, double length) {
+
 		this.fromCrossing = from;
 		this.toCrossing = to;
 		this.length = length;
@@ -55,6 +57,10 @@ public class Road {
 		for (int i = 0; i < numOfLanes; i++) {
 			lanes.add(new Lane(this));
 		}
+
+		Logger.getGlobal().log(Level.INFO,
+				"[Obj] created between [Obj] and [Obj] with length " + this.length + " and " + numOfLanes + " lanes",
+				new Object[] { this, from, to });
 	}
 
 	/**

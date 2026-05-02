@@ -9,25 +9,26 @@ import java.util.logging.Logger;
  * Eltárolja a vehető fejet és árát.
  */
 public class HeadListing {
-    /**
-     * A megvásárolható fej.
-     */
-    Head head;
-    /**
-     * A fej ára.
-     */
-    int price;
-    
-    /**
-     * Konstruktor
-     * 
-     * @param h a fej amit meg lehet venni
-     * @param price az ár amit ki kell fizetni érte
-     */
-    public HeadListing(Head h, int price){
-        head = h;
-        this.price = price;
-    }
+	/**
+	 * A megvásárolható fej.
+	 */
+	Head head;
+	/**
+	 * A fej ára.
+	 */
+	int price;
+
+	/**
+	 * Konstruktor
+	 * 
+	 * @param h     a fej amit meg lehet venni
+	 * @param price az ár amit ki kell fizetni érte
+	 */
+	public HeadListing(Head h, int price) {
+		head = h;
+		this.price = price;
+		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
+	}
 
     /**
      * visszaadja az árucikkben szereplő fejet

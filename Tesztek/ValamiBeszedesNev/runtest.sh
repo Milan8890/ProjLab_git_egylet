@@ -9,10 +9,12 @@ SUCCESS=true
 
 cat "$INPUT_FILE" | java -cp bin main.App > "$OUTPUT_FILE"
 
-if grep -q "A bemenet: Valami Amerika" "$OUTPUT_FILE"; then
+TESTED_LINE="A bemenet: Valami Amerika"
+if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 
 else
     SUCCESS=false
+	echo "Didn't find line $TESTED_LINE"
 fi
 
 if [ "$SUCCESS" = true ]; then

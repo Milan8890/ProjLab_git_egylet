@@ -24,15 +24,16 @@ public class BusDriver extends Player {
 	 * A játékoshoz tartozó busz.
 	 */
 	Bus bus;
-	
+
 	/**
 	 * Konstruktor, létrehoz egy új buszvezető játékost.
 	 * 
-	 * @param name  a játékos neve
+	 * @param name a játékos neve
 	 */
 	public BusDriver(String name) {
 		super(name);
 		point = 0;
+		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
 
 	/**

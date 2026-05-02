@@ -36,7 +36,7 @@ public class Bus extends Vehicle {
 	 */
 	Crossing stationB;
 	/**
-	 * A busz tulajdonosa.
+	 * A busz vezetője.
 	 */
 	BusDriver driver;
 	/**
@@ -56,12 +56,15 @@ public class Bus extends Vehicle {
 		this.stationA = stationA;
 		this.stationB = stationB;
 		this.driver = driver;
+		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
-	
+
 	/**
-     * Meghívja az őse reachedCrossing metódusát, utána ha az egyik végállomáshoz ért, 
-	 * akkor a sofőrnek ad egy pontot, és átállítja, hogy a másik végállomás felé menjen
-     */
+	 * Meghívja az őse reachedCrossing metódusát, utána ha az egyik végállomáshoz
+	 * ért,
+	 * akkor a sofőrnek ad egy pontot, és átállítja, hogy a másik végállomás felé
+	 * menjen
+	 */
 	public void reachedCrossing() {
 		super.reachedCrossing();
 
