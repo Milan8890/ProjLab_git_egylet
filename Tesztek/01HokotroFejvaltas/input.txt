@@ -1,0 +1,9 @@
+cleaner test
+crossing 1
+spbase Crossing1
+plower Cleaner1 breaker
+addhead Snowplower1_1 dragon
+addhead Snowplower1_1 ejector
+initend
+cyclehead Snowplower1_1
+cyclehead Snowplower1_1 

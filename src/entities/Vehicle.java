@@ -65,7 +65,7 @@ public abstract class Vehicle {
 		this.lastCrossing = lastCrossing;
 		this.currentLane = null;
 		this.laneProgress = 0.0;
-		this.path = new Path(this);
+		// this.path = new Path(this);
 		this.isStuck = false;
 		this.isCrashed = false;
 		this.revTimer = 0;
