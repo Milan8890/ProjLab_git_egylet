@@ -9,15 +9,14 @@ SUCCESS=true
 
 cat "$INPUT_FILE" | java -cp bin main.App > "$OUTPUT_FILE"
 
-TESTED_LINE="INFO HeadInventory1_1 has head Breaker"
-if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
-	:
-else
+if grep -q "[ERROR]" "$OUTPUT_FILE"; then
+	echo "Output still has an [ERROR] in it (severe logging message)."
 	SUCCESS=false
-	echo "Didn't find line when it should be present: $TESTED_LINE"
+else
+:
 fi
 
-TESTED_LINE="INFO HeadInventory1_1 has head Dragon"
+TESTED_LINE="HeadInventory1_1 couldn’t buy HeadListing1_1_DRA, because not enough money"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -25,7 +24,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO HeadInventory1_1 has head Ejector"
+TESTED_LINE="Cleaner1 deducted 6000$ unsuccessfully"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -33,15 +32,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO HeadInventory1_1 active head is Dragon"
-if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
-:
-else
-	SUCCESS=false
-	echo "Didn't find line when it should be present: $TESTED_LINE"
-fi
-
-TESTED_LINE="INFO HeadInventory1_1 active head is Ejector"
+TESTED_LINE="INFO Cleaner1 has 100$"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else

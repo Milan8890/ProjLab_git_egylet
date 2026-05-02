@@ -1,0 +1,9 @@
+crossing 3
+road Crossing1 Crossing2 10 1
+road Crossing1 Crossing3 10 1
+road Crossing2 Crossing3 10 1
+putsnow Lane2_1 1000
+car Crossing1 Crossing3
+initend
+passtime 5
+info PathC_0_1

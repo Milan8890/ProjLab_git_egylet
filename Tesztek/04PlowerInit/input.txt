@@ -1,0 +1,11 @@
+crossing 1
+spbase Crossing1
+cleaner test
+plower Cleaner1 breaker
+plower Cleaner1 ejector
+initend
+info Cleaner1
+info Snowplower1_1
+info HeadInventory1_1
+info Snowplower1_2
+info HeadInventory1_2
