@@ -4,6 +4,7 @@ import java.beans.VetoableChangeListener;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Set;
@@ -15,6 +16,15 @@ import entities.Bus;
 import entities.Car;
 import entities.Snowplower;
 import entities.Vehicle;
+import equipment.Head;
+import equipment.HeadInventory;
+import equipment.HeadListing;
+import equipment.heads.Breaker;
+import equipment.heads.Dragon;
+import equipment.heads.Ejector;
+import equipment.heads.GravelSpreader;
+import equipment.heads.SaltSpreader;
+import equipment.heads.Sweeper;
 import playground.City;
 import playground.Crossing;
 import playground.Lane;
@@ -58,52 +68,68 @@ public class Proto {
 		}
 	}
 
-	public void startReadingCommands() {
+	public void readCommandsFromCommandLine() {
 		Scanner sc = new Scanner(System.in);
-
 		while (sc.hasNext()) {
-			String line = sc.nextLine();
-			String[] args = line.split(" ");
-			String command = args[0];
-			try {
-
-				// Feldolgozába lehet egy nagy try catch
-				// és akkor minden dobálhat hibaüzenetet
-				// vagy csak egyszerűen nem működik nullok miatt, és csak a severe-ek átírását
-				// kell megoldani
-				switch (command) {
-					case "crossing" -> commandCrossing(args);
-					case "road" -> commandRoad(args);
-					case "spbase" -> commandSpbase(args);
-					case "cleaner" -> commandCleaner(args);
-					case "driver" -> commandDriver(args);
-					case "plower" -> commandPlower(args);
-					case "bus" -> commandBus(args);
-					case "car" -> commandCar(args);
-					case "initend" -> commandInitend(args); // TODO ez am akkor mit is csinál? Lehet a loggert
-															// bekapcsolja?
-					case "addm" -> commandAddm(args);
-					case "addpoint" -> commandAddpoint(args);
-					case "addbio" -> commandAddbio(args);
-					case "addsalt" -> commandAddsalt(args);
-					case "addgravel" -> commandAddgravel(args);
-					case "addhead" -> commandAddhead(args);
-					case "putsnow" -> commandPutsnow(args);
-					case "putice" -> commandPutice(args);
-					case "putsalt" -> commandPutsalt(args);
-					case "putgravel" -> commandPutgravel(args);
-					case "putvehicle" -> commandPutvehicle(args);
-					case "clroad" -> commandClroad(args);
-					case "info" -> commandInfo(args);
-					case "slip" -> commandSlip(args);
-				}
-			} catch (Exception e) {
-				Logger.getGlobal()
-						.severe("Error while running the following command:\n" + line + "\n Error: " + e.getMessage());
-			}
+			readCommand(sc);
 		}
+	}
 
-		sc.close();
+	private void readCommand(Scanner sc) {
+		String line = sc.nextLine();
+		String[] args = line.split(" ");
+		String command = args[0];
+		try {
+
+			// Feldolgozába lehet egy nagy try catch
+			// és akkor minden dobálhat hibaüzenetet
+			// vagy csak egyszerűen nem működik nullok miatt, és csak a severe-ek átírását
+			// kell megoldani
+			switch (command) {
+				case "crossing" -> commandCrossing(args);
+				case "road" -> commandRoad(args);
+				case "spbase" -> commandSpbase(args);
+				case "cleaner" -> commandCleaner(args);
+				case "driver" -> commandDriver(args);
+				case "plower" -> commandPlower(args);
+				case "bus" -> commandBus(args);
+				case "car" -> commandCar(args);
+				case "initend" -> commandInitend(args); // TODO ez am akkor mit is csinál? Lehet a loggert
+														// bekapcsolja?
+				case "addm" -> commandAddm(args);
+				case "addpoint" -> commandAddpoint(args);
+				case "addbio" -> commandAddbio(args);
+				case "addsalt" -> commandAddsalt(args);
+				case "addgravel" -> commandAddgravel(args);
+				case "addhead" -> commandAddhead(args);
+				case "putsnow" -> commandPutsnow(args);
+				case "putice" -> commandPutice(args);
+				case "putsalt" -> commandPutsalt(args);
+				case "putgravel" -> commandPutgravel(args);
+				case "putvehicle" -> commandPutvehicle(args);
+				case "clroad" -> commandClroad(args);
+				case "info" -> commandInfo(args);
+				case "slip" -> commandSlip(args);
+				case "buyplower" -> commandBuyplower(args);
+				case "buybio" -> commandBuybio(args);
+				case "buysalt" -> commandBuysalt(args);
+				case "buygravel" -> commandBuygravel(args);
+				case "buyhead" -> commandBuyhead(args);
+				case "changehead" -> commandChangehead(args);
+				case "cyclehead" -> commandCyclehead(args);
+				case "extpath" -> commandExtpath(args);
+				case "clpath" -> commandClpath(args);
+				case "starttime" -> commandStarttime(args);
+				case "endtime" -> commandEndtime(args);
+				case "passtime" -> commandPasstime(args);
+				case "load" -> commandLoad(args);
+				case "crash" -> commandCrash(args);
+				case "setrand" -> commandSetrand(args);
+			}
+		} catch (Exception e) {
+			Logger.getGlobal()
+					.severe("Error while running the following command:\n" + line + "\n Error: " + e.getMessage());
+		}
 	}
 
 	private void commandCrossing(String[] args) {
@@ -134,6 +160,8 @@ public class Proto {
 	}
 
 	private void commandPlower(String[] args) {
+		// TODO hozzáforceolni a pénzértéket
+		// És akkor a cleaner veszi meg, nem csak létrehozzuk
 		Cleaner cleaner = (Cleaner) getObject("Cleaner" + args[0]);
 		switch (args[1]) {
 			case "breaker" -> Snowplower.createWithBreaker(cleaner);
@@ -264,6 +292,125 @@ public class Proto {
 
 		// TODO szerintem ez így OK, megcsúsztatás a crasheltetés.
 		currentLane.getRoad().crashVehicle(v);
+	}
+
+	private void commandBuyplower(String[] args) {
+		Cleaner c = (Cleaner) getObject(args[0]);
+		switch (args[1]) {
+			case "breaker" -> c.buyBreakerSnowplower();
+			case "ejector" -> c.buyEjectorSnowplower();
+			default -> throw new IllegalArgumentException("Incorrect head type for snowplower");
+		}
+	}
+
+	private void commandBuybio(String[] args) {
+		Snowplower sp = (Snowplower) getObject(args[0]);
+		sp.buyBio();
+	}
+
+	private void commandBuysalt(String[] args) {
+		Snowplower sp = (Snowplower) getObject(args[0]);
+		sp.buySalt();
+	}
+
+	private void commandBuygravel(String[] args) {
+		Snowplower sp = (Snowplower) getObject(args[0]);
+		sp.buyGravel();
+	}
+
+	private void commandBuyhead(String[] args) {
+		Snowplower sp = (Snowplower) getObject(args[0]);
+		HeadInventory hi = sp.getHeadInventory();
+		List<HeadListing> headListings = hi.getShop();
+
+		for (HeadListing hl : headListings) {
+			if (objectMap.get(hl) == args[1]) {
+				hi.buyListing(hl);
+				return;
+			}
+		}
+	}
+
+	private void commandChangehead(String[] args) throws Exception {
+		Snowplower sp = (Snowplower) getObject(args[0]);
+		HeadInventory hi = sp.getHeadInventory();
+
+		String headName = args[1];
+
+		Field field = hi.getClass().getDeclaredField("heads");
+		field.setAccessible(true);
+		List<Head> heads = (List<Head>) field.get(hi);
+
+		for (Head h : heads) {
+			String currentHeadName = switch (h) {
+				case Breaker o -> "breaker";
+				case Dragon o -> "dragon";
+				case Ejector o -> "ejector";
+				case GravelSpreader o -> "gravelSpreader";
+				case SaltSpreader o -> "saltSpreader";
+				case Sweeper o -> "sweeper";
+				default -> throw new Exception("Admin command changehead is unimplemented for a new head type");
+			};
+			if (headName.equals(currentHeadName)) {
+				Field activeHead = hi.getClass().getDeclaredField("activeHead");
+				activeHead.setAccessible(true);
+				activeHead.set(hi, h);
+			}
+		}
+
+	}
+
+	private void commandCyclehead(String[] args) {
+		Snowplower sp = (Snowplower) getObject(args[0]);
+		sp.getHeadInventory().cycleActiveHead();
+	}
+
+	private void commandExtpath(String[] args) {
+		Vehicle v = (Vehicle) getObject(args[0]);
+		v.extendPath((Lane) getObject(args[1]));
+	}
+
+	private void commandClpath(String[] args) throws Exception {
+		Vehicle v = (Vehicle) getObject(args[0]);
+		Field field = v.getClass().getDeclaredField("path");
+		field.setAccessible(true);
+		((Path) field.get(v)).clear();
+	}
+
+	private void commandStarttime(String[] args) {
+		// TODO nemtom
+	}
+
+	private void commandEndtime(String[] args) {
+		// TODO nemtom
+	}
+
+	private void commandPasstime(String[] args) {
+		// TODO nemtom
+	}
+
+	private void commandLoad(String[] args) {
+		String filename = args[0];
+		Scanner sc = new Scanner(filename);
+		while (sc.hasNext()) {
+			readCommand(sc);
+		}
+	}
+
+	private void commandCrash(String[] args) {
+		Vehicle v = (Vehicle) getObject(args[0]);
+		v.crashedInto(Integer.parseInt(args[1]));
+	}
+
+	private void commandSetrand(String[] args) {
+		// TODO
+
+		switch (args[0]) {
+			case "true" -> System.out.println("Nemtom");
+			case "false" -> System.out.println("Nemtom");
+			case "random" -> System.out.println("Nemtom");
+			default -> throw new IllegalArgumentException("Illegal random type");
+		}
 	}
 
 }
