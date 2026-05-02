@@ -68,8 +68,8 @@ public class City {
 	 * @param to   a célkereszteződés
 	 * @return a két kereszteződés közötti legrövidebb Path
 	 */
-	public static Path shortestPathFrom(Crossing from, Crossing to) {
-		Path p = new Path();
+	public static Path shortestPathFrom(Crossing from, Crossing to, Vehicle v) {
+		Path p = new Path(v);
 		Logger.getGlobal().log(Level.INFO, "City calculated shortest path from [Obj] to [Obj] as [Obj]", new Object[] {from, to, p});
 
 		throw new UnsupportedOperationException("Még nincs kész");
