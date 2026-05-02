@@ -57,7 +57,8 @@ public class Road {
 		for (int i = 0; i < numOfLanes; i++) {
 			lanes.add(new Lane(this));
 		}
-
+		from.addOutRoad(this);
+		
 		Logger.getGlobal().log(Level.INFO,
 				"[Obj] created between [Obj] and [Obj] with length " + this.length + " and " + numOfLanes + " lanes",
 				new Object[] { this, from, to });

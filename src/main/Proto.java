@@ -482,6 +482,7 @@ public class Proto {
 			case Path o -> infoObject(o);
 			case HeadListing o -> infoObject(o);
 			case Head o -> infoObject(o);
+			case HeadInventory o -> infoObject(o);
 
 			default -> throw new Exception("No such type for info");
 		}
@@ -527,7 +528,7 @@ public class Proto {
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] from crossing is [Obj]",
 				new Object[] { r, r.getFromCrossing() });
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] to crossing is [Obj]", new Object[] { r, r.getToCrossing() });
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] length is [Obj]", new Object[] { r, r.getLength() });
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] length is " + r.getLength(), new Object[] { r });
 	}
 
 	private void infoObject(Lane l)
@@ -541,7 +542,11 @@ public class Proto {
 		Field saltField = l.getClass().getDeclaredField("salt");
 		saltField.setAccessible(true);
 		Salt salt = (Salt) saltField.get(l);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] contains [Obj]", new Object[] {l,salt });
+		if(salt!=null)
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] contains [Obj]", new Object[] {l,salt });
+		else 
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] does not contain salt", new Object[] {l});
+
 		if(l.hasGravel())
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has gravel", new Object[] {l});
 		else
@@ -591,14 +596,7 @@ public class Proto {
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has [Obj]", new Object[] {bd, bus});
 	}
 	
-	private void infoSnowplower(Snowplower sp) throws Exception{
-		infoVehicle(sp);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] owner is [Obj]", new Object[]{sp, sp.getCleaner()});
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has [Obj]", new Object[]{sp, sp.getHeadInventory()});
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + sp.getSalt() + " salt", new Object[]{sp});
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + sp.getBio() + " bio", new Object[]{sp});
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + sp.getGravel() + " gravel", new Object[]{sp});
-	}
+	
 
 	private void infoObject(Snowplower sp)
 			throws Exception {
@@ -729,6 +727,25 @@ public class Proto {
 		int reviveTime = (int) reviveField.get(v);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] revive timer is " + reviveTime, new Object[] { v });
 
+	}
+	private void infoObject(HeadInventory hi)throws Exception{
+		Field ownerField = hi.getClass().getDeclaredField("snowplower");
+		ownerField.setAccessible(true);
+		Snowplower owner = (Snowplower) ownerField.get(hi);
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] owner is [Obj]", new Object[] {hi, owner});
+		
+		Field headsField = hi.getClass().getDeclaredField("heads");
+		headsField.setAccessible(true);
+		List<Head> heads = (List<Head>) headsField.get(hi);
+		for(Head h : heads){
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has head [Obj]", new Object[] {hi, h});
+		}
+
+		for(HeadListing hl : hi.getShop()){
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has head listing [Obj]", new Object[] {hi, hl});
+		}
+
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] active head is [Obj]", new Object[] {hi, hi.getActiveHead()});
 	}
 
 	private void infoPlayer(Player p)
