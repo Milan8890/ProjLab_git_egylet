@@ -468,7 +468,7 @@ public class Proto {
 
 	private void info(String[] args){
 		switch (args[0]){
-			
+
 		}
 	}
 
@@ -526,7 +526,7 @@ public class Proto {
 		}
 		Field saltField = l.getClass().getDeclaredField("salt");
 		saltField.setAccessible(true);
-		Salt salt = (Salt) saltField.get(null);
+		Salt salt = (Salt) saltField.get(l);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] contains [Obj]", new Object[] {l,salt });
 		if(l.hasGravel())
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has gravel", new Object[] {l});
@@ -537,14 +537,14 @@ public class Proto {
 	private void infoSalt(Salt s) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
 		Field lifetimeField = s.getClass().getDeclaredField("lifetime");
 		lifetimeField.setAccessible(true);
-		double lifetime = (double) lifetimeField.get(null);
+		double lifetime = (double) lifetimeField.get(s);
 
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] lifetime is "+ lifetime, new Object[] {s});
 
 
 		Field ownerField = s.getClass().getDeclaredField("owner");
 		ownerField.setAccessible(true);
-		Cleaner owner = (Cleaner) ownerField.get(null);
+		Cleaner owner = (Cleaner) ownerField.get(s);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] owner is [Obj]", new Object[] {s, owner});
 	}
 
@@ -553,12 +553,12 @@ public class Proto {
 		infoPlayer(c);
 		Field monField = c.getClass().getDeclaredField("money");
 		monField.setAccessible(true);
-		int money = (int) monField.get(null);
+		int money = (int) monField.get(c);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + money +"$", new Object[] {c});
 
 		Field spField = c.getClass().getDeclaredField("snowplowers");
 		spField.setAccessible(true);
-		Set<Snowplower> snowplowers = (Set<Snowplower>) spField.get(null);
+		Set<Snowplower> snowplowers = (Set<Snowplower>) spField.get(c);
 		for(Snowplower sp : snowplowers){
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has [Obj]", new Object[] {c, sp});
 		}
@@ -567,11 +567,11 @@ public class Proto {
 		infoPlayer(bd);
 		Field pointField = bd.getClass().getDeclaredField("points");
 		pointField.setAccessible(true);
-		int points = (int) pointField.get(null);
+		int points = (int) pointField.get(bd);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + points +" points", new Object[] {bd});
 		Field busField = bd.getClass().getDeclaredField("bus");
 		busField.setAccessible(true);
-		Bus bus = (Bus) busField.get(null);
+		Bus bus = (Bus) busField.get(bd);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has [Obj]", new Object[] {bd, bus});
 	}
 	
@@ -589,22 +589,22 @@ public class Proto {
 		
 		Field driverField = b.getClass().getDeclaredField("driver");
 		driverField.setAccessible(true);
-		BusDriver driver = (BusDriver) driverField.get(null);
+		BusDriver driver = (BusDriver) driverField.get(b);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] driver is [Obj]", new Object[]{b, driver});
 		
 		Field stationAField = b.getClass().getDeclaredField("stationA");
 		stationAField.setAccessible(true);
-		Crossing stationA = (Crossing) stationAField.get(null);
+		Crossing stationA = (Crossing) stationAField.get(b);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] station A is [Obj]", new Object[]{b, stationA});
 		
 		Field stationBField = b.getClass().getDeclaredField("stationB");
 		stationBField.setAccessible(true);
-		Crossing stationB = (Crossing) stationBField.get(null);
+		Crossing stationB = (Crossing) stationBField.get(b);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] station B is [Obj]", new Object[]{b, stationB});
 
 		Field destField = b.getClass().getDeclaredField("isCurrentDestinationA");
 		destField.setAccessible(true);
-		boolean isCurrentDestinationA = (boolean) destField.get(null);
+		boolean isCurrentDestinationA = (boolean) destField.get(b);
 		if(isCurrentDestinationA)
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] current destination is A", new Object[]{b});
 		else
@@ -617,17 +617,17 @@ public class Proto {
 
 		Field homeField = c.getClass().getDeclaredField("home");
 		homeField.setAccessible(true);
-		Crossing homeCrossing = (Crossing) homeField.get(null);
+		Crossing homeCrossing = (Crossing) homeField.get(c);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] home is [Obj]", new Object[]{c, homeCrossing});
 
 		Field workField = c.getClass().getDeclaredField("work");
 		workField.setAccessible(true);
-		Crossing workCrossing = (Crossing) workField.get(null);
+		Crossing workCrossing = (Crossing) workField.get(c);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] work is [Obj]", new Object[]{c, workCrossing});
 
 		Field isGoingHomeField = c.getClass().getDeclaredField("isGoingHome");
 		isGoingHomeField.setAccessible(true);
-		boolean isGoingHome = (boolean) isGoingHomeField.get(null);
+		boolean isGoingHome = (boolean) isGoingHomeField.get(c);
 		if(isGoingHome)
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is going home", new Object[]{c});
 		else
@@ -637,16 +637,16 @@ public class Proto {
 	private void infoVehicle(Vehicle v) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
 		Field lastCrossingField = v.getClass().getDeclaredField("lastCrossing");
 		lastCrossingField.setAccessible(true);
-		Crossing lastCrossing = (Crossing) lastCrossingField.get(null);
+		Crossing lastCrossing = (Crossing) lastCrossingField.get(v);
 		Logger.getGlobal().log(Level.INFO, "[Obj] last crossing is [Obj]", new Object[]{ v, lastCrossing});
 		Field currentLaneField = v.getClass().getDeclaredField("currentLane");
 		currentLaneField.setAccessible(true);
-		Lane currentLane = (Lane) currentLaneField.get(null);
+		Lane currentLane = (Lane) currentLaneField.get(v);
 		Logger.getGlobal().log(Level.INFO, "[Obj] current lane is [Obj]", new Object[]{ v, currentLane});
 		
 		Field lanePrField = v.getClass().getDeclaredField("laneProgress");
 		lanePrField.setAccessible(true);
-		double laneProgress = (double) lanePrField.get(null);
+		double laneProgress = (double) lanePrField.get(v);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] lane progress is " + laneProgress, new Object[]{v});
 
 		if(v.isStuck()){
@@ -658,7 +658,7 @@ public class Proto {
 
 		Field crashedField = v.getClass().getDeclaredField("crashed");
 		crashedField.setAccessible(true);
-		boolean crashed = (boolean) crashedField.get(null);
+		boolean crashed = (boolean) crashedField.get(v);
 		if(crashed)
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is crashed", new Object[]{v});
 		else 
@@ -666,7 +666,7 @@ public class Proto {
 
 		Field reviveField = v.getClass().getDeclaredField("reviveTime");
 		reviveField.setAccessible(true);
-		int reviveTime = (int) reviveField.get(null);
+		int reviveTime = (int) reviveField.get(v);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] revive timer is " + reviveTime , new Object[]{v});
 
 	}
@@ -674,7 +674,7 @@ public class Proto {
 	private void infoPath(Path p) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
 		Field lanesField = p.getClass().getDeclaredField("pathLanes");
 		lanesField.setAccessible(true);
-		List<Lane> pathLanes = (List<Lane>) lanesField.get(null);
+		List<Lane> pathLanes = (List<Lane>) lanesField.get(p);
 		if(pathLanes.isEmpty()){
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] pathLanes is empty", new Object[]{p});
 		}
@@ -698,14 +698,14 @@ public class Proto {
 	private void infoHead(Head h) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
 		Field snowplowerField = h.getClass().getDeclaredField("snowplower");
 		snowplowerField.setAccessible(true);
-		Snowplower sp = (Snowplower) snowplowerField.get(null);
+		Snowplower sp = (Snowplower) snowplowerField.get(h);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] snowplower is [Obj]", new Object[]{h, sp});
 	}
 
 	private void infoPlayer(Player p) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
 		Field nameField = p.getClass().getDeclaredField("name");
 		nameField.setAccessible(true);
-		String name = (String) nameField.get(null);
+		String name = (String) nameField.get(p);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] name is " + name, new Object[]{p});
 
 	}
