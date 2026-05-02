@@ -1,13 +1,12 @@
 package user;
 
-import java.awt.Color;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import entities.Snowplower;
+import playground.City;
 import playground.Crossing;
 
 /**
@@ -29,14 +28,21 @@ public class Cleaner extends Player {
 	 * A játékos által irányított hókotrók halmaza.
 	 */
 	Set<Snowplower> snowplowers;
+	
+	private static final int BREAKER_SNOWPLOWER_PRICE = 13000;
+	private static final int EJECTOR_SNOWPLOWER_PRICE = 12000;
+
+
 
 	/**
-	 * Konstruktor, létrehoz egy új takarító játékost.
+	 * Konstruktor, létrehoz egy új takarító játékost. A játékosnak kezdetben nincs pénze se hókotrója.
 	 * 
 	 * @param name a játékos neve
 	 */
 	public Cleaner(String name) {
 		super(name);
+		money=0;
+		snowplowers = new HashSet<>();
 		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
 
@@ -46,6 +52,7 @@ public class Cleaner extends Player {
 	 * @param m az hozzáadandó pénz összege
 	 */
 	public void addMoney(int m) {
+		Logger.getGlobal().log(Level.INFO, "[Obj] received " + m + "$", new Object[] {this});
 		money += m;
 	}
 
@@ -60,8 +67,11 @@ public class Cleaner extends Player {
 	public boolean removeMoney(int m) {
 		if (money >= m) {
 			money -= m;
+
+			Logger.getGlobal().log(Level.INFO, "[Obj] deducted " + m + "$  successfully", new Object[] {this});
 			return true;
 		} else {
+			Logger.getGlobal().log(Level.INFO, "[Obj] deducted " + m + "$ unsuccessfully", new Object[] {this});
 			return false;
 		}
 	}
@@ -75,7 +85,16 @@ public class Cleaner extends Player {
 	 * @return true, ha sikerült a vásárlás, false egyébként
 	 */
 	public boolean buyBreakerSnowplower() {
-		throw new UnsupportedOperationException("Még nincs kész");
+		if(removeMoney(BREAKER_SNOWPLOWER_PRICE)){
+			Snowplower p = Snowplower.createWithBreaker(this, City.getSnowplowBase());
+			snowplowers.add(p);
+			Logger.getGlobal().log(Level.INFO, "[Obj] bought [Obj] with starting head Breaker successfully", new Object[] {this, p});
+			return true;
+		}
+		else{
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy snowplower with starting head Breaker, because not enough money", new Object[] {this});
+			return false;
+		}
 	}
 
 	/**
@@ -87,7 +106,16 @@ public class Cleaner extends Player {
 	 * @return true, ha sikerült a vásárlás, false egyébként
 	 */
 	public boolean buyEjectorSnowplower() {
-		throw new UnsupportedOperationException("Még nincs kész");
+		if(removeMoney(EJECTOR_SNOWPLOWER_PRICE)){
+			Snowplower p = Snowplower.createWithEjector(this, City.getSnowplowBase());
+			snowplowers.add(p);
+			Logger.getGlobal().log(Level.INFO, "[Obj] bought [Obj] with starting head Ejector successfully", new Object[] {this, p});
+			return true;
+		}
+		else{
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy snowplower with starting head Ejector, because not enough money", new Object[] {this});
+			return false;
+		}
 	}
 
 }

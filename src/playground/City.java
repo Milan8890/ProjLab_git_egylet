@@ -3,6 +3,8 @@ package playground;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import entities.*;
 import playground.Crossing;
@@ -40,13 +42,14 @@ public class City {
 	 * A várost inicializáló függvény
 	 */
 	public static void initCity() {
-
+		Logger.getGlobal().log(Level.INFO, "City initialized" , new Object[] {});
 	}
 
 	/**
 	 * Városban lévő kereszteződések lekérdezése.
 	 */
 	public static Set<Crossing> getCrossings() {
+		Logger.getGlobal().log(Level.INFO, "City returned crossings", new Object[] {});
 		return crossings;
 	}
 
@@ -54,6 +57,7 @@ public class City {
 	 * Hókotróközpont lekérdezése.
 	 */
 	public static Crossing getSnowplowBase() {
+		Logger.getGlobal().log(Level.INFO, "City returned [Obj] as snowplower base", new Object[] {snowplowBase});
 		return snowplowBase;
 	}
 
@@ -65,6 +69,9 @@ public class City {
 	 * @return a két kereszteződés közötti legrövidebb Path
 	 */
 	public static Path shortestPathFrom(Crossing from, Crossing to) {
+		Path p = new Path();
+		Logger.getGlobal().log(Level.INFO, "City calculated shortest path from [Obj] to [Obj] as [Obj]", new Object[] {from, to, p});
+
 		throw new UnsupportedOperationException("Még nincs kész");
 	}
 }

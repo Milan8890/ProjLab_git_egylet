@@ -1,6 +1,9 @@
 package user;
 
 import entities.Bus;
+import entities.Snowplower;
+import playground.City;
+
 import java.awt.Color;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -37,6 +40,7 @@ public class BusDriver extends Player {
 	 * Ad pontot a játékosnak.
 	 */
 	public void addPoint() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] received one point", new Object[] {this});
 		point++;
 	}
 

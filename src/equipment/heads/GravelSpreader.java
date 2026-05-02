@@ -2,6 +2,9 @@ package equipment.heads;
 
 import user.Cleaner;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import entities.Snowplower;
 import equipment.Head;
 import playground.Lane;
@@ -20,6 +23,7 @@ import playground.Road;
  */
 public class GravelSpreader extends Head {
 
+    static final double GRAVEL_CONSUME = 1;
     /**
      * Konstruktor.
      * 
@@ -41,6 +45,13 @@ public class GravelSpreader extends Head {
 
         //Ide kéne még valami ice/snowLevel elem a képletbe?
         int payment = (int) (l.getRoad().getLength() * payPerMeter);
+
+        double amount = (l.getRoad().getLength() * GRAVEL_CONSUME);
+        snowplower.useGravel(amount);
+
+        Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$" , new Object[] {snowplower , this, l});
+		Logger.getGlobal().log(Level.INFO, "[Obj] uses " + amount + "gravel from [Obj]", new Object[] {this, snowplower});
+
         return payment;
     }
 
@@ -55,9 +66,13 @@ public class GravelSpreader extends Head {
     public boolean canEnterLane(Lane l){
         if(l.hasGravel()) return false;
 
-        double gravelConsume = 1;   //Ezt kell átírni, hogy 1 méterre mennyi kő kerül.
-        double neededGravel = l.getRoad().getLength() * gravelConsume;
+        double neededAmount = l.getRoad().getLength() * GRAVEL_CONSUME;
 
-        return snowplower.getGravel() >= neededGravel;
+        if(neededAmount <= snowplower.getGravel()) 
+			Logger.getGlobal().log(Level.INFO, "[Obj] allows [Obj] to enter [Obj] ", new Object[] {this, snowplower, l});
+		else
+			Logger.getGlobal().log(Level.INFO, "[Obj] blocks [Obj] from entering [Obj] ", new Object[] {this, snowplower, l});
+
+        return snowplower.getGravel() >= neededAmount;
     }
 }

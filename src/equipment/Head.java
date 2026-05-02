@@ -46,14 +46,15 @@ public abstract class Head {
 	 */
 	public abstract int clean(Lane l);
 
-	/**
-	 * Visszaadja, hogy befordulhat-e az adott sávra a hókotró.
-	 * Alapvető implementációként igazzal tér vissza.
-	 * 
-	 * @param l A sáv, amire a hókotró be szeretne fordulni.
-	 * @return {@code true}, ha befordulhat a sávra, egyébként {@code false}.
-	 */
-	public boolean canEnterLane(Lane l) {
-		return true;
-	}
+    /**
+     * Visszaadja, hogy befordulhat-e az adott sávra a hókotró.
+     * Alapvető implementációként igazzal tér vissza.
+     * 
+     * @param l A sáv, amire a hókotró be szeretne fordulni.
+     * @return {@code true}, ha befordulhat a sávra, egyébként {@code false}. 
+    */
+    public boolean canEnterLane(Lane l) {
+		Logger.getGlobal().log(Level.INFO, "[Obj] allows [Obj] to enter [Obj]", new Object[] {this, snowplower, l});
+        return true;
+    }
 }

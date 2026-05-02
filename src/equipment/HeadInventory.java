@@ -19,6 +19,13 @@ import equipment.heads.*;
  * Új fej vételének lebonyolítása.
  */
 public class HeadInventory {
+
+	private static final int SWEEPERPRICE = 1000;
+	private static final int EJECTORPRICE = 2000;
+	private static final int BREAKERPRICE = 3000;
+	private static final int GRAVELSPREADERPRICE = 4000;
+	private static final int SALTSPREADERPRICE = 5000;
+	private static final int DRAGONPRICE = 6000;
 	/**
 	 * A Hókotró amihez a fejtároló tartozik
 	 */
@@ -39,7 +46,7 @@ public class HeadInventory {
 	/**
 	 * Konstruktor
 	 * 
-	 * @param owner     a Hókotró aminek tároljuk a fejeit
+	 * @param driver     a Hókotró aminek tároljuk a fejeit
 	 * @param ownedHead a fej amit a Hókotró már birtokol, ez lesz az aktív fej is
 	 */
 	private HeadInventory(Snowplower snowplower, Head activeHead) {
@@ -60,7 +67,18 @@ public class HeadInventory {
 	 * @return HeadInventory ami a helyes elemeket tartalmazza
 	 */
 	public static HeadInventory createWithBreaker(Snowplower owner) {
-		throw new UnsupportedOperationException("Még nincs kész");
+		Head activeHead = new Breaker(owner);
+		HeadInventory ret = new HeadInventory(owner, activeHead);
+		ret.heads.add(activeHead);
+		ret.shop.add(new HeadListing( new Sweeper(owner) , SWEEPERPRICE));
+		ret.shop.add(new HeadListing( new Ejector(owner) , EJECTORPRICE));
+		ret.shop.add(new HeadListing( new GravelSpreader(owner) , GRAVELSPREADERPRICE));
+		ret.shop.add(new HeadListing( new SaltSpreader(owner) , SALTSPREADERPRICE));
+		ret.shop.add(new HeadListing( new Dragon(owner) , DRAGONPRICE));
+		ret.activeHead=activeHead;
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] created with owner [Obj] and starting head Breaker" , new Object[] {ret, owner});
+		return ret;
 	}
 
 	/**
@@ -70,8 +88,20 @@ public class HeadInventory {
 	 * @return HeadInventory ami a helyes elemeket tartalmazza
 	 */
 	public static HeadInventory createWithEjector(Snowplower owner) {
-		throw new UnsupportedOperationException("Még nincs kész");
+		Head activeHead = new Ejector(owner);
+		HeadInventory ret = new HeadInventory(owner, activeHead);
+		ret.heads.add(activeHead);
+		ret.shop.add(new HeadListing( new Sweeper(owner) , SWEEPERPRICE));
+		ret.shop.add(new HeadListing( new Breaker(owner) , BREAKERPRICE));
+		ret.shop.add(new HeadListing( new GravelSpreader(owner) , GRAVELSPREADERPRICE));
+		ret.shop.add(new HeadListing( new SaltSpreader(owner) , SALTSPREADERPRICE));
+		ret.shop.add(new HeadListing( new Dragon(owner) , DRAGONPRICE));
+		ret.activeHead=activeHead;
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] created with owner [Obj] and starting head Ejector" , new Object[] {ret, owner});
+		return ret;
 	}
+		
 
 	/**
 	 * Visszaadja a fejtárolóban jelenleg aktív fejet
@@ -79,6 +109,7 @@ public class HeadInventory {
 	 * @return a jelenleg aktív fej
 	 */
 	public Head getActiveHead() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned active head [Obj]" , new Object[] {this, activeHead});
 		return activeHead;
 	}
 
@@ -88,6 +119,7 @@ public class HeadInventory {
 	 * @return a jelenleg megvehető Listingek
 	 */
 	public List<HeadListing> getShop() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned available head listings" , new Object[] {this});
 		return shop;
 	}
 
@@ -97,6 +129,8 @@ public class HeadInventory {
 	public void cycleActiveHead() {
 		int idx = heads.indexOf(activeHead);
 		activeHead = heads.get((idx + 1) % heads.size());
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] switched active head to [Obj]" , new Object[] {this, activeHead});
 	}
 
 	/**
@@ -106,7 +140,22 @@ public class HeadInventory {
 	 * @return sikeres volt-e a vásárlás
 	 */
 	public boolean buyListing(HeadListing listing) {
-		throw new UnsupportedOperationException("Még nincs kész");
+
+		if(!snowplower.isInCrossing())
+		{
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy [Obj], because not in crossing" , new Object[] {this, listing});
+			return false;
+		}
+
+		if(snowplower.getCleaner().removeMoney(listing.price)){
+			heads.add(listing.head);
+			Logger.getGlobal().log(Level.INFO, "[Obj] bought [Obj] successfully" , new Object[] {this, listing});
+			return true;
+		} else {
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy [Obj], because not enough money", new Object[] {this, listing});
+			return false;
+		}
+		
 	}
 
 }

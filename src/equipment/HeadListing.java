@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
 /**
  * Eltárolja a vehető fejet és árát.
  */
@@ -29,21 +30,24 @@ public class HeadListing {
 		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
 
-	/**
-	 * visszaadja az árucikkben szereplő fejet
-	 * 
-	 * @return a megvehető fej
-	 */
-	public Head getHead() {
-		return head;
-	}
+    /**
+     * visszaadja az árucikkben szereplő fejet
+     * 
+     * @return a megvehető fej
+     */
+    public Head getHead() {
+        Logger.getGlobal().log(Level.INFO, "[Obj]'s head is [Obj]" , new Object[] {this, head});
 
-	/**
-	 * visszaadja az árucikkben szereplő fej árát
-	 * 
-	 * @return a fej ára
-	 */
-	public int getPrice() {
-		return price;
-	}
+        return head;       
+    }
+    
+    /**
+     * visszaadja az árucikkben szereplő fej árát
+     * 
+     * @return a fej ára
+     */
+    public int getPrice(){
+        Logger.getGlobal().log(Level.INFO, "[Obj]'s price is " + price + "$" , new Object[] {this});
+        return price;
+    }
 }
