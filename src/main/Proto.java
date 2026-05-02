@@ -50,7 +50,6 @@ public class Proto {
 		try {
 			Field field = o.getClass().getDeclaredField(fieldName);
 			field.setAccessible(true);
-			// TODO ez int-el is megy?
 			field.set(o, (Double) field.get(o) + amount);
 		} catch (Exception e) {
 			Logger.getGlobal().severe("No such field " + fieldName + " in Proto forceAddField");
@@ -61,7 +60,6 @@ public class Proto {
 		try {
 			Field field = o.getClass().getDeclaredField(fieldName);
 			field.setAccessible(true);
-			// TODO ez int-el is megy?
 			field.set(o, amount);
 		} catch (Exception e) {
 			Logger.getGlobal().severe("No such field " + fieldName + " in Proto forceSetField");
@@ -159,20 +157,31 @@ public class Proto {
 		players.add(new BusDriver(args[0]));
 	}
 
-	private void commandPlower(String[] args) {
-		// TODO hozzáforceolni a pénzértéket
-		// És akkor a cleaner veszi meg, nem csak létrehozzuk
+	private void commandPlower(String[] args) throws Exception {
 		Cleaner cleaner = (Cleaner) getObject("Cleaner" + args[0]);
-		switch (args[1]) {
+
+		Snowplower sp = switch (args[1]) {
 			case "breaker" -> Snowplower.createWithBreaker(cleaner);
 			case "ejector" -> Snowplower.createWithEjector(cleaner);
 			default -> throw new IllegalArgumentException("Incorrect head type for snowplower");
-		}
+		};
+
+		Field fieldSnowplowers = cleaner.getClass().getDeclaredField("snowplowers");
+		fieldSnowplowers.setAccessible(true);
+
+		Set<Snowplower> snowplowers = (Set<Snowplower>) fieldSnowplowers.get(cleaner);
+
+		snowplowers.add(sp);
 	}
 
-	private void commandBus(String[] args) {
+	private void commandBus(String[] args) throws Exception {
 		BusDriver driver = (BusDriver) getObject("BusDriver" + args[0]);
-		new Bus((Crossing) getObject(args[1]), (Crossing) getObject(args[2]), driver);
+		Bus b = new Bus((Crossing) getObject(args[1]), (Crossing) getObject(args[2]), driver);
+
+		Field fieldBus = driver.getClass().getDeclaredField("bus");
+		fieldBus.setAccessible(true);
+
+		fieldBus.set(driver, b);
 	}
 
 	private void commandCar(String[] args) {
@@ -211,11 +220,23 @@ public class Proto {
 		forceAddField(sp, "gravelAmount", Double.parseDouble(args[1]));
 	}
 
-	private void commandAddhead(String[] args) {
+	private void commandAddhead(String[] args) throws Exception {
 		Snowplower sp = (Snowplower) getObject(args[0]);
-		// TODO nem tudom hogy működnek a fejek (még nincs megírva / Máténál van)
-		// sp.getHeadInventory().
-		throw new UnsupportedOperationException("addhead parancs még nincs kész");
+		HeadInventory hi = sp.getHeadInventory();
+		Field fieldHeads = sp.getClass().getDeclaredField("heads");
+		fieldHeads.setAccessible(true);
+
+		List<Head> heads = (List<Head>) fieldHeads.get(sp);
+
+		Head newHead = switch (args[1]) {
+			case "breaker" -> new Breaker(sp);
+			case "dragon" -> new Dragon(sp);
+			case "ejector" -> new Ejector(sp);
+			case "gravelSpreader" -> new GravelSpreader(sp);
+			case "saltSpreader" -> new SaltSpreader(sp);
+			case "sweeper" -> new Sweeper(sp);
+			default -> throw new Exception("Unknown head type in changehead");
+		};
 	}
 
 	private void commandPutsnow(String[] args) {
