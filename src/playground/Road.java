@@ -68,10 +68,15 @@ public class Road {
 	 * rak havat az összes hozzá tartozó sávra
 	 */
 	public void onTick() {
-		if(RandomGenerator.getDefault().nextDouble()<SNOWCHANCE){
-			for(Lane lane : lanes){
-				if(!lane.hasSalt())
+		if (RandomGenerator.getDefault().nextDouble() < SNOWCHANCE) {
+			for (Lane lane : lanes) {
+				if (!lane.hasSalt()) {
 					lane.addSnow(ONTICKSNOW);
+					Logger.getGlobal().log(Level.INFO, "[Obj] put 1 snow on [Obj]", new Object[] { this, lane });
+				} else {
+					Logger.getGlobal().log(Level.INFO, "[Obj] putting snow on [Obj] blocked by salt",
+							new Object[] { this, lane });
+				}
 			}
 		}
 	}
@@ -82,7 +87,7 @@ public class Road {
 	 * @return az úthoz tartozó sávok
 	 */
 	public List<Lane> getLanes() {
-		Logger.getGlobal().log(Level.INFO, "[Obj] returned lanes" , new Object[] {this});
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned lanes", new Object[] { this });
 
 		return lanes;
 	}
@@ -93,7 +98,7 @@ public class Road {
 	 * @return az út hossza
 	 */
 	public double getLength() {
-		Logger.getGlobal().log(Level.INFO, "[Obj] returned length " + length , new Object[] {this});
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned length " + length, new Object[] { this });
 
 		return length;
 	}
@@ -104,7 +109,7 @@ public class Road {
 	 * @return a kereszteződés, amiből kiindul
 	 */
 	public Crossing getFromCrossing() {
-		Logger.getGlobal().log(Level.INFO, "[Obj] returned start [Obj]" , new Object[] {this, fromCrossing});
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned start [Obj]", new Object[] { this, fromCrossing });
 
 		return fromCrossing;
 	}
@@ -115,7 +120,7 @@ public class Road {
 	 * @return a kereszteződés, amibe megy
 	 */
 	public Crossing getToCrossing() {
-		Logger.getGlobal().log(Level.INFO, "[Obj] returned end [Obj]" , new Object[] {this, toCrossing});
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned end [Obj]", new Object[] { this, toCrossing });
 
 		return toCrossing;
 	}
@@ -128,17 +133,19 @@ public class Road {
 	 * @param v
 	 */
 	public void crashVehicle(Vehicle v) {
-		for(Lane lane : lanes){
-			for(Vehicle other : lane.getVehicles()){
-				if(other!=v){
+		for (Lane lane : lanes) {
+			for (Vehicle other : lane.getVehicles()) {
+				if (other != v) {
 					other.crashedInto(REVTIME);
 					v.crashed(REVTIME);
-					Logger.getGlobal().log(Level.INFO, "[Obj] collided [Obj] into [Obj] on [Obj]" , new Object[] {this,v, other, lane});
+					Logger.getGlobal().log(Level.INFO, "[Obj] collided [Obj] into [Obj] on [Obj]",
+							new Object[] { this, v, other, lane });
 					return;
 				}
 			}
 		}
-		Logger.getGlobal().log(Level.INFO, "[Obj] tried colliding [Obj], but no target was found" , new Object[] {this, v});
+		Logger.getGlobal().log(Level.INFO, "[Obj] tried colliding [Obj], but no target was found",
+				new Object[] { this, v });
 	}
 
 }

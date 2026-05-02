@@ -1,0 +1,7 @@
+[ERROR]Error while running the following command:
+addm Cleaner1 300
+ Error: java.lang.NullPointerException: Cannot invoke "user.Cleaner.addMoney(int)" because "<local2>" is null
+Inicialization done
+[ERROR]Error while running the following command:
+buyplower Cleaner1 breaker
+ Error: java.lang.NullPointerException: Cannot invoke "user.Cleaner.buyBreakerSnowplower()" because "<local2>" is null

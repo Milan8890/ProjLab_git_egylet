@@ -1,0 +1,16 @@
+City returned crossings
+Crossing1 created
+City returned crossings
+Crossing2 created
+Lane1_1 created
+Lane1_2 created
+Lane1_3 created
+Lane1_4 created
+Lane1_5 created
+Lane1_6 created
+Lane1_7 created
+Lane1_8 created
+Lane1_9 created
+Lane1_10 created
+Road1 created between Crossing1 and Crossing2 with length 10.0 and 10 lanes
+Inicialization done

@@ -3,7 +3,7 @@ City returned crossings
 Crossing1 created
 City returned Crossing1 as snowplower base
 Snowplower1_1 created
-[ERROR]Path-en még csiszolni kell (kezdési ellen?rzés)
+[ERROR]Path-en mï¿½g csiszolni kell (kezdï¿½si ellen?rzï¿½s)
 PathS_1_1 created
 Breaker1_1 created
 HeadInventory1_1 created

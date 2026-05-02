@@ -1,0 +1,4 @@
+crossing 2
+car Crossing1 Crossing2
+initend
+info Car1

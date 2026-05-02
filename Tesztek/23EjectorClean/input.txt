@@ -1,0 +1,11 @@
+crossing 2
+spbase Crossing1
+cleaner test
+plower Cleaner1 ejector
+road Crossing1 Crossing2 100 2
+putvehicle Snowplower1_1 Lane1_2
+putsnow Lane1_2 100
+initend
+passtime 200
+info Lane1_2
+info Lane1_1

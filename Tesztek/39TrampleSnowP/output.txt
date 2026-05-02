@@ -1,0 +1,39 @@
+City returned crossings
+Crossing1 created
+City returned crossings
+Crossing2 created
+Lane1_1 created
+Lane1_2 created
+Lane1_3 created
+Lane1_4 created
+Lane1_5 created
+Lane1_6 created
+Lane1_7 created
+Lane1_8 created
+Lane1_9 created
+Lane1_10 created
+Road1 created between Crossing1 and Crossing2 with length 10.0 and 10 lanes
+Cleaner1 created
+City returned Crossing1 as snowplower base
+Snowplower1_1 created
+[ERROR]Path-en még csiszolni kell (kezdési ellenõrzés)
+PathS_1_1 created
+Breaker1_1 created
+HeadInventory1_1 created
+Sweeper1_1 created
+HeadListing1_1 created
+Ejector1_1 created
+HeadListing1_1 created
+GravelSpreader1_1 created
+HeadListing1_1 created
+SaltSpreader1_1 created
+HeadListing1_1 created
+Dragon1_1 created
+HeadListing1_1 created
+HeadInventory1_1 created with owner Snowplower1_1 and starting head Breaker
+PathS_1_1 extended with Lane1_1 successfully
+PathS_1_1 couldn’t extend with Lane1_1, because it’s not connected
+[ERROR]Error while running the following command:
+extpath Snowplower1_1 Lane1_1
+ Error: java.lang.UnsupportedOperationException: Még nincs kész
+Inicialization done

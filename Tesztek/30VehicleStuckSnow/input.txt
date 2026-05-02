@@ -1,0 +1,9 @@
+crossing 2
+road Crossing1 Crossing2 10 2
+car Crossing1 Crossing2
+passtime 3
+putsnow Lane1_1 100
+putsnow Lane1_2 100
+initend
+passtime 200
+info Car1
