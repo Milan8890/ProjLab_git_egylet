@@ -2,6 +2,9 @@ package playground;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import java.util.random.RandomGenerator;
 
 import entities.*;
@@ -72,6 +75,8 @@ public class Road {
 	 * @return az úthoz tartozó sávok
 	 */
 	public List<Lane> getLanes() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned lanes" , new Object[] {this});
+
 		return lanes;
 	}
 
@@ -81,6 +86,8 @@ public class Road {
 	 * @return az út hossza
 	 */
 	public double getLength() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned length " + length , new Object[] {this});
+
 		return length;
 	}
 
@@ -90,6 +97,8 @@ public class Road {
 	 * @return a kereszteződés, amiből kiindul
 	 */
 	public Crossing getFromCrossing() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned start [Obj]" , new Object[] {this, fromCrossing});
+
 		return fromCrossing;
 	}
 
@@ -99,6 +108,8 @@ public class Road {
 	 * @return a kereszteződés, amibe megy
 	 */
 	public Crossing getToCrossing() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned end [Obj]" , new Object[] {this, toCrossing});
+
 		return toCrossing;
 	}
 
@@ -115,10 +126,12 @@ public class Road {
 				if(other!=v){
 					other.crashedInto(REVTIME);
 					v.crashed(REVTIME);
+					Logger.getGlobal().log(Level.INFO, "[Obj] collided [Obj] into [Obj] on [Obj]" , new Object[] {this,v, other, lane});
 					return;
 				}
 			}
 		}
+		Logger.getGlobal().log(Level.INFO, "[Obj] tried colliding [Obj], but no target was found" , new Object[] {this, v});
 	}
 
 }

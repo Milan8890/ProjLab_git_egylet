@@ -3,6 +3,8 @@ package playground;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -37,6 +39,9 @@ public class Path {
 	 * @return Sikerült-e hozzáadni a sávot
 	 */
 	public boolean extendPath(Lane l) {
+		Logger.getGlobal().log(Level.INFO, "[Obj] extended with [Obj] successfully" , new Object[] {this, l});
+		Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t extend with [Obj], because it’s not connected" , new Object[] {this, l});
+
 		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
@@ -45,6 +50,8 @@ public class Path {
 	 * nullázása.
 	 */
 	public void clear() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] cleared" , new Object[] {this});
+
 		pathLanes.clear();
 		lastCrossing = null;
 	}
@@ -56,8 +63,13 @@ public class Path {
 	 */
 	public Lane pop() {
 		if (pathLanes.isEmpty()) {
+			Logger.getGlobal().log(Level.INFO, "[Obj] has no next lane" , new Object[] {this});
 			return null;
 		}
-		return pathLanes.remove(pathLanes.size() - 1);
+
+		Lane l = pathLanes.remove(pathLanes.size() - 1);
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned next lane [Obj]" , new Object[] {this, l});
+		return l;
 	}
 }

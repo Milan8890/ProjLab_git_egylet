@@ -1,6 +1,9 @@
 package equipment.heads;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import entities.Snowplower;
 import equipment.Head;
 import playground.Lane;
@@ -55,6 +58,9 @@ public class Sweeper extends Head {
 
 		// Ide kéne még valami ice/snowLevel elem a képletbe?
 		int payment = (int) (l.getRoad().getLength() * snowAmount * payPerMeter);
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$", new Object[] {snowplower , this, l});
+
 		return payment;
 
 	}

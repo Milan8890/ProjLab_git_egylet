@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import entities.Vehicle;
 import user.Cleaner;
@@ -91,6 +93,8 @@ public class Lane {
 	 * @param v A jármű, amit le fog venni a sávról.
 	 */
 	public void removeVehicle(Vehicle v) {
+		Logger.getGlobal().log(Level.INFO, "[Obj] removed [Obj]" , new Object[] {this, v});
+
 		vehicles.remove(v);
 	}
 
@@ -100,6 +104,7 @@ public class Lane {
 	 * @param v A jármű, amit hozzá fog adni a sávhoz.
 	 */
 	public void addVehicle(Vehicle v) {
+		Logger.getGlobal().log(Level.INFO, "[Obj] added [Obj]" , new Object[] {this, v});
 		vehicles.add(v);
 	}
 
@@ -111,9 +116,11 @@ public class Lane {
 	public boolean hasStuckVehicle() {
 		for (Vehicle v : vehicles) {
 			if (v.isStuck()) {
+				Logger.getGlobal().log(Level.INFO, "[Obj] has stuck vehicle" , new Object[] {this});
 				return true;
 			}
 		}
+		Logger.getGlobal().log(Level.INFO, "[Obj] has no stuck vehicle" , new Object[] {this});
 		return false;
 	}
 
@@ -123,6 +130,14 @@ public class Lane {
 	 * @return van-e só a sávon
 	 */
 	public boolean hasSalt() {
+
+		if(salt != null) {
+			Logger.getGlobal().log(Level.INFO, "[Obj] has salt" , new Object[] {this});
+		}
+		else {
+			Logger.getGlobal().log(Level.INFO, "[Obj] has no salt" , new Object[] {this});
+		}
+
 		return salt != null;
 	}
 
@@ -133,6 +148,7 @@ public class Lane {
 	 */
 	public void setSalt(Cleaner c) {
 		salt = new Salt(c);
+		Logger.getGlobal().log(Level.INFO, "[Obj] set [Obj] with [Obj]" , new Object[] {this, salt, c});
 	}
 
 	/**
@@ -141,6 +157,13 @@ public class Lane {
 	 * @return van-e zúzott kő a sávon
 	 */
 	public boolean hasGravel() {
+		if(hasGravel) {
+			Logger.getGlobal().log(Level.INFO, "[Obj] has gravel" , new Object[] {this});
+		}
+		else {
+			Logger.getGlobal().log(Level.INFO, "[Obj] has no gravel" , new Object[] {this});
+		}
+
 		return hasGravel;
 	}
 
@@ -150,6 +173,13 @@ public class Lane {
 	 * @param b logikai érték, ami jelzi, hogy a zúzott kő rákerül-e a sávra
 	 */
 	public void setGravel(boolean b) {
+		if(b) {
+			Logger.getGlobal().log(Level.INFO, "[Obj] set to have gravel" , new Object[] {this});
+		}
+		else {
+			Logger.getGlobal().log(Level.INFO, "[Obj] set to not have gravel" , new Object[] {this});
+		}
+
 		hasGravel = b;
 	}
 
@@ -159,6 +189,8 @@ public class Lane {
 	 * @return a jég magassága
 	 */
 	public double getIce() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned ice level " + iceLevel , new Object[] {this});
+
 		return iceLevel;
 	}
 
@@ -168,6 +200,8 @@ public class Lane {
 	 * @return a hó magassága
 	 */
 	public double getSnow() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned snow level " + snowLevel , new Object[] {this});
+
 		return snowLevel;
 	}
 
@@ -177,6 +211,8 @@ public class Lane {
 	 * @param amount a hozzáadott hó mennyisége
 	 */
 	public void addSnow(double amount) {
+		Logger.getGlobal().log(Level.INFO, "[Obj] added " + amount + " snow" , new Object[] {this});
+
 		snowLevel += amount;
 	}
 
@@ -186,6 +222,9 @@ public class Lane {
 	 */
 	public void trampleSnow() {
 		iceLevel += snowLevel;
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] turned " + snowLevel + " snow into ice" , new Object[] {this});
+
 		snowLevel = 0;
 	}
 
@@ -195,6 +234,8 @@ public class Lane {
 	 * @return a tartalmazó út
 	 */
 	public Road getRoad() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned [Obj]" , new Object[] {this, road});
+
 		return road;
 	}
 
@@ -207,6 +248,8 @@ public class Lane {
 	public double cleanSnow() {
 		double removedSnow = snowLevel;
 		snowLevel = 0;
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] cleaned " + removedSnow + " snow" , new Object[] {this});
 		return removedSnow;
 	}
 
@@ -219,6 +262,8 @@ public class Lane {
 	public double meltIce() {
 		double removedIce = iceLevel;
 		iceLevel = 0;
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] melted " + removedIce + " ice" , new Object[] {this});
 		return removedIce;
 	}
 
@@ -233,6 +278,9 @@ public class Lane {
 	public double breakIce() {
 		double brokenIce = iceLevel;
 		snowLevel += iceLevel;
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] turned " + iceLevel + " ice into snow" , new Object[] {this});
+
 		iceLevel = 0;
 		return brokenIce;
 	}
@@ -243,6 +291,8 @@ public class Lane {
 	 * @return a sávban lévő járművek halmaza.
 	 */
 	public Set<Vehicle> getVehicles() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned vehicles" , new Object[] {this});
+
 		return vehicles;
 	}
 }

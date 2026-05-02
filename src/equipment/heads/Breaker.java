@@ -1,8 +1,12 @@
 package equipment.heads;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import entities.Snowplower;
 import equipment.Head;
+import playground.City;
 import playground.Lane;
 
 /**
@@ -39,6 +43,8 @@ public class Breaker extends Head {
 		double payPerMeter = 0.5; // Ezt kell átírni.
 
 		double payment = iceAmount * l.getRoad().getLength() * payPerMeter;
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$" , new Object[] {snowplower , this, l});
 		return (int) payment; // 0.5 szorzó van a tesztben is.
 	}
 }
