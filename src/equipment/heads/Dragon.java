@@ -22,8 +22,10 @@ import playground.Road;
  */
 public class Dragon extends Head {
 
-	static final double SNOW_CONSUME = 1;
-	static final double ICE_CONSUME = 0.5;
+	static final double BIO_CONSUME = 1;
+
+	static final double PAY_ICE = 0.5;
+	static final double PAY_SNOW = 1;
 
 	/**
 	 * Konstruktor.
@@ -45,24 +47,14 @@ public class Dragon extends Head {
 	public int clean(Lane l) {
 		double iceAmount = l.meltIce();
 		double snowAmount = l.cleanSnow();
-		double payPerMeterIce = 0.5; // Ezt kell átírni.
-		double payPerMeterSnow = 1; // Ezt kell átírni.
 
-		// 1 jég
-		// = 0.5
-		// pénz,
-		// 1 hó
-		// = 1
-		// pénz,
-		// ez
-		// van
-		// tesztben
-		double payment = (iceAmount * payPerMeterIce + snowAmount * payPerMeterSnow) * l.getRoad().getLength(); 
+		// 1 jég = 0.5 pénz, 1 hó = 1 pénz, ez van tesztben
+		double payment = (iceAmount * PAY_ICE + snowAmount * PAY_SNOW) * l.getRoad().getLength(); 
 		
-		double amount = (snowAmount * SNOW_CONSUME + iceAmount * ICE_CONSUME) * l.getRoad().getLength();
+		double amount = BIO_CONSUME * l.getRoad().getLength();
 		snowplower.useBio(amount);
 
-		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment , new Object[] {snowplower , this, l});
+		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$" , new Object[] {snowplower , this, l});
 		Logger.getGlobal().log(Level.INFO, "[Obj] uses " + amount + "bio from [Obj]", new Object[] {this, snowplower});
 		return (int) payment;
 	}
@@ -77,7 +69,7 @@ public class Dragon extends Head {
 	@Override
 	public boolean canEnterLane(Lane l) {
 
-		double neededAmount = (l.getSnow() * SNOW_CONSUME + l.getIce() * ICE_CONSUME) * l.getRoad().getLength();
+		double neededAmount = BIO_CONSUME * l.getRoad().getLength();
 
 		if(neededAmount <= snowplower.getBio()) 
 			Logger.getGlobal().log(Level.INFO, "[Obj] allows [Obj] to enter [Obj] ", new Object[] {this, snowplower, l});

@@ -63,6 +63,7 @@ public class Path {
 	 */
 	public Lane pop() {
 		if (pathLanes.isEmpty()) {
+			Logger.getGlobal().log(Level.INFO, "[Obj] has no next lane" , new Object[] {this});
 			return null;
 		}
 

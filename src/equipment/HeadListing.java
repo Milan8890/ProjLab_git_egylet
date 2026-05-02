@@ -46,7 +46,7 @@ public class HeadListing {
      * @return a fej ára
      */
     public int getPrice(){
-        Logger.getGlobal().log(Level.INFO, "[Obj]'s price is " + price , new Object[] {this});
+        Logger.getGlobal().log(Level.INFO, "[Obj]'s price is " + price + "$" , new Object[] {this});
         return price;
     }
 }

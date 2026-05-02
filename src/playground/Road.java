@@ -115,8 +115,9 @@ public class Road {
 	 */
 	public void crashVehicle(Vehicle v) {
 
-		Vehicle v2 = null;
-		Lane l = null;
+		//ez temp csak hogy ne szarja össze magát a logger, madj normál kódra csere
+		Vehicle v2 = new Car(toCrossing, fromCrossing);
+		Lane l = new Lane(this);
 
 		Logger.getGlobal().log(Level.INFO, "[Obj] collided [Obj] into [Obj] on [Obj]" , new Object[] {this,v, v2, l});
 		Logger.getGlobal().log(Level.INFO, "[Obj] tried colliding [Obj], but no target was found" , new Object[] {this, v});

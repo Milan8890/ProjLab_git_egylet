@@ -44,7 +44,7 @@ public class Breaker extends Head {
 
 		double payment = iceAmount * l.getRoad().getLength() * payPerMeter;
 
-		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment , new Object[] {snowplower , this, l});
+		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$" , new Object[] {snowplower , this, l});
 		return (int) payment; // 0.5 szorzó van a tesztben is.
 	}
 }

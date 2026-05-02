@@ -50,7 +50,7 @@ public class SaltSpreader extends Head {
 		double amount = (l.getRoad().getLength() * SALT_CONSUME);
 		snowplower.useSalt(amount);
 
-		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment , new Object[] {snowplower , this, l});
+		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$", new Object[] {snowplower , this, l});
 		Logger.getGlobal().log(Level.INFO, "[Obj] uses " + amount + "salt from [Obj]", new Object[] {this, snowplower});
 
 		return payment;

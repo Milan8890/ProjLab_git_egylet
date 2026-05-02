@@ -39,7 +39,7 @@ public class HeadInventory {
 	/**
 	 * Konstruktor
 	 * 
-	 * @param owner     a Hókotró aminek tároljuk a fejeit
+	 * @param driver     a Hókotró aminek tároljuk a fejeit
 	 * @param ownedHead a fej amit a Hókotró már birtokol, ez lesz az aktív fej is
 	 */
 	private HeadInventory(Snowplower snowplower, Head activeHead) {

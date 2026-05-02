@@ -49,7 +49,7 @@ public class GravelSpreader extends Head {
         double amount = (l.getRoad().getLength() * GRAVEL_CONSUME);
         snowplower.useGravel(amount);
 
-        Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment , new Object[] {snowplower , this, l});
+        Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$" , new Object[] {snowplower , this, l});
 		Logger.getGlobal().log(Level.INFO, "[Obj] uses " + amount + "gravel from [Obj]", new Object[] {this, snowplower});
 
         return payment;

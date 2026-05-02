@@ -39,7 +39,7 @@ public class BusDriver extends Player {
 	 * Ad pontot a játékosnak.
 	 */
 	public void addPoint() {
-		Logger.getGlobal().log(Level.INFO, "[Obj] recived one point", new Object[] {this});
+		Logger.getGlobal().log(Level.INFO, "[Obj] received one point", new Object[] {this});
 		point++;
 	}
 

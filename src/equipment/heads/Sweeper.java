@@ -59,7 +59,7 @@ public class Sweeper extends Head {
 		// Ide kéne még valami ice/snowLevel elem a képletbe?
 		int payment = (int) (l.getRoad().getLength() * snowAmount * payPerMeter);
 
-		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment , new Object[] {snowplower , this, l});
+		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$", new Object[] {snowplower , this, l});
 
 		return payment;
 

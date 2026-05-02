@@ -42,7 +42,7 @@ public class Ejector extends Head {
 
 		double payment = l.cleanSnow() * l.getRoad().getLength() * payPerMeter;
 		
-		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment , new Object[] {snowplower , this, l});
+		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$" , new Object[] {snowplower , this, l});
 		return (int) payment;
 	}
 }

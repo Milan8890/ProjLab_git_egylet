@@ -40,7 +40,7 @@ public class Snowplower extends Vehicle {
 	/**
 	 * A hókotrót birtokló takarító.
 	 */
-	Cleaner owner;
+	Cleaner cleaner;
 	/**
 	 * Inventory ami tartalmazza a megvett és megvehető árucikkeket.
 	 */
@@ -61,12 +61,12 @@ public class Snowplower extends Vehicle {
 	/**
 	 * Konstruktor
 	 * 
-	 * @param owner     a játékos aki irányítja a hókotrót
+	 * @param cleaner     a játékos aki irányítja a hókotrót
 	 * @param spawn     a kereszteződés ahol a hókotró megjelenik
 	 * @param inventory a fejtároló amivel a hókotró rendelkezik
 	 */
-	private Snowplower(Cleaner owner, Crossing spawn) {
-		this.owner = owner;
+	private Snowplower(Cleaner cleaner, Crossing spawn) {
+		this.cleaner = cleaner;
 	}
 
 	/**
@@ -117,9 +117,9 @@ public class Snowplower extends Vehicle {
 	 * @return A hókotrót birtokló játékos
 	 */
 	public Cleaner getCleaner() {
-		Logger.getGlobal().log(Level.INFO, "[Obj] returned [Obj]" , new Object[] {this, owner});
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned [Obj]" , new Object[] {this, cleaner});
 
-		return owner;
+		return cleaner;
 	}
 
 	/**
@@ -174,14 +174,17 @@ public class Snowplower extends Vehicle {
 	 */
 	public boolean buySalt() {
 		if(!isInCrossing())
+		{
 			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy salt, because not in crossing" , new Object[] {this});
+			return false;
+		}	
 
-		if (owner.removeMoney(SALT_PRICE)) {
+		if (cleaner.removeMoney(SALT_PRICE)) {
 			saltAmount += SALT_BUY_AMOUNT;
 			Logger.getGlobal().log(Level.INFO, "[Obj] bought salt successfully" , new Object[] {this});
 			return true;
 		} else {
-			Logger.getGlobal().log(Level.INFO, "[Snowplower] couldn’t buy salt, because not enough money" , new Object[] {this});
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy salt, because not enough money" , new Object[] {this});
 			return false;
 		}
 	}
@@ -194,14 +197,17 @@ public class Snowplower extends Vehicle {
 	 */
 	public boolean buyBio() {
 		if(!isInCrossing())
+		{
 			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy bio, because not in crossing" , new Object[] {this});
-
-		if (owner.removeMoney(BIO_PRICE)) {
+			return false;
+		}
+			
+		if (cleaner.removeMoney(BIO_PRICE)) {
 			bioAmount += BIO_BUY_AMOUNT;
 			Logger.getGlobal().log(Level.INFO, "[Obj] bought bio successfully" , new Object[] {this});
 			return true;
 		} else {
-			Logger.getGlobal().log(Level.INFO, "[Snowplower] couldn’t buy bio, because not enough money" , new Object[] {this});
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy bio, because not enough money" , new Object[] {this});
 			return false;
 		}
 	}
@@ -214,14 +220,17 @@ public class Snowplower extends Vehicle {
 	 */
 	public boolean buyGravel() {
 		if(!isInCrossing())
+		{
 			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy gravel, because not in crossing" , new Object[] {this});
+			return false;
+		}
 
-		if (owner.removeMoney(GRAVEL_PRICE)) {
+		if (cleaner.removeMoney(GRAVEL_PRICE)) {
 			gravelAmount += GRAVEL_BUY_AMOUNT;
 			Logger.getGlobal().log(Level.INFO, "[Obj] bought gravel successfully" , new Object[] {this});
 			return true;
 		} else {
-			Logger.getGlobal().log(Level.INFO, "[Snowplower] couldn’t buy gravel, because not enough money" , new Object[] {this});
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy gravel, because not enough money" , new Object[] {this});
 			return false;
 		}
 	}
