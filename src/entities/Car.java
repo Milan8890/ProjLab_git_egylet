@@ -121,7 +121,7 @@ public class Car extends Vehicle {
 		if (currentLane.hasStuckVehicle()) {
 			// TODO Nem kellett meghívni a shortestPath-et, mert itt nem tervez újra, csak
 			// áll.
-			Logger.getGlobal().log(Level.INFO, "[Obj] [Obj] is blocked by crash, stopping and clearing [Path]", new Object[] { this, currentLane, path });
+			Logger.getGlobal().log(Level.INFO, "[Obj] [Obj] is blocked by crash, stopping and clearing [Obj]", new Object[] { this, currentLane, path });
 			return false;
 		}
 
