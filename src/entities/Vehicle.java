@@ -2,6 +2,8 @@ package entities;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import playground.City;
 import playground.Crossing;
@@ -132,13 +134,15 @@ public abstract class Vehicle {
 		Lane nextLane = path.pop();
 
 		if (nextLane == null) {
+			Logger.getGlobal().log(Level.INFO, "[Obj] reached end of [Path], stopping", new Object[] { this, path });
 			return false;
 		}
 
 		if (canEnterLane(nextLane)) {
+			Logger.getGlobal().log(Level.INFO, "[Obj] following [Path], going onto [Obj]", new Object[] { this, path, nextLane });
 			this.currentLane = nextLane;
 			this.currentLane.addVehicle(this);
-			this.laneProgress = 0.0;
+			this.laneProgress = 0;
 
 			return true;
 
@@ -155,9 +159,11 @@ public abstract class Vehicle {
 	 */
 	protected boolean canEnterLane(Lane l) {
 		if (l.hasStuckVehicle()) {
+			Logger.getGlobal().log(Level.INFO, "[Obj] [Obj] is blocked by crash, stopping and clearing [Path]", new Object[] { this, l, path });
 			return false;
 		}
 		if (l.getSnow() > MAX_SNOW_LEVEL) {
+			Logger.getGlobal().log(Level.INFO, "[Obj] [Obj] has too thick snow (" + l.getSnow() + "), stopping and clearing [Path]", new Object[] { this, l, path });
 			return false;
 		}
 		return true;
@@ -169,8 +175,9 @@ public abstract class Vehicle {
 	 */
 	protected void stepMoveOnLane() {
 		double speed = 1.0;
-
 		this.laneProgress += speed;
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] advancing on road, current progress is " + laneProgress, new Object[] { this });
 
 		if (this.laneProgress >= this.currentLane.getRoad().getLength()) {
 			reachedCrossing();
@@ -182,6 +189,8 @@ public abstract class Vehicle {
 	 */
 	protected void reachedCrossing() {
 		this.lastCrossing = this.currentLane.getRoad().getToCrossing();
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] reached end of road, currently in [Obj]", new Object[] { this, lastCrossing });
 
 		this.currentLane.removeVehicle(this);
 
@@ -228,10 +237,12 @@ public abstract class Vehicle {
 		if (isCrashed) {
 			revTimer--;
 			if (revTimer <= 0) {
+				Logger.getGlobal().log(Level.INFO, "[Obj] revTime expired, unstucking vehicle", new Object[] { this });
 				revive();
 				isCrashed = false;
 				return true;
 			}
+			Logger.getGlobal().log(Level.INFO, "[Obj] is currently stuck, revTime decreased to " + revTimer, new Object[] { this });
 			return false;
 		}
 		return true;
@@ -253,6 +264,7 @@ public abstract class Vehicle {
 			return true;
 		}
 		if (currentLane.hasStuckVehicle()) {
+			Logger.getGlobal().log(Level.INFO, "[Obj] [Obj] is blocked by crash, stopping and clearing [Path]", new Object[] { this, currentLane, path });
 			return false;
 		}
 		return true;
@@ -271,12 +283,15 @@ public abstract class Vehicle {
 			return true;
 		}
 
+		Logger.getGlobal().log(Level.INFO, "[Obj] snow is too deep in [Obj], checking other lanes", new Object[] { this, currentLane });
+
 		List<Lane> allLanes = currentLane.getRoad().getLanes();
 
 		for (int i = 0; i < allLanes.size(); i++) {
 			Lane l = allLanes.get(i);
 
 			if (l != currentLane && l.getSnow() <= MAX_SNOW_LEVEL) {
+				Logger.getGlobal().log(Level.INFO, "[Obj] switching to [Obj]", new Object[] { this, l });
 				currentLane.removeVehicle(this);
 				this.currentLane = l;
 				this.currentLane.addVehicle(this);
@@ -286,6 +301,7 @@ public abstract class Vehicle {
 			}
 		}
 
+		Logger.getGlobal().log(Level.INFO, "[Obj] no other suitable lane found, stuck in snow", new Object[] { this });
 		this.isStuck = true;
 		return false;
 	}
@@ -299,19 +315,30 @@ public abstract class Vehicle {
 	 */
 	protected boolean stepSlipOnIce() {
 		if (currentLane.getIce() > ICE_DANGER_LIMIT) {
+			Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: ice is thick enough", new Object[] { this, currentLane });
 
 			if (currentLane.hasGravel() && currentLane.getSnow() <= SNOW_COVER_LEVEL) {
-				return true;
-			}
+                Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: has gravel", new Object[] { this, currentLane });
+                Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: snow is thin enough, not slipping", new Object[] { this, currentLane });
+                return true;
+            } else if (currentLane.hasGravel() && currentLane.getSnow() > SNOW_COVER_LEVEL) {
+                Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: has gravel", new Object[] { this, currentLane });
+                Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: snow is too thick for gravel, slipping", new Object[] { this, currentLane });
+            } else {
+                Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: doesn’t have gravel, slipping", new Object[] { this, currentLane });
+            }
 
 			// TODO: Random hívás központosítása a tesztelhetőség miatt
 			if (Math.random() < SLIP_CHANCE) {
+				Logger.getGlobal().log(Level.INFO, "[Obj] slipping on [Obj]", new Object[] { this, currentLane.getRoad() });
 				currentLane.getRoad().crashVehicle(this);
 
 				if (this.isCrashed) {
 					return false;
 				}
 			}
+		} else {
+			Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: ice is too thin, not slipping", new Object[] { this, currentLane });
 		}
 
 		return true;
