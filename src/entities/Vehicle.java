@@ -228,7 +228,7 @@ public abstract class Vehicle {
 		if (val) {
 			Logger.getGlobal().log(Level.INFO, "[Obj] is in a crossing", this);
 		} else {
-			Logger.getGlobal().log(Level.INFO, "[Obj] is not in crossing", this);
+			Logger.getGlobal().log(Level.INFO, "[Obj] is not in a crossing", this);
 		}
 		return val;
 	}
