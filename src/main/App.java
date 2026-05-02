@@ -28,7 +28,14 @@ public class App {
 		OwnHandler ownHandler = new OwnHandler(proto.objectMap);
 		Logger.getGlobal().addHandler(ownHandler);
 
+		// Crossing c1 = new Crossing();
+		// Crossing c2 = new Crossing();
+		// Road r1 = new Road(c1, c2, 3, 10.0);
+
+		// World.tick();
+
 		proto.readCommandsFromCommandLine();
+
 		// Cleaner cleaner1 = new Cleaner("Asd", null);
 		// System.out.println(cleaner1.hashCode());
 		// Cleaner cleaner2 = new Cleaner("Asd", null);

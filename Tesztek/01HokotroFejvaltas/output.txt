@@ -3,7 +3,7 @@ City returned crossings
 Crossing1 created
 City returned Crossing1 as snowplower base
 Snowplower1_1 created
-Path-en még csiszolni kell (kezdési ellenõrzés)
+[ERROR]Path-en még csiszolni kell (kezdési ellenõrzés)
 PathS_1_1 created
 Breaker1_1 created
 HeadInventory1_1 created
@@ -22,7 +22,9 @@ Snowplower1_1 returned HeadInventory1_1
 Dragon1_1 created
 Snowplower1_1 returned HeadInventory1_1
 Ejector1_1 created
+
 Inicialization done
+
 Snowplower1_1 returned HeadInventory1_1
 HeadInventory1_1 switched active head to Dragon1_1
 Snowplower1_1 returned HeadInventory1_1

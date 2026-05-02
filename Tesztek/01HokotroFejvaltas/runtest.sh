@@ -9,9 +9,16 @@ SUCCESS=true
 
 cat "$INPUT_FILE" | java -cp bin main.App > "$OUTPUT_FILE"
 
+if grep -q "[ERROR]" "$OUTPUT_FILE"; then
+	echo "Output still has an [ERROR] in it (severe logging message)."
+	SUCCESS=false
+else
+:
+fi
+
 TESTED_LINE="INFO HeadInventory1_1 has head Breaker"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
-	:
+:
 else
 	SUCCESS=false
 	echo "Didn't find line when it should be present: $TESTED_LINE"

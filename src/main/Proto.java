@@ -1,10 +1,7 @@
 package main;
 
-import java.beans.VetoableChangeListener;
 import java.io.File;
-import java.lang.reflect.Array;
 import java.lang.reflect.Field;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -12,8 +9,6 @@ import java.util.Map.Entry;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.logging.Logger;
-
-import javax.print.DocFlavor.INPUT_STREAM;
 
 import entities.Bus;
 import entities.Car;
@@ -28,6 +23,7 @@ import equipment.heads.Ejector;
 import equipment.heads.GravelSpreader;
 import equipment.heads.SaltSpreader;
 import equipment.heads.Sweeper;
+import main.World.RandomMode;
 import playground.City;
 import playground.Crossing;
 import playground.Lane;
@@ -69,15 +65,39 @@ public class Proto {
 		}
 	}
 
-	public void readCommandsFromCommandLine() {
+	private static final int TICKS_PER_SEC = 20;
+
+	public void readCommandsFromCommandLine() throws Exception {
 		Scanner sc = new Scanner(System.in);
+
 		while (sc.hasNext()) {
-			readCommand(sc);
+			String line = sc.nextLine();
+			if (line.equals("starttime")) {
+				timeLoop(sc);
+			} else {
+				readCommand(line);
+			}
+		}
+		sc.close();
+	}
+
+	private void timeLoop(Scanner sc) throws Exception {
+		// TODO Még egy outer wilds referencia
+		while (true) {
+			if (System.in.available() > 0) {
+				String line = sc.nextLine();
+				if (line.equals("stoptime"))
+					return;
+				readCommand(line);
+			} else {
+				Thread.sleep(1000 / TICKS_PER_SEC);
+			}
+
+			World.tick();
 		}
 	}
 
-	private void readCommand(Scanner sc) {
-		String line = sc.nextLine();
+	private void readCommand(String line) {
 		String[] fullArgs = line.split(" ");
 		String command = fullArgs[0];
 
@@ -101,8 +121,7 @@ public class Proto {
 				case "plower" -> commandPlower(args);
 				case "bus" -> commandBus(args);
 				case "car" -> commandCar(args);
-				case "initend" -> commandInitend(args); // TODO ez am akkor mit is csinál? Lehet a loggert
-														// bekapcsolja?
+				case "initend" -> commandInitend(args);
 				case "addm" -> commandAddm(args);
 				case "addpoint" -> commandAddpoint(args);
 				case "addbio" -> commandAddbio(args);
@@ -126,8 +145,11 @@ public class Proto {
 				case "cyclehead" -> commandCyclehead(args);
 				case "extpath" -> commandExtpath(args);
 				case "clpath" -> commandClpath(args);
-				case "starttime" -> commandStarttime(args);
-				case "stoptime" -> commandStoptime(args);
+
+				// EZEK KÜLÖN VANNAK KEZELVE, ITT MARAD HOGY LEGYEN ÁTFOGÓ PARANCSLISTA
+				// case "starttime" -> commandStarttime(args);
+				// case "stoptime" -> commandStoptime(args);
+
 				case "endtime" -> commandEndtime(args);
 				case "passtime" -> commandPasstime(args);
 				case "load" -> commandLoad(args);
@@ -153,7 +175,7 @@ public class Proto {
 
 	private void commandRoad(String[] args) {
 		new Road((Crossing) getObject(args[0]), (Crossing) getObject(args[1]), Integer.parseInt(args[2]),
-				Double.parseDouble(args[2]));
+				Double.parseDouble(args[3]));
 	}
 
 	private void commandSpbase(String[] args) throws Exception {
@@ -206,7 +228,7 @@ public class Proto {
 	}
 
 	private void commandInitend(String[] args) {
-		Logger.getGlobal().info("Inicialization done");
+		Logger.getGlobal().info("\nInicialization done\n");
 	}
 
 	private void commandAddm(String[] args) {
@@ -294,8 +316,6 @@ public class Proto {
 		Field vehiclePath = v.getClass().getDeclaredField("path");
 		vehicleLastCrossing.setAccessible(true);
 
-		// TODO csak ennyi a sávváltás?
-
 		Lane perviousLane = (Lane) vehicleCurrentLane.get(v);
 		perviousLane.removeVehicle(v);
 
@@ -329,7 +349,6 @@ public class Proto {
 		field.setAccessible(true);
 		Lane currentLane = (Lane) field.get(v);
 
-		// TODO szerintem ez így OK, megcsúsztatás a crasheltetés.
 		currentLane.getRoad().crashVehicle(v);
 	}
 
@@ -416,30 +435,27 @@ public class Proto {
 		((Path) field.get(v)).clear();
 	}
 
-	private void commandStarttime(String[] args) {
-		// TODO nemtom
-	}
-
-	private void commandStoptime(String[] args) {
-		// TODO nemtom
-	}
-
 	private void commandEndtime(String[] args) {
+		Logger.getGlobal().severe("endtime command has been renamed to stoptime");
 		// https://www.youtube.com/watch?v=t5vG4Be1Ci8
 		System.exit(22);
 	}
 
 	private void commandPasstime(String[] args) {
-		// TODO nemtom
+		int num = Integer.parseInt(args[0]);
+		for (int i = 0; i < num; i++) {
+			World.tick();
+		}
 	}
 
 	private void commandLoad(String[] args) throws Exception {
 		String filename = args[0];
-		// TODO Így megy?
 		Scanner sc = new Scanner(new File(filename));
 		while (sc.hasNext()) {
-			readCommand(sc);
+			String line = sc.nextLine();
+			readCommand(line);
 		}
+		sc.close();
 	}
 
 	private void commandCrash(String[] args) {
@@ -448,18 +464,20 @@ public class Proto {
 	}
 
 	private void commandSetrand(String[] args) {
-		// TODO
-
 		switch (args[0]) {
-			case "true" -> System.out.println("Nemtom");
-			case "false" -> System.out.println("Nemtom");
-			case "random" -> System.out.println("Nemtom");
+			case "true" -> World.setRandomMode(RandomMode.TRUE);
+			case "false" -> World.setRandomMode(RandomMode.FALSE);
+			case "random" -> World.setRandomMode(RandomMode.RANDOM);
 			default -> throw new IllegalArgumentException("Illegal random type");
 		}
 	}
 
 	private void commandSetsnowing(String[] args) {
-		// TODO
+		switch (args[0]) {
+			case "true" -> World.setIsSnowing(true);
+			case "false" -> World.setIsSnowing(false);
+			default -> throw new IllegalArgumentException("Illegal snow true/false type");
+		}
 	}
 
 }
