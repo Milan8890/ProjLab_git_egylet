@@ -113,8 +113,8 @@ public class Road {
 		for(Lane lane : lanes){
 			for(Vehicle other : lane.getVehicles()){
 				if(other!=v){
-					other.crashed(REVTIME);
-					v.crashedInto(REVTIME);
+					other.crashedInto(REVTIME);
+					v.crashed(REVTIME);
 					return;
 				}
 			}

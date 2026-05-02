@@ -32,14 +32,13 @@ public class Cleaner extends Player {
 
 
 	/**
-	 * Konstruktor, létrehoz egy új takarító játékost. A játékosnak kezdetben nincs pénze se
+	 * Konstruktor, létrehoz egy új takarító játékost. A játékosnak kezdetben nincs pénze se hókotrója.
 	 * 
 	 * @param name a játékos neve
 	 */
 	public Cleaner(String name) {
-		//TODO lehet hogy itt létre kellene hozni hozzá egy default hókotrót???
 		super(name);
-		money=13000;
+		money=0;
 		snowplowers = new HashSet<>();
 	}
 

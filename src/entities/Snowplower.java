@@ -192,7 +192,7 @@ public class Snowplower extends Vehicle {
 
 	private static final int GRAVELPRICE = 25; //25 pénzért vesz 50kg zuzalékot, ez így jó?
 	private static final int GRAVELAMOUNTPERPURCHASE = 50; //TODO: ezt ki kéne szervezni valszeg innen, de itthagyom
-	
+	private static final int MAXGRAVEL = 1000;
 	/**
 	 * Vesz egy adag zuzalékot. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
 	 * kereszteződésben van.
@@ -200,7 +200,7 @@ public class Snowplower extends Vehicle {
 	 * @return Sikeres volt-e a vásárlás
 	 */
 	public boolean buyGravel() {
-		if(owner.removeMoney(GRAVELPRICE)){
+		if(gravelAmount + GRAVELAMOUNTPERPURCHASE <= MAXGRAVEL && owner.removeMoney(GRAVELPRICE)){
 			gravelAmount += GRAVELAMOUNTPERPURCHASE;
 			return true;
 		} else {
