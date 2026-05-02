@@ -322,10 +322,6 @@ public class Proto {
 		l.setGravel(false);
 	}
 
-	private void commandInfo(String[] args) {
-		// TODO
-	}
-
 	private void commandSlip(String[] args) throws Exception {
 		Vehicle v = (Vehicle) getObject(args[0]);
 		Field field = v.getClass().getDeclaredField("currentLane");
@@ -465,18 +461,36 @@ public class Proto {
 		// TODO
 	}
 
+	private void commandInfo(String[] args) throws Exception {
+		if (args[0].equals("city")) {
+			infoCity();
+			return;
+		}
 
-	private void info(String[] args){
-		switch (args[0]){
-			
+		Object obj = getObject(args[0]);
+
+		switch (obj) {
+			case Crossing o -> infoObject(o);
+			case Road o -> infoObject(o);
+			case Lane o -> infoObject(o);
+			case Salt o -> infoObject(o);
+			case Cleaner o -> infoObject(o);
+			case BusDriver o -> infoObject(o);
+			case Snowplower o -> infoObject(o);
+			case Bus o -> infoObject(o);
+			case Car o -> infoObject(o);
+			case Path o -> infoObject(o);
+			case HeadListing o -> infoObject(o);
+			case Head o -> infoObject(o);
+
+			default -> throw new Exception("No such type for info");
 		}
 	}
 
-	//INNEN LEFELÉ CSAK INFO
+	// INNEN LEFELÉ CSAK INFO
 
-
-
-	private void infoCity() throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
+	private void infoCity()
+			throws Exception {
 		String prefix = "INFO City has ";
 		for (Crossing crossing : City.getCrossings()) {
 			Logger.getGlobal().log(Level.INFO, prefix + "[Obj]", new Object[] { crossing });
@@ -484,229 +498,236 @@ public class Proto {
 		Field roads = City.class.getDeclaredField("roads");
 		roads.setAccessible(true);
 		List<Road> roadsList = (List<Road>) roads.get(null);
-		for(Road road : roadsList){
+		for (Road road : roadsList) {
 			Logger.getGlobal().log(Level.INFO, prefix + "[Obj]", new Object[] { road });
 		}
 
 		Field cars = City.class.getDeclaredField("cars");
 		cars.setAccessible(true);
 		List<Car> carsList = (List<Car>) cars.get(null);
-		for(Car car : carsList){
+		for (Car car : carsList) {
 			Logger.getGlobal().log(Level.INFO, prefix + "[Obj]", new Object[] { car });
 		}
 
 		Crossing snowplowBase = City.getSnowplowBase();
 		Logger.getGlobal().log(Level.INFO, "City snowplow base is [Obj]", new Object[] { snowplowBase });
-	
+
 	}
 
-	private void infoCrossing(Crossing c)
-	{
-		for (Road road : c.getOutRoads()) 
-		{
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has outgoing [Obj]", new Object[] {c, road});
-		}	
-	}
-
-	private void infoRoad(Road r){
-		for(Lane lane : r.getLanes()){
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has lane [Obj]", new Object[] {r, lane});
+	private void infoObject(Crossing c) {
+		for (Road road : c.getOutRoads()) {
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has outgoing [Obj]", new Object[] { c, road });
 		}
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] from crossing is [Obj]", new Object[] {r, r.getFromCrossing()});
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] to crossing is [Obj]", new Object[] {r, r.getToCrossing()});
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] length is [Obj]", new Object[] {r, r.getLength()});
 	}
 
-	private void infoLane(Lane l) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] is on [Obj]", new Object[] {l, l.getRoad() });
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] snow level is" + l.getSnow(), new Object[] {l});
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] ice level is" + l.getIce(), new Object[] {l});
+	private void infoObject(Road r) {
+		for (Lane lane : r.getLanes()) {
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has lane [Obj]", new Object[] { r, lane });
+		}
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] from crossing is [Obj]",
+				new Object[] { r, r.getFromCrossing() });
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] to crossing is [Obj]", new Object[] { r, r.getToCrossing() });
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] length is [Obj]", new Object[] { r, r.getLength() });
+	}
+
+	private void infoObject(Lane l)
+			throws Exception {
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] is on [Obj]", new Object[] { l, l.getRoad() });
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] snow level is" + l.getSnow(), new Object[] { l });
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] ice level is" + l.getIce(), new Object[] { l });
 		for (Vehicle v : l.getVehicles()) {
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] contains [Obj]", new Object[] {l, v});
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] contains [Obj]", new Object[] { l, v });
 		}
 		Field saltField = l.getClass().getDeclaredField("salt");
 		saltField.setAccessible(true);
-		Salt salt = (Salt) saltField.get(null);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] contains [Obj]", new Object[] {l,salt });
-		if(l.hasGravel())
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has gravel", new Object[] {l});
+		Salt salt = (Salt) saltField.get(l);
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] contains [Obj]", new Object[] { l, salt });
+		if (l.hasGravel())
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has gravel", new Object[] { l });
 		else
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] does not have gravel", new Object[] {l});
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] does not have gravel", new Object[] { l });
 	}
 
-	private void infoSalt(Salt s) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
+	private void infoObject(Salt s)
+			throws Exception {
 		Field lifetimeField = s.getClass().getDeclaredField("lifetime");
 		lifetimeField.setAccessible(true);
 		double lifetime = (double) lifetimeField.get(null);
 
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] lifetime is "+ lifetime, new Object[] {s});
-
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] lifetime is " + lifetime, new Object[] { s });
 
 		Field ownerField = s.getClass().getDeclaredField("owner");
 		ownerField.setAccessible(true);
 		Cleaner owner = (Cleaner) ownerField.get(null);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] owner is [Obj]", new Object[] {s, owner});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] owner is [Obj]", new Object[] { s, owner });
 	}
 
-	
-	private void infoCleaner(Cleaner c) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
+	private void infoObject(Cleaner c)
+			throws Exception {
 		infoPlayer(c);
 		Field monField = c.getClass().getDeclaredField("money");
 		monField.setAccessible(true);
 		int money = (int) monField.get(null);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + money +"$", new Object[] {c});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + money + "$", new Object[] { c });
 
 		Field spField = c.getClass().getDeclaredField("snowplowers");
 		spField.setAccessible(true);
 		Set<Snowplower> snowplowers = (Set<Snowplower>) spField.get(null);
-		for(Snowplower sp : snowplowers){
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has [Obj]", new Object[] {c, sp});
+		for (Snowplower sp : snowplowers) {
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has [Obj]", new Object[] { c, sp });
 		}
 	}
-	private void infoBusDriver(BusDriver bd) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
+
+	private void infoObject(BusDriver bd)
+			throws Exception {
 		infoPlayer(bd);
 		Field pointField = bd.getClass().getDeclaredField("points");
 		pointField.setAccessible(true);
 		int points = (int) pointField.get(null);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + points +" points", new Object[] {bd});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + points + " points", new Object[] { bd });
 		Field busField = bd.getClass().getDeclaredField("bus");
 		busField.setAccessible(true);
 		Bus bus = (Bus) busField.get(null);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has [Obj]", new Object[] {bd, bus});
-	}
-	
-	private void infoSnowplower(Snowplower sp) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
-		infoVehicle(sp);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] owner is [Obj]", new Object[]{sp, sp.getCleaner()});
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has [Obj]", new Object[]{sp, sp.getHeadInventory()});
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + sp.getSalt() + " salt", new Object[]{sp});
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + sp.getBio() + " bio", new Object[]{sp});
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + sp.getGravel() + " gravel", new Object[]{sp});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has [Obj]", new Object[] { bd, bus });
 	}
 
-	private void infoBus(Bus b) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
+	private void infoObject(Snowplower sp)
+			throws Exception {
+		infoVehicle(sp);
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] owner is [Obj]", new Object[] { sp, sp.getCleaner() });
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has [Obj]", new Object[] { sp, sp.getHeadInventory() });
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + sp.getSalt() + " salt", new Object[] { sp });
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + sp.getBio() + " bio", new Object[] { sp });
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + sp.getGravel() + " gravel", new Object[] { sp });
+	}
+
+	private void infoObject(Bus b)
+			throws Exception {
 		infoVehicle(b);
-		
+
 		Field driverField = b.getClass().getDeclaredField("driver");
 		driverField.setAccessible(true);
 		BusDriver driver = (BusDriver) driverField.get(null);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] driver is [Obj]", new Object[]{b, driver});
-		
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] driver is [Obj]", new Object[] { b, driver });
+
 		Field stationAField = b.getClass().getDeclaredField("stationA");
 		stationAField.setAccessible(true);
 		Crossing stationA = (Crossing) stationAField.get(null);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] station A is [Obj]", new Object[]{b, stationA});
-		
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] station A is [Obj]", new Object[] { b, stationA });
+
 		Field stationBField = b.getClass().getDeclaredField("stationB");
 		stationBField.setAccessible(true);
 		Crossing stationB = (Crossing) stationBField.get(null);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] station B is [Obj]", new Object[]{b, stationB});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] station B is [Obj]", new Object[] { b, stationB });
 
 		Field destField = b.getClass().getDeclaredField("isCurrentDestinationA");
 		destField.setAccessible(true);
 		boolean isCurrentDestinationA = (boolean) destField.get(null);
-		if(isCurrentDestinationA)
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] current destination is A", new Object[]{b});
+		if (isCurrentDestinationA)
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] current destination is A", new Object[] { b });
 		else
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] current destination is B", new Object[]{b});
-	
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] current destination is B", new Object[] { b });
+
 	}
 
-	private void infoCar(Car c) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
+	private void infoObject(Car c)
+			throws Exception {
 		infoVehicle(c);
 
 		Field homeField = c.getClass().getDeclaredField("home");
 		homeField.setAccessible(true);
 		Crossing homeCrossing = (Crossing) homeField.get(null);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] home is [Obj]", new Object[]{c, homeCrossing});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] home is [Obj]", new Object[] { c, homeCrossing });
 
 		Field workField = c.getClass().getDeclaredField("work");
 		workField.setAccessible(true);
 		Crossing workCrossing = (Crossing) workField.get(null);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] work is [Obj]", new Object[]{c, workCrossing});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] work is [Obj]", new Object[] { c, workCrossing });
 
 		Field isGoingHomeField = c.getClass().getDeclaredField("isGoingHome");
 		isGoingHomeField.setAccessible(true);
 		boolean isGoingHome = (boolean) isGoingHomeField.get(null);
-		if(isGoingHome)
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is going home", new Object[]{c});
+		if (isGoingHome)
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is going home", new Object[] { c });
 		else
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is going to work", new Object[]{c});
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is going to work", new Object[] { c });
 	}
 
-	private void infoVehicle(Vehicle v) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
-		Field lastCrossingField = v.getClass().getDeclaredField("lastCrossing");
-		lastCrossingField.setAccessible(true);
-		Crossing lastCrossing = (Crossing) lastCrossingField.get(null);
-		Logger.getGlobal().log(Level.INFO, "[Obj] last crossing is [Obj]", new Object[]{ v, lastCrossing});
-		Field currentLaneField = v.getClass().getDeclaredField("currentLane");
-		currentLaneField.setAccessible(true);
-		Lane currentLane = (Lane) currentLaneField.get(null);
-		Logger.getGlobal().log(Level.INFO, "[Obj] current lane is [Obj]", new Object[]{ v, currentLane});
-		
-		Field lanePrField = v.getClass().getDeclaredField("laneProgress");
-		lanePrField.setAccessible(true);
-		double laneProgress = (double) lanePrField.get(null);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] lane progress is " + laneProgress, new Object[]{v});
-
-		if(v.isStuck()){
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is stuck", new Object[]{v});
-		}
-		else{
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is not stuck", new Object[]{v});
-		}
-
-		Field crashedField = v.getClass().getDeclaredField("crashed");
-		crashedField.setAccessible(true);
-		boolean crashed = (boolean) crashedField.get(null);
-		if(crashed)
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is crashed", new Object[]{v});
-		else 
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is not crashed", new Object[]{v});
-
-		Field reviveField = v.getClass().getDeclaredField("reviveTime");
-		reviveField.setAccessible(true);
-		int reviveTime = (int) reviveField.get(null);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] revive timer is " + reviveTime , new Object[]{v});
-
-	}
-
-	private void infoPath(Path p) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
+	private void infoObject(Path p)
+			throws Exception {
 		Field lanesField = p.getClass().getDeclaredField("pathLanes");
 		lanesField.setAccessible(true);
 		List<Lane> pathLanes = (List<Lane>) lanesField.get(null);
-		if(pathLanes.isEmpty()){
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] pathLanes is empty", new Object[]{p});
-		}
-		else{
-			for(Lane l: pathLanes){
-				Logger.getGlobal().log(Level.INFO, "INFO [Obj] has lane [Obj]", new Object[]{p, l});
+		if (pathLanes.isEmpty()) {
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] pathLanes is empty", new Object[] { p });
+		} else {
+			for (Lane l : pathLanes) {
+				Logger.getGlobal().log(Level.INFO, "INFO [Obj] has lane [Obj]", new Object[] { p, l });
 			}
 		}
 
 		Field lastCrossingField = p.getClass().getDeclaredField("lastCrossing");
 		lastCrossingField.setAccessible(true);
 		Crossing lastCrossing = (Crossing) lastCrossingField.get(null);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] last crossing is [Obj]", new Object[]{p, lastCrossing});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] last crossing is [Obj]", new Object[] { p, lastCrossing });
 	}
 
-	private void infoHeadListing(HeadListing hl){
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has head [Obj]", new Object[]{hl, hl.getHead()});
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] price is " + hl.getPrice(), new Object[]{hl});
+	private void infoObject(HeadListing hl) {
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has head [Obj]", new Object[] { hl, hl.getHead() });
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] price is " + hl.getPrice(), new Object[] { hl });
 	}
 
-	private void infoHead(Head h) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
+	private void infoObject(Head h)
+			throws Exception {
 		Field snowplowerField = h.getClass().getDeclaredField("snowplower");
 		snowplowerField.setAccessible(true);
 		Snowplower sp = (Snowplower) snowplowerField.get(null);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] snowplower is [Obj]", new Object[]{h, sp});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] snowplower is [Obj]", new Object[] { h, sp });
 	}
 
-	private void infoPlayer(Player p) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException{
+	private void infoVehicle(Vehicle v)
+			throws Exception {
+		Field lastCrossingField = v.getClass().getDeclaredField("lastCrossing");
+		lastCrossingField.setAccessible(true);
+		Crossing lastCrossing = (Crossing) lastCrossingField.get(null);
+		Logger.getGlobal().log(Level.INFO, "[Obj] last crossing is [Obj]", new Object[] { v, lastCrossing });
+		Field currentLaneField = v.getClass().getDeclaredField("currentLane");
+		currentLaneField.setAccessible(true);
+		Lane currentLane = (Lane) currentLaneField.get(null);
+		Logger.getGlobal().log(Level.INFO, "[Obj] current lane is [Obj]", new Object[] { v, currentLane });
+
+		Field lanePrField = v.getClass().getDeclaredField("laneProgress");
+		lanePrField.setAccessible(true);
+		double laneProgress = (double) lanePrField.get(null);
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] lane progress is " + laneProgress, new Object[] { v });
+
+		if (v.isStuck()) {
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is stuck", new Object[] { v });
+		} else {
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is not stuck", new Object[] { v });
+		}
+
+		Field crashedField = v.getClass().getDeclaredField("crashed");
+		crashedField.setAccessible(true);
+		boolean crashed = (boolean) crashedField.get(null);
+		if (crashed)
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is crashed", new Object[] { v });
+		else
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is not crashed", new Object[] { v });
+
+		Field reviveField = v.getClass().getDeclaredField("reviveTime");
+		reviveField.setAccessible(true);
+		int reviveTime = (int) reviveField.get(null);
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] revive timer is " + reviveTime, new Object[] { v });
+
+	}
+
+	private void infoPlayer(Player p)
+			throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
 		Field nameField = p.getClass().getDeclaredField("name");
 		nameField.setAccessible(true);
 		String name = (String) nameField.get(null);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] name is " + name, new Object[]{p});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] name is " + name, new Object[] { p });
 
 	}
 }
