@@ -94,16 +94,6 @@ public class Car extends Vehicle {
 	}
 
 	/**
-     * Kezeli az ütközés utáni állapotot az ősosztály hívásával.
-     * 
-     * @return Igaz, ha az autó már nincs mozgásképtelen állapotban, egyébként hamis.
-     */
-	@Override
-	protected boolean stepWaitAfterCrash() {
-        return super.stepWaitAfterCrash();
-    }
-
-	/**
      * Beállítja a helyzetét az otthonára, és elindítja a munkahelye felé.
      */
     @Override
@@ -112,67 +102,6 @@ public class Car extends Vehicle {
         this.isGoingHome = false;
         this.currentLane = null;
         this.path.clear();
-    }
-
-	/**
-     * Ellenőrzi a hóhelyzetet az aktuális sávon.
-     * Ha a saját sávjában túl magas a hó, megpróbál egy másik, járható sávot keresni 
-     * ugyanazon az úton. Ha talál ilyet, sávot vált. Ha az út összes sávja járhatatlan, 
-     * a jármű elakad.
-     * 
-     * @return Igaz, ha a jármű tud tovább haladni, egyébként hamis.
-     */
-    @Override
-    protected boolean stepStuckInSnow() {
-        if (currentLane.getSnow() <= 10.0) {
-            this.isStuck = false;
-            return true;
-        }
-
-        List<Lane> allLanes = currentLane.getRoad().getLanes();
-
-        for (int i = 0; i < allLanes.size(); i++) {
-            Lane l = allLanes.get(i);
-            
-            if (l.getSnow() <= 10.0) {
-                currentLane.removeVehicle(this);
-                this.currentLane = l;
-                this.currentLane.addVehicle(this);
-                
-                this.isStuck = false;
-                return true;
-            }
-        }
-
-        this.isStuck = true;
-        return false;
-    }
-
-	/**
-     * Kezeli a jeges úton való megcsúszást.
-     * Ha túl sok a jég és nem védi vagy hófedte a zúzalék, egy megadott eséllyel 
-     * az autó megcsúszik, amit jelez az útnak.
-     * 
-     * @return Hamis, ha a megcsúszás miatt ütközés történt, egyébként igaz.
-     */
-    @Override
-    protected boolean stepSlipOnIce() {
-        if (currentLane.getIce() > 5.0) {
-            
-            if (currentLane.hasGravel() && currentLane.getSnow() <= 0.0) {
-                    return true;
-            }
-
-            if (Math.random() < 0.8) {
-                currentLane.getRoad().crashVehicle(this);
-
-                if (this.isCrashed) {
-                    return false;
-                }
-            }
-        }
-
-        return true;
     }
 	
 	/**

@@ -51,6 +51,7 @@ public class Bus extends Vehicle {
      * @param owner    A busz tulajdonosa.
      */
 	public Bus(Crossing stationA, Crossing stationB, BusDriver owner) {
+		super(stationA);
 		this.stationA = stationA;
 		this.stationB = stationB;
 		this.owner = owner;
@@ -74,7 +75,4 @@ public class Bus extends Vehicle {
 		}
 	}
 
-	public void onTick() {
-
-	}
 }

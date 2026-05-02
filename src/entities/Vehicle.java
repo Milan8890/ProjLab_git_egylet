@@ -1,6 +1,7 @@
 package entities;
 
 import java.util.Arrays;
+import java.util.List;
 
 import playground.City;
 import playground.Crossing;
@@ -19,6 +20,10 @@ import playground.Path;
  * Letaposás végzése.
  */
 public abstract class Vehicle {
+	protected static final double MAX_SNOW_LEVEL = 10.0;
+	protected static final double SNOW_COVER_LEVEL = 5.0;
+    protected static final double ICE_DANGER_LIMIT = 5.0;
+    protected static final double SLIP_CHANCE = 0.8;
 	/**
 	 * A legutóbbi kereszteződés, amin volt.
 	 */
@@ -147,8 +152,14 @@ public abstract class Vehicle {
 	 * Az egyes járművekben definiálandó virtuális függvény. Visszaadja, hogy az adott jármű behajthat-e a sávra.
 	 */
 	protected boolean canEnterLane(Lane l) {
-		return true;	//mivel minden csak a kotró hsználja ott felül van írva, a többinek jó a true
-	}
+        if (l.hasStuckVehicle()) {
+            return false;
+        }
+        if (l.getSnow() > MAX_SNOW_LEVEL) {
+            return false;
+        }
+        return true;
+    }
 
 	/**
 	 *  Halad a jármű az úton egy megadott mennyiséget. Ha ezzel az út végére ér, akkor meghívja a reachedCrossing() metódust.
@@ -233,8 +244,14 @@ public abstract class Vehicle {
 	 * Ha a sávon van más jármű ami eltorlaszolja az utat, akkor false-al, különben true-val tér vissza.
 	 */
 	protected boolean stepWaitBecauseOfStuck(){
-		return true;
-	}
+        if (isInCrossing()) {
+            return true;
+        }
+        if (currentLane.hasStuckVehicle()) {
+            return false;
+        }
+        return true;
+    }
 
 	/**
 	 * Ha túl magas a hó abban a sávban amin van, akkor megnézi hogy van-e az úton másik sáv ahol nem túl mély a hó.
@@ -242,8 +259,29 @@ public abstract class Vehicle {
 	 * Ha sikeresen tud tovább haladni, visszatér true-val.
 	 */
 	protected boolean stepStuckInSnow() {
-		return true;
-	}
+        if (currentLane.getSnow() <= MAX_SNOW_LEVEL) {
+            this.isStuck = false;
+            return true;
+        }
+
+        List<Lane> allLanes = currentLane.getRoad().getLanes();
+
+        for (int i = 0; i < allLanes.size(); i++) {
+            Lane l = allLanes.get(i);
+            
+            if (l != currentLane && l.getSnow() <= MAX_SNOW_LEVEL) {
+                currentLane.removeVehicle(this);
+                this.currentLane = l;
+                this.currentLane.addVehicle(this);
+                
+                this.isStuck = false;
+                return true;
+            }
+        }
+
+        this.isStuck = true;
+        return false;
+    }
 
 	/**
 	 * Ha a sávon amin halad a jármű egy határérték felett van a jég mennyisége,
@@ -251,6 +289,22 @@ public abstract class Vehicle {
 	 * Ez után ellenőrzi azt, hogy ütköztek-e belé. Ha igen, false-al tér vissza, ha nem, true-val.
 	 */
 	protected boolean stepSlipOnIce() {
-		return true;
-	}
+        if (currentLane.getIce() > ICE_DANGER_LIMIT) {
+            
+            if (currentLane.hasGravel() && currentLane.getSnow() <= SNOW_COVER_LEVEL) {
+                    return true;
+            }
+
+            // TODO: Random hívás központosítása a tesztelhetőség miatt
+            if (Math.random() < SLIP_CHANCE) {
+                currentLane.getRoad().crashVehicle(this);
+
+                if (this.isCrashed) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
 }
