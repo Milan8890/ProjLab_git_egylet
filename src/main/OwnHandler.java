@@ -219,12 +219,4 @@ public class OwnHandler extends Handler {
 
 	// }
 
-
-
-	public void infoCity(){
-		String prefix = "INFO City has";
-		for (Crossing crossing : City.getCrossings()) {
-			Logger.getGlobal().log(Level.INFO, prefix + " [Obj]", new Object[] { crossing });
-		}
-	}
 }
