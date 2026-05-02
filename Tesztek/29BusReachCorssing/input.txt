@@ -1,0 +1,8 @@
+crossing 2
+road Crossing1 Crossing2 10 1
+driver test
+bus Driver1 Crossing1 Crossing2
+putvehicle Bus1 Lane1_1
+initend
+passtime 200
+info Bus1

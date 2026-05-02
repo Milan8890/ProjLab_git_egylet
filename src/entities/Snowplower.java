@@ -5,10 +5,14 @@ import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import javax.crypto.Cipher;
+
 import equipment.Head;
 import equipment.HeadInventory;
+import playground.City;
 import playground.Crossing;
 import playground.Lane;
+import playground.Path;
 
 /**
  * 
@@ -63,17 +67,18 @@ public class Snowplower extends Vehicle {
 	/**
 	 * Konstruktor
 	 * 
-	 * @param cleaner     a játékos aki irányítja a hókotrót
+	 * @param cleaner   a játékos aki irányítja a hókotrót
 	 * @param spawn     a kereszteződés ahol a hókotró megjelenik
 	 * @param inventory a fejtároló amivel a hókotró rendelkezik
 	 */
-	private Snowplower(Cleaner owner, Crossing spawn) {
-		super(spawn);
-		this.cleaner = owner;
-		this.lastCrossing = spawn;
-		saltAmount=0;
-		bioAmount=0;
-		gravelAmount=0;
+	private Snowplower(Cleaner cleaner) {
+		super(City.getSnowplowBase());
+		this.cleaner = cleaner;
+		saltAmount = 0;
+		bioAmount = 0;
+		gravelAmount = 0;
+		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
+		this.path = new Path(this);
 	}
 
 	/**
@@ -85,7 +90,9 @@ public class Snowplower extends Vehicle {
 	}
 
 	/**
-	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel tér vissza.
+	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel
+	 * tér vissza.
+	 * 
 	 * @return true
 	 */
 	@Override
@@ -94,7 +101,9 @@ public class Snowplower extends Vehicle {
 	}
 
 	/**
-	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel tér vissza.
+	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel
+	 * tér vissza.
+	 * 
 	 * @return true
 	 */
 	@Override
@@ -103,7 +112,9 @@ public class Snowplower extends Vehicle {
 	}
 
 	/**
-	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel tér vissza.
+	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel
+	 * tér vissza.
+	 * 
 	 * @return true
 	 */
 	@Override
@@ -117,7 +128,7 @@ public class Snowplower extends Vehicle {
 	 */
 	@Override
 	public void reachedCrossing() {
-		cleaner.addMoney(headInventory.getActiveHead().clean(currentLane)); //Hogy kéne átadni a sávot?
+		cleaner.addMoney(headInventory.getActiveHead().clean(currentLane)); // Hogy kéne átadni a sávot?
 		super.reachedCrossing();
 	}
 
@@ -127,7 +138,7 @@ public class Snowplower extends Vehicle {
 	 * @return A hókotrót birtokló játékos
 	 */
 	public Cleaner getCleaner() {
-		Logger.getGlobal().log(Level.INFO, "[Obj] returned [Obj]" , new Object[] {this, cleaner});
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned [Obj]", new Object[] { this, cleaner });
 
 		return cleaner;
 	}
@@ -138,7 +149,7 @@ public class Snowplower extends Vehicle {
 	 * @return HeadInventory
 	 */
 	public HeadInventory getHeadInventory() {
-		Logger.getGlobal().log(Level.INFO, "[Obj] returned [Obj]" , new Object[] {this, headInventory});
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned [Obj]", new Object[] { this, headInventory });
 
 		return headInventory;
 	}
@@ -149,7 +160,7 @@ public class Snowplower extends Vehicle {
 	 * @return mennyi Só áll rendelkezésre
 	 */
 	public double getSalt() {
-		Logger.getGlobal().log(Level.INFO, "[Obj] has " + saltAmount + " salt" , new Object[] {this});
+		Logger.getGlobal().log(Level.INFO, "[Obj] has " + saltAmount + " salt", new Object[] { this });
 
 		return saltAmount;
 	}
@@ -160,7 +171,7 @@ public class Snowplower extends Vehicle {
 	 * @return mennyi Biokerozin áll rendelkezésre
 	 */
 	public double getBio() {
-		Logger.getGlobal().log(Level.INFO, "[Obj] has " + bioAmount + " bio" , new Object[] {this});
+		Logger.getGlobal().log(Level.INFO, "[Obj] has " + bioAmount + " bio", new Object[] { this });
 
 		return bioAmount;
 	}
@@ -171,12 +182,11 @@ public class Snowplower extends Vehicle {
 	 * @return mennyi zuzalék áll rendelkezésre
 	 */
 	public double getGravel() {
-		Logger.getGlobal().log(Level.INFO, "[Obj] has " + gravelAmount + " gravel" , new Object[] {this});
+		Logger.getGlobal().log(Level.INFO, "[Obj] has " + gravelAmount + " gravel", new Object[] { this });
 
 		return gravelAmount;
 	}
-	
-	
+
 	/**
 	 * Vesz egy adag sót. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
 	 * kereszteződésben van.
@@ -184,23 +194,23 @@ public class Snowplower extends Vehicle {
 	 * @return Sikeres volt-e a vásárlás
 	 */
 	public boolean buySalt() {
-		if(!isInCrossing())
-		{
-			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy salt, because not in crossing" , new Object[] {this});
+		if (!isInCrossing()) {
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy salt, because not in crossing",
+					new Object[] { this });
 			return false;
-		}	
+		}
 
 		if (cleaner.removeMoney(SALT_PRICE)) {
 			saltAmount += SALT_BUY_AMOUNT;
-			Logger.getGlobal().log(Level.INFO, "[Obj] bought salt successfully" , new Object[] {this});
+			Logger.getGlobal().log(Level.INFO, "[Obj] bought salt successfully", new Object[] { this });
 			return true;
 		} else {
-			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy salt, because not enough money" , new Object[] {this});
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy salt, because not enough money",
+					new Object[] { this });
 			return false;
 		}
 	}
 
-	
 	/**
 	 * Vesz egy adag kerozint. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
 	 * kereszteződésben van.
@@ -208,22 +218,22 @@ public class Snowplower extends Vehicle {
 	 * @return Sikeres volt-e a vásárlás
 	 */
 	public boolean buyBio() {
-		if(!isInCrossing())
-		{
-			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy bio, because not in crossing" , new Object[] {this});
+		if (!isInCrossing()) {
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy bio, because not in crossing",
+					new Object[] { this });
 			return false;
 		}
-			
+
 		if (cleaner.removeMoney(BIO_PRICE)) {
 			bioAmount += BIO_BUY_AMOUNT;
-			Logger.getGlobal().log(Level.INFO, "[Obj] bought bio successfully" , new Object[] {this});
+			Logger.getGlobal().log(Level.INFO, "[Obj] bought bio successfully", new Object[] { this });
 			return true;
 		} else {
-			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy bio, because not enough money" , new Object[] {this});
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy bio, because not enough money",
+					new Object[] { this });
 			return false;
 		}
 	}
-
 
 	/**
 	 * Vesz egy adag zuzalékot. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
@@ -232,28 +242,27 @@ public class Snowplower extends Vehicle {
 	 * @return Sikeres volt-e a vásárlás
 	 */
 	public boolean buyGravel() {
-		if(!isInCrossing())
-		{
-			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy gravel, because not in crossing" , new Object[] {this});
+		if (!isInCrossing()) {
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy gravel, because not in crossing",
+					new Object[] { this });
 			return false;
 		}
 
 		if (gravelAmount + GRAVEL_BUY_AMOUNT <= MAX_GRAVEL) {
-			if(cleaner.removeMoney(GRAVEL_PRICE))
-			{
+			if (cleaner.removeMoney(GRAVEL_PRICE)) {
 				gravelAmount += GRAVEL_BUY_AMOUNT;
 
-				Logger.getGlobal().log(Level.INFO, "[Obj] bought gravel successfully" , new Object[] {this});
+				Logger.getGlobal().log(Level.INFO, "[Obj] bought gravel successfully", new Object[] { this });
 				return true;
-			}
-			else
-			{
-				Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy gravel, because not enough money" , new Object[] {this});
+			} else {
+				Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy gravel, because not enough money",
+						new Object[] { this });
 				return false;
 			}
-			
+
 		} else {
-			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy gravel, because not enough space" , new Object[] {this});
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy gravel, because not enough space",
+					new Object[] { this });
 			return false;
 		}
 	}
@@ -264,7 +273,7 @@ public class Snowplower extends Vehicle {
 	 * @param saltAmount Az elhasznált só mennyisége
 	 */
 	public void useSalt(double a) {
-		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + "salt" , new Object[] {this});
+		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + "salt", new Object[] { this });
 		saltAmount -= a; // Ennyi?
 	}
 
@@ -274,7 +283,7 @@ public class Snowplower extends Vehicle {
 	 * @param bioAmount Az elhasznált kerozin mennyisége
 	 */
 	public void useBio(double a) {
-		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + "bio" , new Object[] {this});
+		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + "bio", new Object[] { this });
 		bioAmount -= a; // Ennyi?
 	}
 
@@ -284,7 +293,7 @@ public class Snowplower extends Vehicle {
 	 * @param bioAmount Az elhasznált kerozin mennyisége
 	 */
 	public void useGravel(double a) {
-		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + "gravel" , new Object[] {this});
+		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + "gravel", new Object[] { this });
 		gravelAmount -= a; // Ennyi?
 	}
 
@@ -292,11 +301,10 @@ public class Snowplower extends Vehicle {
 	 * Létrehoz és visszaad egy új hókotrót hányó fejjel.
 	 * 
 	 * @param owner a játékos aki irányítja a hókotrót
-	 * @param base  a kereszteződés ahol a hókotró megjelenik
 	 * @return a létrehozott Hókotró
 	 */
-	public static Snowplower createWithEjector(Cleaner owner, Crossing base) {
-		Snowplower sp = new Snowplower(owner, base);
+	public static Snowplower createWithEjector(Cleaner owner) {
+		Snowplower sp = new Snowplower(owner);
 		sp.headInventory = HeadInventory.createWithEjector(sp);
 		return sp;
 	}
@@ -305,11 +313,11 @@ public class Snowplower extends Vehicle {
 	 * Létrehoz és visszaad egy új hókotrót jégtörő fejjel.
 	 * 
 	 * @param owner a játékos aki irányítja a hókotrót
-	 * @param base  a kereszteződés ahol a hókotró megjelenik
 	 * @return a létrehozott Hókotró
 	 */
-	public static Snowplower createWithBreaker(Cleaner owner, Crossing base) {
-		Snowplower sp = new Snowplower(owner, base);
+	public static Snowplower createWithBreaker(Cleaner owner) {
+
+		Snowplower sp = new Snowplower(owner);
 		sp.headInventory = HeadInventory.createWithBreaker(sp);
 		return sp;
 	}

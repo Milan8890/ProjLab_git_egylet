@@ -1,0 +1,16 @@
+crossing 1
+spbase Crossing1
+cleaner test
+plower Cleaner1 ejector
+addm Cleaner1 100000
+initend
+buyhead Snowplower1_1 HeadListing1_1_BRE
+buyhead Snowplower1_1 HeadListing1_1_SWE
+buyhead Snowplower1_1 HeadListing1_1_DRA
+buyhead Snowplower1_1 HeadListing1_1_GRA
+buyhead Snowplower1_1 HeadListing1_1_SAL
+buybio Snowplower1_1
+buysalt Snowplower1_1
+buygravel Snowplower1_1
+info Headinventory1_1
+info Cleaner1

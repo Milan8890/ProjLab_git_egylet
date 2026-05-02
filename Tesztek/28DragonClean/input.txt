@@ -1,0 +1,13 @@
+crossing 2
+spbase Crossing1
+cleaner test
+plower Cleaner1 breaker
+road Crossing1 Crossing2 100 1
+addbio Snowplower1_1 200
+changehead Snowplower1_1 dragon
+putice Lane1_1 100
+putsnow Lane1_1 100
+putvehicle Snowplower1_1 Lane1_1
+initend
+passtime 200
+info Lane1_1

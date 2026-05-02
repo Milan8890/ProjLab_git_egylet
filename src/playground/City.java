@@ -1,6 +1,7 @@
 package playground;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,19 +24,19 @@ public class City {
 	/**
 	 * A városban lévő kereszteződések.
 	 */
-	static Set<Crossing> crossings;
+	static Set<Crossing> crossings = new HashSet<>();
 	/**
 	 * A városban lévő utak.
 	 */
-	static Set<Road> roads;
+	static Set<Road> roads = new HashSet<>();
 	/**
 	 * A városban lévő autók.
 	 */
-	static Set<Car> cars;
+	static Set<Car> cars = new HashSet<>();
 	/**
 	 * A hókotróbázis.
 	 */
-	static Crossing snowplowBase;
+	static Crossing snowplowBase = null;
 
 	/**
 	 * A várost inicializáló függvény
@@ -69,8 +70,8 @@ public class City {
 	 * @param to   a célkereszteződés
 	 * @return a két kereszteződés közötti legrövidebb Path
 	 */
-	public static Path shortestPathFrom(Crossing from, Crossing to) {
-		Path p = new Path();
+	public static Path shortestPathFrom(Crossing from, Crossing to, Vehicle v) {
+		Path p = new Path(v);
 		Logger.getGlobal().log(Level.INFO, "City calculated shortest path from [Obj] to [Obj] as [Obj]", new Object[] {from, to, p});
 
 		throw new UnsupportedOperationException("Még nincs kész");

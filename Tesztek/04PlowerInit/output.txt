@@ -1,0 +1,38 @@
+City returned crossings
+Crossing1 created
+Cleaner1 created
+City returned Crossing1 as snowplower base
+Snowplower1_1 created
+[ERROR]Path-en még csiszolni kell (kezdési ellenõrzés)
+PathS_1_1 created
+Breaker1_1 created
+HeadInventory1_1 created
+Sweeper1_1 created
+HeadListing1_1 created
+Ejector1_1 created
+HeadListing1_1 created
+GravelSpreader1_1 created
+HeadListing1_1 created
+SaltSpreader1_1 created
+HeadListing1_1 created
+Dragon1_1 created
+HeadListing1_1 created
+HeadInventory1_1 created with owner Snowplower1_1 and starting head Breaker
+City returned Crossing1 as snowplower base
+Snowplower1_2 created
+[ERROR]Path-en még csiszolni kell (kezdési ellenõrzés)
+PathS_1_2 created
+Ejector1_2 created
+HeadInventory1_2 created
+Sweeper1_2 created
+HeadListing1_2 created
+Breaker1_2 created
+HeadListing1_2 created
+GravelSpreader1_2 created
+HeadListing1_2 created
+SaltSpreader1_2 created
+HeadListing1_2 created
+Dragon1_2 created
+HeadListing1_2 created
+HeadInventory1_2 created with owner Snowplower1_2 and starting head Ejector
+Inicialization done

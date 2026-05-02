@@ -3,6 +3,8 @@ package entities;
 import java.lang.runtime.SwitchBootstraps;
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import playground.City;
 import playground.Crossing;
@@ -49,6 +51,7 @@ public class Car extends Vehicle {
 		this.home = home;
 		this.work = work;
 		this.isGoingHome = false;
+		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
 
 	/**
@@ -60,15 +63,12 @@ public class Car extends Vehicle {
 	public void reachedCrossing() {
 		super.reachedCrossing();
 
+		// TODO path-et nem kell újat kérni, majd kér a followPath
+
 		if (isGoingHome && this.lastCrossing.equals(home)) {
-
 			isGoingHome = false;
-			this.path = City.shortestPathFrom(this.lastCrossing, work);
-
 		} else if (!isGoingHome && this.lastCrossing.equals(work)) {
-
 			isGoingHome = true;
-			this.path = City.shortestPathFrom(this.lastCrossing, home);
 		}
 	}
 
@@ -88,39 +88,38 @@ public class Car extends Vehicle {
 
 		if (!success && isInCrossing()) {
 			Crossing target = isGoingHome ? home : work;
-			this.path = City.shortestPathFrom(this.lastCrossing, target);
+			this.path = City.shortestPathFrom(this.lastCrossing, target, this);
 		}
 		return success;
 	}
 
 	/**
-     * Beállítja a helyzetét az otthonára, és elindítja a munkahelye felé.
-     */
-    @Override
-    protected void revive() {
-        this.lastCrossing = home;
-        this.isGoingHome = false;
-        this.currentLane = null;
-        this.path.clear();
-    }
-	
-	/**
-     * Megvizsgálja, hogy a jelenlegi sávon található-e elakadt jármű.
-     * <p>
-     * Ha a sávon bármelyik jármű isStuck állapotban van, az az egész sávot 
-     * blokkolja. Ekkor az autó újratervezi az útvonalát és várakozik.
-     * 
-     * @return Hamis, ha van elakadt jármű a sávon, egyébként igaz.
-     */
-    @Override
-    protected boolean stepWaitBecauseOfStuck() {
-        if (currentLane.hasStuckVehicle()) {
-            Crossing target = isGoingHome ? home : work;
-            this.path = City.shortestPathFrom(this.lastCrossing, target);
-            
-            return false;
-        }
+	 * Beállítja a helyzetét az otthonára, és elindítja a munkahelye felé.
+	 */
+	@Override
+	protected void revive() {
+		this.lastCrossing = home;
+		this.isGoingHome = false;
+		this.currentLane = null;
+		this.path.clear();
+	}
 
-        return true;
-    }
+	/**
+	 * Megvizsgálja, hogy a jelenlegi sávon található-e elakadt jármű.
+	 * <p>
+	 * Ha a sávon bármelyik jármű isStuck állapotban van, az az egész sávot
+	 * blokkolja. Ekkor az autó újratervezi az útvonalát és várakozik.
+	 * 
+	 * @return Hamis, ha van elakadt jármű a sávon, egyébként igaz.
+	 */
+	@Override
+	protected boolean stepWaitBecauseOfStuck() {
+		if (currentLane.hasStuckVehicle()) {
+			// TODO Nem kellett meghívni a shortestPath-et, mert itt nem tervez újra, csak
+			// áll.
+			return false;
+		}
+
+		return true;
+	}
 }
