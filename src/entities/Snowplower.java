@@ -37,6 +37,7 @@ public class Snowplower extends Vehicle {
 	static final int BIO_BUY_AMOUNT = 10;
 	static final int GRAVEL_BUY_AMOUNT = 50;
 
+	static final int MAX_GRAVEL = 1000;
 
 	/**
 	 * A hókotrót birtokló takarító.
@@ -175,9 +176,6 @@ public class Snowplower extends Vehicle {
 		return gravelAmount;
 	}
 	
-
-	private static final int SALTPRICE = 25; 
-	private static final int SALTAMOUNTPERPURCHASE = 10; //TODO: ezt ki kéne szervezni valszeg innen, de itthagyom
 	
 	/**
 	 * Vesz egy adag sót. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
@@ -202,8 +200,6 @@ public class Snowplower extends Vehicle {
 		}
 	}
 
-	private static final int BIOPRICE = 25; //25 pénzért vesz 10l biot, ez így jó? 
-	private static final int BIOAMOUNTPERPURCHASE = 10; //TODO: ezt ki kéne szervezni valszeg innen, de itthagyom
 	
 	/**
 	 * Vesz egy adag kerozint. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
@@ -229,9 +225,6 @@ public class Snowplower extends Vehicle {
 	}
 
 
-	private static final int GRAVELPRICE = 25; //25 pénzért vesz 50kg zuzalékot, ez így jó?
-	private static final int GRAVELAMOUNTPERPURCHASE = 50; //TODO: ezt ki kéne szervezni valszeg innen, de itthagyom
-	private static final int MAXGRAVEL = 1000;
 	/**
 	 * Vesz egy adag zuzalékot. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
 	 * kereszteződésben van.
@@ -245,12 +238,22 @@ public class Snowplower extends Vehicle {
 			return false;
 		}
 
-		if (cleaner.removeMoney(GRAVEL_PRICE)) {
-			gravelAmount += GRAVEL_BUY_AMOUNT;
-			Logger.getGlobal().log(Level.INFO, "[Obj] bought gravel successfully" , new Object[] {this});
-			return true;
+		if (gravelAmount + GRAVEL_BUY_AMOUNT <= MAX_GRAVEL) {
+			if(cleaner.removeMoney(GRAVEL_PRICE))
+			{
+				gravelAmount += GRAVEL_BUY_AMOUNT;
+
+				Logger.getGlobal().log(Level.INFO, "[Obj] bought gravel successfully" , new Object[] {this});
+				return true;
+			}
+			else
+			{
+				Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy gravel, because not enough money" , new Object[] {this});
+				return false;
+			}
+			
 		} else {
-			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy gravel, because not enough money" , new Object[] {this});
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy gravel, because not enough space" , new Object[] {this});
 			return false;
 		}
 	}
