@@ -58,26 +58,6 @@ public class City {
 	}
 
 	/**
-	 * Hókotróközpont beállítása
-	 * 
-	 * @param c A hókotróközpont
-	 */
-	public static void setSnowplowBase(Crossing c) {
-		// TODO ezt csak felvettem, mert szerintem kell, hogy menjen a proto
-		snowplowBase = c;
-	}
-
-	/**
-	 * Autók lekérdezése.
-	 * 
-	 * @return Az autók halmaza
-	 */
-	public static Set<Car> getCars() {
-		// TODO ezt is csak beraktam a proto miatt
-		return cars;
-	}
-
-	/**
 	 * A városban két kereszteződés között a legrövidebb útvonalat adja vissza.
 	 * 
 	 * @param from a kiindulási kereszteződés

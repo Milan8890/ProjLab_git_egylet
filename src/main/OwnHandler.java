@@ -37,6 +37,8 @@ public class OwnHandler extends Handler {
 	@Override
 	public void publish(LogRecord record) {
 
+		// TODO severe-nél menjen egy error, amire a tesztek szűrnek
+
 		String message = record.getMessage();
 
 		Object[] args = record.getParameters();
@@ -111,7 +113,7 @@ public class OwnHandler extends Handler {
 			case Snowplower o -> createFromOwnerPlusID(o, "cleaner");
 			case Lane o -> createFromOwnerPlusID(o, "road");
 			// case HeadListing o -> createFromOwnerPlusID(o, "snowplower");
-			case HeadListing o -> createName(o);
+			case HeadListing o -> createName(o); // TODO
 			case Path o -> createName(o);
 
 			default ->

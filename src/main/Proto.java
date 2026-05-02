@@ -1,7 +1,10 @@
 package main;
 
 import java.beans.VetoableChangeListener;
+import java.io.File;
+import java.lang.reflect.Array;
 import java.lang.reflect.Field;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -75,8 +78,14 @@ public class Proto {
 
 	private void readCommand(Scanner sc) {
 		String line = sc.nextLine();
-		String[] args = line.split(" ");
-		String command = args[0];
+		String[] fullArgs = line.split(" ");
+		String command = fullArgs[0];
+
+		String[] args = new String[fullArgs.length - 1];
+		for (int i = 1; i < fullArgs.length; i++) {
+			args[i - 1] = fullArgs[i];
+		}
+
 		try {
 
 			// Feldolgozába lehet egy nagy try catch
@@ -118,11 +127,13 @@ public class Proto {
 				case "extpath" -> commandExtpath(args);
 				case "clpath" -> commandClpath(args);
 				case "starttime" -> commandStarttime(args);
+				case "stoptime" -> commandStoptime(args);
 				case "endtime" -> commandEndtime(args);
 				case "passtime" -> commandPasstime(args);
 				case "load" -> commandLoad(args);
 				case "crash" -> commandCrash(args);
 				case "setrand" -> commandSetrand(args);
+				case "setsnowing" -> commandSetsnowing(args);
 			}
 		} catch (Exception e) {
 			Logger.getGlobal()
@@ -131,7 +142,7 @@ public class Proto {
 	}
 
 	private void commandCrossing(String[] args) {
-		int num = Integer.parseInt(args[1]);
+		int num = Integer.parseInt(args[0]);
 
 		for (int i = 0; i < num; i++) {
 			City.getCrossings().add(new Crossing());
@@ -144,9 +155,11 @@ public class Proto {
 				Double.parseDouble(args[2]));
 	}
 
-	private void commandSpbase(String[] args) {
-		// TODO ezt akkor bemozgatni a City-be, vagy egy setter?
-		City.setSnowplowBase((Crossing) getObject(args[0]));
+	private void commandSpbase(String[] args) throws Exception {
+		Field fieldSpbase = City.class.getDeclaredField("heads");
+		fieldSpbase.setAccessible(true);
+
+		fieldSpbase.set(null, (Crossing) getObject(args[0]));
 	}
 
 	private void commandCleaner(String[] args) {
@@ -158,7 +171,7 @@ public class Proto {
 	}
 
 	private void commandPlower(String[] args) throws Exception {
-		Cleaner cleaner = (Cleaner) getObject("Cleaner" + args[0]);
+		Cleaner cleaner = (Cleaner) getObject(args[0]);
 
 		Snowplower sp = switch (args[1]) {
 			case "breaker" -> Snowplower.createWithBreaker(cleaner);
@@ -175,7 +188,7 @@ public class Proto {
 	}
 
 	private void commandBus(String[] args) throws Exception {
-		BusDriver driver = (BusDriver) getObject("BusDriver" + args[0]);
+		BusDriver driver = (BusDriver) getObject(args[0]);
 		Bus b = new Bus((Crossing) getObject(args[1]), (Crossing) getObject(args[2]), driver);
 
 		Field fieldBus = driver.getClass().getDeclaredField("bus");
@@ -184,8 +197,11 @@ public class Proto {
 		fieldBus.set(driver, b);
 	}
 
-	private void commandCar(String[] args) {
-		City.getCars().add(new Car((Crossing) getObject(args[0]), (Crossing) getObject(args[1])));
+	private void commandCar(String[] args) throws Exception {
+		Field field = City.class.getDeclaredField("cars");
+		Set<Car> cars = (Set<Car>) field.get(null);
+
+		cars.add(new Car((Crossing) getObject(args[0]), (Crossing) getObject(args[1])));
 	}
 
 	private void commandInitend(String[] args) {
@@ -193,12 +209,12 @@ public class Proto {
 	}
 
 	private void commandAddm(String[] args) {
-		Cleaner c = (Cleaner) getObject("Cleaner" + args[0]);
+		Cleaner c = (Cleaner) getObject(args[0]);
 		c.addMoney(Integer.parseInt(args[1]));
 	}
 
 	private void commandAddpoint(String[] args) {
-		BusDriver bd = (BusDriver) getObject("BusDriver" + args[0]);
+		BusDriver bd = (BusDriver) getObject(args[0]);
 		int amount = Integer.parseInt(args[1]);
 		for (int i = 0; i < amount; i++) {
 			bd.addPoint();
@@ -223,7 +239,7 @@ public class Proto {
 	private void commandAddhead(String[] args) throws Exception {
 		Snowplower sp = (Snowplower) getObject(args[0]);
 		HeadInventory hi = sp.getHeadInventory();
-		Field fieldHeads = sp.getClass().getDeclaredField("heads");
+		Field fieldHeads = hi.getClass().getDeclaredField("heads");
 		fieldHeads.setAccessible(true);
 
 		List<Head> heads = (List<Head>) fieldHeads.get(sp);
@@ -237,6 +253,7 @@ public class Proto {
 			case "sweeper" -> new Sweeper(sp);
 			default -> throw new Exception("Unknown head type in changehead");
 		};
+		heads.add(newHead);
 	}
 
 	private void commandPutsnow(String[] args) {
@@ -291,8 +308,8 @@ public class Proto {
 
 	private void commandClroad(String[] args) throws Exception {
 		Lane l = (Lane) getObject(args[0]);
-		forceSetField(l, "iceLevel", 0);
-		forceSetField(l, "snowLevel", 0);
+		l.meltIce();
+		l.cleanSnow();
 
 		Field field = l.getClass().getDeclaredField("salt");
 		field.setAccessible(true);
@@ -402,17 +419,23 @@ public class Proto {
 		// TODO nemtom
 	}
 
-	private void commandEndtime(String[] args) {
+	private void commandStoptime(String[] args) {
 		// TODO nemtom
+	}
+
+	private void commandEndtime(String[] args) {
+		// https://www.youtube.com/watch?v=t5vG4Be1Ci8
+		System.exit(22);
 	}
 
 	private void commandPasstime(String[] args) {
 		// TODO nemtom
 	}
 
-	private void commandLoad(String[] args) {
+	private void commandLoad(String[] args) throws Exception {
 		String filename = args[0];
-		Scanner sc = new Scanner(filename);
+		// TODO Így megy?
+		Scanner sc = new Scanner(new File(filename));
 		while (sc.hasNext()) {
 			readCommand(sc);
 		}
@@ -432,6 +455,10 @@ public class Proto {
 			case "random" -> System.out.println("Nemtom");
 			default -> throw new IllegalArgumentException("Illegal random type");
 		}
+	}
+
+	private void commandSetsnowing(String[] args) {
+		// TODO
 	}
 
 }
