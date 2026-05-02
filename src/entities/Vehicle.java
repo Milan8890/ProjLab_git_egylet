@@ -226,7 +226,7 @@ public abstract class Vehicle {
 	public boolean isInCrossing() {
 		boolean val = currentLane == null;
 		if (val) {
-			Logger.getGlobal().log(Level.INFO, "[Obj] is in crossing", this);
+			Logger.getGlobal().log(Level.INFO, "[Obj] is in a crossing", this);
 		} else {
 			Logger.getGlobal().log(Level.INFO, "[Obj] is not in crossing", this);
 		}
