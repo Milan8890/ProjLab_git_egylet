@@ -49,8 +49,4 @@ public class Car extends Vehicle {
 		this.work = work;
 		this.isGoingHome = false;
 	}
-
-	public void onTick() {
-
-	}
 }

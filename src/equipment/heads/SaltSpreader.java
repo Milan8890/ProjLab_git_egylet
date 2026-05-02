@@ -2,6 +2,9 @@ package equipment.heads;
 
 import user.Cleaner;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import entities.Snowplower;
 import equipment.Head;
 import playground.Lane;
@@ -20,6 +23,7 @@ import playground.Road;
  */
 public class SaltSpreader extends Head {
 
+	static final double SALT_CONSUME = 1;
 	/**
 	 * Konstruktor.
 	 * 
@@ -42,6 +46,13 @@ public class SaltSpreader extends Head {
 
 		// Ide kéne még valami ice/snowLevel elem a képletbe?
 		int payment = (int) (l.getRoad().getLength() * payPerMeter);
+
+		double amount = (l.getRoad().getLength() * SALT_CONSUME);
+		snowplower.useSalt(amount);
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment , new Object[] {snowplower , this, l});
+		Logger.getGlobal().log(Level.INFO, "[Obj] uses " + amount + "salt from [Obj]", new Object[] {this, snowplower});
+
 		return payment;
 	}
 
@@ -55,10 +66,20 @@ public class SaltSpreader extends Head {
 	@Override
 	public boolean canEnterLane(Lane l) {
 		if (l.hasSalt())
+		{
+			Logger.getGlobal().log(Level.INFO, "[Obj] blocks [Obj] from entering [Obj] ", new Object[] {this, snowplower, l});
 			return false;
-		double saltConsume = 1; // Ezt kell átírni, hogy 1 méterre mennyi só kerül.
-		double neededSalt = l.getRoad().getLength() * saltConsume;
+		}
+			
 
-		return snowplower.getSalt() >= neededSalt;
+		double neededAmount = l.getRoad().getLength() * SALT_CONSUME;
+
+		if(neededAmount <= snowplower.getSalt()) 
+			Logger.getGlobal().log(Level.INFO, "[Obj] allows [Obj] to enter [Obj] ", new Object[] {this, snowplower, l});
+		else
+			Logger.getGlobal().log(Level.INFO, "[Obj] blocks [Obj] from entering [Obj] ", new Object[] {this, snowplower, l});
+
+
+		return snowplower.getSalt() >= neededAmount;
 	}
 }

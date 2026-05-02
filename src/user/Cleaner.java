@@ -4,8 +4,11 @@ import java.awt.Color;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import entities.Snowplower;
+import playground.City;
 import playground.Crossing;
 
 /**
@@ -45,6 +48,7 @@ public class Cleaner extends Player {
 	 * @param m az hozzáadandó pénz összege
 	 */
 	public void addMoney(int m) {
+		Logger.getGlobal().log(Level.INFO, "[Obj] received " + m + "$", new Object[] {this});
 		money += m;
 	}
 
@@ -59,8 +63,11 @@ public class Cleaner extends Player {
 	public boolean removeMoney(int m) {
 		if (money >= m) {
 			money -= m;
+
+			Logger.getGlobal().log(Level.INFO, "[Obj] deducted " + m + "$  successfully", new Object[] {this});
 			return true;
 		} else {
+			Logger.getGlobal().log(Level.INFO, "[Obj] deducted " + m + "$ unsuccessfully", new Object[] {this});
 			return false;
 		}
 	}
@@ -74,6 +81,12 @@ public class Cleaner extends Player {
 	 * @return true, ha sikerült a vásárlás, false egyébként
 	 */
 	public boolean buyBreakerSnowplower() {
+		Snowplower p = Snowplower.createWithBreaker(this, City.getSnowplowBase());
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] bought [Obj] with starting head Breaker successfully", new Object[] {this, p});
+		Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy [Obj] with starting head Breaker, because not enough money", new Object[] {this, p});
+
+
 		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
@@ -86,6 +99,11 @@ public class Cleaner extends Player {
 	 * @return true, ha sikerült a vásárlás, false egyébként
 	 */
 	public boolean buyEjectorSnowplower() {
+		Snowplower p = Snowplower.createWithEjector(this, City.getSnowplowBase());
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] bought [Obj] with starting head Ejector successfully", new Object[] {this, p});
+		Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy [Obj] with starting head Ejector, because not enough money", new Object[] {this, p});
+		
 		throw new UnsupportedOperationException("Még nincs kész");
 	}
 

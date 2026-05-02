@@ -3,6 +3,8 @@ package equipment;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import entities.Snowplower;
 import equipment.heads.*;
@@ -54,6 +56,10 @@ public class HeadInventory {
 	 * @return HeadInventory ami a helyes elemeket tartalmazza
 	 */
 	public static HeadInventory createWithBreaker(Snowplower owner) {
+
+		HeadInventory inventory = new HeadInventory(owner, new Breaker(owner));
+		Logger.getGlobal().log(Level.INFO, "[Obj] created with owner [Obj] and starting head Breaker" , new Object[] {inventory, owner});
+
 		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
@@ -64,6 +70,10 @@ public class HeadInventory {
 	 * @return HeadInventory ami a helyes elemeket tartalmazza
 	 */
 	public static HeadInventory createWithEjector(Snowplower owner) {
+
+		HeadInventory inventory = new HeadInventory(owner, new Ejector(owner));
+		Logger.getGlobal().log(Level.INFO, "[Obj] created with owner [Obj] and starting head Ejector" , new Object[] {inventory, owner});
+
 		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
@@ -73,6 +83,7 @@ public class HeadInventory {
 	 * @return a jelenleg aktív fej
 	 */
 	public Head getActiveHead() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned active head [Obj]" , new Object[] {this, activeHead});
 		return activeHead;
 	}
 
@@ -82,6 +93,7 @@ public class HeadInventory {
 	 * @return a jelenleg megvehető Listingek
 	 */
 	public List<HeadListing> getShop() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned available head listings" , new Object[] {this});
 		return shop;
 	}
 
@@ -91,6 +103,8 @@ public class HeadInventory {
 	public void cycleActiveHead() {
 		int idx = heads.indexOf(activeHead);
 		activeHead = heads.get((idx + 1) % heads.size());
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] switched active head to [Obj]" , new Object[] {this, activeHead});
 	}
 
 	/**
@@ -100,6 +114,11 @@ public class HeadInventory {
 	 * @return sikeres volt-e a vásárlás
 	 */
 	public boolean buyListing(HeadListing listing) {
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] bought [Obj] successfully" , new Object[] {this, listing});
+		Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy [Obj], because not enough money", new Object[] {this, listing});
+		Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy [Obj], because not in crossing" , new Object[] {this, listing});
+
 		throw new UnsupportedOperationException("Még nincs kész");
 	}
 

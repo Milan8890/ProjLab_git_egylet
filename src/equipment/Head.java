@@ -47,6 +47,7 @@ public abstract class Head {
      * @return {@code true}, ha befordulhat a sávra, egyébként {@code false}. 
     */
     public boolean canEnterLane(Lane l) {
+        //IDE KÉNE LOG?
         return true;
     }
 }

@@ -2,7 +2,8 @@ package entities;
 
 import java.util.Arrays;
 import java.util.List;
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import playground.City;
 import playground.Crossing;
@@ -67,14 +68,21 @@ public class Bus extends Vehicle {
 			owner.addPoint();
 			this.isCurrentDestinationA = false;
 
+			Logger.getGlobal().log(Level.INFO, "[Obj] reached [Obj] end point" , new Object[] {this, lastCrossing});
+			Logger.getGlobal().log(Level.INFO, "[Obj] current destination [Obj]" , new Object[] {this, stationB});
+			Logger.getGlobal().log(Level.INFO, "[Obj] added point to [Obj]" , new Object[] {this, owner});
+
 		}
 		else if(this.stationB.equals(this.lastCrossing) && !this.isCurrentDestinationA) {
 			owner.addPoint();
 			this.isCurrentDestinationA = true;
-		}
-	}
 
-	public void onTick() {
+			Logger.getGlobal().log(Level.INFO, "[Obj] reached [Obj] end point" , new Object[] {this, lastCrossing});
+			Logger.getGlobal().log(Level.INFO, "[Obj] current destination [Obj]" , new Object[] {this, stationA});
+			Logger.getGlobal().log(Level.INFO, "[Obj] added point to [Obj]" , new Object[] {this, owner});
+		}
+
+
 
 	}
 }

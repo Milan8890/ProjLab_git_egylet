@@ -1,6 +1,8 @@
 package equipment;
 
 import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -33,6 +35,8 @@ public class HeadListing {
      * @return a megvehető fej
      */
     public Head getHead() {
+        Logger.getGlobal().log(Level.INFO, "[Obj]'s head is [Obj]" , new Object[] {this, head});
+
         return head;       
     }
     
@@ -42,6 +46,7 @@ public class HeadListing {
      * @return a fej ára
      */
     public int getPrice(){
+        Logger.getGlobal().log(Level.INFO, "[Obj]'s price is " + price , new Object[] {this});
         return price;
     }
 }

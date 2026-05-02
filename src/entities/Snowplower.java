@@ -2,6 +2,8 @@ package entities;
 
 import user.Cleaner;
 import java.util.Arrays;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import equipment.HeadInventory;
 import playground.Crossing;
@@ -25,6 +27,16 @@ import playground.Lane;
  * játékost.<br>
  */
 public class Snowplower extends Vehicle {
+
+	static final int SALT_PRICE = 25;
+	static final int BIO_PRICE = 25;
+	static final int GRAVEL_PRICE = 25;
+
+	static final int SALT_BUY_AMOUNT = 10;
+	static final int BIO_BUY_AMOUNT = 10;
+	static final int GRAVEL_BUY_AMOUNT = 50;
+
+
 	/**
 	 * A hókotrót birtokló takarító.
 	 */
@@ -105,6 +117,8 @@ public class Snowplower extends Vehicle {
 	 * @return A hókotrót birtokló játékos
 	 */
 	public Cleaner getCleaner() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned [Obj]" , new Object[] {this, owner});
+
 		return owner;
 	}
 
@@ -114,6 +128,8 @@ public class Snowplower extends Vehicle {
 	 * @return HeadInventory
 	 */
 	public HeadInventory getHeadInventory() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned [Obj]" , new Object[] {this, headInventory});
+
 		return headInventory;
 	}
 
@@ -123,6 +139,8 @@ public class Snowplower extends Vehicle {
 	 * @return mennyi Só áll rendelkezésre
 	 */
 	public double getSalt() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] has " + saltAmount + " salt" , new Object[] {this});
+
 		return saltAmount;
 	}
 
@@ -132,6 +150,8 @@ public class Snowplower extends Vehicle {
 	 * @return mennyi Biokerozin áll rendelkezésre
 	 */
 	public double getBio() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] has " + bioAmount + " bio" , new Object[] {this});
+
 		return bioAmount;
 	}
 
@@ -141,6 +161,8 @@ public class Snowplower extends Vehicle {
 	 * @return mennyi zuzalék áll rendelkezésre
 	 */
 	public double getGravel() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] has " + gravelAmount + " gravel" , new Object[] {this});
+
 		return gravelAmount;
 	}
 
@@ -151,11 +173,15 @@ public class Snowplower extends Vehicle {
 	 * @return Sikeres volt-e a vásárlás
 	 */
 	public boolean buySalt() {
-		int price = 25; // 25 pénzért vesz 10kg sót, ez így jó?
-		if (owner.removeMoney(price)) {
-			saltAmount += 10;
+		if(!isInCrossing())
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy salt, because not in crossing" , new Object[] {this});
+
+		if (owner.removeMoney(SALT_PRICE)) {
+			saltAmount += SALT_BUY_AMOUNT;
+			Logger.getGlobal().log(Level.INFO, "[Obj] bought salt successfully" , new Object[] {this});
 			return true;
 		} else {
+			Logger.getGlobal().log(Level.INFO, "[Snowplower] couldn’t buy salt, because not enough money" , new Object[] {this});
 			return false;
 		}
 	}
@@ -167,11 +193,15 @@ public class Snowplower extends Vehicle {
 	 * @return Sikeres volt-e a vásárlás
 	 */
 	public boolean buyBio() {
-		int price = 25; // 25 pénzért vesz 10l biot, ez így jó?
-		if (owner.removeMoney(price)) {
-			bioAmount += 10;
+		if(!isInCrossing())
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy bio, because not in crossing" , new Object[] {this});
+
+		if (owner.removeMoney(BIO_PRICE)) {
+			bioAmount += BIO_BUY_AMOUNT;
+			Logger.getGlobal().log(Level.INFO, "[Obj] bought bio successfully" , new Object[] {this});
 			return true;
 		} else {
+			Logger.getGlobal().log(Level.INFO, "[Snowplower] couldn’t buy bio, because not enough money" , new Object[] {this});
 			return false;
 		}
 	}
@@ -183,11 +213,15 @@ public class Snowplower extends Vehicle {
 	 * @return Sikeres volt-e a vásárlás
 	 */
 	public boolean buyGravel() {
-		int price = 25; // 25 pénzért vesz 50kg zuzalékot, ez így jó?
-		if (owner.removeMoney(price)) {
-			gravelAmount += 50;
+		if(!isInCrossing())
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy gravel, because not in crossing" , new Object[] {this});
+
+		if (owner.removeMoney(GRAVEL_PRICE)) {
+			gravelAmount += GRAVEL_BUY_AMOUNT;
+			Logger.getGlobal().log(Level.INFO, "[Obj] bought gravel successfully" , new Object[] {this});
 			return true;
 		} else {
+			Logger.getGlobal().log(Level.INFO, "[Snowplower] couldn’t buy gravel, because not enough money" , new Object[] {this});
 			return false;
 		}
 	}
@@ -198,6 +232,7 @@ public class Snowplower extends Vehicle {
 	 * @param saltAmount Az elhasznált só mennyisége
 	 */
 	public void useSalt(double a) {
+		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + "salt" , new Object[] {this});
 		saltAmount -= a; // Ennyi?
 	}
 
@@ -207,6 +242,7 @@ public class Snowplower extends Vehicle {
 	 * @param bioAmount Az elhasznált kerozin mennyisége
 	 */
 	public void useBio(double a) {
+		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + "bio" , new Object[] {this});
 		bioAmount -= a; // Ennyi?
 	}
 
@@ -216,14 +252,8 @@ public class Snowplower extends Vehicle {
 	 * @param bioAmount Az elhasznált kerozin mennyisége
 	 */
 	public void useGravel(double a) {
+		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + "gravel" , new Object[] {this});
 		gravelAmount -= a; // Ennyi?
-	}
-
-	/**
-	 * Sáv elhagyásakor tisztítja a sávot az aktív fejjel.
-	 */
-	public void onTick() {
-
 	}
 
 	/**

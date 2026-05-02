@@ -1,6 +1,9 @@
 package equipment.heads;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import entities.Snowplower;
 import equipment.Head;
 import playground.Lane;
@@ -38,6 +41,8 @@ public class Ejector extends Head {
 		double payPerMeter = 1; // Ezt kell átírni.
 
 		double payment = l.cleanSnow() * l.getRoad().getLength() * payPerMeter;
+		
+		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment , new Object[] {snowplower , this, l});
 		return (int) payment;
 	}
 }

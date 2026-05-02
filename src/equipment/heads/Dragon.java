@@ -1,6 +1,9 @@
 package equipment.heads;
 
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import entities.Snowplower;
 import equipment.Head;
 import playground.Lane;
@@ -18,6 +21,9 @@ import playground.Road;
  * Head
  */
 public class Dragon extends Head {
+
+	static final double SNOW_CONSUME = 1;
+	static final double ICE_CONSUME = 0.5;
 
 	/**
 	 * Konstruktor.
@@ -42,15 +48,22 @@ public class Dragon extends Head {
 		double payPerMeterIce = 0.5; // Ezt kell átírni.
 		double payPerMeterSnow = 1; // Ezt kell átírni.
 
-		double payment = (iceAmount * payPerMeterIce + snowAmount * payPerMeterSnow) * l.getRoad().getLength(); // 1 jég
-																												// = 0.5
-																												// pénz,
-																												// 1 hó
-																												// = 1
-																												// pénz,
-																												// ez
-																												// van
-																												// tesztben
+		// 1 jég
+		// = 0.5
+		// pénz,
+		// 1 hó
+		// = 1
+		// pénz,
+		// ez
+		// van
+		// tesztben
+		double payment = (iceAmount * payPerMeterIce + snowAmount * payPerMeterSnow) * l.getRoad().getLength(); 
+		
+		double amount = (snowAmount * SNOW_CONSUME + iceAmount * ICE_CONSUME) * l.getRoad().getLength();
+		snowplower.useBio(amount);
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment , new Object[] {snowplower , this, l});
+		Logger.getGlobal().log(Level.INFO, "[Obj] uses " + amount + "bio from [Obj]", new Object[] {this, snowplower});
 		return (int) payment;
 	}
 
@@ -63,10 +76,13 @@ public class Dragon extends Head {
 	 */
 	@Override
 	public boolean canEnterLane(Lane l) {
-		double snowConsume = 1; // Ezt a 2 értéket kell átírni a megfelelő fogyasztási konstansokra.
-		double iceConsume = 0.5;
 
-		double neededAmount = (l.getSnow() * snowConsume + l.getIce() * iceConsume) * l.getRoad().getLength();
+		double neededAmount = (l.getSnow() * SNOW_CONSUME + l.getIce() * ICE_CONSUME) * l.getRoad().getLength();
+
+		if(neededAmount <= snowplower.getBio()) 
+			Logger.getGlobal().log(Level.INFO, "[Obj] allows [Obj] to enter [Obj] ", new Object[] {this, snowplower, l});
+		else
+			Logger.getGlobal().log(Level.INFO, "[Obj] blocks [Obj] from entering [Obj] ", new Object[] {this, snowplower, l});
 
 		return neededAmount <= snowplower.getBio();
 	}

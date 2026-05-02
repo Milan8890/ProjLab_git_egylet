@@ -2,6 +2,8 @@ package playground;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Kereszteződést leíró objektum.
@@ -28,6 +30,7 @@ public class Crossing {
 	 * @return a kimenő utakat
 	 */
 	public Set<Road> getOutRoads() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] returned outgoing roads" , new Object[] {this});
 		return outRoads;
 	}
 
@@ -37,6 +40,7 @@ public class Crossing {
 	 * @param r a hozzáadandó út
 	 */
 	public void addOutRoad(Road r) {
+		Logger.getGlobal().log(Level.INFO, "[Obj] added [Obj] to outgoing roads" , new Object[] {this, r});
 		outRoads.add(r);
 	}
 	
