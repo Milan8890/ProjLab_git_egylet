@@ -19,6 +19,13 @@ import equipment.heads.*;
  * Új fej vételének lebonyolítása.
  */
 public class HeadInventory {
+
+	private static final int SWEEPERPRICE = 1000;
+	private static final int EJECTORPRICE = 2000;
+	private static final int BREAKERPRICE = 3000;
+	private static final int GRAVELSPREADERPRICE = 4000;
+	private static final int SALTSPREADERPRICE = 5000;
+	private static final int DRAGONPRICE = 6000;
 	/**
 	 * A Hókotró amihez a fejtároló tartozik
 	 */
@@ -61,6 +68,16 @@ public class HeadInventory {
 		Logger.getGlobal().log(Level.INFO, "[Obj] created with owner [Obj] and starting head Breaker" , new Object[] {inventory, owner});
 
 		throw new UnsupportedOperationException("Még nincs kész");
+		Head activeHead = new Breaker(owner);
+		HeadInventory ret = new HeadInventory(owner, activeHead);
+		ret.heads.add(activeHead);
+		ret.shop.add(new HeadListing( new Sweeper(owner) , SWEEPERPRICE));
+		ret.shop.add(new HeadListing( new Ejector(owner) , EJECTORPRICE));
+		ret.shop.add(new HeadListing( new GravelSpreader(owner) , GRAVELSPREADERPRICE));
+		ret.shop.add(new HeadListing( new SaltSpreader(owner) , SALTSPREADERPRICE));
+		ret.shop.add(new HeadListing( new Dragon(owner) , DRAGONPRICE));
+		ret.activeHead=activeHead;
+		return ret;
 	}
 
 	/**
@@ -76,6 +93,16 @@ public class HeadInventory {
 
 		throw new UnsupportedOperationException("Még nincs kész");
 	}
+		Head activeHead = new Ejector(owner);
+		HeadInventory ret = new HeadInventory(owner, activeHead);
+		ret.heads.add(activeHead);
+		ret.shop.add(new HeadListing( new Sweeper(owner) , SWEEPERPRICE));
+		ret.shop.add(new HeadListing( new Breaker(owner) , BREAKERPRICE));
+		ret.shop.add(new HeadListing( new GravelSpreader(owner) , GRAVELSPREADERPRICE));
+		ret.shop.add(new HeadListing( new SaltSpreader(owner) , SALTSPREADERPRICE));
+		ret.shop.add(new HeadListing( new Dragon(owner) , DRAGONPRICE));
+		ret.activeHead=activeHead;
+		return ret;}
 
 	/**
 	 * Visszaadja a fejtárolóban jelenleg aktív fejet
@@ -120,6 +147,12 @@ public class HeadInventory {
 		Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy [Obj], because not in crossing" , new Object[] {this, listing});
 
 		throw new UnsupportedOperationException("Még nincs kész");
+		if(snowplower.getCleaner().removeMoney(listing.price)){
+			heads.add(listing.head);
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 }

@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import equipment.Head;
 import equipment.HeadInventory;
 import playground.Crossing;
 import playground.Lane;
@@ -65,8 +66,12 @@ public class Snowplower extends Vehicle {
 	 * @param spawn     a kereszteződés ahol a hókotró megjelenik
 	 * @param inventory a fejtároló amivel a hókotró rendelkezik
 	 */
-	private Snowplower(Cleaner cleaner, Crossing spawn) {
-		this.cleaner = cleaner;
+	private Snowplower(Cleaner owner, Crossing spawn) {
+		this.owner = owner;
+		this.lastCrossing = spawn;
+		saltAmount=0;
+		bioAmount=0;
+		gravelAmount=0;
 	}
 
 	/**
@@ -78,25 +83,28 @@ public class Snowplower extends Vehicle {
 	}
 
 	/**
-	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel
-	 * tér vissza.
+	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel tér vissza.
+	 * @return true
 	 */
+	@Override
 	public boolean stepWaitBecauseOfStuck() {
 		return true;
 	}
 
 	/**
-	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel
-	 * tér vissza.
+	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel tér vissza.
+	 * @return true
 	 */
+	@Override
 	public boolean stepStuckInSnow() {
 		return true;
 	}
 
 	/**
-	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel
-	 * tér vissza.
+	 * Nem csinál semmit, mert a hókotró nem tud megakadni a hóban. True értékkel tér vissza.
+	 * @return true
 	 */
+	@Override
 	public boolean stepSlipOnIce() {
 		return true;
 	}
@@ -105,10 +113,10 @@ public class Snowplower extends Vehicle {
 	 * Az aktív fejével letakarítja a sávot amin van, majd meghívja az őse
 	 * reachedCrossing()-ját.
 	 */
+	@Override
 	public void reachedCrossing() {
-		int payment = headInventory.getActiveHead().clean(this.currentLane);
-		reachedCrossing();
-		return;
+		owner.addMoney(headInventory.getActiveHead().clean(currentLane)); //Hogy kéne átadni a sávot?
+		super.reachedCrossing();
 	}
 
 	/**
@@ -165,7 +173,11 @@ public class Snowplower extends Vehicle {
 
 		return gravelAmount;
 	}
+	
 
+	private static final int SALTPRICE = 25; 
+	private static final int SALTAMOUNTPERPURCHASE = 10; //TODO: ezt ki kéne szervezni valszeg innen, de itthagyom
+	
 	/**
 	 * Vesz egy adag sót. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
 	 * kereszteződésben van.
@@ -189,6 +201,9 @@ public class Snowplower extends Vehicle {
 		}
 	}
 
+	private static final int BIOPRICE = 25; //25 pénzért vesz 10l biot, ez így jó? 
+	private static final int BIOAMOUNTPERPURCHASE = 10; //TODO: ezt ki kéne szervezni valszeg innen, de itthagyom
+	
 	/**
 	 * Vesz egy adag kerozint. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
 	 * kereszteződésben van.
@@ -212,6 +227,10 @@ public class Snowplower extends Vehicle {
 		}
 	}
 
+
+	private static final int GRAVELPRICE = 25; //25 pénzért vesz 50kg zuzalékot, ez így jó?
+	private static final int GRAVELAMOUNTPERPURCHASE = 50; //TODO: ezt ki kéne szervezni valszeg innen, de itthagyom
+	private static final int MAXGRAVEL = 1000;
 	/**
 	 * Vesz egy adag zuzalékot. Hamissal tér vissza, ha nincs rá elég pénz, vagy nem
 	 * kereszteződésben van.
@@ -273,7 +292,9 @@ public class Snowplower extends Vehicle {
 	 * @return a létrehozott Hókotró
 	 */
 	public static Snowplower createWithEjector(Cleaner owner, Crossing base) {
-		throw new UnsupportedOperationException("Még nincs kész");
+		Snowplower sp = new Snowplower(owner, base);
+		sp.headInventory = HeadInventory.createWithEjector(sp);
+		return sp;
 	}
 
 	/**
@@ -284,6 +305,8 @@ public class Snowplower extends Vehicle {
 	 * @return a létrehozott Hókotró
 	 */
 	public static Snowplower createWithBreaker(Cleaner owner, Crossing base) {
-		throw new UnsupportedOperationException("Még nincs kész");
+		Snowplower sp = new Snowplower(owner, base);
+		sp.headInventory = HeadInventory.createWithBreaker(sp);
+		return sp;
 	}
 }

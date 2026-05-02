@@ -1,7 +1,5 @@
 package user;
 
-import java.awt.Color;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.logging.Level;
@@ -30,16 +28,21 @@ public class Cleaner extends Player {
 	 * A játékos által irányított hókotrók halmaza.
 	 */
 	Set<Snowplower> snowplowers;
+	
+	private static final int BREAKER_SNOWPLOWER_PRICE = 13000;
+	private static final int EJECTOR_SNOWPLOWER_PRICE = 12000;
+
+
 
 	/**
-	 * Konstruktor, létrehoz egy új takarító játékost.
+	 * Konstruktor, létrehoz egy új takarító játékost. A játékosnak kezdetben nincs pénze se hókotrója.
 	 * 
 	 * @param name a játékos neve
 	 */
-	public Cleaner(String name, Color color) {
-		super(null);
-		throw new UnsupportedOperationException("Még nincs kész");
-		// BTW ide ki kell venni a color-t
+	public Cleaner(String name) {
+		super(name);
+		money=0;
+		snowplowers = new HashSet<>();
 	}
 
 	/**
@@ -88,6 +91,13 @@ public class Cleaner extends Player {
 
 
 		throw new UnsupportedOperationException("Még nincs kész");
+		if(removeMoney(BREAKER_SNOWPLOWER_PRICE)){
+			snowplowers.add(Snowplower.createWithBreaker(this, City.getSnowplowBase()));
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 
 	/**
@@ -105,6 +115,13 @@ public class Cleaner extends Player {
 		Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy [Obj] with starting head Ejector, because not enough money", new Object[] {this, p});
 		
 		throw new UnsupportedOperationException("Még nincs kész");
+		if(removeMoney(EJECTOR_SNOWPLOWER_PRICE)){
+			snowplowers.add(Snowplower.createWithEjector(this, City.getSnowplowBase()));
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 
 }
