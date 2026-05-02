@@ -1,0 +1,9 @@
+crossing 2
+road Crossing1 Crossing2 10 1
+cleaner test
+putsalt Lane1_1 Cleaner1
+setrand true
+setsnowing true
+initend
+passtime 10
+info Lane1_1

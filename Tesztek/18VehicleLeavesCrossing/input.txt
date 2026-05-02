@@ -1,0 +1,7 @@
+crossing 2
+road Crossing1 Crossing2 10 1
+car Crossing1 Crossing2
+putsnow Road1 Lane1_1 10
+extpath Car1 Lane1_1
+initend
+passtime 200

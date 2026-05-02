@@ -1,0 +1,130 @@
+City returned crossings
+Crossing1 created
+City returned crossings
+Crossing2 created
+Cleaner1 created
+City returned Crossing1 as snowplower base
+Snowplower1_1 created
+[ERROR]Path-en még csiszolni kell (kezdési ellenõrzés)
+PathS_1_1 created
+Ejector1_1 created
+HeadInventory1_1 created
+Sweeper1_1 created
+HeadListing1_1 created
+Breaker1_1 created
+HeadListing1_1 created
+GravelSpreader1_1 created
+HeadListing1_1 created
+SaltSpreader1_1 created
+HeadListing1_1 created
+Dragon1_1 created
+HeadListing1_1 created
+HeadInventory1_1 created with owner Snowplower1_1 and starting head Ejector
+Lane1_1 created
+Lane1_2 created
+Lane1_3 created
+Lane1_4 created
+Lane1_5 created
+Lane1_6 created
+Lane1_7 created
+Lane1_8 created
+Lane1_9 created
+Lane1_10 created
+Lane1_11 created
+Lane1_12 created
+Lane1_13 created
+Lane1_14 created
+Lane1_15 created
+Lane1_16 created
+Lane1_17 created
+Lane1_18 created
+Lane1_19 created
+Lane1_20 created
+Lane1_21 created
+Lane1_22 created
+Lane1_23 created
+Lane1_24 created
+Lane1_25 created
+Lane1_26 created
+Lane1_27 created
+Lane1_28 created
+Lane1_29 created
+Lane1_30 created
+Lane1_31 created
+Lane1_32 created
+Lane1_33 created
+Lane1_34 created
+Lane1_35 created
+Lane1_36 created
+Lane1_37 created
+Lane1_38 created
+Lane1_39 created
+Lane1_40 created
+Lane1_41 created
+Lane1_42 created
+Lane1_43 created
+Lane1_44 created
+Lane1_45 created
+Lane1_46 created
+Lane1_47 created
+Lane1_48 created
+Lane1_49 created
+Lane1_50 created
+Lane1_51 created
+Lane1_52 created
+Lane1_53 created
+Lane1_54 created
+Lane1_55 created
+Lane1_56 created
+Lane1_57 created
+Lane1_58 created
+Lane1_59 created
+Lane1_60 created
+Lane1_61 created
+Lane1_62 created
+Lane1_63 created
+Lane1_64 created
+Lane1_65 created
+Lane1_66 created
+Lane1_67 created
+Lane1_68 created
+Lane1_69 created
+Lane1_70 created
+Lane1_71 created
+Lane1_72 created
+Lane1_73 created
+Lane1_74 created
+Lane1_75 created
+Lane1_76 created
+Lane1_77 created
+Lane1_78 created
+Lane1_79 created
+Lane1_80 created
+Lane1_81 created
+Lane1_82 created
+Lane1_83 created
+Lane1_84 created
+Lane1_85 created
+Lane1_86 created
+Lane1_87 created
+Lane1_88 created
+Lane1_89 created
+Lane1_90 created
+Lane1_91 created
+Lane1_92 created
+Lane1_93 created
+Lane1_94 created
+Lane1_95 created
+Lane1_96 created
+Lane1_97 created
+Lane1_98 created
+Lane1_99 created
+Lane1_100 created
+Road1 created between Crossing1 and Crossing2 with length 100.0 and 100 lanes
+[ERROR]Error while running the following command:
+putvehicle Snowplower1_1 Lane1_2
+ Error: java.lang.NoSuchFieldException: currentLane
+[ERROR]Error while running the following command:
+putgravel Lane1_2 100 true
+ Error: java.lang.IllegalArgumentException: Incorrect true/false value
+Inicialization done

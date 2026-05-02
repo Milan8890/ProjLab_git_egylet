@@ -1,0 +1,6 @@
+crossing 2
+road Crossing1 Crossing2 10 3
+initend
+info Road1
+info Crossing1
+info Crossing2

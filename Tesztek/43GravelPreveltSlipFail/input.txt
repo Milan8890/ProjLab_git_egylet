@@ -1,0 +1,10 @@
+crossing 2
+car Crossing1 Crossing2
+road Crossing1 Crossing2 100 1
+putvehicle Car1 Lane1_1
+putice Lane1_1 100
+putgravel Lane1_1 true
+putsnow Lane1_1 100
+setrand true
+initend
+passtime 200

@@ -1,0 +1,11 @@
+crossing 2
+road Crossing1 Crossing2 100 1
+spbase Crossing1
+cleaner test
+plower Cleaner1 breaker
+addm Cleaner1 1000
+putvehicle Snowplower1_1 Lane1_1
+initend
+buygravel Snowplower1_1
+INFO Snowplower1_1
+INFO Cleaner1

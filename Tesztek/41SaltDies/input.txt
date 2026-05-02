@@ -1,0 +1,7 @@
+crossing 2
+cleaner test
+road Crossing1 Crossing2 100 1
+putsalt Lane1_1 Cleaner1
+initend
+passtime 10000
+info Lane1_1

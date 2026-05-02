@@ -1,0 +1,9 @@
+City returned crossings
+Crossing1 created
+City returned crossings
+Crossing2 created
+BusDriver1 created
+[ERROR]Error while running the following command:
+bus Driver1 Crossing1 Crossing2
+ Error: java.lang.NullPointerException
+Inicialization done

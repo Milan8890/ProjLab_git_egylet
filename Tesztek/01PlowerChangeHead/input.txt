@@ -6,4 +6,6 @@ addhead Snowplower1_1 dragon
 addhead Snowplower1_1 ejector
 initend
 cyclehead Snowplower1_1
+INFO HeadInventory1_1
 cyclehead Snowplower1_1 
+INFO HeadInventory1_1
