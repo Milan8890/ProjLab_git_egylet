@@ -2,6 +2,8 @@ package entities;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import playground.City;
 import playground.Crossing;
@@ -63,7 +65,7 @@ public abstract class Vehicle {
 		this.lastCrossing = lastCrossing;
 		this.currentLane = null;
 		this.laneProgress = 0.0;
-		this.path = new Path(this);
+		// this.path = new Path(this);
 		this.isStuck = false;
 		this.isCrashed = false;
 		this.revTimer = 0;

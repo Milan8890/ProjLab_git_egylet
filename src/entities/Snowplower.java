@@ -12,6 +12,7 @@ import equipment.HeadInventory;
 import playground.City;
 import playground.Crossing;
 import playground.Lane;
+import playground.Path;
 
 /**
  * 
@@ -77,6 +78,7 @@ public class Snowplower extends Vehicle {
 		bioAmount = 0;
 		gravelAmount = 0;
 		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
+		this.path = new Path(this);
 	}
 
 	/**
@@ -314,6 +316,7 @@ public class Snowplower extends Vehicle {
 	 * @return a létrehozott Hókotró
 	 */
 	public static Snowplower createWithBreaker(Cleaner owner) {
+
 		Snowplower sp = new Snowplower(owner);
 		sp.headInventory = HeadInventory.createWithBreaker(sp);
 		return sp;

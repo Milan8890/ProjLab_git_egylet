@@ -43,7 +43,7 @@ public class Proto {
 
 	private Object getObject(String s) {
 		for (Entry<Object, String> e : objectMap.entrySet()) {
-			if (e.getValue() == s)
+			if (e.getValue().equals(s))
 				return e.getKey();
 		}
 		return null;
@@ -137,7 +137,8 @@ public class Proto {
 			}
 		} catch (Exception e) {
 			Logger.getGlobal()
-					.severe("Error while running the following command:\n" + line + "\n Error: " + e.getMessage());
+					.severe("Error while running the following command:\n" + line + "\n Error: " + e);
+			e.printStackTrace();
 		}
 	}
 
@@ -156,7 +157,7 @@ public class Proto {
 	}
 
 	private void commandSpbase(String[] args) throws Exception {
-		Field fieldSpbase = City.class.getDeclaredField("heads");
+		Field fieldSpbase = City.class.getDeclaredField("snowplowBase");
 		fieldSpbase.setAccessible(true);
 
 		fieldSpbase.set(null, (Crossing) getObject(args[0]));
@@ -242,7 +243,7 @@ public class Proto {
 		Field fieldHeads = hi.getClass().getDeclaredField("heads");
 		fieldHeads.setAccessible(true);
 
-		List<Head> heads = (List<Head>) fieldHeads.get(sp);
+		List<Head> heads = (List<Head>) fieldHeads.get(hi);
 
 		Head newHead = switch (args[1]) {
 			case "breaker" -> new Breaker(sp);
