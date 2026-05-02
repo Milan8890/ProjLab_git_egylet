@@ -39,8 +39,10 @@ public class Path {
 	}
 
 	/**
-	 * Ha érvényes a megadott sáv, akkor a pathLanes végére rakja, és megváltoztatja a lastCrossing-ot.
-	 * Ha nem érvényes a hozzáadott sáv, akkor Hamissal tér vissza, különben Igazzal.
+	 * Ha érvényes a megadott sáv, akkor a pathLanes végére rakja, és megváltoztatja
+	 * a lastCrossing-ot.
+	 * Ha nem érvényes a hozzáadott sáv, akkor Hamissal tér vissza, különben
+	 * Igazzal.
 	 * 
 	 * @param l A sáv, amit hozzá szeretnénk adni.
 	 * @return Sikerült-e hozzáadni a sávot
@@ -49,15 +51,15 @@ public class Path {
 		boolean isValid = false;
 		Crossing laneFromCrossing = l.getRoad().fromCrossing;
 
-		if(laneFromCrossing == lastCrossing){
+		if (laneFromCrossing == lastCrossing) {
 			isValid = true;
 			pathLanes.add(l);
 
 			lastCrossing = l.getRoad().toCrossing;
-			Logger.getGlobal().log(Level.INFO, "[Obj] extended with [Obj] successfully" , new Object[] {this, l});
-		}
-		else{
-			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t extend with [Obj], because it’s not connected" , new Object[] {this, l});
+			Logger.getGlobal().log(Level.INFO, "[Obj] extended with [Obj] successfully", new Object[] { this, l });
+		} else {
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn't extend with [Obj], because it's not connected",
+					new Object[] { this, l });
 		}
 
 		return isValid;

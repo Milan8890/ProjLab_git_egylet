@@ -50,13 +50,13 @@ public class Lane {
 	 * <p>
 	 * Olvasztja a havat és jeget, kifizeti a játékost.
 	 */
-	class Salt {
-		private static final double CLEANSNOWAMOUNT = 0.4; //Ezek mennyiek legyenek?
-		private static final double CLEANICEAMOUNT = 0.4;
+	public class Salt {
+		private static final double CLEANSNOWAMOUNT = 0.1; // Ezek mennyiek legyenek?
+		private static final double CLEANICEAMOUNT = 0.1;
 		static final double PAY_ICE = 0.2;
 		static final double PAY_SNOW = 0.3;
-    
-    Lane lane;
+
+		Lane lane;
 		/**
 		 * A sót birtokló cleaner.
 		 */
@@ -64,7 +64,7 @@ public class Lane {
 		/**
 		 * A só élettartama, meddig marad a sávon
 		 */
-		double lifetime; 	//Ezt hogy kellene csökkenteni?
+		double lifetime; // Ezt hogy kellene csökkenteni?
 
 		private static final double STARTING_LIFETIME = 100.0;
 
@@ -76,41 +76,43 @@ public class Lane {
 		Salt(Cleaner c, Lane l) {
 			owner = c;
 			lifetime = STARTING_LIFETIME;
-      lane = l;
-			Logger.getGlobal().log(Level.INFO, "[Obj] created with owner [Obj] and lifetime [Obj]" , new Object[] {this, c, lifetime});
-      
+			lane = l;
+			Logger.getGlobal().log(Level.INFO, "[Obj] created with owner [Obj] and lifetime [Obj]",
+					new Object[] { this, c, lifetime });
+
 		}
 
 		/**
-		 * Óraütésre letakarít egy adag havat és jeget a sávról, csökkenti a lifetime-ot, 
-		 * és fizet a játékosnak annak függvényében hogy mennyi havat és jeget olvasztott el.
+		 * Óraütésre letakarít egy adag havat és jeget a sávról, csökkenti a
+		 * lifetime-ot,
+		 * és fizet a játékosnak annak függvényében hogy mennyi havat és jeget
+		 * olvasztott el.
 		 */
-		public void onTick() {  //Ronda de igy nem egybol veszi le az egesz havat es jeget, hanem fokozatos
-			double onSnow = cleanSnow();
-			double onIce = meltIce();
-			double payment = 0;
-
-			if(CLEANICEAMOUNT < onIce) {
-				addSnow(onIce * (1-CLEANICEAMOUNT) );
-				trampleSnow();
-				payment += (onIce * CLEANICEAMOUNT) * PAY_ICE * road.length;
-
-				Logger.getGlobal().log(Level.INFO, "[Obj] melted [Obj] ice from lane, paid [Obj] [Obj]$ " + lifetime , 
-						new Object[] {this, onIce * CLEANICEAMOUNT, (onIce * CLEANICEAMOUNT * PAY_ICE * road.length), owner});
+		public void onTick() {
+			int payment = 0;
+			if (snowLevel > CLEANSNOWAMOUNT) {
+				snowLevel -= CLEANSNOWAMOUNT;
+				payment += CLEANSNOWAMOUNT * road.getLength();
+				Logger.getGlobal().log(Level.INFO,
+						"[Obj] melted " + CLEANSNOWAMOUNT + " snow from lane, paid [Obj] " + payment + "$",
+						new Object[] { this, owner });
+				owner.addMoney(payment);
 			}
-			if(CLEANSNOWAMOUNT < onSnow) {
-				addSnow(onSnow * (1-CLEANSNOWAMOUNT) );
-				payment += (onSnow * CLEANSNOWAMOUNT) * PAY_SNOW * road.length;
-
-				Logger.getGlobal().log(Level.INFO, "[Obj] melted [Obj] snow from lane, paid [Obj] [Obj]$ " + lifetime , 
-						new Object[] {this, onSnow * CLEANSNOWAMOUNT, (onSnow * CLEANSNOWAMOUNT * PAY_SNOW * road.length), owner});
+			if (iceLevel > CLEANICEAMOUNT) {
+				iceLevel -= CLEANICEAMOUNT;
+				payment += CLEANICEAMOUNT * road.getLength() * 2;
+				Logger.getGlobal().log(Level.INFO,
+						"[Obj] melted " + CLEANICEAMOUNT + " ice from lane, paid [Obj] " + payment + "$",
+						new Object[] { this, owner });
+				owner.addMoney(payment);
 			}
-
-			owner.addMoney((int) payment);
-
 			lifetime--;
-			Logger.getGlobal().log(Level.INFO, "[Obj] lifetime decreased to [Obj] " + lifetime , new Object[] {this, lifetime});
-			
+			Logger.getGlobal().log(Level.INFO, "[Obj] lifetime decreased to " + lifetime, this);
+
+			if (lifetime <= 0) {
+				salt = null;
+				Logger.getGlobal().log(Level.INFO, "[Obj] expired", this);
+			}
 		}
 	}
 
