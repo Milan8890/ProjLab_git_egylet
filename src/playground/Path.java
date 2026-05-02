@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import entities.Vehicle;
+
 /**
  * Egy jármű által követett útvonalat leíró osztály.
  * <p>
@@ -14,6 +16,8 @@ import java.util.logging.Logger;
  * Útvonal helyességének ellenőrzése, nyilvántartása.
  */
 public class Path {
+	Vehicle vehicle;
+
 	/**
 	 * Azok a sávok, amin a jármű végig fog menni.
 	 */
@@ -26,7 +30,7 @@ public class Path {
 	/**
 	 * Konstruktor
 	 */
-	public Path() {
+	public Path(Vehicle v) {
 		pathLanes = new ArrayList<>();
 		lastCrossing = null;
 		Logger.getGlobal().severe("Path-en még csiszolni kell (kezdési ellenőrzés)");

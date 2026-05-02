@@ -234,10 +234,10 @@ public class Snowplower extends Vehicle {
 	 * Létrehoz és visszaad egy új hókotrót hányó fejjel.
 	 * 
 	 * @param owner a játékos aki irányítja a hókotrót
-	 * @param base  a kereszteződés ahol a hókotró megjelenik
 	 * @return a létrehozott Hókotró
 	 */
-	public static Snowplower createWithEjector(Cleaner owner, Crossing base) {
+	public static Snowplower createWithEjector(Cleaner owner) {
+		// TODO kereszteződést kivettem, mert le tudja kérdezni a city-től.
 		throw new UnsupportedOperationException("Még nincs kész");
 	}
 
@@ -245,10 +245,10 @@ public class Snowplower extends Vehicle {
 	 * Létrehoz és visszaad egy új hókotrót jégtörő fejjel.
 	 * 
 	 * @param owner a játékos aki irányítja a hókotrót
-	 * @param base  a kereszteződés ahol a hókotró megjelenik
 	 * @return a létrehozott Hókotró
 	 */
-	public static Snowplower createWithBreaker(Cleaner owner, Crossing base) {
+	public static Snowplower createWithBreaker(Cleaner owner) {
+		// TODO kereszteződést kivettem, mert le tudja kérdezni a city-től.
 		throw new UnsupportedOperationException("Még nincs kész");
 	}
 }

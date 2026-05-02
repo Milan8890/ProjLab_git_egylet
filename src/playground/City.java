@@ -1,6 +1,7 @@
 package playground;
 
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
 
 import entities.*;
@@ -21,19 +22,19 @@ public class City {
 	/**
 	 * A városban lévő kereszteződések.
 	 */
-	static Set<Crossing> crossings;
+	static Set<Crossing> crossings = new HashSet<>();
 	/**
 	 * A városban lévő utak.
 	 */
-	static Set<Road> roads;
+	static Set<Road> roads = new HashSet<>();
 	/**
 	 * A városban lévő autók.
 	 */
-	static Set<Car> cars;
+	static Set<Car> cars = new HashSet<>();
 	/**
 	 * A hókotróbázis.
 	 */
-	static Crossing snowplowBase;
+	static Crossing snowplowBase = null;
 
 	/**
 	 * A várost inicializáló függvény
@@ -54,6 +55,26 @@ public class City {
 	 */
 	public static Crossing getSnowplowBase() {
 		return snowplowBase;
+	}
+
+	/**
+	 * Hókotróközpont beállítása
+	 * 
+	 * @param c A hókotróközpont
+	 */
+	public static void setSnowplowBase(Crossing c) {
+		// TODO ezt csak felvettem, mert szerintem kell, hogy menjen a proto
+		snowplowBase = c;
+	}
+
+	/**
+	 * Autók lekérdezése.
+	 * 
+	 * @return Az autók halmaza
+	 */
+	public static Set<Car> getCars() {
+		// TODO ezt is csak beraktam a proto miatt
+		return cars;
 	}
 
 	/**

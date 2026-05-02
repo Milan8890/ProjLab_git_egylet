@@ -5,6 +5,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HexFormat;
+import java.util.Map.Entry;
 import java.util.logging.Handler;
 import java.util.logging.LogRecord;
 import java.util.logging.Logger;
@@ -20,13 +21,18 @@ import playground.Lane;
 import playground.Path;
 import playground.Road;
 import playground.Tunnel;
+import playground.Lane.Salt;
 import user.BusDriver;
 import user.Cleaner;
 import user.Player;
 
 public class OwnHandler extends Handler {
 	// TODO nem az, csak teszt
-	public HashMap<Object, String> objectMap = new HashMap<>();
+	public HashMap<Object, String> objectMap;
+
+	public OwnHandler(HashMap<Object, String> objmap) {
+		objectMap = objmap;
+	}
 
 	@Override
 	public void publish(LogRecord record) {
@@ -48,7 +54,7 @@ public class OwnHandler extends Handler {
 		}
 
 		for (Object object : args) {
-			message = message.replaceFirst("\\[Obj\\]", getObjectName(object));
+			message = message.replaceFirst("\\[Obj\\]", getOrCreateObjectName(object));
 		}
 
 		System.out.println(message);
@@ -79,7 +85,7 @@ public class OwnHandler extends Handler {
 		return classString;
 	}
 
-	private String getObjectName(Object o) {
+	private String getOrCreateObjectName(Object o) {
 		if (!objectMap.containsKey(o)) {
 			addObject(o);
 		}
@@ -88,6 +94,7 @@ public class OwnHandler extends Handler {
 	}
 
 	private void addObject(Object obj) {
+
 		switch (obj) {
 			case Cleaner o -> createSingle(o);
 			case BusDriver o -> createSingle(o);
@@ -99,10 +106,14 @@ public class OwnHandler extends Handler {
 			case Bus o -> createFromOwner(o, "driver");
 			// case Salt o -> createFromOwner(o, "owner");
 			case Head o -> createFromOwner(o, "snowplower"); // TODO ez OK?
+			case Salt o -> createFromOwner(o, "lane"); // TODO fel kellett venni hozzá egy lane-t
 
 			case Snowplower o -> createFromOwnerPlusID(o, "cleaner");
 			case Lane o -> createFromOwnerPlusID(o, "road");
 			// case HeadListing o -> createFromOwnerPlusID(o, "snowplower");
+			case HeadListing o -> createName(o);
+			case Path o -> createName(o);
+
 			default ->
 				Logger.getGlobal().severe("No type found for " + getTypename(obj) + " in addObject");
 		}
@@ -124,7 +135,7 @@ public class OwnHandler extends Handler {
 		String name = getTypename(o);
 
 		Object owner = forceGetField(o, ownerFieldName);
-		String ownerName = getObjectName(owner);
+		String ownerName = getOrCreateObjectName(owner);
 		String ID = ownerName.substring(getTypename(owner).length());
 
 		objectMap.put(o, name + ID);
@@ -135,7 +146,7 @@ public class OwnHandler extends Handler {
 		String name = getTypename(o);
 
 		Object owner = forceGetField(o, ownerFieldName);
-		String ownerName = getObjectName(owner);
+		String ownerName = getOrCreateObjectName(owner);
 		String ID = ownerName.substring(getTypename(owner).length());
 
 		int number = 1;
@@ -148,32 +159,54 @@ public class OwnHandler extends Handler {
 		objectMap.put(o, completeName);
 	}
 
-	public void createName(Path b) {
+	public void createName(Path o) {
+		String name = getTypename(o);
 
+		Object owner = forceGetField(o, "vehicle");
+		String ownerName = getOrCreateObjectName(owner);
+		String ID = ownerName.substring(getTypename(owner).length());
+
+		String completeName = "Temporary value for Path name";
+		switch (owner) {
+			case Car c -> {
+				completeName = name + "C_0_" + ID;
+			}
+			case Bus b -> {
+				completeName = name + "B_0_" + ID;
+			}
+			case Snowplower sp -> {
+				completeName = name + "S_" + ID;
+			}
+			default -> Logger.getGlobal().severe("Vehicle type didn't fit in createName for Path.");
+		}
+
+		objectMap.put(o, completeName);
 	}
 
-	public void createName(HeadInventory hi) {
+	public void createName(HeadListing o) {
+		String name = getTypename(o);
 
+		Head head = (Head) forceGetField(o, "head");
+		Snowplower snowplower = (Snowplower) forceGetField(head, "snowplower");
+		String snowplowerName = getOrCreateObjectName(snowplower);
+		String ID = snowplowerName.substring(getTypename(snowplower).length());
+
+		objectMap.put(o, name + ID);
 	}
+	// public void createName(HeadInventory hi) {
 
-	public void createName(HeadListing hl) {
-
-	}
+	// }
 
 	// lehet több?
-	public void createName(Head h) {
+	// public void createName(Head h) {
 
-	}
+	// }
 
-	public void createName(Tunnel t) {
+	// public void createName(Tunnel t) {
 
-	}
+	// }
 
-	public void createName(Lane l) {
-
-	}
-
-	// public void createName(Salt s) {
+	// public void createName(Lane l) {
 
 	// }
 

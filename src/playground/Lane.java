@@ -50,7 +50,9 @@ public class Lane {
 	 * <p>
 	 * Olvasztja a havat és jeget, kifizeti a játékost.
 	 */
-	class Salt {
+	public class Salt {
+		Lane lane;
+
 		/**
 		 * A sót birtokló cleaner.
 		 */
@@ -60,13 +62,17 @@ public class Lane {
 		 */
 		double lifetime;
 
+		private static final double STARTING_LIFETIME = 100.0;
+
 		/**
 		 * Konstruktor
 		 * 
 		 * @param c a cleaner, akihez a só tartozik
 		 */
-		Salt(Cleaner c) {
+		Salt(Cleaner c, Lane l) {
 			owner = c;
+			lane = l;
+			lifetime = STARTING_LIFETIME;
 		}
 
 		/**
@@ -135,7 +141,7 @@ public class Lane {
 	 * @param c a cleaner, akinek a sója rákerül a sávra
 	 */
 	public void setSalt(Cleaner c) {
-		salt = new Salt(c);
+		salt = new Salt(c, this);
 	}
 
 	/**

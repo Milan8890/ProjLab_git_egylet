@@ -22,8 +22,10 @@ public class App {
 	static HashMap<Object, String> objectMap = new HashMap<Object, String>();
 
 	public static void main(String[] args) throws Exception {
+		Proto proto = new Proto();
+
 		Logger.getGlobal().setUseParentHandlers(false);
-		OwnHandler ownHandler = new OwnHandler();
+		OwnHandler ownHandler = new OwnHandler(proto.objectMap);
 		Logger.getGlobal().addHandler(ownHandler);
 
 		// Cleaner cleaner1 = new Cleaner("Asd", null);
@@ -58,37 +60,36 @@ public class App {
 		// Bus bus2 = new Bus(crossing2, crossing1, busdriver2);
 		// System.out.println(bus2.hashCode());
 
-		Crossing c1 = new Crossing();
-		Crossing c2 = new Crossing();
+		// Crossing c1 = new Crossing();
+		// Crossing c2 = new Crossing();
 
-		Road r1 = new Road(c1, c2, 3, 0);
-		Road r2 = new Road(c2, c1, 3, 0);
+		// Road r1 = new Road(c1, c2, 3, 0);
+		// Road r2 = new Road(c2, c1, 3, 0);
 
-		System.out.println(r1.getLanes().get(0).hashCode());
-		System.out.println(r1.getLanes().get(1).hashCode());
-		System.out.println(r1.getLanes().get(2).hashCode());
+		// System.out.println(r1.getLanes().get(0).hashCode());
+		// System.out.println(r1.getLanes().get(1).hashCode());
+		// System.out.println(r1.getLanes().get(2).hashCode());
 
-		System.out.println(r2.getLanes().get(0).hashCode());
-		System.out.println(r2.getLanes().get(1).hashCode());
-		System.out.println(r2.getLanes().get(2).hashCode());
+		// System.out.println(r2.getLanes().get(0).hashCode());
+		// System.out.println(r2.getLanes().get(1).hashCode());
+		// System.out.println(r2.getLanes().get(2).hashCode());
 
-		// Cleaner cleaner1 = new Cleaner("Asd", null);
-		// System.out.println(cleaner1.hashCode());
-		// Cleaner cleaner2 = new Cleaner("Asd", null);
-		// System.out.println(cleaner2.hashCode());
+		// // Cleaner cleaner1 = new Cleaner("Asd", null);
+		// // System.out.println(cleaner1.hashCode());
+		// // Cleaner cleaner2 = new Cleaner("Asd", null);
+		// // System.out.println(cleaner2.hashCode());
 
-		// Snowplower snowplower1 = new Snowplower(cleaner1, c1);
-		// System.out.println(snowplower1.hashCode());
-		// Snowplower snowplower2 = new Snowplower(cleaner1, c1);
-		// System.out.println(snowplower2.hashCode());
+		// // Snowplower snowplower1 = new Snowplower(cleaner1, c1);
+		// // System.out.println(snowplower1.hashCode());
+		// // Snowplower snowplower2 = new Snowplower(cleaner1, c1);
+		// // System.out.println(snowplower2.hashCode());
 
-		for (Entry<Object, String> e : ownHandler.objectMap.entrySet()) {
-			System.out.println(e.getValue() + "\t" + e.getKey().hashCode());
-		}
+		// for (Entry<Object, String> e : ownHandler.objectMap.entrySet()) {
+		// System.out.println(e.getValue() + "\t" + e.getKey().hashCode());
+		// }
 
 		// Crossing c = new Crossing();
 		// Crossing c2 = new Crossing();
 		// Road r = new Road(c, c2, 0, 0);
-
 	}
 }

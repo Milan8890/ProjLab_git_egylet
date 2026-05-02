@@ -35,7 +35,7 @@ public class Cleaner extends Player {
 	 * 
 	 * @param name a játékos neve
 	 */
-	public Cleaner(String name, Color color) {
+	public Cleaner(String name) {
 		super(name);
 		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
 	}
