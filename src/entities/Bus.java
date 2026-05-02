@@ -52,6 +52,7 @@ public class Bus extends Vehicle {
      * @param driver    A busz tulajdonosa.
      */
 	public Bus(Crossing stationA, Crossing stationB, BusDriver driver) {
+		super(stationA);
 		this.stationA = stationA;
 		this.stationB = stationB;
 		this.driver = driver;

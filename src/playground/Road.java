@@ -121,24 +121,17 @@ public class Road {
 	 * @param v
 	 */
 	public void crashVehicle(Vehicle v) {
-
-		//ez temp csak hogy ne szarja össze magát a logger, madj normál kódra csere
-		Vehicle v2 = new Car(toCrossing, fromCrossing);
-		Lane l = new Lane(this);
-
-		Logger.getGlobal().log(Level.INFO, "[Obj] collided [Obj] into [Obj] on [Obj]" , new Object[] {this,v, v2, l});
-		Logger.getGlobal().log(Level.INFO, "[Obj] tried colliding [Obj], but no target was found" , new Object[] {this, v});
-
-		throw new UnsupportedOperationException("Még nincs kész");
 		for(Lane lane : lanes){
 			for(Vehicle other : lane.getVehicles()){
 				if(other!=v){
 					other.crashedInto(REVTIME);
 					v.crashed(REVTIME);
+					Logger.getGlobal().log(Level.INFO, "[Obj] collided [Obj] into [Obj] on [Obj]" , new Object[] {this,v, other, lane});
 					return;
 				}
 			}
 		}
+		Logger.getGlobal().log(Level.INFO, "[Obj] tried colliding [Obj], but no target was found" , new Object[] {this, v});
 	}
 
 }

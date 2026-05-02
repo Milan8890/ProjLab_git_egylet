@@ -63,11 +63,6 @@ public class HeadInventory {
 	 * @return HeadInventory ami a helyes elemeket tartalmazza
 	 */
 	public static HeadInventory createWithBreaker(Snowplower owner) {
-
-		HeadInventory inventory = new HeadInventory(owner, new Breaker(owner));
-		Logger.getGlobal().log(Level.INFO, "[Obj] created with owner [Obj] and starting head Breaker" , new Object[] {inventory, owner});
-
-		throw new UnsupportedOperationException("Még nincs kész");
 		Head activeHead = new Breaker(owner);
 		HeadInventory ret = new HeadInventory(owner, activeHead);
 		ret.heads.add(activeHead);
@@ -77,6 +72,8 @@ public class HeadInventory {
 		ret.shop.add(new HeadListing( new SaltSpreader(owner) , SALTSPREADERPRICE));
 		ret.shop.add(new HeadListing( new Dragon(owner) , DRAGONPRICE));
 		ret.activeHead=activeHead;
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] created with owner [Obj] and starting head Breaker" , new Object[] {ret, owner});
 		return ret;
 	}
 
@@ -87,12 +84,6 @@ public class HeadInventory {
 	 * @return HeadInventory ami a helyes elemeket tartalmazza
 	 */
 	public static HeadInventory createWithEjector(Snowplower owner) {
-
-		HeadInventory inventory = new HeadInventory(owner, new Ejector(owner));
-		Logger.getGlobal().log(Level.INFO, "[Obj] created with owner [Obj] and starting head Ejector" , new Object[] {inventory, owner});
-
-		throw new UnsupportedOperationException("Még nincs kész");
-	}
 		Head activeHead = new Ejector(owner);
 		HeadInventory ret = new HeadInventory(owner, activeHead);
 		ret.heads.add(activeHead);
@@ -102,7 +93,11 @@ public class HeadInventory {
 		ret.shop.add(new HeadListing( new SaltSpreader(owner) , SALTSPREADERPRICE));
 		ret.shop.add(new HeadListing( new Dragon(owner) , DRAGONPRICE));
 		ret.activeHead=activeHead;
-		return ret;}
+
+		Logger.getGlobal().log(Level.INFO, "[Obj] created with owner [Obj] and starting head Ejector" , new Object[] {ret, owner});
+		return ret;
+	}
+		
 
 	/**
 	 * Visszaadja a fejtárolóban jelenleg aktív fejet
@@ -142,17 +137,21 @@ public class HeadInventory {
 	 */
 	public boolean buyListing(HeadListing listing) {
 
-		Logger.getGlobal().log(Level.INFO, "[Obj] bought [Obj] successfully" , new Object[] {this, listing});
-		Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy [Obj], because not enough money", new Object[] {this, listing});
-		Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy [Obj], because not in crossing" , new Object[] {this, listing});
-
-		throw new UnsupportedOperationException("Még nincs kész");
-		if(snowplower.getCleaner().removeMoney(listing.price)){
-			heads.add(listing.head);
-			return true;
-		} else {
+		if(!snowplower.isInCrossing())
+		{
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy [Obj], because not in crossing" , new Object[] {this, listing});
 			return false;
 		}
+
+		if(snowplower.getCleaner().removeMoney(listing.price)){
+			heads.add(listing.head);
+			Logger.getGlobal().log(Level.INFO, "[Obj] bought [Obj] successfully" , new Object[] {this, listing});
+			return true;
+		} else {
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy [Obj], because not enough money", new Object[] {this, listing});
+			return false;
+		}
+		
 	}
 
 }

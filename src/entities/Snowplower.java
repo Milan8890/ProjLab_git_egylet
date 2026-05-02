@@ -67,7 +67,8 @@ public class Snowplower extends Vehicle {
 	 * @param inventory a fejtároló amivel a hókotró rendelkezik
 	 */
 	private Snowplower(Cleaner owner, Crossing spawn) {
-		this.owner = owner;
+		super(spawn);
+		this.cleaner = owner;
 		this.lastCrossing = spawn;
 		saltAmount=0;
 		bioAmount=0;
@@ -115,7 +116,7 @@ public class Snowplower extends Vehicle {
 	 */
 	@Override
 	public void reachedCrossing() {
-		owner.addMoney(headInventory.getActiveHead().clean(currentLane)); //Hogy kéne átadni a sávot?
+		cleaner.addMoney(headInventory.getActiveHead().clean(currentLane)); //Hogy kéne átadni a sávot?
 		super.reachedCrossing();
 	}
 

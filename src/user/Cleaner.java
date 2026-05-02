@@ -84,18 +84,14 @@ public class Cleaner extends Player {
 	 * @return true, ha sikerült a vásárlás, false egyébként
 	 */
 	public boolean buyBreakerSnowplower() {
-		Snowplower p = Snowplower.createWithBreaker(this, City.getSnowplowBase());
-
-		Logger.getGlobal().log(Level.INFO, "[Obj] bought [Obj] with starting head Breaker successfully", new Object[] {this, p});
-		Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy [Obj] with starting head Breaker, because not enough money", new Object[] {this, p});
-
-
-		throw new UnsupportedOperationException("Még nincs kész");
 		if(removeMoney(BREAKER_SNOWPLOWER_PRICE)){
-			snowplowers.add(Snowplower.createWithBreaker(this, City.getSnowplowBase()));
+			Snowplower p = Snowplower.createWithBreaker(this, City.getSnowplowBase());
+			snowplowers.add(p);
+			Logger.getGlobal().log(Level.INFO, "[Obj] bought [Obj] with starting head Breaker successfully", new Object[] {this, p});
 			return true;
 		}
 		else{
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy snowplower with starting head Breaker, because not enough money", new Object[] {this});
 			return false;
 		}
 	}
@@ -109,17 +105,14 @@ public class Cleaner extends Player {
 	 * @return true, ha sikerült a vásárlás, false egyébként
 	 */
 	public boolean buyEjectorSnowplower() {
-		Snowplower p = Snowplower.createWithEjector(this, City.getSnowplowBase());
-
-		Logger.getGlobal().log(Level.INFO, "[Obj] bought [Obj] with starting head Ejector successfully", new Object[] {this, p});
-		Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy [Obj] with starting head Ejector, because not enough money", new Object[] {this, p});
-		
-		throw new UnsupportedOperationException("Még nincs kész");
 		if(removeMoney(EJECTOR_SNOWPLOWER_PRICE)){
-			snowplowers.add(Snowplower.createWithEjector(this, City.getSnowplowBase()));
+			Snowplower p = Snowplower.createWithEjector(this, City.getSnowplowBase());
+			snowplowers.add(p);
+			Logger.getGlobal().log(Level.INFO, "[Obj] bought [Obj] with starting head Ejector successfully", new Object[] {this, p});
 			return true;
 		}
 		else{
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy snowplower with starting head Ejector, because not enough money", new Object[] {this});
 			return false;
 		}
 	}
