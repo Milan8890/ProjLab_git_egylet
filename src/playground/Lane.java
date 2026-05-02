@@ -51,6 +51,10 @@ public class Lane {
 	 * Olvasztja a havat és jeget, kifizeti a játékost.
 	 */
 	class Salt {
+		private static final double CLEANSNOWAMOUNT = 0.4; //Ezek mennyiek legyenek?
+		private static final double CLEANICEAMOUNT = 0.4;
+		static final double PAY_ICE = 0.2;
+		static final double PAY_SNOW = 0.3;
 		/**
 		 * A sót birtokló cleaner.
 		 */
@@ -58,7 +62,7 @@ public class Lane {
 		/**
 		 * A só élettartama, meddig marad a sávon
 		 */
-		double lifetime;
+		double lifetime; 	//Ezt hogy kellene csökkenteni?
 
 		/**
 		 * Konstruktor
@@ -67,14 +71,41 @@ public class Lane {
 		 */
 		Salt(Cleaner c) {
 			owner = c;
+			lifetime = 10;
+
+			Logger.getGlobal().log(Level.INFO, "[Obj] created with owner [Obj] and lifetime [Obj]" , new Object[] {this, c, lifetime});
 		}
 
 		/**
-		 * óraütésen letakarít egy adag havat és jeget a sávról, és csökkenti a só
-		 * élettartamát, kifizeti a játékost
+		 * Óraütésre letakarít egy adag havat és jeget a sávról, csökkenti a lifetime-ot, 
+		 * és fizet a játékosnak annak függvényében hogy mennyi havat és jeget olvasztott el.
 		 */
-		public void onTick() {
-		
+		public void onTick() {  //Ronda de igy nem egybol veszi le az egesz havat es jeget, hanem fokozatos
+			double onSnow = cleanSnow();
+			double onIce = meltIce();
+			double payment = 0;
+
+			if(CLEANICEAMOUNT < onIce) {
+				addSnow(onIce * (1-CLEANICEAMOUNT) );
+				trampleSnow();
+				payment += (onIce * CLEANICEAMOUNT) * PAY_ICE * road.length;
+
+				Logger.getGlobal().log(Level.INFO, "[Obj] melted [Obj] ice from lane, paid [Obj] [Obj]$ " + lifetime , 
+						new Object[] {this, onIce * CLEANICEAMOUNT, (onIce * CLEANICEAMOUNT * PAY_ICE * road.length), owner});
+			}
+			if(CLEANSNOWAMOUNT < onSnow) {
+				addSnow(onSnow * (1-CLEANSNOWAMOUNT) );
+				payment += (onSnow * CLEANSNOWAMOUNT) * PAY_SNOW * road.length;
+
+				Logger.getGlobal().log(Level.INFO, "[Obj] melted [Obj] snow from lane, paid [Obj] [Obj]$ " + lifetime , 
+						new Object[] {this, onSnow * CLEANSNOWAMOUNT, (onSnow * CLEANSNOWAMOUNT * PAY_SNOW * road.length), owner});
+			}
+
+			owner.addMoney((int) payment);
+
+			lifetime--;
+			Logger.getGlobal().log(Level.INFO, "[Obj] lifetime decreased to [Obj] " + lifetime , new Object[] {this, lifetime});
+			
 		}
 	}
 

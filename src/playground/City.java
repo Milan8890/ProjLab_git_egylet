@@ -42,6 +42,8 @@ public class City {
 	 */
 	public static void initCity() {
 		Logger.getGlobal().log(Level.INFO, "City initialized" , new Object[] {});
+
+		
 	}
 
 	/**

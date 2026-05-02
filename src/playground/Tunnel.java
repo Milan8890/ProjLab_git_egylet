@@ -1,6 +1,8 @@
 package playground;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Olyan fajta út, amire nem esik rá a hó (mert fedve van).
@@ -8,6 +10,9 @@ import java.util.ArrayList;
  * 
  */
 public class Tunnel extends Road {
+	/**
+	 * Konstruktor, ami meghívja a Road konstruktorát.
+	 */
 	public Tunnel(Crossing from, Crossing to, int numOfLanes, double length) {
 		super(from, to, numOfLanes, length);
 	}
@@ -17,6 +22,6 @@ public class Tunnel extends Road {
 	 */
 	@Override
 	public void onTick() {
-		throw new UnsupportedOperationException("Még nincs kész");
+		Logger.getGlobal().log(Level.INFO, "[Obj] blocked snowing" , new Object[] {this});
 	}
 }

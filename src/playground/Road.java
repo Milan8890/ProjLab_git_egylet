@@ -63,8 +63,13 @@ public class Road {
 	public void onTick() {
 		if(RandomGenerator.getDefault().nextDouble()<SNOWCHANCE){
 			for(Lane lane : lanes){
-				if(!lane.hasSalt())
+				if(!lane.hasSalt()){
 					lane.addSnow(ONTICKSNOW);
+					Logger.getGlobal().log(Level.INFO, "[Obj] put 1 snow on [Obj]" , new Object[] {this, lane});
+				}
+				else{
+					Logger.getGlobal().log(Level.INFO, "[Obj] putting snow on [Obj] blocked by salt" , new Object[] {this, lane});
+				}
 			}
 		}
 	}
