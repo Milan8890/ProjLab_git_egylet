@@ -6,4 +6,4 @@ Cleaner1 received 300$
 Inicialization done
 
 Cleaner1 deducted 13000$ unsuccessfully
-Cleaner1 couldn’t buy snowplower with starting head Breaker, because not enough money
+Cleaner1 couldnâ€™t buy snowplower with starting head Breaker, because not enough money

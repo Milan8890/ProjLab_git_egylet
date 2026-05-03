@@ -1325,8 +1325,898 @@ PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
 Car1 is in a crossing
 Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
 Created PathC_0_1
-City calculated shortest path from Crossing2 to Crossing1 as PathC_0_1
-[ERROR]Error while running the following command:
-passtime 200
- Error: java.lang.UnsupportedOperationException: Még nincs kész
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1

@@ -25,8 +25,2798 @@ Car1 Lane1_1 has too thick snow (100.0), stopping and clearing PathC_0_1
 PathC_0_1 cleared
 Car1 is in a crossing
 Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
 Created PathC_0_1
-City calculated shortest path from Crossing1 to Crossing2 as PathC_0_1
-[ERROR]Error while running the following command:
-passtime 200
- Error: java.lang.UnsupportedOperationException: Még nincs kész
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Crossing1 returned outgoing roads
+Road1 returned end Crossing2
+Road1 returned length 10.0
+Road1 returned lanes
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Created PathC_0_1
+City couldn't find path between Crossing1 and Crossing2 for car Car1
+Created PathC_0_1
