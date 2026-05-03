@@ -16,7 +16,7 @@ else
 :
 fi
 
-TESTED_LINE="Lane1_1 turned 10 snow into ice"
+TESTED_LINE="Lane1_1 turned 10.0 snow into ice"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else

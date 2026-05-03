@@ -2,10 +2,12 @@ package main;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class World {
 	static List<Runnable> onTickFunctions = new ArrayList<>();
 	static boolean isSnowing = false;
+	private static int elapsedTicks = 0;
 
 	public enum RandomMode {
 		FALSE, TRUE, RANDOM
@@ -18,6 +20,8 @@ public class World {
 	}
 
 	public static void tick() {
+		elapsedTicks++;
+		Logger.getGlobal().info("\nStarting tick " + elapsedTicks + "\n");
 		for (int i = 0; i < onTickFunctions.size(); i++) {
 			onTickFunctions.get(i).run();
 		}

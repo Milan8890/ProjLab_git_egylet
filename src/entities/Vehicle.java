@@ -252,7 +252,7 @@ public abstract class Vehicle {
 					new Object[] { this, l });
 		} else {
 			Logger.getGlobal().log(Level.INFO, "[Obj] couldn't extend [Obj] with [Obj], clearing it",
-					new Object[] { this, l });
+					new Object[] { this, this.path, l });
 
 		}
 		return path.extendPath(l);
@@ -368,7 +368,7 @@ public abstract class Vehicle {
 				Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: snow is too thick for gravel, slipping",
 						new Object[] { this, currentLane });
 			} else {
-				Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: doesn’t have gravel, slipping",
+				Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: doesn't have gravel, slipping",
 						new Object[] { this, currentLane });
 			}
 

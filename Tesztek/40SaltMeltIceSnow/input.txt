@@ -2,8 +2,8 @@ crossing 2
 cleaner test
 road Crossing1 Crossing2 100 1
 putsalt Lane1_1 Cleaner1
-putice Lane1_1 10
-putsnow Lane1_1 30
+putice Lane1_1 1
+putsnow Lane1_1 1
 initend
 passtime 50
 info Lane1_1

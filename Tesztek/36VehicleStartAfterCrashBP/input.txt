@@ -6,4 +6,4 @@ putvehicle Bus1 Lane1_1
 crash Bus1 10
 initend
 passtime 30
-INFO Bus1
+info Bus1

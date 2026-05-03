@@ -8,3 +8,4 @@ putvehicle Snowplower1_1 Lane1_1
 initend
 passtime 200
 info Lane1_1
+info Snowplower1_1

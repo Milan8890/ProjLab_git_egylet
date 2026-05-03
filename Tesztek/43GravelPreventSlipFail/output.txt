@@ -15,6 +15,9 @@ Lane1_1 set to have gravel
 
 Inicialization done
 
+
+Starting tick 1
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle

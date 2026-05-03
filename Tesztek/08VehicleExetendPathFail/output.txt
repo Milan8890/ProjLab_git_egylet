@@ -30,7 +30,7 @@ Inicialization done
 
 Lane2_1 returned Road2
 PathS_1_1 couldn't extend with Lane2_1, because it's not connected
-[ERROR]The amount of [Obj]s and objects passed in a logging function are not the same.
+Snowplower1_1 couldn't extend PathS_1_1 with Lane2_1, clearing it
 Lane2_1 returned Road2
 PathS_1_1 couldn't extend with Lane2_1, because it's not connected
 INFO PathS_1_1 pathLanes is empty

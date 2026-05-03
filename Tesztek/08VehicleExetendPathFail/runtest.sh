@@ -32,7 +32,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO PathS_1_1 lastCrossing is Crossing1"
+TESTED_LINE="INFO PathS_1_1 last crossing is Crossing1"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else

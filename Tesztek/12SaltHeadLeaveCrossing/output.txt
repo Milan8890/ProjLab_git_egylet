@@ -34,6 +34,9 @@ Created SaltSpreader1_1
 
 Inicialization done
 
+
+Starting tick 1
+
 Snowplower1_1 is in a crossing
 PathS_1_1 returned next lane Lane1_1
 HeadInventory1_1 returned active head SaltSpreader1_1
@@ -48,18 +51,30 @@ Lane1_1 added Snowplower1_1
 Snowplower1_1 advancing on road, current progress is 1.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 2
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 2.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 3
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 3.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 4
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 4.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 5
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 5.0
 Lane1_1 returned Road1

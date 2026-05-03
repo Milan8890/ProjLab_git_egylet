@@ -18,6 +18,9 @@ Created PathC_0_1
 
 Inicialization done
 
+
+Starting tick 1
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -53,6 +56,9 @@ Lane3_1 returned Road3
 Lane3_1 returned Road3
 PathC_0_1 extended with Lane3_1 successfully
 City calculated shortest path from Crossing1 to Crossing3 as PathC_0_1
+
+Starting tick 2
+
 Car1 is in a crossing
 PathC_0_1 returned next lane Lane1_1
 Lane1_1 has no stuck vehicle

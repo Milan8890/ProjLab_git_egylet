@@ -1,5 +1,6 @@
 package playground;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -227,6 +228,8 @@ public class Lane {
 	 * @return a jég magassága
 	 */
 	public double getIce() {
+		iceLevel = Math.round(iceLevel * 1000.0) / 1000.0;
+
 		Logger.getGlobal().log(Level.INFO, "[Obj] returned ice level " + iceLevel, new Object[] { this });
 
 		return iceLevel;
@@ -238,6 +241,8 @@ public class Lane {
 	 * @return a hó magassága
 	 */
 	public double getSnow() {
+		snowLevel = Math.round(snowLevel * 1000.0) / 1000.0;
+
 		Logger.getGlobal().log(Level.INFO, "[Obj] returned snow level " + snowLevel, new Object[] { this });
 
 		return snowLevel;
