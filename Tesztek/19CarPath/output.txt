@@ -94,6 +94,8 @@ Car1 slip check on Lane3_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 4.0
 Lane3_1 returned Road3
 Road3 returned length 10.0
+<<<<<<< HEAD
+=======
 INFO Car1 last crossing is Crossing1
 INFO Car1 current lane is Lane3_1
 INFO Car1 lane progress is 4.0
@@ -104,5 +106,6 @@ INFO Car1 revive timer is 0
 INFO Car1 home is Crossing1
 INFO Car1 work is Crossing3
 INFO Car1 is going to work
+>>>>>>> main
 INFO PathC_0_1 pathLanes is empty
 INFO PathC_0_1 last crossing is Crossing1

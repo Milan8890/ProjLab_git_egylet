@@ -134,7 +134,6 @@ public class City {
 					}
 
 					if (newDist < distances.get(neighbour)) {
-						System.err.println("itt");
 						distances.put(neighbour, newDist);
 						connectingLane.put(neighbour, safeLane);
 					}
