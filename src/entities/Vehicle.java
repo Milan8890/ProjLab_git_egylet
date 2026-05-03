@@ -67,7 +67,6 @@ public abstract class Vehicle {
 		this.lastCrossing = lastCrossing;
 		this.currentLane = null;
 		this.laneProgress = 0.0;
-		// this.path = new Path(this);
 		this.isStuck = false;
 		this.isCrashed = false;
 		this.revTimer = 0;
@@ -79,6 +78,7 @@ public abstract class Vehicle {
 	 * térnek vissza, ha futhat tovább a többi lépés, hamissal, ha nem.
 	 */
 	public void onTick() {
+
 		if (!stepFollowPath()) {
 			return;
 		}
@@ -148,8 +148,10 @@ public abstract class Vehicle {
 			this.laneProgress = 0;
 
 			return true;
-
 		} else {
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn't turn into [Obj], clearing [Path]",
+					new Object[] { this, nextLane, path });
+
 			path.clear();
 
 			return false;

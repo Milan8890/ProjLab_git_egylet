@@ -86,7 +86,7 @@ public class Path {
 			return null;
 		}
 
-		Lane l = pathLanes.remove(pathLanes.size() - 1);
+		Lane l = pathLanes.remove(0);
 
 		Logger.getGlobal().log(Level.INFO, "[Obj] returned next lane [Obj]", new Object[] { this, l });
 		return l;

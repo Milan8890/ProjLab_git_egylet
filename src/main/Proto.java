@@ -442,7 +442,6 @@ public class Proto {
 
 	private void commandExtpath(String[] args) {
 		Vehicle v = (Vehicle) getObject(args[0]);
-		System.err.println(args[1]);
 		v.extendPath((Lane) getObject(args[1]));
 	}
 
@@ -704,6 +703,7 @@ public class Proto {
 			throws Exception {
 		Field lanesField = p.getClass().getDeclaredField("pathLanes");
 		lanesField.setAccessible(true);
+
 		List<Lane> pathLanes = (List<Lane>) lanesField.get(p);
 		if (pathLanes.isEmpty()) {
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] pathLanes is empty", new Object[] { p });
