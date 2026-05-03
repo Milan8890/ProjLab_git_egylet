@@ -59,7 +59,7 @@ public class Road {
 			lanes.add(new Lane(this));
 		}
 		from.addOutRoad(this);
-		
+
 		Logger.getGlobal().log(Level.INFO,
 				"[Obj] created between [Obj] and [Obj] with length " + this.length + " and " + numOfLanes + " lanes",
 				new Object[] { this, from, to });
@@ -71,7 +71,7 @@ public class Road {
 	public void onTick() {
 		if (World.getRandom(SNOWCHANCE)) {
 			for (Lane lane : lanes) {
-				if (!lane.hasSalt()){
+				if (!lane.hasSalt()) {
 					lane.addSnow(ONTICKSNOW);
 					Logger.getGlobal().log(Level.INFO, "[Obj] put 1 snow on [Obj]", new Object[] { this, lane });
 				} else {

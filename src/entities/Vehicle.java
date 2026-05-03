@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import main.World;
 import playground.City;
 import playground.Crossing;
 import playground.Lane;
@@ -62,6 +63,7 @@ public abstract class Vehicle {
 	 * @param lastCrossing A legutóbbi kereszteződés, amin volt.
 	 */
 	public Vehicle(Crossing lastCrossing) {
+		World.registerOnTick(this::onTick);
 		this.lastCrossing = lastCrossing;
 		this.currentLane = null;
 		this.laneProgress = 0.0;

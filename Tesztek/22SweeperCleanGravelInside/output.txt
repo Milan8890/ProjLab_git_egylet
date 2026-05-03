@@ -5,7 +5,7 @@ Created Crossing2
 Created Cleaner1
 City returned Crossing1 as snowplower base
 Created Snowplower1_1
-[ERROR]Path-en mï¿½g csiszolni kell (kezdï¿½si ellenï¿½rzï¿½s)
+[ERROR]Path-en még csiszolni kell (kezdési ellenõrzés)
 Created PathS_1_1
 Created Breaker1_1
 Created HeadInventory1_1
@@ -23,7 +23,7 @@ HeadInventory1_1 created with owner Snowplower1_1 and starting head Breaker
 Created Lane1_1
 Created Lane1_2
 Crossing1 added Road1 to outgoing roads
-Road1 created between Crossing1 and Crossing2 with length 2.0 and 2 lanes
+Road1 created between Crossing1 and Crossing2 with length 100.0 and 2 lanes
 Snowplower1_1 returned HeadInventory1_1
 Snowplower1_1 returned HeadInventory1_1
 Created Sweeper1_1
@@ -32,13 +32,265 @@ Road1 returned start Crossing1
 PathS_1_1 cleared
 Lane1_1 added Snowplower1_1
 Lane1_1 set to have gravel
+
 Inicialization done
+
 Lane1_1 returned Road1
-Road1 returned length 2.0
+Road1 returned length 100.0
 Lane1_1 returned Road1
-Road1 returned length 2.0
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 has no salt
+Lane1_1 added 1.0 snow
+Road1 put 1 snow on Lane1_1
+Lane1_2 has no salt
+Lane1_2 added 1.0 snow
+Road1 put 1 snow on Lane1_2
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 has no salt
+Lane1_1 added 1.0 snow
+Road1 put 1 snow on Lane1_1
+Lane1_2 has no salt
+Lane1_2 added 1.0 snow
+Road1 put 1 snow on Lane1_2
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 has no salt
+Lane1_1 added 1.0 snow
+Road1 put 1 snow on Lane1_1
+Lane1_2 has no salt
+Lane1_2 added 1.0 snow
+Road1 put 1 snow on Lane1_2
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 has no salt
+Lane1_1 added 1.0 snow
+Road1 put 1 snow on Lane1_1
+Lane1_2 has no salt
+Lane1_2 added 1.0 snow
+Road1 put 1 snow on Lane1_2
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 has no salt
+Lane1_1 added 1.0 snow
+Road1 put 1 snow on Lane1_1
+Lane1_2 has no salt
+Lane1_2 added 1.0 snow
+Road1 put 1 snow on Lane1_2
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 has no salt
+Lane1_1 added 1.0 snow
+Road1 put 1 snow on Lane1_1
+Lane1_2 has no salt
+Lane1_2 added 1.0 snow
+Road1 put 1 snow on Lane1_2
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 has no salt
+Lane1_1 added 1.0 snow
+Road1 put 1 snow on Lane1_1
+Lane1_2 has no salt
+Lane1_2 added 1.0 snow
+Road1 put 1 snow on Lane1_2
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 has no salt
+Lane1_1 added 1.0 snow
+Road1 put 1 snow on Lane1_1
+Lane1_2 has no salt
+Lane1_2 added 1.0 snow
+Road1 put 1 snow on Lane1_2
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 has no salt
+Lane1_1 added 1.0 snow
+Road1 put 1 snow on Lane1_1
+Lane1_2 has no salt
+Lane1_2 added 1.0 snow
+Road1 put 1 snow on Lane1_2
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
 HeadInventory1_1 returned active head Sweeper1_1
-Lane1_1 returned snow level 0.0
+Lane1_1 returned snow level 9.0
 Lane1_1 returned Road1
 Road1 returned lanes
 Lane1_1 returned Road1
@@ -47,63 +299,20 @@ Lane1_1 returned Road1
 Road1 returned lanes
 Lane1_1 returned Road1
 Road1 returned lanes
-Lane1_1 returned snow level 0.0
-Lane1_2 added 0.0 snow
-Lane1_1 cleaned 0.0 snow
+Lane1_1 returned snow level 9.0
+Lane1_2 added 9.0 snow
+Lane1_1 cleaned 9.0 snow
 Lane1_1 set to not have gravel
 Lane1_2 set to have gravel
 Lane1_1 returned Road1
-Road1 returned length 2.0
-Snowplower1_1 with Sweeper1_1 cleans Lane1_1 for 0$
-Cleaner1 received 0$
+Road1 returned length 100.0
+Snowplower1_1 with Sweeper1_1 cleans Lane1_1 for 540$
+Cleaner1 received 540$
 Lane1_1 returned Road1
 Road1 returned end Crossing2
 Lane1_1 removed Snowplower1_1
 PathS_1_1 has no next lane
 PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
 PathS_1_1 has no next lane
 PathS_1_1 has no next lane
 PathS_1_1 has no next lane
@@ -130,12 +339,29 @@ PathS_1_1 has no next lane
 PathS_1_1 has no next lane
 PathS_1_1 has no next lane
 PathS_1_1 has no next lane
+PathS_1_1 has no next lane
+PathS_1_1 has no next lane
+PathS_1_1 has no next lane
+PathS_1_1 has no next lane
+PathS_1_1 has no next lane
+PathS_1_1 has no next lane
+PathS_1_1 has no next lane
+PathS_1_1 has no next lane
 Lane1_1 has no salt
 Lane1_1 added 1.0 snow
 Road1 put 1 snow on Lane1_1
 Lane1_2 has no salt
 Lane1_2 added 1.0 snow
 Road1 put 1 snow on Lane1_2
+PathS_1_1 has no next lane
+Lane1_1 has no salt
+Lane1_1 added 1.0 snow
+Road1 put 1 snow on Lane1_1
+Lane1_2 has no salt
+Lane1_2 added 1.0 snow
+Road1 put 1 snow on Lane1_2
+PathS_1_1 has no next lane
+PathS_1_1 has no next lane
 PathS_1_1 has no next lane
 PathS_1_1 has no next lane
 PathS_1_1 has no next lane
@@ -171,43 +397,6 @@ Lane1_2 added 1.0 snow
 Road1 put 1 snow on Lane1_2
 PathS_1_1 has no next lane
 PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
 PathS_1_1 has no next lane
 PathS_1_1 has no next lane
 PathS_1_1 has no next lane
@@ -218,25 +407,6 @@ Road1 put 1 snow on Lane1_1
 Lane1_2 has no salt
 Lane1_2 added 1.0 snow
 Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
 PathS_1_1 has no next lane
 PathS_1_1 has no next lane
 PathS_1_1 has no next lane
@@ -259,79 +429,6 @@ Road1 put 1 snow on Lane1_1
 Lane1_2 has no salt
 Lane1_2 added 1.0 snow
 Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
 PathS_1_1 has no next lane
 PathS_1_1 has no next lane
 PathS_1_1 has no next lane
@@ -367,50 +464,11 @@ PathS_1_1 has no next lane
 PathS_1_1 has no next lane
 PathS_1_1 has no next lane
 PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
 PathS_1_1 has no next lane
 Lane1_1 returned Road1
 INFO Lane1_1 is on Road1
-Lane1_1 returned snow level 25.0
-INFO Lane1_1 snow level is 25.0
+Lane1_1 returned snow level 9.0
+INFO Lane1_1 snow level is 9.0
 Lane1_1 returned ice level 0.0
 INFO Lane1_1 ice level is 0.0
 Lane1_1 returned vehicles
@@ -419,8 +477,8 @@ Lane1_1 has no gravel
 INFO Lane1_1 does not have gravel
 Lane1_2 returned Road1
 INFO Lane1_2 is on Road1
-Lane1_2 returned snow level 25.0
-INFO Lane1_2 snow level is 25.0
+Lane1_2 returned snow level 27.0
+INFO Lane1_2 snow level is 27.0
 Lane1_2 returned ice level 0.0
 INFO Lane1_2 ice level is 0.0
 Lane1_2 returned vehicles
