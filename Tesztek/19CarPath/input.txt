@@ -5,6 +5,6 @@ road Crossing2 Crossing3 10 1
 putsnow Lane2_1 1000
 car Crossing1 Crossing3
 initend
-passtime 5
+passtime 2
 info Car1
 info PathC_0_1

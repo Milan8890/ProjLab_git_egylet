@@ -5,4 +5,4 @@ addm Cleaner1 10000
 plower Cleaner1 breaker
 initend
 buyhead Snowplower1_1 HeadListing1_1_DRA
-INFO Cleaner1
+info Cleaner1

@@ -29,7 +29,7 @@ Lane1_1 returned ice level 50.0
 Car1 slip check on Lane1_1: ice is thick enough
 Lane1_1 has no gravel
 Lane1_1 has no gravel
-Car1 slip check on Lane1_1: doesn’t have gravel, slipping
+Car1 slip check on Lane1_1: doesnâ€™t have gravel, slipping
 Lane1_1 returned Road1
 Car1 slipping on Road1
 Lane1_1 returned Road1
