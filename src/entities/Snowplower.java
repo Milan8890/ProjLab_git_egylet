@@ -255,13 +255,13 @@ public class Snowplower extends Vehicle {
 				Logger.getGlobal().log(Level.INFO, "[Obj] bought gravel successfully", new Object[] { this });
 				return true;
 			} else {
-				Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy gravel, because not enough money",
+				Logger.getGlobal().log(Level.INFO, "[Obj] couldn't buy gravel, because not enough money",
 						new Object[] { this });
 				return false;
 			}
 
 		} else {
-			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy gravel, because not enough space",
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn't buy gravel, because not enough space",
 					new Object[] { this });
 			return false;
 		}
@@ -273,7 +273,7 @@ public class Snowplower extends Vehicle {
 	 * @param saltAmount Az elhasznált só mennyisége
 	 */
 	public void useSalt(double a) {
-		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + "salt", new Object[] { this });
+		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + " salt", new Object[] { this });
 		saltAmount -= a; // Ennyi?
 	}
 
@@ -283,7 +283,7 @@ public class Snowplower extends Vehicle {
 	 * @param bioAmount Az elhasznált kerozin mennyisége
 	 */
 	public void useBio(double a) {
-		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + "bio", new Object[] { this });
+		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + " bio", new Object[] { this });
 		bioAmount -= a; // Ennyi?
 	}
 
@@ -293,7 +293,7 @@ public class Snowplower extends Vehicle {
 	 * @param bioAmount Az elhasznált kerozin mennyisége
 	 */
 	public void useGravel(double a) {
-		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + "gravel", new Object[] { this });
+		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + " gravel", new Object[] { this });
 		gravelAmount -= a; // Ennyi?
 	}
 

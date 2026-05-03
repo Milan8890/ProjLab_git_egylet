@@ -16,7 +16,7 @@ else
 :
 fi
 
-TESTED_LINE="Car1Lane1_1 has too thick snow (100), stopping and clearing PathC_0_1"
+TESTED_LINE="Car1 Lane1_1 has too thick snow (100.0), stopping and clearing PathC_0_1"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else

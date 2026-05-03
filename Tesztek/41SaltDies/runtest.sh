@@ -16,7 +16,7 @@ else
 :
 fi
 
-TESTED_LINE="INFO Lane1_1 has no salt"
+TESTED_LINE="INFO Lane1_1 does not contain salt"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else

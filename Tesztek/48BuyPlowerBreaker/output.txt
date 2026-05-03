@@ -23,3 +23,4 @@ Created Dragon1_1
 Created HeadListing1_1_DRA
 HeadInventory1_1 created with owner Snowplower1_1 and starting head Breaker
 Cleaner1 bought Snowplower1_1 with starting head Breaker successfully
+[ERROR]No such command INFOimplemented

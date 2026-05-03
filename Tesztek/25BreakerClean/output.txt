@@ -433,8 +433,8 @@ HeadInventory1_1 returned active head Breaker1_1
 Lane1_1 turned 100.0 ice into snow
 Lane1_1 returned Road1
 Road1 returned length 100.0
-Snowplower1_1 with Breaker1_1 cleans Lane1_1 for 5000.0$
-Cleaner1 received 5000$
+Snowplower1_1 with Breaker1_1 cleans Lane1_1 for 500.0$
+Cleaner1 received 500$
 Lane1_1 returned Road1
 Road1 returned end Crossing2
 Snowplower1_1 reached end of road, currently in Crossing2

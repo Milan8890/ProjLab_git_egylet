@@ -32,3 +32,4 @@ Inicialization done
 
 Snowplower1_1 returned HeadInventory1_1
 HeadInventory1_1 returned available head listings
+[ERROR]No such command INFOimplemented

@@ -16,7 +16,7 @@ else
 :
 fi
 
-TESTED_LINE="Created Road1"
+TESTED_LINE="Road1 created between Crossing1 and Crossing2 with length 10.0 and 3 lanes"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else

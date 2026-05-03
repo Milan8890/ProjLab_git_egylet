@@ -24,3 +24,5 @@ Inicialization done
 Snowplower1_1 is in a crossing
 Cleaner1 deducted 25$  successfully
 Snowplower1_1 bought gravel successfully
+[ERROR]No such command INFOimplemented
+[ERROR]No such command INFOimplemented

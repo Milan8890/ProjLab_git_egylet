@@ -20,7 +20,7 @@ import playground.Lane;
  * Head
  */
 public class Breaker extends Head {
-
+	private static double ICEBREAKPAY = 0.05;
 	/**
 	 * Konstruktor.
 	 * 
@@ -40,9 +40,8 @@ public class Breaker extends Head {
 	@Override
 	public int clean(Lane l) {
 		double iceAmount = l.breakIce();
-		double payPerMeter = 0.5; // Ezt kell átírni.
 
-		double payment = iceAmount * l.getRoad().getLength() * payPerMeter;
+		double payment = iceAmount * l.getRoad().getLength() * ICEBREAKPAY;
 
 		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$" , new Object[] {snowplower , this, l});
 		return (int) payment; // 0.5 szorzó van a tesztben is.

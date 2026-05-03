@@ -438,10 +438,10 @@ Lane1_1 returned Road1
 Road1 returned length 100.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
-Snowplower1_1 used 100.0gravel
-Snowplower1_1 with GravelSpreader1_1 cleans Lane1_1 for 100$
-GravelSpreader1_1 uses 100.0gravel from Snowplower1_1
-Cleaner1 received 100$
+Snowplower1_1 used 100.0 gravel
+Snowplower1_1 with GravelSpreader1_1 cleans Lane1_1 for 50$
+GravelSpreader1_1 uses 100.0 gravel from Snowplower1_1
+Cleaner1 received 50$
 Lane1_1 returned Road1
 Road1 returned end Crossing2
 Snowplower1_1 reached end of road, currently in Crossing2
