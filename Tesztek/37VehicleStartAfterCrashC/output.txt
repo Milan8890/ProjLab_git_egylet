@@ -3,29 +3,11 @@ Created Crossing1
 City returned crossings
 Created Crossing2
 Created Lane1_1
-Created Lane1_2
-Created Lane1_3
-Created Lane1_4
-Created Lane1_5
-Created Lane1_6
-Created Lane1_7
-Created Lane1_8
-Created Lane1_9
-Created Lane1_10
 Crossing1 added Road1 to outgoing roads
-Road1 created between Crossing1 and Crossing2 with length 1.0 and 10 lanes
+Road1 created between Crossing1 and Crossing2 with length 10.0 and 1 lanes
 Created Lane2_1
-Created Lane2_2
-Created Lane2_3
-Created Lane2_4
-Created Lane2_5
-Created Lane2_6
-Created Lane2_7
-Created Lane2_8
-Created Lane2_9
-Created Lane2_10
 Crossing2 added Road2 to outgoing roads
-Road2 created between Crossing2 and Crossing1 with length 1.0 and 10 lanes
+Road2 created between Crossing2 and Crossing1 with length 10.0 and 1 lanes
 Created Car1
 Created PathC_0_1
 Lane2_1 returned Road2

@@ -177,8 +177,8 @@ public class Proto {
 	}
 
 	private void commandRoad(String[] args) {
-		new Road((Crossing) getObject(args[0]), (Crossing) getObject(args[1]), Integer.parseInt(args[2]),
-				Double.parseDouble(args[3]));
+		new Road((Crossing) getObject(args[0]), (Crossing) getObject(args[1]), Integer.parseInt(args[3]),
+				Double.parseDouble(args[2]));
 	}
 
 	private void commandSpbase(String[] args) throws Exception {
