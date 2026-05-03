@@ -36,6 +36,9 @@ Created SaltSpreader1_1
 
 Inicialization done
 
+
+Starting tick 1
+
 Snowplower1_1 is in a crossing
 PathS_1_1 returned next lane Lane1_1
 HeadInventory1_1 returned active head SaltSpreader1_1

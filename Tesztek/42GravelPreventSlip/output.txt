@@ -15,6 +15,9 @@ Lane1_1 set to have gravel
 
 Inicialization done
 
+
+Starting tick 1
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -28,6 +31,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 1.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 2
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -41,6 +47,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 2.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 3
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -54,6 +63,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 3.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 4
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -67,6 +79,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 4.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 5
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -80,6 +95,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 5.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 6
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -93,6 +111,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 6.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 7
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -106,6 +127,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 7.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 8
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -119,6 +143,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 8.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 9
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -132,6 +159,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 9.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 10
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -145,6 +175,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 10.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 11
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -158,6 +191,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 11.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 12
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -171,6 +207,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 12.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 13
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -184,6 +223,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 13.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 14
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -197,6 +239,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 14.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 15
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -210,6 +255,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 15.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 16
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -223,6 +271,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 16.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 17
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -236,6 +287,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 17.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 18
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -249,6 +303,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 18.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 19
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -262,6 +319,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 19.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 20
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -275,6 +335,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 20.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 21
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -288,6 +351,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 21.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 22
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -301,6 +367,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 22.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 23
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -314,6 +383,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 23.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 24
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -327,6 +399,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 24.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 25
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -340,6 +415,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 25.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 26
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -353,6 +431,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 26.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 27
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -366,6 +447,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 27.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 28
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -379,6 +463,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 28.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 29
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -392,6 +479,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 29.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 30
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -405,6 +495,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 30.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 31
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -418,6 +511,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 31.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 32
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -431,6 +527,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 32.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 33
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -444,6 +543,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 33.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 34
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -457,6 +559,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 34.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 35
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -470,6 +575,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 35.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 36
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -483,6 +591,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 36.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 37
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -496,6 +607,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 37.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 38
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -509,6 +623,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 38.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 39
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -522,6 +639,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 39.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 40
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -535,6 +655,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 40.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 41
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -548,6 +671,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 41.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 42
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -561,6 +687,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 42.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 43
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -574,6 +703,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 43.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 44
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -587,6 +719,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 44.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 45
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -600,6 +735,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 45.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 46
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -613,6 +751,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 46.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 47
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -626,6 +767,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 47.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 48
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -639,6 +783,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 48.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 49
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -652,6 +799,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 49.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 50
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -665,6 +815,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 50.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 51
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -678,6 +831,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 51.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 52
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -691,6 +847,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 52.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 53
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -704,6 +863,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 53.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 54
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -717,6 +879,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 54.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 55
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -730,6 +895,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 55.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 56
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -743,6 +911,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 56.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 57
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -756,6 +927,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 57.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 58
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -769,6 +943,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 58.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 59
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -782,6 +959,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 59.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 60
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -795,6 +975,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 60.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 61
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -808,6 +991,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 61.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 62
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -821,6 +1007,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 62.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 63
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -834,6 +1023,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 63.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 64
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -847,6 +1039,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 64.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 65
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -860,6 +1055,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 65.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 66
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -873,6 +1071,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 66.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 67
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -886,6 +1087,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 67.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 68
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -899,6 +1103,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 68.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 69
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -912,6 +1119,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 69.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 70
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -925,6 +1135,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 70.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 71
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -938,6 +1151,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 71.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 72
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -951,6 +1167,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 72.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 73
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -964,6 +1183,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 73.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 74
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -977,6 +1199,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 74.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 75
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -990,6 +1215,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 75.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 76
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1003,6 +1231,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 76.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 77
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1016,6 +1247,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 77.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 78
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1029,6 +1263,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 78.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 79
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1042,6 +1279,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 79.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 80
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1055,6 +1295,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 80.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 81
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1068,6 +1311,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 81.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 82
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1081,6 +1327,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 82.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 83
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1094,6 +1343,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 83.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 84
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1107,6 +1359,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 84.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 85
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1120,6 +1375,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 85.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 86
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1133,6 +1391,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 86.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 87
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1146,6 +1407,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 87.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 88
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1159,6 +1423,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 88.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 89
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1172,6 +1439,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 89.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 90
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1185,6 +1455,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 90.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 91
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1198,6 +1471,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 91.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 92
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1211,6 +1487,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 92.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 93
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1224,6 +1503,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 93.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 94
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1237,6 +1519,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 94.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 95
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1250,6 +1535,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 95.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 96
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1263,6 +1551,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 96.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 97
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1276,6 +1567,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 97.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 98
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1289,6 +1583,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 98.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 99
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1302,6 +1599,9 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 99.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+
+Starting tick 100
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -1315,11 +1615,16 @@ Car1 slip check on Lane1_1: snow is thin enough, not slipping
 Car1 advancing on road, current progress is 100.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Car1 trampled snow on Lane1_1
+Lane1_1 turned 0.0 snow into ice
 Lane1_1 returned Road1
 Road1 returned end Crossing2
 Car1 reached end of road, currently in Crossing2
 Lane1_1 removed Car1
 Car1 reached work, going to home
+
+Starting tick 101
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1329,6 +1634,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 102
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1338,6 +1646,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 103
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1347,6 +1658,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 104
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1356,6 +1670,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 105
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1365,6 +1682,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 106
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1374,6 +1694,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 107
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1383,6 +1706,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 108
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1392,6 +1718,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 109
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1401,6 +1730,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 110
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1410,6 +1742,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 111
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1419,6 +1754,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 112
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1428,6 +1766,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 113
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1437,6 +1778,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 114
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1446,6 +1790,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 115
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1455,6 +1802,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 116
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1464,6 +1814,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 117
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1473,6 +1826,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 118
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1482,6 +1838,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 119
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1491,6 +1850,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 120
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1500,6 +1862,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 121
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1509,6 +1874,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 122
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1518,6 +1886,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 123
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1527,6 +1898,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 124
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1536,6 +1910,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 125
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1545,6 +1922,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 126
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1554,6 +1934,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 127
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1563,6 +1946,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 128
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1572,6 +1958,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 129
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1581,6 +1970,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 130
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1590,6 +1982,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 131
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1599,6 +1994,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 132
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1608,6 +2006,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 133
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1617,6 +2018,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 134
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1626,6 +2030,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 135
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1635,6 +2042,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 136
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1644,6 +2054,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 137
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1653,6 +2066,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 138
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1662,6 +2078,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 139
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1671,6 +2090,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 140
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1680,6 +2102,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 141
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1689,6 +2114,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 142
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1698,6 +2126,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 143
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1707,6 +2138,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 144
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1716,6 +2150,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 145
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1725,6 +2162,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 146
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1734,6 +2174,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 147
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1743,6 +2186,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 148
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1752,6 +2198,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 149
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1761,6 +2210,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 150
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1770,6 +2222,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 151
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1779,6 +2234,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 152
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1788,6 +2246,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 153
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1797,6 +2258,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 154
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1806,6 +2270,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 155
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1815,6 +2282,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 156
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1824,6 +2294,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 157
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1833,6 +2306,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 158
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1842,6 +2318,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 159
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1851,6 +2330,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 160
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1860,6 +2342,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 161
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1869,6 +2354,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 162
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1878,6 +2366,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 163
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1887,6 +2378,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 164
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1896,6 +2390,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 165
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1905,6 +2402,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 166
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1914,6 +2414,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 167
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1923,6 +2426,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 168
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1932,6 +2438,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 169
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1941,6 +2450,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 170
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1950,6 +2462,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 171
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1959,6 +2474,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 172
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1968,6 +2486,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 173
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1977,6 +2498,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 174
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1986,6 +2510,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 175
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -1995,6 +2522,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 176
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2004,6 +2534,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 177
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2013,6 +2546,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 178
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2022,6 +2558,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 179
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2031,6 +2570,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 180
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2040,6 +2582,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 181
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2049,6 +2594,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 182
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2058,6 +2606,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 183
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2067,6 +2618,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 184
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2076,6 +2630,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 185
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2085,6 +2642,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 186
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2094,6 +2654,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 187
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2103,6 +2666,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 188
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2112,6 +2678,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 189
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2121,6 +2690,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 190
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2130,6 +2702,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 191
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2139,6 +2714,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 192
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2148,6 +2726,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 193
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2157,6 +2738,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 194
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2166,6 +2750,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 195
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2175,6 +2762,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 196
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2184,6 +2774,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 197
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2193,6 +2786,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 198
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2202,6 +2798,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 199
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -2211,6 +2810,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 200
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping

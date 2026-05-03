@@ -8,503 +8,2003 @@ Road1 created between Crossing1 and Crossing2 with length 10.0 and 1 lanes
 
 Inicialization done
 
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
-Road1 blocked snowing
+
+Starting tick 1
+
+Road1 blocked snowing
+
+Starting tick 2
+
+Road1 blocked snowing
+
+Starting tick 3
+
+Road1 blocked snowing
+
+Starting tick 4
+
+Road1 blocked snowing
+
+Starting tick 5
+
+Road1 blocked snowing
+
+Starting tick 6
+
+Road1 blocked snowing
+
+Starting tick 7
+
+Road1 blocked snowing
+
+Starting tick 8
+
+Road1 blocked snowing
+
+Starting tick 9
+
+Road1 blocked snowing
+
+Starting tick 10
+
+Road1 blocked snowing
+
+Starting tick 11
+
+Road1 blocked snowing
+
+Starting tick 12
+
+Road1 blocked snowing
+
+Starting tick 13
+
+Road1 blocked snowing
+
+Starting tick 14
+
+Road1 blocked snowing
+
+Starting tick 15
+
+Road1 blocked snowing
+
+Starting tick 16
+
+Road1 blocked snowing
+
+Starting tick 17
+
+Road1 blocked snowing
+
+Starting tick 18
+
+Road1 blocked snowing
+
+Starting tick 19
+
+Road1 blocked snowing
+
+Starting tick 20
+
+Road1 blocked snowing
+
+Starting tick 21
+
+Road1 blocked snowing
+
+Starting tick 22
+
+Road1 blocked snowing
+
+Starting tick 23
+
+Road1 blocked snowing
+
+Starting tick 24
+
+Road1 blocked snowing
+
+Starting tick 25
+
+Road1 blocked snowing
+
+Starting tick 26
+
+Road1 blocked snowing
+
+Starting tick 27
+
+Road1 blocked snowing
+
+Starting tick 28
+
+Road1 blocked snowing
+
+Starting tick 29
+
+Road1 blocked snowing
+
+Starting tick 30
+
+Road1 blocked snowing
+
+Starting tick 31
+
+Road1 blocked snowing
+
+Starting tick 32
+
+Road1 blocked snowing
+
+Starting tick 33
+
+Road1 blocked snowing
+
+Starting tick 34
+
+Road1 blocked snowing
+
+Starting tick 35
+
+Road1 blocked snowing
+
+Starting tick 36
+
+Road1 blocked snowing
+
+Starting tick 37
+
+Road1 blocked snowing
+
+Starting tick 38
+
+Road1 blocked snowing
+
+Starting tick 39
+
+Road1 blocked snowing
+
+Starting tick 40
+
+Road1 blocked snowing
+
+Starting tick 41
+
+Road1 blocked snowing
+
+Starting tick 42
+
+Road1 blocked snowing
+
+Starting tick 43
+
+Road1 blocked snowing
+
+Starting tick 44
+
+Road1 blocked snowing
+
+Starting tick 45
+
+Road1 blocked snowing
+
+Starting tick 46
+
+Road1 blocked snowing
+
+Starting tick 47
+
+Road1 blocked snowing
+
+Starting tick 48
+
+Road1 blocked snowing
+
+Starting tick 49
+
+Road1 blocked snowing
+
+Starting tick 50
+
+Road1 blocked snowing
+
+Starting tick 51
+
+Road1 blocked snowing
+
+Starting tick 52
+
+Road1 blocked snowing
+
+Starting tick 53
+
+Road1 blocked snowing
+
+Starting tick 54
+
+Road1 blocked snowing
+
+Starting tick 55
+
+Road1 blocked snowing
+
+Starting tick 56
+
+Road1 blocked snowing
+
+Starting tick 57
+
+Road1 blocked snowing
+
+Starting tick 58
+
+Road1 blocked snowing
+
+Starting tick 59
+
+Road1 blocked snowing
+
+Starting tick 60
+
+Road1 blocked snowing
+
+Starting tick 61
+
+Road1 blocked snowing
+
+Starting tick 62
+
+Road1 blocked snowing
+
+Starting tick 63
+
+Road1 blocked snowing
+
+Starting tick 64
+
+Road1 blocked snowing
+
+Starting tick 65
+
+Road1 blocked snowing
+
+Starting tick 66
+
+Road1 blocked snowing
+
+Starting tick 67
+
+Road1 blocked snowing
+
+Starting tick 68
+
+Road1 blocked snowing
+
+Starting tick 69
+
+Road1 blocked snowing
+
+Starting tick 70
+
+Road1 blocked snowing
+
+Starting tick 71
+
+Road1 blocked snowing
+
+Starting tick 72
+
+Road1 blocked snowing
+
+Starting tick 73
+
+Road1 blocked snowing
+
+Starting tick 74
+
+Road1 blocked snowing
+
+Starting tick 75
+
+Road1 blocked snowing
+
+Starting tick 76
+
+Road1 blocked snowing
+
+Starting tick 77
+
+Road1 blocked snowing
+
+Starting tick 78
+
+Road1 blocked snowing
+
+Starting tick 79
+
+Road1 blocked snowing
+
+Starting tick 80
+
+Road1 blocked snowing
+
+Starting tick 81
+
+Road1 blocked snowing
+
+Starting tick 82
+
+Road1 blocked snowing
+
+Starting tick 83
+
+Road1 blocked snowing
+
+Starting tick 84
+
+Road1 blocked snowing
+
+Starting tick 85
+
+Road1 blocked snowing
+
+Starting tick 86
+
+Road1 blocked snowing
+
+Starting tick 87
+
+Road1 blocked snowing
+
+Starting tick 88
+
+Road1 blocked snowing
+
+Starting tick 89
+
+Road1 blocked snowing
+
+Starting tick 90
+
+Road1 blocked snowing
+
+Starting tick 91
+
+Road1 blocked snowing
+
+Starting tick 92
+
+Road1 blocked snowing
+
+Starting tick 93
+
+Road1 blocked snowing
+
+Starting tick 94
+
+Road1 blocked snowing
+
+Starting tick 95
+
+Road1 blocked snowing
+
+Starting tick 96
+
+Road1 blocked snowing
+
+Starting tick 97
+
+Road1 blocked snowing
+
+Starting tick 98
+
+Road1 blocked snowing
+
+Starting tick 99
+
+Road1 blocked snowing
+
+Starting tick 100
+
+Road1 blocked snowing
+
+Starting tick 101
+
+Road1 blocked snowing
+
+Starting tick 102
+
+Road1 blocked snowing
+
+Starting tick 103
+
+Road1 blocked snowing
+
+Starting tick 104
+
+Road1 blocked snowing
+
+Starting tick 105
+
+Road1 blocked snowing
+
+Starting tick 106
+
+Road1 blocked snowing
+
+Starting tick 107
+
+Road1 blocked snowing
+
+Starting tick 108
+
+Road1 blocked snowing
+
+Starting tick 109
+
+Road1 blocked snowing
+
+Starting tick 110
+
+Road1 blocked snowing
+
+Starting tick 111
+
+Road1 blocked snowing
+
+Starting tick 112
+
+Road1 blocked snowing
+
+Starting tick 113
+
+Road1 blocked snowing
+
+Starting tick 114
+
+Road1 blocked snowing
+
+Starting tick 115
+
+Road1 blocked snowing
+
+Starting tick 116
+
+Road1 blocked snowing
+
+Starting tick 117
+
+Road1 blocked snowing
+
+Starting tick 118
+
+Road1 blocked snowing
+
+Starting tick 119
+
+Road1 blocked snowing
+
+Starting tick 120
+
+Road1 blocked snowing
+
+Starting tick 121
+
+Road1 blocked snowing
+
+Starting tick 122
+
+Road1 blocked snowing
+
+Starting tick 123
+
+Road1 blocked snowing
+
+Starting tick 124
+
+Road1 blocked snowing
+
+Starting tick 125
+
+Road1 blocked snowing
+
+Starting tick 126
+
+Road1 blocked snowing
+
+Starting tick 127
+
+Road1 blocked snowing
+
+Starting tick 128
+
+Road1 blocked snowing
+
+Starting tick 129
+
+Road1 blocked snowing
+
+Starting tick 130
+
+Road1 blocked snowing
+
+Starting tick 131
+
+Road1 blocked snowing
+
+Starting tick 132
+
+Road1 blocked snowing
+
+Starting tick 133
+
+Road1 blocked snowing
+
+Starting tick 134
+
+Road1 blocked snowing
+
+Starting tick 135
+
+Road1 blocked snowing
+
+Starting tick 136
+
+Road1 blocked snowing
+
+Starting tick 137
+
+Road1 blocked snowing
+
+Starting tick 138
+
+Road1 blocked snowing
+
+Starting tick 139
+
+Road1 blocked snowing
+
+Starting tick 140
+
+Road1 blocked snowing
+
+Starting tick 141
+
+Road1 blocked snowing
+
+Starting tick 142
+
+Road1 blocked snowing
+
+Starting tick 143
+
+Road1 blocked snowing
+
+Starting tick 144
+
+Road1 blocked snowing
+
+Starting tick 145
+
+Road1 blocked snowing
+
+Starting tick 146
+
+Road1 blocked snowing
+
+Starting tick 147
+
+Road1 blocked snowing
+
+Starting tick 148
+
+Road1 blocked snowing
+
+Starting tick 149
+
+Road1 blocked snowing
+
+Starting tick 150
+
+Road1 blocked snowing
+
+Starting tick 151
+
+Road1 blocked snowing
+
+Starting tick 152
+
+Road1 blocked snowing
+
+Starting tick 153
+
+Road1 blocked snowing
+
+Starting tick 154
+
+Road1 blocked snowing
+
+Starting tick 155
+
+Road1 blocked snowing
+
+Starting tick 156
+
+Road1 blocked snowing
+
+Starting tick 157
+
+Road1 blocked snowing
+
+Starting tick 158
+
+Road1 blocked snowing
+
+Starting tick 159
+
+Road1 blocked snowing
+
+Starting tick 160
+
+Road1 blocked snowing
+
+Starting tick 161
+
+Road1 blocked snowing
+
+Starting tick 162
+
+Road1 blocked snowing
+
+Starting tick 163
+
+Road1 blocked snowing
+
+Starting tick 164
+
+Road1 blocked snowing
+
+Starting tick 165
+
+Road1 blocked snowing
+
+Starting tick 166
+
+Road1 blocked snowing
+
+Starting tick 167
+
+Road1 blocked snowing
+
+Starting tick 168
+
+Road1 blocked snowing
+
+Starting tick 169
+
+Road1 blocked snowing
+
+Starting tick 170
+
+Road1 blocked snowing
+
+Starting tick 171
+
+Road1 blocked snowing
+
+Starting tick 172
+
+Road1 blocked snowing
+
+Starting tick 173
+
+Road1 blocked snowing
+
+Starting tick 174
+
+Road1 blocked snowing
+
+Starting tick 175
+
+Road1 blocked snowing
+
+Starting tick 176
+
+Road1 blocked snowing
+
+Starting tick 177
+
+Road1 blocked snowing
+
+Starting tick 178
+
+Road1 blocked snowing
+
+Starting tick 179
+
+Road1 blocked snowing
+
+Starting tick 180
+
+Road1 blocked snowing
+
+Starting tick 181
+
+Road1 blocked snowing
+
+Starting tick 182
+
+Road1 blocked snowing
+
+Starting tick 183
+
+Road1 blocked snowing
+
+Starting tick 184
+
+Road1 blocked snowing
+
+Starting tick 185
+
+Road1 blocked snowing
+
+Starting tick 186
+
+Road1 blocked snowing
+
+Starting tick 187
+
+Road1 blocked snowing
+
+Starting tick 188
+
+Road1 blocked snowing
+
+Starting tick 189
+
+Road1 blocked snowing
+
+Starting tick 190
+
+Road1 blocked snowing
+
+Starting tick 191
+
+Road1 blocked snowing
+
+Starting tick 192
+
+Road1 blocked snowing
+
+Starting tick 193
+
+Road1 blocked snowing
+
+Starting tick 194
+
+Road1 blocked snowing
+
+Starting tick 195
+
+Road1 blocked snowing
+
+Starting tick 196
+
+Road1 blocked snowing
+
+Starting tick 197
+
+Road1 blocked snowing
+
+Starting tick 198
+
+Road1 blocked snowing
+
+Starting tick 199
+
+Road1 blocked snowing
+
+Starting tick 200
+
+Road1 blocked snowing
+
+Starting tick 201
+
+Road1 blocked snowing
+
+Starting tick 202
+
+Road1 blocked snowing
+
+Starting tick 203
+
+Road1 blocked snowing
+
+Starting tick 204
+
+Road1 blocked snowing
+
+Starting tick 205
+
+Road1 blocked snowing
+
+Starting tick 206
+
+Road1 blocked snowing
+
+Starting tick 207
+
+Road1 blocked snowing
+
+Starting tick 208
+
+Road1 blocked snowing
+
+Starting tick 209
+
+Road1 blocked snowing
+
+Starting tick 210
+
+Road1 blocked snowing
+
+Starting tick 211
+
+Road1 blocked snowing
+
+Starting tick 212
+
+Road1 blocked snowing
+
+Starting tick 213
+
+Road1 blocked snowing
+
+Starting tick 214
+
+Road1 blocked snowing
+
+Starting tick 215
+
+Road1 blocked snowing
+
+Starting tick 216
+
+Road1 blocked snowing
+
+Starting tick 217
+
+Road1 blocked snowing
+
+Starting tick 218
+
+Road1 blocked snowing
+
+Starting tick 219
+
+Road1 blocked snowing
+
+Starting tick 220
+
+Road1 blocked snowing
+
+Starting tick 221
+
+Road1 blocked snowing
+
+Starting tick 222
+
+Road1 blocked snowing
+
+Starting tick 223
+
+Road1 blocked snowing
+
+Starting tick 224
+
+Road1 blocked snowing
+
+Starting tick 225
+
+Road1 blocked snowing
+
+Starting tick 226
+
+Road1 blocked snowing
+
+Starting tick 227
+
+Road1 blocked snowing
+
+Starting tick 228
+
+Road1 blocked snowing
+
+Starting tick 229
+
+Road1 blocked snowing
+
+Starting tick 230
+
+Road1 blocked snowing
+
+Starting tick 231
+
+Road1 blocked snowing
+
+Starting tick 232
+
+Road1 blocked snowing
+
+Starting tick 233
+
+Road1 blocked snowing
+
+Starting tick 234
+
+Road1 blocked snowing
+
+Starting tick 235
+
+Road1 blocked snowing
+
+Starting tick 236
+
+Road1 blocked snowing
+
+Starting tick 237
+
+Road1 blocked snowing
+
+Starting tick 238
+
+Road1 blocked snowing
+
+Starting tick 239
+
+Road1 blocked snowing
+
+Starting tick 240
+
+Road1 blocked snowing
+
+Starting tick 241
+
+Road1 blocked snowing
+
+Starting tick 242
+
+Road1 blocked snowing
+
+Starting tick 243
+
+Road1 blocked snowing
+
+Starting tick 244
+
+Road1 blocked snowing
+
+Starting tick 245
+
+Road1 blocked snowing
+
+Starting tick 246
+
+Road1 blocked snowing
+
+Starting tick 247
+
+Road1 blocked snowing
+
+Starting tick 248
+
+Road1 blocked snowing
+
+Starting tick 249
+
+Road1 blocked snowing
+
+Starting tick 250
+
+Road1 blocked snowing
+
+Starting tick 251
+
+Road1 blocked snowing
+
+Starting tick 252
+
+Road1 blocked snowing
+
+Starting tick 253
+
+Road1 blocked snowing
+
+Starting tick 254
+
+Road1 blocked snowing
+
+Starting tick 255
+
+Road1 blocked snowing
+
+Starting tick 256
+
+Road1 blocked snowing
+
+Starting tick 257
+
+Road1 blocked snowing
+
+Starting tick 258
+
+Road1 blocked snowing
+
+Starting tick 259
+
+Road1 blocked snowing
+
+Starting tick 260
+
+Road1 blocked snowing
+
+Starting tick 261
+
+Road1 blocked snowing
+
+Starting tick 262
+
+Road1 blocked snowing
+
+Starting tick 263
+
+Road1 blocked snowing
+
+Starting tick 264
+
+Road1 blocked snowing
+
+Starting tick 265
+
+Road1 blocked snowing
+
+Starting tick 266
+
+Road1 blocked snowing
+
+Starting tick 267
+
+Road1 blocked snowing
+
+Starting tick 268
+
+Road1 blocked snowing
+
+Starting tick 269
+
+Road1 blocked snowing
+
+Starting tick 270
+
+Road1 blocked snowing
+
+Starting tick 271
+
+Road1 blocked snowing
+
+Starting tick 272
+
+Road1 blocked snowing
+
+Starting tick 273
+
+Road1 blocked snowing
+
+Starting tick 274
+
+Road1 blocked snowing
+
+Starting tick 275
+
+Road1 blocked snowing
+
+Starting tick 276
+
+Road1 blocked snowing
+
+Starting tick 277
+
+Road1 blocked snowing
+
+Starting tick 278
+
+Road1 blocked snowing
+
+Starting tick 279
+
+Road1 blocked snowing
+
+Starting tick 280
+
+Road1 blocked snowing
+
+Starting tick 281
+
+Road1 blocked snowing
+
+Starting tick 282
+
+Road1 blocked snowing
+
+Starting tick 283
+
+Road1 blocked snowing
+
+Starting tick 284
+
+Road1 blocked snowing
+
+Starting tick 285
+
+Road1 blocked snowing
+
+Starting tick 286
+
+Road1 blocked snowing
+
+Starting tick 287
+
+Road1 blocked snowing
+
+Starting tick 288
+
+Road1 blocked snowing
+
+Starting tick 289
+
+Road1 blocked snowing
+
+Starting tick 290
+
+Road1 blocked snowing
+
+Starting tick 291
+
+Road1 blocked snowing
+
+Starting tick 292
+
+Road1 blocked snowing
+
+Starting tick 293
+
+Road1 blocked snowing
+
+Starting tick 294
+
+Road1 blocked snowing
+
+Starting tick 295
+
+Road1 blocked snowing
+
+Starting tick 296
+
+Road1 blocked snowing
+
+Starting tick 297
+
+Road1 blocked snowing
+
+Starting tick 298
+
+Road1 blocked snowing
+
+Starting tick 299
+
+Road1 blocked snowing
+
+Starting tick 300
+
+Road1 blocked snowing
+
+Starting tick 301
+
+Road1 blocked snowing
+
+Starting tick 302
+
+Road1 blocked snowing
+
+Starting tick 303
+
+Road1 blocked snowing
+
+Starting tick 304
+
+Road1 blocked snowing
+
+Starting tick 305
+
+Road1 blocked snowing
+
+Starting tick 306
+
+Road1 blocked snowing
+
+Starting tick 307
+
+Road1 blocked snowing
+
+Starting tick 308
+
+Road1 blocked snowing
+
+Starting tick 309
+
+Road1 blocked snowing
+
+Starting tick 310
+
+Road1 blocked snowing
+
+Starting tick 311
+
+Road1 blocked snowing
+
+Starting tick 312
+
+Road1 blocked snowing
+
+Starting tick 313
+
+Road1 blocked snowing
+
+Starting tick 314
+
+Road1 blocked snowing
+
+Starting tick 315
+
+Road1 blocked snowing
+
+Starting tick 316
+
+Road1 blocked snowing
+
+Starting tick 317
+
+Road1 blocked snowing
+
+Starting tick 318
+
+Road1 blocked snowing
+
+Starting tick 319
+
+Road1 blocked snowing
+
+Starting tick 320
+
+Road1 blocked snowing
+
+Starting tick 321
+
+Road1 blocked snowing
+
+Starting tick 322
+
+Road1 blocked snowing
+
+Starting tick 323
+
+Road1 blocked snowing
+
+Starting tick 324
+
+Road1 blocked snowing
+
+Starting tick 325
+
+Road1 blocked snowing
+
+Starting tick 326
+
+Road1 blocked snowing
+
+Starting tick 327
+
+Road1 blocked snowing
+
+Starting tick 328
+
+Road1 blocked snowing
+
+Starting tick 329
+
+Road1 blocked snowing
+
+Starting tick 330
+
+Road1 blocked snowing
+
+Starting tick 331
+
+Road1 blocked snowing
+
+Starting tick 332
+
+Road1 blocked snowing
+
+Starting tick 333
+
+Road1 blocked snowing
+
+Starting tick 334
+
+Road1 blocked snowing
+
+Starting tick 335
+
+Road1 blocked snowing
+
+Starting tick 336
+
+Road1 blocked snowing
+
+Starting tick 337
+
+Road1 blocked snowing
+
+Starting tick 338
+
+Road1 blocked snowing
+
+Starting tick 339
+
+Road1 blocked snowing
+
+Starting tick 340
+
+Road1 blocked snowing
+
+Starting tick 341
+
+Road1 blocked snowing
+
+Starting tick 342
+
+Road1 blocked snowing
+
+Starting tick 343
+
+Road1 blocked snowing
+
+Starting tick 344
+
+Road1 blocked snowing
+
+Starting tick 345
+
+Road1 blocked snowing
+
+Starting tick 346
+
+Road1 blocked snowing
+
+Starting tick 347
+
+Road1 blocked snowing
+
+Starting tick 348
+
+Road1 blocked snowing
+
+Starting tick 349
+
+Road1 blocked snowing
+
+Starting tick 350
+
+Road1 blocked snowing
+
+Starting tick 351
+
+Road1 blocked snowing
+
+Starting tick 352
+
+Road1 blocked snowing
+
+Starting tick 353
+
+Road1 blocked snowing
+
+Starting tick 354
+
+Road1 blocked snowing
+
+Starting tick 355
+
+Road1 blocked snowing
+
+Starting tick 356
+
+Road1 blocked snowing
+
+Starting tick 357
+
+Road1 blocked snowing
+
+Starting tick 358
+
+Road1 blocked snowing
+
+Starting tick 359
+
+Road1 blocked snowing
+
+Starting tick 360
+
+Road1 blocked snowing
+
+Starting tick 361
+
+Road1 blocked snowing
+
+Starting tick 362
+
+Road1 blocked snowing
+
+Starting tick 363
+
+Road1 blocked snowing
+
+Starting tick 364
+
+Road1 blocked snowing
+
+Starting tick 365
+
+Road1 blocked snowing
+
+Starting tick 366
+
+Road1 blocked snowing
+
+Starting tick 367
+
+Road1 blocked snowing
+
+Starting tick 368
+
+Road1 blocked snowing
+
+Starting tick 369
+
+Road1 blocked snowing
+
+Starting tick 370
+
+Road1 blocked snowing
+
+Starting tick 371
+
+Road1 blocked snowing
+
+Starting tick 372
+
+Road1 blocked snowing
+
+Starting tick 373
+
+Road1 blocked snowing
+
+Starting tick 374
+
+Road1 blocked snowing
+
+Starting tick 375
+
+Road1 blocked snowing
+
+Starting tick 376
+
+Road1 blocked snowing
+
+Starting tick 377
+
+Road1 blocked snowing
+
+Starting tick 378
+
+Road1 blocked snowing
+
+Starting tick 379
+
+Road1 blocked snowing
+
+Starting tick 380
+
+Road1 blocked snowing
+
+Starting tick 381
+
+Road1 blocked snowing
+
+Starting tick 382
+
+Road1 blocked snowing
+
+Starting tick 383
+
+Road1 blocked snowing
+
+Starting tick 384
+
+Road1 blocked snowing
+
+Starting tick 385
+
+Road1 blocked snowing
+
+Starting tick 386
+
+Road1 blocked snowing
+
+Starting tick 387
+
+Road1 blocked snowing
+
+Starting tick 388
+
+Road1 blocked snowing
+
+Starting tick 389
+
+Road1 blocked snowing
+
+Starting tick 390
+
+Road1 blocked snowing
+
+Starting tick 391
+
+Road1 blocked snowing
+
+Starting tick 392
+
+Road1 blocked snowing
+
+Starting tick 393
+
+Road1 blocked snowing
+
+Starting tick 394
+
+Road1 blocked snowing
+
+Starting tick 395
+
+Road1 blocked snowing
+
+Starting tick 396
+
+Road1 blocked snowing
+
+Starting tick 397
+
+Road1 blocked snowing
+
+Starting tick 398
+
+Road1 blocked snowing
+
+Starting tick 399
+
+Road1 blocked snowing
+
+Starting tick 400
+
+Road1 blocked snowing
+
+Starting tick 401
+
+Road1 blocked snowing
+
+Starting tick 402
+
+Road1 blocked snowing
+
+Starting tick 403
+
+Road1 blocked snowing
+
+Starting tick 404
+
+Road1 blocked snowing
+
+Starting tick 405
+
+Road1 blocked snowing
+
+Starting tick 406
+
+Road1 blocked snowing
+
+Starting tick 407
+
+Road1 blocked snowing
+
+Starting tick 408
+
+Road1 blocked snowing
+
+Starting tick 409
+
+Road1 blocked snowing
+
+Starting tick 410
+
+Road1 blocked snowing
+
+Starting tick 411
+
+Road1 blocked snowing
+
+Starting tick 412
+
+Road1 blocked snowing
+
+Starting tick 413
+
+Road1 blocked snowing
+
+Starting tick 414
+
+Road1 blocked snowing
+
+Starting tick 415
+
+Road1 blocked snowing
+
+Starting tick 416
+
+Road1 blocked snowing
+
+Starting tick 417
+
+Road1 blocked snowing
+
+Starting tick 418
+
+Road1 blocked snowing
+
+Starting tick 419
+
+Road1 blocked snowing
+
+Starting tick 420
+
+Road1 blocked snowing
+
+Starting tick 421
+
+Road1 blocked snowing
+
+Starting tick 422
+
+Road1 blocked snowing
+
+Starting tick 423
+
+Road1 blocked snowing
+
+Starting tick 424
+
+Road1 blocked snowing
+
+Starting tick 425
+
+Road1 blocked snowing
+
+Starting tick 426
+
+Road1 blocked snowing
+
+Starting tick 427
+
+Road1 blocked snowing
+
+Starting tick 428
+
+Road1 blocked snowing
+
+Starting tick 429
+
+Road1 blocked snowing
+
+Starting tick 430
+
+Road1 blocked snowing
+
+Starting tick 431
+
+Road1 blocked snowing
+
+Starting tick 432
+
+Road1 blocked snowing
+
+Starting tick 433
+
+Road1 blocked snowing
+
+Starting tick 434
+
+Road1 blocked snowing
+
+Starting tick 435
+
+Road1 blocked snowing
+
+Starting tick 436
+
+Road1 blocked snowing
+
+Starting tick 437
+
+Road1 blocked snowing
+
+Starting tick 438
+
+Road1 blocked snowing
+
+Starting tick 439
+
+Road1 blocked snowing
+
+Starting tick 440
+
+Road1 blocked snowing
+
+Starting tick 441
+
+Road1 blocked snowing
+
+Starting tick 442
+
+Road1 blocked snowing
+
+Starting tick 443
+
+Road1 blocked snowing
+
+Starting tick 444
+
+Road1 blocked snowing
+
+Starting tick 445
+
+Road1 blocked snowing
+
+Starting tick 446
+
+Road1 blocked snowing
+
+Starting tick 447
+
+Road1 blocked snowing
+
+Starting tick 448
+
+Road1 blocked snowing
+
+Starting tick 449
+
+Road1 blocked snowing
+
+Starting tick 450
+
+Road1 blocked snowing
+
+Starting tick 451
+
+Road1 blocked snowing
+
+Starting tick 452
+
+Road1 blocked snowing
+
+Starting tick 453
+
+Road1 blocked snowing
+
+Starting tick 454
+
+Road1 blocked snowing
+
+Starting tick 455
+
+Road1 blocked snowing
+
+Starting tick 456
+
+Road1 blocked snowing
+
+Starting tick 457
+
+Road1 blocked snowing
+
+Starting tick 458
+
+Road1 blocked snowing
+
+Starting tick 459
+
+Road1 blocked snowing
+
+Starting tick 460
+
+Road1 blocked snowing
+
+Starting tick 461
+
+Road1 blocked snowing
+
+Starting tick 462
+
+Road1 blocked snowing
+
+Starting tick 463
+
+Road1 blocked snowing
+
+Starting tick 464
+
+Road1 blocked snowing
+
+Starting tick 465
+
+Road1 blocked snowing
+
+Starting tick 466
+
+Road1 blocked snowing
+
+Starting tick 467
+
+Road1 blocked snowing
+
+Starting tick 468
+
+Road1 blocked snowing
+
+Starting tick 469
+
+Road1 blocked snowing
+
+Starting tick 470
+
+Road1 blocked snowing
+
+Starting tick 471
+
+Road1 blocked snowing
+
+Starting tick 472
+
+Road1 blocked snowing
+
+Starting tick 473
+
+Road1 blocked snowing
+
+Starting tick 474
+
+Road1 blocked snowing
+
+Starting tick 475
+
+Road1 blocked snowing
+
+Starting tick 476
+
+Road1 blocked snowing
+
+Starting tick 477
+
+Road1 blocked snowing
+
+Starting tick 478
+
+Road1 blocked snowing
+
+Starting tick 479
+
+Road1 blocked snowing
+
+Starting tick 480
+
+Road1 blocked snowing
+
+Starting tick 481
+
+Road1 blocked snowing
+
+Starting tick 482
+
+Road1 blocked snowing
+
+Starting tick 483
+
+Road1 blocked snowing
+
+Starting tick 484
+
+Road1 blocked snowing
+
+Starting tick 485
+
+Road1 blocked snowing
+
+Starting tick 486
+
+Road1 blocked snowing
+
+Starting tick 487
+
+Road1 blocked snowing
+
+Starting tick 488
+
+Road1 blocked snowing
+
+Starting tick 489
+
+Road1 blocked snowing
+
+Starting tick 490
+
+Road1 blocked snowing
+
+Starting tick 491
+
+Road1 blocked snowing
+
+Starting tick 492
+
+Road1 blocked snowing
+
+Starting tick 493
+
+Road1 blocked snowing
+
+Starting tick 494
+
+Road1 blocked snowing
+
+Starting tick 495
+
+Road1 blocked snowing
+
+Starting tick 496
+
+Road1 blocked snowing
+
+Starting tick 497
+
+Road1 blocked snowing
+
+Starting tick 498
+
+Road1 blocked snowing
+
+Starting tick 499
+
+Road1 blocked snowing
+
+Starting tick 500
+
 Road1 blocked snowing

@@ -11,6 +11,9 @@ Lane1_1 set Salt1_1 with Cleaner1
 
 Inicialization done
 
+
+Starting tick 1
+
 Road1 returned length 100.0
 Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
 Cleaner1 received 10$
@@ -363,13 +366,13 @@ Cleaner1 received 30$
 Salt1_1 lifetime decreased to 150.0
 Lane1_1 returned Road1
 INFO Lane1_1 is on Road1
-Lane1_1 returned snow level 24.99999999999993
-INFO Lane1_1 snow level is 24.99999999999993
-Lane1_1 returned ice level 5.000000000000018
-INFO Lane1_1 ice level is 5.000000000000018
+Lane1_1 returned snow level 0.0
+INFO Lane1_1 snow level is 0.0
+Lane1_1 returned ice level 0.0
+INFO Lane1_1 ice level is 0.0
 Lane1_1 returned vehicles
 INFO Lane1_1 contains Salt1_1
 Lane1_1 has no gravel
 INFO Lane1_1 does not have gravel
 INFO Cleaner1 name is test
-INFO Cleaner1 has 2000$
+INFO Cleaner1 has 400$

@@ -14,6 +14,9 @@ Lane1_1 added Car1
 
 Inicialization done
 
+
+Starting tick 1
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -23,6 +26,9 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 1.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 2
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -32,6 +38,9 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 2.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 3
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -51,6 +60,9 @@ INFO Car1 revive timer is 0
 INFO Car1 home is Crossing1
 INFO Car1 work is Crossing2
 INFO Car1 is going to work
+
+Starting tick 4
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -60,6 +72,9 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 4.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 5
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -69,6 +84,9 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 5.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 6
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -78,6 +96,9 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 6.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 7
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -87,6 +108,9 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 7.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 8
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -96,6 +120,9 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 8.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 9
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -105,6 +132,9 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 9.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 10
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -114,11 +144,16 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 10.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+Car1 trampled snow on Lane1_1
+Lane1_1 turned 0.0 snow into ice
 Lane1_1 returned Road1
 Road1 returned end Crossing2
 Car1 reached end of road, currently in Crossing2
 Lane1_1 removed Car1
 Car1 reached work, going to home
+
+Starting tick 11
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -128,6 +163,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 12
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -137,6 +175,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 13
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -146,6 +187,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 14
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -155,6 +199,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 15
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -164,6 +211,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 16
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -173,6 +223,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 17
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -182,6 +235,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 18
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -191,6 +247,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 19
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -200,6 +259,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 20
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -209,6 +271,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 21
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -218,6 +283,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 22
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -227,6 +295,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 23
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -236,6 +307,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 24
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -245,6 +319,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 25
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -254,6 +331,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 26
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -263,6 +343,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 27
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -272,6 +355,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 28
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -281,6 +367,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 29
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -290,6 +379,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 30
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -299,6 +391,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 31
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -308,6 +403,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 32
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -317,6 +415,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 33
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -326,6 +427,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 34
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -335,6 +439,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 35
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -344,6 +451,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 36
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -353,6 +463,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 37
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -362,6 +475,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 38
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -371,6 +487,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 39
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -380,6 +499,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 40
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -389,6 +511,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 41
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -398,6 +523,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 42
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -407,6 +535,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 43
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -416,6 +547,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 44
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -425,6 +559,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 45
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -434,6 +571,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 46
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -443,6 +583,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 47
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -452,6 +595,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 48
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -461,6 +607,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 49
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -470,6 +619,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 50
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -479,6 +631,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 51
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -488,6 +643,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 52
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -497,6 +655,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 53
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -506,6 +667,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 54
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -515,6 +679,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 55
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -524,6 +691,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 56
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -533,6 +703,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 57
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -542,6 +715,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 58
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -551,6 +727,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 59
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -560,6 +739,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 60
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -569,6 +751,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 61
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -578,6 +763,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 62
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -587,6 +775,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 63
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -596,6 +787,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 64
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -605,6 +799,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 65
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -614,6 +811,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 66
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -623,6 +823,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 67
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -632,6 +835,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 68
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -641,6 +847,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 69
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -650,6 +859,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 70
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -659,6 +871,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 71
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -668,6 +883,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 72
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -677,6 +895,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 73
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -686,6 +907,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 74
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -695,6 +919,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 75
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -704,6 +931,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 76
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -713,6 +943,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 77
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -722,6 +955,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 78
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -731,6 +967,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 79
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -740,6 +979,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 80
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -749,6 +991,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 81
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -758,6 +1003,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 82
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -767,6 +1015,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 83
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -776,6 +1027,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 84
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -785,6 +1039,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 85
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -794,6 +1051,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 86
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -803,6 +1063,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 87
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -812,6 +1075,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 88
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -821,6 +1087,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 89
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -830,6 +1099,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 90
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -839,6 +1111,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 91
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -848,6 +1123,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 92
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -857,6 +1135,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 93
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -866,6 +1147,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 94
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -875,6 +1159,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 95
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -884,6 +1171,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 96
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -893,6 +1183,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 97
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -902,6 +1195,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 98
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -911,6 +1207,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 99
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -920,6 +1219,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 100
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -929,6 +1231,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 101
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -938,6 +1243,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 102
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -947,6 +1255,9 @@ Crossing2 returned outgoing roads
 Created PathC_0_1
 City couldn't find path between Crossing2 and Crossing1 for car Car1
 Created PathC_0_1
+
+Starting tick 103
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping

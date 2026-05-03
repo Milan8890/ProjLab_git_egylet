@@ -16,16 +16,16 @@ else
 :
 fi
 
-TESTED_LINE="Salt1_1 melted 2 ice from lane, paid Cleaner1 2$"
-if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+TESTED_LINE="Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$"
+if grep -qF "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
 	SUCCESS=false
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="Salt1_1 melted 2 snow from lane, paid Cleaner1 1$"
-if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+TESTED_LINE="Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$"
+if grep -qF "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
 	SUCCESS=false
@@ -48,8 +48,8 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Cleaner1 has 25$"
-if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+TESTED_LINE="INFO Cleaner1 has 400$"
+if grep -qF "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
 	SUCCESS=false

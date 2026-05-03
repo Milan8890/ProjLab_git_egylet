@@ -17,28 +17,61 @@ Lane2_1 added Car1
 
 Inicialization done
 
+
+Starting tick 1
+
 Car1 is not in a crossing
 Car1 is currently stuck, revTime decreased to 9
+
+Starting tick 2
+
 Car1 is not in a crossing
 Car1 is currently stuck, revTime decreased to 8
+
+Starting tick 3
+
 Car1 is not in a crossing
 Car1 is currently stuck, revTime decreased to 7
+
+Starting tick 4
+
 Car1 is not in a crossing
 Car1 is currently stuck, revTime decreased to 6
+
+Starting tick 5
+
 Car1 is not in a crossing
 Car1 is currently stuck, revTime decreased to 5
+
+Starting tick 6
+
 Car1 is not in a crossing
 Car1 is currently stuck, revTime decreased to 4
+
+Starting tick 7
+
 Car1 is not in a crossing
 Car1 is currently stuck, revTime decreased to 3
+
+Starting tick 8
+
 Car1 is not in a crossing
 Car1 is currently stuck, revTime decreased to 2
+
+Starting tick 9
+
 Car1 is not in a crossing
 Car1 is currently stuck, revTime decreased to 1
+
+Starting tick 10
+
 Car1 is not in a crossing
 Car1 revTime expired, unstucking vehicle
 Car1 after accident, starting again from home
 PathC_0_1 cleared
+
+Starting tick 11
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -59,6 +92,9 @@ Lane1_1 returned Road1
 Lane1_1 returned Road1
 PathC_0_1 extended with Lane1_1 successfully
 City calculated shortest path from Crossing1 to Crossing2 as PathC_0_1
+
+Starting tick 12
+
 Car1 is in a crossing
 PathC_0_1 returned next lane Lane1_1
 Lane1_1 has no stuck vehicle
@@ -68,76 +104,139 @@ Lane1_1 added Car1
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 13
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 14
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 15
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 16
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 17
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 18
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 19
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 20
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 21
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 22
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 23
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 24
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 25
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 26
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 27
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 28
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 29
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+
+Starting tick 30
+
 Car1 is not in a crossing
 Car1 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-[ERROR]No such command INFOimplemented
+INFO Car1 last crossing is Crossing1
+INFO Car1 current lane is Lane1_1
+INFO Car1 lane progress is 0.0
+Car1 is stuck
+INFO Car1 is stuck
+INFO Car1 is not crashed
+INFO Car1 revive timer is 0
+INFO Car1 home is Crossing1
+INFO Car1 work is Crossing2
+INFO Car1 is going to work
