@@ -31,6 +31,6 @@ Lane1_1 added Snowplower1_1
 Inicialization done
 
 Snowplower1_1 is not in a crossing
-Snowplower1_1 couldnâ€™t buy gravel, because not in crossing
+Snowplower1_1 couldn’t buy gravel, because not in crossing
 [ERROR]No such command INFOimplemented
 [ERROR]No such command INFOimplemented

@@ -6,11 +6,111 @@ Created Cleaner1
 Created Lane1_1
 Crossing1 added Road1 to outgoing roads
 Road1 created between Crossing1 and Crossing2 with length 100.0 and 1 lanes
-Salt1_1 created with owner Cleaner1 and lifetime 100.0
+Salt1_1 created with owner Cleaner1 and lifetime 200.0
 Lane1_1 set Salt1_1 with Cleaner1
 
 Inicialization done
 
+Salt1_1 lifetime decreased to 199.0
+Salt1_1 lifetime decreased to 198.0
+Salt1_1 lifetime decreased to 197.0
+Salt1_1 lifetime decreased to 196.0
+Salt1_1 lifetime decreased to 195.0
+Salt1_1 lifetime decreased to 194.0
+Salt1_1 lifetime decreased to 193.0
+Salt1_1 lifetime decreased to 192.0
+Salt1_1 lifetime decreased to 191.0
+Salt1_1 lifetime decreased to 190.0
+Salt1_1 lifetime decreased to 189.0
+Salt1_1 lifetime decreased to 188.0
+Salt1_1 lifetime decreased to 187.0
+Salt1_1 lifetime decreased to 186.0
+Salt1_1 lifetime decreased to 185.0
+Salt1_1 lifetime decreased to 184.0
+Salt1_1 lifetime decreased to 183.0
+Salt1_1 lifetime decreased to 182.0
+Salt1_1 lifetime decreased to 181.0
+Salt1_1 lifetime decreased to 180.0
+Salt1_1 lifetime decreased to 179.0
+Salt1_1 lifetime decreased to 178.0
+Salt1_1 lifetime decreased to 177.0
+Salt1_1 lifetime decreased to 176.0
+Salt1_1 lifetime decreased to 175.0
+Salt1_1 lifetime decreased to 174.0
+Salt1_1 lifetime decreased to 173.0
+Salt1_1 lifetime decreased to 172.0
+Salt1_1 lifetime decreased to 171.0
+Salt1_1 lifetime decreased to 170.0
+Salt1_1 lifetime decreased to 169.0
+Salt1_1 lifetime decreased to 168.0
+Salt1_1 lifetime decreased to 167.0
+Salt1_1 lifetime decreased to 166.0
+Salt1_1 lifetime decreased to 165.0
+Salt1_1 lifetime decreased to 164.0
+Salt1_1 lifetime decreased to 163.0
+Salt1_1 lifetime decreased to 162.0
+Salt1_1 lifetime decreased to 161.0
+Salt1_1 lifetime decreased to 160.0
+Salt1_1 lifetime decreased to 159.0
+Salt1_1 lifetime decreased to 158.0
+Salt1_1 lifetime decreased to 157.0
+Salt1_1 lifetime decreased to 156.0
+Salt1_1 lifetime decreased to 155.0
+Salt1_1 lifetime decreased to 154.0
+Salt1_1 lifetime decreased to 153.0
+Salt1_1 lifetime decreased to 152.0
+Salt1_1 lifetime decreased to 151.0
+Salt1_1 lifetime decreased to 150.0
+Salt1_1 lifetime decreased to 149.0
+Salt1_1 lifetime decreased to 148.0
+Salt1_1 lifetime decreased to 147.0
+Salt1_1 lifetime decreased to 146.0
+Salt1_1 lifetime decreased to 145.0
+Salt1_1 lifetime decreased to 144.0
+Salt1_1 lifetime decreased to 143.0
+Salt1_1 lifetime decreased to 142.0
+Salt1_1 lifetime decreased to 141.0
+Salt1_1 lifetime decreased to 140.0
+Salt1_1 lifetime decreased to 139.0
+Salt1_1 lifetime decreased to 138.0
+Salt1_1 lifetime decreased to 137.0
+Salt1_1 lifetime decreased to 136.0
+Salt1_1 lifetime decreased to 135.0
+Salt1_1 lifetime decreased to 134.0
+Salt1_1 lifetime decreased to 133.0
+Salt1_1 lifetime decreased to 132.0
+Salt1_1 lifetime decreased to 131.0
+Salt1_1 lifetime decreased to 130.0
+Salt1_1 lifetime decreased to 129.0
+Salt1_1 lifetime decreased to 128.0
+Salt1_1 lifetime decreased to 127.0
+Salt1_1 lifetime decreased to 126.0
+Salt1_1 lifetime decreased to 125.0
+Salt1_1 lifetime decreased to 124.0
+Salt1_1 lifetime decreased to 123.0
+Salt1_1 lifetime decreased to 122.0
+Salt1_1 lifetime decreased to 121.0
+Salt1_1 lifetime decreased to 120.0
+Salt1_1 lifetime decreased to 119.0
+Salt1_1 lifetime decreased to 118.0
+Salt1_1 lifetime decreased to 117.0
+Salt1_1 lifetime decreased to 116.0
+Salt1_1 lifetime decreased to 115.0
+Salt1_1 lifetime decreased to 114.0
+Salt1_1 lifetime decreased to 113.0
+Salt1_1 lifetime decreased to 112.0
+Salt1_1 lifetime decreased to 111.0
+Salt1_1 lifetime decreased to 110.0
+Salt1_1 lifetime decreased to 109.0
+Salt1_1 lifetime decreased to 108.0
+Salt1_1 lifetime decreased to 107.0
+Salt1_1 lifetime decreased to 106.0
+Salt1_1 lifetime decreased to 105.0
+Salt1_1 lifetime decreased to 104.0
+Salt1_1 lifetime decreased to 103.0
+Salt1_1 lifetime decreased to 102.0
+Salt1_1 lifetime decreased to 101.0
+Salt1_1 lifetime decreased to 100.0
 Salt1_1 lifetime decreased to 99.0
 Salt1_1 lifetime decreased to 98.0
 Salt1_1 lifetime decreased to 97.0
@@ -19711,206 +19811,6 @@ Salt1_1 expired
 Salt1_1 lifetime decreased to -9799.0
 Salt1_1 expired
 Salt1_1 lifetime decreased to -9800.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9801.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9802.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9803.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9804.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9805.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9806.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9807.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9808.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9809.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9810.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9811.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9812.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9813.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9814.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9815.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9816.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9817.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9818.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9819.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9820.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9821.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9822.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9823.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9824.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9825.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9826.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9827.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9828.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9829.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9830.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9831.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9832.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9833.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9834.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9835.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9836.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9837.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9838.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9839.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9840.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9841.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9842.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9843.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9844.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9845.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9846.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9847.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9848.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9849.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9850.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9851.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9852.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9853.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9854.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9855.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9856.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9857.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9858.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9859.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9860.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9861.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9862.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9863.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9864.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9865.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9866.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9867.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9868.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9869.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9870.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9871.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9872.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9873.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9874.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9875.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9876.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9877.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9878.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9879.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9880.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9881.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9882.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9883.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9884.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9885.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9886.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9887.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9888.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9889.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9890.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9891.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9892.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9893.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9894.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9895.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9896.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9897.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9898.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9899.0
-Salt1_1 expired
-Salt1_1 lifetime decreased to -9900.0
 Salt1_1 expired
 Lane1_1 returned Road1
 INFO Lane1_1 is on Road1
