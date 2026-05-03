@@ -67,7 +67,7 @@ public class Lane {
 		 */
 		double lifetime; // Ezt hogy kellene csökkenteni?
 
-		private static final double STARTING_LIFETIME = 100.0;
+		private static final double STARTING_LIFETIME = 200.0;
 
 		/**
 		 * Konstruktor

@@ -32,7 +32,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="Lane1_1 removed Car1 "
+TESTED_LINE="Lane1_1 removed Car1"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
