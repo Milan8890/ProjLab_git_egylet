@@ -1,12 +1,7 @@
 package main;
 
-import java.io.IOError;
 import java.lang.reflect.Field;
-import java.lang.reflect.Type;
-import java.security.interfaces.ECKey;
 import java.util.HashMap;
-import java.util.HexFormat;
-import java.util.Map.Entry;
 import java.util.logging.Handler;
 import java.util.logging.Level;
 import java.util.logging.LogRecord;
@@ -24,30 +19,37 @@ import equipment.heads.Ejector;
 import equipment.heads.GravelSpreader;
 import equipment.heads.SaltSpreader;
 import equipment.heads.Sweeper;
-import playground.City;
 import playground.Crossing;
 import playground.Lane;
 import playground.Path;
 import playground.Road;
-import playground.Tunnel;
 import playground.Lane.Salt;
 import user.BusDriver;
 import user.Cleaner;
-import user.Player;
 
+/**
+ * A globális loggernek küldött üzeneteket elkapó, majd azokat kiírató Handler.
+ * <p>
+ * Itt történik az objektumok számozása. Az egyes üzenetekben [Obj]-vel kell
+ * jelölni a helyettesítendő részeket.
+ * 
+ */
 public class OwnHandler extends Handler {
-	// TODO nem az, csak teszt
+	// Objektumok tára a Proto-ból
 	public HashMap<Object, String> objectMap;
 
 	public OwnHandler(HashMap<Object, String> objmap) {
 		objectMap = objmap;
 	}
 
+	// A log üzenetek feldolgozása
 	@Override
 	public void publish(LogRecord record) {
 
 		String message = record.getMessage();
 
+		// Ha ilyen szintű hibaüzenetet külön jelöljük, és a tesztek hibásak, ha van
+		// bennük ilyen.
 		if (record.getLevel() == Level.SEVERE) {
 			message = "[ERROR]" + message;
 		}
@@ -59,17 +61,19 @@ public class OwnHandler extends Handler {
 			return;
 		}
 
-		// Ha nem annyi [Obj] van a stringben, mint amennyi objektumot kapott
+		// Ha nem annyi [Obj] van a stringben, mint amennyi objektumot kapott, jelezze.
 		if (args.length != message.split("\\[Obj\\]", -1).length - 1) {
 			Logger.getGlobal()
 					.severe("The amount of [Obj]s and objects passed in a logging function are not the same.");
 			return;
 		}
 
+		// Egyes objektumok nevének kitöltése az üzenetekben
 		for (Object object : args) {
 			message = message.replaceFirst("\\[Obj\\]", getOrCreateObjectName(object));
 		}
 
+		// üzenet kiírása
 		System.out.println(message);
 	}
 
@@ -81,6 +85,8 @@ public class OwnHandler extends Handler {
 	public void close() throws SecurityException {
 	}
 
+	// Erővel, privát mező lekérdezése. Rekurzíz, hogy leszármazott típusokkal is
+	// működjön.
 	private Object forceGetField(Object o, String fieldName) {
 		Class<?> currentClass = o.getClass();
 		while (currentClass != null) {
@@ -97,16 +103,19 @@ public class OwnHandler extends Handler {
 		return null;
 	}
 
+	// Objektum típusneve alapján a név lekérése.
 	private String getTypename(Object o) {
 		String classString = o.getClass().toString();
 		classString = classString.substring(classString.lastIndexOf(".") + 1);
 
+		// Tunnel-ek Road-ként vannak kezelve (számozás és elérésügyileg)
 		if (classString.equals("Tunnel"))
 			return "Road";
 
 		return classString;
 	}
 
+	// Objektum nevének létrehozása, ha még nem lenne felvéve
 	private String getOrCreateObjectName(Object o) {
 		// CSAK ez a két objektum van, aminél felülírhatják egymást
 		if (o.getClass() == Salt.class || o.getClass() == Path.class) {
@@ -118,23 +127,23 @@ public class OwnHandler extends Handler {
 		return objectMap.get(o);
 	}
 
+	// Objektum hozzáadása az objektumtárhoz
 	private void addObject(Object obj) {
 		switch (obj) {
 			case Cleaner o -> createSingle(o);
 			case BusDriver o -> createSingle(o);
 			case Car o -> createSingle(o);
 			case Crossing o -> createSingle(o);
-			case Road o -> createSingle(o); // TODO Tunnel is, próba!
+			case Road o -> createSingle(o);
 
 			case HeadInventory o -> createFromOwner(o, "snowplower");
 			case Bus o -> createFromOwner(o, "driver");
-			// case Salt o -> createFromOwner(o, "owner");
-			case Head o -> createFromOwner(o, "snowplower"); // TODO ez OK?
+			case Head o -> createFromOwner(o, "snowplower");
 
 			case Snowplower o -> createFromOwnerPlusID(o, "cleaner");
 			case Lane o -> createFromOwnerPlusID(o, "road");
-			// case HeadListing o -> createFromOwnerPlusID(o, "snowplower");
-			case HeadListing o -> createName(o); // TODO
+
+			case HeadListing o -> createName(o);
 			case Path o -> createName(o);
 			case Salt o -> createName(o);
 
@@ -143,6 +152,7 @@ public class OwnHandler extends Handler {
 		}
 	}
 
+	// ID saját számozás
 	public void createSingle(Object o) {
 		String name = getTypename(o);
 
@@ -166,7 +176,7 @@ public class OwnHandler extends Handler {
 		objectMap.put(o, name + ID);
 	}
 
-	// ID eleje az owner ID-je
+	// ID eleje az owner ID-je, plusz saját számozása
 	public void createFromOwnerPlusID(Object o, String ownerFieldName) {
 		String name = getTypename(o);
 		Object owner = forceGetField(o, ownerFieldName);
@@ -183,6 +193,7 @@ public class OwnHandler extends Handler {
 		objectMap.put(o, completeName);
 	}
 
+	// Path egyedi névlétrehozása
 	public void createName(Path o) {
 		String name = getTypename(o);
 
@@ -207,6 +218,7 @@ public class OwnHandler extends Handler {
 		objectMap.put(o, completeName);
 	}
 
+	// HeadListing egyedi névlétrehozása
 	public void createName(HeadListing o) {
 		String name = getTypename(o);
 
@@ -229,9 +241,9 @@ public class OwnHandler extends Handler {
 		}
 
 		objectMap.put(o, name + ID + "_" + headString);
-
 	}
 
+	// Só egyedi névlétrehozása
 	public void createName(Salt o) {
 		String name = o.getClass().toString();
 		name = name.substring(name.lastIndexOf("$") + 1);
@@ -242,21 +254,4 @@ public class OwnHandler extends Handler {
 
 		objectMap.put(o, name + ID);
 	}
-	// public void createName(HeadInventory hi) {
-
-	// }
-
-	// lehet több?
-	// public void createName(Head h) {
-
-	// }
-
-	// public void createName(Tunnel t) {
-
-	// }
-
-	// public void createName(Lane l) {
-
-	// }
-
 }
