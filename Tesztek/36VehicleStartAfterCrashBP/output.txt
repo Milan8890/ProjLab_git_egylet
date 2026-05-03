@@ -135,3 +135,4 @@ Bus1 is not in a crossing
 Bus1 is stuck
 Lane1_1 has stuck vehicle
 Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+[ERROR]No such command INFOimplemented

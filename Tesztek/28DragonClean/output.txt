@@ -439,10 +439,10 @@ Lane1_1 returned Road1
 Road1 returned length 100.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
-Snowplower1_1 used 100.0bio
-Snowplower1_1 with Dragon1_1 cleans Lane1_1 for 15000.0$
-Dragon1_1 uses 100.0bio from Snowplower1_1
-Cleaner1 received 15000$
+Snowplower1_1 used 100.0 bio
+Snowplower1_1 with Dragon1_1 cleans Lane1_1 for 600.0$
+Dragon1_1 uses 100.0 bio from Snowplower1_1
+Cleaner1 received 600$
 Lane1_1 returned Road1
 Road1 returned end Crossing2
 Snowplower1_1 reached end of road, currently in Crossing2

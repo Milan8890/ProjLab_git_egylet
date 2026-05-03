@@ -22,4 +22,6 @@ Cleaner1 received 1000$
 Inicialization done
 
 Snowplower1_1 is in a crossing
-Snowplower1_1 couldn’t buy gravel, because not enough space
+Snowplower1_1 couldn't buy gravel, because not enough space
+[ERROR]No such command INFOimplemented
+[ERROR]No such command INFOimplemented

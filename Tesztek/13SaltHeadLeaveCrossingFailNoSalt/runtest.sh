@@ -16,7 +16,7 @@ else
 :
 fi
 
-TESTED_LINE="Salt1_1 blocks Snowplower1_1 from entering Lane1_1"
+TESTED_LINE="SaltSpreader1_1 blocks Snowplower1_1 from entering Lane1_1"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else

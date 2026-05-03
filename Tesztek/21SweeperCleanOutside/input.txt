@@ -4,8 +4,8 @@ cleaner test
 plower Cleaner1 breaker
 road Crossing1 Crossing2 100 2
 changehead Snowplower1_1 sweeper
-putvehicle Snowplower1_1 Lane1_1
-putsnow Lane1_1 100
+putvehicle Snowplower1_1 Lane1_2
+putsnow Lane1_2 100
 initend
 passtime 200
 info Lane1_2

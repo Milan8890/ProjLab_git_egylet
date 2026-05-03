@@ -6,41 +6,41 @@ Created Lane1_1
 Crossing1 added Road1 to outgoing roads
 Road1 created between Crossing1 and Crossing2 with length 10.0 and 1 lanes
 Created Cleaner1
-Salt1 created with owner Cleaner1 and lifetime 100.0
-Lane1_1 set Salt1 with Cleaner1
+Salt1_1 created with owner Cleaner1 and lifetime 100.0
+Lane1_1 set Salt1_1 with Cleaner1
 
 Inicialization done
 
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1 lifetime decreased to 99.0
+Salt1_1 lifetime decreased to 99.0
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1 lifetime decreased to 98.0
+Salt1_1 lifetime decreased to 98.0
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1 lifetime decreased to 97.0
+Salt1_1 lifetime decreased to 97.0
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1 lifetime decreased to 96.0
+Salt1_1 lifetime decreased to 96.0
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1 lifetime decreased to 95.0
+Salt1_1 lifetime decreased to 95.0
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1 lifetime decreased to 94.0
+Salt1_1 lifetime decreased to 94.0
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1 lifetime decreased to 93.0
+Salt1_1 lifetime decreased to 93.0
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1 lifetime decreased to 92.0
+Salt1_1 lifetime decreased to 92.0
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1 lifetime decreased to 91.0
+Salt1_1 lifetime decreased to 91.0
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1 lifetime decreased to 90.0
+Salt1_1 lifetime decreased to 90.0
 Lane1_1 returned Road1
 INFO Lane1_1 is on Road1
 Lane1_1 returned snow level 0.0
@@ -48,6 +48,6 @@ INFO Lane1_1 snow level is 0.0
 Lane1_1 returned ice level 0.0
 INFO Lane1_1 ice level is 0.0
 Lane1_1 returned vehicles
-INFO Lane1_1 contains Salt1
+INFO Lane1_1 contains Salt1_1
 Lane1_1 has no gravel
 INFO Lane1_1 does not have gravel

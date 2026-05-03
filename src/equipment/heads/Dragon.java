@@ -21,11 +21,9 @@ import playground.Road;
  * Head
  */
 public class Dragon extends Head {
-
 	static final double BIO_CONSUME = 1;
-
-	static final double PAY_ICE = 0.5;
-	static final double PAY_SNOW = 1;
+	static final double PAY_ICE = 0.02;
+	static final double PAY_SNOW = 0.04;
 
 	/**
 	 * Konstruktor.
@@ -55,7 +53,7 @@ public class Dragon extends Head {
 		snowplower.useBio(amount);
 
 		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$" , new Object[] {snowplower , this, l});
-		Logger.getGlobal().log(Level.INFO, "[Obj] uses " + amount + "bio from [Obj]", new Object[] {this, snowplower});
+		Logger.getGlobal().log(Level.INFO, "[Obj] uses " + amount + " bio from [Obj]", new Object[] {this, snowplower});
 		return (int) payment;
 	}
 

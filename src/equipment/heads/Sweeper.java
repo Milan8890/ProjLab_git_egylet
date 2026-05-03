@@ -22,7 +22,8 @@ import playground.Road;
  * Head
  */
 public class Sweeper extends Head {
-
+	private static double SNOWCLEANPAY = 0.04;
+	private static double SNOWPUSHPAY = 0.02;
 	/**
 	 * Konstruktor.
 	 * 
@@ -42,24 +43,26 @@ public class Sweeper extends Head {
 	 */
 	@Override
 	public int clean(Lane l) {
-		double payPerMeter;
 		double snowAmount = l.getSnow();
+		int payment;
 
 		if (l.getRoad().getLanes().indexOf(l) == l.getRoad().getLanes().size() - 1) {
 			l.cleanSnow();
 			l.setGravel(false);
-			payPerMeter = 1; // Ezt kell átírni. Más pénz, mert letolta az útról, kell ilyen?
+
+			payment = (int) (l.getRoad().getLength() * snowAmount * SNOWCLEANPAY);
 		} else {
 			Lane nextLane = l.getRoad().getLanes().get(l.getRoad().getLanes().indexOf(l) + 1);
 			nextLane.addSnow(l.getSnow());
 			l.cleanSnow();
 			l.setGravel(false);
 			nextLane.setGravel(true);
-			payPerMeter = 0.6; // Ezt kell átírni, Más pénz, mert csak másik sávra tolta.
+
+			payment = (int) (l.getRoad().getLength() * snowAmount * SNOWPUSHPAY);
 		}
 
 		// Ide kéne még valami ice/snowLevel elem a képletbe?
-		int payment = (int) (l.getRoad().getLength() * snowAmount * payPerMeter);
+		 
 
 		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$", new Object[] {snowplower , this, l});
 

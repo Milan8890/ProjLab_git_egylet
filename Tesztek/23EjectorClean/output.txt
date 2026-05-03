@@ -435,8 +435,8 @@ Lane1_2 cleaned 100.0 snow
 Lane1_2 returned Road1
 Road1 returned length 100.0
 Lane1_2 set to not have gravel
-Snowplower1_1 with Ejector1_1 cleans Lane1_2 for 10000.0$
-Cleaner1 received 10000$
+Snowplower1_1 with Ejector1_1 cleans Lane1_2 for 400.0$
+Cleaner1 received 400$
 Lane1_2 returned Road1
 Road1 returned end Crossing2
 Snowplower1_1 reached end of road, currently in Crossing2

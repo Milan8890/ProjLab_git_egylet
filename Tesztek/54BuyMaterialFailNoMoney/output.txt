@@ -22,4 +22,6 @@ Inicialization done
 
 Snowplower1_1 is in a crossing
 Cleaner1 deducted 25$ unsuccessfully
-Snowplower1_1 couldn’t buy gravel, because not enough money
+Snowplower1_1 couldn't buy gravel, because not enough money
+[ERROR]No such command INFOimplemented
+[ERROR]No such command INFOimplemented
