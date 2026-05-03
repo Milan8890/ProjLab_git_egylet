@@ -397,7 +397,7 @@ public class Proto {
 		List<HeadListing> headListings = hi.getShop();
 
 		for (HeadListing hl : headListings) {
-			if (objectMap.get(hl) == args[1]) {
+			if (objectMap.get(hl).equals(args[1])) {
 				hi.buyListing(hl);
 				return;
 			}

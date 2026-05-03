@@ -92,7 +92,7 @@ public class Cleaner extends Player {
 			return true;
 		} else {
 			Logger.getGlobal().log(Level.INFO,
-					"[Obj] couldn’t buy snowplower with starting head Breaker, because not enough money",
+					"[Obj] couldn't buy snowplower with starting head Breaker, because not enough money",
 					new Object[] { this });
 			return false;
 		}
@@ -115,7 +115,7 @@ public class Cleaner extends Player {
 			return true;
 		} else {
 			Logger.getGlobal().log(Level.INFO,
-					"[Obj] couldn’t buy snowplower with starting head Ejector, because not enough money",
+					"[Obj] couldn't buy snowplower with starting head Ejector, because not enough money",
 					new Object[] { this });
 			return false;
 		}

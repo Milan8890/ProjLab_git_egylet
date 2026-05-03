@@ -141,6 +141,7 @@ public class HeadInventory {
 	 */
 	public boolean buyListing(HeadListing listing) {
 
+
 		if(!snowplower.isInCrossing())
 		{
 			Logger.getGlobal().log(Level.INFO, "[Obj] couldn't buy [Obj], because not in crossing" , new Object[] {this, listing});
@@ -149,6 +150,7 @@ public class HeadInventory {
 
 		if(snowplower.getCleaner().removeMoney(listing.price)){
 			heads.add(listing.head);
+			getShop().remove(listing);
 			Logger.getGlobal().log(Level.INFO, "[Obj] bought [Obj] successfully" , new Object[] {this, listing});
 			return true;
 		} else {
