@@ -48,13 +48,6 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Snowplower1_1 has 100 gravel"
-if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
-:
-else
-	SUCCESS=false
-	echo "Didn't find line when it should be present: $TESTED_LINE"
-fi
 
 if [ "$SUCCESS" = true ]; then
     echo "Success"

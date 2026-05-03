@@ -67,6 +67,8 @@ public class Bus extends Vehicle {
 	 * menjen
 	 */
 	public void reachedCrossing() {
+		currentLane.trampleSnow();
+		Logger.getGlobal().log(Level.INFO, "[Obj] trampled snow on [Obj]", new Object[] { this, currentLane });
 		super.reachedCrossing();
 
 		if (this.stationA.equals(this.lastCrossing) && this.isCurrentDestinationA) {

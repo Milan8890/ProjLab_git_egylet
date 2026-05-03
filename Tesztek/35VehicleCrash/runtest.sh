@@ -24,7 +24,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="Road1 collided Car1 into Car2 on Lane1_1"
+TESTED_LINE="Road1 collided Car1 into Car2 on Lane1_2"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else

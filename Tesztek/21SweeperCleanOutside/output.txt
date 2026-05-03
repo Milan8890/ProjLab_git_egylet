@@ -33,402 +33,702 @@ Lane1_2 added Snowplower1_1
 
 Inicialization done
 
+
+Starting tick 1
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 1.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 2
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 2.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 3
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 3.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 4
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 4.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 5
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 5.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 6
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 6.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 7
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 7.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 8
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 8.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 9
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 9.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 10
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 10.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 11
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 11.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 12
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 12.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 13
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 13.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 14
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 14.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 15
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 15.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 16
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 16.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 17
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 17.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 18
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 18.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 19
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 19.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 20
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 20.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 21
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 21.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 22
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 22.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 23
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 23.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 24
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 24.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 25
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 25.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 26
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 26.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 27
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 27.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 28
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 28.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 29
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 29.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 30
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 30.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 31
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 31.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 32
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 32.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 33
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 33.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 34
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 34.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 35
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 35.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 36
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 36.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 37
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 37.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 38
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 38.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 39
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 39.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 40
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 40.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 41
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 41.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 42
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 42.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 43
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 43.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 44
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 44.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 45
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 45.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 46
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 46.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 47
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 47.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 48
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 48.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 49
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 49.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 50
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 50.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 51
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 51.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 52
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 52.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 53
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 53.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 54
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 54.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 55
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 55.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 56
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 56.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 57
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 57.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 58
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 58.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 59
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 59.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 60
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 60.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 61
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 61.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 62
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 62.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 63
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 63.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 64
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 64.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 65
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 65.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 66
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 66.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 67
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 67.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 68
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 68.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 69
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 69.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 70
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 70.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 71
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 71.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 72
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 72.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 73
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 73.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 74
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 74.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 75
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 75.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 76
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 76.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 77
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 77.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 78
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 78.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 79
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 79.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 80
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 80.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 81
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 81.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 82
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 82.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 83
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 83.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 84
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 84.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 85
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 85.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 86
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 86.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 87
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 87.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 88
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 88.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 89
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 89.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 90
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 90.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 91
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 91.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 92
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 92.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 93
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 93.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 94
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 94.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 95
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 95.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 96
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 96.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 97
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 97.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 98
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 98.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 99
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 99.0
 Lane1_2 returned Road1
 Road1 returned length 100.0
+
+Starting tick 100
+
 Snowplower1_1 is not in a crossing
 Snowplower1_1 advancing on road, current progress is 100.0
 Lane1_2 returned Road1
@@ -449,303 +749,603 @@ Lane1_2 returned Road1
 Road1 returned end Crossing2
 Snowplower1_1 reached end of road, currently in Crossing2
 Lane1_2 removed Snowplower1_1
+
+Starting tick 101
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 102
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 103
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 104
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 105
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 106
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 107
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 108
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 109
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 110
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 111
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 112
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 113
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 114
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 115
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 116
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 117
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 118
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 119
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 120
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 121
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 122
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 123
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 124
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 125
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 126
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 127
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 128
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 129
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 130
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 131
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 132
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 133
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 134
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 135
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 136
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 137
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 138
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 139
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 140
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 141
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 142
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 143
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 144
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 145
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 146
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 147
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 148
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 149
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 150
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 151
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 152
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 153
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 154
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 155
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 156
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 157
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 158
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 159
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 160
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 161
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 162
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 163
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 164
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 165
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 166
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 167
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 168
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 169
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 170
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 171
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 172
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 173
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 174
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 175
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 176
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 177
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 178
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 179
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 180
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 181
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 182
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 183
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 184
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 185
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 186
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 187
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 188
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 189
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 190
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 191
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 192
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 193
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 194
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 195
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 196
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 197
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 198
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 199
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 200
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping

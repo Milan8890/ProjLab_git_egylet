@@ -6,4 +6,4 @@ putvehicle Car1 Lane2_1
 crash Car1 10
 initend
 passtime 30
-INFO Car1 last crossing is Crossing1
+info Car1

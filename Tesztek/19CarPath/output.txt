@@ -18,6 +18,9 @@ Created PathC_0_1
 
 Inicialization done
 
+
+Starting tick 1
+
 Car1 is in a crossing
 PathC_0_1 has no next lane
 Car1 reached end of PathC_0_1, stopping
@@ -53,6 +56,9 @@ Lane3_1 returned Road3
 Lane3_1 returned Road3
 PathC_0_1 extended with Lane3_1 successfully
 City calculated shortest path from Crossing1 to Crossing3 as PathC_0_1
+
+Starting tick 2
+
 Car1 is in a crossing
 PathC_0_1 returned next lane Lane3_1
 Lane3_1 has no stuck vehicle
@@ -67,6 +73,9 @@ Car1 slip check on Lane3_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 1.0
 Lane3_1 returned Road3
 Road3 returned length 10.0
+
+Starting tick 3
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane3_1 has no stuck vehicle
@@ -76,6 +85,9 @@ Car1 slip check on Lane3_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 2.0
 Lane3_1 returned Road3
 Road3 returned length 10.0
+
+Starting tick 4
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane3_1 has no stuck vehicle
@@ -85,6 +97,9 @@ Car1 slip check on Lane3_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 3.0
 Lane3_1 returned Road3
 Road3 returned length 10.0
+
+Starting tick 5
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane3_1 has no stuck vehicle
@@ -94,8 +109,6 @@ Car1 slip check on Lane3_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 4.0
 Lane3_1 returned Road3
 Road3 returned length 10.0
-<<<<<<< HEAD
-=======
 INFO Car1 last crossing is Crossing1
 INFO Car1 current lane is Lane3_1
 INFO Car1 lane progress is 4.0
@@ -106,6 +119,5 @@ INFO Car1 revive timer is 0
 INFO Car1 home is Crossing1
 INFO Car1 work is Crossing3
 INFO Car1 is going to work
->>>>>>> main
-INFO PathC_0_1 pathLanes is empty
-INFO PathC_0_1 last crossing is Crossing1
+INFO PathC_0_1 has lane Lane1_1
+INFO PathC_0_1 last crossing is Crossing3

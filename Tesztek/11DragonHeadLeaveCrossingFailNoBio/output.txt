@@ -34,6 +34,9 @@ Created Dragon1_1
 
 Inicialization done
 
+
+Starting tick 1
+
 Snowplower1_1 is in a crossing
 PathS_1_1 returned next lane Lane1_1
 HeadInventory1_1 returned active head Dragon1_1
@@ -43,15 +46,27 @@ Snowplower1_1 has 0.0 bio
 Dragon1_1 blocks Snowplower1_1 from entering Lane1_1 
 Snowplower1_1 has 0.0 bio
 PathS_1_1 cleared
+
+Starting tick 2
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 3
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 4
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
+
+Starting tick 5
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping

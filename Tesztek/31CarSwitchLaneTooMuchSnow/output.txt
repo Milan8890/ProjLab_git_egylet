@@ -17,6 +17,9 @@ PathC_0_1 couldn't extend with Lane1_1, because it's not connected
 
 Inicialization done
 
+
+Starting tick 1
+
 Car1 is in a crossing
 PathC_0_1 returned next lane Lane1_1
 Lane1_1 has no stuck vehicle
@@ -31,6 +34,9 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 1.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 2
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -40,6 +46,9 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 2.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 3
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -49,6 +58,9 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 3.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 4
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -65,6 +77,9 @@ Car1 slip check on Lane1_2: ice is too thin, not slipping
 Car1 advancing on road, current progress is 4.0
 Lane1_2 returned Road1
 Road1 returned length 10.0
+
+Starting tick 5
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_2 has no stuck vehicle
@@ -74,6 +89,9 @@ Car1 slip check on Lane1_2: ice is too thin, not slipping
 Car1 advancing on road, current progress is 5.0
 Lane1_2 returned Road1
 Road1 returned length 10.0
+
+Starting tick 6
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_2 has no stuck vehicle

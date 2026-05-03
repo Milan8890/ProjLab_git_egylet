@@ -62,9 +62,10 @@ public class Car extends Vehicle {
 	 */
 	@Override
 	public void reachedCrossing() {
-		super.reachedCrossing();
+		Logger.getGlobal().log(Level.INFO, "[Obj] trampled snow on [Obj]", new Object[] { this, currentLane });
+		currentLane.trampleSnow();
 
-		// TODO path-et nem kell újat kérni, majd kér a followPath
+		super.reachedCrossing();
 
 		if (isGoingHome && this.lastCrossing.equals(home)) {
 			isGoingHome = false;

@@ -1,6 +1,7 @@
 crossing 2
 road Crossing1 Crossing2 10 2
 car Crossing1 Crossing2
+extpath Car1 Lane1_1
 passtime 3
 putsnow Lane1_1 100
 putsnow Lane1_2 100

@@ -6,41 +6,71 @@ Created Lane1_1
 Crossing1 added Road1 to outgoing roads
 Road1 created between Crossing1 and Crossing2 with length 10.0 and 1 lanes
 Created Cleaner1
-Salt1_1 created with owner Cleaner1 and lifetime 100.0
+Salt1_1 created with owner Cleaner1 and lifetime 200.0
 Lane1_1 set Salt1_1 with Cleaner1
 
 Inicialization done
 
+
+Starting tick 1
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1_1 lifetime decreased to 99.0
+Salt1_1 lifetime decreased to 199.0
+
+Starting tick 2
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1_1 lifetime decreased to 98.0
+Salt1_1 lifetime decreased to 198.0
+
+Starting tick 3
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1_1 lifetime decreased to 97.0
+Salt1_1 lifetime decreased to 197.0
+
+Starting tick 4
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1_1 lifetime decreased to 96.0
+Salt1_1 lifetime decreased to 196.0
+
+Starting tick 5
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1_1 lifetime decreased to 95.0
+Salt1_1 lifetime decreased to 195.0
+
+Starting tick 6
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1_1 lifetime decreased to 94.0
+Salt1_1 lifetime decreased to 194.0
+
+Starting tick 7
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1_1 lifetime decreased to 93.0
+Salt1_1 lifetime decreased to 193.0
+
+Starting tick 8
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1_1 lifetime decreased to 92.0
+Salt1_1 lifetime decreased to 192.0
+
+Starting tick 9
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1_1 lifetime decreased to 91.0
+Salt1_1 lifetime decreased to 191.0
+
+Starting tick 10
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
-Salt1_1 lifetime decreased to 90.0
+Salt1_1 lifetime decreased to 190.0
 Lane1_1 returned Road1
 INFO Lane1_1 is on Road1
 Lane1_1 returned snow level 0.0

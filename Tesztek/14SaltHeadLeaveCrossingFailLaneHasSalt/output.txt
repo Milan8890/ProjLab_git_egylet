@@ -22,7 +22,7 @@ HeadInventory1_1 created with owner Snowplower1_1 and starting head Breaker
 Created Lane1_1
 Crossing1 added Road1 to outgoing roads
 Road1 created between Crossing1 and Crossing2 with length 10.0 and 1 lanes
-Salt1_1 created with owner Cleaner1 and lifetime 100.0
+Salt1_1 created with owner Cleaner1 and lifetime 200.0
 Lane1_1 set Salt1_1 with Cleaner1
 Lane1_1 returned Road1
 Lane1_1 returned Road1
@@ -36,29 +36,44 @@ Created SaltSpreader1_1
 
 Inicialization done
 
+
+Starting tick 1
+
 Snowplower1_1 is in a crossing
 PathS_1_1 returned next lane Lane1_1
 HeadInventory1_1 returned active head SaltSpreader1_1
 Lane1_1 has salt
 SaltSpreader1_1 blocks Snowplower1_1 from entering Lane1_1 
 PathS_1_1 cleared
-Salt1_1 lifetime decreased to 99.0
+Salt1_1 lifetime decreased to 199.0
+
+Starting tick 2
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
-Salt1_1 lifetime decreased to 98.0
+Salt1_1 lifetime decreased to 198.0
+
+Starting tick 3
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
-Salt1_1 lifetime decreased to 97.0
+Salt1_1 lifetime decreased to 197.0
+
+Starting tick 4
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
-Salt1_1 lifetime decreased to 96.0
+Salt1_1 lifetime decreased to 196.0
+
+Starting tick 5
+
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
-Salt1_1 lifetime decreased to 95.0
+Salt1_1 lifetime decreased to 195.0
 INFO Snowplower1_1 last crossing is Crossing1
 INFO Snowplower1_1 current lane is null
 INFO Snowplower1_1 lane progress is 0.0
