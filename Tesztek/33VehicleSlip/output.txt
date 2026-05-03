@@ -25,12 +25,7 @@ Lane1_1 returned ice level 50.0
 Car1 slip check on Lane1_1: ice is thick enough
 Lane1_1 has no gravel
 Lane1_1 has no gravel
-Car1 slip check on Lane1_1: doesn't have gravel, slipping
-Lane1_1 returned Road1
-Car1 slipping on Road1
-Lane1_1 returned Road1
-Lane1_1 returned vehicles
-Road1 tried colliding Car1, but no target was found
+Car1 slip check on Lane1_1: doesn�t have gravel, slipping
 Car1 advancing on road, current progress is 1.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
@@ -45,7 +40,7 @@ Lane1_1 returned ice level 50.0
 Car1 slip check on Lane1_1: ice is thick enough
 Lane1_1 has no gravel
 Lane1_1 has no gravel
-Car1 slip check on Lane1_1: doesn't have gravel, slipping
+Car1 slip check on Lane1_1: doesn�t have gravel, slipping
 Car1 advancing on road, current progress is 2.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
@@ -60,13 +55,37 @@ Lane1_1 returned ice level 50.0
 Car1 slip check on Lane1_1: ice is thick enough
 Lane1_1 has no gravel
 Lane1_1 has no gravel
-Car1 slip check on Lane1_1: doesn't have gravel, slipping
+Car1 slip check on Lane1_1: doesn�t have gravel, slipping
 Lane1_1 returned Road1
 Car1 slipping on Road1
 Lane1_1 returned Road1
 Lane1_1 returned vehicles
 Road1 tried colliding Car1, but no target was found
 Car1 advancing on road, current progress is 3.0
+Lane1_1 returned Road1
+Road1 returned length 10.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 0.0
+Lane1_1 returned ice level 50.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has no gravel
+Lane1_1 has no gravel
+Car1 slip check on Lane1_1: doesn�t have gravel, slipping
+Car1 advancing on road, current progress is 4.0
+Lane1_1 returned Road1
+Road1 returned length 10.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 0.0
+Lane1_1 returned ice level 50.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has no gravel
+Lane1_1 has no gravel
+Car1 slip check on Lane1_1: doesn�t have gravel, slipping
+Car1 advancing on road, current progress is 5.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
 
@@ -80,47 +99,7 @@ Lane1_1 returned ice level 50.0
 Car1 slip check on Lane1_1: ice is thick enough
 Lane1_1 has no gravel
 Lane1_1 has no gravel
-Car1 slip check on Lane1_1: doesn't have gravel, slipping
-Lane1_1 returned Road1
-Car1 slipping on Road1
-Lane1_1 returned Road1
-Lane1_1 returned vehicles
-Road1 tried colliding Car1, but no target was found
-Car1 advancing on road, current progress is 4.0
-Lane1_1 returned Road1
-Road1 returned length 10.0
-
-Starting tick 5
-
-Car1 is not in a crossing
-Car1 is not stuck
-Lane1_1 has no stuck vehicle
-Lane1_1 returned snow level 0.0
-Lane1_1 returned ice level 50.0
-Car1 slip check on Lane1_1: ice is thick enough
-Lane1_1 has no gravel
-Lane1_1 has no gravel
-Car1 slip check on Lane1_1: doesn't have gravel, slipping
-Car1 advancing on road, current progress is 5.0
-Lane1_1 returned Road1
-Road1 returned length 10.0
-
-Starting tick 6
-
-Car1 is not in a crossing
-Car1 is not stuck
-Lane1_1 has no stuck vehicle
-Lane1_1 returned snow level 0.0
-Lane1_1 returned ice level 50.0
-Car1 slip check on Lane1_1: ice is thick enough
-Lane1_1 has no gravel
-Lane1_1 has no gravel
-Car1 slip check on Lane1_1: doesn't have gravel, slipping
-Lane1_1 returned Road1
-Car1 slipping on Road1
-Lane1_1 returned Road1
-Lane1_1 returned vehicles
-Road1 tried colliding Car1, but no target was found
+Car1 slip check on Lane1_1: doesn�t have gravel, slipping
 Car1 advancing on road, current progress is 6.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
@@ -135,7 +114,7 @@ Lane1_1 returned ice level 50.0
 Car1 slip check on Lane1_1: ice is thick enough
 Lane1_1 has no gravel
 Lane1_1 has no gravel
-Car1 slip check on Lane1_1: doesn't have gravel, slipping
+Car1 slip check on Lane1_1: doesn�t have gravel, slipping
 Lane1_1 returned Road1
 Car1 slipping on Road1
 Lane1_1 returned Road1
@@ -155,7 +134,7 @@ Lane1_1 returned ice level 50.0
 Car1 slip check on Lane1_1: ice is thick enough
 Lane1_1 has no gravel
 Lane1_1 has no gravel
-Car1 slip check on Lane1_1: doesn't have gravel, slipping
+Car1 slip check on Lane1_1: doesn�t have gravel, slipping
 Lane1_1 returned Road1
 Car1 slipping on Road1
 Lane1_1 returned Road1
@@ -175,7 +154,12 @@ Lane1_1 returned ice level 50.0
 Car1 slip check on Lane1_1: ice is thick enough
 Lane1_1 has no gravel
 Lane1_1 has no gravel
-Car1 slip check on Lane1_1: doesn't have gravel, slipping
+Car1 slip check on Lane1_1: doesn�t have gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
 Car1 advancing on road, current progress is 9.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
@@ -190,7 +174,12 @@ Lane1_1 returned ice level 50.0
 Car1 slip check on Lane1_1: ice is thick enough
 Lane1_1 has no gravel
 Lane1_1 has no gravel
-Car1 slip check on Lane1_1: doesn't have gravel, slipping
+Car1 slip check on Lane1_1: doesn�t have gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
 Car1 advancing on road, current progress is 10.0
 Lane1_1 returned Road1
 Road1 returned length 10.0

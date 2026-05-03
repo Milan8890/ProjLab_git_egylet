@@ -46,30 +46,18 @@ Lane1_1 has salt
 SaltSpreader1_1 blocks Snowplower1_1 from entering Lane1_1 
 PathS_1_1 cleared
 Salt1_1 lifetime decreased to 199.0
-
-Starting tick 2
-
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
 Salt1_1 lifetime decreased to 198.0
-
-Starting tick 3
-
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
 Salt1_1 lifetime decreased to 197.0
-
-Starting tick 4
-
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping
 Salt1_1 lifetime decreased to 196.0
-
-Starting tick 5
-
 Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
 Snowplower1_1 reached end of PathS_1_1, stopping

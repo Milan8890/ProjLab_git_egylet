@@ -4,5 +4,5 @@ cleaner test
 plower Cleaner1 breaker
 initend
 buygravel Snowplower1_1
-INFO Snowplower1_1
-INFO Cleaner1
+info Snowplower1_1
+info Cleaner1

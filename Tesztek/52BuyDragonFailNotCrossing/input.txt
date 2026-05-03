@@ -7,4 +7,4 @@ plower Cleaner1 breaker
 putvehicle Snowplower1_1 Lane1_1
 initend
 buyhead Snowplower1_1 HeadListing1_1_DRA
-INFO Cleaner1
+info Cleaner1

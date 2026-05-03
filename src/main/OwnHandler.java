@@ -108,6 +108,10 @@ public class OwnHandler extends Handler {
 	}
 
 	private String getOrCreateObjectName(Object o) {
+		// CSAK ez a két objektum van, aminél felülírhatják egymást
+		if (o.getClass() == Salt.class || o.getClass() == Path.class) {
+			addObject(o);
+		}
 		if (!objectMap.containsKey(o)) {
 			addObject(o);
 		}
