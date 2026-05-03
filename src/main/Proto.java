@@ -3,7 +3,6 @@ package main;
 import java.io.File;
 import java.lang.reflect.Field;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Scanner;
@@ -36,10 +35,30 @@ import user.BusDriver;
 import user.Cleaner;
 import user.Player;
 
+/**
+ * A programban lévő parancsok értelmezéséhez szükséges osztály, itt tároljuk az
+ * egyes objektumokat a logoláshoz.
+ * <p>
+ * A logoláshoz, ID-zéshez, és az egyéb (többek között admin) parancsok
+ * megvalósításához át kell lépni számos OOP határt. Például el kell érnünk
+ * privát, getter setter nélküli változókat, az egyes objektumokat a típusaik
+ * alapján kell számoznunk, és a modellt olyan állapotba kell hoznunk, ami
+ * alapjáraton nem fordulhat elő (hogy könnyebben tudjunk tesztelni).
+ * <p>
+ * Ez a fájl megsérti az OOP elveket, hogy a modellnek ne kelljen.
+ */
 public class Proto {
+	// Objektumok és neveiknek összerendelése
 	public HashMap<Object, String> objectMap = new HashMap<>();
-	public Set<Player> players = new HashSet<>();
 
+	// World-ből behúzott játékosok
+	public Set<Player> players;
+
+	public Proto(Set<Player> outPlayers) {
+		players = outPlayers;
+	}
+
+	// Objektum lekérése string alapján
 	private Object getObject(String s) {
 		for (Entry<Object, String> e : objectMap.entrySet()) {
 			if (e.getValue().equals(s))
@@ -48,6 +67,7 @@ public class Proto {
 		return null;
 	}
 
+	// Erővel, privát mezőhöz érték hozzáadása
 	private void forceAddField(Object o, String fieldName, double amount) {
 		try {
 			Field field = o.getClass().getDeclaredField(fieldName);
@@ -58,6 +78,7 @@ public class Proto {
 		}
 	}
 
+	// Erővel, privát mező beállítása
 	private void forceSetField(Object o, String fieldName, double amount) {
 		try {
 			Field field = o.getClass().getDeclaredField(fieldName);
@@ -68,8 +89,10 @@ public class Proto {
 		}
 	}
 
+	// Hány tick legyen másodpercenként
 	private static final int TICKS_PER_SEC = 20;
 
+	// Parancssorról parancsok beolvasása
 	public void readCommandsFromCommandLine() throws Exception {
 		Scanner sc = new Scanner(System.in);
 
@@ -84,8 +107,8 @@ public class Proto {
 		sc.close();
 	}
 
+	// Idő folyamatos múlatása
 	private void timeLoop(Scanner sc) throws Exception {
-		// TODO Még egy outer wilds referencia
 		while (true) {
 			if (System.in.available() > 0) {
 				String line = sc.nextLine();
@@ -100,6 +123,7 @@ public class Proto {
 		}
 	}
 
+	// Egy parancs feldolgozása
 	private void readCommand(String line) {
 		String[] fullArgs = line.split(" ");
 		String command = fullArgs[0];
@@ -110,11 +134,6 @@ public class Proto {
 		}
 
 		try {
-
-			// Feldolgozába lehet egy nagy try catch
-			// és akkor minden dobálhat hibaüzenetet
-			// vagy csak egyszerűen nem működik nullok miatt, és csak a severe-ek átírását
-			// kell megoldani
 			switch (command) {
 				case "crossing" -> commandCrossing(args);
 				case "road" -> commandRoad(args);
@@ -169,6 +188,7 @@ public class Proto {
 		}
 	}
 
+	// --- EGYES PARANCSOK MEGVALÓSÍTÁSA ---
 	private void commandCrossing(String[] args) {
 		int num = Integer.parseInt(args[0]);
 
@@ -327,8 +347,6 @@ public class Proto {
 		Field vehiclePath = v.getClass().getSuperclass().getDeclaredField("path");
 		vehiclePath.setAccessible(true);
 
-		// TODO csak ennyi a sávváltás?
-
 		if (vehicleCurrentLane.get(v) != null) {
 			Lane perviousLane = (Lane) vehicleCurrentLane.get(v);
 			perviousLane.removeVehicle(v);
@@ -452,6 +470,7 @@ public class Proto {
 		((Path) field.get(v)).clear();
 	}
 
+	// Outer Wilds referencia
 	private void commandEndtime(String[] args) {
 		Logger.getGlobal().severe("endtime command has been renamed to stoptime");
 		// https://www.youtube.com/watch?v=t5vG4Be1Ci8
@@ -524,7 +543,10 @@ public class Proto {
 		}
 	}
 
-	// INNEN LEFELÉ CSAK INFO
+	// A commandInfo megvalósításához szükséges parancsok.
+	// Ezek kiírják egy-egy osztályról érdemes tudnivalókat, anélkül, hogy ennek
+	// nyoma lenne a modellben (mivel a modellben erre a funkcióra nincs szükség).
+	// --- INFO PARANCSOK ---
 
 	private void infoCity()
 			throws Exception {
