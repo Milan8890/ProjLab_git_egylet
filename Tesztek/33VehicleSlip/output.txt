@@ -13,14 +13,54 @@ Created Lane1_8
 Created Lane1_9
 Created Lane1_10
 Crossing1 added Road1 to outgoing roads
-Road1 created between Crossing1 and Crossing2 with length 10.0 and 10 lanes
+Road1 created between Crossing1 and Crossing2 with length 1.0 and 10 lanes
 Created Car1
+Created PathC_0_1
 Lane1_1 returned Road1
 Road1 returned start Crossing1
-[ERROR]Error while running the following command:
-putvehicle Car1 Lane1_1
- Error: java.lang.NullPointerException: Cannot invoke "playground.Path.clear()" because the return value of "java.lang.reflect.Field.get(Object)" is null
-[ERROR]Error while running the following command:
-putice Road1 Lane1_1 50
- Error: java.lang.ClassCastException: class playground.Road cannot be cast to class playground.Lane (playground.Road and playground.Lane are in unnamed module of loader 'app')
+PathC_0_1 cleared
+Lane1_1 added Car1
+
 Inicialization done
+
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 0.0
+Lane1_1 returned ice level 50.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has no gravel
+Lane1_1 has no gravel
+Car1 slip check on Lane1_1: doesn’t have gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Lane1_2 returned vehicles
+Lane1_3 returned vehicles
+Lane1_4 returned vehicles
+Lane1_5 returned vehicles
+Lane1_6 returned vehicles
+Lane1_7 returned vehicles
+Lane1_8 returned vehicles
+Lane1_9 returned vehicles
+Lane1_10 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 1.0
+Lane1_1 returned Road1
+Road1 returned length 1.0
+Lane1_1 returned Road1
+Road1 returned end Crossing2
+Car1 reached end of road, currently in Crossing2
+Lane1_1 removed Car1
+Car1 reached work, going to home
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Created PathC_0_1
+City calculated shortest path from Crossing2 to Crossing1 as PathC_0_1
+[ERROR]Error while running the following command:
+passtime 200
+ Error: java.lang.UnsupportedOperationException: Még nincs kész

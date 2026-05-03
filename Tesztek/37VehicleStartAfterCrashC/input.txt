@@ -3,7 +3,7 @@ road Crossing1 Crossing2 10 1
 road Crossing2 Crossing1 10 1
 car Crossing1 Crossing2
 putvehicle Car1 Lane2_1
-crash Car1
+crash Car1 10
 initend
 passtime 30
 INFO Car1 last crossing is Crossing1

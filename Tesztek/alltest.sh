@@ -50,8 +50,8 @@ TEST_FOLDERS=("01PlowerChangeHead"
 "39TrampleSnowP"
 "40SaltMeltIceSnow"
 "41SaltDies"
-"42GravelPreveltSlip"
-"43GravelPreveltSlipFail"
+"42GravelPreventSlip"
+"43GravelPreventSlipFail"
 "44Snowing"
 "45SaltPreventSnowFall"
 "46SnowingTunnel"
@@ -88,7 +88,7 @@ do
     fi
 done
 
-echo -e "\nPassed $SUCCESS_COUNT/$FAILED_COUNT tests."
+echo -e "\nPassed $SUCCESS_COUNT/$TOTAL_TESTS tests."
 
 # Ha volt akár egy hiba is, a fő script is hibával térjen vissza
 if [ $FAILED_COUNT -eq 0 ]; then

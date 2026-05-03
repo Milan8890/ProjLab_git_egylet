@@ -5,20 +5,19 @@ Created Crossing2
 Created Cleaner1
 City returned Crossing1 as snowplower base
 Created Snowplower1_1
-[ERROR]Path-en még csiszolni kell (kezdési ellenõrzés)
 Created PathS_1_1
 Created Breaker1_1
 Created HeadInventory1_1
 Created Sweeper1_1
-Created HeadListing1_1
+Created HeadListing1_1_SWE
 Created Ejector1_1
-Created HeadListing1_1
+Created HeadListing1_1_EJE
 Created GravelSpreader1_1
-Created HeadListing1_1
+Created HeadListing1_1_GRA
 Created SaltSpreader1_1
-Created HeadListing1_1
+Created HeadListing1_1_SAL
 Created Dragon1_1
-Created HeadListing1_1
+Created HeadListing1_1_DRA
 HeadInventory1_1 created with owner Snowplower1_1 and starting head Breaker
 Created Lane1_1
 Created Lane1_2
@@ -31,21 +30,58 @@ Created Lane1_8
 Created Lane1_9
 Created Lane1_10
 Crossing1 added Road1 to outgoing roads
-Road1 created between Crossing1 and Crossing2 with length 10.0 and 10 lanes
-[ERROR]Error while running the following command:
-putsalt Lane1_1 Cleaner1
- Error: java.lang.IllegalArgumentException: Illegal group reference
+Road1 created between Crossing1 and Crossing2 with length 1.0 and 10 lanes
+Salt1 created with owner Cleaner1 and lifetime 100.0
+Lane1_1 set Salt1 with Cleaner1
+Lane1_1 returned Road1
+Lane1_1 returned Road1
+PathS_1_1 extended with Lane1_1 successfully
+Snowplower1_1 extended its path with Lane1_1 successfully
 Lane1_1 returned Road1
 PathS_1_1 couldn't extend with Lane1_1, because it's not connected
 Snowplower1_1 returned HeadInventory1_1
 Snowplower1_1 returned HeadInventory1_1
 Created SaltSpreader1_1
+
 Inicialization done
+
+Snowplower1_1 is in a crossing
+PathS_1_1 returned next lane Lane1_1
+HeadInventory1_1 returned active head SaltSpreader1_1
+Lane1_1 has salt
+SaltSpreader1_1 blocks Snowplower1_1 from entering Lane1_1 
+PathS_1_1 cleared
+Salt1 lifetime decreased to 99.0
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Salt1 lifetime decreased to 98.0
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Salt1 lifetime decreased to 97.0
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Salt1 lifetime decreased to 96.0
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
-PathS_1_1 has no next lane
-[ERROR]Error while running the following command:
-info Snowplower1_1
- Error: java.lang.NoSuchFieldException: lastCrossing
+Snowplower1_1 reached end of PathS_1_1, stopping
+Salt1 lifetime decreased to 95.0
+INFO Snowplower1_1 last crossing is Crossing1
+INFO Snowplower1_1 current lane is null
+INFO Snowplower1_1 lane progress is 0.0
+Snowplower1_1 is not stuck
+INFO Snowplower1_1 is not stuck
+INFO Snowplower1_1 is not crashed
+INFO Snowplower1_1 revive timer is 0
+Snowplower1_1 returned Cleaner1
+INFO Snowplower1_1 owner is Cleaner1
+Snowplower1_1 returned HeadInventory1_1
+INFO Snowplower1_1 has HeadInventory1_1
+Snowplower1_1 has 1000.0 salt
+INFO Snowplower1_1 has 1000.0 salt
+Snowplower1_1 has 0.0 bio
+INFO Snowplower1_1 has 0.0 bio
+Snowplower1_1 has 0.0 gravel
+INFO Snowplower1_1 has 0.0 gravel

@@ -322,7 +322,7 @@ public class Proto {
 
 		// TODO csak ennyi a sávváltás?
 
-		if(vehicleCurrentLane.get(v)!=null){
+		if (vehicleCurrentLane.get(v) != null) {
 			Lane perviousLane = (Lane) vehicleCurrentLane.get(v);
 			perviousLane.removeVehicle(v);
 		}
@@ -333,7 +333,7 @@ public class Proto {
 		Field laneProgressField = v.getClass().getSuperclass().getDeclaredField("laneProgress");
 		laneProgressField.setAccessible(true);
 		laneProgressField.set(v, 0);
-		//forceSetField(v, "laneProgress", 0);
+		// forceSetField(v, "laneProgress", 0);
 		((Path) vehiclePath.get(v)).clear();
 
 		l.addVehicle(v);
@@ -440,7 +440,7 @@ public class Proto {
 
 	private void commandClpath(String[] args) throws Exception {
 		Vehicle v = (Vehicle) getObject(args[0]);
-		Field field = v.getClass().getDeclaredField("path");
+		Field field = v.getClass().getSuperclass().getDeclaredField("path");
 		field.setAccessible(true);
 		((Path) field.get(v)).clear();
 	}
@@ -545,7 +545,7 @@ public class Proto {
 	}
 
 	private void infoObject(Crossing c) {
-		if(c.getOutRoads().isEmpty()){
+		if (c.getOutRoads().isEmpty()) {
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] outRoads is empty", new Object[] { c });
 			return;
 		}
@@ -576,13 +576,13 @@ public class Proto {
 		Field saltField = l.getClass().getDeclaredField("salt");
 		saltField.setAccessible(true);
 		Salt salt = (Salt) saltField.get(l);
-		if(salt!=null)
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] contains [Obj]", new Object[] {l,salt });
-		else 
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] does not contain salt", new Object[] {l});
+		if (salt != null)
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] contains [Obj]", new Object[] { l, salt });
+		else
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] does not contain salt", new Object[] { l });
 
-		if(l.hasGravel())
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has gravel", new Object[] {l});
+		if (l.hasGravel())
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has gravel", new Object[] { l });
 		else
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] does not have gravel", new Object[] { l });
 	}
@@ -598,7 +598,7 @@ public class Proto {
 		Field ownerField = s.getClass().getDeclaredField("owner");
 		ownerField.setAccessible(true);
 		Cleaner owner = (Cleaner) ownerField.get(s);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] owner is [Obj]", new Object[] {s, owner});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] owner is [Obj]", new Object[] { s, owner });
 	}
 
 	private void infoObject(Cleaner c)
@@ -607,13 +607,13 @@ public class Proto {
 		Field monField = c.getClass().getDeclaredField("money");
 		monField.setAccessible(true);
 		int money = (int) monField.get(c);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + money +"$", new Object[] {c});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + money + "$", new Object[] { c });
 
 		Field spField = c.getClass().getDeclaredField("snowplowers");
 		spField.setAccessible(true);
 		Set<Snowplower> snowplowers = (Set<Snowplower>) spField.get(c);
-		for(Snowplower sp : snowplowers){
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has [Obj]", new Object[] {c, sp});
+		for (Snowplower sp : snowplowers) {
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has [Obj]", new Object[] { c, sp });
 		}
 	}
 
@@ -623,14 +623,12 @@ public class Proto {
 		Field pointField = bd.getClass().getDeclaredField("points");
 		pointField.setAccessible(true);
 		int points = (int) pointField.get(bd);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + points +" points", new Object[] {bd});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + points + " points", new Object[] { bd });
 		Field busField = bd.getClass().getDeclaredField("bus");
 		busField.setAccessible(true);
 		Bus bus = (Bus) busField.get(bd);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has [Obj]", new Object[] {bd, bus});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has [Obj]", new Object[] { bd, bus });
 	}
-	
-	
 
 	private void infoObject(Snowplower sp)
 			throws Exception {
@@ -649,23 +647,23 @@ public class Proto {
 		Field driverField = b.getClass().getDeclaredField("driver");
 		driverField.setAccessible(true);
 		BusDriver driver = (BusDriver) driverField.get(b);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] driver is [Obj]", new Object[]{b, driver});
-		
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] driver is [Obj]", new Object[] { b, driver });
+
 		Field stationAField = b.getClass().getDeclaredField("stationA");
 		stationAField.setAccessible(true);
 		Crossing stationA = (Crossing) stationAField.get(b);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] station A is [Obj]", new Object[]{b, stationA});
-		
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] station A is [Obj]", new Object[] { b, stationA });
+
 		Field stationBField = b.getClass().getDeclaredField("stationB");
 		stationBField.setAccessible(true);
 		Crossing stationB = (Crossing) stationBField.get(b);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] station B is [Obj]", new Object[]{b, stationB});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] station B is [Obj]", new Object[] { b, stationB });
 
 		Field destField = b.getClass().getDeclaredField("isCurrentDestinationA");
 		destField.setAccessible(true);
 		boolean isCurrentDestinationA = (boolean) destField.get(b);
-		if(isCurrentDestinationA)
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] current destination is A", new Object[]{b});
+		if (isCurrentDestinationA)
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] current destination is A", new Object[] { b });
 		else
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] current destination is B", new Object[] { b });
 
@@ -678,18 +676,18 @@ public class Proto {
 		Field homeField = c.getClass().getDeclaredField("home");
 		homeField.setAccessible(true);
 		Crossing homeCrossing = (Crossing) homeField.get(c);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] home is [Obj]", new Object[]{c, homeCrossing});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] home is [Obj]", new Object[] { c, homeCrossing });
 
 		Field workField = c.getClass().getDeclaredField("work");
 		workField.setAccessible(true);
 		Crossing workCrossing = (Crossing) workField.get(c);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] work is [Obj]", new Object[]{c, workCrossing});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] work is [Obj]", new Object[] { c, workCrossing });
 
 		Field isGoingHomeField = c.getClass().getDeclaredField("isGoingHome");
 		isGoingHomeField.setAccessible(true);
 		boolean isGoingHome = (boolean) isGoingHomeField.get(c);
-		if(isGoingHome)
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is going home", new Object[]{c});
+		if (isGoingHome)
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is going home", new Object[] { c });
 		else
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is going to work", new Object[] { c });
 	}
@@ -723,21 +721,26 @@ public class Proto {
 		Field snowplowerField = h.getClass().getDeclaredField("snowplower");
 		snowplowerField.setAccessible(true);
 		Snowplower sp = (Snowplower) snowplowerField.get(h);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] snowplower is [Obj]", new Object[]{h, sp});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] snowplower is [Obj]", new Object[] { h, sp });
 	}
 
 	private void infoVehicle(Vehicle v)
 			throws Exception {
-		Field lastCrossingField = v.getClass().getDeclaredField("lastCrossing");
+		Field lastCrossingField = v.getClass().getSuperclass().getDeclaredField("lastCrossing");
 		lastCrossingField.setAccessible(true);
 		Crossing lastCrossing = (Crossing) lastCrossingField.get(v);
-		Logger.getGlobal().log(Level.INFO, "[Obj] last crossing is [Obj]", new Object[] { v, lastCrossing });
-		Field currentLaneField = v.getClass().getDeclaredField("currentLane");
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] last crossing is [Obj]", new Object[] { v, lastCrossing });
+
+		Field currentLaneField = v.getClass().getSuperclass().getDeclaredField("currentLane");
 		currentLaneField.setAccessible(true);
 		Lane currentLane = (Lane) currentLaneField.get(v);
-		Logger.getGlobal().log(Level.INFO, "[Obj] current lane is [Obj]", new Object[] { v, currentLane });
+		if (currentLane != null) {
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] current lane is [Obj]", new Object[] { v, currentLane });
+		} else {
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] current lane is null", v);
+		}
 
-		Field lanePrField = v.getClass().getDeclaredField("laneProgress");
+		Field lanePrField = v.getClass().getSuperclass().getDeclaredField("laneProgress");
 		lanePrField.setAccessible(true);
 		double laneProgress = (double) lanePrField.get(v);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] lane progress is " + laneProgress, new Object[] { v });
@@ -748,7 +751,7 @@ public class Proto {
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is not stuck", new Object[] { v });
 		}
 
-		Field crashedField = v.getClass().getDeclaredField("crashed");
+		Field crashedField = v.getClass().getSuperclass().getDeclaredField("isCrashed");
 		crashedField.setAccessible(true);
 		boolean crashed = (boolean) crashedField.get(v);
 		if (crashed)
@@ -756,38 +759,39 @@ public class Proto {
 		else
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] is not crashed", new Object[] { v });
 
-		Field reviveField = v.getClass().getDeclaredField("reviveTime");
+		Field reviveField = v.getClass().getSuperclass().getDeclaredField("revTimer");
 		reviveField.setAccessible(true);
 		int reviveTime = (int) reviveField.get(v);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] revive timer is " + reviveTime, new Object[] { v });
-
 	}
-	private void infoObject(HeadInventory hi)throws Exception{
+
+	private void infoObject(HeadInventory hi) throws Exception {
 		Field ownerField = hi.getClass().getDeclaredField("snowplower");
 		ownerField.setAccessible(true);
 		Snowplower owner = (Snowplower) ownerField.get(hi);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] owner is [Obj]", new Object[] {hi, owner});
-		
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] owner is [Obj]", new Object[] { hi, owner });
+
 		Field headsField = hi.getClass().getDeclaredField("heads");
 		headsField.setAccessible(true);
 		List<Head> heads = (List<Head>) headsField.get(hi);
-		for(Head h : heads){
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has head [Obj]", new Object[] {hi, h});
+		for (Head h : heads) {
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has head [Obj]", new Object[] { hi, h });
 		}
 
-		for(HeadListing hl : hi.getShop()){
-			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has head listing [Obj]", new Object[] {hi, hl});
+		for (HeadListing hl : hi.getShop()) {
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has head listing [Obj]", new Object[] { hi, hl });
 		}
 
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] active head is [Obj]", new Object[] {hi, hi.getActiveHead()});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] active head is [Obj]", new Object[] { hi, hi.getActiveHead() });
 	}
 
+	// Mindig BusDriver / Cleanerrel hívva
 	private void infoPlayer(Player p)
 			throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
-		Field nameField = p.getClass().getDeclaredField("name");
+		Field nameField = p.getClass().getSuperclass().getDeclaredField("name");
 		nameField.setAccessible(true);
 		String name = (String) nameField.get(p);
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] name is " + name, new Object[]{p});
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] name is " + name, new Object[] { p });
 
 	}
 }

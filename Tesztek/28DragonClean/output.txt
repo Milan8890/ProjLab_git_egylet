@@ -5,20 +5,19 @@ Created Crossing2
 Created Cleaner1
 City returned Crossing1 as snowplower base
 Created Snowplower1_1
-[ERROR]Path-en még csiszolni kell (kezdési ellenõrzés)
 Created PathS_1_1
 Created Breaker1_1
 Created HeadInventory1_1
 Created Sweeper1_1
-Created HeadListing1_1
+Created HeadListing1_1_SWE
 Created Ejector1_1
-Created HeadListing1_1
+Created HeadListing1_1_EJE
 Created GravelSpreader1_1
-Created HeadListing1_1
+Created HeadListing1_1_GRA
 Created SaltSpreader1_1
-Created HeadListing1_1
+Created HeadListing1_1_SAL
 Created Dragon1_1
-Created HeadListing1_1
+Created HeadListing1_1_DRA
 HeadInventory1_1 created with owner Snowplower1_1 and starting head Breaker
 Created Lane1_1
 Created Lane1_2
@@ -121,7 +120,7 @@ Created Lane1_98
 Created Lane1_99
 Created Lane1_100
 Crossing1 added Road1 to outgoing roads
-Road1 created between Crossing1 and Crossing2 with length 100.0 and 100 lanes
+Road1 created between Crossing1 and Crossing2 with length 1.0 and 100 lanes
 Snowplower1_1 returned HeadInventory1_1
 Snowplower1_1 returned HeadInventory1_1
 Created Dragon1_1
@@ -129,321 +128,625 @@ Lane1_1 returned Road1
 Road1 returned start Crossing1
 PathS_1_1 cleared
 Lane1_1 added Snowplower1_1
+
 Inicialization done
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
-Lane1_1 returned Road1
-Road1 returned length 100.0
+
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 1.0
+Lane1_1 returned Road1
+Road1 returned length 1.0
 HeadInventory1_1 returned active head Dragon1_1
 Lane1_1 melted 100.0 ice
 Lane1_1 cleaned 100.0 snow
 Lane1_1 returned Road1
-Road1 returned length 100.0
+Road1 returned length 1.0
 Lane1_1 returned Road1
-Road1 returned length 100.0
-Snowplower1_1 used 100.0bio
-Snowplower1_1 with Dragon1_1 cleans Lane1_1 for 15000.0$
-Dragon1_1 uses 100.0bio from Snowplower1_1
-Cleaner1 received 15000$
+Road1 returned length 1.0
+Snowplower1_1 used 1.0bio
+Snowplower1_1 with Dragon1_1 cleans Lane1_1 for 150.0$
+Dragon1_1 uses 1.0bio from Snowplower1_1
+Cleaner1 received 150$
 Lane1_1 returned Road1
 Road1 returned end Crossing2
+Snowplower1_1 reached end of road, currently in Crossing2
 Lane1_1 removed Snowplower1_1
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
+PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
 Lane1_1 returned Road1
 INFO Lane1_1 is on Road1
 Lane1_1 returned snow level 0.0

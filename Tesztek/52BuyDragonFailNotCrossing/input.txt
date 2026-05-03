@@ -1,10 +1,10 @@
 crossing 2
 road Crossing1 Crossing2 100 1
 spbase Crossing1
-Cleaner test
+cleaner test
 addm Cleaner1 10000
 plower Cleaner1 breaker
-putvehicle Lane1_1
+putvehicle Snowplower1_1 Lane1_1
 initend
 buyhead Snowplower1_1 HeadListing1_1_DRA
 INFO Cleaner1

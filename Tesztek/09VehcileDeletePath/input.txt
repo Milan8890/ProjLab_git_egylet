@@ -3,7 +3,7 @@ spbase Crossing1
 road Crossing1 Crossing2 10 1
 cleaner test
 plower Cleaner1 breaker
-extpath Snowplower1_1 Road1 Lane1
+extpath Snowplower1_1 Lane1_1
 initend
 clpath Snowplower1_1
-info PathS1_1
+info PathS_1_1

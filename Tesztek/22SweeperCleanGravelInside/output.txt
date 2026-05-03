@@ -5,20 +5,19 @@ Created Crossing2
 Created Cleaner1
 City returned Crossing1 as snowplower base
 Created Snowplower1_1
-[ERROR]Path-en még csiszolni kell (kezdési ellenõrzés)
 Created PathS_1_1
 Created Breaker1_1
 Created HeadInventory1_1
 Created Sweeper1_1
-Created HeadListing1_1
+Created HeadListing1_1_SWE
 Created Ejector1_1
-Created HeadListing1_1
+Created HeadListing1_1_EJE
 Created GravelSpreader1_1
-Created HeadListing1_1
+Created HeadListing1_1_GRA
 Created SaltSpreader1_1
-Created HeadListing1_1
+Created HeadListing1_1_SAL
 Created Dragon1_1
-Created HeadListing1_1
+Created HeadListing1_1_DRA
 HeadInventory1_1 created with owner Snowplower1_1 and starting head Breaker
 Created Lane1_1
 Created Lane1_2
@@ -35,262 +34,408 @@ Lane1_1 set to have gravel
 
 Inicialization done
 
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 1.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 2.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 3.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 4.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 5.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 6.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 7.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 8.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 9.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 10.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 11.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 12.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 13.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 14.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 15.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 16.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 17.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 18.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 19.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 20.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 21.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 22.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 23.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 24.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 25.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 26.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 27.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 28.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 29.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 30.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 31.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 32.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 33.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 34.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 35.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 36.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 37.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 38.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 39.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 40.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 41.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 42.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 43.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 44.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 45.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 46.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 47.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 48.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 49.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 50.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 51.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 52.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 53.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 54.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 55.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 56.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 57.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 58.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 59.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 60.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 61.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 62.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 63.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 64.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 65.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 66.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 67.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 68.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 69.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 70.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 71.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 72.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 73.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 74.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 75.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 76.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 77.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 78.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 79.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 80.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 81.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 82.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 83.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 84.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 85.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 86.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 87.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 88.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 89.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 90.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 91.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 92.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 93.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 94.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 95.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 96.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 97.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 98.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 99.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 100.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
 HeadInventory1_1 returned active head Sweeper1_1
-Lane1_1 returned snow level 9.0
+Lane1_1 returned snow level 0.0
 Lane1_1 returned Road1
 Road1 returned lanes
 Lane1_1 returned Road1
@@ -299,176 +444,323 @@ Lane1_1 returned Road1
 Road1 returned lanes
 Lane1_1 returned Road1
 Road1 returned lanes
-Lane1_1 returned snow level 9.0
-Lane1_2 added 9.0 snow
-Lane1_1 cleaned 9.0 snow
+Lane1_1 returned snow level 0.0
+Lane1_2 added 0.0 snow
+Lane1_1 cleaned 0.0 snow
 Lane1_1 set to not have gravel
 Lane1_2 set to have gravel
 Lane1_1 returned Road1
 Road1 returned length 100.0
-Snowplower1_1 with Sweeper1_1 cleans Lane1_1 for 540$
-Cleaner1 received 540$
+Snowplower1_1 with Sweeper1_1 cleans Lane1_1 for 0$
+Cleaner1 received 0$
 Lane1_1 returned Road1
 Road1 returned end Crossing2
+Snowplower1_1 reached end of road, currently in Crossing2
 Lane1_1 removed Snowplower1_1
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
 Lane1_1 returned Road1
 INFO Lane1_1 is on Road1
-Lane1_1 returned snow level 9.0
-INFO Lane1_1 snow level is 9.0
+Lane1_1 returned snow level 0.0
+INFO Lane1_1 snow level is 0.0
 Lane1_1 returned ice level 0.0
 INFO Lane1_1 ice level is 0.0
 Lane1_1 returned vehicles
@@ -477,8 +769,8 @@ Lane1_1 has no gravel
 INFO Lane1_1 does not have gravel
 Lane1_2 returned Road1
 INFO Lane1_2 is on Road1
-Lane1_2 returned snow level 27.0
-INFO Lane1_2 snow level is 27.0
+Lane1_2 returned snow level 0.0
+INFO Lane1_2 snow level is 0.0
 Lane1_2 returned ice level 0.0
 INFO Lane1_2 ice level is 0.0
 Lane1_2 returned vehicles

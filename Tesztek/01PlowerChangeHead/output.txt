@@ -3,36 +3,37 @@ City returned crossings
 Created Crossing1
 City returned Crossing1 as snowplower base
 Created Snowplower1_1
-[ERROR]Path-en még csiszolni kell (kezdési ellenõrzés)
 Created PathS_1_1
 Created Breaker1_1
 Created HeadInventory1_1
 Created Sweeper1_1
-Created HeadListing1_1
+Created HeadListing1_1_SWE
 Created Ejector1_1
-Created HeadListing1_1
+Created HeadListing1_1_EJE
 Created GravelSpreader1_1
-Created HeadListing1_1
+Created HeadListing1_1_GRA
 Created SaltSpreader1_1
-Created HeadListing1_1
+Created HeadListing1_1_SAL
 Created Dragon1_1
-Created HeadListing1_1
+Created HeadListing1_1_DRA
 HeadInventory1_1 created with owner Snowplower1_1 and starting head Breaker
 Snowplower1_1 returned HeadInventory1_1
 Created Dragon1_1
 Snowplower1_1 returned HeadInventory1_1
 Created Ejector1_1
+
 Inicialization done
+
 INFO HeadInventory1_1 owner is Snowplower1_1
 INFO HeadInventory1_1 has head Breaker1_1
 INFO HeadInventory1_1 has head Dragon1_1
 INFO HeadInventory1_1 has head Ejector1_1
 HeadInventory1_1 returned available head listings
-INFO HeadInventory1_1 has head listing HeadListing1_1
-INFO HeadInventory1_1 has head listing HeadListing1_1
-INFO HeadInventory1_1 has head listing HeadListing1_1
-INFO HeadInventory1_1 has head listing HeadListing1_1
-INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1_SWE
+INFO HeadInventory1_1 has head listing HeadListing1_1_EJE
+INFO HeadInventory1_1 has head listing HeadListing1_1_GRA
+INFO HeadInventory1_1 has head listing HeadListing1_1_SAL
+INFO HeadInventory1_1 has head listing HeadListing1_1_DRA
 HeadInventory1_1 returned active head Breaker1_1
 INFO HeadInventory1_1 active head is Breaker1_1
 Snowplower1_1 returned HeadInventory1_1
@@ -42,11 +43,11 @@ INFO HeadInventory1_1 has head Breaker1_1
 INFO HeadInventory1_1 has head Dragon1_1
 INFO HeadInventory1_1 has head Ejector1_1
 HeadInventory1_1 returned available head listings
-INFO HeadInventory1_1 has head listing HeadListing1_1
-INFO HeadInventory1_1 has head listing HeadListing1_1
-INFO HeadInventory1_1 has head listing HeadListing1_1
-INFO HeadInventory1_1 has head listing HeadListing1_1
-INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1_SWE
+INFO HeadInventory1_1 has head listing HeadListing1_1_EJE
+INFO HeadInventory1_1 has head listing HeadListing1_1_GRA
+INFO HeadInventory1_1 has head listing HeadListing1_1_SAL
+INFO HeadInventory1_1 has head listing HeadListing1_1_DRA
 HeadInventory1_1 returned active head Dragon1_1
 INFO HeadInventory1_1 active head is Dragon1_1
 Snowplower1_1 returned HeadInventory1_1
@@ -56,10 +57,10 @@ INFO HeadInventory1_1 has head Breaker1_1
 INFO HeadInventory1_1 has head Dragon1_1
 INFO HeadInventory1_1 has head Ejector1_1
 HeadInventory1_1 returned available head listings
-INFO HeadInventory1_1 has head listing HeadListing1_1
-INFO HeadInventory1_1 has head listing HeadListing1_1
-INFO HeadInventory1_1 has head listing HeadListing1_1
-INFO HeadInventory1_1 has head listing HeadListing1_1
-INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1_SWE
+INFO HeadInventory1_1 has head listing HeadListing1_1_EJE
+INFO HeadInventory1_1 has head listing HeadListing1_1_GRA
+INFO HeadInventory1_1 has head listing HeadListing1_1_SAL
+INFO HeadInventory1_1 has head listing HeadListing1_1_DRA
 HeadInventory1_1 returned active head Ejector1_1
 INFO HeadInventory1_1 active head is Ejector1_1

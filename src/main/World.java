@@ -18,8 +18,8 @@ public class World {
 	}
 
 	public static void tick() {
-		for (Runnable onTickFunc : onTickFunctions) {
-			onTickFunc.run();
+		for (int i = 0; i < onTickFunctions.size(); i++) {
+			onTickFunctions.get(i).run();
 		}
 	}
 

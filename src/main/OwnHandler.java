@@ -3,6 +3,7 @@ package main;
 import java.io.IOError;
 import java.lang.reflect.Field;
 import java.lang.reflect.Type;
+import java.security.interfaces.ECKey;
 import java.util.HashMap;
 import java.util.HexFormat;
 import java.util.Map.Entry;
@@ -18,6 +19,11 @@ import equipment.Head;
 import equipment.HeadInventory;
 import equipment.HeadListing;
 import equipment.heads.Breaker;
+import equipment.heads.Dragon;
+import equipment.heads.Ejector;
+import equipment.heads.GravelSpreader;
+import equipment.heads.SaltSpreader;
+import equipment.heads.Sweeper;
 import playground.City;
 import playground.Crossing;
 import playground.Lane;
@@ -116,13 +122,13 @@ public class OwnHandler extends Handler {
 			case Bus o -> createFromOwner(o, "driver");
 			// case Salt o -> createFromOwner(o, "owner");
 			case Head o -> createFromOwner(o, "snowplower"); // TODO ez OK?
-			case Salt o -> createFromOwner(o, "lane"); // TODO fel kellett venni hozzá egy lane-t
 
 			case Snowplower o -> createFromOwnerPlusID(o, "cleaner");
 			case Lane o -> createFromOwnerPlusID(o, "road");
 			// case HeadListing o -> createFromOwnerPlusID(o, "snowplower");
 			case HeadListing o -> createName(o); // TODO
 			case Path o -> createName(o);
+			case Salt o -> createName(o);
 
 			default ->
 				Logger.getGlobal().severe("No type found for " + getTypename(obj) + " in addObject");
@@ -199,6 +205,31 @@ public class OwnHandler extends Handler {
 		Snowplower snowplower = (Snowplower) forceGetField(head, "snowplower");
 		String snowplowerName = getOrCreateObjectName(snowplower);
 		String ID = snowplowerName.substring(getTypename(snowplower).length());
+
+		String headString = switch (head) {
+			case Breaker h -> "BRE";
+			case Dragon h -> "DRA";
+			case Ejector h -> "EJE";
+			case GravelSpreader h -> "GRA";
+			case SaltSpreader h -> "SAL";
+			case Sweeper h -> "SWE";
+			default -> "UNHANDLED";
+		};
+		if (headString == "UNHANDLED") {
+			Logger.getGlobal().severe("Uknown head type in logging function createName for HeadListing");
+		}
+
+		objectMap.put(o, name + ID + "_" + headString);
+
+	}
+
+	public void createName(Salt o) {
+		String name = o.getClass().toString();
+		name = name.substring(name.lastIndexOf("$") + 1);
+
+		Lane lane = (Lane) forceGetField(o, "lane");
+		String laneName = getOrCreateObjectName(lane);
+		String ID = laneName.substring(getTypename(laneName).length());
 
 		objectMap.put(o, name + ID);
 	}

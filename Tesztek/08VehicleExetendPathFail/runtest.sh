@@ -9,14 +9,14 @@ SUCCESS=true
 
 cat "$INPUT_FILE" | java -cp bin main.App > "$OUTPUT_FILE"
 
-if grep -q "[ERROR]" "$OUTPUT_FILE"; then
+if grep -q "\\[ERROR\\]" "$OUTPUT_FILE"; then
 	echo "Output still has an [ERROR] in it (severe logging message)."
 	SUCCESS=false
 else
 :
 fi
 
-TESTED_LINE="PathS_1_1 couldn’t extend with Lane2_1, because it’s not connected"
+TESTED_LINE="PathS_1_1 couldn't extend with Lane2_1, because it's not connected"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else

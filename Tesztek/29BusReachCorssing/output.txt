@@ -13,15 +13,640 @@ Created Lane1_8
 Created Lane1_9
 Created Lane1_10
 Crossing1 added Road1 to outgoing roads
-Road1 created between Crossing1 and Crossing2 with length 10.0 and 10 lanes
+Road1 created between Crossing1 and Crossing2 with length 1.0 and 10 lanes
 Created BusDriver1
-[ERROR]Error while running the following command:
-bus Driver1 Crossing1 Crossing2
- Error: java.lang.NullPointerException
-[ERROR]Error while running the following command:
-putvehicle Bus1 Lane1_1
- Error: java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "<local2>" is null
+Created Bus1
+Created PathB_0_1
+Lane1_1 returned Road1
+Road1 returned start Crossing1
+PathB_0_1 cleared
+Lane1_1 added Bus1
+
 Inicialization done
-[ERROR]Error while running the following command:
-info Bus1
- Error: java.lang.NullPointerException
+
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 0.0
+Lane1_1 returned ice level 0.0
+Bus1 slip check on Lane1_1: ice is too thin, not slipping
+Bus1 advancing on road, current progress is 1.0
+Lane1_1 returned Road1
+Road1 returned length 1.0
+Lane1_1 returned Road1
+Road1 returned end Crossing2
+Bus1 reached end of road, currently in Crossing2
+Lane1_1 removed Bus1
+BusDriver1 received one point
+Bus1 reached Crossing2 end point
+Bus1 current destination Crossing1
+Bus1 added point to BusDriver1
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+Bus1 is in a crossing
+PathB_0_1 has no next lane
+Bus1 reached end of PathB_0_1, stopping
+INFO Bus1 last crossing is Crossing2
+INFO Bus1 current lane is null
+INFO Bus1 lane progress is 0.0
+Bus1 is not stuck
+INFO Bus1 is not stuck
+INFO Bus1 is not crashed
+INFO Bus1 revive timer is 0
+INFO Bus1 driver is BusDriver1
+INFO Bus1 station A is Crossing1
+INFO Bus1 station B is Crossing2
+INFO Bus1 current destination is A
