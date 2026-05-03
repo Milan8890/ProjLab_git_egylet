@@ -442,7 +442,6 @@ public class Proto {
 
 	private void commandExtpath(String[] args) {
 		Vehicle v = (Vehicle) getObject(args[0]);
-		System.err.println(args[1]);
 		v.extendPath((Lane) getObject(args[1]));
 	}
 
