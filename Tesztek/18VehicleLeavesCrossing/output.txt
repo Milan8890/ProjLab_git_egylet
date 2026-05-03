@@ -1,0 +1,24 @@
+City returned crossings
+Created Crossing1
+City returned crossings
+Created Crossing2
+Created Lane1_1
+Created Lane1_2
+Created Lane1_3
+Created Lane1_4
+Created Lane1_5
+Created Lane1_6
+Created Lane1_7
+Created Lane1_8
+Created Lane1_9
+Created Lane1_10
+Crossing1 added Road1 to outgoing roads
+Road1 created between Crossing1 and Crossing2 with length 10.0 and 10 lanes
+Created Car1
+[ERROR]Error while running the following command:
+putsnow Road1 Lane1_1 10
+ Error: java.lang.ClassCastException: class playground.Road cannot be cast to class playground.Lane (playground.Road and playground.Lane are in unnamed module of loader 'app')
+[ERROR]Error while running the following command:
+extpath Car1 Lane1_1
+ Error: java.lang.NullPointerException: Cannot invoke "playground.Path.extendPath(playground.Lane)" because "this.path" is null
+Inicialization done

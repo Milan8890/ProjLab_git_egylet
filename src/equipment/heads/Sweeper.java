@@ -47,12 +47,14 @@ public class Sweeper extends Head {
 
 		if (l.getRoad().getLanes().indexOf(l) == l.getRoad().getLanes().size() - 1) {
 			l.cleanSnow();
+			l.setGravel(false);
 			payPerMeter = 1; // Ezt kell átírni. Más pénz, mert letolta az útról, kell ilyen?
 		} else {
 			Lane nextLane = l.getRoad().getLanes().get(l.getRoad().getLanes().indexOf(l) + 1);
 			nextLane.addSnow(l.getSnow());
 			l.cleanSnow();
-
+			l.setGravel(false);
+			nextLane.setGravel(true);
 			payPerMeter = 0.6; // Ezt kell átírni, Más pénz, mert csak másik sávra tolta.
 		}
 

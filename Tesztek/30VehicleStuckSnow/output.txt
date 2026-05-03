@@ -1,0 +1,21 @@
+City returned crossings
+Created Crossing1
+City returned crossings
+Created Crossing2
+Created Lane1_1
+Created Lane1_2
+Created Lane1_3
+Created Lane1_4
+Created Lane1_5
+Created Lane1_6
+Created Lane1_7
+Created Lane1_8
+Created Lane1_9
+Created Lane1_10
+Crossing1 added Road1 to outgoing roads
+Road1 created between Crossing1 and Crossing2 with length 10.0 and 10 lanes
+Created Car1
+Inicialization done
+[ERROR]Error while running the following command:
+info Car1
+ Error: java.lang.NoSuchFieldException: lastCrossing

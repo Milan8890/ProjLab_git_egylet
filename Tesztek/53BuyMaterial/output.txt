@@ -1,0 +1,24 @@
+City returned crossings
+Created Crossing1
+Created Cleaner1
+City returned Crossing1 as snowplower base
+Created Snowplower1_1
+[ERROR]Path-en még csiszolni kell (kezdési ellenõrzés)
+Created PathS_1_1
+Created Breaker1_1
+Created HeadInventory1_1
+Created Sweeper1_1
+Created HeadListing1_1
+Created Ejector1_1
+Created HeadListing1_1
+Created GravelSpreader1_1
+Created HeadListing1_1
+Created SaltSpreader1_1
+Created HeadListing1_1
+Created Dragon1_1
+Created HeadListing1_1
+HeadInventory1_1 created with owner Snowplower1_1 and starting head Breaker
+Cleaner1 received 1000$
+Inicialization done
+Cleaner1 deducted 25$  successfully
+Snowplower1_1 bought gravel successfully

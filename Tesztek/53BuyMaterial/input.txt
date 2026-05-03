@@ -1,0 +1,9 @@
+crossing 1
+spbase Crossing1
+cleaner test
+plower Cleaner1 breaker
+addm Cleaner1 1000
+initend
+buygravel Snowplower1_1
+INFO Snowplower1_1
+INFO Cleaner1

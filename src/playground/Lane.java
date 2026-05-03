@@ -52,8 +52,12 @@ public class Lane {
 	 * Olvasztja a havat és jeget, kifizeti a játékost.
 	 */
 	public class Salt {
-		Lane lane;
+		private static final double CLEANSNOWAMOUNT = 0.1; // Ezek mennyiek legyenek?
+		private static final double CLEANICEAMOUNT = 0.1;
+		static final double PAY_ICE = 0.2;
+		static final double PAY_SNOW = 0.3;
 
+		Lane lane;
 		/**
 		 * A sót birtokló cleaner.
 		 */
@@ -61,7 +65,7 @@ public class Lane {
 		/**
 		 * A só élettartama, meddig marad a sávon
 		 */
-		double lifetime;
+		double lifetime; // Ezt hogy kellene csökkenteni?
 
 		private static final double STARTING_LIFETIME = 100.0;
 
@@ -73,16 +77,44 @@ public class Lane {
 		Salt(Cleaner c, Lane l) {
 			World.registerOnTick(this::onTick);
 			owner = c;
-			lane = l;
 			lifetime = STARTING_LIFETIME;
+			lane = l;
+			Logger.getGlobal().log(Level.INFO, "[Obj] created with owner [Obj] and lifetime [Obj]",
+					new Object[] { this, c, lifetime });
+
 		}
 
 		/**
-		 * óraütésen letakarít egy adag havat és jeget a sávról, és csökkenti a só
-		 * élettartamát, kifizeti a játékost
+		 * Óraütésre letakarít egy adag havat és jeget a sávról, csökkenti a
+		 * lifetime-ot,
+		 * és fizet a játékosnak annak függvényében hogy mennyi havat és jeget
+		 * olvasztott el.
 		 */
 		public void onTick() {
+			int payment = 0;
+			if (snowLevel > CLEANSNOWAMOUNT) {
+				snowLevel -= CLEANSNOWAMOUNT;
+				payment += CLEANSNOWAMOUNT * road.getLength();
+				Logger.getGlobal().log(Level.INFO,
+						"[Obj] melted " + CLEANSNOWAMOUNT + " snow from lane, paid [Obj] " + payment + "$",
+						new Object[] { this, owner });
+				owner.addMoney(payment);
+			}
+			if (iceLevel > CLEANICEAMOUNT) {
+				iceLevel -= CLEANICEAMOUNT;
+				payment += CLEANICEAMOUNT * road.getLength() * 2;
+				Logger.getGlobal().log(Level.INFO,
+						"[Obj] melted " + CLEANICEAMOUNT + " ice from lane, paid [Obj] " + payment + "$",
+						new Object[] { this, owner });
+				owner.addMoney(payment);
+			}
+			lifetime--;
+			Logger.getGlobal().log(Level.INFO, "[Obj] lifetime decreased to " + lifetime, this);
 
+			if (lifetime <= 0) {
+				salt = null;
+				Logger.getGlobal().log(Level.INFO, "[Obj] expired", this);
+			}
 		}
 	}
 
@@ -93,7 +125,7 @@ public class Lane {
 	 */
 	public Lane(Road r) {
 		road = r;
-		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
+		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
 
 	/**

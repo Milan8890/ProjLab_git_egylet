@@ -1,0 +1,10 @@
+crossing 2
+road Crossing1 Crossing2 10 1
+spbase Crossing1
+Cleaner test
+plower Cleaner1 breaker
+putvehicle Snowplower1_1 Lane1_1
+putice Road1 Lane1_1 50
+setrand true
+initend
+passtime 200

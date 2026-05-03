@@ -10,6 +10,9 @@ import java.util.logging.Logger;
  * 
  */
 public class Tunnel extends Road {
+	/**
+	 * Konstruktor, ami meghívja a Road konstruktorát.
+	 */
 	public Tunnel(Crossing from, Crossing to, int numOfLanes, double length) {
 		super(from, to, numOfLanes, length);
 	}
@@ -19,6 +22,6 @@ public class Tunnel extends Road {
 	 */
 	@Override
 	public void onTick() {
-		throw new UnsupportedOperationException("Még nincs kész");
+		Logger.getGlobal().log(Level.INFO, "[Obj] blocked snowing" , new Object[] {this});
 	}
 }

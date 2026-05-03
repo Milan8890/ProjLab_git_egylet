@@ -35,22 +35,34 @@ public class Path {
 		pathLanes = new ArrayList<>();
 		lastCrossing = null;
 		Logger.getGlobal().severe("Path-en még csiszolni kell (kezdési ellenőrzés)");
-		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
+		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
 
 	/**
-	 * Útvonal hosszabbítása. Ha nem lehet az adott sávval folytatni az utat, akkor
-	 * hamissal tér vissza.
+	 * Ha érvényes a megadott sáv, akkor a pathLanes végére rakja, és megváltoztatja
+	 * a lastCrossing-ot.
+	 * Ha nem érvényes a hozzáadott sáv, akkor Hamissal tér vissza, különben
+	 * Igazzal.
 	 * 
 	 * @param l A sáv, amit hozzá szeretnénk adni.
 	 * @return Sikerült-e hozzáadni a sávot
 	 */
 	public boolean extendPath(Lane l) {
-		Logger.getGlobal().log(Level.INFO, "[Obj] extended with [Obj] successfully", new Object[] { this, l });
-		Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t extend with [Obj], because it’s not connected",
-				new Object[] { this, l });
+		boolean isValid = false;
+		Crossing laneFromCrossing = l.getRoad().fromCrossing;
 
-		throw new UnsupportedOperationException("Még nincs kész");
+		if (laneFromCrossing == lastCrossing) {
+			isValid = true;
+			pathLanes.add(l);
+
+			lastCrossing = l.getRoad().toCrossing;
+			Logger.getGlobal().log(Level.INFO, "[Obj] extended with [Obj] successfully", new Object[] { this, l });
+		} else {
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn't extend with [Obj], because it's not connected",
+					new Object[] { this, l });
+		}
+
+		return isValid;
 	}
 
 	/**

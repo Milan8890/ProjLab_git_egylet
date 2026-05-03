@@ -42,7 +42,7 @@ public class Cleaner extends Player {
 		super(name);
 		money = 0;
 		snowplowers = new HashSet<>();
-		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
+		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
 
 	/**

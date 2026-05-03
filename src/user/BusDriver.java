@@ -33,7 +33,7 @@ public class BusDriver extends Player {
 	public BusDriver(String name) {
 		super(name);
 		point = 0;
-		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
+		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
 
 	/**

@@ -1,0 +1,6 @@
+crossing 2
+tunnel Crossing1 Crossing2 10 1
+setrand true
+setsnowing true
+initend
+passtime 200

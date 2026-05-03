@@ -1,0 +1,7 @@
+Crossing 1
+spbase Crossing1
+Cleaner test
+addm Cleaner1 30000
+initend
+buyplower Cleaner1 breaker
+INFO Cleaner1

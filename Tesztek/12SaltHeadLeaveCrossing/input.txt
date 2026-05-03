@@ -1,0 +1,11 @@
+crossing 2
+spbase Crossing1
+cleaner test
+plower Cleaner1 breaker
+road Crossing1 Crossing2 10 1
+extpath Snowplower1_1 Lane1_1
+addsalt Snowplower1_1 1000
+changehead Snowplower1_1 saltSpreader
+initend
+passtime 5
+info Snowplower1_1

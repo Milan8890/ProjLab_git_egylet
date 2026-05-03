@@ -76,7 +76,7 @@ public abstract class Vehicle {
 	 * Sorban meghívja az alábbi függvényeket. Az egyes lépések igazzal
 	 * térnek vissza, ha futhat tovább a többi lépés, hamissal, ha nem.
 	 */
-	protected void onTick() {
+	public void onTick() {
 		if (!stepFollowPath()) {
 			return;
 		}

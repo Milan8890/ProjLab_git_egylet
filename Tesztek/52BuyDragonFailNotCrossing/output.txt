@@ -1,0 +1,120 @@
+City returned crossings
+Created Crossing1
+City returned crossings
+Created Crossing2
+Created Lane1_1
+Created Lane1_2
+Created Lane1_3
+Created Lane1_4
+Created Lane1_5
+Created Lane1_6
+Created Lane1_7
+Created Lane1_8
+Created Lane1_9
+Created Lane1_10
+Created Lane1_11
+Created Lane1_12
+Created Lane1_13
+Created Lane1_14
+Created Lane1_15
+Created Lane1_16
+Created Lane1_17
+Created Lane1_18
+Created Lane1_19
+Created Lane1_20
+Created Lane1_21
+Created Lane1_22
+Created Lane1_23
+Created Lane1_24
+Created Lane1_25
+Created Lane1_26
+Created Lane1_27
+Created Lane1_28
+Created Lane1_29
+Created Lane1_30
+Created Lane1_31
+Created Lane1_32
+Created Lane1_33
+Created Lane1_34
+Created Lane1_35
+Created Lane1_36
+Created Lane1_37
+Created Lane1_38
+Created Lane1_39
+Created Lane1_40
+Created Lane1_41
+Created Lane1_42
+Created Lane1_43
+Created Lane1_44
+Created Lane1_45
+Created Lane1_46
+Created Lane1_47
+Created Lane1_48
+Created Lane1_49
+Created Lane1_50
+Created Lane1_51
+Created Lane1_52
+Created Lane1_53
+Created Lane1_54
+Created Lane1_55
+Created Lane1_56
+Created Lane1_57
+Created Lane1_58
+Created Lane1_59
+Created Lane1_60
+Created Lane1_61
+Created Lane1_62
+Created Lane1_63
+Created Lane1_64
+Created Lane1_65
+Created Lane1_66
+Created Lane1_67
+Created Lane1_68
+Created Lane1_69
+Created Lane1_70
+Created Lane1_71
+Created Lane1_72
+Created Lane1_73
+Created Lane1_74
+Created Lane1_75
+Created Lane1_76
+Created Lane1_77
+Created Lane1_78
+Created Lane1_79
+Created Lane1_80
+Created Lane1_81
+Created Lane1_82
+Created Lane1_83
+Created Lane1_84
+Created Lane1_85
+Created Lane1_86
+Created Lane1_87
+Created Lane1_88
+Created Lane1_89
+Created Lane1_90
+Created Lane1_91
+Created Lane1_92
+Created Lane1_93
+Created Lane1_94
+Created Lane1_95
+Created Lane1_96
+Created Lane1_97
+Created Lane1_98
+Created Lane1_99
+Created Lane1_100
+Crossing1 added Road1 to outgoing roads
+Road1 created between Crossing1 and Crossing2 with length 100.0 and 100 lanes
+[ERROR]Error while running the following command:
+addm Cleaner1 10000
+ Error: java.lang.NullPointerException: Cannot invoke "user.Cleaner.addMoney(int)" because "<local2>" is null
+City returned Crossing1 as snowplower base
+[ERROR]Error while running the following command:
+plower Cleaner1 breaker
+ Error: java.lang.NullPointerException
+[ERROR]Error while running the following command:
+putvehicle Lane1_1
+ Error: java.lang.ClassCastException: class playground.Lane cannot be cast to class entities.Vehicle (playground.Lane and entities.Vehicle are in unnamed module of loader 'app')
+Inicialization done
+[ERROR]Error while running the following command:
+buyhead Snowplower1_1 HeadListing1_1_DRA
+ Error: java.lang.NullPointerException: Cannot invoke "entities.Snowplower.getHeadInventory()" because "<local2>" is null
