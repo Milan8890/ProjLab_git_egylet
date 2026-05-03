@@ -100,6 +100,8 @@ public class OwnHandler extends Handler {
 	private String getTypename(Object o) {
 		String classString = o.getClass().toString();
 		classString = classString.substring(classString.lastIndexOf(".") + 1);
+		if (classString.equals("Tunnel"))
+			return "Road";
 		return classString;
 	}
 
@@ -137,6 +139,7 @@ public class OwnHandler extends Handler {
 
 	public void createSingle(Object o) {
 		String name = getTypename(o);
+
 		int number = 1;
 		String completeName = name + number;
 		while (objectMap.containsValue(completeName)) {
