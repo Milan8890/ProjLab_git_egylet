@@ -159,6 +159,8 @@ public class Proto {
 				case "crash" -> commandCrash(args);
 				case "setrand" -> commandSetrand(args);
 				case "setsnowing" -> commandSetsnowing(args);
+				case "tunnel" -> commandTunnel(args);
+				default -> Logger.getGlobal().severe("No such command " + command + "implemented");
 			}
 		} catch (Exception e) {
 			Logger.getGlobal()
@@ -178,6 +180,11 @@ public class Proto {
 
 	private void commandRoad(String[] args) {
 		new Road((Crossing) getObject(args[0]), (Crossing) getObject(args[1]), Integer.parseInt(args[3]),
+				Double.parseDouble(args[2]));
+	}
+
+	private void commandTunnel(String[] args) {
+		new Tunnel((Crossing) getObject(args[0]), (Crossing) getObject(args[1]), Integer.parseInt(args[3]),
 				Double.parseDouble(args[2]));
 	}
 

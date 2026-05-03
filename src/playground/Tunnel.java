@@ -22,6 +22,6 @@ public class Tunnel extends Road {
 	 */
 	@Override
 	public void onTick() {
-		Logger.getGlobal().log(Level.INFO, "[Obj] blocked snowing" , new Object[] {this});
+		Logger.getGlobal().log(Level.INFO, "[Obj] blocked snowing", new Object[] { this });
 	}
 }
