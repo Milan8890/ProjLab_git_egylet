@@ -440,7 +440,7 @@ Lane1_1 returned Road1
 Road1 returned length 100.0
 Lane1_1 returned Road1
 Road1 returned length 100.0
-Snowplower1_1 used 100.0salt
+Snowplower1_1 used 100.0 salt
 Snowplower1_1 with SaltSpreader1_1 cleans Lane1_1 for 100$
 SaltSpreader1_1 uses 100.0salt from Snowplower1_1
 Cleaner1 received 100$

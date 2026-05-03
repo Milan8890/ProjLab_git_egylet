@@ -16,7 +16,7 @@ else
 :
 fi
 
-TESTED_LINE="Snowplower1_1 with GravelSpreader1_1 cleans Lane1_1 for 25$"
+TESTED_LINE="Snowplower1_1 with GravelSpreader1_1 cleans Lane1_1 for 50\\$"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -24,7 +24,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="Cleaner1 received 25$"
+TESTED_LINE="Cleaner1 received 50\\$"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -32,7 +32,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="Snowplower1_1 used 100 gravel"
+TESTED_LINE="Snowplower1_1 used 100.0 gravel"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else

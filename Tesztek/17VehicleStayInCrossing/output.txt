@@ -29,4 +29,4 @@ Created PathC_0_1
 City calculated shortest path from Crossing1 to Crossing2 as PathC_0_1
 [ERROR]Error while running the following command:
 passtime 200
- Error: java.lang.UnsupportedOperationException: Még nincs kész
+ Error: java.lang.UnsupportedOperationException: MÃ©g nincs kÃ©sz

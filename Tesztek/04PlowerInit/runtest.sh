@@ -16,7 +16,7 @@ else
 :
 fi
 
-TESTED_LINE="INFO Cleaner1 has Snowplower1"
+TESTED_LINE="INFO Cleaner1 has Snowplower1_1"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -24,7 +24,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Cleaner1 has Snowplower2"
+TESTED_LINE="INFO Cleaner1 has Snowplower1_2"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else

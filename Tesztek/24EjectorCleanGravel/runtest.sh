@@ -16,7 +16,7 @@ else
 :
 fi
 
-TESTED_LINE="Snowplower1_1 with Ejector1_1 cleans Lane1_2 for 0$"
+TESTED_LINE="Snowplower1_1 with Ejector1_1 cleans Lane1_2 for 0.0\\$"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else

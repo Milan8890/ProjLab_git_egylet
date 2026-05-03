@@ -27,6 +27,6 @@ Created PathC_0_1
 City calculated shortest path from Crossing1 to Crossing3 as PathC_0_1
 [ERROR]Error while running the following command:
 passtime 5
- Error: java.lang.UnsupportedOperationException: Még nincs kész
+ Error: java.lang.UnsupportedOperationException: MÃ©g nincs kÃ©sz
 INFO PathC_0_1 pathLanes is empty
 INFO PathC_0_1 last crossing is Crossing1

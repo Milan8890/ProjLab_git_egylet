@@ -30,7 +30,7 @@ Inicialization done
 
 [ERROR]Error while running the following command:
 extpath Snowplower1_1 Lane1_2
- Error: java.lang.NullPointerException: Cannot invoke "playground.Lane.getRoad()" because "<parameter1>" is null
+ Error: java.lang.NullPointerException: Cannot invoke "playground.Lane.getRoad()" because "l" is null
 Lane2_1 returned Road2
 PathS_1_1 couldn't extend with Lane2_1, because it's not connected
 [ERROR]The amount of [Obj]s and objects passed in a logging function are not the same.

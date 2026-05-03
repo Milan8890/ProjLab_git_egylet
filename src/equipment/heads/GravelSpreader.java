@@ -22,7 +22,7 @@ import playground.Road;
  * Head
  */
 public class GravelSpreader extends Head {
-
+    private static final double GRAVELCLEANPAY = 0.5;
     static final double GRAVEL_CONSUME = 1;
     /**
      * Konstruktor.
@@ -41,16 +41,14 @@ public class GravelSpreader extends Head {
      */
     public int clean(Lane l){
         l.setGravel(true);
-        double payPerMeter = 1;    //Ezt kell átírni, nem tudom mi egyáltalán a gravelnél a fizetési pénz.
 
-        //Ide kéne még valami ice/snowLevel elem a képletbe?
-        int payment = (int) (l.getRoad().getLength() * payPerMeter);
+        int payment = (int) (l.getRoad().getLength() * GRAVELCLEANPAY);
 
         double amount = (l.getRoad().getLength() * GRAVEL_CONSUME);
         snowplower.useGravel(amount);
 
         Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$" , new Object[] {snowplower , this, l});
-		Logger.getGlobal().log(Level.INFO, "[Obj] uses " + amount + "gravel from [Obj]", new Object[] {this, snowplower});
+		Logger.getGlobal().log(Level.INFO, "[Obj] uses " + amount + " gravel from [Obj]", new Object[] {this, snowplower});
 
         return payment;
     }

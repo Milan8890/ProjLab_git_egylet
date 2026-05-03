@@ -118,7 +118,7 @@ Created PathC_0_1
 City calculated shortest path from Crossing2 to Crossing1 as PathC_0_1
 [ERROR]Error while running the following command:
 passtime 200
- Error: java.lang.UnsupportedOperationException: Még nincs kész
+ Error: java.lang.UnsupportedOperationException: MÃ©g nincs kÃ©sz
 Lane1_1 returned Road1
 INFO Lane1_1 is on Road1
 Lane1_1 returned snow level 10.0
