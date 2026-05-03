@@ -372,8 +372,7 @@ public abstract class Vehicle {
 						new Object[] { this, currentLane });
 			}
 
-			// TODO: Random hívás központosítása a tesztelhetőség miatt
-			if (Math.random() < SLIP_CHANCE) {
+			if (World.getRandom(SLIP_CHANCE)) {
 				Logger.getGlobal().log(Level.INFO, "[Obj] slipping on [Obj]",
 						new Object[] { this, currentLane.getRoad() });
 				currentLane.getRoad().crashVehicle(this);

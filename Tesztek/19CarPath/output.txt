@@ -71,8 +71,35 @@ Lane1_1 returned snow level 0.0
 Lane1_1 returned ice level 0.0
 Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 1.0
-Lane1_1 returned Road1
-Road1 returned length 10.0
+Lane3_1 returned Road3
+Road3 returned length 10.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane3_1 has no stuck vehicle
+Lane3_1 returned snow level 0.0
+Lane3_1 returned ice level 0.0
+Car1 slip check on Lane3_1: ice is too thin, not slipping
+Car1 advancing on road, current progress is 2.0
+Lane3_1 returned Road3
+Road3 returned length 10.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane3_1 has no stuck vehicle
+Lane3_1 returned snow level 0.0
+Lane3_1 returned ice level 0.0
+Car1 slip check on Lane3_1: ice is too thin, not slipping
+Car1 advancing on road, current progress is 3.0
+Lane3_1 returned Road3
+Road3 returned length 10.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane3_1 has no stuck vehicle
+Lane3_1 returned snow level 0.0
+Lane3_1 returned ice level 0.0
+Car1 slip check on Lane3_1: ice is too thin, not slipping
+Car1 advancing on road, current progress is 4.0
+Lane3_1 returned Road3
+Road3 returned length 10.0
 INFO Car1 last crossing is Crossing1
 INFO Car1 current lane is Lane1_1
 INFO Car1 lane progress is 1.0
@@ -83,5 +110,5 @@ INFO Car1 revive timer is 0
 INFO Car1 home is Crossing1
 INFO Car1 work is Crossing3
 INFO Car1 is going to work
-INFO PathC_0_1 has lane Lane3_1
+INFO PathC_0_1 has lane Lane1_1
 INFO PathC_0_1 last crossing is Crossing3
