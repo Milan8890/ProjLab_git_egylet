@@ -13,7 +13,7 @@ Created Lane1_8
 Created Lane1_9
 Created Lane1_10
 Crossing1 added Road1 to outgoing roads
-Road1 created between Crossing1 and Crossing2 with length 10.0 and 10 lanes
+Road1 created between Crossing1 and Crossing2 with length 1.0 and 10 lanes
 Created Car1
 [ERROR]Error while running the following command:
 putsnow Road1 Lane1_1 10
@@ -21,4 +21,10 @@ putsnow Road1 Lane1_1 10
 [ERROR]Error while running the following command:
 extpath Car1 Lane1_1
  Error: java.lang.NullPointerException: Cannot invoke "playground.Path.extendPath(playground.Lane)" because "this.path" is null
+
 Inicialization done
+
+Car1 is in a crossing
+[ERROR]Error while running the following command:
+passtime 200
+ Error: java.lang.NullPointerException: Cannot invoke "playground.Path.pop()" because "this.path" is null

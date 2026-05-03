@@ -3,7 +3,9 @@ Created Crossing1
 City returned crossings
 Created Crossing2
 Created Car1
+
 Inicialization done
+
 [ERROR]Error while running the following command:
 info Car1
  Error: java.lang.NoSuchFieldException: lastCrossing

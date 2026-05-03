@@ -256,6 +256,11 @@ public abstract class Vehicle {
 		return path.extendPath(l);
 	}
 
+	// TODO javadoc
+	public Crossing getLastCrossing() {
+		return lastCrossing;
+	}
+
 	/**
 	 * Kezeli az ütközés utáni kényszerpihenőt.
 	 * 

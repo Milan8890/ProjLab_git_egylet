@@ -15,7 +15,7 @@ Created Lane1_8
 Created Lane1_9
 Created Lane1_10
 Crossing1 added Road1 to outgoing roads
-Road1 created between Crossing1 and Crossing2 with length 10.0 and 10 lanes
+Road1 created between Crossing1 and Crossing2 with length 1.0 and 10 lanes
 Created Lane2_1
 Created Lane2_2
 Created Lane2_3
@@ -27,7 +27,7 @@ Created Lane2_8
 Created Lane2_9
 Created Lane2_10
 Crossing1 added Road2 to outgoing roads
-Road2 created between Crossing1 and Crossing3 with length 10.0 and 10 lanes
+Road2 created between Crossing1 and Crossing3 with length 1.0 and 10 lanes
 Created Lane3_1
 Created Lane3_2
 Created Lane3_3
@@ -39,9 +39,45 @@ Created Lane3_8
 Created Lane3_9
 Created Lane3_10
 Crossing2 added Road3 to outgoing roads
-Road3 created between Crossing2 and Crossing3 with length 10.0 and 10 lanes
+Road3 created between Crossing2 and Crossing3 with length 1.0 and 10 lanes
 Created Car1
+
 Inicialization done
+
+Lane3_1 has no salt
+Lane3_1 added 1.0 snow
+Road3 put 1 snow on Lane3_1
+Lane3_2 has no salt
+Lane3_2 added 1.0 snow
+Road3 put 1 snow on Lane3_2
+Lane3_3 has no salt
+Lane3_3 added 1.0 snow
+Road3 put 1 snow on Lane3_3
+Lane3_4 has no salt
+Lane3_4 added 1.0 snow
+Road3 put 1 snow on Lane3_4
+Lane3_5 has no salt
+Lane3_5 added 1.0 snow
+Road3 put 1 snow on Lane3_5
+Lane3_6 has no salt
+Lane3_6 added 1.0 snow
+Road3 put 1 snow on Lane3_6
+Lane3_7 has no salt
+Lane3_7 added 1.0 snow
+Road3 put 1 snow on Lane3_7
+Lane3_8 has no salt
+Lane3_8 added 1.0 snow
+Road3 put 1 snow on Lane3_8
+Lane3_9 has no salt
+Lane3_9 added 1.0 snow
+Road3 put 1 snow on Lane3_9
+Lane3_10 has no salt
+Lane3_10 added 1.0 snow
+Road3 put 1 snow on Lane3_10
+Car1 is in a crossing
+[ERROR]Error while running the following command:
+passtime 5
+ Error: java.lang.NullPointerException: Cannot invoke "playground.Path.pop()" because "this.path" is null
 [ERROR]Error while running the following command:
 info PathC_0_1
  Error: java.lang.NullPointerException

@@ -13,7 +13,7 @@ Created Lane1_8
 Created Lane1_9
 Created Lane1_10
 Crossing1 added Road1 to outgoing roads
-Road1 created between Crossing1 and Crossing2 with length 10.0 and 10 lanes
+Road1 created between Crossing1 and Crossing2 with length 1.0 and 10 lanes
 Created Lane2_1
 Created Lane2_2
 Created Lane2_3
@@ -25,7 +25,7 @@ Created Lane2_8
 Created Lane2_9
 Created Lane2_10
 Crossing2 added Road2 to outgoing roads
-Road2 created between Crossing2 and Crossing1 with length 10.0 and 10 lanes
+Road2 created between Crossing2 and Crossing1 with length 1.0 and 10 lanes
 Created Car1
 Lane2_1 returned Road2
 Road2 returned start Crossing2
@@ -35,4 +35,22 @@ putvehicle Car1 Lane2_1
 [ERROR]Error while running the following command:
 crash Car1
  Error: java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+
 Inicialization done
+
+Car1 is not in a crossing
+Lane2_1 has no stuck vehicle
+Lane2_1 returned snow level 0.0
+Lane2_1 returned ice level 0.0
+Car1 slip check on Lane2_1: ice is too thin, not slipping
+Car1 advancing on road, current progress is 1.0
+Lane2_1 returned Road2
+Road2 returned length 1.0
+Lane2_1 returned Road2
+Road2 returned end Crossing1
+Car1 reached end of road, currently in Crossing1
+Lane2_1 removed Car1
+Car1 is in a crossing
+[ERROR]Error while running the following command:
+passtime 30
+ Error: java.lang.NullPointerException: Cannot invoke "playground.Path.pop()" because "this.path" is null

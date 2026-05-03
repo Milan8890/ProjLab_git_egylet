@@ -33,8 +33,7 @@ public class Path {
 	public Path(Vehicle v) {
 		vehicle = v;
 		pathLanes = new ArrayList<>();
-		lastCrossing = null;
-		Logger.getGlobal().severe("Path-en még csiszolni kell (kezdési ellenőrzés)");
+		lastCrossing = vehicle.getLastCrossing();
 		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
 
@@ -73,7 +72,7 @@ public class Path {
 		Logger.getGlobal().log(Level.INFO, "[Obj] cleared", new Object[] { this });
 
 		pathLanes.clear();
-		lastCrossing = null;
+		lastCrossing = vehicle.getLastCrossing();
 	}
 
 	/**

@@ -5,7 +5,6 @@ Created Crossing2
 Created Cleaner1
 City returned Crossing1 as snowplower base
 Created Snowplower1_1
-[ERROR]Path-en még csiszolni kell (kezdési ellenõrzés)
 Created PathS_1_1
 Created Breaker1_1
 Created HeadInventory1_1
@@ -31,18 +30,89 @@ Created Lane1_8
 Created Lane1_9
 Created Lane1_10
 Crossing1 added Road1 to outgoing roads
-Road1 created between Crossing1 and Crossing2 with length 10.0 and 10 lanes
+Road1 created between Crossing1 and Crossing2 with length 1.0 and 10 lanes
+Lane1_1 returned Road1
+Lane1_1 returned Road1
+PathS_1_1 extended with Lane1_1 successfully
+Snowplower1_1 extended its path with Lane1_1 successfully
 Lane1_1 returned Road1
 PathS_1_1 couldn't extend with Lane1_1, because it's not connected
 Snowplower1_1 returned HeadInventory1_1
 Snowplower1_1 returned HeadInventory1_1
 Created Dragon1_1
+
 Inicialization done
+
+Snowplower1_1 is in a crossing
+PathS_1_1 returned next lane Lane1_1
+HeadInventory1_1 returned active head Dragon1_1
+Lane1_1 returned Road1
+Road1 returned length 1.0
+Snowplower1_1 has 1000.0 bio
+Dragon1_1 allows Snowplower1_1 to enter Lane1_1 
+Snowplower1_1 has 1000.0 bio
+Snowplower1_1 following PathS_1_1, going onto Lane1_1
+Lane1_1 added Snowplower1_1
+Snowplower1_1 advancing on road, current progress is 1.0
+Lane1_1 returned Road1
+Road1 returned length 1.0
+HeadInventory1_1 returned active head Dragon1_1
+Lane1_1 melted 0.0 ice
+Lane1_1 cleaned 0.0 snow
+Lane1_1 returned Road1
+Road1 returned length 1.0
+Lane1_1 returned Road1
+Road1 returned length 1.0
+Snowplower1_1 used 1.0bio
+Snowplower1_1 with Dragon1_1 cleans Lane1_1 for 0.0$
+Dragon1_1 uses 1.0bio from Snowplower1_1
+Cleaner1 received 0$
+Lane1_1 returned Road1
+Road1 returned end Crossing2
+Snowplower1_1 reached end of road, currently in Crossing2
+Lane1_1 removed Snowplower1_1
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
+Lane1_1 has no salt
+Lane1_1 added 1.0 snow
+Road1 put 1 snow on Lane1_1
+Lane1_2 has no salt
+Lane1_2 added 1.0 snow
+Road1 put 1 snow on Lane1_2
+Lane1_3 has no salt
+Lane1_3 added 1.0 snow
+Road1 put 1 snow on Lane1_3
+Lane1_4 has no salt
+Lane1_4 added 1.0 snow
+Road1 put 1 snow on Lane1_4
+Lane1_5 has no salt
+Lane1_5 added 1.0 snow
+Road1 put 1 snow on Lane1_5
+Lane1_6 has no salt
+Lane1_6 added 1.0 snow
+Road1 put 1 snow on Lane1_6
+Lane1_7 has no salt
+Lane1_7 added 1.0 snow
+Road1 put 1 snow on Lane1_7
+Lane1_8 has no salt
+Lane1_8 added 1.0 snow
+Road1 put 1 snow on Lane1_8
+Lane1_9 has no salt
+Lane1_9 added 1.0 snow
+Road1 put 1 snow on Lane1_9
+Lane1_10 has no salt
+Lane1_10 added 1.0 snow
+Road1 put 1 snow on Lane1_10
+Snowplower1_1 is in a crossing
 PathS_1_1 has no next lane
-PathS_1_1 has no next lane
+Snowplower1_1 reached end of PathS_1_1, stopping
 [ERROR]Error while running the following command:
 info Snowplower1_1
  Error: java.lang.NoSuchFieldException: lastCrossing

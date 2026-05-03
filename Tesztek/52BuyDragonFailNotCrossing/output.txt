@@ -103,7 +103,7 @@ Created Lane1_98
 Created Lane1_99
 Created Lane1_100
 Crossing1 added Road1 to outgoing roads
-Road1 created between Crossing1 and Crossing2 with length 100.0 and 100 lanes
+Road1 created between Crossing1 and Crossing2 with length 1.0 and 100 lanes
 [ERROR]Error while running the following command:
 addm Cleaner1 10000
  Error: java.lang.NullPointerException: Cannot invoke "user.Cleaner.addMoney(int)" because "<local2>" is null
@@ -114,7 +114,9 @@ plower Cleaner1 breaker
 [ERROR]Error while running the following command:
 putvehicle Lane1_1
  Error: java.lang.ClassCastException: class playground.Lane cannot be cast to class entities.Vehicle (playground.Lane and entities.Vehicle are in unnamed module of loader 'app')
+
 Inicialization done
+
 [ERROR]Error while running the following command:
 buyhead Snowplower1_1 HeadListing1_1_DRA
  Error: java.lang.NullPointerException: Cannot invoke "entities.Snowplower.getHeadInventory()" because "<local2>" is null

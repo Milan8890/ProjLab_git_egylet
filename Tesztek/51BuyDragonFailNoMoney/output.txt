@@ -7,7 +7,9 @@ City returned Crossing1 as snowplower base
 [ERROR]Error while running the following command:
 plower Cleaner1 breaker
  Error: java.lang.NullPointerException
+
 Inicialization done
+
 [ERROR]Error while running the following command:
 buyhead Snowplower1_1 HeadListing1_1_DRA
  Error: java.lang.NullPointerException: Cannot invoke "entities.Snowplower.getHeadInventory()" because "<local2>" is null

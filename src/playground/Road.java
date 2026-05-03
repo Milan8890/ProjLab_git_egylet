@@ -69,7 +69,7 @@ public class Road {
 	 * rak havat az összes hozzá tartozó sávra
 	 */
 	public void onTick() {
-		if (World.getRandom(SNOWCHANCE)) {
+		if (World.getRandom(SNOWCHANCE) && World.isSnowing()) {
 			for (Lane lane : lanes) {
 				if (!lane.hasSalt()) {
 					lane.addSnow(ONTICKSNOW);

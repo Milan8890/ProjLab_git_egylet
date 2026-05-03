@@ -7,9 +7,11 @@ OUTPUT_FILE="$SCRIPT_DIR/output.txt"
 
 SUCCESS=true
 
+echo "$OUTPUT_FILE"
+
 cat "$INPUT_FILE" | java -cp bin main.App > "$OUTPUT_FILE"
 
-if grep -q "[ERROR]" "$OUTPUT_FILE"; then
+if grep -q "\\[ERROR\\]" "$OUTPUT_FILE"; then
 	echo "Output still has an [ERROR] in it (severe logging message)."
 	SUCCESS=false
 else
