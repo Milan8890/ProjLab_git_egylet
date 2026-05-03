@@ -45,18 +45,19 @@ public class Bus extends Vehicle {
 	boolean isCurrentDestinationA;
 
 	/**
-     * Konstruktor.
-     * 
-     * @param stationA A busz első megállója.
-     * @param stationB A busz második megállója.
-     * @param driver    A busz tulajdonosa.
-     */
+	 * Konstruktor.
+	 * 
+	 * @param stationA A busz első megállója.
+	 * @param stationB A busz második megállója.
+	 * @param driver   A busz tulajdonosa.
+	 */
 	public Bus(Crossing stationA, Crossing stationB, BusDriver driver) {
 		super(stationA);
 		this.stationA = stationA;
 		this.stationB = stationB;
 		this.driver = driver;
 		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
+		this.path = new Path(this);
 	}
 
 	/**
@@ -68,25 +69,22 @@ public class Bus extends Vehicle {
 	public void reachedCrossing() {
 		super.reachedCrossing();
 
-		if(this.stationA.equals(this.lastCrossing) && this.isCurrentDestinationA) {
+		if (this.stationA.equals(this.lastCrossing) && this.isCurrentDestinationA) {
 			driver.addPoint();
 			this.isCurrentDestinationA = false;
 
-			Logger.getGlobal().log(Level.INFO, "[Obj] reached [Obj] end point" , new Object[] {this, lastCrossing});
-			Logger.getGlobal().log(Level.INFO, "[Obj] current destination [Obj]" , new Object[] {this, stationB});
-			Logger.getGlobal().log(Level.INFO, "[Obj] added point to [Obj]" , new Object[] {this, driver});
+			Logger.getGlobal().log(Level.INFO, "[Obj] reached [Obj] end point", new Object[] { this, lastCrossing });
+			Logger.getGlobal().log(Level.INFO, "[Obj] current destination [Obj]", new Object[] { this, stationB });
+			Logger.getGlobal().log(Level.INFO, "[Obj] added point to [Obj]", new Object[] { this, driver });
 
-		}
-		else if(this.stationB.equals(this.lastCrossing) && !this.isCurrentDestinationA) {
+		} else if (this.stationB.equals(this.lastCrossing) && !this.isCurrentDestinationA) {
 			driver.addPoint();
 			this.isCurrentDestinationA = true;
 
-			Logger.getGlobal().log(Level.INFO, "[Obj] reached [Obj] end point" , new Object[] {this, lastCrossing});
-			Logger.getGlobal().log(Level.INFO, "[Obj] current destination [Obj]" , new Object[] {this, stationA});
-			Logger.getGlobal().log(Level.INFO, "[Obj] added point to [Obj]" , new Object[] {this, driver});
+			Logger.getGlobal().log(Level.INFO, "[Obj] reached [Obj] end point", new Object[] { this, lastCrossing });
+			Logger.getGlobal().log(Level.INFO, "[Obj] current destination [Obj]", new Object[] { this, stationA });
+			Logger.getGlobal().log(Level.INFO, "[Obj] added point to [Obj]", new Object[] { this, driver });
 		}
-
-
 
 	}
 }

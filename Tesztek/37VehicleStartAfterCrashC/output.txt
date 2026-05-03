@@ -27,30 +27,43 @@ Created Lane2_10
 Crossing2 added Road2 to outgoing roads
 Road2 created between Crossing2 and Crossing1 with length 1.0 and 10 lanes
 Created Car1
+Created PathC_0_1
 Lane2_1 returned Road2
 Road2 returned start Crossing2
-[ERROR]Error while running the following command:
-putvehicle Car1 Lane2_1
- Error: java.lang.NullPointerException: Cannot invoke "playground.Path.clear()" because the return value of "java.lang.reflect.Field.get(Object)" is null
-[ERROR]Error while running the following command:
-crash Car1
- Error: java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+PathC_0_1 cleared
+Lane2_1 added Car1
 
 Inicialization done
 
 Car1 is not in a crossing
-Lane2_1 has no stuck vehicle
-Lane2_1 returned snow level 0.0
-Lane2_1 returned ice level 0.0
-Car1 slip check on Lane2_1: ice is too thin, not slipping
-Car1 advancing on road, current progress is 1.0
-Lane2_1 returned Road2
-Road2 returned length 1.0
-Lane2_1 returned Road2
-Road2 returned end Crossing1
-Car1 reached end of road, currently in Crossing1
-Lane2_1 removed Car1
+Car1 is currently stuck, revTime decreased to 9
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 8
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 7
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 6
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 5
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 4
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 3
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 2
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 1
+Car1 is not in a crossing
+Car1 revTime expired, unstucking vehicle
+Car1 after accident, starting again from home
+PathC_0_1 cleared
 Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Created PathC_0_1
+City calculated shortest path from Crossing1 to Crossing2 as PathC_0_1
 [ERROR]Error while running the following command:
 passtime 30
- Error: java.lang.NullPointerException: Cannot invoke "playground.Path.pop()" because "this.path" is null
+ Error: java.lang.UnsupportedOperationException: Még nincs kész

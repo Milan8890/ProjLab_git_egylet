@@ -88,7 +88,7 @@ do
     fi
 done
 
-echo -e "\nPassed $SUCCESS_COUNT/$FAILED_COUNT tests."
+echo -e "\nPassed $SUCCESS_COUNT/$TOTAL_TESTS tests."
 
 # Ha volt akár egy hiba is, a fő script is hibával térjen vissza
 if [ $FAILED_COUNT -eq 0 ]; then

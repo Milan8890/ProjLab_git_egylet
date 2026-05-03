@@ -79,8 +79,8 @@ public class Lane {
 			owner = c;
 			lifetime = STARTING_LIFETIME;
 			lane = l;
-			Logger.getGlobal().log(Level.INFO, "[Obj] created with owner [Obj] and lifetime [Obj]",
-					new Object[] { this, c, lifetime });
+			Logger.getGlobal().log(Level.INFO, "[Obj] created with owner [Obj] and lifetime " + lifetime,
+					new Object[] { this, c });
 
 		}
 

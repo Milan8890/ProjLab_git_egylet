@@ -12,5 +12,5 @@ buyhead Snowplower1_1 HeadListing1_1_SAL
 buybio Snowplower1_1
 buysalt Snowplower1_1
 buygravel Snowplower1_1
-info Headinventory1_1
+info HeadInventory1_1
 info Cleaner1

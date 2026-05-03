@@ -4,7 +4,7 @@ cleaner test
 plower Cleaner1 ejector
 road Crossing1 Crossing2 100 2
 putvehicle Snowplower1_1 Lane1_2
-putgravel Lane1_2 100 true
+putgravel Lane1_2 true
 initend
 passtime 200
 info Lane1_2

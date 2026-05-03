@@ -4,7 +4,7 @@ car Crossing1 Crossing2
 car Crossing1 Crossing2
 putvehicle Car1 Lane1_1
 putvehicle Car2 Lane1_2
-putice Road1 Lane1_1 50
+putice Lane1_1 50
 setrand true
 initend
 passtime 200 

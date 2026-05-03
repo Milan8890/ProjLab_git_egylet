@@ -15,66 +15,94 @@ Created Lane1_10
 Crossing1 added Road1 to outgoing roads
 Road1 created between Crossing1 and Crossing2 with length 2.0 and 10 lanes
 Created Car1
+Created PathC_0_1
 Created Car2
+Created PathC_0_2
 Lane1_1 returned Road1
 Road1 returned start Crossing1
-[ERROR]Error while running the following command:
-putvehicle Car1 Lane1_1
- Error: java.lang.NullPointerException: Cannot invoke "playground.Path.clear()" because the return value of "java.lang.reflect.Field.get(Object)" is null
+PathC_0_1 cleared
+Lane1_1 added Car1
 Lane1_2 returned Road1
 Road1 returned start Crossing1
-[ERROR]Error while running the following command:
-putvehicle Car2 Lane1_2
- Error: java.lang.NullPointerException: Cannot invoke "playground.Path.clear()" because the return value of "java.lang.reflect.Field.get(Object)" is null
-[ERROR]Error while running the following command:
-putice Road1 Lane1_1 50
- Error: java.lang.ClassCastException: class playground.Road cannot be cast to class playground.Lane (playground.Road and playground.Lane are in unnamed module of loader 'app')
+PathC_0_2 cleared
+Lane1_2 added Car2
 
 Inicialization done
 
 Car1 is not in a crossing
+Car1 is not stuck
 Lane1_1 has no stuck vehicle
 Lane1_1 returned snow level 0.0
-Lane1_1 returned ice level 0.0
-Car1 slip check on Lane1_1: ice is too thin, not slipping
-Car1 advancing on road, current progress is 1.0
+Lane1_1 returned ice level 50.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has no gravel
+Lane1_1 has no gravel
+Car1 slip check on Lane1_1: doesn’t have gravel, slipping
 Lane1_1 returned Road1
-Road1 returned length 2.0
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Lane1_2 returned vehicles
+Road1 collided Car1 into Car2 on Lane1_2
 Car2 is not in a crossing
-Lane1_2 has no stuck vehicle
-Lane1_2 returned snow level 0.0
-Lane1_2 returned ice level 0.0
-Car2 slip check on Lane1_2: ice is too thin, not slipping
-Car2 advancing on road, current progress is 1.0
-Lane1_2 returned Road1
-Road1 returned length 2.0
+Car2 is currently stuck, revTime decreased to 11
 Car1 is not in a crossing
-Lane1_1 has no stuck vehicle
-Lane1_1 returned snow level 0.0
-Lane1_1 returned ice level 0.0
-Car1 slip check on Lane1_1: ice is too thin, not slipping
-Car1 advancing on road, current progress is 2.0
-Lane1_1 returned Road1
-Road1 returned length 2.0
-Lane1_1 returned Road1
-Road1 returned end Crossing2
-Car1 reached end of road, currently in Crossing2
-Lane1_1 removed Car1
-Car1 reached work, going to home
+Car1 is currently stuck, revTime decreased to 11
 Car2 is not in a crossing
-Lane1_2 has no stuck vehicle
-Lane1_2 returned snow level 0.0
-Lane1_2 returned ice level 0.0
-Car2 slip check on Lane1_2: ice is too thin, not slipping
-Car2 advancing on road, current progress is 2.0
-Lane1_2 returned Road1
-Road1 returned length 2.0
-Lane1_2 returned Road1
-Road1 returned end Crossing2
-Car2 reached end of road, currently in Crossing2
-Lane1_2 removed Car2
-Car2 reached work, going to home
-Car1 is in a crossing
+Car2 is currently stuck, revTime decreased to 10
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 10
+Car2 is not in a crossing
+Car2 is currently stuck, revTime decreased to 9
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 9
+Car2 is not in a crossing
+Car2 is currently stuck, revTime decreased to 8
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 8
+Car2 is not in a crossing
+Car2 is currently stuck, revTime decreased to 7
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 7
+Car2 is not in a crossing
+Car2 is currently stuck, revTime decreased to 6
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 6
+Car2 is not in a crossing
+Car2 is currently stuck, revTime decreased to 5
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 5
+Car2 is not in a crossing
+Car2 is currently stuck, revTime decreased to 4
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 4
+Car2 is not in a crossing
+Car2 is currently stuck, revTime decreased to 3
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 3
+Car2 is not in a crossing
+Car2 is currently stuck, revTime decreased to 2
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 2
+Car2 is not in a crossing
+Car2 is currently stuck, revTime decreased to 1
+Car1 is not in a crossing
+Car1 is currently stuck, revTime decreased to 1
+Car2 is not in a crossing
+Car2 revTime expired, unstucking vehicle
+Car2 after accident, starting again from home
+PathC_0_2 cleared
+Car1 is not in a crossing
+Car1 revTime expired, unstucking vehicle
+Car1 after accident, starting again from home
+PathC_0_1 cleared
+Car2 is in a crossing
+PathC_0_2 has no next lane
+Car2 reached end of PathC_0_2, stopping
+Car2 is in a crossing
+Car2 has no path, requesting new path between Crossing1 and Crossing2
+Created PathC_0_2
+City calculated shortest path from Crossing1 to Crossing2 as PathC_0_2
 [ERROR]Error while running the following command:
 passtime 200 
- Error: java.lang.NullPointerException: Cannot invoke "playground.Path.pop()" because "this.path" is null
+ Error: java.lang.UnsupportedOperationException: Még nincs kész

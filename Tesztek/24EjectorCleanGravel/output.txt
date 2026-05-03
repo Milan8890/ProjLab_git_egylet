@@ -9,15 +9,15 @@ Created PathS_1_1
 Created Ejector1_1
 Created HeadInventory1_1
 Created Sweeper1_1
-Created HeadListing1_1
+Created HeadListing1_1_SWE
 Created Breaker1_1
-Created HeadListing1_1
+Created HeadListing1_1_BRE
 Created GravelSpreader1_1
-Created HeadListing1_1
+Created HeadListing1_1_GRA
 Created SaltSpreader1_1
-Created HeadListing1_1
+Created HeadListing1_1_SAL
 Created Dragon1_1
-Created HeadListing1_1
+Created HeadListing1_1_DRA
 HeadInventory1_1 created with owner Snowplower1_1 and starting head Ejector
 Created Lane1_1
 Created Lane1_2
@@ -125,9 +125,7 @@ Lane1_2 returned Road1
 Road1 returned start Crossing1
 PathS_1_1 cleared
 Lane1_2 added Snowplower1_1
-[ERROR]Error while running the following command:
-putgravel Lane1_2 100 true
- Error: java.lang.IllegalArgumentException: Incorrect true/false value
+Lane1_2 set to have gravel
 
 Inicialization done
 

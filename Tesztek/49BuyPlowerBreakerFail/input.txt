@@ -1,6 +1,6 @@
-Crossing 1
+crossing 1
 spbase Crossing1
-Cleaner test
+cleaner test
 addm Cleaner1 300
 initend
 buyplower Cleaner1 breaker

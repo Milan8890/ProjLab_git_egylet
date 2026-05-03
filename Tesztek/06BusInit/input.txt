@@ -1,5 +1,5 @@
 crossing 2
 driver test
-bus Driver1 Crossing1 Crossing2
+bus BusDriver1 Crossing1 Crossing2
 initend
 info Bus1

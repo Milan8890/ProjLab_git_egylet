@@ -69,7 +69,7 @@ public class Path {
 	 * nullázása.
 	 */
 	public void clear() {
-		Logger.getGlobal().log(Level.INFO, "[Obj] cleared", new Object[] { this });
+		Logger.getGlobal().log(Level.INFO, "[Obj] cleared", this);
 
 		pathLanes.clear();
 		lastCrossing = vehicle.getLastCrossing();

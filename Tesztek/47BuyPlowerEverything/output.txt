@@ -7,15 +7,15 @@ Created PathS_1_1
 Created Ejector1_1
 Created HeadInventory1_1
 Created Sweeper1_1
-Created HeadListing1_1
+Created HeadListing1_1_SWE
 Created Breaker1_1
-Created HeadListing1_1
+Created HeadListing1_1_BRE
 Created GravelSpreader1_1
-Created HeadListing1_1
+Created HeadListing1_1_GRA
 Created SaltSpreader1_1
-Created HeadListing1_1
+Created HeadListing1_1_SAL
 Created Dragon1_1
-Created HeadListing1_1
+Created HeadListing1_1_DRA
 HeadInventory1_1 created with owner Snowplower1_1 and starting head Ejector
 Cleaner1 received 100000$
 
@@ -40,9 +40,16 @@ Snowplower1_1 bought salt successfully
 Snowplower1_1 is in a crossing
 Cleaner1 deducted 25$  successfully
 Snowplower1_1 bought gravel successfully
-[ERROR]Error while running the following command:
-info Headinventory1_1
- Error: java.lang.NullPointerException
-[ERROR]Error while running the following command:
-info Cleaner1
- Error: java.lang.NoSuchFieldException: name
+INFO HeadInventory1_1 owner is Snowplower1_1
+INFO HeadInventory1_1 has head Ejector1_1
+HeadInventory1_1 returned available head listings
+INFO HeadInventory1_1 has head listing HeadListing1_1_SWE
+INFO HeadInventory1_1 has head listing HeadListing1_1_BRE
+INFO HeadInventory1_1 has head listing HeadListing1_1_GRA
+INFO HeadInventory1_1 has head listing HeadListing1_1_SAL
+INFO HeadInventory1_1 has head listing HeadListing1_1_DRA
+HeadInventory1_1 returned active head Ejector1_1
+INFO HeadInventory1_1 active head is Ejector1_1
+INFO Cleaner1 name is test
+INFO Cleaner1 has 99925$
+INFO Cleaner1 has Snowplower1_1

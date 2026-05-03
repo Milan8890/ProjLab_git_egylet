@@ -21,25 +21,25 @@ Created PathS_1_1
 Created Breaker1_1
 Created HeadInventory1_1
 Created Sweeper1_1
-Created HeadListing1_1
+Created HeadListing1_1_SWE
 Created Ejector1_1
-Created HeadListing1_1
+Created HeadListing1_1_EJE
 Created GravelSpreader1_1
-Created HeadListing1_1
+Created HeadListing1_1_GRA
 Created SaltSpreader1_1
-Created HeadListing1_1
+Created HeadListing1_1_SAL
 Created Dragon1_1
-Created HeadListing1_1
+Created HeadListing1_1_DRA
 HeadInventory1_1 created with owner Snowplower1_1 and starting head Breaker
-[ERROR]Error while running the following command:
-extpath Snowplower1_1 Road1 Lane1
- Error: java.lang.ClassCastException: class playground.Road cannot be cast to class playground.Lane (playground.Road and playground.Lane are in unnamed module of loader 'app')
+Lane1_1 returned Road1
+Lane1_1 returned Road1
+PathS_1_1 extended with Lane1_1 successfully
+Snowplower1_1 extended its path with Lane1_1 successfully
+Lane1_1 returned Road1
+PathS_1_1 couldn't extend with Lane1_1, because it's not connected
 
 Inicialization done
 
-[ERROR]Error while running the following command:
-clpath Snowplower1_1
- Error: java.lang.NoSuchFieldException: path
-[ERROR]Error while running the following command:
-info PathS1_1
- Error: java.lang.NullPointerException
+PathS_1_1 cleared
+INFO PathS_1_1 pathLanes is empty
+INFO PathS_1_1 last crossing is Crossing1

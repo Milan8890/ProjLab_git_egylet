@@ -41,13 +41,19 @@ Created Lane3_10
 Crossing2 added Road3 to outgoing roads
 Road3 created between Crossing2 and Crossing3 with length 1.0 and 10 lanes
 Created Car1
+Created PathC_0_1
 
 Inicialization done
 
 Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing3
+Created PathC_0_1
+City calculated shortest path from Crossing1 to Crossing3 as PathC_0_1
 [ERROR]Error while running the following command:
 passtime 5
- Error: java.lang.NullPointerException: Cannot invoke "playground.Path.pop()" because "this.path" is null
-[ERROR]Error while running the following command:
-info PathC_0_1
- Error: java.lang.NullPointerException
+ Error: java.lang.UnsupportedOperationException: Még nincs kész
+INFO PathC_0_1 pathLanes is empty
+INFO PathC_0_1 last crossing is Crossing1

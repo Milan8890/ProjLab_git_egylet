@@ -273,7 +273,7 @@ public abstract class Vehicle {
 				Logger.getGlobal().log(Level.INFO, "[Obj] revTime expired, unstucking vehicle", new Object[] { this });
 				revive();
 				isCrashed = false;
-				return true;
+				return false;
 			}
 			Logger.getGlobal().log(Level.INFO, "[Obj] is currently stuck, revTime decreased to " + revTimer,
 					new Object[] { this });

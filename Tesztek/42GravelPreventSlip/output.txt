@@ -3,6 +3,7 @@ Created Crossing1
 City returned crossings
 Created Crossing2
 Created Car1
+Created PathC_0_1
 Created Lane1_1
 Created Lane1_2
 Created Lane1_3
@@ -107,14 +108,14 @@ Crossing1 added Road1 to outgoing roads
 Road1 created between Crossing1 and Crossing2 with length 1.0 and 100 lanes
 Lane1_1 returned Road1
 Road1 returned start Crossing1
-[ERROR]Error while running the following command:
-putvehicle Car1 Lane1_1
- Error: java.lang.NullPointerException: Cannot invoke "playground.Path.clear()" because the return value of "java.lang.reflect.Field.get(Object)" is null
+PathC_0_1 cleared
+Lane1_1 added Car1
 Lane1_1 set to have gravel
 
 Inicialization done
 
 Car1 is not in a crossing
+Car1 is not stuck
 Lane1_1 has no stuck vehicle
 Lane1_1 returned snow level 0.0
 Lane1_1 returned ice level 100.0
@@ -132,6 +133,12 @@ Car1 reached end of road, currently in Crossing2
 Lane1_1 removed Car1
 Car1 reached work, going to home
 Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Created PathC_0_1
+City calculated shortest path from Crossing2 to Crossing1 as PathC_0_1
 [ERROR]Error while running the following command:
 passtime 200
- Error: java.lang.NullPointerException: Cannot invoke "playground.Path.pop()" because "this.path" is null
+ Error: java.lang.UnsupportedOperationException: Még nincs kész

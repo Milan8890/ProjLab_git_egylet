@@ -15,18 +15,132 @@ Created Lane1_10
 Crossing1 added Road1 to outgoing roads
 Road1 created between Crossing1 and Crossing2 with length 1.0 and 10 lanes
 Created BusDriver1
-[ERROR]Error while running the following command:
-bus Driver1 Crossing1 Crossing2
- Error: java.lang.NullPointerException
-[ERROR]Error while running the following command:
-putvehicle Bus1 Lane1_1
- Error: java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "<local2>" is null
-[ERROR]Error while running the following command:
-crash Bus1
- Error: java.lang.ArrayIndexOutOfBoundsException: Index 1 out of bounds for length 1
+Created Bus1
+Created PathB_0_1
+Lane1_1 returned Road1
+Road1 returned start Crossing1
+PathB_0_1 cleared
+Lane1_1 added Bus1
 
 Inicialization done
 
-[ERROR]Error while running the following command:
-passtime 30
- Error: java.lang.NullPointerException
+Bus1 is not in a crossing
+Bus1 is currently stuck, revTime decreased to 9
+Bus1 is not in a crossing
+Bus1 is currently stuck, revTime decreased to 8
+Bus1 is not in a crossing
+Bus1 is currently stuck, revTime decreased to 7
+Bus1 is not in a crossing
+Bus1 is currently stuck, revTime decreased to 6
+Bus1 is not in a crossing
+Bus1 is currently stuck, revTime decreased to 5
+Bus1 is not in a crossing
+Bus1 is currently stuck, revTime decreased to 4
+Bus1 is not in a crossing
+Bus1 is currently stuck, revTime decreased to 3
+Bus1 is not in a crossing
+Bus1 is currently stuck, revTime decreased to 2
+Bus1 is not in a crossing
+Bus1 is currently stuck, revTime decreased to 1
+Bus1 is not in a crossing
+Bus1 revTime expired, unstucking vehicle
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is stuck
+Lane1_1 has stuck vehicle
+Bus1 Lane1_1 is blocked by crash, stopping and clearing PathB_0_1

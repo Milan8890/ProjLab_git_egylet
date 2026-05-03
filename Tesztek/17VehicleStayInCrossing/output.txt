@@ -15,16 +15,27 @@ Created Lane1_10
 Crossing1 added Road1 to outgoing roads
 Road1 created between Crossing1 and Crossing2 with length 1.0 and 10 lanes
 Created Car1
-[ERROR]Error while running the following command:
-putsnow Road1 Lane1_1 100
- Error: java.lang.ClassCastException: class playground.Road cannot be cast to class playground.Lane (playground.Road and playground.Lane are in unnamed module of loader 'app')
-[ERROR]Error while running the following command:
-extpath Car1 Lane1_1
- Error: java.lang.NullPointerException: Cannot invoke "playground.Path.extendPath(playground.Lane)" because "this.path" is null
+Created PathC_0_1
+Lane1_1 returned Road1
+Lane1_1 returned Road1
+PathC_0_1 extended with Lane1_1 successfully
+Car1 extended its path with Lane1_1 successfully
+Lane1_1 returned Road1
+PathC_0_1 couldn't extend with Lane1_1, because it's not connected
 
 Inicialization done
 
 Car1 is in a crossing
+PathC_0_1 returned next lane Lane1_1
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 100.0
+Lane1_1 returned snow level 100.0
+Car1 Lane1_1 has too thick snow (100.0), stopping and clearing PathC_0_1
+PathC_0_1 cleared
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing1 and Crossing2
+Created PathC_0_1
+City calculated shortest path from Crossing1 to Crossing2 as PathC_0_1
 [ERROR]Error while running the following command:
 passtime 200
- Error: java.lang.NullPointerException: Cannot invoke "playground.Path.pop()" because "this.path" is null
+ Error: java.lang.UnsupportedOperationException: Még nincs kész
