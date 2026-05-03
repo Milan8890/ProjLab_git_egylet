@@ -96,7 +96,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="Cleaner1 deducted 100$ successfully"
+TESTED_LINE="Cleaner1 deducted 25$ successfully"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -112,7 +112,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="Cleaner1 deducted 50$ successfully"
+TESTED_LINE="Cleaner1 deducted 25$ successfully"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -144,7 +144,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Headinventory1_1 has head Ejector1_1"
+TESTED_LINE="INFO HeadInventory1_1 has head Ejector1_1"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -152,7 +152,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Headinventory1_1 has head Breaker1_1"
+TESTED_LINE="INFO HeadInventory1_1 has head Breaker1_1"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -160,7 +160,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Headinventory1_1 has head Sweeper1_1"
+TESTED_LINE="INFO HeadInventory1_1 has head Sweeper1_1"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -168,7 +168,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Headinventory1_1 has head Dragon1_1"
+TESTED_LINE="INFO HeadInventory1_1 has head Dragon1_1"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -176,7 +176,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Headinventory1_1 has head GravelSpreader1_1"
+TESTED_LINE="INFO HeadInventory1_1 has head GravelSpreader1_1"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -184,7 +184,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Headinventory1_1 has head SaltSpreader1_1"
+TESTED_LINE="INFO HeadInventory1_1 has head SaltSpreader1_1"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -192,7 +192,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Cleaner1 has 80825$"
+TESTED_LINE="INFO Cleaner1 has 80925\\$"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else

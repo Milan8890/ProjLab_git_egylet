@@ -16,7 +16,7 @@ else
 :
 fi
 
-TESTED_LINE="HeadInventory1_1 couldn’t buy HeadListing1_1_DRA, because not enough money"
+TESTED_LINE="HeadInventory1_1 couldn't buy HeadListing1_1_DRA, because not enough money"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -24,7 +24,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="Cleaner1 deducted 6000$ unsuccessfully"
+TESTED_LINE="Cleaner1 deducted 6000\\$ unsuccessfully"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
