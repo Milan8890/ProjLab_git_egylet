@@ -1,43 +1,47 @@
 City returned crossings
-Crossing1 created
+Created Crossing1
 City returned crossings
-Crossing2 created
+Created Crossing2
 City returned crossings
-Crossing3 created
-Lane1_1 created
-Lane1_2 created
-Lane1_3 created
-Lane1_4 created
-Lane1_5 created
-Lane1_6 created
-Lane1_7 created
-Lane1_8 created
-Lane1_9 created
-Lane1_10 created
+Created Crossing3
+Created Lane1_1
+Created Lane1_2
+Created Lane1_3
+Created Lane1_4
+Created Lane1_5
+Created Lane1_6
+Created Lane1_7
+Created Lane1_8
+Created Lane1_9
+Created Lane1_10
+Crossing1 added Road1 to outgoing roads
 Road1 created between Crossing1 and Crossing2 with length 10.0 and 10 lanes
-Lane2_1 created
-Lane2_2 created
-Lane2_3 created
-Lane2_4 created
-Lane2_5 created
-Lane2_6 created
-Lane2_7 created
-Lane2_8 created
-Lane2_9 created
-Lane2_10 created
+Created Lane2_1
+Created Lane2_2
+Created Lane2_3
+Created Lane2_4
+Created Lane2_5
+Created Lane2_6
+Created Lane2_7
+Created Lane2_8
+Created Lane2_9
+Created Lane2_10
+Crossing1 added Road2 to outgoing roads
 Road2 created between Crossing1 and Crossing3 with length 10.0 and 10 lanes
-Lane3_1 created
-Lane3_2 created
-Lane3_3 created
-Lane3_4 created
-Lane3_5 created
-Lane3_6 created
-Lane3_7 created
-Lane3_8 created
-Lane3_9 created
-Lane3_10 created
+Created Lane3_1
+Created Lane3_2
+Created Lane3_3
+Created Lane3_4
+Created Lane3_5
+Created Lane3_6
+Created Lane3_7
+Created Lane3_8
+Created Lane3_9
+Created Lane3_10
+Crossing2 added Road3 to outgoing roads
 Road3 created between Crossing2 and Crossing3 with length 10.0 and 10 lanes
-[ERROR]Error while running the following command:
-car Crossing1 Crossing3
- Error: java.lang.IllegalAccessException: class main.Proto cannot access a member of class playground.City with package access
+Created Car1
 Inicialization done
+[ERROR]Error while running the following command:
+info PathC_0_1
+ Error: java.lang.NullPointerException

@@ -1,3 +1,5 @@
 City returned crossings
-Crossing1 created
+Created Crossing1
 Inicialization done
+Crossing1 returned outgoing roads
+INFO Crossing1 outRoads is empty

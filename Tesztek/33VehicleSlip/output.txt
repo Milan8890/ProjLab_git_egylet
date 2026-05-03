@@ -1,24 +1,25 @@
 City returned crossings
-Crossing1 created
+Created Crossing1
 City returned crossings
-Crossing2 created
-Lane1_1 created
-Lane1_2 created
-Lane1_3 created
-Lane1_4 created
-Lane1_5 created
-Lane1_6 created
-Lane1_7 created
-Lane1_8 created
-Lane1_9 created
-Lane1_10 created
+Created Crossing2
+Created Lane1_1
+Created Lane1_2
+Created Lane1_3
+Created Lane1_4
+Created Lane1_5
+Created Lane1_6
+Created Lane1_7
+Created Lane1_8
+Created Lane1_9
+Created Lane1_10
+Crossing1 added Road1 to outgoing roads
 Road1 created between Crossing1 and Crossing2 with length 10.0 and 10 lanes
-[ERROR]Error while running the following command:
-car Crossing1 Crossing2
- Error: java.lang.IllegalAccessException: class main.Proto cannot access a member of class playground.City with package access
+Created Car1
+Lane1_1 returned Road1
+Road1 returned start Crossing1
 [ERROR]Error while running the following command:
 putvehicle Car1 Lane1_1
- Error: java.lang.NullPointerException: Cannot invoke "Object.getClass()" because "<local2>" is null
+ Error: java.lang.NullPointerException: Cannot invoke "playground.Path.clear()" because the return value of "java.lang.reflect.Field.get(Object)" is null
 [ERROR]Error while running the following command:
 putice Road1 Lane1_1 50
  Error: java.lang.ClassCastException: class playground.Road cannot be cast to class playground.Lane (playground.Road and playground.Lane are in unnamed module of loader 'app')

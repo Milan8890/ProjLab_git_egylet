@@ -41,7 +41,7 @@ public class Ejector extends Head {
 		double payPerMeter = 1; // Ezt kell átírni.
 
 		double payment = l.cleanSnow() * l.getRoad().getLength() * payPerMeter;
-		
+		l.setGravel(false);
 		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$" , new Object[] {snowplower , this, l});
 		return (int) payment;
 	}

@@ -123,7 +123,7 @@ public class Lane {
 	 */
 	public Lane(Road r) {
 		road = r;
-		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
+		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
 
 	/**

@@ -1,38 +1,67 @@
 City returned crossings
-Crossing1 created
-Cleaner1 created
+Created Crossing1
+Created Cleaner1
 City returned Crossing1 as snowplower base
-Snowplower1_1 created
+Created Snowplower1_1
 [ERROR]Path-en még csiszolni kell (kezdési ellenõrzés)
-PathS_1_1 created
-Breaker1_1 created
-HeadInventory1_1 created
-Sweeper1_1 created
-HeadListing1_1 created
-Ejector1_1 created
-HeadListing1_1 created
-GravelSpreader1_1 created
-HeadListing1_1 created
-SaltSpreader1_1 created
-HeadListing1_1 created
-Dragon1_1 created
-HeadListing1_1 created
+Created PathS_1_1
+Created Breaker1_1
+Created HeadInventory1_1
+Created Sweeper1_1
+Created HeadListing1_1
+Created Ejector1_1
+Created HeadListing1_1
+Created GravelSpreader1_1
+Created HeadListing1_1
+Created SaltSpreader1_1
+Created HeadListing1_1
+Created Dragon1_1
+Created HeadListing1_1
 HeadInventory1_1 created with owner Snowplower1_1 and starting head Breaker
 City returned Crossing1 as snowplower base
-Snowplower1_2 created
+Created Snowplower1_2
 [ERROR]Path-en még csiszolni kell (kezdési ellenõrzés)
-PathS_1_2 created
-Ejector1_2 created
-HeadInventory1_2 created
-Sweeper1_2 created
-HeadListing1_2 created
-Breaker1_2 created
-HeadListing1_2 created
-GravelSpreader1_2 created
-HeadListing1_2 created
-SaltSpreader1_2 created
-HeadListing1_2 created
-Dragon1_2 created
-HeadListing1_2 created
+Created PathS_1_2
+Created Ejector1_2
+Created HeadInventory1_2
+Created Sweeper1_2
+Created HeadListing1_2
+Created Breaker1_2
+Created HeadListing1_2
+Created GravelSpreader1_2
+Created HeadListing1_2
+Created SaltSpreader1_2
+Created HeadListing1_2
+Created Dragon1_2
+Created HeadListing1_2
 HeadInventory1_2 created with owner Snowplower1_2 and starting head Ejector
 Inicialization done
+[ERROR]Error while running the following command:
+info Cleaner1
+ Error: java.lang.NoSuchFieldException: name
+[ERROR]Error while running the following command:
+info Snowplower1_1
+ Error: java.lang.NoSuchFieldException: lastCrossing
+INFO HeadInventory1_1 owner is Snowplower1_1
+INFO HeadInventory1_1 has head Breaker1_1
+HeadInventory1_1 returned available head listings
+INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1
+HeadInventory1_1 returned active head Breaker1_1
+INFO HeadInventory1_1 active head is Breaker1_1
+[ERROR]Error while running the following command:
+info Snowplower1_2
+ Error: java.lang.NoSuchFieldException: lastCrossing
+INFO HeadInventory1_2 owner is Snowplower1_2
+INFO HeadInventory1_2 has head Ejector1_2
+HeadInventory1_2 returned available head listings
+INFO HeadInventory1_2 has head listing HeadListing1_2
+INFO HeadInventory1_2 has head listing HeadListing1_2
+INFO HeadInventory1_2 has head listing HeadListing1_2
+INFO HeadInventory1_2 has head listing HeadListing1_2
+INFO HeadInventory1_2 has head listing HeadListing1_2
+HeadInventory1_2 returned active head Ejector1_2
+INFO HeadInventory1_2 active head is Ejector1_2
