@@ -24,16 +24,16 @@ Car1 reached end of PathC_0_1, stopping
 Car1 is in a crossing
 Car1 has no path, requesting new path between Crossing1 and Crossing3
 Crossing1 returned outgoing roads
-Road2 returned end Crossing3
-Road2 returned length 10.0
-Road2 returned lanes
-Lane2_1 has no stuck vehicle
-Lane2_1 returned snow level 1000.0
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
 Lane1_1 has no stuck vehicle
 Lane1_1 returned snow level 0.0
+Road2 returned end Crossing3
+Road2 returned length 10.0
+Road2 returned lanes
+Lane2_1 has no stuck vehicle
+Lane2_1 returned snow level 1000.0
 Crossing2 returned outgoing roads
 Road3 returned end Crossing3
 Road3 returned length 10.0
