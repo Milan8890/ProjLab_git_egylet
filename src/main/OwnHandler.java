@@ -229,7 +229,7 @@ public class OwnHandler extends Handler {
 
 		Lane lane = (Lane) forceGetField(o, "lane");
 		String laneName = getOrCreateObjectName(lane);
-		String ID = laneName.substring(getTypename(laneName).length());
+		String ID = laneName.substring(getTypename(lane).length());
 
 		objectMap.put(o, name + ID);
 	}

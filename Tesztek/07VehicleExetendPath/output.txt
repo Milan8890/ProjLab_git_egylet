@@ -28,13 +28,18 @@ HeadInventory1_1 created with owner Snowplower1_1 and starting head Ejector
 
 Inicialization done
 
-[ERROR]Error while running the following command:
-extpath Snowplower1_1 Lane1_2
- Error: java.lang.NullPointerException: Cannot invoke "playground.Lane.getRoad()" because "l" is null
+Lane1_1 returned Road1
+Lane1_1 returned Road1
+PathS_1_1 extended with Lane1_1 successfully
+Snowplower1_1 extended its path with Lane1_1 successfully
+Lane1_1 returned Road1
+PathS_1_1 couldn't extend with Lane1_1, because it's not connected
+Lane2_1 returned Road2
+Lane2_1 returned Road2
+PathS_1_1 extended with Lane2_1 successfully
+Snowplower1_1 extended its path with Lane2_1 successfully
 Lane2_1 returned Road2
 PathS_1_1 couldn't extend with Lane2_1, because it's not connected
-[ERROR]The amount of [Obj]s and objects passed in a logging function are not the same.
-Lane2_1 returned Road2
-PathS_1_1 couldn't extend with Lane2_1, because it's not connected
-INFO PathS_1_1 pathLanes is empty
+INFO PathS_1_1 has lane Lane1_1
+INFO PathS_1_1 has lane Lane2_1
 INFO PathS_1_1 last crossing is Crossing1
