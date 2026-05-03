@@ -18,804 +18,2805 @@ Inicialization done
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
-Lane1_1 returned snow level 100.0
-Car1 snow is too deep in Lane1_1, checking other lanes
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
 Lane1_1 returned Road1
-Road1 returned lanes
-Car1 no other suitable lane found, stuck in snow
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
-Car1 is not in a crossing
-Car1 is stuck
-Lane1_1 has stuck vehicle
-Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 1.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 2.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 3.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 4.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 5.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 6.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 7.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 8.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 9.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 10.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 11.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 12.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 13.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 14.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 15.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 16.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 17.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 18.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 19.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 20.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 21.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 22.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 23.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 24.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 25.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 26.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 27.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 28.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 29.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 30.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 31.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 32.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 33.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 34.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 35.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 36.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 37.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 38.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 39.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 40.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 41.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 42.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 43.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 44.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 45.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 46.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 47.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 48.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 49.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 50.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 51.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 52.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 53.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 54.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 55.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 56.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 57.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 58.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 59.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 60.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 61.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 62.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 63.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 64.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 65.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 66.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 67.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 68.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 69.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 70.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 71.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 72.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 73.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 74.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 75.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 76.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 77.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 78.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 79.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 80.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 81.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 82.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 83.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 84.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 85.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 86.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 87.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 88.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 89.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 90.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 91.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 92.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 93.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 94.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 95.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Car1 advancing on road, current progress is 96.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 97.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 98.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 99.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Car1 is not in a crossing
+Car1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 10.0
+Lane1_1 returned ice level 100.0
+Car1 slip check on Lane1_1: ice is thick enough
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Lane1_1 has gravel
+Lane1_1 returned snow level 10.0
+Car1 slip check on Lane1_1: has gravel
+Car1 slip check on Lane1_1: snow is too thick for gravel, slipping
+Lane1_1 returned Road1
+Car1 slipping on Road1
+Lane1_1 returned Road1
+Lane1_1 returned vehicles
+Road1 tried colliding Car1, but no target was found
+Car1 advancing on road, current progress is 100.0
+Lane1_1 returned Road1
+Road1 returned length 100.0
+Lane1_1 returned Road1
+Road1 returned end Crossing2
+Car1 reached end of road, currently in Crossing2
+Lane1_1 removed Car1
+Car1 reached work, going to home
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1
+Car1 is in a crossing
+PathC_0_1 has no next lane
+Car1 reached end of PathC_0_1, stopping
+Car1 is in a crossing
+Car1 has no path, requesting new path between Crossing2 and Crossing1
+Crossing2 returned outgoing roads
+Created PathC_0_1
+City couldn't find path between Crossing2 and Crossing1 for car Car1
+Created PathC_0_1

@@ -143,7 +143,7 @@ public class HeadInventory {
 
 		if(!snowplower.isInCrossing())
 		{
-			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy [Obj], because not in crossing" , new Object[] {this, listing});
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn't buy [Obj], because not in crossing" , new Object[] {this, listing});
 			return false;
 		}
 
@@ -152,7 +152,7 @@ public class HeadInventory {
 			Logger.getGlobal().log(Level.INFO, "[Obj] bought [Obj] successfully" , new Object[] {this, listing});
 			return true;
 		} else {
-			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy [Obj], because not enough money", new Object[] {this, listing});
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn't buy [Obj], because not enough money", new Object[] {this, listing});
 			return false;
 		}
 		
