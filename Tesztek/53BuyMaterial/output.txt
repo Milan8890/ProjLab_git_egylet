@@ -22,7 +22,7 @@ Cleaner1 received 1000$
 Inicialization done
 
 Snowplower1_1 is in a crossing
-Cleaner1 deducted 25$  successfully
+Cleaner1 deducted 25$ successfully
 Snowplower1_1 bought gravel successfully
 INFO Snowplower1_1 last crossing is Crossing1
 INFO Snowplower1_1 current lane is null
