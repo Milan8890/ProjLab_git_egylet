@@ -9,6 +9,7 @@ import java.util.random.RandomGenerator;
 
 import entities.*;
 import main.App;
+import main.World;
 
 /**
  * A sávokat tartalmazza, valamint egy referenciát a kereszteződésre amiből
@@ -49,7 +50,7 @@ public class Road {
 	 * @param length     Út hossza
 	 */
 	public Road(Crossing from, Crossing to, int numOfLanes, double length) {
-
+		World.registerOnTick(this::onTick);
 		this.fromCrossing = from;
 		this.toCrossing = to;
 		this.length = length;
@@ -58,7 +59,7 @@ public class Road {
 			lanes.add(new Lane(this));
 		}
 		from.addOutRoad(this);
-		
+
 		Logger.getGlobal().log(Level.INFO,
 				"[Obj] created between [Obj] and [Obj] with length " + this.length + " and " + numOfLanes + " lanes",
 				new Object[] { this, from, to });
@@ -68,7 +69,7 @@ public class Road {
 	 * rak havat az összes hozzá tartozó sávra
 	 */
 	public void onTick() {
-		if (RandomGenerator.getDefault().nextDouble() < SNOWCHANCE) {
+		if (World.getRandom(SNOWCHANCE)) {
 			for (Lane lane : lanes) {
 				if (!lane.hasSalt()) {
 					lane.addSnow(ONTICKSNOW);

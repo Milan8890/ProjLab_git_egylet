@@ -8,6 +8,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import entities.Vehicle;
+import main.World;
 import user.Cleaner;
 
 /**
@@ -74,6 +75,7 @@ public class Lane {
 		 * @param c a cleaner, akihez a só tartozik
 		 */
 		Salt(Cleaner c, Lane l) {
+			World.registerOnTick(this::onTick);
 			owner = c;
 			lifetime = STARTING_LIFETIME;
 			lane = l;
