@@ -20,17 +20,8 @@ Created Dragon1_1
 Created HeadListing1_1_DRA
 HeadInventory1_1 created with owner Snowplower1_1 and starting head Breaker
 Created Lane1_1
-Created Lane1_2
-Created Lane1_3
-Created Lane1_4
-Created Lane1_5
-Created Lane1_6
-Created Lane1_7
-Created Lane1_8
-Created Lane1_9
-Created Lane1_10
 Crossing1 added Road1 to outgoing roads
-Road1 created between Crossing1 and Crossing2 with length 1.0 and 10 lanes
+Road1 created between Crossing1 and Crossing2 with length 10.0 and 1 lanes
 Lane1_1 returned Road1
 Lane1_1 returned Road1
 PathS_1_1 extended with Lane1_1 successfully
@@ -47,7 +38,7 @@ Snowplower1_1 is in a crossing
 PathS_1_1 returned next lane Lane1_1
 HeadInventory1_1 returned active head Dragon1_1
 Lane1_1 returned Road1
-Road1 returned length 1.0
+Road1 returned length 10.0
 Snowplower1_1 has 1000.0 bio
 Dragon1_1 allows Snowplower1_1 to enter Lane1_1 
 Snowplower1_1 has 1000.0 bio
@@ -55,37 +46,26 @@ Snowplower1_1 following PathS_1_1, going onto Lane1_1
 Lane1_1 added Snowplower1_1
 Snowplower1_1 advancing on road, current progress is 1.0
 Lane1_1 returned Road1
-Road1 returned length 1.0
-HeadInventory1_1 returned active head Dragon1_1
-Lane1_1 melted 0.0 ice
-Lane1_1 cleaned 0.0 snow
+Road1 returned length 10.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 2.0
 Lane1_1 returned Road1
-Road1 returned length 1.0
+Road1 returned length 10.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 3.0
 Lane1_1 returned Road1
-Road1 returned length 1.0
-Snowplower1_1 used 1.0bio
-Snowplower1_1 with Dragon1_1 cleans Lane1_1 for 0.0$
-Dragon1_1 uses 1.0bio from Snowplower1_1
-Cleaner1 received 0$
+Road1 returned length 10.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 4.0
 Lane1_1 returned Road1
-Road1 returned end Crossing2
-Snowplower1_1 reached end of road, currently in Crossing2
-Lane1_1 removed Snowplower1_1
-Snowplower1_1 is in a crossing
-PathS_1_1 has no next lane
-Snowplower1_1 reached end of PathS_1_1, stopping
-Snowplower1_1 is in a crossing
-PathS_1_1 has no next lane
-Snowplower1_1 reached end of PathS_1_1, stopping
-Snowplower1_1 is in a crossing
-PathS_1_1 has no next lane
-Snowplower1_1 reached end of PathS_1_1, stopping
-Snowplower1_1 is in a crossing
-PathS_1_1 has no next lane
-Snowplower1_1 reached end of PathS_1_1, stopping
-INFO Snowplower1_1 last crossing is Crossing2
-INFO Snowplower1_1 current lane is null
-INFO Snowplower1_1 lane progress is 0.0
+Road1 returned length 10.0
+Snowplower1_1 is not in a crossing
+Snowplower1_1 advancing on road, current progress is 5.0
+Lane1_1 returned Road1
+Road1 returned length 10.0
+INFO Snowplower1_1 last crossing is Crossing1
+INFO Snowplower1_1 current lane is Lane1_1
+INFO Snowplower1_1 lane progress is 5.0
 Snowplower1_1 is not stuck
 INFO Snowplower1_1 is not stuck
 INFO Snowplower1_1 is not crashed
@@ -96,7 +76,7 @@ Snowplower1_1 returned HeadInventory1_1
 INFO Snowplower1_1 has HeadInventory1_1
 Snowplower1_1 has 0.0 salt
 INFO Snowplower1_1 has 0.0 salt
-Snowplower1_1 has 999.0 bio
-INFO Snowplower1_1 has 999.0 bio
+Snowplower1_1 has 1000.0 bio
+INFO Snowplower1_1 has 1000.0 bio
 Snowplower1_1 has 0.0 gravel
 INFO Snowplower1_1 has 0.0 gravel

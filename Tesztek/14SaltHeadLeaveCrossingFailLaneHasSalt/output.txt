@@ -20,17 +20,8 @@ Created Dragon1_1
 Created HeadListing1_1_DRA
 HeadInventory1_1 created with owner Snowplower1_1 and starting head Breaker
 Created Lane1_1
-Created Lane1_2
-Created Lane1_3
-Created Lane1_4
-Created Lane1_5
-Created Lane1_6
-Created Lane1_7
-Created Lane1_8
-Created Lane1_9
-Created Lane1_10
 Crossing1 added Road1 to outgoing roads
-Road1 created between Crossing1 and Crossing2 with length 1.0 and 10 lanes
+Road1 created between Crossing1 and Crossing2 with length 10.0 and 1 lanes
 Salt1 created with owner Cleaner1 and lifetime 100.0
 Lane1_1 set Salt1 with Cleaner1
 Lane1_1 returned Road1

@@ -3,29 +3,11 @@ Created Crossing1
 City returned crossings
 Created Crossing2
 Created Lane1_1
-Created Lane1_2
-Created Lane1_3
-Created Lane1_4
-Created Lane1_5
-Created Lane1_6
-Created Lane1_7
-Created Lane1_8
-Created Lane1_9
-Created Lane1_10
 Crossing1 added Road1 to outgoing roads
-Road1 created between Crossing1 and Crossing2 with length 1.0 and 10 lanes
+Road1 created between Crossing1 and Crossing2 with length 10.0 and 1 lanes
 Created Lane2_1
-Created Lane2_2
-Created Lane2_3
-Created Lane2_4
-Created Lane2_5
-Created Lane2_6
-Created Lane2_7
-Created Lane2_8
-Created Lane2_9
-Created Lane2_10
 Crossing2 added Road2 to outgoing roads
-Road2 created between Crossing2 and Crossing1 with length 1.0 and 10 lanes
+Road2 created between Crossing2 and Crossing1 with length 10.0 and 1 lanes
 Created Cleaner1
 City returned Crossing1 as snowplower base
 Created Snowplower1_1
@@ -46,18 +28,13 @@ HeadInventory1_1 created with owner Snowplower1_1 and starting head Ejector
 
 Inicialization done
 
-Lane1_2 returned Road1
-Lane1_2 returned Road1
-PathS_1_1 extended with Lane1_2 successfully
-Snowplower1_1 extended its path with Lane1_2 successfully
-Lane1_2 returned Road1
-PathS_1_1 couldn't extend with Lane1_2, because it's not connected
-Lane2_1 returned Road2
-Lane2_1 returned Road2
-PathS_1_1 extended with Lane2_1 successfully
-Snowplower1_1 extended its path with Lane2_1 successfully
+[ERROR]Error while running the following command:
+extpath Snowplower1_1 Lane1_2
+ Error: java.lang.NullPointerException: Cannot invoke "playground.Lane.getRoad()" because "<parameter1>" is null
 Lane2_1 returned Road2
 PathS_1_1 couldn't extend with Lane2_1, because it's not connected
-INFO PathS_1_1 has lane Lane1_2
-INFO PathS_1_1 has lane Lane2_1
+[ERROR]The amount of [Obj]s and objects passed in a logging function are not the same.
+Lane2_1 returned Road2
+PathS_1_1 couldn't extend with Lane2_1, because it's not connected
+INFO PathS_1_1 pathLanes is empty
 INFO PathS_1_1 last crossing is Crossing1

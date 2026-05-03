@@ -3,17 +3,8 @@ Created Crossing1
 City returned crossings
 Created Crossing2
 Created Lane1_1
-Created Lane1_2
-Created Lane1_3
-Created Lane1_4
-Created Lane1_5
-Created Lane1_6
-Created Lane1_7
-Created Lane1_8
-Created Lane1_9
-Created Lane1_10
 Crossing1 added Road1 to outgoing roads
-Road1 created between Crossing1 and Crossing2 with length 1.0 and 10 lanes
+Road1 created between Crossing1 and Crossing2 with length 10.0 and 1 lanes
 Created BusDriver1
 Created Bus1
 Created PathB_0_1
@@ -33,7 +24,97 @@ Lane1_1 returned ice level 0.0
 Bus1 slip check on Lane1_1: ice is too thin, not slipping
 Bus1 advancing on road, current progress is 1.0
 Lane1_1 returned Road1
-Road1 returned length 1.0
+Road1 returned length 10.0
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 0.0
+Lane1_1 returned ice level 0.0
+Bus1 slip check on Lane1_1: ice is too thin, not slipping
+Bus1 advancing on road, current progress is 2.0
+Lane1_1 returned Road1
+Road1 returned length 10.0
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 0.0
+Lane1_1 returned ice level 0.0
+Bus1 slip check on Lane1_1: ice is too thin, not slipping
+Bus1 advancing on road, current progress is 3.0
+Lane1_1 returned Road1
+Road1 returned length 10.0
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 0.0
+Lane1_1 returned ice level 0.0
+Bus1 slip check on Lane1_1: ice is too thin, not slipping
+Bus1 advancing on road, current progress is 4.0
+Lane1_1 returned Road1
+Road1 returned length 10.0
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 0.0
+Lane1_1 returned ice level 0.0
+Bus1 slip check on Lane1_1: ice is too thin, not slipping
+Bus1 advancing on road, current progress is 5.0
+Lane1_1 returned Road1
+Road1 returned length 10.0
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 0.0
+Lane1_1 returned ice level 0.0
+Bus1 slip check on Lane1_1: ice is too thin, not slipping
+Bus1 advancing on road, current progress is 6.0
+Lane1_1 returned Road1
+Road1 returned length 10.0
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 0.0
+Lane1_1 returned ice level 0.0
+Bus1 slip check on Lane1_1: ice is too thin, not slipping
+Bus1 advancing on road, current progress is 7.0
+Lane1_1 returned Road1
+Road1 returned length 10.0
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 0.0
+Lane1_1 returned ice level 0.0
+Bus1 slip check on Lane1_1: ice is too thin, not slipping
+Bus1 advancing on road, current progress is 8.0
+Lane1_1 returned Road1
+Road1 returned length 10.0
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 0.0
+Lane1_1 returned ice level 0.0
+Bus1 slip check on Lane1_1: ice is too thin, not slipping
+Bus1 advancing on road, current progress is 9.0
+Lane1_1 returned Road1
+Road1 returned length 10.0
+Bus1 is not in a crossing
+Bus1 is not in a crossing
+Bus1 is not stuck
+Lane1_1 has no stuck vehicle
+Lane1_1 returned snow level 0.0
+Lane1_1 returned ice level 0.0
+Bus1 slip check on Lane1_1: ice is too thin, not slipping
+Bus1 advancing on road, current progress is 10.0
+Lane1_1 returned Road1
+Road1 returned length 10.0
 Lane1_1 returned Road1
 Road1 returned end Crossing2
 Bus1 reached end of road, currently in Crossing2
@@ -42,33 +123,6 @@ BusDriver1 received one point
 Bus1 reached Crossing2 end point
 Bus1 current destination Crossing1
 Bus1 added point to BusDriver1
-Bus1 is in a crossing
-PathB_0_1 has no next lane
-Bus1 reached end of PathB_0_1, stopping
-Bus1 is in a crossing
-PathB_0_1 has no next lane
-Bus1 reached end of PathB_0_1, stopping
-Bus1 is in a crossing
-PathB_0_1 has no next lane
-Bus1 reached end of PathB_0_1, stopping
-Bus1 is in a crossing
-PathB_0_1 has no next lane
-Bus1 reached end of PathB_0_1, stopping
-Bus1 is in a crossing
-PathB_0_1 has no next lane
-Bus1 reached end of PathB_0_1, stopping
-Bus1 is in a crossing
-PathB_0_1 has no next lane
-Bus1 reached end of PathB_0_1, stopping
-Bus1 is in a crossing
-PathB_0_1 has no next lane
-Bus1 reached end of PathB_0_1, stopping
-Bus1 is in a crossing
-PathB_0_1 has no next lane
-Bus1 reached end of PathB_0_1, stopping
-Bus1 is in a crossing
-PathB_0_1 has no next lane
-Bus1 reached end of PathB_0_1, stopping
 Bus1 is in a crossing
 PathB_0_1 has no next lane
 Bus1 reached end of PathB_0_1, stopping
