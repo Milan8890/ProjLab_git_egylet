@@ -67,7 +67,7 @@ public class Cleaner extends Player {
 		if (money >= m) {
 			money -= m;
 
-			Logger.getGlobal().log(Level.INFO, "[Obj] deducted " + m + "$  successfully", new Object[] { this });
+			Logger.getGlobal().log(Level.INFO, "[Obj] deducted " + m + "$ successfully", new Object[] { this });
 			return true;
 		} else {
 			Logger.getGlobal().log(Level.INFO, "[Obj] deducted " + m + "$ unsuccessfully", new Object[] { this });

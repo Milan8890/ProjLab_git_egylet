@@ -243,7 +243,7 @@ public class Snowplower extends Vehicle {
 	 */
 	public boolean buyGravel() {
 		if (!isInCrossing()) {
-			Logger.getGlobal().log(Level.INFO, "[Obj] couldn’t buy gravel, because not in crossing",
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn't buy gravel, because not in crossing",
 					new Object[] { this });
 			return false;
 		}

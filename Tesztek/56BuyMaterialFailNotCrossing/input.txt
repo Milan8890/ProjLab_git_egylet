@@ -7,5 +7,5 @@ addm Cleaner1 1000
 putvehicle Snowplower1_1 Lane1_1
 initend
 buygravel Snowplower1_1
-INFO Snowplower1_1
-INFO Cleaner1
+info Snowplower1_1
+info Cleaner1

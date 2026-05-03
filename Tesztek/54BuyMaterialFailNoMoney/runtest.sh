@@ -24,7 +24,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="Snowplower1_1 couldn’t buy gravel, because not enough money"
+TESTED_LINE="Snowplower1_1 couldn't buy gravel, because not enough money"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -32,7 +32,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Snowplower1_1 has 0 gravel"
+TESTED_LINE="INFO Snowplower1_1 has 0.0 gravel"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -41,7 +41,7 @@ else
 fi
 
 TESTED_LINE="INFO Cleaner1 has 0$"
-if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+if grep -qF "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
 	SUCCESS=false

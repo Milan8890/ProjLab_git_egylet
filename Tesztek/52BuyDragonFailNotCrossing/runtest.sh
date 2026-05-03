@@ -16,7 +16,7 @@ else
 :
 fi
 
-TESTED_LINE="HeadInventory1_1 couldn’t buy HeadListing1_1_DRA, because not in crossing"
+TESTED_LINE="HeadInventory1_1 couldn't buy HeadListing1_1_DRA, because not in crossing"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -25,7 +25,7 @@ else
 fi
 
 TESTED_LINE="Cleaner1 deducted 6000$ unsuccessfully"
-if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+if grep -qF "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
 	SUCCESS=false
@@ -33,7 +33,7 @@ else
 fi
 
 TESTED_LINE="INFO Cleaner1 has 10000$"
-if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+if grep -qF "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
 	SUCCESS=false
