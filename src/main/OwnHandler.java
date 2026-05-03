@@ -100,8 +100,10 @@ public class OwnHandler extends Handler {
 	private String getTypename(Object o) {
 		String classString = o.getClass().toString();
 		classString = classString.substring(classString.lastIndexOf(".") + 1);
+
 		if (classString.equals("Tunnel"))
 			return "Road";
+
 		return classString;
 	}
 
