@@ -45,7 +45,7 @@ Car1 advancing on road, current progress is 1.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
 
-Starting tick 12
+Starting tick 2
 
 Car1 is not in a crossing
 Car1 is not stuck
@@ -57,7 +57,7 @@ Car1 advancing on road, current progress is 2.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
 
-Starting tick 13
+Starting tick 3
 
 Car1 is not in a crossing
 Car1 is not stuck
@@ -69,7 +69,7 @@ Car1 advancing on road, current progress is 3.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
 
-Starting tick 14
+Starting tick 4
 
 Car1 is not in a crossing
 Car1 is not stuck
@@ -81,7 +81,7 @@ Car1 advancing on road, current progress is 4.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
 
-Starting tick 15
+Starting tick 5
 
 Car1 is not in a crossing
 Car1 is not stuck
@@ -102,6 +102,9 @@ INFO Car1 revive timer is 0
 INFO Car1 home is Crossing1
 INFO Car1 work is Crossing2
 INFO Car1 is going to work
+
+Starting tick 6
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -111,6 +114,9 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 6.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 7
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -120,6 +126,9 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 7.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 8
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -129,6 +138,9 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 8.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 9
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -138,6 +150,9 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 9.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+
+Starting tick 10
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane1_1 has no stuck vehicle
@@ -147,11 +162,16 @@ Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 10.0
 Lane1_1 returned Road1
 Road1 returned length 10.0
+Car1 trampled snow on Lane1_1
+Lane1_1 turned 0.0 snow into ice
 Lane1_1 returned Road1
 Road1 returned end Crossing2
 Car1 reached end of road, currently in Crossing2
 Lane1_1 removed Car1
 Car1 reached work, going to home
+
+Starting tick 11
+
 Car1 is in a crossing
 PathC_0_1 returned next lane Lane2_1
 Lane2_1 has no stuck vehicle
@@ -166,6 +186,9 @@ Car1 slip check on Lane2_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 1.0
 Lane2_1 returned Road2
 Road2 returned length 10.0
+
+Starting tick 12
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane2_1 has no stuck vehicle
@@ -175,6 +198,9 @@ Car1 slip check on Lane2_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 2.0
 Lane2_1 returned Road2
 Road2 returned length 10.0
+
+Starting tick 13
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane2_1 has no stuck vehicle
@@ -184,6 +210,9 @@ Car1 slip check on Lane2_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 3.0
 Lane2_1 returned Road2
 Road2 returned length 10.0
+
+Starting tick 14
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane2_1 has no stuck vehicle
@@ -193,6 +222,9 @@ Car1 slip check on Lane2_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 4.0
 Lane2_1 returned Road2
 Road2 returned length 10.0
+
+Starting tick 15
+
 Car1 is not in a crossing
 Car1 is not stuck
 Lane2_1 has no stuck vehicle

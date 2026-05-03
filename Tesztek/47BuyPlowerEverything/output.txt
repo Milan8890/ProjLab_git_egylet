@@ -32,13 +32,13 @@ HeadInventory1_1 returned available head listings
 Snowplower1_1 returned HeadInventory1_1
 HeadInventory1_1 returned available head listings
 Snowplower1_1 is in a crossing
-Cleaner1 deducted 25$  successfully
+Cleaner1 deducted 25$ successfully
 Snowplower1_1 bought bio successfully
 Snowplower1_1 is in a crossing
-Cleaner1 deducted 25$  successfully
+Cleaner1 deducted 25$ successfully
 Snowplower1_1 bought salt successfully
 Snowplower1_1 is in a crossing
-Cleaner1 deducted 25$  successfully
+Cleaner1 deducted 25$ successfully
 Snowplower1_1 bought gravel successfully
 INFO HeadInventory1_1 owner is Snowplower1_1
 INFO HeadInventory1_1 has head Ejector1_1

@@ -25,6 +25,7 @@ Lane1_1 has no stuck vehicle
 Lane1_1 returned snow level 100.0
 Lane1_1 returned snow level 100.0
 Car1 Lane1_1 has too thick snow (100.0), stopping and clearing PathC_0_1
+Car1 couldn't turn into Lane1_1, clearing PathC_0_1
 PathC_0_1 cleared
 Car1 is in a crossing
 Car1 has no path, requesting new path between Crossing1 and Crossing2
