@@ -56,7 +56,7 @@ public class Bus extends Vehicle {
 		this.stationA = stationA;
 		this.stationB = stationB;
 		this.driver = driver;
-		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
+		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
 
 	/**

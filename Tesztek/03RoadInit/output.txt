@@ -1,16 +1,39 @@
 City returned crossings
-Crossing1 created
+Created Crossing1
 City returned crossings
-Crossing2 created
-Lane1_1 created
-Lane1_2 created
-Lane1_3 created
-Lane1_4 created
-Lane1_5 created
-Lane1_6 created
-Lane1_7 created
-Lane1_8 created
-Lane1_9 created
-Lane1_10 created
+Created Crossing2
+Created Lane1_1
+Created Lane1_2
+Created Lane1_3
+Created Lane1_4
+Created Lane1_5
+Created Lane1_6
+Created Lane1_7
+Created Lane1_8
+Created Lane1_9
+Created Lane1_10
+Crossing1 added Road1 to outgoing roads
 Road1 created between Crossing1 and Crossing2 with length 10.0 and 10 lanes
 Inicialization done
+Road1 returned lanes
+INFO Road1 has lane Lane1_1
+INFO Road1 has lane Lane1_2
+INFO Road1 has lane Lane1_3
+INFO Road1 has lane Lane1_4
+INFO Road1 has lane Lane1_5
+INFO Road1 has lane Lane1_6
+INFO Road1 has lane Lane1_7
+INFO Road1 has lane Lane1_8
+INFO Road1 has lane Lane1_9
+INFO Road1 has lane Lane1_10
+Road1 returned start Crossing1
+INFO Road1 from crossing is Crossing1
+Road1 returned end Crossing2
+INFO Road1 to crossing is Crossing2
+Road1 returned length 10.0
+INFO Road1 length is 10.0
+Crossing1 returned outgoing roads
+Crossing1 returned outgoing roads
+INFO Crossing1 has outgoing Road1
+Crossing2 returned outgoing roads
+INFO Crossing2 outRoads is empty

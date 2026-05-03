@@ -1,5 +1,5 @@
 City returned crossings
-Crossing1 created
+Created Crossing1
 [ERROR]Error while running the following command:
 addm Cleaner1 100
  Error: java.lang.NullPointerException: Cannot invoke "user.Cleaner.addMoney(int)" because "<local2>" is null

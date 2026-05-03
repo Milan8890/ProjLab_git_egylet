@@ -2,11 +2,11 @@ crossing 2
 spbase Crossing1
 cleaner test
 plower Cleaner1 breaker
-road Crossing1 Crossing2 100 2
+road Crossing1 Crossing2 2 100
 changehead Snowplower1_1 sweeper
-putvehicle Snowplower1_1 Lane1_2
-putgravel Lane1_2 true
+putvehicle Snowplower1_1 Lane1_1
+putgravel Lane1_1 true
 initend
 passtime 200
-info Lane1_2
 info Lane1_1
+info Lane1_2

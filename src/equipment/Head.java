@@ -33,7 +33,7 @@ public abstract class Head {
 	 */
 	public Head(Snowplower snowplower) {
 		this.snowplower = snowplower;
-		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
+		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
 
 	/**

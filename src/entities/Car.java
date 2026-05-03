@@ -51,7 +51,7 @@ public class Car extends Vehicle {
 		this.home = home;
 		this.work = work;
 		this.isGoingHome = false;
-		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
+		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
 
 	/**

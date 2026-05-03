@@ -35,7 +35,7 @@ public class Path {
 		pathLanes = new ArrayList<>();
 		lastCrossing = null;
 		Logger.getGlobal().severe("Path-en még csiszolni kell (kezdési ellenőrzés)");
-		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
+		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
 
 	/**

@@ -15,11 +15,26 @@ import javax.swing.text.GapContent;
 import entities.*;
 import user.*;
 import playground.*;
+import playground.Lane.Salt;
 import equipment.*;
 import equipment.heads.GravelSpreader;
 
 public class App {
-	static HashMap<Object, String> objectMap = new HashMap<Object, String>();
+	static HashMap<Object, String> objectMap = Proto.objectMap;
+
+	static public void onTick(){
+		for(Road r : objectMap.entrySet().stream().filter(e -> e.getKey() instanceof Road).map(e -> (Road) e.getKey()).toList()){
+				r.onTick();
+			}
+
+			for(Salt s: objectMap.entrySet().stream().filter(e -> e.getKey() instanceof Salt).map(e -> (Salt) e.getKey()).toList()){
+				s.onTick();
+			}
+
+			for(Vehicle v : objectMap.entrySet().stream().filter(e -> e.getKey() instanceof Vehicle).map(e -> (Vehicle) e.getKey()).toList()){
+				v.onTick();
+			}
+	}
 
 	public static void main(String[] args) throws Exception {
 		Proto proto = new Proto();

@@ -35,12 +35,13 @@ import playground.Lane;
 import playground.Lane.Salt;
 import playground.Path;
 import playground.Road;
+import playground.Tunnel;
 import user.BusDriver;
 import user.Cleaner;
 import user.Player;
 
 public class Proto {
-	public HashMap<Object, String> objectMap = new HashMap<>();
+	static public HashMap<Object, String> objectMap = new HashMap<>();
 	public Set<Player> players = new HashSet<>();
 
 	private Object getObject(String s) {
@@ -288,23 +289,29 @@ public class Proto {
 		Vehicle v = (Vehicle) getObject(args[0]);
 		Lane l = (Lane) getObject(args[1]);
 
-		Field vehicleCurrentLane = v.getClass().getDeclaredField("currentLane");
+		Field vehicleCurrentLane = v.getClass().getSuperclass().getDeclaredField("currentLane");
 		vehicleCurrentLane.setAccessible(true);
 
-		Field vehicleLastCrossing = v.getClass().getDeclaredField("lastCrossing");
+		Field vehicleLastCrossing = v.getClass().getSuperclass().getDeclaredField("lastCrossing");
 		vehicleLastCrossing.setAccessible(true);
 
-		Field vehiclePath = v.getClass().getDeclaredField("path");
-		vehicleLastCrossing.setAccessible(true);
+		Field vehiclePath = v.getClass().getSuperclass().getDeclaredField("path");
+		vehiclePath.setAccessible(true);
 
 		// TODO csak ennyi a sávváltás?
 
-		Lane perviousLane = (Lane) vehicleCurrentLane.get(v);
-		perviousLane.removeVehicle(v);
+		if(vehicleCurrentLane.get(v)!=null){
+			Lane perviousLane = (Lane) vehicleCurrentLane.get(v);
+			perviousLane.removeVehicle(v);
+		}
 
 		vehicleCurrentLane.set(v, l);
 		vehicleLastCrossing.set(v, l.getRoad().getFromCrossing());
-		forceSetField(v, "laneProgress", 0);
+
+		Field laneProgressField = v.getClass().getSuperclass().getDeclaredField("laneProgress");
+		laneProgressField.setAccessible(true);
+		laneProgressField.set(v, 0);
+		//forceSetField(v, "laneProgress", 0);
 		((Path) vehiclePath.get(v)).clear();
 
 		l.addVehicle(v);
@@ -378,6 +385,7 @@ public class Proto {
 		Field field = hi.getClass().getDeclaredField("heads");
 		field.setAccessible(true);
 		List<Head> heads = (List<Head>) field.get(hi);
+		commandAddhead(args);
 
 		for (Head h : heads) {
 			String currentHeadName = switch (h) {
@@ -393,6 +401,7 @@ public class Proto {
 				Field activeHead = hi.getClass().getDeclaredField("activeHead");
 				activeHead.setAccessible(true);
 				activeHead.set(hi, h);
+				return;
 			}
 		}
 
@@ -429,7 +438,9 @@ public class Proto {
 	}
 
 	private void commandPasstime(String[] args) {
-		// TODO nemtom
+		for(int i = 0; i<Integer.parseInt(args[0]); i++){
+			App.onTick();
+		}
 	}
 
 	private void commandLoad(String[] args) throws Exception {
@@ -516,6 +527,11 @@ public class Proto {
 	}
 
 	private void infoObject(Crossing c) {
+		if(c.getOutRoads().isEmpty()){
+			Logger.getGlobal().log(Level.INFO, "INFO [Obj] outRoads is empty", new Object[] { c });
+			return;
+		}
+
 		for (Road road : c.getOutRoads()) {
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has outgoing [Obj]", new Object[] { c, road });
 		}
@@ -534,8 +550,8 @@ public class Proto {
 	private void infoObject(Lane l)
 			throws Exception {
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] is on [Obj]", new Object[] { l, l.getRoad() });
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] snow level is" + l.getSnow(), new Object[] { l });
-		Logger.getGlobal().log(Level.INFO, "INFO [Obj] ice level is" + l.getIce(), new Object[] { l });
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] snow level is " + l.getSnow(), new Object[] { l });
+		Logger.getGlobal().log(Level.INFO, "INFO [Obj] ice level is " + l.getIce(), new Object[] { l });
 		for (Vehicle v : l.getVehicles()) {
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] contains [Obj]", new Object[] { l, v });
 		}

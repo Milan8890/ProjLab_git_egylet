@@ -27,7 +27,7 @@ public class HeadListing {
 	public HeadListing(Head h, int price) {
 		head = h;
 		this.price = price;
-		Logger.getGlobal().log(Level.INFO, "[Obj] created", this);
+		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
 
     /**
