@@ -24,36 +24,6 @@ putvehicle Bus1 Lane1_1
 
 Inicialization done
 
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-Lane1_3 has no salt
-Lane1_3 added 1.0 snow
-Road1 put 1 snow on Lane1_3
-Lane1_4 has no salt
-Lane1_4 added 1.0 snow
-Road1 put 1 snow on Lane1_4
-Lane1_5 has no salt
-Lane1_5 added 1.0 snow
-Road1 put 1 snow on Lane1_5
-Lane1_6 has no salt
-Lane1_6 added 1.0 snow
-Road1 put 1 snow on Lane1_6
-Lane1_7 has no salt
-Lane1_7 added 1.0 snow
-Road1 put 1 snow on Lane1_7
-Lane1_8 has no salt
-Lane1_8 added 1.0 snow
-Road1 put 1 snow on Lane1_8
-Lane1_9 has no salt
-Lane1_9 added 1.0 snow
-Road1 put 1 snow on Lane1_9
-Lane1_10 has no salt
-Lane1_10 added 1.0 snow
-Road1 put 1 snow on Lane1_10
 [ERROR]Error while running the following command:
 passtime 200
  Error: java.lang.NullPointerException

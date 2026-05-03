@@ -32,39 +32,9 @@ putice Road1 Lane1_1 50
 
 Inicialization done
 
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-Lane1_3 has no salt
-Lane1_3 added 1.0 snow
-Road1 put 1 snow on Lane1_3
-Lane1_4 has no salt
-Lane1_4 added 1.0 snow
-Road1 put 1 snow on Lane1_4
-Lane1_5 has no salt
-Lane1_5 added 1.0 snow
-Road1 put 1 snow on Lane1_5
-Lane1_6 has no salt
-Lane1_6 added 1.0 snow
-Road1 put 1 snow on Lane1_6
-Lane1_7 has no salt
-Lane1_7 added 1.0 snow
-Road1 put 1 snow on Lane1_7
-Lane1_8 has no salt
-Lane1_8 added 1.0 snow
-Road1 put 1 snow on Lane1_8
-Lane1_9 has no salt
-Lane1_9 added 1.0 snow
-Road1 put 1 snow on Lane1_9
-Lane1_10 has no salt
-Lane1_10 added 1.0 snow
-Road1 put 1 snow on Lane1_10
 Car1 is not in a crossing
 Lane1_1 has no stuck vehicle
-Lane1_1 returned snow level 1.0
+Lane1_1 returned snow level 0.0
 Lane1_1 returned ice level 0.0
 Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 1.0
@@ -72,45 +42,15 @@ Lane1_1 returned Road1
 Road1 returned length 2.0
 Car2 is not in a crossing
 Lane1_2 has no stuck vehicle
-Lane1_2 returned snow level 1.0
+Lane1_2 returned snow level 0.0
 Lane1_2 returned ice level 0.0
 Car2 slip check on Lane1_2: ice is too thin, not slipping
 Car2 advancing on road, current progress is 1.0
 Lane1_2 returned Road1
 Road1 returned length 2.0
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-Lane1_3 has no salt
-Lane1_3 added 1.0 snow
-Road1 put 1 snow on Lane1_3
-Lane1_4 has no salt
-Lane1_4 added 1.0 snow
-Road1 put 1 snow on Lane1_4
-Lane1_5 has no salt
-Lane1_5 added 1.0 snow
-Road1 put 1 snow on Lane1_5
-Lane1_6 has no salt
-Lane1_6 added 1.0 snow
-Road1 put 1 snow on Lane1_6
-Lane1_7 has no salt
-Lane1_7 added 1.0 snow
-Road1 put 1 snow on Lane1_7
-Lane1_8 has no salt
-Lane1_8 added 1.0 snow
-Road1 put 1 snow on Lane1_8
-Lane1_9 has no salt
-Lane1_9 added 1.0 snow
-Road1 put 1 snow on Lane1_9
-Lane1_10 has no salt
-Lane1_10 added 1.0 snow
-Road1 put 1 snow on Lane1_10
 Car1 is not in a crossing
 Lane1_1 has no stuck vehicle
-Lane1_1 returned snow level 2.0
+Lane1_1 returned snow level 0.0
 Lane1_1 returned ice level 0.0
 Car1 slip check on Lane1_1: ice is too thin, not slipping
 Car1 advancing on road, current progress is 2.0
@@ -123,7 +63,7 @@ Lane1_1 removed Car1
 Car1 reached work, going to home
 Car2 is not in a crossing
 Lane1_2 has no stuck vehicle
-Lane1_2 returned snow level 2.0
+Lane1_2 returned snow level 0.0
 Lane1_2 returned ice level 0.0
 Car2 slip check on Lane1_2: ice is too thin, not slipping
 Car2 advancing on road, current progress is 2.0
@@ -134,36 +74,6 @@ Road1 returned end Crossing2
 Car2 reached end of road, currently in Crossing2
 Lane1_2 removed Car2
 Car2 reached work, going to home
-Lane1_1 has no salt
-Lane1_1 added 1.0 snow
-Road1 put 1 snow on Lane1_1
-Lane1_2 has no salt
-Lane1_2 added 1.0 snow
-Road1 put 1 snow on Lane1_2
-Lane1_3 has no salt
-Lane1_3 added 1.0 snow
-Road1 put 1 snow on Lane1_3
-Lane1_4 has no salt
-Lane1_4 added 1.0 snow
-Road1 put 1 snow on Lane1_4
-Lane1_5 has no salt
-Lane1_5 added 1.0 snow
-Road1 put 1 snow on Lane1_5
-Lane1_6 has no salt
-Lane1_6 added 1.0 snow
-Road1 put 1 snow on Lane1_6
-Lane1_7 has no salt
-Lane1_7 added 1.0 snow
-Road1 put 1 snow on Lane1_7
-Lane1_8 has no salt
-Lane1_8 added 1.0 snow
-Road1 put 1 snow on Lane1_8
-Lane1_9 has no salt
-Lane1_9 added 1.0 snow
-Road1 put 1 snow on Lane1_9
-Lane1_10 has no salt
-Lane1_10 added 1.0 snow
-Road1 put 1 snow on Lane1_10
 Car1 is in a crossing
 [ERROR]Error while running the following command:
 passtime 200 

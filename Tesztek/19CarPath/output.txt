@@ -44,36 +44,6 @@ Created Car1
 
 Inicialization done
 
-Lane3_1 has no salt
-Lane3_1 added 1.0 snow
-Road3 put 1 snow on Lane3_1
-Lane3_2 has no salt
-Lane3_2 added 1.0 snow
-Road3 put 1 snow on Lane3_2
-Lane3_3 has no salt
-Lane3_3 added 1.0 snow
-Road3 put 1 snow on Lane3_3
-Lane3_4 has no salt
-Lane3_4 added 1.0 snow
-Road3 put 1 snow on Lane3_4
-Lane3_5 has no salt
-Lane3_5 added 1.0 snow
-Road3 put 1 snow on Lane3_5
-Lane3_6 has no salt
-Lane3_6 added 1.0 snow
-Road3 put 1 snow on Lane3_6
-Lane3_7 has no salt
-Lane3_7 added 1.0 snow
-Road3 put 1 snow on Lane3_7
-Lane3_8 has no salt
-Lane3_8 added 1.0 snow
-Road3 put 1 snow on Lane3_8
-Lane3_9 has no salt
-Lane3_9 added 1.0 snow
-Road3 put 1 snow on Lane3_9
-Lane3_10 has no salt
-Lane3_10 added 1.0 snow
-Road3 put 1 snow on Lane3_10
 Car1 is in a crossing
 [ERROR]Error while running the following command:
 passtime 5
