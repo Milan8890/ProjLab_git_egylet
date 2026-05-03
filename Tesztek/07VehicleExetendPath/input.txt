@@ -5,6 +5,6 @@ spbase Crossing1
 cleaner test
 plower Cleaner1 ejector
 initend
-extpath Snowplower1_1 Lane1_2
+extpath Snowplower1_1 Lane1_1
 extpath Snowplower1_1 Lane2_1
 info PathS_1_1

@@ -24,7 +24,7 @@ import playground.Path;
  * Letaposás végzése.
  */
 public abstract class Vehicle {
-	protected static final double MAX_SNOW_LEVEL = 10.0;
+	public static final double MAX_SNOW_LEVEL = 10.0;
 	protected static final double SNOW_COVER_LEVEL = 5.0;
 	protected static final double ICE_DANGER_LIMIT = 5.0;
 	protected static final double SLIP_CHANCE = 0.8;
