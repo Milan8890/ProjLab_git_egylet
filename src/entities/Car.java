@@ -67,8 +67,10 @@ public class Car extends Vehicle {
 
 		if (isGoingHome && this.lastCrossing.equals(home)) {
 			isGoingHome = false;
+			Logger.getGlobal().log(Level.INFO, "[Obj] reached home, going to work", new Object[] { this });
 		} else if (!isGoingHome && this.lastCrossing.equals(work)) {
 			isGoingHome = true;
+			Logger.getGlobal().log(Level.INFO, "[Obj] reached work, going to home", new Object[] { this });
 		}
 	}
 
@@ -88,6 +90,7 @@ public class Car extends Vehicle {
 
 		if (!success && isInCrossing()) {
 			Crossing target = isGoingHome ? home : work;
+			Logger.getGlobal().log(Level.INFO, "[Obj] has no path, requesting new path between [Obj] and [Obj]", new Object[] { this, lastCrossing, target });
 			this.path = City.shortestPathFrom(this.lastCrossing, target, this);
 		}
 		return success;
@@ -98,6 +101,7 @@ public class Car extends Vehicle {
 	 */
 	@Override
 	protected void revive() {
+		Logger.getGlobal().log(Level.INFO, "[Obj] after accident, starting again from home", new Object[] { this });
 		this.lastCrossing = home;
 		this.isGoingHome = false;
 		this.currentLane = null;
@@ -117,6 +121,7 @@ public class Car extends Vehicle {
 		if (currentLane.hasStuckVehicle()) {
 			// TODO Nem kellett meghívni a shortestPath-et, mert itt nem tervez újra, csak
 			// áll.
+			Logger.getGlobal().log(Level.INFO, "[Obj] [Obj] is blocked by crash, stopping and clearing [Obj]", new Object[] { this, currentLane, path });
 			return false;
 		}
 
