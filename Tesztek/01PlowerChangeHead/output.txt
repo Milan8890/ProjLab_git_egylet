@@ -3,7 +3,7 @@ City returned crossings
 Crossing1 created
 City returned Crossing1 as snowplower base
 Snowplower1_1 created
-[ERROR]Path-en még csiszolni kell (kezdési ellenõrzés)
+[ERROR]Path-en mï¿½g csiszolni kell (kezdï¿½si ellen?rzï¿½s)
 PathS_1_1 created
 Breaker1_1 created
 HeadInventory1_1 created
@@ -23,7 +23,43 @@ Dragon1_1 created
 Snowplower1_1 returned HeadInventory1_1
 Ejector1_1 created
 Inicialization done
+INFO HeadInventory1_1 owner is Snowplower1_1
+INFO HeadInventory1_1 has head Breaker1_1
+INFO HeadInventory1_1 has head Dragon1_1
+INFO HeadInventory1_1 has head Ejector1_1
+HeadInventory1_1 returned available head listings
+INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1
+HeadInventory1_1 returned active head Breaker1_1
+INFO HeadInventory1_1 active head is Breaker1_1
 Snowplower1_1 returned HeadInventory1_1
 HeadInventory1_1 switched active head to Dragon1_1
+INFO HeadInventory1_1 owner is Snowplower1_1
+INFO HeadInventory1_1 has head Breaker1_1
+INFO HeadInventory1_1 has head Dragon1_1
+INFO HeadInventory1_1 has head Ejector1_1
+HeadInventory1_1 returned available head listings
+INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1
+HeadInventory1_1 returned active head Dragon1_1
+INFO HeadInventory1_1 active head is Dragon1_1
 Snowplower1_1 returned HeadInventory1_1
 HeadInventory1_1 switched active head to Ejector1_1
+INFO HeadInventory1_1 owner is Snowplower1_1
+INFO HeadInventory1_1 has head Breaker1_1
+INFO HeadInventory1_1 has head Dragon1_1
+INFO HeadInventory1_1 has head Ejector1_1
+HeadInventory1_1 returned available head listings
+INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1
+INFO HeadInventory1_1 has head listing HeadListing1_1
+HeadInventory1_1 returned active head Ejector1_1
+INFO HeadInventory1_1 active head is Ejector1_1
