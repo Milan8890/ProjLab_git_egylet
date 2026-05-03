@@ -37,7 +37,7 @@ import user.Cleaner;
 import user.Player;
 
 public class Proto {
-	static public HashMap<Object, String> objectMap = new HashMap<>();
+	public HashMap<Object, String> objectMap = new HashMap<>();
 	public Set<Player> players = new HashSet<>();
 
 	private Object getObject(String s) {
