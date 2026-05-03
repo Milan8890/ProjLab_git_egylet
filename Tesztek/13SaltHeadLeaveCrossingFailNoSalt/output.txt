@@ -46,6 +46,7 @@ Road1 returned length 10.0
 Snowplower1_1 has 0.0 salt
 SaltSpreader1_1 blocks Snowplower1_1 from entering Lane1_1 
 Snowplower1_1 has 0.0 salt
+Snowplower1_1 couldn't turn into Lane1_1, clearing PathS_1_1
 PathS_1_1 cleared
 
 Starting tick 2

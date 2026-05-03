@@ -11,106 +11,409 @@ Lane1_1 set Salt1_1 with Cleaner1
 
 Inicialization done
 
+
+Starting tick 1
+
 Salt1_1 lifetime decreased to 199.0
+
+Starting tick 2
+
 Salt1_1 lifetime decreased to 198.0
+
+Starting tick 3
+
 Salt1_1 lifetime decreased to 197.0
+
+Starting tick 4
+
 Salt1_1 lifetime decreased to 196.0
+
+Starting tick 5
+
 Salt1_1 lifetime decreased to 195.0
+
+Starting tick 6
+
 Salt1_1 lifetime decreased to 194.0
+
+Starting tick 7
+
 Salt1_1 lifetime decreased to 193.0
+
+Starting tick 8
+
 Salt1_1 lifetime decreased to 192.0
+
+Starting tick 9
+
 Salt1_1 lifetime decreased to 191.0
+
+Starting tick 10
+
 Salt1_1 lifetime decreased to 190.0
+
+Starting tick 11
+
 Salt1_1 lifetime decreased to 189.0
+
+Starting tick 12
+
 Salt1_1 lifetime decreased to 188.0
+
+Starting tick 13
+
 Salt1_1 lifetime decreased to 187.0
+
+Starting tick 14
+
 Salt1_1 lifetime decreased to 186.0
+
+Starting tick 15
+
 Salt1_1 lifetime decreased to 185.0
+
+Starting tick 16
+
 Salt1_1 lifetime decreased to 184.0
+
+Starting tick 17
+
 Salt1_1 lifetime decreased to 183.0
+
+Starting tick 18
+
 Salt1_1 lifetime decreased to 182.0
+
+Starting tick 19
+
 Salt1_1 lifetime decreased to 181.0
+
+Starting tick 20
+
 Salt1_1 lifetime decreased to 180.0
+
+Starting tick 21
+
 Salt1_1 lifetime decreased to 179.0
+
+Starting tick 22
+
 Salt1_1 lifetime decreased to 178.0
+
+Starting tick 23
+
 Salt1_1 lifetime decreased to 177.0
+
+Starting tick 24
+
 Salt1_1 lifetime decreased to 176.0
+
+Starting tick 25
+
 Salt1_1 lifetime decreased to 175.0
+
+Starting tick 26
+
 Salt1_1 lifetime decreased to 174.0
+
+Starting tick 27
+
 Salt1_1 lifetime decreased to 173.0
+
+Starting tick 28
+
 Salt1_1 lifetime decreased to 172.0
+
+Starting tick 29
+
 Salt1_1 lifetime decreased to 171.0
+
+Starting tick 30
+
 Salt1_1 lifetime decreased to 170.0
+
+Starting tick 31
+
 Salt1_1 lifetime decreased to 169.0
+
+Starting tick 32
+
 Salt1_1 lifetime decreased to 168.0
+
+Starting tick 33
+
 Salt1_1 lifetime decreased to 167.0
+
+Starting tick 34
+
 Salt1_1 lifetime decreased to 166.0
+
+Starting tick 35
+
 Salt1_1 lifetime decreased to 165.0
+
+Starting tick 36
+
 Salt1_1 lifetime decreased to 164.0
+
+Starting tick 37
+
 Salt1_1 lifetime decreased to 163.0
+
+Starting tick 38
+
 Salt1_1 lifetime decreased to 162.0
+
+Starting tick 39
+
 Salt1_1 lifetime decreased to 161.0
+
+Starting tick 40
+
 Salt1_1 lifetime decreased to 160.0
+
+Starting tick 41
+
 Salt1_1 lifetime decreased to 159.0
+
+Starting tick 42
+
 Salt1_1 lifetime decreased to 158.0
+
+Starting tick 43
+
 Salt1_1 lifetime decreased to 157.0
+
+Starting tick 44
+
 Salt1_1 lifetime decreased to 156.0
+
+Starting tick 45
+
 Salt1_1 lifetime decreased to 155.0
+
+Starting tick 46
+
 Salt1_1 lifetime decreased to 154.0
+
+Starting tick 47
+
 Salt1_1 lifetime decreased to 153.0
+
+Starting tick 48
+
 Salt1_1 lifetime decreased to 152.0
+
+Starting tick 49
+
 Salt1_1 lifetime decreased to 151.0
+
+Starting tick 50
+
 Salt1_1 lifetime decreased to 150.0
+
+Starting tick 51
+
 Salt1_1 lifetime decreased to 149.0
+
+Starting tick 52
+
 Salt1_1 lifetime decreased to 148.0
+
+Starting tick 53
+
 Salt1_1 lifetime decreased to 147.0
+
+Starting tick 54
+
 Salt1_1 lifetime decreased to 146.0
+
+Starting tick 55
+
 Salt1_1 lifetime decreased to 145.0
+
+Starting tick 56
+
 Salt1_1 lifetime decreased to 144.0
+
+Starting tick 57
+
 Salt1_1 lifetime decreased to 143.0
+
+Starting tick 58
+
 Salt1_1 lifetime decreased to 142.0
+
+Starting tick 59
+
 Salt1_1 lifetime decreased to 141.0
+
+Starting tick 60
+
 Salt1_1 lifetime decreased to 140.0
+
+Starting tick 61
+
 Salt1_1 lifetime decreased to 139.0
+
+Starting tick 62
+
 Salt1_1 lifetime decreased to 138.0
+
+Starting tick 63
+
 Salt1_1 lifetime decreased to 137.0
+
+Starting tick 64
+
 Salt1_1 lifetime decreased to 136.0
+
+Starting tick 65
+
 Salt1_1 lifetime decreased to 135.0
+
+Starting tick 66
+
 Salt1_1 lifetime decreased to 134.0
+
+Starting tick 67
+
 Salt1_1 lifetime decreased to 133.0
+
+Starting tick 68
+
 Salt1_1 lifetime decreased to 132.0
+
+Starting tick 69
+
 Salt1_1 lifetime decreased to 131.0
+
+Starting tick 70
+
 Salt1_1 lifetime decreased to 130.0
+
+Starting tick 71
+
 Salt1_1 lifetime decreased to 129.0
+
+Starting tick 72
+
 Salt1_1 lifetime decreased to 128.0
+
+Starting tick 73
+
 Salt1_1 lifetime decreased to 127.0
+
+Starting tick 74
+
 Salt1_1 lifetime decreased to 126.0
+
+Starting tick 75
+
 Salt1_1 lifetime decreased to 125.0
+
+Starting tick 76
+
 Salt1_1 lifetime decreased to 124.0
+
+Starting tick 77
+
 Salt1_1 lifetime decreased to 123.0
+
+Starting tick 78
+
 Salt1_1 lifetime decreased to 122.0
+
+Starting tick 79
+
 Salt1_1 lifetime decreased to 121.0
+
+Starting tick 80
+
 Salt1_1 lifetime decreased to 120.0
+
+Starting tick 81
+
 Salt1_1 lifetime decreased to 119.0
+
+Starting tick 82
+
 Salt1_1 lifetime decreased to 118.0
+
+Starting tick 83
+
 Salt1_1 lifetime decreased to 117.0
+
+Starting tick 84
+
 Salt1_1 lifetime decreased to 116.0
+
+Starting tick 85
+
 Salt1_1 lifetime decreased to 115.0
+
+Starting tick 86
+
 Salt1_1 lifetime decreased to 114.0
+
+Starting tick 87
+
 Salt1_1 lifetime decreased to 113.0
+
+Starting tick 88
+
 Salt1_1 lifetime decreased to 112.0
+
+Starting tick 89
+
 Salt1_1 lifetime decreased to 111.0
+
+Starting tick 90
+
 Salt1_1 lifetime decreased to 110.0
+
+Starting tick 91
+
 Salt1_1 lifetime decreased to 109.0
+
+Starting tick 92
+
 Salt1_1 lifetime decreased to 108.0
+
+Starting tick 93
+
 Salt1_1 lifetime decreased to 107.0
+
+Starting tick 94
+
 Salt1_1 lifetime decreased to 106.0
+
+Starting tick 95
+
 Salt1_1 lifetime decreased to 105.0
+
+Starting tick 96
+
 Salt1_1 lifetime decreased to 104.0
+
+Starting tick 97
+
 Salt1_1 lifetime decreased to 103.0
+
+Starting tick 98
+
 Salt1_1 lifetime decreased to 102.0
+
+Starting tick 99
+
 Salt1_1 lifetime decreased to 101.0
+
+Starting tick 100
+
 Salt1_1 lifetime decreased to 100.0
+
+Starting tick 101
+
 Salt1_1 lifetime decreased to 99.0
 
 Starting tick 102

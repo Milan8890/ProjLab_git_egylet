@@ -5,7 +5,7 @@ Cleaner1 received 30000$
 
 Inicialization done
 
-Cleaner1 deducted 13000$  successfully
+Cleaner1 deducted 13000$ successfully
 City returned Crossing1 as snowplower base
 Created Snowplower1_1
 Created PathS_1_1

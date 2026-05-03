@@ -32,28 +32,7 @@ Lane1_1 returned ice level 50.0
 Car1 slip check on Lane1_1: ice is thick enough
 Lane1_1 has no gravel
 Lane1_1 has no gravel
-Car1 slip check on Lane1_1: doesn�t have gravel, slipping
-Car1 advancing on road, current progress is 1.0
-Lane1_1 returned Road1
-Road1 returned length 10.0
-Car2 is not in a crossing
-Car2 is not stuck
-Lane1_2 has no stuck vehicle
-Lane1_2 returned snow level 0.0
-Lane1_2 returned ice level 0.0
-Car2 slip check on Lane1_2: ice is too thin, not slipping
-Car2 advancing on road, current progress is 1.0
-Lane1_2 returned Road1
-Road1 returned length 10.0
-Car1 is not in a crossing
-Car1 is not stuck
-Lane1_1 has no stuck vehicle
-Lane1_1 returned snow level 0.0
-Lane1_1 returned ice level 50.0
-Car1 slip check on Lane1_1: ice is thick enough
-Lane1_1 has no gravel
-Lane1_1 has no gravel
-Car1 slip check on Lane1_1: doesn�t have gravel, slipping
+Car1 slip check on Lane1_1: doesn't have gravel, slipping
 Lane1_1 returned Road1
 Car1 slipping on Road1
 Lane1_1 returned Road1
@@ -202,6 +181,7 @@ Lane1_1 has no stuck vehicle
 Lane1_1 returned snow level 0.0
 Car2 following PathC_0_2, going onto Lane1_1
 Lane1_1 added Car2
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -210,9 +190,11 @@ Starting tick 15
 
 Car1 is in a crossing
 PathC_0_1 returned next lane Lane1_1
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car1 Lane1_1 is blocked by crash, stopping and clearing PathC_0_1
+Car1 couldn't turn into Lane1_1, clearing PathC_0_1
 PathC_0_1 cleared
 Car1 is in a crossing
 Car1 has no path, requesting new path between Crossing1 and Crossing2
@@ -220,6 +202,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -228,6 +211,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -243,6 +227,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -251,6 +236,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -266,6 +252,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -274,6 +261,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -289,6 +277,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -297,6 +286,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -312,6 +302,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -320,6 +311,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -335,6 +327,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -343,6 +336,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -358,6 +352,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -366,6 +361,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -381,6 +377,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -389,6 +386,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -404,6 +402,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -412,6 +411,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -427,6 +427,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -435,6 +436,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -450,6 +452,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -458,6 +461,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -473,6 +477,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -481,6 +486,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -496,6 +502,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -504,6 +511,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -519,6 +527,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -527,6 +536,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -542,6 +552,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -550,6 +561,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -565,6 +577,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -573,6 +586,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -588,6 +602,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -596,6 +611,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -611,6 +627,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -619,6 +636,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -634,6 +652,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -642,6 +661,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -657,6 +677,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -665,6 +686,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -680,6 +702,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -688,6 +711,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -703,6 +727,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -711,6 +736,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -726,6 +752,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -734,6 +761,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -749,6 +777,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -757,6 +786,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -772,6 +802,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -780,6 +811,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -795,6 +827,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -803,6 +836,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -818,6 +852,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -826,6 +861,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -841,6 +877,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -849,6 +886,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -864,6 +902,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -872,6 +911,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -887,6 +927,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -895,6 +936,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -910,6 +952,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -918,6 +961,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -933,6 +977,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -941,6 +986,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -956,6 +1002,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -964,6 +1011,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -979,6 +1027,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -987,6 +1036,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1002,6 +1052,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1010,6 +1061,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1025,6 +1077,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1033,6 +1086,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1048,6 +1102,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1056,6 +1111,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1071,6 +1127,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1079,6 +1136,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1094,6 +1152,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1102,6 +1161,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1117,6 +1177,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1125,6 +1186,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1140,6 +1202,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1148,6 +1211,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1163,6 +1227,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1171,6 +1236,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1186,6 +1252,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1194,6 +1261,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1209,6 +1277,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1217,6 +1286,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1232,6 +1302,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1240,6 +1311,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1255,6 +1327,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1263,6 +1336,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1278,6 +1352,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1286,6 +1361,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1301,6 +1377,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1309,6 +1386,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1324,6 +1402,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1332,6 +1411,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1347,6 +1427,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1355,6 +1436,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1370,6 +1452,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1378,6 +1461,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1393,6 +1477,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1401,6 +1486,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1416,6 +1502,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1424,6 +1511,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1439,6 +1527,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1447,6 +1536,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1462,6 +1552,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1470,6 +1561,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1485,6 +1577,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1493,6 +1586,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1508,6 +1602,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1516,6 +1611,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1531,6 +1627,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1539,6 +1636,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1554,6 +1652,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1562,6 +1661,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1577,6 +1677,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1585,6 +1686,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1600,6 +1702,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1608,6 +1711,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1623,6 +1727,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1631,6 +1736,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1646,6 +1752,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1654,6 +1761,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1669,6 +1777,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1677,6 +1786,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1692,6 +1802,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1700,6 +1811,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1740,6 +1852,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1748,6 +1861,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1763,6 +1877,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1771,6 +1886,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1786,6 +1902,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1794,6 +1911,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1809,6 +1927,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1817,6 +1936,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1832,6 +1952,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1840,6 +1961,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1855,6 +1977,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1863,6 +1986,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1878,6 +2002,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1886,6 +2011,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1901,6 +2027,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1909,6 +2036,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1924,6 +2052,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1932,6 +2061,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1947,6 +2077,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1955,6 +2086,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1970,6 +2102,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -1978,6 +2111,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -1993,6 +2127,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2001,6 +2136,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2016,6 +2152,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2024,6 +2161,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2039,6 +2177,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2047,6 +2186,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2062,6 +2202,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2070,6 +2211,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2085,6 +2227,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2093,6 +2236,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2108,6 +2252,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2116,6 +2261,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2131,6 +2277,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2139,6 +2286,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2154,6 +2302,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2162,6 +2311,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2177,6 +2327,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2185,6 +2336,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2200,6 +2352,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2208,6 +2361,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2223,6 +2377,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2231,6 +2386,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2246,6 +2402,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2254,6 +2411,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2269,6 +2427,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2277,6 +2436,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2292,6 +2452,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2300,6 +2461,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2315,6 +2477,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2323,6 +2486,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2338,6 +2502,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2346,6 +2511,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2361,6 +2527,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2369,6 +2536,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2384,6 +2552,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2392,6 +2561,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2407,6 +2577,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2415,6 +2586,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2430,6 +2602,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2438,6 +2611,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2453,6 +2627,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2461,6 +2636,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2476,6 +2652,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2484,6 +2661,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2499,6 +2677,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2507,6 +2686,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2522,6 +2702,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2530,6 +2711,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2545,6 +2727,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2553,6 +2736,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2568,6 +2752,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2576,6 +2761,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2591,6 +2777,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2599,6 +2786,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2614,6 +2802,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2622,6 +2811,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2637,6 +2827,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2645,6 +2836,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2660,6 +2852,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2668,6 +2861,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2683,6 +2877,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2691,6 +2886,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2706,6 +2902,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2714,6 +2911,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2729,6 +2927,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2737,6 +2936,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2752,6 +2952,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2760,6 +2961,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2775,6 +2977,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2783,6 +2986,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2798,6 +3002,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2806,6 +3011,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2821,6 +3027,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2829,6 +3036,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2844,6 +3052,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2852,6 +3061,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2867,6 +3077,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2875,6 +3086,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2890,6 +3102,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2898,6 +3111,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2913,6 +3127,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2921,6 +3136,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2936,6 +3152,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2944,6 +3161,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2959,6 +3177,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2967,6 +3186,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -2982,6 +3202,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -2990,6 +3211,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3005,6 +3227,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3013,6 +3236,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3028,6 +3252,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3036,6 +3261,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3051,6 +3277,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3059,6 +3286,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3074,6 +3302,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3082,6 +3311,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3097,6 +3327,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3105,6 +3336,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3120,6 +3352,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3128,6 +3361,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3143,6 +3377,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3151,6 +3386,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3166,6 +3402,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3174,6 +3411,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3189,6 +3427,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3197,6 +3436,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3212,6 +3452,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3220,6 +3461,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3235,6 +3477,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3243,6 +3486,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3258,6 +3502,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3266,6 +3511,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3281,6 +3527,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3289,6 +3536,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3304,6 +3552,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3312,6 +3561,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3327,6 +3577,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3335,6 +3586,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3350,6 +3602,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3358,6 +3611,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3373,6 +3627,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3381,6 +3636,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3396,6 +3652,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3404,6 +3661,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3419,6 +3677,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3427,6 +3686,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3442,6 +3702,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3450,6 +3711,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3465,6 +3727,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3473,6 +3736,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3488,6 +3752,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3496,6 +3761,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3511,6 +3777,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3519,6 +3786,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3534,6 +3802,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3542,6 +3811,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3557,6 +3827,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3565,6 +3836,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3580,6 +3852,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3588,6 +3861,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3603,6 +3877,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3611,6 +3886,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3626,6 +3902,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3634,6 +3911,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3649,6 +3927,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3657,6 +3936,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3672,6 +3952,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3680,6 +3961,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3695,6 +3977,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3703,6 +3986,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3718,6 +4002,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3726,6 +4011,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3741,6 +4027,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3749,6 +4036,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3764,6 +4052,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3772,6 +4061,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3787,6 +4077,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3795,6 +4086,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3810,6 +4102,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3818,6 +4111,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3833,6 +4127,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3841,6 +4136,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3856,6 +4152,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3864,6 +4161,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3879,6 +4177,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3887,6 +4186,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3902,6 +4202,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3910,6 +4211,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3925,6 +4227,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3933,6 +4236,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3948,6 +4252,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3956,6 +4261,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3971,6 +4277,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -3979,6 +4286,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -3994,6 +4302,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4002,6 +4311,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4017,6 +4327,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4025,6 +4336,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4040,6 +4352,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4048,6 +4361,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4063,6 +4377,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4071,6 +4386,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4086,6 +4402,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4094,6 +4411,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4109,6 +4427,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4117,6 +4436,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4132,6 +4452,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4140,6 +4461,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4155,6 +4477,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4163,6 +4486,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4178,6 +4502,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4186,6 +4511,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4201,6 +4527,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4209,6 +4536,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4224,6 +4552,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4232,6 +4561,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4247,6 +4577,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4255,6 +4586,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4270,6 +4602,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4278,6 +4611,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4293,6 +4627,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4301,6 +4636,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4316,6 +4652,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4324,6 +4661,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4339,6 +4677,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4347,6 +4686,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4362,6 +4702,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4370,6 +4711,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4385,6 +4727,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4393,6 +4736,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4408,6 +4752,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4416,6 +4761,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4431,6 +4777,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4439,6 +4786,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4454,6 +4802,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4462,6 +4811,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
@@ -4477,6 +4827,7 @@ Crossing1 returned outgoing roads
 Road1 returned end Crossing2
 Road1 returned length 10.0
 Road1 returned lanes
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 is stuck
@@ -4485,26 +4836,7 @@ Created PathC_0_1
 City couldn't find path between Crossing1 and Crossing2 for car Car1
 Created PathC_0_1
 Car2 is not in a crossing
-Car2 is stuck
-Lane1_1 has stuck vehicle
-Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2
-Car1 is in a crossing
-PathC_0_1 has no next lane
-Car1 reached end of PathC_0_1, stopping
-Car1 is in a crossing
-Car1 has no path, requesting new path between Crossing1 and Crossing2
-Crossing1 returned outgoing roads
-Road1 returned end Crossing2
-Road1 returned length 10.0
-Road1 returned lanes
-Car2 is stuck
-Lane1_1 has stuck vehicle
-Car2 is stuck
-Lane1_2 has stuck vehicle
-Created PathC_0_1
-City couldn't find path between Crossing1 and Crossing2 for car Car1
-Created PathC_0_1
-Car2 is not in a crossing
+Car1 is not stuck
 Car2 is stuck
 Lane1_1 has stuck vehicle
 Car2 Lane1_1 is blocked by crash, stopping and clearing PathC_0_2

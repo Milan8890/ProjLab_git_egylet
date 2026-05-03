@@ -21,6 +21,9 @@ Road1 returned length 100.0
 Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
 Cleaner1 received 30$
 Salt1_1 lifetime decreased to 199.0
+
+Starting tick 2
+
 Road1 returned length 100.0
 Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
 Cleaner1 received 10$
@@ -28,6 +31,9 @@ Road1 returned length 100.0
 Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
 Cleaner1 received 30$
 Salt1_1 lifetime decreased to 198.0
+
+Starting tick 3
+
 Road1 returned length 100.0
 Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
 Cleaner1 received 10$
@@ -35,6 +41,9 @@ Road1 returned length 100.0
 Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
 Cleaner1 received 30$
 Salt1_1 lifetime decreased to 197.0
+
+Starting tick 4
+
 Road1 returned length 100.0
 Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
 Cleaner1 received 10$
@@ -42,6 +51,9 @@ Road1 returned length 100.0
 Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
 Cleaner1 received 30$
 Salt1_1 lifetime decreased to 196.0
+
+Starting tick 5
+
 Road1 returned length 100.0
 Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
 Cleaner1 received 10$
@@ -49,6 +61,9 @@ Road1 returned length 100.0
 Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
 Cleaner1 received 30$
 Salt1_1 lifetime decreased to 195.0
+
+Starting tick 6
+
 Road1 returned length 100.0
 Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
 Cleaner1 received 10$
@@ -56,6 +71,9 @@ Road1 returned length 100.0
 Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
 Cleaner1 received 30$
 Salt1_1 lifetime decreased to 194.0
+
+Starting tick 7
+
 Road1 returned length 100.0
 Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
 Cleaner1 received 10$
@@ -63,6 +81,9 @@ Road1 returned length 100.0
 Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
 Cleaner1 received 30$
 Salt1_1 lifetime decreased to 193.0
+
+Starting tick 8
+
 Road1 returned length 100.0
 Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
 Cleaner1 received 10$
@@ -70,6 +91,9 @@ Road1 returned length 100.0
 Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
 Cleaner1 received 30$
 Salt1_1 lifetime decreased to 192.0
+
+Starting tick 9
+
 Road1 returned length 100.0
 Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
 Cleaner1 received 10$
@@ -77,6 +101,9 @@ Road1 returned length 100.0
 Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
 Cleaner1 received 30$
 Salt1_1 lifetime decreased to 191.0
+
+Starting tick 10
+
 Road1 returned length 100.0
 Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
 Cleaner1 received 10$
@@ -84,285 +111,165 @@ Road1 returned length 100.0
 Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
 Cleaner1 received 30$
 Salt1_1 lifetime decreased to 190.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 11
+
 Salt1_1 lifetime decreased to 189.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 12
+
 Salt1_1 lifetime decreased to 188.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 13
+
 Salt1_1 lifetime decreased to 187.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 14
+
 Salt1_1 lifetime decreased to 186.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 15
+
 Salt1_1 lifetime decreased to 185.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 16
+
 Salt1_1 lifetime decreased to 184.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 17
+
 Salt1_1 lifetime decreased to 183.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 18
+
 Salt1_1 lifetime decreased to 182.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 19
+
 Salt1_1 lifetime decreased to 181.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 20
+
 Salt1_1 lifetime decreased to 180.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 21
+
 Salt1_1 lifetime decreased to 179.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 22
+
 Salt1_1 lifetime decreased to 178.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 23
+
 Salt1_1 lifetime decreased to 177.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 24
+
 Salt1_1 lifetime decreased to 176.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 25
+
 Salt1_1 lifetime decreased to 175.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 26
+
 Salt1_1 lifetime decreased to 174.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 27
+
 Salt1_1 lifetime decreased to 173.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 28
+
 Salt1_1 lifetime decreased to 172.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 29
+
 Salt1_1 lifetime decreased to 171.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 30
+
 Salt1_1 lifetime decreased to 170.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 31
+
 Salt1_1 lifetime decreased to 169.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 32
+
 Salt1_1 lifetime decreased to 168.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 33
+
 Salt1_1 lifetime decreased to 167.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 34
+
 Salt1_1 lifetime decreased to 166.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 35
+
 Salt1_1 lifetime decreased to 165.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 36
+
 Salt1_1 lifetime decreased to 164.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 37
+
 Salt1_1 lifetime decreased to 163.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 38
+
 Salt1_1 lifetime decreased to 162.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 39
+
 Salt1_1 lifetime decreased to 161.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 40
+
 Salt1_1 lifetime decreased to 160.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 41
+
 Salt1_1 lifetime decreased to 159.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 42
+
 Salt1_1 lifetime decreased to 158.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 43
+
 Salt1_1 lifetime decreased to 157.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 44
+
 Salt1_1 lifetime decreased to 156.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 45
+
 Salt1_1 lifetime decreased to 155.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 46
+
 Salt1_1 lifetime decreased to 154.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 47
+
 Salt1_1 lifetime decreased to 153.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 48
+
 Salt1_1 lifetime decreased to 152.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 49
+
 Salt1_1 lifetime decreased to 151.0
-Road1 returned length 100.0
-Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$
-Cleaner1 received 10$
-Road1 returned length 100.0
-Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$
-Cleaner1 received 30$
+
+Starting tick 50
+
 Salt1_1 lifetime decreased to 150.0
 Lane1_1 returned Road1
 INFO Lane1_1 is on Road1

@@ -149,7 +149,7 @@ public abstract class Vehicle {
 
 			return true;
 		} else {
-			Logger.getGlobal().log(Level.INFO, "[Obj] couldn't turn into [Obj], clearing [Path]",
+			Logger.getGlobal().log(Level.INFO, "[Obj] couldn't turn into [Obj], clearing [Obj]",
 					new Object[] { this, nextLane, path });
 
 			path.clear();

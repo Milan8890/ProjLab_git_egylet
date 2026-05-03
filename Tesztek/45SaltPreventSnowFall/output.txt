@@ -17,30 +17,57 @@ Starting tick 1
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
 Salt1_1 lifetime decreased to 199.0
+
+Starting tick 2
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
 Salt1_1 lifetime decreased to 198.0
+
+Starting tick 3
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
 Salt1_1 lifetime decreased to 197.0
+
+Starting tick 4
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
 Salt1_1 lifetime decreased to 196.0
+
+Starting tick 5
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
 Salt1_1 lifetime decreased to 195.0
+
+Starting tick 6
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
 Salt1_1 lifetime decreased to 194.0
+
+Starting tick 7
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
 Salt1_1 lifetime decreased to 193.0
+
+Starting tick 8
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
 Salt1_1 lifetime decreased to 192.0
+
+Starting tick 9
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
 Salt1_1 lifetime decreased to 191.0
+
+Starting tick 10
+
 Lane1_1 has salt
 Road1 putting snow on Lane1_1 blocked by salt
 Salt1_1 lifetime decreased to 190.0
