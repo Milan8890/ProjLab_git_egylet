@@ -703,6 +703,7 @@ public class Proto {
 			throws Exception {
 		Field lanesField = p.getClass().getDeclaredField("pathLanes");
 		lanesField.setAccessible(true);
+
 		List<Lane> pathLanes = (List<Lane>) lanesField.get(p);
 		if (pathLanes.isEmpty()) {
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] pathLanes is empty", new Object[] { p });
