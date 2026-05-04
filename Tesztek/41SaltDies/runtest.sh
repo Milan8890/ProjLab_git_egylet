@@ -24,6 +24,25 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
+TESTED_LINE="INFO Lane1_1 snow level is 10"
+if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+:
+else
+	SUCCESS=false
+	echo "Didn't find line when it should be present: $TESTED_LINE"
+fi
+
+TESTED_LINE="Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$"
+
+ACTUAL_COUNT=$(grep -cF "$TESTED_LINE" "$OUTPUT_FILE")
+EXPECTED_COUNT=200
+if [ "$ACTUAL_COUNT" -eq "$EXPECTED_COUNT" ]; then
+:
+else
+	SUCCESS=false
+	echo "Found line $ACTUAL_COUNT times instead of $EXPECTED_COUNT times: $TESTED_LINE"
+fi
+
 TESTED_LINE="Salt1_1 expired"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :

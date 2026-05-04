@@ -92,6 +92,9 @@ public class Lane {
 		 * olvasztott el.
 		 */
 		public void onTick() {
+			if (lifetime <= 0)
+				return;
+
 			int payment = 0;
 			if (snowLevel > CLEANSNOWAMOUNT) {
 				snowLevel -= CLEANSNOWAMOUNT;
