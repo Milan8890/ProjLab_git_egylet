@@ -38,12 +38,21 @@ public class World {
 	static RandomMode randomMode = RandomMode.RANDOM;
 
 	/**
-	 * Új onTick függvény feltétele
+	 * Új onTick függvény felvétele
 	 * 
 	 * @param func az új onTick
 	 */
 	public static void registerOnTick(Runnable func) {
 		onTickFunctions.add(func);
+	}
+
+	/**
+	 * onTick függvény leiratkoztatása
+	 * 
+	 * @param func az onTick függvény
+	 */
+	public static void removeOnTick(Runnable func) {
+		onTickFunctions.remove(func);
 	}
 
 	/**
