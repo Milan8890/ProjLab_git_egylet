@@ -179,7 +179,7 @@ public class Proto {
 				case "setrand" -> commandSetrand(args);
 				case "setsnowing" -> commandSetsnowing(args);
 				case "tunnel" -> commandTunnel(args);
-				default -> Logger.getGlobal().severe("No such command " + command + "implemented");
+				default -> Logger.getGlobal().severe("No such command " + command + " implemented");
 			}
 		} catch (Exception e) {
 			Logger.getGlobal()

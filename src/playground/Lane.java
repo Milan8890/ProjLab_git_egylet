@@ -68,6 +68,11 @@ public class Lane {
 		 */
 		double lifetime; // Ezt hogy kellene csökkenteni?
 
+		/**
+		 * Az onTick Runnable-ja. El kell tárolni, hogy később ki lehessen venni
+		 */
+		Runnable onTickRunnable;
+
 		private static final double STARTING_LIFETIME = 200.0;
 
 		/**
@@ -76,10 +81,11 @@ public class Lane {
 		 * @param c a cleaner, akihez a só tartozik
 		 */
 		Salt(Cleaner c, Lane l) {
-			World.registerOnTick(this::onTick);
 			owner = c;
 			lifetime = STARTING_LIFETIME;
 			lane = l;
+			onTickRunnable = this::onTick;
+			World.registerOnTick(onTickRunnable);
 			Logger.getGlobal().log(Level.INFO, "[Obj] created with owner [Obj] and lifetime " + lifetime,
 					new Object[] { this, c });
 
@@ -92,6 +98,7 @@ public class Lane {
 		 * olvasztott el.
 		 */
 		public void onTick() {
+
 			int payment = 0;
 			if (snowLevel > CLEANSNOWAMOUNT) {
 				snowLevel -= CLEANSNOWAMOUNT;
@@ -114,6 +121,7 @@ public class Lane {
 
 			if (lifetime <= 0) {
 				salt = null;
+				World.removeOnTick(onTickRunnable);
 				Logger.getGlobal().log(Level.INFO, "[Obj] expired", this);
 			}
 		}

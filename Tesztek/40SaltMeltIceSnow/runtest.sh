@@ -16,23 +16,29 @@ else
 :
 fi
 
+
 TESTED_LINE="Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$"
-if grep -qF "$TESTED_LINE" "$OUTPUT_FILE"; then
+ACTUAL_COUNT=$(grep -cF "$TESTED_LINE" "$OUTPUT_FILE")
+EXPECTED_COUNT=50
+if [ "$ACTUAL_COUNT" -eq "$EXPECTED_COUNT" ]; then
 :
 else
 	SUCCESS=false
-	echo "Didn't find line when it should be present: $TESTED_LINE"
+	echo "Found line $ACTUAL_COUNT times instead of $EXPECTED_COUNT times: $TESTED_LINE"
 fi
 
 TESTED_LINE="Salt1_1 melted 0.1 snow from lane, paid Cleaner1 10$"
-if grep -qF "$TESTED_LINE" "$OUTPUT_FILE"; then
+
+ACTUAL_COUNT=$(grep -cF "$TESTED_LINE" "$OUTPUT_FILE")
+EXPECTED_COUNT=50
+if [ "$ACTUAL_COUNT" -eq "$EXPECTED_COUNT" ]; then
 :
 else
 	SUCCESS=false
-	echo "Didn't find line when it should be present: $TESTED_LINE"
+	echo "Found line $ACTUAL_COUNT times instead of $EXPECTED_COUNT times: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Lane1_1 ice level is 0"
+TESTED_LINE="INFO Lane1_1 ice level is 5"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -40,7 +46,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Lane1_1 snow level is 0"
+TESTED_LINE="INFO Lane1_1 snow level is 5"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -48,7 +54,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Cleaner1 has 400$"
+TESTED_LINE="INFO Cleaner1 has 2000$"
 if grep -qF "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
