@@ -136,4 +136,5 @@ public class MainPanel extends JFrame {
 	public void update() {
 		NewMain.notdone("MainPanel update");
 	}
+
 }
