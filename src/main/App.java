@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import graphics.NewMain;
+import graphics.ModelViews.BusView;
 import user.setupPlayerData;
 
 import javax.swing.BorderFactory;
@@ -24,6 +25,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JDialog;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
@@ -35,20 +37,38 @@ import javax.swing.WindowConstants;
 import javax.swing.border.AbstractBorder;
 
 public class App {
-	public static void main(String[] args) throws Exception {
-		// Heti setupMenu teszthez
-		// if (args.length > 0 && args[0].equals("setup")) {
-		List<setupPlayerData> players = setupPlayer();
+	static BusView b;
 
-		for (setupPlayerData player : players) {
-			System.out.println(player.getName() + " " + player.getColor() + " " + player.getVehicle());
+	static public class TestPanel extends JPanel {
+		@Override
+		public void paint(Graphics g) {
+			super.paint(g);
+			Graphics2D g2d = (Graphics2D) g;
+
+			b.paint(g2d);
 		}
-		// return;
-		// }
+
+	}
+
+	public static void main(String[] args) throws Exception {
+		JFrame f = new JFrame();
+		f.setSize(1000, 1000);
+		JPanel p = new TestPanel();
+		p.setSize(1000, 1000);
+
+		b = new BusView(null);
+
+		f.add(p);
+
+		f.setVisible(true);
+
+		f.repaint();
+
+		f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 		// Új main hívás, persze nem így lesz, csak könnyebben tudok prototipizálni
 		// Meg valszeg majd itt csak létre lesz hozva a Graphics, vagy tudja a rosseb.
-		NewMain.main(args);
+		// NewMain.main(args);
 
 		// Proto proto = new Proto(World.players);
 

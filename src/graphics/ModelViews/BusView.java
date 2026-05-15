@@ -21,6 +21,7 @@ public class BusView {
 	}
 
 	public void paint(Graphics2D g) {
-		NewMain.notdone("Bus paint");
+		g.drawLine(100, 100, 200, 200);
+		// NewMain.notdone("Bus paint");
 	}
 }
