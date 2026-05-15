@@ -1,6 +1,7 @@
 package graphics.ModelViews;
 
 import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 
@@ -13,6 +14,10 @@ public class BusView {
 
 	static private BufferedImage img;
 
+	static void readImage() {
+
+	}
+
 	public BusView(Bus bus) {
 		this.modelBus = bus;
 
@@ -21,7 +26,13 @@ public class BusView {
 	}
 
 	public void paint(Graphics2D g) {
-		g.drawLine(100, 100, 200, 200);
+
+		g.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+		g.translate(300, 300);
+		g.rotate(Math.toRadians(60));
+		g.drawRect(-100, -100, 100, 100);
+
 		// NewMain.notdone("Bus paint");
 	}
 }
