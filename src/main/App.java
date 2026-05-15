@@ -37,14 +37,14 @@ import javax.swing.border.AbstractBorder;
 public class App {
 	public static void main(String[] args) throws Exception {
 		// Heti setupMenu teszthez
-		if (args.length > 0 && args[0].equals("setup")) {
-			List<setupPlayerData> players = setupPlayer();
+		// if (args.length > 0 && args[0].equals("setup")) {
+		List<setupPlayerData> players = setupPlayer();
 
-			for (setupPlayerData player : players) {
-				System.out.println(player.getName() + " " + player.getColor() + " " + player.getVehicle());
-			}
-			return;
+		for (setupPlayerData player : players) {
+			System.out.println(player.getName() + " " + player.getColor() + " " + player.getVehicle());
 		}
+		// return;
+		// }
 
 		// Új main hívás, persze nem így lesz, csak könnyebben tudok prototipizálni
 		// Meg valszeg majd itt csak létre lesz hozva a Graphics, vagy tudja a rosseb.
@@ -101,6 +101,8 @@ public class App {
 		JPanel rowsPanel = new JPanel(new GridBagLayout());
 		rowsPanel.setBackground(Color.WHITE);
 		rowsPanel.setBorder(BorderFactory.createEmptyBorder(34, 30, 0, 30));
+
+		// ADATOK
 		List<JTextField> names = new ArrayList<>();
 		List<JComboBox<String>> colors = new ArrayList<>();
 		List<JComboBox<String>> vehicles = new ArrayList<>();
@@ -125,6 +127,7 @@ public class App {
 		rebuildRowsPanel(rowsPanel, names, colors, vehicles, addPlayerButton, removePlayerButton, startGameButton,
 				menuFont, controlHeight, defaultControlWidth, vehicleControlWidth);
 
+		// GOMBOK ACTION LISTENERJE
 		addPlayerButton.addActionListener(e -> {
 			addPlayerRow(names, colors, vehicles, playerColors, playerVehicles, menuFont, controlBackground,
 					controlBorder);
@@ -287,7 +290,8 @@ public class App {
 		return comboBox;
 	}
 
-	private static JButton createMenuButton(String text, Font buttonFont, Color controlBackground, Color controlBorder) {
+	private static JButton createMenuButton(String text, Font buttonFont, Color controlBackground,
+			Color controlBorder) {
 		JButton button = new JButton(text);
 		button.setFont(buttonFont);
 		button.setBackground(controlBackground);
