@@ -23,7 +23,7 @@ public class SnowplowerView {
 		NewMain.notdone("SnowplowerView paint");
 	}
 
-	public boolean isClicked() {
+	public boolean isClicked(int x, int y) {
 		NewMain.notdone("SnowplowerView isClicked");
 		return false;
 	}

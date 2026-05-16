@@ -11,6 +11,7 @@ import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
@@ -23,6 +24,9 @@ public class MapPanel extends JPanel {
 	private static final int WIDTH = 1000;
 	private static final int HEIGHT = 1000;
 
+	/**
+	 * Kép beolvasása
+	 */
 	static private void readImage() {
 		NewMain.notdone("Nagymagyarország térképe a háttérterünk. Ezt észre kéne venni máshonnan.");
 		try {
@@ -32,13 +36,32 @@ public class MapPanel extends JPanel {
 		}
 	}
 
+	/**
+	 * Játékteret megjelenítő panel konstruktora. Beállítja a háttérképet, felveszi
+	 * a MouseListener-jét.
+	 * 
+	 * @param mainPanel
+	 */
 	public MapPanel(MainPanel mainPanel) {
 		if (backgroundImg == null) {
 			readImage();
 		}
-		this.mainPanel = mainPanel;
 		this.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				int x = getX();
+				int y = getY();
 
+				for (CrossingView view : mainPanel.getCrossingViews()) {
+					if (view.isClicked(x, y))
+						return;
+				}
+
+				for (SnowplowerView view : mainPanel.getSnowplowerViews()) {
+					if (view.isClicked(x, y))
+						return;
+				}
+			}
 		});
 
 		this.setPreferredSize(new Dimension(1000, 1000));

@@ -1,5 +1,8 @@
 package graphics;
 
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,6 +13,7 @@ import javax.swing.JTextField;
 
 import entities.Bus;
 import entities.Snowplower;
+import entities.Vehicle;
 import graphics.ModelViews.BusView;
 import graphics.ModelViews.CarView;
 import graphics.ModelViews.CrossingView;
@@ -50,6 +54,22 @@ public class MainPanel extends JFrame {
 	private MapPanel mapPanel;
 
 	public MainPanel() {
+		this.addKeyListener(new KeyAdapter() {
+			@Override
+			public void keyPressed(KeyEvent e) {
+				int pressed = Character.getNumericValue(e.getKeyChar());
+
+				if (!isExtendingPath)
+					return;
+
+				Vehicle activeVehicle = getSelectedBus() == null ? getSelectedSnowplower() : getSelectedBus();
+				if (activeVehicle == null)
+					return;
+
+				if (selectedCrossing == null)
+					return;
+			}
+		});
 		NewMain.notdone("MainPanel konstruktor");
 	}
 
