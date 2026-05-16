@@ -1,5 +1,6 @@
 package graphics;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.imageio.plugins.jpeg.JPEGHuffmanTable;
@@ -33,12 +34,12 @@ public class MainPanel extends JFrame {
 
 	private Crossing selectedCrossing;
 
-	private List<CrossingView> crossingViews;
-	private List<RoadView> roadViews;
-	private List<LaneView> laneViews;
-	private List<SnowplowerView> snowplowerViews;
-	private List<BusView> busViews;
-	private List<CarView> carViews;
+	private List<CrossingView> crossingViews = new ArrayList<>();
+	private List<RoadView> roadViews = new ArrayList<>();
+	private List<LaneView> laneViews = new ArrayList<>();
+	private List<SnowplowerView> snowplowerViews = new ArrayList<>();
+	private List<BusView> busViews = new ArrayList<>();
+	private List<CarView> carViews = new ArrayList<>();
 
 	private JComboBox playerSelectorComboBox;
 	private JTextField playerData;
@@ -133,7 +134,15 @@ public class MainPanel extends JFrame {
 		this.selectedCrossing = selectedCrossing;
 	}
 
-	public void update() {
-		NewMain.notdone("MainPanel update");
-	}
+	// Szerintem nem kell az update, mert csak megoldja a repaint. És ezeket kéne
+	// újradefiniálni az egyes panelekben.
+
+	// public void update() {
+	// // Ahhoz meg kéne írni a játékosválasztást
+	// // Ha igen, akkor nincs nullozás
+	// if (snowplowerPanel != null)
+	// snowplowerPanel.update();
+
+	// NewMain.notdone("MainPanel update");
+	// }
 }

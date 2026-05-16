@@ -10,7 +10,7 @@ import graphics.ModelViews.*;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.event.HierarchyBoundsAdapter;
+import java.awt.event.MouseAdapter;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
@@ -37,7 +37,10 @@ public class MapPanel extends JPanel {
 			readImage();
 		}
 		this.mainPanel = mainPanel;
-		System.out.println("WIDTH  " + WIDTH);
+		this.addMouseListener(new MouseAdapter() {
+
+		});
+
 		this.setPreferredSize(new Dimension(1000, 1000));
 	}
 
