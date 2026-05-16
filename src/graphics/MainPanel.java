@@ -6,6 +6,7 @@ import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.crypto.Cipher;
 import javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -23,7 +24,11 @@ import graphics.ModelViews.SnowplowerView;
 import graphics.Panels.BusPanel;
 import graphics.Panels.MapPanel;
 import graphics.Panels.SnowplowerPanel;
+import playground.City;
 import playground.Crossing;
+import playground.Lane;
+import playground.Path;
+import playground.Road;
 import user.BusDriver;
 import user.Cleaner;
 
@@ -55,19 +60,39 @@ public class MainPanel extends JFrame {
 
 	public MainPanel() {
 		this.addKeyListener(new KeyAdapter() {
+			// Út hosszabbítása KeyListener
 			@Override
 			public void keyPressed(KeyEvent e) {
-				int pressed = Character.getNumericValue(e.getKeyChar());
 
 				if (!isExtendingPath)
 					return;
 
-				Vehicle activeVehicle = getSelectedBus() == null ? getSelectedSnowplower() : getSelectedBus();
-				if (activeVehicle == null)
+				Vehicle selectedVehicle = getSelectedBus() == null ? getSelectedSnowplower() : getSelectedBus();
+				if (selectedVehicle == null || selectedCrossing == null)
 					return;
 
-				if (selectedCrossing == null)
+				Path path = selectedVehicle.getPath();
+				Crossing lastCrossing = path.getLastCrossing();
+
+				Road roadToExtendWith = null;
+
+				for (Road road : lastCrossing.getOutRoads()) {
+					if (road.getToCrossing() == selectedCrossing) {
+						roadToExtendWith = road;
+						break;
+					}
+				}
+
+				if (roadToExtendWith == null)
 					return;
+
+				int pressed = Character.getNumericValue(e.getKeyChar());
+
+				List<Lane> lanes = roadToExtendWith.getLanes();
+				if (lanes.size() > pressed || pressed <= 0)
+					return;
+
+				selectedVehicle.extendPath(lanes.get(pressed - 1));
 			}
 		});
 		NewMain.notdone("MainPanel konstruktor");
