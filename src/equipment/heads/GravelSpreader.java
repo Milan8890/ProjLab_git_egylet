@@ -15,62 +15,80 @@ import playground.Road;
  * <p>
  * 
  * Felelősség <br>
- * Zúzalék elhelyezése a sávon, és az azért járó fizetés kiszámítása. 
+ * Zúzalék elhelyezése a sávon, és az azért járó fizetés kiszámítása.
  * Elhasználja a zúzalékot a hókotróból.
  * 
  * Ősosztályok <br>
  * Head
  */
 public class GravelSpreader extends Head {
-    private static final double GRAVELCLEANPAY = 0.5;
-    static final double GRAVEL_CONSUME = 1;
-    /**
-     * Konstruktor.
-     * 
-     * @param snowplower A tulajdonos hókotró.
-     */ 
-    public GravelSpreader(Snowplower snowplower) {
-        super(snowplower);
-    }
+	private static final double GRAVELCLEANPAY = 0.5;
+	static final double GRAVEL_CONSUME = 1;
 
-    /**
-     * Rak zúzalékot az “l” sávra, visszaadja a takarítás által kifizetendő pénzt.
-     * 
-     * @param l a tisztítandó sáv.
-     * @return a takarítás által kifizetendő pénz.
-     */
-    public int clean(Lane l){
-        l.setGravel(true);
+	/**
+	 * Konstruktor.
+	 * 
+	 * @param snowplower A tulajdonos hókotró.
+	 */
+	public GravelSpreader(Snowplower snowplower) {
+		super(snowplower);
+	}
 
-        int payment = (int) (l.getRoad().getLength() * GRAVELCLEANPAY);
+	/**
+	 * Rak zúzalékot az “l” sávra, visszaadja a takarítás által kifizetendő pénzt.
+	 * 
+	 * @param l a tisztítandó sáv.
+	 * @return a takarítás által kifizetendő pénz.
+	 */
+	public int clean(Lane l) {
+		l.setGravel(true);
 
-        double amount = (l.getRoad().getLength() * GRAVEL_CONSUME);
-        snowplower.useGravel(amount);
+		int payment = (int) (l.getRoad().getLength() * GRAVELCLEANPAY);
 
-        Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$" , new Object[] {snowplower , this, l});
-		Logger.getGlobal().log(Level.INFO, "[Obj] uses " + amount + " gravel from [Obj]", new Object[] {this, snowplower});
+		double amount = (l.getRoad().getLength() * GRAVEL_CONSUME);
+		snowplower.useGravel(amount);
 
-        return payment;
-    }
+		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$",
+				new Object[] { snowplower, this, l });
+		Logger.getGlobal().log(Level.INFO, "[Obj] uses " + amount + " gravel from [Obj]",
+				new Object[] { this, snowplower });
 
-    /**
-     * Visszaadja, hogy befordulhat-e az adott sávra a hókotró.
-     * Hamissal tér vissza, ha nincs elég zúzalék a sáv tisztításához, vagy ha már van zúzalék a sávon.
-     * 
-     * @param l a vizsgált sáv.
-     * @return Hamissal tér vissza, ha nincs elég biokerozin a sáv tisztításához, egyébként igazzal.
-     */
-    @Override
-    public boolean canEnterLane(Lane l){
-        if(l.hasGravel()) return false;
+		return payment;
+	}
 
-        double neededAmount = l.getRoad().getLength() * GRAVEL_CONSUME;
+	/**
+	 * Visszaadja, hogy befordulhat-e az adott sávra a hókotró.
+	 * Hamissal tér vissza, ha nincs elég zúzalék a sáv tisztításához, vagy ha már
+	 * van zúzalék a sávon.
+	 * 
+	 * @param l a vizsgált sáv.
+	 * @return Hamissal tér vissza, ha nincs elég biokerozin a sáv tisztításához,
+	 *         egyébként igazzal.
+	 */
+	@Override
+	public boolean canEnterLane(Lane l) {
+		if (l.hasGravel())
+			return false;
 
-        if(neededAmount <= snowplower.getGravel()) 
-			Logger.getGlobal().log(Level.INFO, "[Obj] allows [Obj] to enter [Obj] ", new Object[] {this, snowplower, l});
+		double neededAmount = l.getRoad().getLength() * GRAVEL_CONSUME;
+
+		if (neededAmount <= snowplower.getGravel())
+			Logger.getGlobal().log(Level.INFO, "[Obj] allows [Obj] to enter [Obj] ",
+					new Object[] { this, snowplower, l });
 		else
-			Logger.getGlobal().log(Level.INFO, "[Obj] blocks [Obj] from entering [Obj] ", new Object[] {this, snowplower, l});
+			Logger.getGlobal().log(Level.INFO, "[Obj] blocks [Obj] from entering [Obj] ",
+					new Object[] { this, snowplower, l });
 
-        return snowplower.getGravel() >= neededAmount;
-    }
+		return snowplower.getGravel() >= neededAmount;
+	}
+
+	/**
+	 * Visszaadja a fej nevét.
+	 * 
+	 * @return A fej neve
+	 */
+	@Override
+	public String getDescription() {
+		return "Kőszóró fej";
+	}
 }

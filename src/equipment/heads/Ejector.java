@@ -20,6 +20,7 @@ import playground.Lane;
  */
 public class Ejector extends Head {
 	private static double SNOWCLEANPAY = 0.04;
+
 	/**
 	 * Konstruktor.
 	 * 
@@ -41,7 +42,18 @@ public class Ejector extends Head {
 
 		double payment = l.cleanSnow() * l.getRoad().getLength() * SNOWCLEANPAY;
 		l.setGravel(false);
-		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$" , new Object[] {snowplower , this, l});
+		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$",
+				new Object[] { snowplower, this, l });
 		return (int) payment;
+	}
+
+	/**
+	 * Visszaadja a fej nevét.
+	 * 
+	 * @return A fej neve
+	 */
+	@Override
+	public String getDescription() {
+		return "Hányó fej";
 	}
 }

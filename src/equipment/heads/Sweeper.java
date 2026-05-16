@@ -24,6 +24,7 @@ import playground.Road;
 public class Sweeper extends Head {
 	private static double SNOWCLEANPAY = 0.04;
 	private static double SNOWPUSHPAY = 0.02;
+
 	/**
 	 * Konstruktor.
 	 * 
@@ -62,11 +63,21 @@ public class Sweeper extends Head {
 		}
 
 		// Ide kéne még valami ice/snowLevel elem a képletbe?
-		 
 
-		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$", new Object[] {snowplower , this, l});
+		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$",
+				new Object[] { snowplower, this, l });
 
 		return payment;
 
+	}
+
+	/**
+	 * Visszaadja a fej nevét.
+	 * 
+	 * @return A fej neve
+	 */
+	@Override
+	public String getDescription() {
+		return "Söprő fej";
 	}
 }

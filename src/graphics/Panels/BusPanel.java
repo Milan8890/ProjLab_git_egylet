@@ -11,7 +11,7 @@ import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-import entities.Snowplower;
+import entities.Bus;
 import graphics.MainPanel;
 
 /**
@@ -23,13 +23,6 @@ public class BusPanel extends JPanel {
 
 	private JButton extPathButton;
 	private JButton clearPathButton;
-
-	/**
-	 * Létrehoz egy önálló, {@link MainPanel} referencia nélküli buszpanelt.
-	 */
-	public BusPanel() {
-		this(null);
-	}
 
 	/**
 	 * Létrehoz egy buszpanelt a megadott főpanelhez kapcsolva.
@@ -95,7 +88,7 @@ public class BusPanel extends JPanel {
 
 		extPathButton = createButton("Útvonal tervezés", normalFont);
 		clearPathButton = createButton("Útvonal törlése", normalFont);
-		
+
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.gridx = 0;
 		gbc.gridy = 0;
@@ -108,8 +101,8 @@ public class BusPanel extends JPanel {
 		gbc.insets = new Insets(0, 0, 0, 0);
 		section.add(clearPathButton, gbc);
 
-		clearPathButton.addActionListener(e -> clearSelectedSnowplowerPath());
-		extPathButton.addActionListener(e -> planSelectedSnowplowerPath());
+		clearPathButton.addActionListener(e -> clearSelectedBusPath());
+		extPathButton.addActionListener(e -> pressExtPathButton());
 
 		return section;
 	}
@@ -133,51 +126,50 @@ public class BusPanel extends JPanel {
 	 *
 	 * @return a kiválasztott hókotró, vagy {@code null}, ha nincs elérhető főpanel
 	 */
-	private Snowplower getSelectedSnowplower() {
+	private Bus getSelectedBus() {
 		if (mainPanel == null) {
 			return null;
 		}
 
-		return mainPanel.getSelectedSnowplower();
+		return mainPanel.getSelectedBus();
 	}
 
 	/**
 	 * Törli a kiválasztott hókotró aktuálisan tervezett útvonalát.
 	 */
-	private void clearSelectedSnowplowerPath() {
-		Snowplower selectedSnowplower = getSelectedSnowplower();
-		if (selectedSnowplower == null) {
+	private void clearSelectedBusPath() {
+		Bus selectedBus = getSelectedBus();
+		if (selectedBus == null) {
 			return;
 		}
 
-		selectedSnowplower.getPath().clear();
+		selectedBus.getPath().clear();
 	}
 
 	/**
-	 * Az útvonal tervezés bekötésének előkészített helye.
+	 * Az útvonal tervezésének állítása.
 	 */
-	private void planSelectedSnowplowerPath() {
-		// TODO: útvonal tervezés bekötése később
+	private void pressExtPathButton() {
+		mainPanel.setIsExtendingPath(!mainPanel.getIsExtendingPath());
 	}
 
-
-
-	//TESZT!!!##############################################################################################################
+	// TESZT!!!##############################################################################################################
 	/**
 	 * Egyszerű, önálló tesztablakot indít a panel megjelenítéséhez.
 	 *
 	 * @param args parancssori argumentumok
 	 */
 	public static void main(String[] args) {
-	javax.swing.SwingUtilities.invokeLater(() -> {
-		javax.swing.JFrame frame = new javax.swing.JFrame("BusPanel teszt");
-		frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
-		frame.add(new BusPanel());
-		frame.pack();
-		frame.setLocationRelativeTo(null);
-		frame.setVisible(true);
-	});
-}
-	//TESZT VÉGE!!!##############################################################################################################
+		javax.swing.SwingUtilities.invokeLater(() -> {
+			javax.swing.JFrame frame = new javax.swing.JFrame("BusPanel teszt");
+			frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
+			frame.add(new BusPanel(null));
+			frame.pack();
+			frame.setLocationRelativeTo(null);
+			frame.setVisible(true);
+		});
+	}
+	// TESZT
+	// VÉGE!!!##############################################################################################################
 
 }

@@ -4,9 +4,11 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.Graphics;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.lang.reflect.InvocationTargetException;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -14,7 +16,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-
+import javax.swing.SwingUtilities;
 import javax.swing.border.Border;
 
 import entities.Snowplower;
@@ -27,6 +29,7 @@ import equipment.heads.GravelSpreader;
 import equipment.heads.SaltSpreader;
 import equipment.heads.Sweeper;
 import graphics.MainPanel;
+import user.Cleaner;
 
 /**
  * A hókotró vezérlőpanelje, amely a fejvásárlást, alapanyag vásárlást és
@@ -63,19 +66,13 @@ public class SnowplowerPanel extends JPanel {
 	private JButton clearPathButton;
 
 	/**
-	 * Létrehoz egy önálló, {@link MainPanel} referencia nélküli hókotrópanelt.
-	 */
-	public SnowplowerPanel() {
-		this(null);
-	}
-
-	/**
 	 * Létrehoz egy hókotrópanelt a megadott főpanelhez kapcsolva.
 	 *
 	 * @param mainPanel az a főpanel, amelyből a kiválasztott hókotró lekérdezhető
 	 */
 	public SnowplowerPanel(MainPanel mainPanel) {
 		this.mainPanel = mainPanel;
+
 		final Color separatorColor = new Color(48, 78, 157);
 		final Color priceCanBuyColor = new Color(20, 150, 55);
 		final Color priceCannotBuyColor = new Color(205, 50, 50);
@@ -87,9 +84,12 @@ public class SnowplowerPanel extends JPanel {
 		setBorder(BorderFactory.createLineBorder(separatorColor, 2));
 		setPreferredSize(new Dimension(300, 520));
 
-		addSection(createHeadShopSection(separatorColor, normalFont, buttonFont, priceCanBuyColor,	priceCannotBuyColor), 0, 0.53);
+		addSection(createHeadShopSection(separatorColor, normalFont, buttonFont, priceCanBuyColor, priceCannotBuyColor),
+				0, 0.53);
 		addSection(createMaterialShopSection(separatorColor, normalFont, buttonFont), 1, 0.27);
 		addSection(createRouteControlSection(normalFont), 2, 0.20);
+
+		update();
 	}
 
 	/**
@@ -97,13 +97,15 @@ public class SnowplowerPanel extends JPanel {
 	 */
 	public void update() {
 		updateActiveHeadText();
+		updateHeadShopSection();
+		updateMaterialShopSection();
 	}
 
 	/**
 	 * Hozzáad egy panelrészt a megadott sorba.
 	 *
 	 * @param section a hozzáadandó panelrész
-	 * @param row a cél sor indexe
+	 * @param row     a cél sor indexe
 	 * @param weightY a panelrész függőleges súlya
 	 */
 	private void addSection(JPanel section, int row, double weightY) {
@@ -119,10 +121,10 @@ public class SnowplowerPanel extends JPanel {
 	/**
 	 * Létrehozza a fejvásárló panelrészt.
 	 *
-	 * @param separatorColor a szakaszelválasztó vonal színe
-	 * @param normalFont a szövegek betűtípusa
-	 * @param buttonFont a gombok betűtípusa
-	 * @param priceCanBuyColor a megvásárolható fej árának színe
+	 * @param separatorColor      a szakaszelválasztó vonal színe
+	 * @param normalFont          a szövegek betűtípusa
+	 * @param buttonFont          a gombok betűtípusa
+	 * @param priceCanBuyColor    a megvásárolható fej árának színe
 	 * @param priceCannotBuyColor a nem megvásárolható fej árának színe
 	 * @return az elkészített fejvásárló panelrész
 	 */
@@ -191,17 +193,17 @@ public class SnowplowerPanel extends JPanel {
 	 * Létrehozza az alapanyag vásárló panelrészt.
 	 *
 	 * @param separatorColor a szakaszelválasztó vonal színe
-	 * @param normalFont a szövegek betűtípusa
-	 * @param buttonFont a gombok betűtípusa
+	 * @param normalFont     a szövegek betűtípusa
+	 * @param buttonFont     a gombok betűtípusa
 	 * @return az elkészített alapanyag vásárló panelrész
 	 */
 	private JPanel createMaterialShopSection(Color separatorColor, Font normalFont, Font buttonFont) {
 		JPanel section = createSectionPanel(separatorColor, true, 22, 31, 18, 31);
 		section.setLayout(new GridBagLayout());
 
-		saltAmountText = createPlainTextField("Só: 10 kg", normalFont);
-		bioAmountText = createPlainTextField("Biokerozin: 10 l", normalFont);
-		gravelAmountText = createPlainTextField("Zúzottkő: 50 kg", normalFont);
+		saltAmountText = createPlainTextField("Só: TEMP kg", normalFont);
+		bioAmountText = createPlainTextField("Biokerozin: TEMP l", normalFont);
+		gravelAmountText = createPlainTextField("Zúzottkő: TEMP kg", normalFont);
 
 		buySaltButton = createButton("Vásárlás", buttonFont);
 		buybioButton = createButton("Vásárlás", buttonFont);
@@ -244,20 +246,21 @@ public class SnowplowerPanel extends JPanel {
 		section.add(clearPathButton, gbc);
 
 		clearPathButton.addActionListener(e -> clearSelectedSnowplowerPath());
-		extPathButton.addActionListener(e -> planSelectedSnowplowerPath());
+		extPathButton.addActionListener(e -> pressExtPathButton());
 
 		return section;
 	}
 
 	/**
-	 * Létrehoz egy általános, opcionálisan alsó elválasztóvonallal rendelkező panelrészt.
+	 * Létrehoz egy általános, opcionálisan alsó elválasztóvonallal rendelkező
+	 * panelrészt.
 	 *
-	 * @param separatorColor az elválasztó vonal színe
+	 * @param separatorColor     az elválasztó vonal színe
 	 * @param hasBottomSeparator igaz, ha kell alsó elválasztó vonal
-	 * @param top felső belső margó
-	 * @param left bal oldali belső margó
-	 * @param bottom alsó belső margó
-	 * @param right jobb oldali belső margó
+	 * @param top                felső belső margó
+	 * @param left               bal oldali belső margó
+	 * @param bottom             alsó belső margó
+	 * @param right              jobb oldali belső margó
 	 * @return az elkészített panelrész
 	 */
 	private JPanel createSectionPanel(Color separatorColor, boolean hasBottomSeparator, int top, int left, int bottom,
@@ -279,8 +282,8 @@ public class SnowplowerPanel extends JPanel {
 	/**
 	 * Létrehoz egy egységesen formázott feliratot.
 	 *
-	 * @param text a felirat szövege
-	 * @param font a felirat betűtípusa
+	 * @param text                a felirat szövege
+	 * @param font                a felirat betűtípusa
 	 * @param horizontalAlignment a felirat vízszintes igazítása
 	 * @return az elkészített felirat
 	 */
@@ -329,11 +332,11 @@ public class SnowplowerPanel extends JPanel {
 	/**
 	 * Létrehoz egy fejárat megjelenítő feliratot.
 	 *
-	 * @param text az ár szövege
-	 * @param canBuy igaz, ha a fej jelenleg megvásárolható
-	 * @param priceCanBuyColor a megvásárolható ár színe
+	 * @param text                az ár szövege
+	 * @param canBuy              igaz, ha a fej jelenleg megvásárolható
+	 * @param priceCanBuyColor    a megvásárolható ár színe
 	 * @param priceCannotBuyColor a nem megvásárolható ár színe
-	 * @param font a felirat betűtípusa
+	 * @param font                a felirat betűtípusa
 	 * @return az elkészített ár felirat
 	 */
 	private JLabel createPriceLabel(String text, boolean canBuy, Color priceCanBuyColor, Color priceCannotBuyColor,
@@ -360,11 +363,11 @@ public class SnowplowerPanel extends JPanel {
 	/**
 	 * Hozzáad egy fejvásárló elemet az ár feliratával és a vásárló gombbal.
 	 *
-	 * @param section a fejvásárló panelrész
+	 * @param section    a fejvásárló panelrész
 	 * @param priceLabel az árat megjelenítő felirat
-	 * @param buyButton a vásárlást indító gomb
-	 * @param column a cél oszlop indexe
-	 * @param row a cél sor indexe
+	 * @param buyButton  a vásárlást indító gomb
+	 * @param column     a cél oszlop indexe
+	 * @param row        a cél sor indexe
 	 */
 	private void addHeadShopItem(JPanel section, JLabel priceLabel, JButton buyButton, int column, int row) {
 		JPanel itemPanel = new JPanel(new BorderLayout(0, 3));
@@ -384,10 +387,10 @@ public class SnowplowerPanel extends JPanel {
 	/**
 	 * Hozzáad egy alapanyag vásárló sort a panelrészhez.
 	 *
-	 * @param section az alapanyag vásárló panelrész
+	 * @param section      az alapanyag vásárló panelrész
 	 * @param materialText az alapanyag nevét és mennyiségét megjelenítő mező
-	 * @param buyButton a vásárlást indító gomb
-	 * @param row a cél sor indexe
+	 * @param buyButton    a vásárlást indító gomb
+	 * @param row          a cél sor indexe
 	 */
 	private void addMaterialRow(JPanel section, JTextField materialText, JButton buyButton, int row) {
 		GridBagConstraints gbc = new GridBagConstraints();
@@ -410,31 +413,90 @@ public class SnowplowerPanel extends JPanel {
 	 */
 	private void updateActiveHeadText() {
 		Snowplower selectedSnowplower = getSelectedSnowplower();
+
 		if (selectedSnowplower == null) {
+			activeHeadText.setText("Nincs aktív fej");
 			return;
 		}
 
 		Head activeHead = selectedSnowplower.getHeadInventory().getActiveHead();
-		activeHeadText.setText(getHeadDisplayName(activeHead));
+		activeHeadText.setText(activeHead.getDescription());
 	}
 
 	/**
-	 * Megadja egy fej felületen használt nevét.
-	 *
-	 * @param head a megjelenítendő fej
-	 * @return a fej magyar megjelenítési neve
+	 * Fejbolt frissítése
 	 */
-	private String getHeadDisplayName(Head head) {
-		return switch (head) {
-			case Sweeper h -> "Söprő fej";
-			case Ejector h -> "Hányó fej";
-			case Breaker h -> "Jégtörő fej";
-			case GravelSpreader h -> "Kőszóró fej";
-			case SaltSpreader h -> "Sószóró fej";
-			case Dragon h -> "Sárkány fej";
-			default -> "";
-		};
+	private void updateHeadShopSection() {
+		// TODO Itt lehetne mókolni, mert jelenleg összemegy a panel. De lehet csak az
+		// egészet kéne állítani (Ez középen van, a másik kettőt alulra / felülre
+		// rendezni, és akkor nem baj, ha összemegy, vagy ilyesmi)
+		// setVisible(false) HELYETT ezt a 3 sort használd:
+		// gomb.setEnabled(false); // Ne lehessen rákattintani
+		// gomb.setContentAreaFilled(false); // Eltünteti a gomb hátterét
+		// gomb.setBorderPainted(false); // Eltünteti a gomb keretét
+		// gomb.setText(""); // Letörli a szöveget (ha van)
+		Snowplower selectedSnowplower = getSelectedSnowplower();
+
+		buySweeperListingButton.setVisible(false);
+		sweeperPriceLabel.setVisible(false);
+
+		buyEjectorListingButton.setVisible(false);
+		ejectorPriceLabel.setVisible(false);
+
+		buyBreakerListingButton.setVisible(false);
+		breakerPriceLabel.setVisible(false);
+
+		buyGravelSpreaderListingButton.setVisible(false);
+		gravelSpreaderPriceLabel.setVisible(false);
+
+		buySaltSpreaderListingButton.setVisible(false);
+		saltSpreaderPriceLabel.setVisible(false);
+
+		buyDragonListingButton.setVisible(false);
+		dragonPriceLabel.setVisible(false);
+
+		if (selectedSnowplower == null) {
+			return;
+		}
+
+		for (HeadListing hl : selectedSnowplower.getHeadInventory().getShop()) {
+			// Nem switch, mert const expr-nek kell lennie
+			if (hl.getHead().getDescription().equals(new Sweeper(null).getDescription())) {
+				buySweeperListingButton.setVisible(true);
+				sweeperPriceLabel.setVisible(true);
+			} else if (hl.getHead().getDescription().equals(new Ejector(null).getDescription())) {
+				buyEjectorListingButton.setVisible(true);
+				ejectorPriceLabel.setVisible(true);
+			} else if (hl.getHead().getDescription().equals(new Breaker(null).getDescription())) {
+				buyBreakerListingButton.setVisible(true);
+				breakerPriceLabel.setVisible(true);
+			} else if (hl.getHead().getDescription().equals(new GravelSpreader(null).getDescription())) {
+				buyGravelSpreaderListingButton.setVisible(true);
+				gravelSpreaderPriceLabel.setVisible(true);
+			} else if (hl.getHead().getDescription().equals(new SaltSpreader(null).getDescription())) {
+				buySaltSpreaderListingButton.setVisible(true);
+				saltSpreaderPriceLabel.setVisible(true);
+			} else if (hl.getHead().getDescription().equals(new Dragon(null).getDescription())) {
+				buyDragonListingButton.setVisible(true);
+				dragonPriceLabel.setVisible(true);
+			}
+		}
 	}
+
+	/**
+	 * Alapanyagbolt frissítése
+	 */
+	private void updateMaterialShopSection() {
+		Snowplower selectedSnowplower = getSelectedSnowplower();
+		saltAmountText.setText("Só: " + (selectedSnowplower == null ? 0 : selectedSnowplower.getSalt()) + " kg");
+		bioAmountText.setText("Biokerozin: " + (selectedSnowplower == null ? 0 : selectedSnowplower.getBio()) + " l");
+		gravelAmountText
+				.setText("Zúzottkő: " + (selectedSnowplower == null ? 0 : selectedSnowplower.getGravel()) + " kg");
+	}
+
+	// TODO TESZT csak
+	static Cleaner c = new Cleaner("Andros");
+	static Snowplower sp = Snowplower.createWithBreaker(c);
 
 	/**
 	 * Lekéri a főpanelen jelenleg kiválasztott hókotrót.
@@ -442,6 +504,10 @@ public class SnowplowerPanel extends JPanel {
 	 * @return a kiválasztott hókotró, vagy {@code null}, ha nincs elérhető főpanel
 	 */
 	private Snowplower getSelectedSnowplower() {
+		c.addMoney(10000);
+		if (sp != null)
+			return sp;
+
 		if (mainPanel == null) {
 			return null;
 		}
@@ -457,7 +523,6 @@ public class SnowplowerPanel extends JPanel {
 			return;
 		}
 		selectedSnowplower.getHeadInventory().cycleActiveHead();
-		updateActiveHeadText();
 	}
 
 	/**
@@ -468,7 +533,17 @@ public class SnowplowerPanel extends JPanel {
 		if (selectedSnowplower == null) {
 			return;
 		}
-		buyHeadListing(new HeadListing(new Sweeper(selectedSnowplower), 1000));
+
+		HeadListing foundHeadListing = null;
+		for (HeadListing hl : selectedSnowplower.getHeadInventory().getShop()) {
+			if (hl.getHead().getDescription().equals(new Sweeper(null).getDescription())) {
+				foundHeadListing = hl;
+				break;
+			}
+		}
+		if (foundHeadListing != null) {
+			selectedSnowplower.getHeadInventory().buyListing(foundHeadListing);
+		}
 	}
 
 	/**
@@ -479,7 +554,16 @@ public class SnowplowerPanel extends JPanel {
 		if (selectedSnowplower == null) {
 			return;
 		}
-		buyHeadListing(new HeadListing(new Ejector(selectedSnowplower), 2000));
+		HeadListing foundHeadListing = null;
+		for (HeadListing hl : selectedSnowplower.getHeadInventory().getShop()) {
+			if (hl.getHead().getDescription().equals(new Ejector(null).getDescription())) {
+				foundHeadListing = hl;
+				break;
+			}
+		}
+		if (foundHeadListing != null) {
+			selectedSnowplower.getHeadInventory().buyListing(foundHeadListing);
+		}
 	}
 
 	/**
@@ -490,7 +574,16 @@ public class SnowplowerPanel extends JPanel {
 		if (selectedSnowplower == null) {
 			return;
 		}
-		buyHeadListing(new HeadListing(new Breaker(selectedSnowplower), 3000));
+		HeadListing foundHeadListing = null;
+		for (HeadListing hl : selectedSnowplower.getHeadInventory().getShop()) {
+			if (hl.getHead().getDescription().equals(new Ejector(null).getDescription())) {
+				foundHeadListing = hl;
+				break;
+			}
+		}
+		if (foundHeadListing != null) {
+			selectedSnowplower.getHeadInventory().buyListing(foundHeadListing);
+		}
 	}
 
 	/**
@@ -501,7 +594,16 @@ public class SnowplowerPanel extends JPanel {
 		if (selectedSnowplower == null) {
 			return;
 		}
-		buyHeadListing(new HeadListing(new GravelSpreader(selectedSnowplower), 4000));
+		HeadListing foundHeadListing = null;
+		for (HeadListing hl : selectedSnowplower.getHeadInventory().getShop()) {
+			if (hl.getHead().getDescription().equals(new GravelSpreader(null).getDescription())) {
+				foundHeadListing = hl;
+				break;
+			}
+		}
+		if (foundHeadListing != null) {
+			selectedSnowplower.getHeadInventory().buyListing(foundHeadListing);
+		}
 	}
 
 	/**
@@ -512,7 +614,16 @@ public class SnowplowerPanel extends JPanel {
 		if (selectedSnowplower == null) {
 			return;
 		}
-		buyHeadListing(new HeadListing(new SaltSpreader(selectedSnowplower), 5000));
+		HeadListing foundHeadListing = null;
+		for (HeadListing hl : selectedSnowplower.getHeadInventory().getShop()) {
+			if (hl.getHead().getDescription().equals(new SaltSpreader(null).getDescription())) {
+				foundHeadListing = hl;
+				break;
+			}
+		}
+		if (foundHeadListing != null) {
+			selectedSnowplower.getHeadInventory().buyListing(foundHeadListing);
+		}
 	}
 
 	/**
@@ -523,22 +634,16 @@ public class SnowplowerPanel extends JPanel {
 		if (selectedSnowplower == null) {
 			return;
 		}
-		buyHeadListing(new HeadListing(new Dragon(selectedSnowplower), 6000));
-	}
-
-	/**
-	 * Megvásárolja a megadott head listinget a kiválasztott hókotró fejtárolóján
-	 * keresztül.
-	 *
-	 * @param listing a megvásárolni kívánt fej listingje
-	 */
-	private void buyHeadListing(HeadListing listing) {
-		Snowplower selectedSnowplower = getSelectedSnowplower();
-		if (selectedSnowplower == null) {
-			return;
+		HeadListing foundHeadListing = null;
+		for (HeadListing hl : selectedSnowplower.getHeadInventory().getShop()) {
+			if (hl.getHead().getDescription().equals(new Dragon(null).getDescription())) {
+				foundHeadListing = hl;
+				break;
+			}
 		}
-		selectedSnowplower.getHeadInventory().buyListing(listing);
-		//updateActiveHeadText();
+		if (foundHeadListing != null) {
+			selectedSnowplower.getHeadInventory().buyListing(foundHeadListing);
+		}
 	}
 
 	/**
@@ -586,14 +691,17 @@ public class SnowplowerPanel extends JPanel {
 	}
 
 	/**
-	 * Az útvonal tervezés bekötésének előkészített helye.
+	 * Az útvonal tervezésének állítása.
 	 */
-	private void planSelectedSnowplowerPath() {
-		// TODO: útvonal tervezés bekötése később
+	private void pressExtPathButton() {
+		if (mainPanel == null) {
+			return;
+		}
+
+		mainPanel.setIsExtendingPath(!mainPanel.getIsExtendingPath());
 	}
 
-
-	//TESZT!!!##############################################################################################################
+	// TESZT!!!##############################################################################################################
 	/**
 	 * Egyszerű, önálló tesztablakot indít a panel megjelenítéséhez.
 	 *
@@ -603,12 +711,33 @@ public class SnowplowerPanel extends JPanel {
 		javax.swing.SwingUtilities.invokeLater(() -> {
 			javax.swing.JFrame frame = new javax.swing.JFrame("SnowplowerPanel teszt");
 			frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
-			frame.add(new SnowplowerPanel());
+			SnowplowerPanel spPanel = new SnowplowerPanel(null);
+			frame.add(spPanel);
 			frame.pack();
 			frame.setLocationRelativeTo(null);
 			frame.setVisible(true);
+
+			Thread gameThread = new Thread(() -> {
+				while (true) {
+					try {
+						// Blocks this thread until Swing finishes updating
+						SwingUtilities.invokeAndWait(() -> {
+							spPanel.update(); // model update + repaint, all on EDT
+						});
+
+						Thread.sleep(16); // ~60fps, runs on game thread (not EDT)
+					} catch (InterruptedException | InvocationTargetException e) {
+						Thread.currentThread().interrupt();
+						break;
+					}
+				}
+			});
+			gameThread.setDaemon(true);
+			gameThread.start();
 		});
+
 	}
-	//TESZT VÉGE!!!##############################################################################################################
+	// TESZT
+	// VÉGE!!!##############################################################################################################
 
 }

@@ -15,8 +15,11 @@ import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 import graphics.NewMain;
+import graphics.Panels.BusPanel;
+import graphics.Panels.SnowplowerPanel;
 import user.setupPlayerData;
 
 import javax.swing.BorderFactory;
@@ -40,38 +43,36 @@ import javax.swing.border.AbstractBorder;
  */
 public class App {
 	/**
-	 * Létrehoz egy {@code App} példányt.
-	 */
-	public App() {
-	}
-
-	/**
 	 * Az alkalmazás belépési pontja.
 	 *
 	 * @param args parancssori argumentumok
 	 * @throws Exception ha az indítás közben nem kezelt hiba történik
 	 */
 	public static void main(String[] args) throws Exception {
+		// Handler beállítása
+		Proto proto = new Proto(World.players);
+		Logger.getGlobal().setUseParentHandlers(false);
+		OwnHandler ownHandler = new OwnHandler(proto.objectMap);
+		ownHandler.isLogging = false;
+		Logger.getGlobal().addHandler(ownHandler);
+
+		// Innen lehet tesztelni
+		SnowplowerPanel.main(args);
+
 		// Heti setupMenu teszthez
 		// if (args.length > 0 && args[0].equals("setup")) {
-		List<setupPlayerData> players = setupPlayer();
+		// List<setupPlayerData> players = setupPlayer();
 
-		for (setupPlayerData player : players) {
-			System.out.println(player.getName() + " " + player.getColor() + " " + player.getVehicle());
-		}
+		// for (setupPlayerData player : players) {
+		// System.out.println(player.getName() + " " + player.getColor() + " " +
+		// player.getVehicle());
+		// }
 		// return;
 		// }
 
 		// Új main hívás, persze nem így lesz, csak könnyebben tudok prototipizálni
 		// Meg valszeg majd itt csak létre lesz hozva a Graphics, vagy tudja a rosseb.
 		NewMain.main(args);
-
-		// Proto proto = new Proto(World.players);
-
-		// // Handler beállítása
-		// Logger.getGlobal().setUseParentHandlers(false);
-		// OwnHandler ownHandler = new OwnHandler(proto.objectMap);
-		// Logger.getGlobal().addHandler(ownHandler);
 
 		// // Parancsok beolvasása
 		// proto.readCommandsFromCommandLine();
@@ -81,7 +82,8 @@ public class App {
 	 * Megjeleníti a játékos hozzáadó menüt, amelyben a felhasználó játékosokat
 	 * vehet fel névvel, színnel és járművel.
 	 *
-	 * @return a felvett játékosok adatait tartalmazó lista, a képernyőn látható sorok sorrendjében
+	 * @return a felvett játékosok adatait tartalmazó lista, a képernyőn látható
+	 *         sorok sorrendjében
 	 */
 	public static List<setupPlayerData> setupPlayer() {
 		final String setupMenuTitle = "Játékos hozzáadó menü";
@@ -346,7 +348,8 @@ public class App {
 	}
 
 	/**
-	 * Hozzáad egy kitöltő panelt, amely a tartalmat a görgethető terület tetején tartja.
+	 * Hozzáad egy kitöltő panelt, amely a tartalmat a görgethető terület tetején
+	 * tartja.
 	 *
 	 * @param rowsPanel a kitöltő panelt fogadó panel
 	 * @param row       a kitöltő panel sorindexe
@@ -400,7 +403,6 @@ public class App {
 		return comboBox;
 	}
 
-
 	/**
 	 * Létrehoz egy menügombot egységes megjelenéssel.
 	 *
@@ -410,7 +412,8 @@ public class App {
 	 * @param controlBorder     a gomb keretszíne
 	 * @return az elkészített gomb
 	 */
-	private static JButton createMenuButton(String text, Font buttonFont, Color controlBackground, Color controlBorder) {
+	private static JButton createMenuButton(String text, Font buttonFont, Color controlBackground,
+			Color controlBorder) {
 		JButton button = new JButton(text);
 		button.setFont(buttonFont);
 		button.setBackground(controlBackground);
@@ -504,5 +507,4 @@ public class App {
 		}
 	}
 
-	
 }

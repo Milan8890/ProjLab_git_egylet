@@ -21,6 +21,7 @@ import playground.Lane;
  */
 public class Breaker extends Head {
 	private static double ICEBREAKPAY = 0.05;
+
 	/**
 	 * Konstruktor.
 	 * 
@@ -43,7 +44,18 @@ public class Breaker extends Head {
 
 		double payment = iceAmount * l.getRoad().getLength() * ICEBREAKPAY;
 
-		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$" , new Object[] {snowplower , this, l});
+		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$",
+				new Object[] { snowplower, this, l });
 		return (int) payment; // 0.5 szorzó van a tesztben is.
+	}
+
+	/**
+	 * Visszaadja a fej nevét.
+	 * 
+	 * @return A fej neve
+	 */
+	@Override
+	public String getDescription() {
+		return "Jégtörő fej";
 	}
 }
