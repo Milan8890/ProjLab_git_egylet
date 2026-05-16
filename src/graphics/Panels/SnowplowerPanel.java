@@ -74,8 +74,6 @@ public class SnowplowerPanel extends JPanel {
 		this.mainPanel = mainPanel;
 
 		final Color separatorColor = new Color(48, 78, 157);
-		final Color priceCanBuyColor = new Color(20, 150, 55);
-		final Color priceCannotBuyColor = new Color(205, 50, 50);
 		final Font normalFont = new Font("Serif", Font.PLAIN, 14);
 		final Font buttonFont = new Font("Serif", Font.PLAIN, 13);
 
@@ -84,7 +82,7 @@ public class SnowplowerPanel extends JPanel {
 		setBorder(BorderFactory.createLineBorder(separatorColor, 2));
 		setPreferredSize(new Dimension(300, 520));
 
-		addSection(createHeadShopSection(separatorColor, normalFont, buttonFont, priceCanBuyColor, priceCannotBuyColor),
+		addSection(createHeadShopSection(separatorColor, normalFont, buttonFont),
 				0, 0.53);
 		addSection(createMaterialShopSection(separatorColor, normalFont, buttonFont), 1, 0.27);
 		addSection(createRouteControlSection(normalFont), 2, 0.20);
@@ -121,15 +119,12 @@ public class SnowplowerPanel extends JPanel {
 	/**
 	 * Létrehozza a fejvásárló panelrészt.
 	 *
-	 * @param separatorColor      a szakaszelválasztó vonal színe
-	 * @param normalFont          a szövegek betűtípusa
-	 * @param buttonFont          a gombok betűtípusa
-	 * @param priceCanBuyColor    a megvásárolható fej árának színe
-	 * @param priceCannotBuyColor a nem megvásárolható fej árának színe
+	 * @param separatorColor a szakaszelválasztó vonal színe
+	 * @param normalFont     a szövegek betűtípusa
+	 * @param buttonFont     a gombok betűtípusa
 	 * @return az elkészített fejvásárló panelrész
 	 */
-	private JPanel createHeadShopSection(Color separatorColor, Font normalFont, Font buttonFont, Color priceCanBuyColor,
-			Color priceCannotBuyColor) {
+	private JPanel createHeadShopSection(Color separatorColor, Font normalFont, Font buttonFont) {
 		JPanel section = createSectionPanel(separatorColor, true, 22, 27, 22, 27);
 		section.setLayout(new GridBagLayout());
 
@@ -156,14 +151,12 @@ public class SnowplowerPanel extends JPanel {
 		gbc.insets = new Insets(0, 18, 24, 0);
 		section.add(changeHeadButton, gbc);
 
-		sweeperPriceLabel = createPriceLabel("1000 $", false, priceCanBuyColor, priceCannotBuyColor, normalFont);
-		ejectorPriceLabel = createPriceLabel("2000 $", false, priceCanBuyColor, priceCannotBuyColor, normalFont);
-		breakerPriceLabel = createPriceLabel("3000 $", false, priceCanBuyColor, priceCannotBuyColor, normalFont);
-		gravelSpreaderPriceLabel = createPriceLabel("4000 $", false, priceCanBuyColor, priceCannotBuyColor,
-				normalFont);
-		saltSpreaderPriceLabel = createPriceLabel("5000 $", false, priceCanBuyColor, priceCannotBuyColor,
-				normalFont);
-		dragonPriceLabel = createPriceLabel("6000 $", false, priceCanBuyColor, priceCannotBuyColor, normalFont);
+		sweeperPriceLabel = createPriceLabel("1000 $", normalFont);
+		ejectorPriceLabel = createPriceLabel("2000 $", normalFont);
+		breakerPriceLabel = createPriceLabel("3000 $", normalFont);
+		gravelSpreaderPriceLabel = createPriceLabel("4000 $", normalFont);
+		saltSpreaderPriceLabel = createPriceLabel("5000 $", normalFont);
+		dragonPriceLabel = createPriceLabel("6000 $", normalFont);
 
 		buySweeperListingButton = createButton("Söprő fej", buttonFont);
 		buyEjectorListingButton = createButton("Hányó fej", buttonFont);
@@ -332,17 +325,13 @@ public class SnowplowerPanel extends JPanel {
 	/**
 	 * Létrehoz egy fejárat megjelenítő feliratot.
 	 *
-	 * @param text                az ár szövege
-	 * @param canBuy              igaz, ha a fej jelenleg megvásárolható
-	 * @param priceCanBuyColor    a megvásárolható ár színe
-	 * @param priceCannotBuyColor a nem megvásárolható ár színe
-	 * @param font                a felirat betűtípusa
+	 * @param text az ár szövege
+	 * @param font a felirat betűtípusa
 	 * @return az elkészített ár felirat
 	 */
-	private JLabel createPriceLabel(String text, boolean canBuy, Color priceCanBuyColor, Color priceCannotBuyColor,
+	private JLabel createPriceLabel(String text,
 			Font font) {
 		JLabel label = createLabel(text, font, SwingConstants.LEFT);
-		label.setForeground(canBuy ? priceCanBuyColor : priceCannotBuyColor);
 		return label;
 	}
 
@@ -437,6 +426,18 @@ public class SnowplowerPanel extends JPanel {
 		// gomb.setText(""); // Letörli a szöveget (ha van)
 		Snowplower selectedSnowplower = getSelectedSnowplower();
 
+		final Color priceCanBuyColor = new Color(20, 150, 55);
+		final Color priceCannotBuyColor = new Color(205, 50, 50);
+		// Pénz alapján szín beállítása
+		int money = selectedSnowplower.getCleaner().getMoney();
+
+		sweeperPriceLabel.setForeground(money >= 1000 ? priceCanBuyColor : priceCannotBuyColor);
+		ejectorPriceLabel.setForeground(money >= 2000 ? priceCanBuyColor : priceCannotBuyColor);
+		breakerPriceLabel.setForeground(money >= 3000 ? priceCanBuyColor : priceCannotBuyColor);
+		gravelSpreaderPriceLabel.setForeground(money >= 4000 ? priceCanBuyColor : priceCannotBuyColor);
+		saltSpreaderPriceLabel.setForeground(money >= 5000 ? priceCanBuyColor : priceCannotBuyColor);
+		dragonPriceLabel.setForeground(money >= 6000 ? priceCanBuyColor : priceCannotBuyColor);
+
 		buySweeperListingButton.setVisible(false);
 		sweeperPriceLabel.setVisible(false);
 
@@ -481,6 +482,7 @@ public class SnowplowerPanel extends JPanel {
 				dragonPriceLabel.setVisible(true);
 			}
 		}
+
 	}
 
 	/**
@@ -504,7 +506,8 @@ public class SnowplowerPanel extends JPanel {
 	 * @return a kiválasztott hókotró, vagy {@code null}, ha nincs elérhető főpanel
 	 */
 	private Snowplower getSelectedSnowplower() {
-		c.addMoney(10000);
+		c.addMoney(10);
+
 		if (sp != null)
 			return sp;
 
