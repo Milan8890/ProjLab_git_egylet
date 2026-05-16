@@ -53,13 +53,24 @@ public class App {
 
 	public static void main(String[] args) throws Exception {
 		JFrame f = new JFrame();
-		f.setSize(1000, 1000);
+		f.setSize(1500, 1000);
 		JPanel p = new TestPanel();
-		p.setSize(1000, 1000);
+		p.setSize(1500, 1000);
 
 		b = new BusView(null);
 
 		f.add(p);
+
+		f.addKeyListener(new java.awt.event.KeyAdapter() {
+        	@Override
+        	public void keyPressed(java.awt.event.KeyEvent e) {
+            	if (e.getKeyCode() == java.awt.event.KeyEvent.VK_SPACE) {
+                	graphics.ModelViews.BusView.autoProgress += 10.0;
+                	f.repaint(); 
+            	}
+        	}
+    	});
+
 
 		f.setVisible(true);
 
