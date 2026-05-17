@@ -16,6 +16,7 @@ import java.awt.RenderingHints;
 import java.util.ArrayList;
 import java.util.List;
 
+import graphics.MainPanel;
 import graphics.NewMain;
 import user.setupPlayerData;
 
@@ -39,6 +40,22 @@ public class App {
 		// Heti setupMenu teszthez
 		// if (args.length > 0 && args[0].equals("setup")) {
 		List<setupPlayerData> players = setupPlayer();
+
+
+
+		javax.swing.SwingUtilities.invokeLater(() -> {
+            MainPanel mp = new MainPanel();
+            
+            mp.setTitle("Hókotrós játék - git_egylet (Gergo Branch)");
+            mp.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            
+            mp.pack();
+            
+            mp.setLocationRelativeTo(null); 
+            mp.setVisible(true);
+        });
+
+
 
 		for (setupPlayerData player : players) {
 			System.out.println(player.getName() + " " + player.getColor() + " " + player.getVehicle());
