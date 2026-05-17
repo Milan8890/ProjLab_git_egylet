@@ -36,7 +36,7 @@ public class CarView {
     }
 
 	public CarView(Car car) {
-		this.modelCar = modelCar;
+		this.modelCar = car;
         this.mainPanel = mainPanel;
         this.pos = new Point2D.Double(0, 0);
 	}

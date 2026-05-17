@@ -2,9 +2,9 @@ package graphics.ModelViews;
 
 import java.awt.Graphics2D;
 import java.awt.geom.Point2D;
-import java.awt.Image;
-import javax.swing.ImageIcon;
-
+import java.awt.image.BufferedImage;
+import java.io.File;
+import javax.imageio.ImageIO;
 import java.awt.Color;
 
 import graphics.NewMain;
@@ -14,15 +14,20 @@ import graphics.MainPanel;
 public class LaneView {
 	private static final float SZEGELY_VASTAGSAG = 1f;
 
-	private static final Image[] ASZFALT_TEXTURAK = new Image[] {
-		new ImageIcon("Asset/beton100.png").getImage(),
-		new ImageIcon("Asset/beton200.png").getImage(),
-		new ImageIcon("Asset/beton300.png").getImage(),
-		new ImageIcon("Asset/beton400.png").getImage(),
-		new ImageIcon("Asset/beton500.png").getImage()
-	};
+	private static final BufferedImage[] ASZFALT_TEXTURAK = new BufferedImage[5];
+    private static final int[] TEXTURA_HOSSZAK = new int[] { 100, 200, 300, 400, 500 };
 
-	private static final int[] TEXTURA_HOSSZAK = new int[] { 100, 200, 300, 400, 500 };
+    static {
+        try {
+            ASZFALT_TEXTURAK[0] = ImageIO.read(new File("Asset/beton100.png"));
+            ASZFALT_TEXTURAK[1] = ImageIO.read(new File("Asset/beton200.png"));
+            ASZFALT_TEXTURAK[2] = ImageIO.read(new File("Asset/beton300.png"));
+            ASZFALT_TEXTURAK[3] = ImageIO.read(new File("Asset/beton400.png"));
+            ASZFALT_TEXTURAK[4] = ImageIO.read(new File("Asset/beton500.png"));
+        } catch (Exception e) {
+            // Ha barmelyik hianyzik, uresen marad a strukturank
+        }
+    }
 
 	public Point2D startPos;
 	public Point2D endPos;
@@ -60,7 +65,7 @@ public class LaneView {
 
 		int h = (int) Math.round(hossza);
 
-		Image kivalasztottAszfalt = valasztLegkozelebbiTexturat(h);
+		BufferedImage kivalasztottAszfalt = valasztLegkozelebbiTexturat(h);
 
 		if (kivalasztottAszfalt != null) {
 			g2.drawImage(kivalasztottAszfalt, 
@@ -84,18 +89,18 @@ public class LaneView {
 	 * Segédfüggvény, ami megkeresi, hogy a sáv 'h' pixelhosszúságához 
 	 * melyik fix beton textúrahossz (100, 200, 300, 400, 500) áll a legközelebb.
 	 */
-	private Image valasztLegkozelebbiTexturat(int aktualisHossz) {
-		int legjobbIndex = 0;
-		int legkisebbKulonbseg = Math.abs(aktualisHossz - TEXTURA_HOSSZAK[0]);
+	private BufferedImage valasztLegkozelebbiTexturat(int aktualisHossz) {
+        int legjobbIndex = 0;
+        int legkisebbKulonbseg = Math.abs(aktualisHossz - TEXTURA_HOSSZAK[0]);
 
-		for (int i = 1; i < TEXTURA_HOSSZAK.length; i++) {
-			int aktualisKulonbseg = Math.abs(aktualisHossz - TEXTURA_HOSSZAK[i]);
-			if (aktualisKulonbseg < legkisebbKulonbseg) {
-				legkisebbKulonbseg = aktualisKulonbseg;
-				legjobbIndex = i;
-			}
-		}
-		
-		return ASZFALT_TEXTURAK[legjobbIndex];
-	}
+        for (int i = 1; i < TEXTURA_HOSSZAK.length; i++) {
+            int aktualisKulonbseg = Math.abs(aktualisHossz - TEXTURA_HOSSZAK[i]);
+            if (aktualisKulonbseg < legkisebbKulonbseg) {
+                legkisebbKulonbseg = aktualisKulonbseg;
+                legjobbIndex = i;
+            }
+        }
+        
+        return ASZFALT_TEXTURAK[legjobbIndex];
+    }
 }

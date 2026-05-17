@@ -6,6 +6,10 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.Point2D;
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+import javax.imageio.ImageIO;
 import javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -33,8 +37,9 @@ public class MainPanel extends JFrame {
     public static final int CROSSING_SIZE = 150;
     public static final int LANE_WIDTH = 20;
     public static final float CROSSING_STROKE = 6f;
-    private java.awt.Image backgroundImage;
-    
+
+    private BufferedImage backgroundImage;
+
     private List<Cleaner> cleaners;
     private List<BusDriver> busDrivers;
     private boolean isExtendingPath;
@@ -68,7 +73,11 @@ public class MainPanel extends JFrame {
         busViews = new ArrayList<>();
         carViews = new ArrayList<>();
 
-        backgroundImage = new javax.swing.ImageIcon("Asset/fu.jpg").getImage();
+        try {
+            backgroundImage = ImageIO.read(new File("Asset/fu.jpg"));
+        } catch (Exception e) {
+            backgroundImage = null;
+        }
 
         buildTestMap();
         initMapPanel();
