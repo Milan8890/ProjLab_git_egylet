@@ -14,6 +14,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.logging.Logger;
 
 public class MapPanel extends JPanel {
 
@@ -83,8 +84,10 @@ public class MapPanel extends JPanel {
 
 		this.drawBackground((Graphics2D) g2d.create());
 
-		if (mainPanel == null)
+		if (mainPanel == null) {
+			Logger.getGlobal().severe("No main panel in MapPanel.java");
 			return;
+		}
 
 		// Külön típusonként, mert fontos a sorrend
 		for (CrossingView view : mainPanel.getCrossingViews()) {

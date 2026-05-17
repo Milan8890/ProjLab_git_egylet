@@ -64,11 +64,11 @@ public class MainPanel extends JFrame {
 			@Override
 			public void keyPressed(KeyEvent e) {
 
-				if (!isExtendingPath)
+				if (!isExtendingPath || selectedCrossing == null)
 					return;
 
 				Vehicle selectedVehicle = getSelectedBus() == null ? getSelectedSnowplower() : getSelectedBus();
-				if (selectedVehicle == null || selectedCrossing == null)
+				if (selectedVehicle == null)
 					return;
 
 				Path path = selectedVehicle.getPath();
