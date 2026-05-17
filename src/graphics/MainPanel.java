@@ -6,6 +6,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.geom.Point2D;
+import java.awt.RenderingHints;
+import java.awt.Dimension;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
@@ -88,13 +90,13 @@ public class MainPanel extends JFrame {
         Crossing c2 = new Crossing();
         Crossing c3 = new Crossing();
         
-        java.awt.geom.Point2D.Double pos1 = new java.awt.geom.Point2D.Double(200, 300);
-        java.awt.geom.Point2D.Double pos2 = new java.awt.geom.Point2D.Double(0, 0);
-        java.awt.geom.Point2D.Double pos3 = new java.awt.geom.Point2D.Double(500, 100);
+        Point2D.Double pos1 = new Point2D.Double(200, 300);
+        Point2D.Double pos2 = new Point2D.Double(0, 0);
+        Point2D.Double pos3 = new Point2D.Double(500, 100);
         
-        crossingViews.add(new CrossingView(c1, new java.awt.geom.Point2D.Double(pos1.x + 3, pos1.y + 3), false));
-        crossingViews.add(new CrossingView(c2, new java.awt.geom.Point2D.Double(pos2.x + 3, pos2.y + 3), false));
-        crossingViews.add(new CrossingView(c3, new java.awt.geom.Point2D.Double(pos3.x + 3, pos3.y + 3), false));
+        crossingViews.add(new CrossingView(c1, new Point2D.Double(pos1.x + 3, pos1.y + 3), false));
+        crossingViews.add(new CrossingView(c2, new Point2D.Double(pos2.x + 3, pos2.y + 3), false));
+        crossingViews.add(new CrossingView(c3, new Point2D.Double(pos3.x + 3, pos3.y + 3), false));
 
         addRoadWithLanes(c2, c1, 3); 
         addRoadWithLanes(c2, c3, 2); 
@@ -108,7 +110,7 @@ public class MainPanel extends JFrame {
                 super.paintComponent(g); 
                 
                 Graphics2D g2 = (Graphics2D) g.create();
-                g2.setRenderingHint(java.awt.RenderingHints.KEY_ANTIALIASING, java.awt.RenderingHints.VALUE_ANTIALIAS_ON);
+                g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
                 
                 if (backgroundImage != null) {
                     g2.drawImage(backgroundImage, 0, 0, 1500, 1000, this);
@@ -118,16 +120,16 @@ public class MainPanel extends JFrame {
                 for (int x = 100; x < 1500; x += 100) { g2.drawLine(x, 0, x, 1000); }
                 for (int y = 100; y < 1000; y += 100) { g2.drawLine(0, y, 1500, y); }
                 
+                for (CrossingView cv : crossingViews) {
+                    cv.paint(g2);
+                }
+
                 for (RoadView rv : roadViews) {
                     rv.paint(g2);
                 }
                 
                 for (LaneView lv : laneViews) {
                     lv.paint(g2);
-                }
-                
-                for (CrossingView cv : crossingViews) {
-                    cv.paint(g2);
                 }
 
                 for (CarView cv : carViews) {
@@ -138,7 +140,7 @@ public class MainPanel extends JFrame {
             }
         };
 
-        rajzPanel.setPreferredSize(new java.awt.Dimension(1500, 1000));
+        rajzPanel.setPreferredSize(new Dimension(1500, 1000));
         rajzPanel.setBackground(Color.WHITE); 
         this.setContentPane(rajzPanel);
     }
@@ -165,7 +167,7 @@ public class MainPanel extends JFrame {
         generateAndAddLaneViews(road, utEleje, utVege);
     }
 
-    private Point2D.Double calculateCenter(CrossingView view) {
+    public static Point2D.Double calculateCenter(CrossingView view) {
         double sugar = CROSSING_SIZE / 2.0;
         double centerX = view.pos.getX() - 3.0 + sugar;
         double centerY = view.pos.getY() - 3.0 + sugar;

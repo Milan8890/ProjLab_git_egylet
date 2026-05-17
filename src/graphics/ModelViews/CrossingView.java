@@ -3,6 +3,7 @@ package graphics.ModelViews;
 import java.awt.Graphics2D;
 import java.awt.geom.Point2D;
 import java.awt.Color;
+import java.awt.BasicStroke;
 
 import graphics.NewMain;
 import playground.Crossing;
@@ -37,7 +38,7 @@ public class CrossingView {
         g2.fillOval(x, y, atmero, atmero);
 
         g2.setColor(new Color(0, 0, 139));
-        g2.setStroke(new java.awt.BasicStroke(vastagsag));
+        g2.setStroke(new BasicStroke(vastagsag));
         g2.drawOval(x, y, atmero, atmero);
 
         g2.dispose();

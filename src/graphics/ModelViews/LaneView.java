@@ -6,6 +6,7 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import javax.imageio.ImageIO;
 import java.awt.Color;
+import java.awt.BasicStroke;
 
 import graphics.NewMain;
 import playground.Lane;
@@ -25,7 +26,7 @@ public class LaneView {
             ASZFALT_TEXTURAK[3] = ImageIO.read(new File("Asset/beton400.png"));
             ASZFALT_TEXTURAK[4] = ImageIO.read(new File("Asset/beton500.png"));
         } catch (Exception e) {
-            // Ha barmelyik hianyzik, uresen marad a strukturank
+
         }
     }
 
@@ -79,7 +80,7 @@ public class LaneView {
 		}
 
 		g2.setColor(Color.YELLOW);
-		g2.setStroke(new java.awt.BasicStroke(SZEGELY_VASTAGSAG));
+		g2.setStroke(new BasicStroke(SZEGELY_VASTAGSAG));
 		g2.drawRect(0, 0, h, MainPanel.LANE_WIDTH);
 
 		g2.dispose();

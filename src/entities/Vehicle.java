@@ -264,6 +264,20 @@ public abstract class Vehicle {
 	}
 
 	/**
+     * Visszaadja a sávot, amin a jármű éppen halad.
+     */
+	public Lane getCurrentLane() {
+        return this.currentLane;
+    }
+
+    /**
+     * Visszaadja a jármű aktuális megtett távolságát pixelben/méterben az úton.
+     */
+    public double getLaneProgress() {
+        return this.laneProgress;
+    }
+
+	/**
 	 * Kezeli az ütközés utáni kényszerpihenőt.
 	 * 
 	 * @return Igaz, ha a jármű újra mozgásképes, egyébként hamis.
