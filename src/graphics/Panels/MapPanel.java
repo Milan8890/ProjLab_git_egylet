@@ -83,6 +83,9 @@ public class MapPanel extends JPanel {
 
 		this.drawBackground((Graphics2D) g2d.create());
 
+		if (mainPanel == null)
+			return;
+
 		// Külön típusonként, mert fontos a sorrend
 		for (CrossingView view : mainPanel.getCrossingViews()) {
 			view.paint((Graphics2D) g2d.create());
