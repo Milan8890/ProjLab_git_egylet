@@ -91,4 +91,22 @@ public class Path {
 		Logger.getGlobal().log(Level.INFO, "[Obj] returned next lane [Obj]", new Object[] { this, l });
 		return l;
 	}
+
+	/**
+	 * Visszaadja az útvonalban található sávokat.
+	 * 
+	 * @return Az útvonal sávjai
+	 */
+	public List<Lane> getLanes() {
+		return this.pathLanes;
+	}
+
+	/**
+	 * Visszaadja az utolsó kereszteződést.
+	 * 
+	 * @return Az utolsó kereszteződés
+	 */
+	public Crossing getLastCrossing() {
+		return this.lastCrossing;
+	}
 }

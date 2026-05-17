@@ -15,8 +15,13 @@ import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
+
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
 
 import graphics.NewMain;
+import graphics.Panels.MapPanel;
 import user.setupPlayerData;
 
 import javax.swing.BorderFactory;
@@ -36,6 +41,20 @@ import javax.swing.border.AbstractBorder;
 
 public class App {
 	public static void main(String[] args) throws Exception {
+		Proto proto = new Proto(World.players);
+
+		// Handler beállítása
+		Logger.getGlobal().setUseParentHandlers(false);
+		OwnHandler ownHandler = new OwnHandler(proto.objectMap);
+		Logger.getGlobal().addHandler(ownHandler);
+
+		JFrame f = new JFrame();
+		MapPanel p = new MapPanel(null);
+
+		f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		f.add(p);
+		f.pack();
+		f.setVisible(true);
 		// Heti setupMenu teszthez
 		// if (args.length > 0 && args[0].equals("setup")) {
 		List<setupPlayerData> players = setupPlayer();
@@ -49,13 +68,6 @@ public class App {
 		// Új main hívás, persze nem így lesz, csak könnyebben tudok prototipizálni
 		// Meg valszeg majd itt csak létre lesz hozva a Graphics, vagy tudja a rosseb.
 		NewMain.main(args);
-
-		// Proto proto = new Proto(World.players);
-
-		// // Handler beállítása
-		// Logger.getGlobal().setUseParentHandlers(false);
-		// OwnHandler ownHandler = new OwnHandler(proto.objectMap);
-		// Logger.getGlobal().addHandler(ownHandler);
 
 		// // Parancsok beolvasása
 		// proto.readCommandsFromCommandLine();

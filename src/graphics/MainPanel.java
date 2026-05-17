@@ -1,7 +1,12 @@
 package graphics;
 
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.crypto.Cipher;
 import javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -9,6 +14,7 @@ import javax.swing.JTextField;
 
 import entities.Bus;
 import entities.Snowplower;
+import entities.Vehicle;
 import graphics.ModelViews.BusView;
 import graphics.ModelViews.CarView;
 import graphics.ModelViews.CrossingView;
@@ -18,7 +24,11 @@ import graphics.ModelViews.SnowplowerView;
 import graphics.Panels.BusPanel;
 import graphics.Panels.MapPanel;
 import graphics.Panels.SnowplowerPanel;
+import playground.City;
 import playground.Crossing;
+import playground.Lane;
+import playground.Path;
+import playground.Road;
 import user.BusDriver;
 import user.Cleaner;
 
@@ -33,12 +43,12 @@ public class MainPanel extends JFrame {
 
 	private Crossing selectedCrossing;
 
-	private List<CrossingView> crossingViews;
-	private List<RoadView> roadViews;
-	private List<LaneView> laneViews;
-	private List<SnowplowerView> snowplowerViews;
-	private List<BusView> busViews;
-	private List<CarView> carViews;
+	private List<CrossingView> crossingViews = new ArrayList<>();
+	private List<RoadView> roadViews = new ArrayList<>();
+	private List<LaneView> laneViews = new ArrayList<>();
+	private List<SnowplowerView> snowplowerViews = new ArrayList<>();
+	private List<BusView> busViews = new ArrayList<>();
+	private List<CarView> carViews = new ArrayList<>();
 
 	private JComboBox playerSelectorComboBox;
 	private JTextField playerData;
@@ -49,6 +59,42 @@ public class MainPanel extends JFrame {
 	private MapPanel mapPanel;
 
 	public MainPanel() {
+		this.addKeyListener(new KeyAdapter() {
+			// Út hosszabbítása KeyListener
+			@Override
+			public void keyPressed(KeyEvent e) {
+
+				if (!isExtendingPath || selectedCrossing == null)
+					return;
+
+				Vehicle selectedVehicle = getSelectedBus() == null ? getSelectedSnowplower() : getSelectedBus();
+				if (selectedVehicle == null)
+					return;
+
+				Path path = selectedVehicle.getPath();
+				Crossing lastCrossing = path.getLastCrossing();
+
+				Road roadToExtendWith = null;
+
+				for (Road road : lastCrossing.getOutRoads()) {
+					if (road.getToCrossing() == selectedCrossing) {
+						roadToExtendWith = road;
+						break;
+					}
+				}
+
+				if (roadToExtendWith == null)
+					return;
+
+				int pressed = Character.getNumericValue(e.getKeyChar());
+
+				List<Lane> lanes = roadToExtendWith.getLanes();
+				if (lanes.size() > pressed || pressed <= 0)
+					return;
+
+				selectedVehicle.extendPath(lanes.get(pressed - 1));
+			}
+		});
 		NewMain.notdone("MainPanel konstruktor");
 	}
 
@@ -133,8 +179,15 @@ public class MainPanel extends JFrame {
 		this.selectedCrossing = selectedCrossing;
 	}
 
-	public void update() {
-		NewMain.notdone("MainPanel update");
-	}
+	// Szerintem nem kell az update, mert csak megoldja a repaint. És ezeket kéne
+	// újradefiniálni az egyes panelekben.
 
+	// public void update() {
+	// // Ahhoz meg kéne írni a játékosválasztást
+	// // Ha igen, akkor nincs nullozás
+	// if (snowplowerPanel != null)
+	// snowplowerPanel.update();
+
+	// NewMain.notdone("MainPanel update");
+	// }
 }
