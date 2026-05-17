@@ -24,6 +24,7 @@ import playground.Road;
 public class SaltSpreader extends Head {
 
 	static final double SALT_CONSUME = 1;
+
 	/**
 	 * Konstruktor.
 	 * 
@@ -50,8 +51,10 @@ public class SaltSpreader extends Head {
 		double amount = (l.getRoad().getLength() * SALT_CONSUME);
 		snowplower.useSalt(amount);
 
-		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$", new Object[] {snowplower , this, l});
-		Logger.getGlobal().log(Level.INFO, "[Obj] uses " + amount + "salt from [Obj]", new Object[] {this, snowplower});
+		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$",
+				new Object[] { snowplower, this, l });
+		Logger.getGlobal().log(Level.INFO, "[Obj] uses " + amount + "salt from [Obj]",
+				new Object[] { this, snowplower });
 
 		return payment;
 	}
@@ -65,21 +68,31 @@ public class SaltSpreader extends Head {
 	 */
 	@Override
 	public boolean canEnterLane(Lane l) {
-		if (l.hasSalt())
-		{
-			Logger.getGlobal().log(Level.INFO, "[Obj] blocks [Obj] from entering [Obj] ", new Object[] {this, snowplower, l});
+		if (l.hasSalt()) {
+			Logger.getGlobal().log(Level.INFO, "[Obj] blocks [Obj] from entering [Obj] ",
+					new Object[] { this, snowplower, l });
 			return false;
 		}
-			
 
 		double neededAmount = l.getRoad().getLength() * SALT_CONSUME;
 
-		if(neededAmount <= snowplower.getSalt()) 
-			Logger.getGlobal().log(Level.INFO, "[Obj] allows [Obj] to enter [Obj] ", new Object[] {this, snowplower, l});
+		if (neededAmount <= snowplower.getSalt())
+			Logger.getGlobal().log(Level.INFO, "[Obj] allows [Obj] to enter [Obj] ",
+					new Object[] { this, snowplower, l });
 		else
-			Logger.getGlobal().log(Level.INFO, "[Obj] blocks [Obj] from entering [Obj] ", new Object[] {this, snowplower, l});
-
+			Logger.getGlobal().log(Level.INFO, "[Obj] blocks [Obj] from entering [Obj] ",
+					new Object[] { this, snowplower, l });
 
 		return snowplower.getSalt() >= neededAmount;
+	}
+
+	/**
+	 * Visszaadja a fej nevét.
+	 * 
+	 * @return A fej neve
+	 */
+	@Override
+	public String getDescription() {
+		return "Sószóró fej";
 	}
 }

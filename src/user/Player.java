@@ -24,4 +24,13 @@ public abstract class Player {
 	Player(String name) {
 		this.name = name;
 	}
+
+	/**
+	 * Visszaadja a játékos nevét
+	 * 
+	 * @return név
+	 */
+	public String getName(){
+		return name;
+	}
 }
