@@ -20,6 +20,12 @@ import java.util.logging.Logger;
 import graphics.NewMain;
 import graphics.Panels.BusPanel;
 import graphics.Panels.SnowplowerPanel;
+
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
+
+import graphics.NewMain;
+import graphics.Panels.MapPanel;
 import user.setupPlayerData;
 
 import javax.swing.BorderFactory;
@@ -58,7 +64,15 @@ public class App {
 
 		// Innen lehet tesztelni
 		SnowplowerPanel.main(args);
+    
+		JFrame f = new JFrame();
+		MapPanel p = new MapPanel(null);
 
+		f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		f.add(p);
+		f.pack();
+		f.setVisible(true);
+    
 		// Heti setupMenu teszthez
 		// if (args.length > 0 && args[0].equals("setup")) {
 		// List<setupPlayerData> players = setupPlayer();
@@ -72,7 +86,7 @@ public class App {
 
 		// Új main hívás, persze nem így lesz, csak könnyebben tudok prototipizálni
 		// Meg valszeg majd itt csak létre lesz hozva a Graphics, vagy tudja a rosseb.
-		// NewMain.main(args);
+		NewMain.main(args);
 
 		// // Parancsok beolvasása
 		// proto.readCommandsFromCommandLine();

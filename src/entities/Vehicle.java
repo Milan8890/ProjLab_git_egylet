@@ -400,4 +400,13 @@ public abstract class Vehicle {
 
 		return true;
 	}
+
+	/**
+	 * Autó útvonalát visszaadó függvény
+	 * 
+	 * @return Az autó útvonala
+	 */
+	public Path getPath() {
+		return this.path;
+	}
 }

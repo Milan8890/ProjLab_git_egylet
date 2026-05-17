@@ -7,8 +7,13 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.util.ArrayList;
 import java.util.List;
 
+import javax.crypto.Cipher;
 import javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 import javax.swing.BorderFactory;
 import javax.swing.DefaultComboBoxModel;
@@ -23,6 +28,7 @@ import javax.swing.SwingConstants;
 
 import entities.Bus;
 import entities.Snowplower;
+import entities.Vehicle;
 import graphics.ModelViews.BusView;
 import graphics.ModelViews.CarView;
 import graphics.ModelViews.CrossingView;
@@ -32,7 +38,11 @@ import graphics.ModelViews.SnowplowerView;
 import graphics.Panels.BusPanel;
 import graphics.Panels.MapPanel;
 import graphics.Panels.SnowplowerPanel;
+import playground.City;
 import playground.Crossing;
+import playground.Lane;
+import playground.Path;
+import playground.Road;
 import user.BusDriver;
 import user.Cleaner;
 import user.Player;
@@ -52,12 +62,12 @@ public class MainPanel extends JFrame {
 
 	private Crossing selectedCrossing;
 
-	private List<CrossingView> crossingViews;
-	private List<RoadView> roadViews;
-	private List<LaneView> laneViews;
-	private List<SnowplowerView> snowplowerViews;
-	private List<BusView> busViews;
-	private List<CarView> carViews;
+	private List<CrossingView> crossingViews = new ArrayList<>();
+	private List<RoadView> roadViews = new ArrayList<>();
+	private List<LaneView> laneViews = new ArrayList<>();
+	private List<SnowplowerView> snowplowerViews = new ArrayList<>();
+	private List<BusView> busViews = new ArrayList<>();
+	private List<CarView> carViews = new ArrayList<>();
 
 	private JPanel activePlayerPanel;
 	private JComboBox<Player> playerSelectorComboBox;
@@ -73,6 +83,42 @@ public class MainPanel extends JFrame {
 	 * Létrehozza a főpanelt és annak jelenlegi alpaneljeit.
 	 */
 	public MainPanel() {
+		this.addKeyListener(new KeyAdapter() {
+			// Út hosszabbítása KeyListener
+			@Override
+			public void keyPressed(KeyEvent e) {
+
+				if (!isExtendingPath || selectedCrossing == null)
+					return;
+
+				Vehicle selectedVehicle = getSelectedBus() == null ? getSelectedSnowplower() : getSelectedBus();
+				if (selectedVehicle == null)
+					return;
+
+				Path path = selectedVehicle.getPath();
+				Crossing lastCrossing = path.getLastCrossing();
+
+				Road roadToExtendWith = null;
+
+				for (Road road : lastCrossing.getOutRoads()) {
+					if (road.getToCrossing() == selectedCrossing) {
+						roadToExtendWith = road;
+						break;
+					}
+				}
+
+				if (roadToExtendWith == null)
+					return;
+
+				int pressed = Character.getNumericValue(e.getKeyChar());
+
+				List<Lane> lanes = roadToExtendWith.getLanes();
+				if (lanes.size() > pressed || pressed <= 0)
+					return;
+
+				selectedVehicle.extendPath(lanes.get(pressed - 1));
+			}
+		});
 		NewMain.notdone("MainPanel konstruktor");
 		activePlayerPanel = createActivePlayerPanel();
 		snowplowerPanel = new SnowplowerPanel(this);
@@ -239,11 +285,13 @@ public class MainPanel extends JFrame {
 	/**
 	 * Frissíti a főpanel megjelenítését.
 	 */
-	public void update() {
+	/*
+                                        ez itt elv nem kell de itthagyom
+  public void update() {
 		NewMain.notdone("MainPanel update");
 		loadActivePlayerComboBox();
 		handleActivePlayerSelection();
-	}
+	}*/
 
 	/**
 	 * Létrehozza az aktív játékost és pénzét megjelenítő panelrészt.
