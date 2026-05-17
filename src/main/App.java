@@ -72,7 +72,7 @@ public class App {
 
 		// Új main hívás, persze nem így lesz, csak könnyebben tudok prototipizálni
 		// Meg valszeg majd itt csak létre lesz hozva a Graphics, vagy tudja a rosseb.
-		NewMain.main(args);
+		// NewMain.main(args);
 
 		// // Parancsok beolvasása
 		// proto.readCommandsFromCommandLine();
