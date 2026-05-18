@@ -22,7 +22,7 @@ public class MapPanel extends JPanel {
 
 	private static BufferedImage backgroundImg = null;
 
-	private static final int WIDTH = 1000;
+	private static final int WIDTH = 1500;
 	private static final int HEIGHT = 1000;
 
 	/**
@@ -65,7 +65,7 @@ public class MapPanel extends JPanel {
 			}
 		});
 
-		this.setPreferredSize(new Dimension(1000, 1000));
+		this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
 	}
 
 	private void drawBackground(Graphics2D g) {

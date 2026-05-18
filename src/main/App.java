@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+import graphics.MainPanel;
 import graphics.NewMain;
 import graphics.Panels.BusPanel;
 import graphics.Panels.SnowplowerPanel;
@@ -64,15 +65,13 @@ public class App {
 
 		// Innen lehet tesztelni
 		SnowplowerPanel.main(args);
-    
-		JFrame f = new JFrame();
-		MapPanel p = new MapPanel(null);
+		
+		MainPanel mainPanel = new MainPanel();
 
-		f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		f.add(p);
-		f.pack();
-		f.setVisible(true);
-    
+		mainPanel.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		mainPanel.pack();
+		mainPanel.setVisible(true);
+
 		// Heti setupMenu teszthez
 		// if (args.length > 0 && args[0].equals("setup")) {
 		// List<setupPlayerData> players = setupPlayer();

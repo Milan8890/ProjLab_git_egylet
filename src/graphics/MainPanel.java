@@ -3,10 +3,14 @@ package graphics;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
+import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.GridLayout;
 import java.awt.Insets;
+import java.awt.LayoutManager;
+import java.awt.Panel;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -16,6 +20,7 @@ import java.util.List;
 import javax.crypto.Cipher;
 import javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JComboBox;
@@ -38,6 +43,7 @@ import graphics.ModelViews.SnowplowerView;
 import graphics.Panels.BusPanel;
 import graphics.Panels.MapPanel;
 import graphics.Panels.SnowplowerPanel;
+import main.App;
 import playground.City;
 import playground.Crossing;
 import playground.Lane;
@@ -119,10 +125,48 @@ public class MainPanel extends JFrame {
 				selectedVehicle.extendPath(lanes.get(pressed - 1));
 			}
 		});
+		
+		
 		NewMain.notdone("MainPanel konstruktor");
 		activePlayerPanel = createActivePlayerPanel();
 		snowplowerPanel = new SnowplowerPanel(this);
 		busPanel = new BusPanel(this);
+		mapPanel = new MapPanel(this);
+		setLayout(new GridBagLayout());
+		GridBagConstraints gbc = new GridBagConstraints();
+
+		// --- BAL OLDAL: Map Panel ---
+		gbc.gridx = 0;
+		gbc.gridy = 0;
+		gbc.gridwidth = 1;
+		gbc.gridheight = 2; // Fontos: 2 sor magas, hogy átérje a jobb oldali mindkét panelt!
+		gbc.weightx = 0.0;
+		gbc.weighty = 0.0; 
+		gbc.fill = GridBagConstraints.NONE; // Ha azt szeretnéd, hogy a map is kitöltse a helyét
+		gbc.insets = new Insets(0, 0, 0, 0); 
+		add(mapPanel, gbc);
+
+
+		// --- JOBB OLDAL, FELSŐ: Active Player Panel ---
+		gbc.gridx = 1;
+		gbc.gridy = 0;
+		gbc.gridheight = 1; // Visszaállítjuk 1 sorosra
+		gbc.weightx = 1.0;
+		gbc.weighty = 0.0;  // 0.0 -> Nem fog függőlegesen nyúlni, megtartja az eredeti méretét
+		gbc.fill = GridBagConstraints.HORIZONTAL; 
+		gbc.insets = new Insets(0, 0, 10, 0); 
+		add(activePlayerPanel, gbc);
+
+
+		// --- JOBB OLDAL, ALSÓ: Snowplower Panel ---
+		gbc.gridx = 1;
+		gbc.gridy = 1;
+		gbc.weightx = 1.0;
+		gbc.weighty = 1.0;  // 1.0 -> Megkapja az ÖSSZES maradék függőleges helyet az ablak aljáig
+		gbc.fill = GridBagConstraints.BOTH; 
+		gbc.insets = new Insets(0, 0, 0, 0);  
+		add(snowplowerPanel, gbc);
+
 	}
 
 	/**
@@ -601,13 +645,9 @@ public class MainPanel extends JFrame {
 	public static void main(String[] args) {
 	javax.swing.SwingUtilities.invokeLater(() -> {
 		MainPanel mainPanel = new MainPanel();
-
-		javax.swing.JFrame frame = new javax.swing.JFrame("ActivePlayerPanel teszt");
-		frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
-		frame.add(mainPanel.activePlayerPanel);
-		frame.pack();
-		frame.setLocationRelativeTo(null);
-		frame.setVisible(true);
+		mainPanel.pack();
+		mainPanel.setLocationRelativeTo(null);
+		mainPanel.setVisible(true);
 	});
 }
 	//TESZT VÉGE!!!##############################################################################################################
