@@ -145,7 +145,8 @@ public class MainPanel extends JFrame {
 		activePlayerPanel = createActivePlayerPanel();
 		snowplowerPanel = new SnowplowerPanel(this);
 		busPanel = new BusPanel(this);
-		mapPanel = new MapPanel(this);
+		buildTestMap(); // TODO: EZT NEM ITT KÉNE CSINÁLNI!!!
+		initMapPanel();
 		setLayout(new GridBagLayout());
 		GridBagConstraints gbc = new GridBagConstraints();
 
@@ -179,6 +180,8 @@ public class MainPanel extends JFrame {
 		gbc.weighty = 1.0; 
 		gbc.fill = GridBagConstraints.BOTH; 
 		gbc.insets = new Insets(0, 0, 0, 0);  
+		busPanel.setVisible(false);
+		snowplowerPanel.setVisible(false);
 		add(snowplowerPanel, gbc);
 		add(busPanel, gbc);
 		
@@ -188,8 +191,6 @@ public class MainPanel extends JFrame {
 			backgroundImage = null;
 		}
 
-		buildTestMap();
-		initMapPanel();
 	}
 
 	private void buildTestMap() {
@@ -201,9 +202,9 @@ public class MainPanel extends JFrame {
 		Point2D.Double pos2 = new Point2D.Double(0, 0);
 		Point2D.Double pos3 = new Point2D.Double(800, 100);
 
-		crossingViews.add(new CrossingView(c1, new Point2D.Double(pos1.x + 3, pos1.y + 3), false, this));
-		crossingViews.add(new CrossingView(c2, new Point2D.Double(pos2.x + 3, pos2.y + 3), false, this));
-		crossingViews.add(new CrossingView(c3, new Point2D.Double(pos3.x + 3, pos3.y + 3), false, this));
+		crossingViews.add(new CrossingView(c1, new Point2D.Double(pos1.x + 3, pos1.y + 3), false));
+		crossingViews.add(new CrossingView(c2, new Point2D.Double(pos2.x + 3, pos2.y + 3), false));
+		crossingViews.add(new CrossingView(c3, new Point2D.Double(pos3.x + 3, pos3.y + 3), false));
 
 		addRoadWithLanes(c2, c1, 3);
 		addRoadWithLanes(c2, c3, 2);
@@ -211,7 +212,7 @@ public class MainPanel extends JFrame {
 	}
 
 	private void initMapPanel() {
-		JPanel rajzPanel = new JPanel() {
+		MapPanel rajzPanel = new MapPanel(this) {
 			@Override
 			protected void paintComponent(Graphics g) {
 				super.paintComponent(g);
@@ -251,9 +252,8 @@ public class MainPanel extends JFrame {
 			}
 		};
 
-		rajzPanel.setPreferredSize(new Dimension(1500, 1000));
-		rajzPanel.setBackground(Color.WHITE);
-		this.setContentPane(rajzPanel);
+		//rajzPanel.setBackground(Color.WHITE);
+		mapPanel=rajzPanel;
 	}
 
 	private void addRoadWithLanes(Crossing from, Crossing to, int savSzam) {
@@ -700,6 +700,7 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 		textField.setBorder(BorderFactory.createLineBorder(borderColor, 2, true));
 		return textField;
 	}
+
 
 	/**
 	 * Visszaadja a játékos legördülő mezőben megjelenő nevét.
