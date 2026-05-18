@@ -50,6 +50,7 @@ public class setupPlayerData {
 	 *
 		"Zöld", "Sárga", "Kék", "Piros", "Lila", "Narancs" 
 	 * @return a játékos színe
+	 * 
 	 */
 	public Color getColor() {
 		switch (color) {

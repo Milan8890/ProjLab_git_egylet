@@ -5,7 +5,6 @@ import java.awt.geom.Point2D;
 import java.awt.Color;
 import java.awt.BasicStroke;
 
-import graphics.NewMain;
 import playground.Crossing;
 import graphics.MainPanel;
 
@@ -14,11 +13,17 @@ public class CrossingView {
 
     private Crossing modelCrossing;
     private boolean isSnowplowerBase;
+    private MainPanel mainPanel;
 
     public CrossingView(Crossing modelCrossing, Point2D pos, boolean isSnowplowerBase) {
+        this(modelCrossing, pos, isSnowplowerBase, null);
+    }
+
+    public CrossingView(Crossing modelCrossing, Point2D pos, boolean isSnowplowerBase, MainPanel mainPanel) {
         this.modelCrossing = modelCrossing;
         this.pos = pos;
         this.isSnowplowerBase = isSnowplowerBase;
+        this.mainPanel = mainPanel;
     }
 
     public Crossing getCrossing() {
@@ -26,6 +31,9 @@ public class CrossingView {
     }
 
     public void paint(Graphics2D g) { 
+        if (!updatePos())
+            return;
+
         int x = (int) pos.getX();
         int y = (int) pos.getY();
         
@@ -44,8 +52,22 @@ public class CrossingView {
         g2.dispose();
     }
 
+    private boolean updatePos() {
+        return pos != null;
+    }
+
     public boolean isClicked(int x, int y) {
-        NewMain.notdone("CrossingView isClicked");
-        return false;
+        if (!updatePos())
+            return false;
+        if (mainPanel == null || !mainPanel.getIsExtendingPath())
+            return false;
+
+        Point2D.Double center = MainPanel.calculateCenter(this);
+        double radius = MainPanel.CROSSING_SIZE / 2.0;
+        if (center.distance(x, y) > radius)
+            return false;
+
+        mainPanel.setSelectedCrossing(modelCrossing);
+        return true;
     }
 }
