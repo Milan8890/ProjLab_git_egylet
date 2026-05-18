@@ -258,7 +258,20 @@ public abstract class Vehicle {
 		return path.extendPath(l);
 	}
 
-	// TODO javadoc
+	/**
+	 * Vissaadja a jármű útvonalát.
+	 * 
+	 * @return az útvonal objektum.
+	 */
+	public Path getPath(){
+		return path;
+	}
+
+	/**
+	 * Vissaadja a legutóbbi kereszteződés, amin volt a jármű.
+	 * 
+	 * @return a kereszteződés objektum objektum.
+	 */
 	public Crossing getLastCrossing() {
 		return lastCrossing;
 	}
@@ -302,8 +315,7 @@ public abstract class Vehicle {
 	 * A baleset utáni felépülés pillanatában végrehajtandó feladatok.
 	 * Alapértelmezetten üres, a leszármazottak (pl. Car) definiálják felül.
 	 */
-	protected void revive() {
-	}
+	protected void revive() {}
 
 	/**
 	 * Ha a sávon van más jármű ami eltorlaszolja az utat, akkor false-al, különben
@@ -401,5 +413,14 @@ public abstract class Vehicle {
 		}
 
 		return true;
+	}
+
+	/**
+	 * Autó útvonalát visszaadó függvény
+	 * 
+	 * @return Az autó útvonala
+	 */
+	public Path getPath() {
+		return this.path;
 	}
 }

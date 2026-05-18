@@ -47,13 +47,15 @@ public class Dragon extends Head {
 		double snowAmount = l.cleanSnow();
 
 		// 1 jég = 0.5 pénz, 1 hó = 1 pénz, ez van tesztben
-		double payment = (iceAmount * PAY_ICE + snowAmount * PAY_SNOW) * l.getRoad().getLength(); 
-		
+		double payment = (iceAmount * PAY_ICE + snowAmount * PAY_SNOW) * l.getRoad().getLength();
+
 		double amount = BIO_CONSUME * l.getRoad().getLength();
 		snowplower.useBio(amount);
 
-		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$" , new Object[] {snowplower , this, l});
-		Logger.getGlobal().log(Level.INFO, "[Obj] uses " + amount + " bio from [Obj]", new Object[] {this, snowplower});
+		Logger.getGlobal().log(Level.INFO, "[Obj] with [Obj] cleans [Obj] for " + payment + "$",
+				new Object[] { snowplower, this, l });
+		Logger.getGlobal().log(Level.INFO, "[Obj] uses " + amount + " bio from [Obj]",
+				new Object[] { this, snowplower });
 		return (int) payment;
 	}
 
@@ -69,12 +71,23 @@ public class Dragon extends Head {
 
 		double neededAmount = BIO_CONSUME * l.getRoad().getLength();
 
-		if(neededAmount <= snowplower.getBio()) 
-			Logger.getGlobal().log(Level.INFO, "[Obj] allows [Obj] to enter [Obj] ", new Object[] {this, snowplower, l});
+		if (neededAmount <= snowplower.getBio())
+			Logger.getGlobal().log(Level.INFO, "[Obj] allows [Obj] to enter [Obj] ",
+					new Object[] { this, snowplower, l });
 		else
-			Logger.getGlobal().log(Level.INFO, "[Obj] blocks [Obj] from entering [Obj] ", new Object[] {this, snowplower, l});
+			Logger.getGlobal().log(Level.INFO, "[Obj] blocks [Obj] from entering [Obj] ",
+					new Object[] { this, snowplower, l });
 
 		return neededAmount <= snowplower.getBio();
 	}
 
+	/**
+	 * Visszaadja a fej nevét.
+	 * 
+	 * @return A fej neve
+	 */
+	@Override
+	public String getDescription() {
+		return "Sárkány fej";
+	}
 }

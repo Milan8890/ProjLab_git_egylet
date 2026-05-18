@@ -36,6 +36,16 @@ public class BusDriver extends Player {
 		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
 
+
+	/**
+	 * Visszaadja a játékos pénzét.
+	 * 
+	 * @return pontok
+	 */
+	public int getPoint(){
+		return point;
+	}
+
 	/**
 	 * Ad pontot a játékosnak.
 	 */

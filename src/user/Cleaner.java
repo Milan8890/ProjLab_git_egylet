@@ -46,6 +46,15 @@ public class Cleaner extends Player {
 	}
 
 	/**
+	 * Visszaadja a játékos pénzét.
+	 * 
+	 * @return pénz
+	 */
+	public int getMoney(){
+		return money;
+	}
+	
+	/**
 	 * Hozzáad pénzt a játékoshoz
 	 * 
 	 * @param m az hozzáadandó pénz összege

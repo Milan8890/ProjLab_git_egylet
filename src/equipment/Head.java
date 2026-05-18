@@ -47,6 +47,13 @@ public abstract class Head {
 	public abstract int clean(Lane l);
 
 	/**
+	 * Visszaadja a fej nevét.
+	 * 
+	 * @return A fej neve
+	 */
+	public abstract String getDescription();
+
+	/**
 	 * Visszaadja, hogy befordulhat-e az adott sávra a hókotró.
 	 * Alapvető implementációként igazzal tér vissza.
 	 * 

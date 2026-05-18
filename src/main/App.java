@@ -15,9 +15,17 @@ import java.awt.Rectangle;
 import java.awt.RenderingHints;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
-import graphics.MainPanel;
 import graphics.NewMain;
+import graphics.Panels.BusPanel;
+import graphics.Panels.SnowplowerPanel;
+
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
+
+import graphics.NewMain;
+import graphics.Panels.MapPanel;
 import user.setupPlayerData;
 
 import javax.swing.BorderFactory;
@@ -35,31 +43,44 @@ import javax.swing.SwingUtilities;
 import javax.swing.WindowConstants;
 import javax.swing.border.AbstractBorder;
 
+/**
+ * Az alkalmazás belépési pontját és a játékosok kezdőadatainak bekérésére
+ * szolgáló grafikus menüt tartalmazza.
+ */
 public class App {
+	/**
+	 * Az alkalmazás belépési pontja.
+	 *
+	 * @param args parancssori argumentumok
+	 * @throws Exception ha az indítás közben nem kezelt hiba történik
+	 */
 	public static void main(String[] args) throws Exception {
+		// Handler beállítása
+		Proto proto = new Proto(World.players);
+		Logger.getGlobal().setUseParentHandlers(false);
+		OwnHandler ownHandler = new OwnHandler(proto.objectMap);
+		ownHandler.isLogging = false;
+		Logger.getGlobal().addHandler(ownHandler);
+
+		// Innen lehet tesztelni
+		SnowplowerPanel.main(args);
+    
+		JFrame f = new JFrame();
+		MapPanel p = new MapPanel(null);
+
+		f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		f.add(p);
+		f.pack();
+		f.setVisible(true);
+    
 		// Heti setupMenu teszthez
 		// if (args.length > 0 && args[0].equals("setup")) {
-		List<setupPlayerData> players = setupPlayer();
+		// List<setupPlayerData> players = setupPlayer();
 
-
-
-		javax.swing.SwingUtilities.invokeLater(() -> {
-            MainPanel mp = new MainPanel();
-            
-            mp.setTitle("Hókotrós játék - git_egylet (Gergo Branch)");
-            mp.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-            
-            mp.pack();
-            
-            mp.setLocationRelativeTo(null); 
-            mp.setVisible(true);
-        });
-
-
-
-		for (setupPlayerData player : players) {
-			System.out.println(player.getName() + " " + player.getColor() + " " + player.getVehicle());
-		}
+		// for (setupPlayerData player : players) {
+		// System.out.println(player.getName() + " " + player.getColor() + " " +
+		// player.getVehicle());
+		// }
 		// return;
 		// }
 
@@ -67,17 +88,17 @@ public class App {
 		// Meg valszeg majd itt csak létre lesz hozva a Graphics, vagy tudja a rosseb.
 		NewMain.main(args);
 
-		// Proto proto = new Proto(World.players);
-
-		// // Handler beállítása
-		// Logger.getGlobal().setUseParentHandlers(false);
-		// OwnHandler ownHandler = new OwnHandler(proto.objectMap);
-		// Logger.getGlobal().addHandler(ownHandler);
-
 		// // Parancsok beolvasása
 		// proto.readCommandsFromCommandLine();
 	}
 
+	/**
+	 * Megjeleníti a játékos hozzáadó menüt, amelyben a felhasználó játékosokat
+	 * vehet fel névvel, színnel és járművel.
+	 *
+	 * @return a felvett játékosok adatait tartalmazó lista, a képernyőn látható
+	 *         sorok sorrendjében
+	 */
 	public static List<setupPlayerData> setupPlayer() {
 		final String setupMenuTitle = "Játékos hozzáadó menü";
 		final String[] playerColors = { "Zöld", "Sárga", "Kék", "Piros", "Lila", "Narancs" };
@@ -182,12 +203,26 @@ public class App {
 		return selectedPlayers;
 	}
 
+	/**
+	 * Hozzáadja a három oszlop fejlécét a játékos adatokat tartalmazó panelhez.
+	 *
+	 * @param rowsPanel a sorokat és fejléceket tartalmazó panel
+	 * @param menuFont  a fejléc szövegéhez használt betűtípus
+	 */
 	private static void addHeader(JPanel rowsPanel, Font menuFont) {
 		addHeaderLabel(rowsPanel, "Játékos neve:", 0, menuFont);
 		addHeaderLabel(rowsPanel, "Játékos színe:", 1, menuFont);
 		addHeaderLabel(rowsPanel, "Játékos járműve:", 2, menuFont);
 	}
 
+	/**
+	 * Létrehoz és elhelyez egy fejlécfeliratot a megadott oszlopban.
+	 *
+	 * @param rowsPanel a fejlécet fogadó panel
+	 * @param text      a fejlécben megjelenő szöveg
+	 * @param column    az oszlop indexe, ahová a fejléc kerül
+	 * @param menuFont  a fejléc szövegéhez használt betűtípus
+	 */
 	private static void addHeaderLabel(JPanel rowsPanel, String text, int column, Font menuFont) {
 		JLabel label = new JLabel(text, SwingConstants.LEFT);
 		label.setFont(menuFont);
@@ -201,6 +236,18 @@ public class App {
 		rowsPanel.add(label, gbc);
 	}
 
+	/**
+	 * Hozzáad egy új játékossort a háttérben tárolt komponenslistákhoz.
+	 *
+	 * @param names             a játékosneveket tartalmazó szövegmezők listája
+	 * @param colors            a játékosszín választó mezők listája
+	 * @param vehicles          a jármű választó mezők listája
+	 * @param playerColors      a választható játékosszínek
+	 * @param playerVehicles    a választható járművek
+	 * @param menuFont          a sor komponenseinek betűtípusa
+	 * @param controlBackground a választómezők háttérszíne
+	 * @param controlBorder     a komponensek keretszíne
+	 */
 	private static void addPlayerRow(List<JTextField> names, List<JComboBox<String>> colors,
 			List<JComboBox<String>> vehicles, String[] playerColors, String[] playerVehicles, Font menuFont,
 			Color controlBackground, Color controlBorder) {
@@ -209,18 +256,39 @@ public class App {
 		vehicles.add(createComboBox(playerVehicles, menuFont, controlBackground, controlBorder));
 	}
 
+	/**
+	 * Eltávolítja az utolsó játékossor komponenseit a háttérben tárolt listákból.
+	 *
+	 * @param names    a játékosneveket tartalmazó szövegmezők listája
+	 * @param colors   a játékosszín választó mezők listája
+	 * @param vehicles a jármű választó mezők listája
+	 */
 	private static void removeLastPlayerRow(List<JTextField> names, List<JComboBox<String>> colors,
 			List<JComboBox<String>> vehicles) {
 		if (names.isEmpty()) {
 			return;
 		}
-
 		int lastIndex = names.size() - 1;
 		names.remove(lastIndex);
 		colors.remove(lastIndex);
 		vehicles.remove(lastIndex);
 	}
 
+	/**
+	 * Újraépíti a játékossorokat megjelenítő panel teljes tartalmát.
+	 *
+	 * @param rowsPanel           az újraépítendő panel
+	 * @param names               a játékosneveket tartalmazó szövegmezők listája
+	 * @param colors              a játékosszín választó mezők listája
+	 * @param vehicles            a jármű választó mezők listája
+	 * @param addPlayerButton     a játékos hozzáadására szolgáló gomb
+	 * @param removePlayerButton  a játékos törlésére szolgáló gomb
+	 * @param startGameButton     a játék indítására szolgáló gomb
+	 * @param menuFont            a fejléc betűtípusa
+	 * @param controlHeight       a sor komponenseinek magassága
+	 * @param defaultControlWidth az alap mezőszélesség
+	 * @param vehicleControlWidth a járműválasztó mező szélessége
+	 */
 	private static void rebuildRowsPanel(JPanel rowsPanel, List<JTextField> names, List<JComboBox<String>> colors,
 			List<JComboBox<String>> vehicles, JButton addPlayerButton, JButton removePlayerButton,
 			JButton startGameButton, Font menuFont, int controlHeight, int defaultControlWidth,
@@ -248,6 +316,17 @@ public class App {
 		rowsPanel.repaint();
 	}
 
+	/**
+	 * Elhelyez egy játékossorhoz tartozó komponenst a megadott cellában.
+	 *
+	 * @param rowsPanel           a komponenst fogadó panel
+	 * @param component           az elhelyezendő komponens
+	 * @param row                 a sor indexe
+	 * @param column              az oszlop indexe
+	 * @param controlHeight       a komponens magassága
+	 * @param defaultControlWidth az alap mezőszélesség
+	 * @param vehicleControlWidth a járműválasztó mező szélessége
+	 */
 	private static void addRowComponent(JPanel rowsPanel, Component component, int row, int column, int controlHeight,
 			int defaultControlWidth, int vehicleControlWidth) {
 		GridBagConstraints gbc = new GridBagConstraints();
@@ -262,6 +341,14 @@ public class App {
 		rowsPanel.add(component, gbc);
 	}
 
+	/**
+	 * Elhelyez egy gombot a játékos sorok alatti gombsorban.
+	 *
+	 * @param rowsPanel a gombot fogadó panel
+	 * @param button    az elhelyezendő gomb
+	 * @param row       a sor indexe
+	 * @param column    az oszlop indexe
+	 */
 	private static void addButton(JPanel rowsPanel, JButton button, int row, int column) {
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.gridx = column;
@@ -274,6 +361,13 @@ public class App {
 		rowsPanel.add(button, gbc);
 	}
 
+	/**
+	 * Hozzáad egy kitöltő panelt, amely a tartalmat a görgethető terület tetején
+	 * tartja.
+	 *
+	 * @param rowsPanel a kitöltő panelt fogadó panel
+	 * @param row       a kitöltő panel sorindexe
+	 */
 	private static void addVerticalFiller(JPanel rowsPanel, int row) {
 		JPanel filler = new JPanel();
 		filler.setBackground(Color.WHITE);
@@ -287,6 +381,13 @@ public class App {
 		rowsPanel.add(filler, gbc);
 	}
 
+	/**
+	 * Létrehoz egy játékosnév megadására szolgáló szövegmezőt.
+	 *
+	 * @param menuFont      a szövegmező betűtípusa
+	 * @param controlBorder a szövegmező keretszíne
+	 * @return az elkészített szövegmező
+	 */
 	private static JTextField createNameField(Font menuFont, Color controlBorder) {
 		JTextField nameField = new JTextField();
 		nameField.setFont(menuFont);
@@ -295,6 +396,15 @@ public class App {
 		return nameField;
 	}
 
+	/**
+	 * Létrehoz egy választómezőt a megadott választható értékekkel.
+	 *
+	 * @param values            a választómezőben megjelenő értékek
+	 * @param menuFont          a választómező betűtípusa
+	 * @param controlBackground a választómező háttérszíne
+	 * @param controlBorder     a választómező keretszíne
+	 * @return az elkészített választómező
+	 */
 	private static JComboBox<String> createComboBox(String[] values, Font menuFont, Color controlBackground,
 			Color controlBorder) {
 		JComboBox<String> comboBox = new JComboBox<>(values);
@@ -307,6 +417,15 @@ public class App {
 		return comboBox;
 	}
 
+	/**
+	 * Létrehoz egy menügombot egységes megjelenéssel.
+	 *
+	 * @param text              a gomb felirata
+	 * @param buttonFont        a gomb betűtípusa
+	 * @param controlBackground a gomb háttérszíne
+	 * @param controlBorder     a gomb keretszíne
+	 * @return az elkészített gomb
+	 */
 	private static JButton createMenuButton(String text, Font buttonFont, Color controlBackground,
 			Color controlBorder) {
 		JButton button = new JButton(text);
@@ -317,6 +436,11 @@ public class App {
 		return button;
 	}
 
+	/**
+	 * Az ablakot a képernyő felső részére, vízszintesen középre helyezi.
+	 *
+	 * @param dialog az elhelyezendő párbeszédablak
+	 */
 	private static void positionDialogAtTop(JDialog dialog) {
 		Rectangle screenBounds = GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds();
 		int x = screenBounds.x + Math.max(0, (screenBounds.width - dialog.getWidth()) / 2);
@@ -324,20 +448,35 @@ public class App {
 		dialog.setLocation(x, y);
 	}
 
+	/**
+	 * Egyszerű, lekerekített sarkú keret Swing komponensekhez.
+	 */
 	private static class RoundedBorder extends AbstractBorder {
 		private final Color color;
 		private final int arc;
 
+		/**
+		 * Létrehoz egy lekerekített keretet.
+		 *
+		 * @param color a keret színe
+		 * @param arc   a sarkok lekerekítésének mértéke
+		 */
 		RoundedBorder(Color color, int arc) {
 			this.color = color;
 			this.arc = arc;
 		}
 
+		/**
+		 * {@inheritDoc}
+		 */
 		@Override
 		public Insets getBorderInsets(Component component) {
 			return new Insets(4, 10, 4, 10);
 		}
 
+		/**
+		 * {@inheritDoc}
+		 */
 		@Override
 		public Insets getBorderInsets(Component component, Insets insets) {
 			insets.top = 4;
@@ -347,6 +486,9 @@ public class App {
 			return insets;
 		}
 
+		/**
+		 * {@inheritDoc}
+		 */
 		@Override
 		public void paintBorder(Component component, Graphics graphics, int x, int y, int width, int height) {
 			Graphics2D graphics2D = (Graphics2D) graphics.create();
@@ -357,7 +499,19 @@ public class App {
 		}
 	}
 
+	/**
+	 * Belső margóval rendelkező listaelem-megjelenítő a választómezők elemeihez.
+	 */
 	private static class PaddedComboBoxRenderer extends DefaultListCellRenderer {
+		/**
+		 * Létrehoz egy belső margót használó választómező-renderert.
+		 */
+		PaddedComboBoxRenderer() {
+		}
+
+		/**
+		 * {@inheritDoc}
+		 */
 		@Override
 		public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected,
 				boolean cellHasFocus) {
@@ -366,4 +520,5 @@ public class App {
 			return label;
 		}
 	}
+
 }

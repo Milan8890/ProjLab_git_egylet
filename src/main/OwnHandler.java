@@ -38,6 +38,9 @@ public class OwnHandler extends Handler {
 	// Objektumok tára a Proto-ból
 	public HashMap<Object, String> objectMap;
 
+	// Kikapcsolható logging
+	public boolean isLogging = false;
+
 	public OwnHandler(HashMap<Object, String> objmap) {
 		objectMap = objmap;
 	}
@@ -45,6 +48,8 @@ public class OwnHandler extends Handler {
 	// A log üzenetek feldolgozása
 	@Override
 	public void publish(LogRecord record) {
+		if (!isLogging)
+			return;
 
 		String message = record.getMessage();
 
