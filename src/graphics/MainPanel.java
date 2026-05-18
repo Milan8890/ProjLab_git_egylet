@@ -83,16 +83,43 @@ public class MainPanel extends JFrame {
 
         buildTestMap();
         initMapPanel();
+
+        applyVisualTestData();
     }
+
+    // =========================================================================
+    // ======================== IDEIGLENES TESZT METÓDUS =======================
+    // =========================================================================
+    /**
+     * Fix tesztadatok beállítása az összes sávra: 82 hó, 75 jég, só és kavics.
+     */
+    private void applyVisualTestData() {
+        for (LaneView lv : laneViews) {
+            Lane lane = lv.getLane();
+            if (lane == null) continue;
+
+            // FIX ÉRTÉKEK BEÁLLÍTÁSA A MODELLNEK
+            // Megjegyzés: Ha a Lane osztályodban a metódusok neve eltér (pl. setSnow helyett setSnowLevel, vagy setSalt helyett addSalt), 
+            // akkor azokat írd át a pontos projektspecifikus nevekre!
+            lane.setSnow(1);
+            lane.setIce(0);
+            lane.setSalt(0);       // Bármilyen 0-nál nagyobb érték, hogy a getSalt() > 0 igaz legyen
+            lane.setGravel(false);     // Hogy a hasGravel() true-t adjon vissza
+        }
+        repaint(); // Képernyő frissítése
+    }
+    // =========================================================================
+    // ==================== IDEIGLENES TESZT METÓDUS VÉGE ======================
+    // =========================================================================
 
     private void buildTestMap() {
         Crossing c1 = new Crossing();
         Crossing c2 = new Crossing();
         Crossing c3 = new Crossing();
         
-        Point2D.Double pos1 = new Point2D.Double(200, 300);
+        Point2D.Double pos1 = new Point2D.Double(400, 500);
         Point2D.Double pos2 = new Point2D.Double(0, 0);
-        Point2D.Double pos3 = new Point2D.Double(500, 100);
+        Point2D.Double pos3 = new Point2D.Double(800, 100);
         
         crossingViews.add(new CrossingView(c1, new Point2D.Double(pos1.x + 3, pos1.y + 3), false));
         crossingViews.add(new CrossingView(c2, new Point2D.Double(pos2.x + 3, pos2.y + 3), false));

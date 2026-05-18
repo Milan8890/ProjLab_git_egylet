@@ -346,4 +346,39 @@ public class Lane {
 
 		return vehicles;
 	}
+
+	// =========================================================================
+    // ======================== IDEIGLENES TEST SETTEREK ======================
+    // =========================================================================
+
+    /**
+     * Ideiglenes setter a hószint közvetlen beállításához.
+     */
+    public void setSnow(double snowLevel) {
+        this.snowLevel = snowLevel;
+    }
+
+    /**
+     * Ideiglenes setter a jégszint közvetlen beállításához.
+     */
+    public void setIce(double iceLevel) {
+        this.iceLevel = iceLevel;
+    }
+
+    /**
+     * Ideiglenes setter a só jelenlétének szimulálásához.
+     * Ha az érték nagyobb mint 0, létrehoz egy fiktív Salt objektumot a sávra.
+     */
+    public void setSalt(double amount) {
+        if (amount > 0) {
+            // Létrehozunk egy névtelen Cleaner-t, hogy a Salt belső osztály konstruktora lefusson
+            this.salt = new Salt(new Cleaner("Ideiglenes Teszt"), this);
+        } else {
+            this.salt = null;
+        }
+    }
+
+    // =========================================================================
+    // ==================== IDEIGLENES TEST SETTEREK VÉGE =====================
+    // =========================================================================
 }
