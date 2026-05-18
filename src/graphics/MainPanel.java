@@ -198,9 +198,9 @@ public class MainPanel extends JFrame {
 		Point2D.Double pos2 = new Point2D.Double(0, 0);
 		Point2D.Double pos3 = new Point2D.Double(800, 100);
 
-		crossingViews.add(new CrossingView(c1, new Point2D.Double(pos1.x + 3, pos1.y + 3), false));
-		crossingViews.add(new CrossingView(c2, new Point2D.Double(pos2.x + 3, pos2.y + 3), false));
-		crossingViews.add(new CrossingView(c3, new Point2D.Double(pos3.x + 3, pos3.y + 3), false));
+		crossingViews.add(new CrossingView(c1, new Point2D.Double(pos1.x + 3, pos1.y + 3), false, this));
+		crossingViews.add(new CrossingView(c2, new Point2D.Double(pos2.x + 3, pos2.y + 3), false, this));
+		crossingViews.add(new CrossingView(c3, new Point2D.Double(pos3.x + 3, pos3.y + 3), false, this));
 
 		addRoadWithLanes(c2, c1, 3);
 		addRoadWithLanes(c2, c3, 2);

@@ -45,11 +45,7 @@ public class BusView {
 		this.color = _color;
 		this.pos = new Point2D.Double(0, 0);
 	}
-/*
-	void setColor(Color c){
-		color = c;
-	}
-*/
+
 	public void paint(Graphics2D g) {
 		if (img == null)
 			return;

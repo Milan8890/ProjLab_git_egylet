@@ -44,14 +44,15 @@ public class MapPanel extends JPanel {
 	 * @param mainPanel
 	 */
 	public MapPanel(MainPanel mainPanel) {
+		this.mainPanel = mainPanel;
 		if (backgroundImg == null) {
 			readImage();
 		}
 		this.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				int x = getX();
-				int y = getY();
+				int x = e.getX();
+				int y = e.getY();
 
 				for (CrossingView view : mainPanel.getCrossingViews()) {
 					if (view.isClicked(x, y))
