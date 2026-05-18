@@ -13,92 +13,95 @@ import graphics.MainPanel;
 import entities.Car;
 
 public class CarView {
-    private Car modelCar;
-    private Point2D pos;
-    private MainPanel mainPanel;
-    private static BufferedImage carImage;
-    
-    static {
-        try {
-            carImage = ImageIO.read(new File("Asset/auto.png"));
-        } catch (Exception e) {
-            carImage = null;
-        }
-    }
+	private Car modelCar;
+	private Point2D pos;
+	private MainPanel mainPanel;
+	private static BufferedImage carImage;
 
-    public CarView(Car car, MainPanel mainPanel) {
-        this.modelCar = car;
-        this.mainPanel = mainPanel;
-        this.pos = new Point2D.Double(0, 0);
-    }
+	static {
+		try {
+			carImage = ImageIO.read(new File("Asset/auto.png"));
+		} catch (Exception e) {
+			carImage = null;
+		}
+	}
 
-    public void paint(Graphics2D g) {
-        if (carImage == null) return;
+	public CarView(Car car, MainPanel mainPanel) {
+		this.modelCar = car;
+		this.mainPanel = mainPanel;
+		this.pos = new Point2D.Double(0, 0);
+	}
 
-        Lane currentLane = modelCar.getCurrentLane();
-        double carX, carY, szog;
+	public void paint(Graphics2D g) {
+		if (carImage == null)
+			return;
 
-        if (currentLane != null) {
-            double absoluteProgress = modelCar.getLaneProgress();
+		Lane currentLane = modelCar.getCurrentLane();
+		double carX, carY, szog;
 
-            LaneView currentLaneView = null;
-            for (LaneView lv : mainPanel.getLaneViews()) {
-                if (lv.getLane() == currentLane) {
-                    currentLaneView = lv;
-                    break;
-                }
-            }
-            if (currentLaneView == null) return;
+		if (currentLane != null) {
+			double absoluteProgress = modelCar.getLaneProgress();
 
-            double startX = currentLaneView.startPos.getX();
-            double startY = currentLaneView.startPos.getY();
-            double endX = currentLaneView.endPos.getX();
-            double endY = currentLaneView.endPos.getY();
+			LaneView currentLaneView = null;
+			for (LaneView lv : mainPanel.getLaneViews()) {
+				if (lv.getLane() == currentLane) {
+					currentLaneView = lv;
+					break;
+				}
+			}
+			if (currentLaneView == null)
+				return;
 
-            double utHossz = currentLane.getRoad().getLength();
-            double progressRatio = (utHossz > 0) ? (absoluteProgress / utHossz) : 0.0;
+			double startX = currentLaneView.startPos.getX();
+			double startY = currentLaneView.startPos.getY();
+			double endX = currentLaneView.endPos.getX();
+			double endY = currentLaneView.endPos.getY();
 
-            carX = startX + (endX - startX) * progressRatio;
-            carY = startY + (endY - startY) * progressRatio;
+			double utHossz = currentLane.getRoad().getLength();
+			double progressRatio = (utHossz > 0) ? (absoluteProgress / utHossz) : 0.0;
 
-            double dx = endX - startX;
-            double dy = endY - startY;
-            szog = Math.atan2(dy, dx);
+			carX = startX + (endX - startX) * progressRatio;
+			carY = startY + (endY - startY) * progressRatio;
 
-        } else {
-            Crossing currentCrossing = modelCar.getLastCrossing();
-            if (currentCrossing == null) return;
+			double dx = endX - startX;
+			double dy = endY - startY;
+			szog = Math.atan2(dy, dx);
 
-            CrossingView currentCrossingView = mainPanel.getCrossingView(currentCrossing);
-            if (currentCrossingView == null) return;
+		} else {
+			Crossing currentCrossing = modelCar.getLastCrossing();
+			if (currentCrossing == null)
+				return;
 
-            Point2D.Double center = MainPanel.calculateCenter(currentCrossingView);
-            carX = center.x;
-            carY = center.y;
-            
-            szog = 0.0; 
-        }
-        
-        this.pos.setLocation(carX, carY);
+			CrossingView currentCrossingView = mainPanel.getCrossingView(currentCrossing);
+			if (currentCrossingView == null)
+				return;
 
-        double eredetiSzelesseg = carImage.getWidth();
-        double eredetiMagassag = carImage.getHeight();
+			Point2D.Double center = MainPanel.calculateCenter(currentCrossingView);
+			carX = center.x;
+			carY = center.y;
 
-        int autoMagassag = MainPanel.LANE_WIDTH;
-        int autoHossz = (int) Math.round(autoMagassag * (eredetiSzelesseg / eredetiMagassag));
+			szog = 0.0;
+		}
 
-        Graphics2D g2 = (Graphics2D) g.create();
-        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		this.pos.setLocation(carX, carY);
 
-        g2.translate(carX, carY);
-        g2.rotate(szog);
+		double eredetiSzelesseg = carImage.getWidth();
+		double eredetiMagassag = carImage.getHeight();
 
-        g2.drawImage(carImage, 
-            -autoHossz / 2, -autoMagassag / 2, 
-            autoHossz, autoMagassag, 
-            null
-        );
+		int autoMagassag = MainPanel.LANE_WIDTH;
+		int autoHossz = (int) Math.round(autoMagassag * (eredetiSzelesseg / eredetiMagassag));
 
-        g2.dispose();
-    }
+		Graphics2D g2 = (Graphics2D) g.create();
+		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+		g2.translate(carX, carY);
+		g2.rotate(szog);
+
+		g2.drawImage(carImage,
+				-autoHossz / 2, -autoMagassag / 2,
+				autoHossz, autoMagassag,
+				null);
+
+		g2.dispose();
+	}
 }

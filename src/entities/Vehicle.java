@@ -259,15 +259,6 @@ public abstract class Vehicle {
 	}
 
 	/**
-	 * Vissaadja a jármű útvonalát.
-	 * 
-	 * @return az útvonal objektum.
-	 */
-	public Path getPath(){
-		return path;
-	}
-
-	/**
 	 * Vissaadja a legutóbbi kereszteződés, amin volt a jármű.
 	 * 
 	 * @return a kereszteződés objektum objektum.
@@ -277,18 +268,18 @@ public abstract class Vehicle {
 	}
 
 	/**
-     * Visszaadja a sávot, amin a jármű éppen halad.
-     */
+	 * Visszaadja a sávot, amin a jármű éppen halad.
+	 */
 	public Lane getCurrentLane() {
-        return this.currentLane;
-    }
+		return this.currentLane;
+	}
 
-    /**
-     * Visszaadja a jármű aktuális megtett távolságát pixelben/méterben az úton.
-     */
-    public double getLaneProgress() {
-        return this.laneProgress;
-    }
+	/**
+	 * Visszaadja a jármű aktuális megtett távolságát pixelben/méterben az úton.
+	 */
+	public double getLaneProgress() {
+		return this.laneProgress;
+	}
 
 	/**
 	 * Kezeli az ütközés utáni kényszerpihenőt.
@@ -315,7 +306,8 @@ public abstract class Vehicle {
 	 * A baleset utáni felépülés pillanatában végrehajtandó feladatok.
 	 * Alapértelmezetten üres, a leszármazottak (pl. Car) definiálják felül.
 	 */
-	protected void revive() {}
+	protected void revive() {
+	}
 
 	/**
 	 * Ha a sávon van más jármű ami eltorlaszolja az utat, akkor false-al, különben
