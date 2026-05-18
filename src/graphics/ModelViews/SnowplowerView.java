@@ -200,8 +200,13 @@ public class SnowplowerView {
 	public boolean isClicked(int x, int y) {
 		if (!updatePos())
 			return false;
+		if (modelSnowplower.getCleaner() != mainPanel.getSelectedCleaner())
+			return false;
+		if (pos.distance(x, y) > MainPanel.LANE_WIDTH)
+			return false;
 
-		return pos.distance(x, y) <= MainPanel.LANE_WIDTH;	//Ez jó így?
+		mainPanel.setSelectedSnowplower(modelSnowplower);
+		return true;
 	}
 
 
