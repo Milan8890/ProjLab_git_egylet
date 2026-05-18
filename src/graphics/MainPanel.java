@@ -83,34 +83,7 @@ public class MainPanel extends JFrame {
 
         buildTestMap();
         initMapPanel();
-
-        applyVisualTestData();
     }
-
-    // =========================================================================
-    // ======================== IDEIGLENES TESZT METÓDUS =======================
-    // =========================================================================
-    /**
-     * Fix tesztadatok beállítása az összes sávra: 82 hó, 75 jég, só és kavics.
-     */
-    private void applyVisualTestData() {
-        for (LaneView lv : laneViews) {
-            Lane lane = lv.getLane();
-            if (lane == null) continue;
-
-            // FIX ÉRTÉKEK BEÁLLÍTÁSA A MODELLNEK
-            // Megjegyzés: Ha a Lane osztályodban a metódusok neve eltér (pl. setSnow helyett setSnowLevel, vagy setSalt helyett addSalt), 
-            // akkor azokat írd át a pontos projektspecifikus nevekre!
-            lane.setSnow(1);
-            lane.setIce(0);
-            lane.setSalt(0);       // Bármilyen 0-nál nagyobb érték, hogy a getSalt() > 0 igaz legyen
-            lane.setGravel(false);     // Hogy a hasGravel() true-t adjon vissza
-        }
-        repaint(); // Képernyő frissítése
-    }
-    // =========================================================================
-    // ==================== IDEIGLENES TESZT METÓDUS VÉGE ======================
-    // =========================================================================
 
     private void buildTestMap() {
         Crossing c1 = new Crossing();
@@ -162,7 +135,7 @@ public class MainPanel extends JFrame {
                 for (CarView cv : carViews) {
                     cv.paint(g2);
                 }
-                
+
                 g2.dispose();
             }
         };
