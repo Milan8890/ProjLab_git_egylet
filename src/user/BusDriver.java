@@ -3,10 +3,13 @@ package user;
 import entities.Bus;
 import entities.Snowplower;
 import playground.City;
+import playground.Crossing;
 
 import java.awt.Color;
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.random.RandomGenerator;
 
 /**
  * Egyik játékos fajta, buszt irányít 2 megálló között.
@@ -33,6 +36,14 @@ public class BusDriver extends Player {
 	public BusDriver(String name) {
 		super(name);
 		point = 0;
+		Random random = new Random();
+		if(City.getCrossings().size() < 2) {
+			Logger.getGlobal().log(Level.SEVERE, "Nincs elég kereszteződés a városban egy busz létrehozásához!", new Object[] {this});
+			return;
+		}
+		Crossing crossingA = City.getCrossings().get(random.nextInt(City.getCrossings().size()));
+		Crossing crossingB = City.getCrossings().get(random.nextInt(City.getCrossings().size()));
+		bus = new Bus(crossingA, crossingB, this);
 		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
 
@@ -53,5 +64,5 @@ public class BusDriver extends Player {
 		Logger.getGlobal().log(Level.INFO, "[Obj] received one point", new Object[] {this});
 		point++;
 	}
-
+	
 }

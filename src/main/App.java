@@ -27,6 +27,9 @@ import javax.swing.WindowConstants;
 
 import graphics.NewMain;
 import graphics.Panels.MapPanel;
+import user.BusDriver;
+import user.Cleaner;
+import user.Player;
 import user.setupPlayerData;
 
 import javax.swing.BorderFactory;
@@ -64,7 +67,6 @@ public class App {
 		Logger.getGlobal().addHandler(ownHandler);
 
 		// Innen lehet tesztelni
-		SnowplowerPanel.main(args);
 		
 		MainPanel mainPanel = new MainPanel();
 
@@ -91,6 +93,7 @@ public class App {
 		// proto.readCommandsFromCommandLine();
 	}
 
+	
 	/**
 	 * Megjeleníti a játékos hozzáadó menüt, amelyben a felhasználó játékosokat
 	 * vehet fel névvel, színnel és járművel.

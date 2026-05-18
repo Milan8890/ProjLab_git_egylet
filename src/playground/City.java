@@ -26,7 +26,7 @@ public class City {
 	/**
 	 * A városban lévő kereszteződések.
 	 */
-	static Set<Crossing> crossings = new HashSet<>();
+	static List<Crossing> crossings = new ArrayList<>();
 	/**
 	 * A városban lévő utak.
 	 */
@@ -58,7 +58,7 @@ public class City {
 	/**
 	 * Városban lévő kereszteződések lekérdezése.
 	 */
-	public static Set<Crossing> getCrossings() {
+	public static List<Crossing> getCrossings() {
 		Logger.getGlobal().log(Level.INFO, "City returned crossings", new Object[] {});
 		return crossings;
 	}
