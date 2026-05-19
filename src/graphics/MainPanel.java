@@ -11,6 +11,8 @@ import java.awt.GridLayout;
 import java.awt.Insets;
 import java.awt.LayoutManager;
 import java.awt.Panel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -52,6 +54,7 @@ import graphics.Panels.BusPanel;
 import graphics.Panels.MapPanel;
 import graphics.Panels.SnowplowerPanel;
 import main.App;
+import main.World;
 import playground.City;
 import playground.Crossing;
 import playground.Lane;
@@ -60,6 +63,7 @@ import playground.Road;
 import user.BusDriver;
 import user.Cleaner;
 import user.Player;
+import user.setupPlayerData;
 
 /**
  * A játék fő grafikus ablaka, amely a térképet, az aktív játékos adatait és a
@@ -71,9 +75,8 @@ public class MainPanel extends JFrame {
 	public static final float CROSSING_STROKE = 6f;
 
 	private BufferedImage backgroundImage;
-
-	private List<Cleaner> cleaners;
-	private List<BusDriver> busDrivers;
+	private List<Cleaner> cleaners = new ArrayList<>();
+	private List<BusDriver> busDrivers = new ArrayList<>();
 	private boolean isExtendingPath;
 
 	private Cleaner selectedCleaner;
@@ -137,12 +140,13 @@ public class MainPanel extends JFrame {
 			}
 		});
 		
-		
+		initPlayerViews(App.setupPlayer());
 		NewMain.notdone("MainPanel konstruktor");
 		activePlayerPanel = createActivePlayerPanel();
 		snowplowerPanel = new SnowplowerPanel(this);
 		busPanel = new BusPanel(this);
-		mapPanel = new MapPanel(this);
+		buildTestMap(); // TODO: EZT NEM ITT KÉNE CSINÁLNI!!!
+		initMapPanel();
 		setLayout(new GridBagLayout());
 		GridBagConstraints gbc = new GridBagConstraints();
 
@@ -150,10 +154,10 @@ public class MainPanel extends JFrame {
 		gbc.gridx = 0;
 		gbc.gridy = 0;
 		gbc.gridwidth = 1;
-		gbc.gridheight = 2; // Fontos: 2 sor magas, hogy átérje a jobb oldali mindkét panelt!
+		gbc.gridheight = 2; 
 		gbc.weightx = 0.0;
 		gbc.weighty = 0.0; 
-		gbc.fill = GridBagConstraints.NONE; // Ha azt szeretnéd, hogy a map is kitöltse a helyét
+		gbc.fill = GridBagConstraints.NONE;
 		gbc.insets = new Insets(0, 0, 0, 0); 
 		add(mapPanel, gbc);
 
@@ -161,9 +165,9 @@ public class MainPanel extends JFrame {
 		// --- JOBB OLDAL, FELSŐ: Active Player Panel ---
 		gbc.gridx = 1;
 		gbc.gridy = 0;
-		gbc.gridheight = 1; // Visszaállítjuk 1 sorosra
+		gbc.gridheight = 1; 
 		gbc.weightx = 1.0;
-		gbc.weighty = 0.0;  // 0.0 -> Nem fog függőlegesen nyúlni, megtartja az eredeti méretét
+		gbc.weighty = 0.0;  
 		gbc.fill = GridBagConstraints.HORIZONTAL; 
 		gbc.insets = new Insets(0, 0, 10, 0); 
 		add(activePlayerPanel, gbc);
@@ -173,20 +177,20 @@ public class MainPanel extends JFrame {
 		gbc.gridx = 1;
 		gbc.gridy = 1;
 		gbc.weightx = 1.0;
-		gbc.weighty = 1.0;  // 1.0 -> Megkapja az ÖSSZES maradék függőleges helyet az ablak aljáig
+		gbc.weighty = 1.0; 
 		gbc.fill = GridBagConstraints.BOTH; 
 		gbc.insets = new Insets(0, 0, 0, 0);  
+		busPanel.setVisible(false);
+		snowplowerPanel.setVisible(false);
 		add(snowplowerPanel, gbc);
-
-
+		add(busPanel, gbc);
+		
 		try {
 			backgroundImage = ImageIO.read(new File("Asset/fu.jpg"));
 		} catch (Exception e) {
 			backgroundImage = null;
 		}
 
-		buildTestMap();
-		initMapPanel();
 	}
 
 	private void buildTestMap() {
@@ -198,9 +202,9 @@ public class MainPanel extends JFrame {
 		Point2D.Double pos2 = new Point2D.Double(0, 0);
 		Point2D.Double pos3 = new Point2D.Double(800, 100);
 
-		crossingViews.add(new CrossingView(c1, new Point2D.Double(pos1.x + 3, pos1.y + 3), false, this));
-		crossingViews.add(new CrossingView(c2, new Point2D.Double(pos2.x + 3, pos2.y + 3), false, this));
-		crossingViews.add(new CrossingView(c3, new Point2D.Double(pos3.x + 3, pos3.y + 3), false, this));
+		crossingViews.add(new CrossingView(c1, new Point2D.Double(pos1.x + 3, pos1.y + 3), false));
+		crossingViews.add(new CrossingView(c2, new Point2D.Double(pos2.x + 3, pos2.y + 3), false));
+		crossingViews.add(new CrossingView(c3, new Point2D.Double(pos3.x + 3, pos3.y + 3), false));
 
 		addRoadWithLanes(c2, c1, 3);
 		addRoadWithLanes(c2, c3, 2);
@@ -208,7 +212,7 @@ public class MainPanel extends JFrame {
 	}
 
 	private void initMapPanel() {
-		JPanel rajzPanel = new JPanel() {
+		MapPanel rajzPanel = new MapPanel(this) {
 			@Override
 			protected void paintComponent(Graphics g) {
 				super.paintComponent(g);
@@ -248,9 +252,8 @@ public class MainPanel extends JFrame {
 			}
 		};
 
-		rajzPanel.setPreferredSize(new Dimension(1500, 1000));
-		rajzPanel.setBackground(Color.WHITE);
-		this.setContentPane(rajzPanel);
+		//rajzPanel.setBackground(Color.WHITE);
+		mapPanel=rajzPanel;
 	}
 
 	private void addRoadWithLanes(Crossing from, Crossing to, int savSzam) {
@@ -330,7 +333,37 @@ public class MainPanel extends JFrame {
 			laneViews.add(new LaneView(modelLanes.get(i), laneStart, laneEnd));
 		}
 	}
+public void initPlayerViews(List<setupPlayerData> playerDataList) {
+		for (setupPlayerData playerData : playerDataList) {
+			
+			switch (playerData.getVehicle()){
+				case "Busz":
+					BusDriver bd = new BusDriver(playerData.getName());
+					busDrivers.add(bd);
+					break;
+				case "Hókotró jégtörőfejjel":
+					
+					Cleaner cleaner = new Cleaner(playerData.getName());
+					cleaner.buyEjectorSnowplower();
+					cleaners.add(cleaner);
 
+					break;
+				case "Hókotró hányófejjel":
+					Cleaner cleaner2 = new Cleaner(playerData.getName());
+					cleaner2.buyEjectorSnowplower();
+					cleaners.add(cleaner2);
+					break;
+				default:
+					System.err.println("Ismeretlen járműtípus: " + playerData.getVehicle());
+			}
+		}
+	}
+	/**
+	 * Visszaadja, hogy a felhasználó éppen útvonalat bővít-e.
+	 *
+	 * @return {@code true}, ha útvonalbővítés folyamatban van, egyébként
+	 *         {@code false}
+	 */
 	public boolean getIsExtendingPath() {
 		NewMain.notdone("MainPanel getter/setter at (raw function header):\npublic boolean getIsExtendingPath() {");
 		return isExtendingPath;
@@ -525,8 +558,6 @@ public class MainPanel extends JFrame {
 		JLabel activePlayerLabel = createActivePlayerLabel("Aktív játékos:", normalFont);
 		playerSelectorComboBox = createActivePlayerComboBox(normalFont);
 		playerData = createActivePlayerInfoText("Pénzed: 0000 $", normalFont, separatorColor);
-		connectActivePlayerSelector();
-		loadActivePlayerComboBox();
 
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.gridx = 0;
@@ -559,6 +590,19 @@ public class MainPanel extends JFrame {
 		return label;
 	}
 
+	
+	private String getActivePlayerDataText() {
+		if (selectedCleaner != null) {
+			return "Pénzed: " + selectedCleaner.getMoney() + " $";
+		}
+		if (selectedBusDriver != null) {
+			return "Pontjaid: " + selectedBusDriver.getPoint() + " db";
+		}
+		return "Pénzed: 0000 $";
+	}
+
+	// Nem valós játokos, hogy lehessen üres érték a legördülő mezőben
+	Player nullPlayer;
 	/**
 	 * Létrehozza az aktív játékos kiválasztására szolgáló legördülő mezőt.
 	 *
@@ -569,9 +613,73 @@ public class MainPanel extends JFrame {
 		JComboBox<Player> comboBox = new JComboBox<>();
 		comboBox.setFont(font);
 		comboBox.setRenderer(createActivePlayerComboBoxRenderer());
+
+		nullPlayer = new BusDriver("-");
+		comboBox.addItem(nullPlayer);
+
+		for (BusDriver busDriver : busDrivers) {
+			comboBox.addItem(busDriver);
+		}
+		for (Cleaner cleaner : cleaners) {
+			comboBox.addItem(cleaner);
+		}
+		comboBox.addActionListener(
+			new ActionListener() 
+			{
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					Player selectedPlayer = (Player) comboBox.getSelectedItem();
+
+					if(selectedPlayer == nullPlayer) {
+						selectedBusDriver = null;
+						selectedCleaner = null;
+						playerData.setText(getActivePlayerDataText());
+						updateVehiclePanel();
+						return;
+					}
+
+					for (BusDriver busDriver : busDrivers) {
+						if(busDriver.equals(selectedPlayer)) {
+							selectedBusDriver = busDriver;
+							selectedCleaner = null;
+							playerData.setText(getActivePlayerDataText());
+							updateVehiclePanel();
+							return;
+						}
+					}
+					for (Cleaner cleaner : cleaners) {
+						if(cleaner.equals(selectedPlayer)) {
+							selectedCleaner = cleaner;
+							selectedBusDriver = null;
+							playerData.setText(getActivePlayerDataText());
+							updateVehiclePanel();
+							return;
+						}
+					}
+
+				}
+
+				
+			});
 		return comboBox;
 	}
 
+	public void updateVehiclePanel() {
+
+		if(selectedBusDriver != null) {
+			snowplowerPanel.setVisible(false);
+			busPanel.setVisible(true);
+		}
+		else if(selectedCleaner != null) {
+			busPanel.setVisible(false);
+			snowplowerPanel.setVisible(true);
+		}
+		else {
+			busPanel.setVisible(false);
+			snowplowerPanel.setVisible(false);
+		}
+	}
 	/**
 	 * Létrehozza az aktív játékos legördülő mezőjének megjelenítőjét.
 	 *
@@ -609,188 +717,6 @@ public class MainPanel extends JFrame {
 		return textField;
 	}
 
-	/**
-	 * Ráköti az aktív játékos legördülő mező változását a kiválasztott játékos
-	 * adatainak frissítésére.
-	 */
-	private void connectActivePlayerSelector() {
-		playerSelectorComboBox.addActionListener(e -> handleActivePlayerSelection());
-	}
-
-	/**
-	 * Betölti az aktív játékos legördülő mezőt a takarító és buszvezető játékosok
-	 * listájából.
-	 */
-	private void loadActivePlayerComboBox() {
-		if (playerSelectorComboBox == null || activePlayerComboBoxLoaded || !canLoadActivePlayerComboBox()) {
-			return;
-		}
-
-		Player selectedPlayer = (Player) playerSelectorComboBox.getSelectedItem();
-		DefaultComboBoxModel<Player> playerModel = new DefaultComboBoxModel<>();
-		addCleanersToActivePlayerModel(playerModel);
-		addBusDriversToActivePlayerModel(playerModel);
-
-		playerSelectorComboBox.setModel(playerModel);
-		activePlayerComboBoxLoaded = true;
-		restoreActivePlayerSelection(selectedPlayer, playerModel);
-		handleActivePlayerSelection();
-	}
-
-	/**
-	 * Megadja, hogy a játékoslisták rendelkezésre állnak-e a legördülő mező
-	 * feltöltéséhez.
-	 *
-	 * @return {@code true}, ha legalább az egyik játékoslista betölthető,
-	 *         egyébként {@code false}
-	 */
-	private boolean canLoadActivePlayerComboBox() {
-		return cleaners != null || busDrivers != null;
-	}
-
-	/**
-	 * Hozzáadja a takarító játékosokat az aktív játékos választó modellhez.
-	 *
-	 * @param playerModel a feltöltendő legördülő mező modell
-	 */
-	private void addCleanersToActivePlayerModel(DefaultComboBoxModel<Player> playerModel) {
-		if (cleaners == null) {
-			return;
-		}
-		for (Cleaner cleaner : cleaners) {
-			playerModel.addElement(cleaner);
-		}
-	}
-
-	/**
-	 * Hozzáadja a buszvezető játékosokat az aktív játékos választó modellhez.
-	 *
-	 * @param playerModel a feltöltendő legördülő mező modell
-	 */
-	private void addBusDriversToActivePlayerModel(DefaultComboBoxModel<Player> playerModel) {
-		if (busDrivers == null) {
-			return;
-		}
-		for (BusDriver busDriver : busDrivers) {
-			playerModel.addElement(busDriver);
-		}
-	}
-
-	/**
-	 * Visszaállítja a korábban kiválasztott aktív játékost, ha az továbbra is
-	 * szerepel a modellben.
-	 *
-	 * @param selectedPlayer a korábban kiválasztott játékos
-	 * @param playerModel    az aktív játékosokat tartalmazó modell
-	 */
-	private void restoreActivePlayerSelection(Player selectedPlayer, DefaultComboBoxModel<Player> playerModel) {
-		if (selectedPlayer == null) {
-			return;
-		}
-
-		for (int i = 0; i < playerModel.getSize(); i++) {
-			if (playerModel.getElementAt(i) == selectedPlayer) {
-				playerSelectorComboBox.setSelectedItem(selectedPlayer);
-				return;
-			}
-		}
-	}
-
-	/**
-	 * Kezeli az aktív játékos választásának változását.
-	 */
-	private void handleActivePlayerSelection() {
-		Player selectedPlayer = (Player) playerSelectorComboBox.getSelectedItem();
-		setSelectedPlayerFromComboBox(selectedPlayer);
-		updateActivePlayerDataText();
-	}
-
-	/**
-	 * A legördülő mező kiválasztott eleme alapján beállítja a kiválasztott játékos
-	 * mezőket.
-	 *
-	 * @param selectedPlayer a legördülő mezőben kiválasztott játékos
-	 */
-	private void setSelectedPlayerFromComboBox(Player selectedPlayer) {
-		Cleaner cleaner = findCleanerByReference(selectedPlayer);
-		if (cleaner != null) {
-			selectedCleaner = cleaner;
-			selectedBusDriver = null;
-			return;
-		}
-
-		BusDriver busDriver = findBusDriverByReference(selectedPlayer);
-		if (busDriver != null) {
-			selectedCleaner = null;
-			selectedBusDriver = busDriver;
-			return;
-		}
-		selectedCleaner = null;
-		selectedBusDriver = null;
-	}
-
-	/**
-	 * Megkeresi a kiválasztott játékost a takarító játékosok között
-	 * objektumreferencia-egyezéssel.
-	 *
-	 * @param selectedPlayer a legördülő mezőben kiválasztott játékos
-	 * @return a kiválasztott takarító, vagy {@code null}, ha nincs egyezés
-	 */
-	private Cleaner findCleanerByReference(Player selectedPlayer) {
-		if (cleaners == null) {
-			return null;
-		}
-		for (Cleaner cleaner : cleaners) {
-			if (cleaner == selectedPlayer) {
-				return cleaner;
-			}
-		}
-		return null;
-	}
-
-	/**
-	 * Megkeresi a kiválasztott játékost a buszvezető játékosok között
-	 * objektumreferencia-egyezéssel.
-	 *
-	 * @param selectedPlayer a legördülő mezőben kiválasztott játékos
-	 * @return a kiválasztott buszvezető, vagy {@code null}, ha nincs egyezés
-	 */
-	private BusDriver findBusDriverByReference(Player selectedPlayer) {
-		if (busDrivers == null) {
-			return null;
-		}
-		for (BusDriver busDriver : busDrivers) {
-			if (busDriver == selectedPlayer) {
-				return busDriver;
-			}
-		}
-		return null;
-	}
-
-	/**
-	 * Frissíti az aktív játékos pénzét vagy pontszámát megjelenítő mezőt.
-	 */
-	private void updateActivePlayerDataText() {
-		if (playerData == null) {
-			return;
-		}
-		playerData.setText(getActivePlayerDataText());
-	}
-
-	/**
-	 * Összeállítja az aktív játékoshoz tartozó pénz vagy pontszám szövegét.
-	 *
-	 * @return a megjelenítendő pénz vagy pontszám szöveg
-	 */
-	private String getActivePlayerDataText() {
-		if (selectedCleaner != null) {
-			return "Pénzed: " + selectedCleaner.getMoney() + " $";
-		}
-		if (selectedBusDriver != null) {
-			return "Pontjaid: " + selectedBusDriver.getPoint() + " db";
-		}
-		return "Pénzed: 0000 $";
-	}
 
 	/**
 	 * Visszaadja a játékos legördülő mezőben megjelenő nevét.
