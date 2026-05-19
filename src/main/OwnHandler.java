@@ -39,7 +39,7 @@ public class OwnHandler extends Handler {
 	public HashMap<Object, String> objectMap;
 
 	// Kikapcsolható logging
-	public boolean isLogging = false;
+	public boolean isLogging = true;
 
 	public OwnHandler(HashMap<Object, String> objmap) {
 		objectMap = objmap;
@@ -53,33 +53,41 @@ public class OwnHandler extends Handler {
 
 		String message = record.getMessage();
 
-		// Ha ilyen szintű hibaüzenetet külön jelöljük, és a tesztek hibásak, ha van
-		// bennük ilyen.
-		if (record.getLevel() == Level.SEVERE) {
-			message = "[ERROR]" + message;
-		}
+		try {
+			// Ha ilyen szintű hibaüzenetet külön jelöljük, és a tesztek hibásak, ha van
+			// bennük ilyen.
+			if (record.getLevel() == Level.SEVERE) {
+				message = "[ERROR]" + message;
+			}
 
-		Object[] args = record.getParameters();
+			Object[] args = record.getParameters();
 
-		if (args == null) {
+			if (args == null) {
+				System.out.println(message);
+				return;
+			}
+
+			// Ha nem annyi [Obj] van a stringben, mint amennyi objektumot kapott, jelezze.
+			if (args.length != message.split("\\[Obj\\]", -1).length - 1) {
+				Logger.getGlobal()
+						.severe("The amount of [Obj]s and objects passed in a logging function are not the same.");
+				System.err.println(message);
+				return;
+			}
+
+			// Egyes objektumok nevének kitöltése az üzenetekben
+			for (Object object : args) {
+				message = message.replaceFirst("\\[Obj\\]", getOrCreateObjectName(object));
+			}
+
+			// üzenet kiírása
 			System.out.println(message);
-			return;
+		} catch (Exception e) {
+			System.err
+					.println("Error while logging. Message:\n" + message + "\nStackTrace:");
+			e.printStackTrace();
+			System.exit(1);
 		}
-
-		// Ha nem annyi [Obj] van a stringben, mint amennyi objektumot kapott, jelezze.
-		if (args.length != message.split("\\[Obj\\]", -1).length - 1) {
-			Logger.getGlobal()
-					.severe("The amount of [Obj]s and objects passed in a logging function are not the same.");
-			return;
-		}
-
-		// Egyes objektumok nevének kitöltése az üzenetekben
-		for (Object object : args) {
-			message = message.replaceFirst("\\[Obj\\]", getOrCreateObjectName(object));
-		}
-
-		// üzenet kiírása
-		System.out.println(message);
 	}
 
 	@Override

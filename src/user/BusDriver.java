@@ -37,8 +37,10 @@ public class BusDriver extends Player {
 		super(name);
 		point = 0;
 		Random random = new Random();
-		if(City.getCrossings().size() < 2) {
-			Logger.getGlobal().log(Level.SEVERE, "Nincs elég kereszteződés a városban egy busz létrehozásához!", new Object[] {this});
+		if (City.getCrossings().size() < 2) {
+			Logger.getGlobal().log(Level.SEVERE,
+					"Nincs elég kereszteződés a városban egy busz létrehozásához! BusDriver: [Obj]",
+					new Object[] { this });
 			return;
 		}
 		Crossing crossingA = City.getCrossings().get(random.nextInt(City.getCrossings().size()));
@@ -47,22 +49,30 @@ public class BusDriver extends Player {
 		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
 
-
 	/**
 	 * Visszaadja a játékos pénzét.
 	 * 
 	 * @return pontok
 	 */
-	public int getPoint(){
+	public int getPoint() {
 		return point;
+	}
+
+	/**
+	 * Visszaadja a játékos buszát.
+	 * 
+	 * @return A busz
+	 */
+	public Bus getBus() {
+		return bus;
 	}
 
 	/**
 	 * Ad pontot a játékosnak.
 	 */
 	public void addPoint() {
-		Logger.getGlobal().log(Level.INFO, "[Obj] received one point", new Object[] {this});
+		Logger.getGlobal().log(Level.INFO, "[Obj] received one point", new Object[] { this });
 		point++;
 	}
-	
+
 }
