@@ -204,7 +204,7 @@ public class MainPanel extends JFrame {
 		City.getCrossings().add(c2);
 		City.getCrossings().add(c3);
 
-		City.setSnowplowBase(c1);
+		City.setSnowplowBase(c2);
 
 		Point2D.Double pos1 = new Point2D.Double(400, 500);
 		Point2D.Double pos2 = new Point2D.Double(0, 0);
@@ -353,13 +353,13 @@ public class MainPanel extends JFrame {
 				case "Hókotró jégtörőfejjel":
 
 					Cleaner cleaner = new Cleaner(playerData.getName());
-					cleaner.buyEjectorSnowplower();
+					cleaner.createEjectorSnowplower();
 					cleaners.add(cleaner);
 
 					break;
 				case "Hókotró hányófejjel":
 					Cleaner cleaner2 = new Cleaner(playerData.getName());
-					cleaner2.buyEjectorSnowplower();
+					cleaner2.createEjectorSnowplower();
 					cleaners.add(cleaner2);
 					break;
 				default:

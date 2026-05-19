@@ -110,6 +110,18 @@ public class Cleaner extends Player {
 	}
 
 	/**
+	 * Hozzáad (pénz levonása nélkül) egy új jégtörőfejes hókotrót
+	 */
+	public void createBreakerSnowplower() {
+		this.addMoney(BREAKER_SNOWPLOWER_PRICE);
+		if (!buyEjectorSnowplower()) {
+			Logger.getGlobal().log(Level.SEVERE,
+					"Couldn't create breaker snowplower for [Obj], because not enough money, which just got added.",
+					this);
+		}
+	}
+
+	/**
 	 * Ha van elég pénze a játékosnak levonja egy új hókotró árát,
 	 * a hókotróihoz hozzáad egy új hányó fejes hókotrót,
 	 * és Igaz értékkel tér vissza, ha nincs akkor nem von le pénzt és visszatér
@@ -129,6 +141,18 @@ public class Cleaner extends Player {
 					"[Obj] couldn't buy snowplower with starting head Ejector, because not enough money",
 					new Object[] { this });
 			return false;
+		}
+	}
+
+	/**
+	 * Hozzáad (pénz levonása nélkül) egy új hányófejes hókotrót
+	 */
+	public void createEjectorSnowplower() {
+		this.addMoney(EJECTOR_SNOWPLOWER_PRICE);
+		if (!buyEjectorSnowplower()) {
+			Logger.getGlobal().log(Level.SEVERE,
+					"Couldn't create ejector snowplower for [Obj], because not enough money, which just got added.",
+					this);
 		}
 	}
 

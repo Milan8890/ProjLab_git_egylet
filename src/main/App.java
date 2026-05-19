@@ -64,7 +64,7 @@ public class App {
 		Proto proto = new Proto(World.players);
 		Logger.getGlobal().setUseParentHandlers(false);
 		OwnHandler ownHandler = new OwnHandler(proto.objectMap);
-		ownHandler.isLogging = false;
+		ownHandler.isLogging = true;
 		Logger.getGlobal().addHandler(ownHandler);
 
 		// Innen lehet tesztelni
