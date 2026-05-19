@@ -600,6 +600,9 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 		}
 		return "Pénzed: 0000 $";
 	}
+
+	// Nem valós játokos, hogy lehessen üres érték a legördülő mezőben
+	Player nullPlayer;
 	/**
 	 * Létrehozza az aktív játékos kiválasztására szolgáló legördülő mezőt.
 	 *
@@ -610,6 +613,10 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 		JComboBox<Player> comboBox = new JComboBox<>();
 		comboBox.setFont(font);
 		comboBox.setRenderer(createActivePlayerComboBoxRenderer());
+
+		nullPlayer = new BusDriver("-");
+		comboBox.addItem(nullPlayer);
+
 		for (BusDriver busDriver : busDrivers) {
 			comboBox.addItem(busDriver);
 		}
@@ -623,6 +630,15 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 				@Override
 				public void actionPerformed(ActionEvent e) {
 					Player selectedPlayer = (Player) comboBox.getSelectedItem();
+
+					if(selectedPlayer == nullPlayer) {
+						selectedBusDriver = null;
+						selectedCleaner = null;
+						playerData.setText(getActivePlayerDataText());
+						updateVehiclePanel();
+						return;
+					}
+
 					for (BusDriver busDriver : busDrivers) {
 						if(busDriver.equals(selectedPlayer)) {
 							selectedBusDriver = busDriver;
