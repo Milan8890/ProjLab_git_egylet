@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+import graphics.MainPanel;
 import graphics.NewMain;
 import graphics.Panels.BusPanel;
 import graphics.Panels.SnowplowerPanel;
@@ -61,7 +62,18 @@ public class App {
 		OwnHandler ownHandler = new OwnHandler(proto.objectMap);
 		ownHandler.isLogging = false;
 		Logger.getGlobal().addHandler(ownHandler);
+		
+		//városfelépítő
+		SwingUtilities.invokeLater(() -> {
+            MainPanel foAblak = new MainPanel();
+            foAblak.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            foAblak.setTitle("Zúzmaraváros");
+            foAblak.pack();
+            foAblak.setLocationRelativeTo(null);
+            foAblak.setVisible(true);
+        });
 
+		/*
 		// Innen lehet tesztelni
 		SnowplowerPanel.main(args);
     
@@ -90,6 +102,7 @@ public class App {
 
 		// // Parancsok beolvasása
 		// proto.readCommandsFromCommandLine();
+		*/
 	}
 
 	/**

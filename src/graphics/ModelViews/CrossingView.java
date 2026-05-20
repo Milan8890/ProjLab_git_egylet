@@ -34,10 +34,17 @@ public class CrossingView {
 
         Graphics2D g2 = (Graphics2D) g.create();
 
-        g2.setColor(new Color(30, 144, 255));
-        g2.fillOval(x, y, atmero, atmero);
 
-        g2.setColor(new Color(0, 0, 139));
+        if (isSnowplowerBase) {
+            g2.setColor(new Color(255, 69, 0)); 
+            g2.fillOval(x, y, atmero, atmero);
+            g2.setColor(new Color(139, 0, 0));
+        } else {
+            g2.setColor(new Color(30, 144, 255));
+            g2.fillOval(x, y, atmero, atmero);
+
+            g2.setColor(new Color(0, 0, 139));
+        }
         g2.setStroke(new BasicStroke(vastagsag));
         g2.drawOval(x, y, atmero, atmero);
 
