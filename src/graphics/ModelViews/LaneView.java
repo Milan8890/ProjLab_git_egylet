@@ -4,6 +4,8 @@ import java.awt.Graphics2D;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.logging.Logger;
+
 import javax.imageio.ImageIO;
 
 import entities.Vehicle;
@@ -83,8 +85,10 @@ public class LaneView {
 		double dx = endX - startX;
 		double dy = endY - startY;
 		double hossza = Math.sqrt(dx * dx + dy * dy);
-		if (hossza == 0)
+		if (hossza == 0) {
+			Logger.getGlobal().severe("LaneView length is 0");
 			return;
+		}
 
 		double szog = Math.atan2(dy, dx);
 
