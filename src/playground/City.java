@@ -72,6 +72,17 @@ public class City {
 	}
 
 	/**
+	 * Hókotróközpont beállítása, ha még nem lenne beállítva.
+	 * 
+	 * @param _snowplowBase Az új hókotróközpont.
+	 */
+	public static void setSnowplowBase(Crossing _snowplowBase) {
+		if (snowplowBase == null) {
+			snowplowBase = _snowplowBase;
+		}
+	}
+
+	/**
 	 * A városban két kereszteződés között a legrövidebb útvonalat adja vissza.
 	 * 
 	 * @param from a kiindulási kereszteződés

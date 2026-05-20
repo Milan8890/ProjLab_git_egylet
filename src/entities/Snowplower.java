@@ -77,6 +77,7 @@ public class Snowplower extends Vehicle {
 		saltAmount = 0;
 		bioAmount = 0;
 		gravelAmount = 0;
+		this.lastCrossing = City.getSnowplowBase();
 		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 		this.path = new Path(this);
 	}
@@ -316,7 +317,6 @@ public class Snowplower extends Vehicle {
 	 * @return a létrehozott Hókotró
 	 */
 	public static Snowplower createWithBreaker(Cleaner owner) {
-
 		Snowplower sp = new Snowplower(owner);
 		sp.headInventory = HeadInventory.createWithBreaker(sp);
 		return sp;

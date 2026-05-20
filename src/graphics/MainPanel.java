@@ -18,6 +18,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -139,14 +140,15 @@ public class MainPanel extends JFrame {
 				selectedVehicle.extendPath(lanes.get(pressed - 1));
 			}
 		});
-		
+
+		buildTestMap();
+
 		initPlayerViews(App.setupPlayer());
-		NewMain.notdone("MainPanel konstruktor");
 		activePlayerPanel = createActivePlayerPanel();
 		snowplowerPanel = new SnowplowerPanel(this);
 		busPanel = new BusPanel(this);
-		buildTestMap(); // TODO: EZT NEM ITT KÉNE CSINÁLNI!!!
 		initMapPanel();
+
 		setLayout(new GridBagLayout());
 		GridBagConstraints gbc = new GridBagConstraints();
 
@@ -154,37 +156,35 @@ public class MainPanel extends JFrame {
 		gbc.gridx = 0;
 		gbc.gridy = 0;
 		gbc.gridwidth = 1;
-		gbc.gridheight = 2; 
+		gbc.gridheight = 2;
 		gbc.weightx = 0.0;
-		gbc.weighty = 0.0; 
+		gbc.weighty = 0.0;
 		gbc.fill = GridBagConstraints.NONE;
-		gbc.insets = new Insets(0, 0, 0, 0); 
+		gbc.insets = new Insets(0, 0, 0, 0);
 		add(mapPanel, gbc);
-
 
 		// --- JOBB OLDAL, FELSŐ: Active Player Panel ---
 		gbc.gridx = 1;
 		gbc.gridy = 0;
-		gbc.gridheight = 1; 
+		gbc.gridheight = 1;
 		gbc.weightx = 1.0;
-		gbc.weighty = 0.0;  
-		gbc.fill = GridBagConstraints.HORIZONTAL; 
-		gbc.insets = new Insets(0, 0, 10, 0); 
+		gbc.weighty = 0.0;
+		gbc.fill = GridBagConstraints.HORIZONTAL;
+		gbc.insets = new Insets(0, 0, 10, 0);
 		add(activePlayerPanel, gbc);
-
 
 		// --- JOBB OLDAL, ALSÓ: Snowplower Panel ---
 		gbc.gridx = 1;
 		gbc.gridy = 1;
 		gbc.weightx = 1.0;
-		gbc.weighty = 1.0; 
-		gbc.fill = GridBagConstraints.BOTH; 
-		gbc.insets = new Insets(0, 0, 0, 0);  
+		gbc.weighty = 1.0;
+		gbc.fill = GridBagConstraints.BOTH;
+		gbc.insets = new Insets(0, 0, 0, 0);
 		busPanel.setVisible(false);
 		snowplowerPanel.setVisible(false);
 		add(snowplowerPanel, gbc);
 		add(busPanel, gbc);
-		
+
 		try {
 			backgroundImage = ImageIO.read(new File("Asset/fu.jpg"));
 		} catch (Exception e) {
@@ -197,6 +197,14 @@ public class MainPanel extends JFrame {
 		Crossing c1 = new Crossing();
 		Crossing c2 = new Crossing();
 		Crossing c3 = new Crossing();
+
+		// Bele kell rakni a modellbe a crossingokat.
+		// Majd rendesen megírni a térképet I guess.
+		City.getCrossings().add(c1);
+		City.getCrossings().add(c2);
+		City.getCrossings().add(c3);
+
+		City.setSnowplowBase(c2);
 
 		Point2D.Double pos1 = new Point2D.Double(400, 500);
 		Point2D.Double pos2 = new Point2D.Double(0, 0);
@@ -252,8 +260,8 @@ public class MainPanel extends JFrame {
 			}
 		};
 
-		//rajzPanel.setBackground(Color.WHITE);
-		mapPanel=rajzPanel;
+		// rajzPanel.setBackground(Color.WHITE);
+		mapPanel = rajzPanel;
 	}
 
 	private void addRoadWithLanes(Crossing from, Crossing to, int savSzam) {
@@ -330,34 +338,36 @@ public class MainPanel extends JFrame {
 			Point2D.Double laneStart = new Point2D.Double(savStartX, savStartY);
 			Point2D.Double laneEnd = new Point2D.Double(savEndX, savEndY);
 
-			laneViews.add(new LaneView(modelLanes.get(i), laneStart, laneEnd));
+			laneViews.add(new LaneView(modelLanes.get(i), laneStart, laneEnd, this));
 		}
 	}
-public void initPlayerViews(List<setupPlayerData> playerDataList) {
+
+	public void initPlayerViews(List<setupPlayerData> playerDataList) {
 		for (setupPlayerData playerData : playerDataList) {
-			
-			switch (playerData.getVehicle()){
+
+			switch (playerData.getVehicle()) {
 				case "Busz":
 					BusDriver bd = new BusDriver(playerData.getName());
 					busDrivers.add(bd);
 					break;
 				case "Hókotró jégtörőfejjel":
-					
+
 					Cleaner cleaner = new Cleaner(playerData.getName());
-					cleaner.buyEjectorSnowplower();
+					cleaner.createEjectorSnowplower();
 					cleaners.add(cleaner);
 
 					break;
 				case "Hókotró hányófejjel":
 					Cleaner cleaner2 = new Cleaner(playerData.getName());
-					cleaner2.buyEjectorSnowplower();
+					cleaner2.createEjectorSnowplower();
 					cleaners.add(cleaner2);
 					break;
 				default:
-					System.err.println("Ismeretlen járműtípus: " + playerData.getVehicle());
+					Logger.getGlobal().severe("Ismeretlen járműtípus: " + playerData.getVehicle());
 			}
 		}
 	}
+
 	/**
 	 * Visszaadja, hogy a felhasználó éppen útvonalat bővít-e.
 	 *
@@ -365,7 +375,6 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 	 *         {@code false}
 	 */
 	public boolean getIsExtendingPath() {
-		NewMain.notdone("MainPanel getter/setter at (raw function header):\npublic boolean getIsExtendingPath() {");
 		return isExtendingPath;
 	}
 
@@ -375,8 +384,6 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 	 * @param b az új útvonalbővítési állapot
 	 */
 	public void setIsExtendingPath(boolean b) {
-		NewMain.notdone(
-				"MainPanel getter/setter at (raw function header):\npublic void setIsExtendingPath(boolean b) {");
 		isExtendingPath = b;
 	}
 
@@ -409,7 +416,6 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 	 * @return az út nézetek listája
 	 */
 	public List<RoadView> getRoadViews() {
-		NewMain.notdone("MainPanel getter/setter at (raw function header):\npublic List<RoadView> getRoadViews() {");
 		return roadViews;
 	}
 
@@ -419,7 +425,6 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 	 * @return a sáv nézetek listája
 	 */
 	public List<LaneView> getLaneViews() {
-		NewMain.notdone("MainPanel getter/setter at (raw function header):\npublic List<LaneView> getLaneViews() {");
 		return laneViews;
 	}
 
@@ -429,8 +434,6 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 	 * @return a hókotró nézetek listája
 	 */
 	public List<SnowplowerView> getSnowplowerViews() {
-		NewMain.notdone(
-				"MainPanel getter/setter at (raw function header):\npublic List<SnowplowerView> getSnowplowerViews() {");
 		return snowplowerViews;
 	}
 
@@ -440,7 +443,6 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 	 * @return a busz nézetek listája
 	 */
 	public List<BusView> getBusViews() {
-		NewMain.notdone("MainPanel getter/setter at (raw function header):\npublic List<BusView> getBusViews() {");
 		return busViews;
 	}
 
@@ -450,60 +452,68 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 	 * @return az autó nézetek listája
 	 */
 	public List<CarView> getCarViews() {
-		NewMain.notdone("MainPanel getter/setter at (raw function header):\npublic List<CarView> getCarViews() {");
 		return carViews;
 	}
 
 	/**
-	 * Visszaadja a kiválasztott takarító játékost.
+	 * Visszaadja a kiválasztott takarító játékost. Ha nem takarító van kiválasztva,
+	 * null-t.
 	 *
 	 * @return a kiválasztott takarító játékos
 	 */
 	public Cleaner getSelectedCleaner() {
-		NewMain.notdone("MainPanel getter/setter at (raw function header):\npublic Cleaner getSelectedCleaner() {");
 		return selectedCleaner;
 	}
 
 	/**
-	 * Visszaadja a kiválasztott buszvezető játékost.
+	 * Visszaadja a kiválasztott buszvezető játékost. Ha nem buszvezető van
+	 * kiválasztva, null-t.
 	 *
 	 * @return a kiválasztott buszvezető játékos
 	 */
 	public BusDriver getSelectedBusDriver() {
-		NewMain.notdone("MainPanel getter/setter at (raw function header):\npublic BusDriver getSelectedBusDriver() {");
 		return selectedBusDriver;
 	}
 
 	/**
-	 * Visszaadja a kiválasztott hókotrót.
+	 * Visszaadja a kiválasztott hókotrót. Ha nincs ilyen, null-t.
 	 *
-	 * @return a kiválasztott hókotró
+	 * @return A kiválasztott hókotró
 	 */
 	public Snowplower getSelectedSnowplower() {
-		NewMain.notdone(
-				"MainPanel getter/setter at (raw function header):\npublic Snowplower getSelectedSnowplower() {");
 		return selectedSnowplower;
 	}
 
 	/**
 	 * Beállítja a kiválasztott hókotrót.
 	 *
-	 * @param selectedSnowplower az újonnan kiválasztott hókotró
+	 * @param selectedSnowplower Az újonnan kiválasztott hókotró
 	 */
 	public void setSelectedSnowplower(Snowplower selectedSnowplower) {
-		NewMain.notdone(
-				"MainPanel getter/setter at (raw function header):\npublic void setSelectedSnowplower(Snowplower selectedSnowplower) {");
 		this.selectedSnowplower = selectedSnowplower;
 	}
 
 	/**
-	 * Visszaadja a kiválasztott buszt.
+	 * Visszaadja a kiválasztott buszt. Ha nincs ilyen, null-t.
 	 *
 	 * @return a kiválasztott busz
 	 */
 	public Bus getSelectedBus() {
-		NewMain.notdone("MainPanel getter/setter at (raw function header):\npublic Bus getSelectedBus() {");
+		if (selectedBusDriver != null)
+			return selectedBusDriver.getBus();
 		return null;
+	}
+
+	/**
+	 * Visszaadja a kiválasztott járművet. Ha nincs ilyen, null-t.
+	 * 
+	 * @return A kiválasztott jármű
+	 */
+	public Vehicle getSelectedVehicle() {
+		Vehicle v = getSelectedBus();
+		if (v == null)
+			v = getSelectedSnowplower();
+		return v;
 	}
 
 	/**
@@ -512,7 +522,6 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 	 * @return a kiválasztott kereszteződés
 	 */
 	public Crossing getSelectedCrossing() {
-		NewMain.notdone("MainPanel getter/setter at (raw function header):\npublic Crossing getSelectedCrossing() {");
 		return selectedCrossing;
 	}
 
@@ -522,8 +531,6 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 	 * @param selectedCrossing az újonnan kiválasztott kereszteződés
 	 */
 	public void setSelectedCrossing(Crossing selectedCrossing) {
-		NewMain.notdone(
-				"MainPanel getter/setter at (raw function header):\npublic void setSelectedCrossing(Crossing selectedCrossing) {");
 		this.selectedCrossing = selectedCrossing;
 	}
 
@@ -590,7 +597,6 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 		return label;
 	}
 
-	
 	private String getActivePlayerDataText() {
 		if (selectedCleaner != null) {
 			return "Pénzed: " + selectedCleaner.getMoney() + " $";
@@ -603,6 +609,7 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 
 	// Nem valós játokos, hogy lehessen üres érték a legördülő mezőben
 	Player nullPlayer;
+
 	/**
 	 * Létrehozza az aktív játékos kiválasztására szolgáló legördülő mezőt.
 	 *
@@ -624,62 +631,69 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 			comboBox.addItem(cleaner);
 		}
 		comboBox.addActionListener(
-			new ActionListener() 
-			{
+				new ActionListener() {
 
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					Player selectedPlayer = (Player) comboBox.getSelectedItem();
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						Player selectedPlayer = (Player) comboBox.getSelectedItem();
 
-					if(selectedPlayer == nullPlayer) {
-						selectedBusDriver = null;
-						selectedCleaner = null;
-						playerData.setText(getActivePlayerDataText());
-						updateVehiclePanel();
-						return;
-					}
-
-					for (BusDriver busDriver : busDrivers) {
-						if(busDriver.equals(selectedPlayer)) {
-							selectedBusDriver = busDriver;
+						if (selectedPlayer == nullPlayer) {
+							selectedBusDriver = null;
 							selectedCleaner = null;
 							playerData.setText(getActivePlayerDataText());
 							updateVehiclePanel();
 							return;
 						}
-					}
-					for (Cleaner cleaner : cleaners) {
-						if(cleaner.equals(selectedPlayer)) {
-							selectedCleaner = cleaner;
-							selectedBusDriver = null;
-							playerData.setText(getActivePlayerDataText());
-							updateVehiclePanel();
-							return;
+
+						for (BusDriver busDriver : busDrivers) {
+							if (busDriver.equals(selectedPlayer)) {
+								selectedBusDriver = busDriver;
+								selectedCleaner = null;
+								selectedSnowplower = null;
+								playerData.setText(getActivePlayerDataText());
+								updateVehiclePanel();
+								return;
+							}
 						}
+						for (Cleaner cleaner : cleaners) {
+							if (cleaner.equals(selectedPlayer)) {
+								selectedCleaner = cleaner;
+								selectedBusDriver = null;
+
+								if (selectedCleaner.getSnowplowers().size() < 1) {
+									selectedSnowplower = null;
+									Logger.getGlobal().severe(
+											"ComboBox Snowplower állításánál nincsen egy hókotrója sem az egyik játékosnak.");
+								} else {
+									selectedSnowplower = selectedCleaner.getSnowplowers().get(0);
+								}
+
+								playerData.setText(getActivePlayerDataText());
+								updateVehiclePanel();
+								return;
+							}
+						}
+
 					}
 
-				}
-
-				
-			});
+				});
 		return comboBox;
 	}
 
 	public void updateVehiclePanel() {
 
-		if(selectedBusDriver != null) {
+		if (selectedBusDriver != null) {
 			snowplowerPanel.setVisible(false);
 			busPanel.setVisible(true);
-		}
-		else if(selectedCleaner != null) {
+		} else if (selectedCleaner != null) {
 			busPanel.setVisible(false);
 			snowplowerPanel.setVisible(true);
-		}
-		else {
+		} else {
 			busPanel.setVisible(false);
 			snowplowerPanel.setVisible(false);
 		}
 	}
+
 	/**
 	 * Létrehozza az aktív játékos legördülő mezőjének megjelenítőjét.
 	 *
@@ -717,7 +731,6 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 		return textField;
 	}
 
-
 	/**
 	 * Visszaadja a játékos legördülő mezőben megjelenő nevét.
 	 *
@@ -729,6 +742,18 @@ public void initPlayerViews(List<setupPlayerData> playerDataList) {
 			return "";
 		}
 		return player.getName();
+	}
+
+	@Override
+	public void repaint() {
+		// Többi repaint meghívása
+		super.repaint();
+		// TODO Elméletben ez kell, mert ez az egyetlen UI elem, ami változhat
+		// újrarajzolások közt.
+		// Ez felel azért, hogy a pontszám és pénz valós időben változzon.
+		// Ha nem menne, akkor szerintem a loopban repaintot meg kell hívni rá. (Ha loop
+		// alapján futtat a main függvény)
+		playerData.setText(getActivePlayerDataText());
 	}
 
 	// TESZT!!!##############################################################################################################

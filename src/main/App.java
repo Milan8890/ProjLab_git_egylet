@@ -59,15 +59,16 @@ public class App {
 	 * @throws Exception ha az indítás közben nem kezelt hiba történik
 	 */
 	public static void main(String[] args) throws Exception {
+
 		// Handler beállítása
 		Proto proto = new Proto(World.players);
 		Logger.getGlobal().setUseParentHandlers(false);
 		OwnHandler ownHandler = new OwnHandler(proto.objectMap);
-		ownHandler.isLogging = false;
+		ownHandler.isLogging = true;
 		Logger.getGlobal().addHandler(ownHandler);
 
 		// Innen lehet tesztelni
-		
+
 		MainPanel mainPanel = new MainPanel();
 
 		mainPanel.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -90,10 +91,9 @@ public class App {
 		NewMain.main(args);
 
 		// // Parancsok beolvasása
-		// proto.readCommandsFromCommandLine();
+		proto.readCommandsFromCommandLine();
 	}
 
-	
 	/**
 	 * Megjeleníti a játékos hozzáadó menüt, amelyben a felhasználó játékosokat
 	 * vehet fel névvel, színnel és járművel.
