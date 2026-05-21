@@ -1,5 +1,7 @@
 package user;
 
+import java.awt.Color;
+
 /**
  * Egy játékos kezdőképernyőn megadott adatait tárolja.
  */
@@ -46,10 +48,30 @@ public class setupPlayerData {
 	/**
 	 * Visszaadja a játékos választott színét.
 	 *
+		"Zöld", "Sárga", "Kék", "Piros", "Lila", "Narancs" 
 	 * @return a játékos színe
+	 * 
 	 */
-	public String getColor() {
-		return color;
+	public Color getColor() {
+		switch (color) {
+			case "Piros":
+				return Color.RED;
+			case "Kék":
+				return Color.BLUE;
+			case "Zöld":
+				return Color.GREEN;
+			case "Sárga":
+				return Color.YELLOW;
+			case "Lila":
+				return Color.MAGENTA;
+			case "Narancs":
+				return Color.ORANGE;
+			default:
+			{
+				System.err.println("Invalid color: " + color);
+				return Color.BLACK;
+			}
+		}
 	}
 
 	/**

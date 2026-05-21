@@ -1,6 +1,8 @@
 package user;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -27,7 +29,7 @@ public class Cleaner extends Player {
 	/**
 	 * A játékos által irányított hókotrók halmaza.
 	 */
-	Set<Snowplower> snowplowers;
+	List<Snowplower> snowplowers;
 
 	private static final int BREAKER_SNOWPLOWER_PRICE = 13000;
 	private static final int EJECTOR_SNOWPLOWER_PRICE = 12000;
@@ -41,7 +43,7 @@ public class Cleaner extends Player {
 	public Cleaner(String name) {
 		super(name);
 		money = 0;
-		snowplowers = new HashSet<>();
+		snowplowers = new ArrayList<>();
 		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
 
@@ -50,10 +52,10 @@ public class Cleaner extends Player {
 	 * 
 	 * @return pénz
 	 */
-	public int getMoney(){
+	public int getMoney() {
 		return money;
 	}
-	
+
 	/**
 	 * Hozzáad pénzt a játékoshoz
 	 * 
@@ -108,6 +110,18 @@ public class Cleaner extends Player {
 	}
 
 	/**
+	 * Hozzáad (pénz levonása nélkül) egy új jégtörőfejes hókotrót
+	 */
+	public void createBreakerSnowplower() {
+		this.addMoney(BREAKER_SNOWPLOWER_PRICE);
+		if (!buyEjectorSnowplower()) {
+			Logger.getGlobal().log(Level.SEVERE,
+					"Couldn't create breaker snowplower for [Obj], because not enough money, which just got added.",
+					this);
+		}
+	}
+
+	/**
 	 * Ha van elég pénze a játékosnak levonja egy új hókotró árát,
 	 * a hókotróihoz hozzáad egy új hányó fejes hókotrót,
 	 * és Igaz értékkel tér vissza, ha nincs akkor nem von le pénzt és visszatér
@@ -128,6 +142,22 @@ public class Cleaner extends Player {
 					new Object[] { this });
 			return false;
 		}
+	}
+
+	/**
+	 * Hozzáad (pénz levonása nélkül) egy új hányófejes hókotrót
+	 */
+	public void createEjectorSnowplower() {
+		this.addMoney(EJECTOR_SNOWPLOWER_PRICE);
+		if (!buyEjectorSnowplower()) {
+			Logger.getGlobal().log(Level.SEVERE,
+					"Couldn't create ejector snowplower for [Obj], because not enough money, which just got added.",
+					this);
+		}
+	}
+
+	public List<Snowplower> getSnowplowers() {
+		return snowplowers;
 	}
 
 }

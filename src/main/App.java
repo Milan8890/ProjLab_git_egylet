@@ -27,6 +27,9 @@ import javax.swing.WindowConstants;
 
 import graphics.NewMain;
 import graphics.Panels.MapPanel;
+import user.BusDriver;
+import user.Cleaner;
+import user.Player;
 import user.setupPlayerData;
 
 import javax.swing.BorderFactory;
@@ -56,11 +59,12 @@ public class App {
 	 * @throws Exception ha az indítás közben nem kezelt hiba történik
 	 */
 	public static void main(String[] args) throws Exception {
+
 		// Handler beállítása
 		Proto proto = new Proto(World.players);
 		Logger.getGlobal().setUseParentHandlers(false);
 		OwnHandler ownHandler = new OwnHandler(proto.objectMap);
-		ownHandler.isLogging = false;
+		ownHandler.isLogging = true;
 		Logger.getGlobal().addHandler(ownHandler);
 		
 		//városfelépítő
@@ -75,16 +79,13 @@ public class App {
 
 		/*
 		// Innen lehet tesztelni
-		SnowplowerPanel.main(args);
-    
-		JFrame f = new JFrame();
-		MapPanel p = new MapPanel(null);
 
-		f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		f.add(p);
-		f.pack();
-		f.setVisible(true);
-    
+		MainPanel mainPanel = new MainPanel();
+
+		mainPanel.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+		mainPanel.pack();
+		mainPanel.setVisible(true);
+
 		// Heti setupMenu teszthez
 		// if (args.length > 0 && args[0].equals("setup")) {
 		// List<setupPlayerData> players = setupPlayer();

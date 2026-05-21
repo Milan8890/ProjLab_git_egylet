@@ -29,10 +29,14 @@ public abstract class Head {
 	/**
 	 * Konstruktor.
 	 * 
-	 * @param snowplower A hókotró, amelyhez a fej kapcsolódik.
+	 * @param _snowplower A hókotró, amelyhez a fej kapcsolódik.
 	 */
-	public Head(Snowplower snowplower) {
-		this.snowplower = snowplower;
+	public Head(Snowplower _snowplower) {
+		// Csak átmeneti osztályok létrehozásánál a null hókotrót nem találja meg a
+		// logginghoz
+		if (_snowplower == null)
+			return;
+		this.snowplower = _snowplower;
 		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
 

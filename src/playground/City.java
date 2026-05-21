@@ -26,7 +26,7 @@ public class City {
 	/**
 	 * A városban lévő kereszteződések.
 	 */
-	static Set<Crossing> crossings = new HashSet<>();
+	static List<Crossing> crossings = new ArrayList<>();
 	/**
 	 * A városban lévő utak.
 	 */
@@ -58,7 +58,7 @@ public class City {
 	/**
 	 * Városban lévő kereszteződések lekérdezése.
 	 */
-	public static Set<Crossing> getCrossings() {
+	public static List<Crossing> getCrossings() {
 		Logger.getGlobal().log(Level.INFO, "City returned crossings", new Object[] {});
 		return crossings;
 	}
@@ -69,6 +69,17 @@ public class City {
 	public static Crossing getSnowplowBase() {
 		Logger.getGlobal().log(Level.INFO, "City returned [Obj] as snowplower base", new Object[] { snowplowBase });
 		return snowplowBase;
+	}
+
+	/**
+	 * Hókotróközpont beállítása, ha még nem lenne beállítva.
+	 * 
+	 * @param _snowplowBase Az új hókotróközpont.
+	 */
+	public static void setSnowplowBase(Crossing _snowplowBase) {
+		if (snowplowBase == null) {
+			snowplowBase = _snowplowBase;
+		}
 	}
 
 	/**
