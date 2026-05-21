@@ -66,7 +66,18 @@ public class App {
 		OwnHandler ownHandler = new OwnHandler(proto.objectMap);
 		ownHandler.isLogging = true;
 		Logger.getGlobal().addHandler(ownHandler);
+		
+		//városfelépítő
+		SwingUtilities.invokeLater(() -> {
+            MainPanel foAblak = new MainPanel();
+            foAblak.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            foAblak.setTitle("Zúzmaraváros");
+            foAblak.pack();
+            foAblak.setLocationRelativeTo(null);
+            foAblak.setVisible(true);
+        });
 
+		/*
 		// Innen lehet tesztelni
 
 		MainPanel mainPanel = new MainPanel();
@@ -91,7 +102,8 @@ public class App {
 		NewMain.main(args);
 
 		// // Parancsok beolvasása
-		proto.readCommandsFromCommandLine();
+		// proto.readCommandsFromCommandLine();
+		*/
 	}
 
 	/**

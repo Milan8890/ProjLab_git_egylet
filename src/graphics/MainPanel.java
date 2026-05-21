@@ -71,7 +71,7 @@ import user.setupPlayerData;
  * járműspecifikus vezérlőpaneleket fogja össze.
  */
 public class MainPanel extends JFrame {
-	public static final int CROSSING_SIZE = 150;
+	public static final int CROSSING_SIZE = 80;
 	public static final int LANE_WIDTH = 20;
 	public static final float CROSSING_STROKE = 6f;
 
@@ -186,7 +186,7 @@ public class MainPanel extends JFrame {
 		add(busPanel, gbc);
 
 		try {
-			backgroundImage = ImageIO.read(new File("Asset/fu.jpg"));
+			backgroundImage = ImageIO.read(new File("Asset/zuzmaravaros.png"));
 		} catch (Exception e) {
 			backgroundImage = null;
 		}
@@ -197,26 +197,159 @@ public class MainPanel extends JFrame {
 		Crossing c1 = new Crossing();
 		Crossing c2 = new Crossing();
 		Crossing c3 = new Crossing();
+		Crossing c4 = new Crossing();
+		Crossing c5 = new Crossing();
+		Crossing c6 = new Crossing();
+		Crossing c7 = new Crossing();
+		Crossing c8 = new Crossing();
+		Crossing c9 = new Crossing();
+		Crossing c10 = new Crossing();
+		Crossing c11 = new Crossing();
+		Crossing c12 = new Crossing();
+		Crossing c13 = new Crossing();
+		Crossing c14 = new Crossing();
+		Crossing c15 = new Crossing();
+		Crossing c16 = new Crossing();
+		Crossing c17 = new Crossing();
+		Crossing c18 = new Crossing();
+		Crossing c19 = new Crossing();
+		Crossing c20 = new Crossing();
+		Crossing c21 = new Crossing();
+		Crossing c22 = new Crossing();
+		Crossing c23 = new Crossing();
 
-		// Bele kell rakni a modellbe a crossingokat.
-		// Majd rendesen megírni a térképet I guess.
-		City.getCrossings().add(c1);
-		City.getCrossings().add(c2);
-		City.getCrossings().add(c3);
-
-		City.setSnowplowBase(c2);
-
-		Point2D.Double pos1 = new Point2D.Double(400, 500);
-		Point2D.Double pos2 = new Point2D.Double(0, 0);
-		Point2D.Double pos3 = new Point2D.Double(800, 100);
+		Point2D.Double pos1 = new Point2D.Double(55, 60);
+		Point2D.Double pos2 = new Point2D.Double(245, 12);
+		Point2D.Double pos3 = new Point2D.Double(515, 105);
+		Point2D.Double pos4 = new Point2D.Double(750, 45);
+		Point2D.Double pos5 = new Point2D.Double(1050, 55);
+		Point2D.Double pos6 = new Point2D.Double(1340, 80);
+		Point2D.Double pos7 = new Point2D.Double(40, 260);
+		Point2D.Double pos8 = new Point2D.Double(350, 280);
+		Point2D.Double pos9 = new Point2D.Double(550, 390);
+		Point2D.Double pos10 = new Point2D.Double(780, 330);
+		Point2D.Double pos11 = new Point2D.Double(1080, 285);
+		Point2D.Double pos12 = new Point2D.Double(1335, 315);
+		Point2D.Double pos13 = new Point2D.Double(90, 510);
+		Point2D.Double pos14 = new Point2D.Double(360, 560);
+		Point2D.Double pos15 = new Point2D.Double(510, 710);
+		Point2D.Double pos16 = new Point2D.Double(840, 560);
+		Point2D.Double pos17 = new Point2D.Double(1230, 560);
+		Point2D.Double pos18 = new Point2D.Double(50, 780);
+		Point2D.Double pos19 = new Point2D.Double(270, 890);
+		Point2D.Double pos20 = new Point2D.Double(610, 910);
+		Point2D.Double pos21 = new Point2D.Double(860, 890);
+		Point2D.Double pos22 = new Point2D.Double(1180, 897);
+		Point2D.Double pos23 = new Point2D.Double(1390, 765);
 
 		crossingViews.add(new CrossingView(c1, new Point2D.Double(pos1.x + 3, pos1.y + 3), false));
 		crossingViews.add(new CrossingView(c2, new Point2D.Double(pos2.x + 3, pos2.y + 3), false));
 		crossingViews.add(new CrossingView(c3, new Point2D.Double(pos3.x + 3, pos3.y + 3), false));
+		crossingViews.add(new CrossingView(c4, new Point2D.Double(pos4.x + 3, pos4.y + 3), false));
+		crossingViews.add(new CrossingView(c5, new Point2D.Double(pos5.x + 3, pos5.y + 3), false));
+		crossingViews.add(new CrossingView(c6, new Point2D.Double(pos6.x + 3, pos6.y + 3), false));
+		crossingViews.add(new CrossingView(c7, new Point2D.Double(pos7.x + 3, pos7.y + 3), false));
+		crossingViews.add(new CrossingView(c8, new Point2D.Double(pos8.x + 3, pos8.y + 3), false));
+		crossingViews.add(new CrossingView(c9, new Point2D.Double(pos9.x + 3, pos9.y + 3), false));
+		crossingViews.add(new CrossingView(c10, new Point2D.Double(pos10.x + 3, pos10.y + 3), false));
+		crossingViews.add(new CrossingView(c11, new Point2D.Double(pos11.x + 3, pos11.y + 3), true));
+		crossingViews.add(new CrossingView(c12, new Point2D.Double(pos12.x + 3, pos12.y + 3), false));
+		crossingViews.add(new CrossingView(c13, new Point2D.Double(pos13.x + 3, pos13.y + 3), false));
+		crossingViews.add(new CrossingView(c14, new Point2D.Double(pos14.x + 3, pos14.y + 3), false));
+		crossingViews.add(new CrossingView(c15, new Point2D.Double(pos15.x + 3, pos15.y + 3), false));
+		crossingViews.add(new CrossingView(c16, new Point2D.Double(pos16.x + 3, pos16.y + 3), false));
+		crossingViews.add(new CrossingView(c17, new Point2D.Double(pos17.x + 3, pos17.y + 3), false));
+		crossingViews.add(new CrossingView(c18, new Point2D.Double(pos18.x + 3, pos18.y + 3), false));
+		crossingViews.add(new CrossingView(c19, new Point2D.Double(pos19.x + 3, pos19.y + 3), false));
+		crossingViews.add(new CrossingView(c20, new Point2D.Double(pos20.x + 3, pos20.y + 3), false));
+		crossingViews.add(new CrossingView(c21, new Point2D.Double(pos21.x + 3, pos21.y + 3), false));
+		crossingViews.add(new CrossingView(c22, new Point2D.Double(pos22.x + 3, pos22.y + 3), false));
+		crossingViews.add(new CrossingView(c23, new Point2D.Double(pos23.x + 3, pos23.y + 3), false));
 
-		addRoadWithLanes(c2, c1, 3);
-		addRoadWithLanes(c2, c3, 2);
+		//1-es kereszteződésből induló utak
+		addRoadWithLanes(c1, c2, 2);
+		addRoadWithLanes(c1, c7, 2);
+		//2-es kereszteződésből induló utak
+		addRoadWithLanes(c2, c3, 1);
+		addRoadWithLanes(c2, c1, 2);
+		//3-as kereszteződésből induló utak
 		addRoadWithLanes(c3, c2, 2);
+		addRoadWithLanes(c3, c4, 2);
+		addRoadWithLanes(c3, c8, 1);
+		//4-es kereszteződésből induló utak
+		addRoadWithLanes(c4, c3, 2);
+		addRoadWithLanes(c4, c5, 1);
+		//5-ös kereszteződésből induló utak
+		addRoadWithLanes(c5, c4, 3);
+		addRoadWithLanes(c5, c11, 1);
+		//6-os kereszteződésből induló utak
+		addRoadWithLanes(c6, c5, 3);
+		addRoadWithLanes(c6, c12, 1);
+		//7-es kereszteződésből induló utak
+		addRoadWithLanes(c7, c1, 2);
+		addRoadWithLanes(c7, c13, 2);
+		//8-0s kereszteződésből induló utak
+		addRoadWithLanes(c8, c3, 1);
+		addRoadWithLanes(c8, c9, 1);
+		addRoadWithLanes(c8, c13, 1);
+		//9-es kereszteződésből induló utak
+		addRoadWithLanes(c9, c8, 2);
+		addRoadWithLanes(c9, c10, 2);
+		//10-es kereszteződésből induló utak
+		addRoadWithLanes(c10, c9, 3);
+		addRoadWithLanes(c10, c11, 1);
+		addRoadWithLanes(c10, c16, 2);
+		//11-es kereszteződésből induló utak
+		addRoadWithLanes(c11, c5, 2);
+		addRoadWithLanes(c11, c10, 2);
+		addRoadWithLanes(c11, c12, 1);
+		addRoadWithLanes(c11, c17, 1);
+		//12-es kereszteződésből induló utak
+		addRoadWithLanes(c12, c6, 3);
+		addRoadWithLanes(c12, c11, 2);
+		addRoadWithLanes(c12, c17, 1);
+		//13-as kereszteződésből induló utak
+		addRoadWithLanes(c13, c7, 1);
+		addRoadWithLanes(c13, c8, 2);
+		addRoadWithLanes(c13, c14, 2);
+		addRoadWithLanes(c13, c18, 2);
+		//14-es kereszteződésből induló utak
+		addRoadWithLanes(c14, c8, 1);
+		addRoadWithLanes(c14, c15, 1);
+		addRoadWithLanes(c14, c19, 1);
+		//15-ös kereszteződésből induló utak
+		addRoadWithLanes(c15, c14, 2);
+		addRoadWithLanes(c15, c9, 2);
+		addRoadWithLanes(c15, c20, 1);
+		//16-os kereszteződésből induló utak
+		addRoadWithLanes(c16, c10, 2);
+		addRoadWithLanes(c16, c17, 2);
+		addRoadWithLanes(c16, c21, 2);
+		//17-es kereszteződésből induló utak
+		addRoadWithLanes(c17, c16, 1);
+		addRoadWithLanes(c17, c12, 2);
+		addRoadWithLanes(c17, c22, 1);
+		//18-as kereszteződésből induló utak
+		addRoadWithLanes(c18, c13, 1);
+		addRoadWithLanes(c18, c19, 2);
+		//19-es kereszteződésből induló utak
+		addRoadWithLanes(c19, c18, 1);
+		addRoadWithLanes(c19, c14, 1);
+		addRoadWithLanes(c19, c20, 2);
+		//20-as kereszteződésből induló utak
+		addRoadWithLanes(c20, c19, 1);
+		addRoadWithLanes(c20, c15, 2);
+		addRoadWithLanes(c20, c21, 1);
+		//21-es kereszteződésből induló utak
+		addRoadWithLanes(c21, c20, 1);
+		addRoadWithLanes(c21, c16, 1);
+		addRoadWithLanes(c21, c22, 3);
+		//21-es kereszteződésből induló utak
+		addRoadWithLanes(c22, c21, 1);
+		addRoadWithLanes(c22, c17, 1);
+		addRoadWithLanes(c22, c23, 2);
+		//23-as kereszteződésből induló utak
+		addRoadWithLanes(c23, c17, 2);
 	}
 
 	private void initMapPanel() {
@@ -231,6 +364,8 @@ public class MainPanel extends JFrame {
 				if (backgroundImage != null) {
 					g2.drawImage(backgroundImage, 0, 0, 1500, 1000, this);
 				}
+
+				/*
 				// racs
 				g2.setColor(Color.LIGHT_GRAY);
 				for (int x = 100; x < 1500; x += 100) {
@@ -239,6 +374,7 @@ public class MainPanel extends JFrame {
 				for (int y = 100; y < 1000; y += 100) {
 					g2.drawLine(0, y, 1500, y);
 				}
+				*/
 
 				for (CrossingView cv : crossingViews) {
 					cv.paint(g2);
