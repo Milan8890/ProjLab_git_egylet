@@ -17,7 +17,9 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 import java.util.logging.Logger;
 import java.awt.Color;
@@ -33,6 +35,7 @@ import javax.imageio.ImageIO;
 import javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
+import java.awt.BorderLayout;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JComboBox;
@@ -80,6 +83,7 @@ public class MainPanel extends JFrame {
 	private BufferedImage backgroundImage;
 	private List<Cleaner> cleaners = new ArrayList<>();
 	private List<BusDriver> busDrivers = new ArrayList<>();
+	private Map<Cleaner, Color> cleanerColors = new HashMap<>();
 	private boolean isExtendingPath;
 
 	private Cleaner selectedCleaner;
@@ -103,7 +107,6 @@ public class MainPanel extends JFrame {
 
 	private SnowplowerPanel snowplowerPanel;
 	private BusPanel busPanel;
-
 	private MapPanel mapPanel;
 
 	/**
@@ -167,6 +170,38 @@ public class MainPanel extends JFrame {
 		busPanel = new BusPanel(this);
 		initMapPanel();
 
+		//TESZT
+		setLayout(new BorderLayout());
+
+		JPanel sidePanel = new JPanel(new BorderLayout());
+		sidePanel.setBackground(Color.WHITE);
+		sidePanel.setPreferredSize(new Dimension(320, 1000));
+
+		sidePanel.add(activePlayerPanel, BorderLayout.NORTH);
+
+		JPanel vehicleHolder = new JPanel(new GridBagLayout());
+		vehicleHolder.setBackground(Color.WHITE);
+
+		GridBagConstraints panelGbc = new GridBagConstraints();
+		panelGbc.gridx = 0;
+		panelGbc.gridy = 0;
+		panelGbc.weightx = 1.0;
+		panelGbc.weighty = 1.0;
+		panelGbc.fill = GridBagConstraints.BOTH;
+		panelGbc.anchor = GridBagConstraints.NORTH;
+
+		busPanel.setVisible(false);
+		snowplowerPanel.setVisible(false);
+
+		vehicleHolder.add(snowplowerPanel, panelGbc);
+		vehicleHolder.add(busPanel, panelGbc);
+
+		sidePanel.add(vehicleHolder, BorderLayout.CENTER);
+
+		add(mapPanel, BorderLayout.CENTER);
+		add(sidePanel, BorderLayout.EAST);
+		//TESZT VÉGE
+		/*
 		setLayout(new GridBagLayout());
 		GridBagConstraints gbc = new GridBagConstraints();
 
@@ -187,21 +222,26 @@ public class MainPanel extends JFrame {
 		gbc.gridheight = 1;
 		gbc.weightx = 1.0;
 		gbc.weighty = 0.0;
-		gbc.fill = GridBagConstraints.HORIZONTAL;
+		//gbc.fill = GridBagConstraints.HORIZONTAL;
+		gbc.fill = GridBagConstraints.NONE;
+		gbc.anchor = GridBagConstraints.NORTH;
 		gbc.insets = new Insets(0, 0, 10, 0);
 		add(activePlayerPanel, gbc);
 
 		// --- JOBB OLDAL, ALSÓ: Snowplower Panel ---
 		gbc.gridx = 1;
 		gbc.gridy = 1;
-		gbc.weightx = 1.0;
-		gbc.weighty = 1.0;
-		gbc.fill = GridBagConstraints.BOTH;
+		gbc.weightx = 0.0;
+		gbc.weighty = 0.0;
+		gbc.fill = GridBagConstraints.NONE;		//BOTH volt
+		gbc.anchor = GridBagConstraints.NORTH;
 		gbc.insets = new Insets(0, 0, 0, 0);
+
 		busPanel.setVisible(false);
 		snowplowerPanel.setVisible(false);
 		add(snowplowerPanel, gbc);
 		add(busPanel, gbc);
+		*/
 
 		try {
 			backgroundImage = ImageIO.read(new File("Asset/zuzmaravaros.png"));
@@ -615,6 +655,7 @@ public class MainPanel extends JFrame {
 					Cleaner cleaner = new Cleaner(playerData.getName());
 					cleaner.createBreakerSnowplower();
 					cleaners.add(cleaner);
+					cleanerColors.put(cleaner, playerData.getColor());
 
 					Snowplower snowplower = cleaner.getSnowplowers().get(0);
 					snowplowerViews.add(new SnowplowerView(snowplower, this, playerData.getColor()));
@@ -624,6 +665,7 @@ public class MainPanel extends JFrame {
 					Cleaner cleaner2 = new Cleaner(playerData.getName());
 					cleaner2.createEjectorSnowplower();
 					cleaners.add(cleaner2);
+					cleanerColors.put(cleaner2, playerData.getColor());
 
 					Snowplower snowplower2 = cleaner2.getSnowplowers().get(0);
 					snowplowerViews.add(new SnowplowerView(snowplower2, this, playerData.getColor()));
@@ -650,6 +692,23 @@ public class MainPanel extends JFrame {
 		});
 
 		timer.start();
+	}
+
+	/**
+	 * Hozzáad egy új hókotró nézetet a megadott hókotróról.
+	 *
+	 * @param snowplower a hozzáadni kívánt hókotró
+	 */
+	public void addSnowplowerView(Snowplower snowplower) {
+		if (snowplower == null) {
+			return;
+		}
+
+		Cleaner owner = snowplower.getCleaner();
+		Color color = cleanerColors.getOrDefault(owner, Color.WHITE);
+
+		snowplowerViews.add(new SnowplowerView(snowplower, this, color));
+		repaintMap();
 	}
 
 	/**
@@ -999,8 +1058,9 @@ public class MainPanel extends JFrame {
 			busPanel.setVisible(false);
 			snowplowerPanel.setVisible(false);
 		}
-
-		mapPanel.repaint();		//Hogy a kereszteződések szinesek legyenek
+		setIsExtendingPath(false);
+		setSelectedCrossing(null);
+		requestFocusInWindow();
 	}
 
 	/**
@@ -1079,5 +1139,5 @@ public class MainPanel extends JFrame {
 		// alapján futtat a main függvény)
 		playerData.setText(getActivePlayerDataText());
 	}
-	
+
 }

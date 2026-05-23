@@ -69,7 +69,7 @@ public class SnowplowerView {
 	public SnowplowerView(Snowplower snowplower, MainPanel mainPanel, Color color) {
 		this.modelSnowplower = snowplower;
 		this.mainPanel = mainPanel;
-		color = color;
+		this.color = color;
 		this.pos = new Point2D.Double(0, 0);
 	}
 

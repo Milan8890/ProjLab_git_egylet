@@ -72,6 +72,7 @@ public class App {
             MainPanel foAblak = new MainPanel();
             foAblak.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
             foAblak.setTitle("Zúzmaraváros");
+			foAblak.setResizable(false);
             foAblak.pack();
             foAblak.setLocationRelativeTo(null);
             foAblak.setVisible(true);

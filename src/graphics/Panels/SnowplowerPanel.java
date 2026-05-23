@@ -47,6 +47,8 @@ public class SnowplowerPanel extends JPanel {
 	private JLabel gravelSpreaderPriceLabel;
 	private JLabel breakerPriceLabel;
 	private JLabel dragonPriceLabel;
+	private JLabel breakerSnowplowerPriceLabel;
+	private JLabel ejectorSnowplowerPriceLabel;
 
 	private JButton buySweeperListingButton;
 	private JButton buyEjectorListingButton;
@@ -61,6 +63,9 @@ public class SnowplowerPanel extends JPanel {
 	private JButton buybioButton;
 	private JTextField gravelAmountText;
 	private JButton buyGravelButton;
+
+	private JButton buyBreakerSnowplowerButton;
+	private JButton buyEjectorSnowplowerButton;
 
 	private JButton extPathButton;
 	private JButton clearPathButton;
@@ -81,17 +86,19 @@ public class SnowplowerPanel extends JPanel {
 		setBackground(Color.WHITE);
 		setBorder(BorderFactory.createLineBorder(separatorColor, 2));
 		//setPreferredSize(new Dimension(300, 520));
-		Dimension fixedSize = new Dimension(300, 520);
+		Dimension fixedSize = new Dimension(320, 650);
 		setPreferredSize(fixedSize);
 		setMinimumSize(fixedSize);
-		setMaximumSize(fixedSize);
+		//setMaximumSize(fixedSize);
 
-
-		addSection(createHeadShopSection(separatorColor, normalFont, buttonFont),
-				0, 0.53);
+		/*/
+		addSection(createHeadShopSection(separatorColor, normalFont, buttonFont),0, 0.53);
 		addSection(createMaterialShopSection(separatorColor, normalFont, buttonFont), 1, 0.27);
 		addSection(createRouteControlSection(normalFont), 2, 0.20);
-
+		*/
+		addSection(createHeadShopSection(separatorColor, normalFont, buttonFont), 0, 0.65);
+		addSection(createMaterialShopSection(separatorColor, normalFont, buttonFont), 1, 0.20);
+		addSection(createRouteControlSection(normalFont), 2, 0.15);
 		update();
 	}
 
@@ -162,6 +169,8 @@ public class SnowplowerPanel extends JPanel {
 		gravelSpreaderPriceLabel = createPriceLabel("4000 $", normalFont);
 		saltSpreaderPriceLabel = createPriceLabel("5000 $", normalFont);
 		dragonPriceLabel = createPriceLabel("6000 $", normalFont);
+		breakerSnowplowerPriceLabel = createPriceLabel("13000 $", normalFont);		//új hókotrók árai
+		ejectorSnowplowerPriceLabel = createPriceLabel("12000 $", normalFont);
 
 		buySweeperListingButton = createButton("Söprő fej", buttonFont);
 		buyEjectorListingButton = createButton("Hányó fej", buttonFont);
@@ -169,6 +178,8 @@ public class SnowplowerPanel extends JPanel {
 		buyGravelSpreaderListingButton = createButton("Kőszóró fej", buttonFont);
 		buyBreakerListingButton = createButton("Jégtörő fej", buttonFont);
 		buyDragonListingButton = createButton("Sárkány fej", buttonFont);
+		buyBreakerSnowplowerButton = createButton("<html><center>Új hókotró<br>jégtörő fejjel</center></html>", buttonFont);
+		buyEjectorSnowplowerButton = createButton("<html><center>Új hókotró<br>hányó fejjel</center></html>", buttonFont);
 
 		buySweeperListingButton.addActionListener(e -> buySweeperHead());
 		buyEjectorListingButton.addActionListener(e -> buyEjectorHead());
@@ -176,6 +187,8 @@ public class SnowplowerPanel extends JPanel {
 		buyGravelSpreaderListingButton.addActionListener(e -> buyGravelSpreaderHead());
 		buySaltSpreaderListingButton.addActionListener(e -> buySaltSpreaderHead());
 		buyDragonListingButton.addActionListener(e -> buyDragonHead());
+		buyBreakerSnowplowerButton.addActionListener(e -> buyBreakerSnowplower());
+		buyEjectorSnowplowerButton.addActionListener(e -> buyEjectorSnowplower());
 
 		addHeadShopItem(section, sweeperPriceLabel, buySweeperListingButton, 0, 2);
 		addHeadShopItem(section, ejectorPriceLabel, buyEjectorListingButton, 1, 2);
@@ -183,6 +196,8 @@ public class SnowplowerPanel extends JPanel {
 		addHeadShopItem(section, gravelSpreaderPriceLabel, buyGravelSpreaderListingButton, 1, 3);
 		addHeadShopItem(section, saltSpreaderPriceLabel, buySaltSpreaderListingButton, 0, 4);
 		addHeadShopItem(section, dragonPriceLabel, buyDragonListingButton, 1, 4);
+		addHeadShopItem(section, breakerSnowplowerPriceLabel, buyBreakerSnowplowerButton, 0, 5);		//új hókotró vevő gombok felvétele
+		addHeadShopItem(section, ejectorSnowplowerPriceLabel, buyEjectorSnowplowerButton, 1, 5);
 
 		return section;
 	}
@@ -328,7 +343,7 @@ public class SnowplowerPanel extends JPanel {
 	}
 
 	/**
-	 * Létrehoz egy fejárat megjelenítő feliratot.
+	 * Létrehoz egy árat megjelenítő feliratot.
 	 *
 	 * @param text az ár szövege
 	 * @param font a felirat betűtípusa
@@ -431,11 +446,9 @@ public class SnowplowerPanel extends JPanel {
 		// gomb.setText(""); // Letörli a szöveget (ha van)
 		Snowplower selectedSnowplower = getSelectedSnowplower();
 
-		//Teszt
 		if (selectedSnowplower == null) {
 			return;
 		}
-		//Teszt vége
 
 		final Color priceCanBuyColor = new Color(20, 150, 55);
 		final Color priceCannotBuyColor = new Color(205, 50, 50);
@@ -448,6 +461,8 @@ public class SnowplowerPanel extends JPanel {
 		gravelSpreaderPriceLabel.setForeground(money >= 4000 ? priceCanBuyColor : priceCannotBuyColor);
 		saltSpreaderPriceLabel.setForeground(money >= 5000 ? priceCanBuyColor : priceCannotBuyColor);
 		dragonPriceLabel.setForeground(money >= 6000 ? priceCanBuyColor : priceCannotBuyColor);
+		breakerSnowplowerPriceLabel.setForeground(money >= 13000 ? priceCanBuyColor : priceCannotBuyColor);
+		ejectorSnowplowerPriceLabel.setForeground(money >= 12000 ? priceCanBuyColor : priceCannotBuyColor);
 
 		buySweeperListingButton.setVisible(false);
 		sweeperPriceLabel.setVisible(false);
@@ -466,11 +481,7 @@ public class SnowplowerPanel extends JPanel {
 
 		buyDragonListingButton.setVisible(false);
 		dragonPriceLabel.setVisible(false);
-		/*
-		if (selectedSnowplower == null) {
-			return;
-		}
-		*/
+
 
 		for (HeadListing hl : selectedSnowplower.getHeadInventory().getShop()) {
 			// Nem switch, mert const expr-nek kell lennie
@@ -663,6 +674,44 @@ public class SnowplowerPanel extends JPanel {
 	}
 
 	/**
+	 * Új hókotrót vásárol jégtörő fejjel.
+	 */
+	private void buyBreakerSnowplower() {
+		Cleaner cleaner = mainPanel.getSelectedCleaner();
+		if (cleaner == null) {
+			return;
+		}
+
+		if (cleaner.buyBreakerSnowplower()) {
+			Snowplower newSnowplower = cleaner.getSnowplowers().get( cleaner.getSnowplowers().size() - 1);
+
+			mainPanel.addSnowplowerView(newSnowplower);
+
+			update();
+			mainPanel.repaintMap();
+		}
+	}
+
+
+	/**
+	 * Új hókotrót vásárol hányó fejjel.
+	 */
+	private void buyEjectorSnowplower() {
+		Cleaner cleaner = mainPanel.getSelectedCleaner();
+		if (cleaner == null) {
+			return;
+		}
+
+		if (cleaner.buyEjectorSnowplower()) {
+			Snowplower newSnowplower = cleaner.getSnowplowers().get( cleaner.getSnowplowers().size() - 1);
+
+			mainPanel.addSnowplowerView(newSnowplower);
+			update();
+			mainPanel.repaintMap();
+		}
+	}
+
+	/**
 	 * Sót vásárol a kiválasztott hókotróhoz.
 	 */
 	private void buySalt() {
@@ -720,39 +769,5 @@ public class SnowplowerPanel extends JPanel {
 		mainPanel.requestFocusInWindow();
     	mainPanel.repaintMap();
 	}
-
-	// TESZT!!!##############################################################################################################
-	public static void main(String[] args) {
-		javax.swing.SwingUtilities.invokeLater(() -> {
-			javax.swing.JFrame frame = new javax.swing.JFrame("SnowplowerPanel teszt");
-			frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
-			SnowplowerPanel spPanel = new SnowplowerPanel(null);
-			frame.add(spPanel);
-			frame.pack();
-			frame.setLocationRelativeTo(null);
-			frame.setVisible(true);
-
-			Thread gameThread = new Thread(() -> {
-				while (true) {
-					try {
-						// Blocks this thread until Swing finishes updating
-						SwingUtilities.invokeAndWait(() -> {
-							spPanel.update(); // model update + repaint, all on EDT
-						});
-
-						Thread.sleep(16); // ~60fps, runs on game thread (not EDT)
-					} catch (InterruptedException | InvocationTargetException e) {
-						Thread.currentThread().interrupt();
-						break;
-					}
-				}
-			});
-			gameThread.setDaemon(true);
-			gameThread.start();
-		});
-
-	}
-	// TESZT
-	// VÉGE!!!##############################################################################################################
 
 }
