@@ -48,24 +48,24 @@ public class setupPlayerData {
 	/**
 	 * Visszaadja a játékos választott színét.
 	 *
-		"Zöld", "Sárga", "Kék", "Piros", "Lila", "Narancs" 
+		"Bordó", "Barna", "Ibolya", "Lime", "Rózsaszín", "Narancs" 
 	 * @return a játékos színe
 	 * 
 	 */
 	public Color getColor() {
 		switch (color) {
-			case "Piros":
-				return Color.RED;
-			case "Kék":
-				return Color.BLUE;
-			case "Zöld":
-				return Color.GREEN;
-			case "Sárga":
-				return Color.YELLOW;
-			case "Lila":
-				return Color.MAGENTA;
+			case "Bordó":
+				return new Color(153, 0, 0);
+			case "Barna":
+				return new Color(153, 76, 0);
+			case "Ibolya":
+				return new Color(153, 0, 153);
+			case "Lime":
+				return new Color(194, 204, 106);
+			case "Rózsaszín":
+				return new Color(255, 51, 153);
 			case "Narancs":
-				return Color.ORANGE;
+				return new Color(255, 128, 0);
 			default:
 			{
 				System.err.println("Invalid color: " + color);

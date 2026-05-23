@@ -9,7 +9,8 @@ import java.util.logging.Logger;
 import user.Player;
 
 /**
- * A világ tulajdonságai, modellhez szorosabban illeszkedő beállítások
+ * A világot reprezentáló osztály,
+ * modellhez szorosabban illeszkedő beállításokat tartalmazza.
  */
 public class World {
 	/**
@@ -31,6 +32,9 @@ public class World {
 	 */
 	private static int elapsedTicks = 0;
 
+	/**
+	 * A véletlenszerű események működési módját leíró felsorolás.
+	 */
 	public enum RandomMode {
 		FALSE, TRUE, RANDOM
 	}

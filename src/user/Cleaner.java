@@ -88,11 +88,11 @@ public class Cleaner extends Player {
 
 	/**
 	 * Ha van elég pénze a játékosnak levonja egy új hókotró árát,
-	 * a hókotróihoz hozzáad egy új törő fejes hókotrót,
+	 * a hókotróihoz hozzáad egy új jégtörő fejes hókotrót,
 	 * és Igaz értékkel tér vissza, ha nincs akkor nem von le pénzt és visszatér
 	 * hamissal.
 	 * 
-	 * @return true, ha sikerült a vásárlás, false egyébként
+	 * @return {@code true}, ha sikerült a vásárlás, {@code false} egyébként
 	 */
 	public boolean buyBreakerSnowplower() {
 		if (removeMoney(BREAKER_SNOWPLOWER_PRICE)) {
@@ -114,7 +114,7 @@ public class Cleaner extends Player {
 	 */
 	public void createBreakerSnowplower() {
 		this.addMoney(BREAKER_SNOWPLOWER_PRICE);
-		if (!buyEjectorSnowplower()) {
+		if (!buyBreakerSnowplower()) {
 			Logger.getGlobal().log(Level.SEVERE,
 					"Couldn't create breaker snowplower for [Obj], because not enough money, which just got added.",
 					this);
@@ -127,7 +127,7 @@ public class Cleaner extends Player {
 	 * és Igaz értékkel tér vissza, ha nincs akkor nem von le pénzt és visszatér
 	 * hamissal.
 	 * 
-	 * @return true, ha sikerült a vásárlás, false egyébként
+	 * @return {@code true}, ha sikerült a vásárlás, {@code false} egyébként
 	 */
 	public boolean buyEjectorSnowplower() {
 		if (removeMoney(EJECTOR_SNOWPLOWER_PRICE)) {
@@ -156,6 +156,11 @@ public class Cleaner extends Player {
 		}
 	}
 
+	/**
+	 * Visszaadja a játékos által irányított hókotrók listáját.
+	 * 
+	 * @return a játékos hókotrói
+	 */
 	public List<Snowplower> getSnowplowers() {
 		return snowplowers;
 	}

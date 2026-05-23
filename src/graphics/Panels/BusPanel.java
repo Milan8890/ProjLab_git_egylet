@@ -37,7 +37,13 @@ public class BusPanel extends JPanel {
 		setLayout(new GridBagLayout());
 		setBackground(Color.WHITE);
 		setBorder(BorderFactory.createLineBorder(separatorColor, 2));
-		setPreferredSize(new Dimension(300, 520));
+		//setPreferredSize(new Dimension(300, 520));
+
+		Dimension fixedSize = new Dimension(300, 520);
+		setPreferredSize(fixedSize);
+		setMinimumSize(fixedSize);
+		setMaximumSize(fixedSize);
+
 
 		addFillerSection();
 		addRouteControlSection(createRouteControlSection(normalFont));
@@ -144,32 +150,19 @@ public class BusPanel extends JPanel {
 		}
 
 		selectedBus.getPath().clear();
+		mainPanel.setSelectedCrossing(null);
+		mainPanel.repaintMap();
 	}
 
 	/**
 	 * Az útvonal tervezésének állítása.
 	 */
 	private void pressExtPathButton() {
+		mainPanel.setSelectedCrossing(null);		//Nem szép, hogy valami alapból sárga.
 		mainPanel.setIsExtendingPath(!mainPanel.getIsExtendingPath());
-	}
 
-	// TESZT!!!##############################################################################################################
-	/**
-	 * Egyszerű, önálló tesztablakot indít a panel megjelenítéséhez.
-	 *
-	 * @param args parancssori argumentumok
-	 */
-	public static void main(String[] args) {
-		javax.swing.SwingUtilities.invokeLater(() -> {
-			javax.swing.JFrame frame = new javax.swing.JFrame("BusPanel teszt");
-			frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
-			frame.add(new BusPanel(null));
-			frame.pack();
-			frame.setLocationRelativeTo(null);
-			frame.setVisible(true);
-		});
+		mainPanel.requestFocusInWindow();
+		mainPanel.repaintMap();
 	}
-	// TESZT
-	// VÉGE!!!##############################################################################################################
 
 }

@@ -17,6 +17,12 @@ import graphics.NewMain;
 import playground.Lane;
 import graphics.MainPanel;
 
+/**
+ * Egy sáv grafikus megjelenítéséért felelős osztály.
+ * <p>
+ * A sáv modellállapota alapján rajzolja ki az aszfaltot, az útvonal-kijelölést,
+ * valamint a havat, jeget, sót és zúzottkövet jelző textúrákat.
+ */
 public class LaneView {
 	private static final float SZEGELY_VASTAGSAG = 1f;
 
@@ -65,6 +71,15 @@ public class LaneView {
 	private Lane modelLane;
 	private MainPanel mainPanel;
 
+	/**
+	 * Létrehozza a sáv grafikus nézetét a hozzá tartozó modellsávval, kezdő-
+	 * és végponttal, valamint a főpanel hivatkozásával.
+	 *
+	 * @param lane      a kirajzolandó sáv modellobjektuma
+	 * @param startPos  a sáv kirajzolási kezdőpontja
+	 * @param endPos    a sáv kirajzolási végpontja
+	 * @param mainPanel a főpanel, amelyből az aktuális kiválasztások elérhetők
+	 */
 	public LaneView(Lane lane, Point2D startPos, Point2D endPos, MainPanel mainPanel) {
 		this.modelLane = lane;
 		this.startPos = startPos;
@@ -72,10 +87,21 @@ public class LaneView {
 		this.mainPanel = mainPanel;
 	}
 
+	/**
+	 * Visszaadja a nézethez tartozó sáv modellobjektumot.
+	 *
+	 * @return a megjelenített sáv
+	 */
 	public Lane getLane() {
 		return modelLane;
 	}
 
+	/**
+	 * Kirajzolja a sávot az aktuális állapotának megfelelő textúrákkal,
+	 * beleértve az útvonal-kijelölést, havat, jeget, sót és zúzottkövet.
+	 *
+	 * @param g a rajzoláshoz használt grafikus kontextus
+	 */
 	public void paint(Graphics2D g) {
 		double startX = startPos.getX();
 		double startY = startPos.getY();
@@ -180,6 +206,12 @@ public class LaneView {
 		g2.dispose();
 	}
 
+	/**
+	 * Kiválasztja az aktuális sávhosszhoz legközelebb eső aszfalttextúrát.
+	 *
+	 * @param aktualisHossz a sáv aktuális kirajzolt hossza pixelben
+	 * @return a legközelebbi hosszhoz tartozó aszfalttextúra
+	 */
 	private BufferedImage valasztLegkozelebbiTexturat(int aktualisHossz) {
 		int legjobbIndex = 0;
 		int legkisebbKulonbseg = Math.abs(aktualisHossz - TEXTURA_HOSSZAK[0]);
@@ -195,8 +227,8 @@ public class LaneView {
 	}
 
 	/**
-	 * Segedfuggveny, ami megkeresi a felut pixelhosszahoz legkozelebb allo
-	 * felezett texturameret (50, 100, 150, 200, 250) matrix-indexet (0-4).
+	 * Segédfüggvény, ami megkeresi a felút pixelhosszához legközelebb álló
+	 * felezett textúraméret (50, 100, 150, 200, 250) mátrix-indexet (0-4).
 	 */
 	private int valasztLegkozelebbiFelezettIndex(int felUtHossz) {
 		int legjobbIndex = 0;

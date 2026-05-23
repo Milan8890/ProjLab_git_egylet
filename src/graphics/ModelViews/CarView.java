@@ -20,6 +20,12 @@ import playground.Lane;
 import graphics.MainPanel;
 import entities.Car;
 
+/**
+ * Az autó grafikus megjelenítéséért felelős osztály.
+ * <p>
+ * A modellbeli autó aktuális sávja vagy kereszteződése alapján határozza meg a
+ * kirajzolási pozíciót, majd a járművet a haladási irányhoz igazítva jeleníti meg.
+ */
 public class CarView {
 	private Car modelCar;
 	private Point2D pos;
@@ -38,17 +44,36 @@ public class CarView {
 	}
 
 	//nem tudtam defaultkent = null-t atadni a ctornak, azert van ez.
+	/**
+	 * Létrehozza az autó grafikus nézetét alapértelmezett színnel.
+	 *
+	 * @param car       a kirajzolandó autó modellobjektuma
+	 * @param mainPanel a főpanel, amelyből a pálya nézetei elérhetők
+	 */
 	public CarView(Car car, MainPanel mainPanel) {
 		this(car, mainPanel, null);
 	}
 
-	public CarView(Car car, MainPanel mainPanel, Color _color) {
+	/**
+	 * Létrehozza az autó grafikus nézetét a megadott megjelenítési színnel.
+	 *
+	 * @param car       a kirajzolandó autó modellobjektuma
+	 * @param mainPanel a főpanel, amelyből a pálya nézetei elérhetők
+	 * @param color    az autó megjelenítéséhez használt szín
+	 */
+	public CarView(Car car, MainPanel mainPanel, Color color) {
 		this.modelCar = car;
 		this.mainPanel = mainPanel;
-		this.color = _color;
+		this.color = color;
 		this.pos = new Point2D.Double(0, 0);
 	}
 
+	/**
+	 * Kirajzolja az autót az aktuális sávján vagy az utolsó kereszteződésénél,
+	 * és a haladási iránynak megfelelően elforgatja.
+	 *
+	 * @param g a rajzoláshoz használt grafikus kontextus
+	 */
 	public void paint(Graphics2D g) {
 		if (carImage == null)
 			return;
@@ -83,6 +108,13 @@ public class CarView {
 			double dx = endX - startX;
 			double dy = endY - startY;
 			szog = Math.atan2(dy, dx);
+
+			double length = Math.sqrt(dx * dx + dy * dy);
+			double normalX = -dy / length;
+			double normalY = dx / length;
+
+			carX += normalX * (MainPanel.LANE_WIDTH / 2.0);
+			carY += normalY * (MainPanel.LANE_WIDTH / 2.0);
 
 		} else {
 			Crossing currentCrossing = modelCar.getLastCrossing();
@@ -124,6 +156,13 @@ public class CarView {
 		g2.dispose();
 	}
 
+	/**
+	 * Visszaadja az autó képének a megadott színnel színezett változatát, és
+	 * eltárolja az utolsó színezett képet az ismételt számítás elkerülésére.
+	 *
+	 * @param originalImage az eredeti, színezés nélküli autókép
+	 * @return a színezett autókép, vagy az eredeti kép, ha nincs megadott szín
+	 */
 	private BufferedImage getTintedImage(BufferedImage originalImage) {
 		if (color == null) {
 			return originalImage;
@@ -156,62 +195,4 @@ public class CarView {
 		return lastTintedImage;
 	}
 
-///TESZT#######################################################################################
-	public static void main(String[] args) {
-		SwingUtilities.invokeLater(() -> {
-			BufferedImage originalImage = carImage;
-			if (originalImage == null) {
-				System.err.println("Nem sikerult betolteni az Asset/auto.png kepet.");
-				return;
-			}
-
-			CarView redView = new CarView(null, null, Color.RED);
-			CarView greenView = new CarView(null, null, Color.GREEN);
-			CarView blueView = new CarView(null, null, Color.BLUE);
-
-			BufferedImage redImage = redView.getTintedImage(originalImage);
-			BufferedImage greenImage = greenView.getTintedImage(originalImage);
-			BufferedImage blueImage = blueView.getTintedImage(originalImage);
-
-			JPanel panel = new JPanel() {
-				@Override
-				protected void paintComponent(Graphics g) {
-					super.paintComponent(g);
-					Graphics2D g2 = (Graphics2D) g.create();
-					g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-					int imageWidth = 160;
-					int imageHeight = 100;
-					int y = 55;
-
-					g2.drawString("Eredeti", 35, 25);
-					g2.drawImage(originalImage, 20, y, imageWidth, imageHeight, null);
-
-					g2.drawString("Piros", 225, 25);
-					g2.drawImage(redImage, 200, y, imageWidth, imageHeight, null);
-
-					g2.drawString("Zold", 405, 25);
-					g2.drawImage(greenImage, 380, y, imageWidth, imageHeight, null);
-
-					g2.drawString("Kek", 585, 25);
-					g2.drawImage(blueImage, 560, y, imageWidth, imageHeight, null);
-
-					g2.dispose();
-				}
-
-				@Override
-				public Dimension getPreferredSize() {
-					return new Dimension(740, 190);
-				}
-			};
-
-			JFrame frame = new JFrame("CarView szinezes teszt");
-			frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-			frame.add(panel);
-			frame.pack();
-			frame.setLocationRelativeTo(null);
-			frame.setVisible(true);
-		});
-	}
-///TESZT VEGE#######################################################################################
 }

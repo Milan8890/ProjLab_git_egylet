@@ -83,6 +83,15 @@ public class City {
 	}
 
 	/**
+	 * Városban lévő autók lekérdezése.
+	 * 
+	 * @return a városban lévő autók.
+	 */
+	public static Set<Car> getCars() {
+	    return cars;
+	}
+
+	/**
 	 * A városban két kereszteződés között a legrövidebb útvonalat adja vissza.
 	 * 
 	 * @param from a kiindulási kereszteződés

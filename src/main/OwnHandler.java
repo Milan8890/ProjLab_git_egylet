@@ -41,11 +41,21 @@ public class OwnHandler extends Handler {
 	// Kikapcsolható logging
 	public boolean isLogging = true;
 
+	/**
+	 * Létrehozza a saját logkezelőt a Proto által használt objektumnév-tárral.
+	 *
+	 * @param objmap az objektumokat a naplózásban használt neveikhez rendelő tábla
+	 */
 	public OwnHandler(HashMap<Object, String> objmap) {
 		objectMap = objmap;
 	}
 
-	// A log üzenetek feldolgozása
+	/**
+	 * Feldolgozza és kiírja a kapott logrekord üzenetét, valamint behelyettesíti
+	 * az üzenetben szereplő objektumjelölőket.
+	 *
+	 * @param record a feldolgozandó logrekord
+	 */
 	@Override
 	public void publish(LogRecord record) {
 		if (!isLogging)
@@ -90,16 +100,30 @@ public class OwnHandler extends Handler {
 		}
 	}
 
+	/**
+	 * Kiüríti a handler pufferét. (Ez az implementáció nem használ külön puffert.)
+	 */
 	@Override
 	public void flush() {
 	}
 
+	/**
+	 * Lezárja a handlert. (Ez az implementáció nem tart fenn lezárandó erőforrást.)
+	 *
+	 * @throws SecurityException ha a handler lezárása biztonsági okból nem engedélyezett
+	 */
 	@Override
 	public void close() throws SecurityException {
 	}
 
-	// Erővel, privát mező lekérdezése. Rekurzíz, hogy leszármazott típusokkal is
-	// működjön.
+	/**
+	 * Privát mezőt kér le reflektíven az objektumból, szükség esetén az
+	 * ősosztályokon is végighaladva.
+	 *
+	 * @param o         az objektum, amelyből a mezőt ki kell olvasni
+	 * @param fieldName a keresett mező neve
+	 * @return a mező értéke, vagy {@code null}, ha a mező nem található
+	 */
 	private Object forceGetField(Object o, String fieldName) {
 		Class<?> currentClass = o.getClass();
 		while (currentClass != null) {
@@ -116,7 +140,12 @@ public class OwnHandler extends Handler {
 		return null;
 	}
 
-	// Objektum típusneve alapján a név lekérése.
+	/**
+	 * Visszaadja az objektum naplózásban használt típusnevét.
+	 *
+	 * @param o az objektum, amelynek a típusnevét le kell kérni
+	 * @return az objektum típusa naplózási névként
+	 */
 	private String getTypename(Object o) {
 		String classString = o.getClass().toString();
 		classString = classString.substring(classString.lastIndexOf(".") + 1);
@@ -128,7 +157,13 @@ public class OwnHandler extends Handler {
 		return classString;
 	}
 
-	// Objektum nevének létrehozása, ha még nem lenne felvéve
+	/**
+	 * Visszaadja az objektumhoz tartozó naplózási nevet, és szükség esetén
+	 * létrehozza azt az objektumtárban.
+	 *
+	 * @param o az objektum, amelyhez név szükséges
+	 * @return az objektum naplózásban használt neve
+	 */
 	private String getOrCreateObjectName(Object o) {
 		// CSAK ez a két objektum van, aminél felülírhatják egymást
 		if (o.getClass() == Salt.class || o.getClass() == Path.class) {
@@ -140,7 +175,12 @@ public class OwnHandler extends Handler {
 		return objectMap.get(o);
 	}
 
-	// Objektum hozzáadása az objektumtárhoz
+	/**
+	 * Hozzáadja az objektumot az objektumtárhoz a típusának megfelelő
+	 * névképzési szabály alapján.
+	 *
+	 * @param obj az objektumtárba felveendő objektum
+	 */
 	private void addObject(Object obj) {
 		switch (obj) {
 			case Cleaner o -> createSingle(o);
@@ -165,7 +205,11 @@ public class OwnHandler extends Handler {
 		}
 	}
 
-	// ID saját számozás
+	/**
+	 * Egyedi, saját sorszám alapján hoz létre naplózási nevet az objektumnak.
+	 *
+	 * @param o az elnevezendő objektum
+	 */
 	public void createSingle(Object o) {
 		String name = getTypename(o);
 
@@ -178,7 +222,13 @@ public class OwnHandler extends Handler {
 		objectMap.put(o, completeName);
 	}
 
-	// ID csak az ownertől függ
+	/**
+	 * Olyan naplózási nevet hoz létre, amelynek az azonosítója kizárólag a
+	 * tulajdonos objektum azonosítójából származik.
+	 *
+	 * @param o              az elnevezendő objektum
+	 * @param ownerFieldName a tulajdonosra mutató mező neve
+	 */
 	public void createFromOwner(Object o, String ownerFieldName) {
 		String name = getTypename(o);
 
@@ -189,7 +239,13 @@ public class OwnHandler extends Handler {
 		objectMap.put(o, name + ID);
 	}
 
-	// ID eleje az owner ID-je, plusz saját számozása
+	/**
+	 * Olyan naplózási nevet hoz létre, amely a tulajdonos azonosítójából és egy
+	 * saját sorszámból áll.
+	 *
+	 * @param o              az elnevezendő objektum
+	 * @param ownerFieldName a tulajdonosra mutató mező neve
+	 */
 	public void createFromOwnerPlusID(Object o, String ownerFieldName) {
 		String name = getTypename(o);
 		Object owner = forceGetField(o, ownerFieldName);
@@ -206,7 +262,12 @@ public class OwnHandler extends Handler {
 		objectMap.put(o, completeName);
 	}
 
-	// Path egyedi névlétrehozása
+	/**
+	 * Létrehozza egy útvonal naplózási nevét a hozzá tartozó jármű típusa és
+	 * azonosítója alapján.
+	 *
+	 * @param o az elnevezendő útvonal
+	 */
 	public void createName(Path o) {
 		String name = getTypename(o);
 
@@ -231,7 +292,12 @@ public class OwnHandler extends Handler {
 		objectMap.put(o, completeName);
 	}
 
-	// HeadListing egyedi névlétrehozása
+	/**
+	 * Létrehozza egy fejkészletbejegyzés naplózási nevét a hozzá tartozó
+	 * hókotró és fej típusa alapján.
+	 *
+	 * @param o az elnevezendő fejkészletbejegyzés
+	 */
 	public void createName(HeadListing o) {
 		String name = getTypename(o);
 
@@ -256,7 +322,12 @@ public class OwnHandler extends Handler {
 		objectMap.put(o, name + ID + "_" + headString);
 	}
 
-	// Só egyedi névlétrehozása
+	/**
+	 * Létrehozza egy só objektum naplózási nevét a hozzá tartozó sáv
+	 * azonosítója alapján.
+	 *
+	 * @param o az elnevezendő só objektum
+	 */
 	public void createName(Salt o) {
 		String name = o.getClass().toString();
 		name = name.substring(name.lastIndexOf("$") + 1);

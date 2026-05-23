@@ -123,6 +123,7 @@ public class Car extends Vehicle {
 	protected boolean stepWaitBecauseOfStuck() {
 
 		if (currentLane.hasStuckVehicle()) {
+//ITT MI A TODO??
 			// TODO Nem kellett meghívni a shortestPath-et, mert itt nem tervez újra, csak
 			// áll.
 			Logger.getGlobal().log(Level.INFO, "[Obj] [Obj] is blocked by crash, stopping and clearing [Obj]",

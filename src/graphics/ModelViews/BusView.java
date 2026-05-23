@@ -20,6 +20,13 @@ import playground.Lane;
 import graphics.MainPanel;
 import entities.Bus;
 
+/**
+ * A busz grafikus megjelenítéséért felelős osztály.
+ * <p>
+ * A modellbeli busz aktuális helyzete alapján kiszámolja a képernyőpozíciót,
+ * elforgatja a buszképet a haladási iránynak megfelelően, és a játékos
+ * színével színezi azt.
+ */
 public class BusView {
 	private Bus modelBus;
 	private Point2D pos;
@@ -39,13 +46,27 @@ public class BusView {
 	}
 
 
-	public BusView(Bus bus, MainPanel mainPanel, Color _color) {
+	/**
+	 * Létrehozza a busz grafikus nézetét a hozzá tartozó modellbusszal,
+	 * főpanellel és megjelenítési színnel.
+	 *
+	 * @param bus       a kirajzolandó busz modellobjektuma
+	 * @param mainPanel a főpanel, amelyből a pálya nézetei elérhetők
+	 * @param color    a busz megjelenítéséhez használt szín
+	 */
+	public BusView(Bus bus, MainPanel mainPanel, Color color) {
 		this.modelBus = bus;
 		this.mainPanel = mainPanel;
-		this.color = _color;
+		this.color = color;
 		this.pos = new Point2D.Double(0, 0);
 	}
 
+	/**
+	 * Kirajzolja a buszt az aktuális sávján vagy az utolsó kereszteződésénél,
+	 * és a haladási iránynak megfelelően elforgatja.
+	 *
+	 * @param g a rajzoláshoz használt grafikus kontextus
+	 */
 	public void paint(Graphics2D g) {
 		if (img == null)
 			return;
@@ -80,6 +101,13 @@ public class BusView {
 			double dx = endX - startX;
 			double dy = endY - startY;
 			szog = Math.atan2(dy, dx);
+
+			double length = Math.sqrt(dx * dx + dy * dy);
+			double normalX = -dy / length;
+			double normalY = dx / length;
+
+			busX += normalX * (MainPanel.LANE_WIDTH / 2.0);
+			busY += normalY * (MainPanel.LANE_WIDTH / 2.0);
 
 		} else {
 			Crossing currentCrossing = modelBus.getLastCrossing();
@@ -120,6 +148,13 @@ public class BusView {
 		g2.dispose();
 	}
 
+	/**
+	 * Visszaadja a busz képének a megadott színezett változatát,
+	 * és eltárolja az utolsó színezett képet az ismételt számítás elkerülése érdekében.
+	 *
+	 * @param originalImage az eredeti, színezés nélküli buszkép
+	 * @return a színezett buszkép
+	 */
 	private BufferedImage getTintedImage(BufferedImage originalImage) {
 		if (color == null) {
 			return originalImage;
@@ -152,62 +187,4 @@ public class BusView {
 		return lastTintedImage;
 	}
 
-///TESZT#######################################################################################
-	public static void main(String[] args) {
-		SwingUtilities.invokeLater(() -> {
-			BufferedImage originalImage = img;
-			if (originalImage == null) {
-				System.err.println("Nem sikerult betolteni az Asset/busz.png kepet.");
-				return;
-			}
-
-			BusView redView = new BusView(null, null, Color.RED);
-			BusView greenView = new BusView(null, null, Color.GREEN);
-			BusView blueView = new BusView(null, null, Color.BLUE);
-
-			BufferedImage redImage = redView.getTintedImage(originalImage);
-			BufferedImage greenImage = greenView.getTintedImage(originalImage);
-			BufferedImage blueImage = blueView.getTintedImage(originalImage);
-
-			JPanel panel = new JPanel() {
-				@Override
-				protected void paintComponent(Graphics g) {
-					super.paintComponent(g);
-					Graphics2D g2 = (Graphics2D) g.create();
-					g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-					int imageWidth = 160;
-					int imageHeight = 100;
-					int y = 55;
-
-					g2.drawString("Eredeti", 35, 25);
-					g2.drawImage(originalImage, 20, y, imageWidth, imageHeight, null);
-
-					g2.drawString("Piros", 225, 25);
-					g2.drawImage(redImage, 200, y, imageWidth, imageHeight, null);
-
-					g2.drawString("Zold", 405, 25);
-					g2.drawImage(greenImage, 380, y, imageWidth, imageHeight, null);
-
-					g2.drawString("Kek", 585, 25);
-					g2.drawImage(blueImage, 560, y, imageWidth, imageHeight, null);
-
-					g2.dispose();
-				}
-
-				@Override
-				public Dimension getPreferredSize() {
-					return new Dimension(740, 190);
-				}
-			};
-
-			JFrame frame = new JFrame("BusView szinezes teszt");
-			frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-			frame.add(panel);
-			frame.pack();
-			frame.setLocationRelativeTo(null);
-			frame.setVisible(true);
-		});
-	}
-///TESZT VEGE#######################################################################################
 }
