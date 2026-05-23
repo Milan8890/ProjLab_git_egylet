@@ -887,7 +887,7 @@ public class MainPanel extends JFrame {
 		} else if (selectedCleaner != null) {
 			busPanel.setVisible(false);
 			snowplowerPanel.setVisible(true);
-			snowplowerPanel.update();
+			snowplowerPanel.update();			//Ez jöhet ide?
 		} else {
 			busPanel.setVisible(false);
 			snowplowerPanel.setVisible(false);

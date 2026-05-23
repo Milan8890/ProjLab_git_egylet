@@ -114,7 +114,7 @@ public class Cleaner extends Player {
 	 */
 	public void createBreakerSnowplower() {
 		this.addMoney(BREAKER_SNOWPLOWER_PRICE);
-		if (!buyEjectorSnowplower()) {
+		if (!buyBreakerSnowplower()) {
 			Logger.getGlobal().log(Level.SEVERE,
 					"Couldn't create breaker snowplower for [Obj], because not enough money, which just got added.",
 					this);
