@@ -887,6 +887,7 @@ public class MainPanel extends JFrame {
 		} else if (selectedCleaner != null) {
 			busPanel.setVisible(false);
 			snowplowerPanel.setVisible(true);
+			snowplowerPanel.update();
 		} else {
 			busPanel.setVisible(false);
 			snowplowerPanel.setVisible(false);

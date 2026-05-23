@@ -718,11 +718,6 @@ public class SnowplowerPanel extends JPanel {
 	}
 
 	// TESZT!!!##############################################################################################################
-	/**
-	 * Egyszerű, önálló tesztablakot indít a panel megjelenítéséhez.
-	 *
-	 * @param args parancssori argumentumok
-	 */
 	public static void main(String[] args) {
 		javax.swing.SwingUtilities.invokeLater(() -> {
 			javax.swing.JFrame frame = new javax.swing.JFrame("SnowplowerPanel teszt");
