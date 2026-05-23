@@ -40,7 +40,6 @@ public class City {
 	 */
 	static Crossing snowplowBase = null;
 
-	//IDE KELL BEKÖTNI A BUILDTESTMAP-ET?
 	/**
 	 * A egyszerű várost inicializáló függvény, mivel a tesztek maguktól hozzák
 	 * lérte a pályát, nincs használva.

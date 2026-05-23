@@ -436,6 +436,7 @@ public class SnowplowerPanel extends JPanel {
 	 * Fejbolt frissítése
 	 */
 	private void updateHeadShopSection() {
+//ITT MI A TODO, HA SEMMI PLS TÖRÖLD??
 		// TODO Itt lehetne mókolni, mert jelenleg összemegy a panel. De lehet csak az
 		// egészet kéne állítani (Ez középen van, a másik kettőt alulra / felülre
 		// rendezni, és akkor nem baj, ha összemegy, vagy ilyesmi)
@@ -519,22 +520,12 @@ public class SnowplowerPanel extends JPanel {
 				.setText("Zúzottkő: " + (selectedSnowplower == null ? 0 : selectedSnowplower.getGravel()) + " kg");
 	}
 
-	// TODO TESZT csak
-	//static Cleaner c = new Cleaner("Andros");
-	//static Snowplower sp = Snowplower.createWithBreaker(c);
-
 	/**
 	 * Lekéri a főpanelen jelenleg kiválasztott hókotrót.
 	 *
 	 * @return a kiválasztott hókotró, vagy {@code null}, ha nincs elérhető főpanel
 	 */
 	private Snowplower getSelectedSnowplower() {
-		/*
-		c.addMoney(10);
-
-		if (sp != null)
-			return sp;
-		*/
 		if (mainPanel == null) {
 			return null;
 		}

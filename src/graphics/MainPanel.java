@@ -75,7 +75,7 @@ import user.setupPlayerData;
  * A játék fő grafikus ablaka, amely a térképet, az aktív játékos adatait és a
  * járműspecifikus vezérlőpaneleket fogja össze.
  */
-public class MainPanel extends JFrame {
+public class MainPanel extends JPanel {
 	public static final int CROSSING_SIZE = 80;
 	public static final int LANE_WIDTH = 20;
 	public static final float CROSSING_STROKE = 6f;
@@ -91,7 +91,7 @@ public class MainPanel extends JFrame {
 	private Snowplower selectedSnowplower;
 	private Crossing selectedCrossing;
 
-	private int carNumber = 5;		//Csak, hogy ne hardCodeolva legyen.
+	private int carNumber = 10;		//Csak, hogy ne hardCodeolva legyen.
 
 	private List<CrossingView> crossingViews = new ArrayList<>();
 	private List<RoadView> roadViews = new ArrayList<>();
@@ -113,7 +113,7 @@ public class MainPanel extends JFrame {
 	 * Létrehozza a fő játékablakot, inicializálja a tesztpályát, a játékosokat,
 	 * a járműnézeteket és a jobb oldali vezérlőpaneleket.
 	 */
-	public MainPanel() {
+	public MainPanel(List<setupPlayerData> playerDataList) {
 		setFocusable(true);
 
 		this.addKeyListener(new KeyAdapter() {
@@ -164,21 +164,23 @@ public class MainPanel extends JFrame {
 
 		initCars(carNumber);
 
-		initPlayerViews(App.setupPlayer());
+		initPlayerViews(playerDataList);
 		activePlayerPanel = createActivePlayerPanel();
 		snowplowerPanel = new SnowplowerPanel(this);
 		busPanel = new BusPanel(this);
 		initMapPanel();
 
-		//TESZT
 		setLayout(new BorderLayout());
 
+		// --- JOBB OLDAL: Vezérlő Panel ---
 		JPanel sidePanel = new JPanel(new BorderLayout());
 		sidePanel.setBackground(Color.WHITE);
 		sidePanel.setPreferredSize(new Dimension(320, 1000));
 
+		// --- JOBB OLDAL, FELSŐ: Active Player Panel ---
 		sidePanel.add(activePlayerPanel, BorderLayout.NORTH);
 
+		// --- JOBB OLDAL, ALSÓ: Snowplower / Bus Panel ---
 		JPanel vehicleHolder = new JPanel(new GridBagLayout());
 		vehicleHolder.setBackground(Color.WHITE);
 
@@ -200,49 +202,7 @@ public class MainPanel extends JFrame {
 
 		add(mapPanel, BorderLayout.CENTER);
 		add(sidePanel, BorderLayout.EAST);
-		//TESZT VÉGE
-		/*
-		setLayout(new GridBagLayout());
-		GridBagConstraints gbc = new GridBagConstraints();
-
-		// --- BAL OLDAL: Map Panel ---
-		gbc.gridx = 0;
-		gbc.gridy = 0;
-		gbc.gridwidth = 1;
-		gbc.gridheight = 2;
-		gbc.weightx = 0.0;
-		gbc.weighty = 0.0;
-		gbc.fill = GridBagConstraints.NONE;
-		gbc.insets = new Insets(0, 0, 0, 0);
-		add(mapPanel, gbc);
-
-		// --- JOBB OLDAL, FELSŐ: Active Player Panel ---
-		gbc.gridx = 1;
-		gbc.gridy = 0;
-		gbc.gridheight = 1;
-		gbc.weightx = 1.0;
-		gbc.weighty = 0.0;
-		//gbc.fill = GridBagConstraints.HORIZONTAL;
-		gbc.fill = GridBagConstraints.NONE;
-		gbc.anchor = GridBagConstraints.NORTH;
-		gbc.insets = new Insets(0, 0, 10, 0);
-		add(activePlayerPanel, gbc);
-
-		// --- JOBB OLDAL, ALSÓ: Snowplower Panel ---
-		gbc.gridx = 1;
-		gbc.gridy = 1;
-		gbc.weightx = 0.0;
-		gbc.weighty = 0.0;
-		gbc.fill = GridBagConstraints.NONE;		//BOTH volt
-		gbc.anchor = GridBagConstraints.NORTH;
-		gbc.insets = new Insets(0, 0, 0, 0);
-
-		busPanel.setVisible(false);
-		snowplowerPanel.setVisible(false);
-		add(snowplowerPanel, gbc);
-		add(busPanel, gbc);
-		*/
-
+		
 		try {
 			backgroundImage = ImageIO.read(new File("Asset/zuzmaravaros.png"));
 		} catch (Exception e) {
@@ -433,8 +393,10 @@ public class MainPanel extends JFrame {
 	 */
 	private void initCars(int carNumber) {
 		List<Crossing> crossings = City.getCrossings();
-		Color[] colors = { Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW, Color.ORANGE,
-						Color.MAGENTA, Color.CYAN, Color.PINK };
+		Color[] colors = { new Color(220, 20, 60), new Color(0, 120, 215), new Color(0, 160, 120),
+    				new Color(255, 140, 0), new Color(170, 80, 220), new Color(255, 80, 120),
+    				new Color(40, 180, 220), new Color(120, 200, 40), new Color(230, 90, 40),
+    				new Color(255, 200, 0)};
 
 		if (crossings.size() < 2) {
 			Logger.getGlobal().severe("Nincs elég kereszteződés autók létrehozásához.");
@@ -480,6 +442,7 @@ public class MainPanel extends JFrame {
 					g2.drawImage(backgroundImage, 0, 0, 1500, 1000, this);
 				}
 
+//EZZEL MIZU, KELL??
 				/*
 				// racs
 				g2.setColor(Color.LIGHT_GRAY);
@@ -890,6 +853,7 @@ public class MainPanel extends JFrame {
 	/**
 	 * Frissíti a főpanel megjelenítését.
 	 */
+//EZZEL MIZU, KELL??
 	/*
 	 * ez itt elv nem kell de itthagyom
 	 * public void update() {
@@ -1123,21 +1087,4 @@ public class MainPanel extends JFrame {
 		}
 		return player.getName();
 	}
-
-	/**
-	 * Újrarajzolja a fő ablakot, és közben frissíti az aktív játékoshoz tartozó
-	 * információs mezőt.
-	 */
-	@Override
-	public void repaint() {
-		// Többi repaint meghívása
-		super.repaint();
-		// TODO Elméletben ez kell, mert ez az egyetlen UI elem, ami változhat
-		// újrarajzolások közt.
-		// Ez felel azért, hogy a pontszám és pénz valós időben változzon.
-		// Ha nem menne, akkor szerintem a loopban repaintot meg kell hívni rá. (Ha loop
-		// alapján futtat a main függvény)
-		playerData.setText(getActivePlayerDataText());
-	}
-
 }

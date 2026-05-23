@@ -22,7 +22,7 @@ import main.World;
  */
 public class Road {
 	private static final int ONTICKSNOW = 1;
-	private static final double SNOWCHANCE = 0.1;
+	private static final double SNOWCHANCE = 0.03; //0.1 volt, de szerintem ez nagyon sok, főleg teszthez.
 	private static final int REVTIME = 12;
 	/**
 	 * Az úthoz tartozó sávok listája.

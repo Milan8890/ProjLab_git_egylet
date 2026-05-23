@@ -130,6 +130,8 @@ public class CrossingView {
 		}
 		boolean isSnowplowerBase = modelCrossing == City.getSnowplowBase();
 
+//SZERINTEM OKÉSAK A SZÍNEK, ÚGY VAN KB ÖSSZERAKVA, 
+// HOGY A PÁLYA, AUTÓ ÉS EGYÉB JÁRMŰ SZÍNEK ELTÉRJENEK, DE LEHET CSERELGETNI.
 		// TODO ha rondák a színek, változtatni!
 		// Szín állítása az alapján, hogy
 		if (isSelectedCrossing) {

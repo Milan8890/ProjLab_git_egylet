@@ -35,7 +35,7 @@ public class MapPanel extends JPanel {
 	/**
 	 * Kép beolvasása.
 	 */
-	static private void readImage() {
+	static private void readImage() {		//EZZEL MIZU, SZTEM MAR MUKSZIK, HA IGEN A PR-NAL TOROLD LÉCCI??
 		NewMain.notdone("Nagymagyarország térképe a háttérterünk. Ezt észre kéne venni máshonnan.");
 		try {
 			backgroundImg = ImageIO.read(new File("assets/testing/trianon2.jpeg"));
@@ -139,6 +139,6 @@ public class MapPanel extends JPanel {
 			view.paint((Graphics2D) g2d.create());
 		}
 
-		NewMain.notdone("MapPanel paintComponent");
+		NewMain.notdone("MapPanel paintComponent"); //EZZEL MIZU??
 	}
 }

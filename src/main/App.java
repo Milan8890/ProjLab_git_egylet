@@ -13,38 +13,37 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
+import java.util.function.Consumer;
 
 import graphics.MainPanel;
-import graphics.NewMain;
 import graphics.Panels.BusPanel;
 import graphics.Panels.SnowplowerPanel;
-
-import javax.swing.JFrame;
-import javax.swing.WindowConstants;
-
 import graphics.NewMain;
 import graphics.Panels.MapPanel;
+
 import user.BusDriver;
 import user.Cleaner;
 import user.Player;
 import user.setupPlayerData;
 
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.DefaultListCellRenderer;
-import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JList;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
-import javax.swing.WindowConstants;
 import javax.swing.border.AbstractBorder;
 
 /**
@@ -52,6 +51,8 @@ import javax.swing.border.AbstractBorder;
  * szolgáló grafikus menüt tartalmazza.
  */
 public class App {
+	static final Dimension GAME_CONTENT_SIZE = new Dimension(1820, 1000);
+
 	/**
 	 * Az alkalmazás belépési pontja.
 	 *
@@ -69,27 +70,31 @@ public class App {
 		
 		//városfelépítő
 		SwingUtilities.invokeLater(() -> {
-            MainPanel foAblak = new MainPanel();
-            foAblak.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-            foAblak.setTitle("Zúzmaraváros");
+  			JFrame foAblak = new JFrame("Zúzmaraváros");
+			foAblak.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 			foAblak.setResizable(false);
-            foAblak.pack();
-            foAblak.setLocationRelativeTo(null);
-            foAblak.setVisible(true);
+
+			JPanel setupPanel = createSetupPanel(playerDataList -> {
+				MainPanel gamePanel = new MainPanel(new ArrayList<>(playerDataList));
+
+				foAblak.setContentPane(gamePanel);
+				foAblak.pack();
+				foAblak.setLocationRelativeTo(null);
+				foAblak.revalidate();
+				foAblak.repaint();
+
+				SwingUtilities.invokeLater(() -> gamePanel.requestFocusInWindow());
+			});
+
+			setupPanel.setPreferredSize(GAME_CONTENT_SIZE);
+			foAblak.setContentPane(setupPanel);
+			foAblak.pack();
+			foAblak.setLocationRelativeTo(null);
+			foAblak.setVisible(true);
         });
 
 		/*
 		// Innen lehet tesztelni
-
-		MainPanel mainPanel = new MainPanel();
-
-		mainPanel.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		mainPanel.pack();
-		mainPanel.setVisible(true);
-
-		// Heti setupMenu teszthez
-		// if (args.length > 0 && args[0].equals("setup")) {
-		// List<setupPlayerData> players = setupPlayer();
 
 		// for (setupPlayerData player : players) {
 		// System.out.println(player.getName() + " " + player.getColor() + " " +
@@ -114,9 +119,9 @@ public class App {
 	 * @return a felvett játékosok adatait tartalmazó lista, a képernyőn látható
 	 *         sorok sorrendjében
 	 */
-	public static List<setupPlayerData> setupPlayer() {
+	public static JPanel createSetupPanel(Consumer<List<setupPlayerData>> onStartGame) {
 		final String setupMenuTitle = "Játékos hozzáadó menü";
-		final String[] playerColors = { "Zöld", "Sárga", "Kék", "Piros", "Lila", "Narancs" };
+		final String[] playerColors = { "Bordó", "Barna", "Ibolya", "Lime", "Rózsaszín", "Narancs"};
 		final String[] playerVehicles = { "Busz", "Hókotró jégtörőfejjel", "Hókotró hányófejjel" };
 		final Color titleBackground = new Color(25, 101, 135);
 		final Color menuBorder = new Color(0, 145, 215);
@@ -132,11 +137,6 @@ public class App {
 		final int vehicleControlWidth = 335;
 
 		final List<setupPlayerData> selectedPlayers = new ArrayList<>();
-
-		final JDialog dialog = new JDialog();
-		dialog.setTitle(setupMenuTitle);
-		dialog.setModal(true);
-		dialog.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
 
 		JPanel menuPanel = new JPanel(new BorderLayout(0, 0));
 		menuPanel.setBackground(Color.WHITE);
@@ -197,6 +197,20 @@ public class App {
 		});
 
 		startGameButton.addActionListener(e -> {
+			boolean hasPlayer = false;
+
+			for (JTextField nameField : names) {
+				if (!nameField.getText().trim().isEmpty()) {
+					hasPlayer = true;
+					break;
+				}
+			}
+			if (!hasPlayer) {
+				JOptionPane.showMessageDialog( menuPanel, "Legalább egy játékos kell.",
+					"Nincs játékos", JOptionPane.WARNING_MESSAGE);
+				return;
+			}
+
 			selectedPlayers.clear();
 			for (int i = 0; i < names.size(); i++) {
 				setupPlayerData playerData = new setupPlayerData();
@@ -205,17 +219,11 @@ public class App {
 				playerData.setVehicle((String) vehicles.get(i).getSelectedItem());
 				selectedPlayers.add(playerData);
 			}
-			dialog.dispose();
+			onStartGame.accept(selectedPlayers);
 		});
 
-		dialog.setContentPane(menuPanel);
-		dialog.pack();
-		dialog.setMinimumSize(dialog.getSize());
-		positionDialogAtTop(dialog);
 		SwingUtilities.invokeLater(() -> scrollPane.getVerticalScrollBar().setValue(0));
-		dialog.setVisible(true);
-
-		return selectedPlayers;
+		return menuPanel;
 	}
 
 	/**
@@ -449,18 +457,6 @@ public class App {
 		button.setBorder(new RoundedBorder(controlBorder, 8));
 		button.setFocusPainted(false);
 		return button;
-	}
-
-	/**
-	 * Az ablakot a képernyő felső részére, vízszintesen középre helyezi.
-	 *
-	 * @param dialog az elhelyezendő párbeszédablak
-	 */
-	private static void positionDialogAtTop(JDialog dialog) {
-		Rectangle screenBounds = GraphicsEnvironment.getLocalGraphicsEnvironment().getMaximumWindowBounds();
-		int x = screenBounds.x + Math.max(0, (screenBounds.width - dialog.getWidth()) / 2);
-		int y = screenBounds.y + 20;
-		dialog.setLocation(x, y);
 	}
 
 	/**

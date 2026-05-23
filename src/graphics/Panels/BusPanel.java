@@ -160,28 +160,9 @@ public class BusPanel extends JPanel {
 	private void pressExtPathButton() {
 		mainPanel.setSelectedCrossing(null);		//Nem szép, hogy valami alapból sárga.
 		mainPanel.setIsExtendingPath(!mainPanel.getIsExtendingPath());
-		//Teszt
+
 		mainPanel.requestFocusInWindow();
 		mainPanel.repaintMap();
 	}
-
-	// TESZT!!!##############################################################################################################
-	/**
-	 * Egyszerű, önálló tesztablakot indít a panel megjelenítéséhez.
-	 *
-	 * @param args parancssori argumentumok
-	 */
-	public static void main(String[] args) {
-		javax.swing.SwingUtilities.invokeLater(() -> {
-			javax.swing.JFrame frame = new javax.swing.JFrame("BusPanel teszt");
-			frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
-			frame.add(new BusPanel(null));
-			frame.pack();
-			frame.setLocationRelativeTo(null);
-			frame.setVisible(true);
-		});
-	}
-	// TESZT
-	// VÉGE!!!##############################################################################################################
 
 }
