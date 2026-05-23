@@ -61,6 +61,24 @@ public class Bus extends Vehicle {
 	}
 
 	/**
+	 * Visszaadja a busz első végállomását.
+	 * 
+	 * @return A busz első végállomása.
+	 */
+	public Crossing getStationA() {
+    return stationA;
+	}
+
+	/**
+	 * Visszaadja a busz második végállomását.
+	 * 
+	 * @return A busz második végállomása.
+	 */
+	public Crossing getStationB() {
+		return stationB;
+	}
+
+	/**
 	 * Meghívja az őse reachedCrossing metódusát, utána ha az egyik végállomáshoz
 	 * ért,
 	 * akkor a sofőrnek ad egy pontot, és átállítja, hogy a másik végállomás felé

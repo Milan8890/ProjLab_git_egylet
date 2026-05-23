@@ -2,6 +2,9 @@ package graphics.ModelViews;
 
 import java.awt.Graphics2D;
 import java.awt.geom.Point2D;
+
+import entities.Bus;
+
 import java.awt.Color;
 import java.awt.BasicStroke;
 
@@ -17,6 +20,7 @@ public class CrossingView {
 	private boolean isSnowplowerBase;
 	private MainPanel mainPanel;
 
+	//ez kell?
 	public CrossingView(Crossing modelCrossing, Point2D pos, boolean isSnowplowerBase) {
 		this(modelCrossing, pos, isSnowplowerBase, null);
 	}
@@ -32,6 +36,26 @@ public class CrossingView {
 		return modelCrossing;
 	}
 
+	private boolean isSelectedBusStationA() {
+		if (mainPanel == null) {
+			return false;
+		}
+
+		Bus selectedBus = mainPanel.getSelectedBus();
+		return selectedBus != null && selectedBus.getStationA() == modelCrossing;
+	}
+
+	private boolean isSelectedBusStationB() {
+		if (mainPanel == null) {
+			return false;
+		}
+
+		Bus selectedBus = mainPanel.getSelectedBus();
+		return selectedBus != null && selectedBus.getStationB() == modelCrossing;
+	}
+
+
+
 	public void paint(Graphics2D g) {
 		if (!updatePos())
 			return;
@@ -45,8 +69,10 @@ public class CrossingView {
 		Graphics2D g2 = (Graphics2D) g.create();
 
 		boolean isSelectedCrossing = false;
+
 		if (mainPanel != null)
 			isSelectedCrossing = mainPanel.getSelectedCrossing() == modelCrossing && mainPanel.getIsExtendingPath();
+
 		boolean isInPathCrossing = false;
 		if (mainPanel != null && mainPanel.getSelectedVehicle() != null) {
 			for (Lane l : mainPanel.getSelectedVehicle().getPath().getLanes()) {
@@ -63,6 +89,12 @@ public class CrossingView {
 		if (isSelectedCrossing) {
 			// Éppen ez van-e kiválasztva
 			g2.setColor(Color.YELLOW);
+		} else if (isSelectedBusStationA() ) {
+			// Kiválasztott busz első megállója-e.
+			g2.setColor(new Color(102, 255, 255));
+		} else if (isSelectedBusStationB() ) {
+			// Kiválasztott busz második megállója-e.
+			g2.setColor(new Color(178, 102, 255));
 		} else if (isInPathCrossing) {
 			// Benne van-e az útvonalban
 			g2.setColor(Color.GREEN);

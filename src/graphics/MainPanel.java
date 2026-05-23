@@ -18,6 +18,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.logging.Logger;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -43,6 +44,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 import entities.Bus;
+import entities.Car;
 import entities.Snowplower;
 import entities.Vehicle;
 import graphics.ModelViews.BusView;
@@ -83,8 +85,9 @@ public class MainPanel extends JFrame {
 	private Cleaner selectedCleaner;
 	private BusDriver selectedBusDriver;
 	private Snowplower selectedSnowplower;
-
 	private Crossing selectedCrossing;
+
+	private int carNumber = 5;		//Csak, hogy ne hardCodeolva legyen.
 
 	private List<CrossingView> crossingViews = new ArrayList<>();
 	private List<RoadView> roadViews = new ArrayList<>();
@@ -142,6 +145,8 @@ public class MainPanel extends JFrame {
 		});
 
 		buildTestMap();
+
+		initCars(carNumber);
 
 		initPlayerViews(App.setupPlayer());
 		activePlayerPanel = createActivePlayerPanel();
@@ -242,29 +247,29 @@ public class MainPanel extends JFrame {
 		Point2D.Double pos22 = new Point2D.Double(1180, 897);
 		Point2D.Double pos23 = new Point2D.Double(1390, 765);
 
-		crossingViews.add(new CrossingView(c1, new Point2D.Double(pos1.x + 3, pos1.y + 3), false));
-		crossingViews.add(new CrossingView(c2, new Point2D.Double(pos2.x + 3, pos2.y + 3), false));
-		crossingViews.add(new CrossingView(c3, new Point2D.Double(pos3.x + 3, pos3.y + 3), false));
-		crossingViews.add(new CrossingView(c4, new Point2D.Double(pos4.x + 3, pos4.y + 3), false));
-		crossingViews.add(new CrossingView(c5, new Point2D.Double(pos5.x + 3, pos5.y + 3), false));
-		crossingViews.add(new CrossingView(c6, new Point2D.Double(pos6.x + 3, pos6.y + 3), false));
-		crossingViews.add(new CrossingView(c7, new Point2D.Double(pos7.x + 3, pos7.y + 3), false));
-		crossingViews.add(new CrossingView(c8, new Point2D.Double(pos8.x + 3, pos8.y + 3), false));
-		crossingViews.add(new CrossingView(c9, new Point2D.Double(pos9.x + 3, pos9.y + 3), false));
-		crossingViews.add(new CrossingView(c10, new Point2D.Double(pos10.x + 3, pos10.y + 3), false));
-		crossingViews.add(new CrossingView(c11, new Point2D.Double(pos11.x + 3, pos11.y + 3), true));
-		crossingViews.add(new CrossingView(c12, new Point2D.Double(pos12.x + 3, pos12.y + 3), false));
-		crossingViews.add(new CrossingView(c13, new Point2D.Double(pos13.x + 3, pos13.y + 3), false));
-		crossingViews.add(new CrossingView(c14, new Point2D.Double(pos14.x + 3, pos14.y + 3), false));
-		crossingViews.add(new CrossingView(c15, new Point2D.Double(pos15.x + 3, pos15.y + 3), false));
-		crossingViews.add(new CrossingView(c16, new Point2D.Double(pos16.x + 3, pos16.y + 3), false));
-		crossingViews.add(new CrossingView(c17, new Point2D.Double(pos17.x + 3, pos17.y + 3), false));
-		crossingViews.add(new CrossingView(c18, new Point2D.Double(pos18.x + 3, pos18.y + 3), false));
-		crossingViews.add(new CrossingView(c19, new Point2D.Double(pos19.x + 3, pos19.y + 3), false));
-		crossingViews.add(new CrossingView(c20, new Point2D.Double(pos20.x + 3, pos20.y + 3), false));
-		crossingViews.add(new CrossingView(c21, new Point2D.Double(pos21.x + 3, pos21.y + 3), false));
-		crossingViews.add(new CrossingView(c22, new Point2D.Double(pos22.x + 3, pos22.y + 3), false));
-		crossingViews.add(new CrossingView(c23, new Point2D.Double(pos23.x + 3, pos23.y + 3), false));
+		crossingViews.add(new CrossingView(c1, new Point2D.Double(pos1.x + 3, pos1.y + 3), false, this));
+		crossingViews.add(new CrossingView(c2, new Point2D.Double(pos2.x + 3, pos2.y + 3), false, this));
+		crossingViews.add(new CrossingView(c3, new Point2D.Double(pos3.x + 3, pos3.y + 3), false, this));
+		crossingViews.add(new CrossingView(c4, new Point2D.Double(pos4.x + 3, pos4.y + 3), false, this));
+		crossingViews.add(new CrossingView(c5, new Point2D.Double(pos5.x + 3, pos5.y + 3), false, this));
+		crossingViews.add(new CrossingView(c6, new Point2D.Double(pos6.x + 3, pos6.y + 3), false, this));
+		crossingViews.add(new CrossingView(c7, new Point2D.Double(pos7.x + 3, pos7.y + 3), false, this));
+		crossingViews.add(new CrossingView(c8, new Point2D.Double(pos8.x + 3, pos8.y + 3), false, this));
+		crossingViews.add(new CrossingView(c9, new Point2D.Double(pos9.x + 3, pos9.y + 3), false, this));
+		crossingViews.add(new CrossingView(c10, new Point2D.Double(pos10.x + 3, pos10.y + 3), false, this));
+		crossingViews.add(new CrossingView(c11, new Point2D.Double(pos11.x + 3, pos11.y + 3), true, this));
+		crossingViews.add(new CrossingView(c12, new Point2D.Double(pos12.x + 3, pos12.y + 3), false, this));
+		crossingViews.add(new CrossingView(c13, new Point2D.Double(pos13.x + 3, pos13.y + 3), false, this));
+		crossingViews.add(new CrossingView(c14, new Point2D.Double(pos14.x + 3, pos14.y + 3), false, this));
+		crossingViews.add(new CrossingView(c15, new Point2D.Double(pos15.x + 3, pos15.y + 3), false, this));
+		crossingViews.add(new CrossingView(c16, new Point2D.Double(pos16.x + 3, pos16.y + 3), false, this));
+		crossingViews.add(new CrossingView(c17, new Point2D.Double(pos17.x + 3, pos17.y + 3), false, this));
+		crossingViews.add(new CrossingView(c18, new Point2D.Double(pos18.x + 3, pos18.y + 3), false, this));
+		crossingViews.add(new CrossingView(c19, new Point2D.Double(pos19.x + 3, pos19.y + 3), false, this));
+		crossingViews.add(new CrossingView(c20, new Point2D.Double(pos20.x + 3, pos20.y + 3), false, this));
+		crossingViews.add(new CrossingView(c21, new Point2D.Double(pos21.x + 3, pos21.y + 3), false, this));
+		crossingViews.add(new CrossingView(c22, new Point2D.Double(pos22.x + 3, pos22.y + 3), false, this));
+		crossingViews.add(new CrossingView(c23, new Point2D.Double(pos23.x + 3, pos23.y + 3), false, this));
 
 		//1-es kereszteződésből induló utak
 		addRoadWithLanes(c1, c2, 2);
@@ -362,6 +367,33 @@ public class MainPanel extends JFrame {
 
 		City.setSnowplowBase(c11);
 		//TESZT VÉGE--
+	}
+
+	private void initCars(int carNumber) {
+		List<Crossing> crossings = City.getCrossings();
+		Color[] colors = { Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW, Color.ORANGE,
+						Color.MAGENTA, Color.CYAN, Color.PINK };
+
+		if (crossings.size() < 2) {
+			Logger.getGlobal().severe("Nincs elég kereszteződés autók létrehozásához.");
+			return;
+		}
+
+		Random random = new Random();
+
+		for (int i = 0; i < carNumber; i++) {
+			Crossing home = crossings.get(random.nextInt(crossings.size()));
+			Crossing work = crossings.get(random.nextInt(crossings.size()));
+
+			while (work == home) {
+				work = crossings.get(random.nextInt(crossings.size()));
+			}
+
+			Car car = new Car(home, work);
+			City.getCars().add(car);
+			carViews.add(new CarView(car, this, colors[random.nextInt(colors.length)] ));
+			
+		}
 	}
 
 	private void initMapPanel() {
@@ -859,6 +891,8 @@ public class MainPanel extends JFrame {
 			busPanel.setVisible(false);
 			snowplowerPanel.setVisible(false);
 		}
+
+		mapPanel.repaint();		//Hogy a kereszteződések szinesek legyenek
 	}
 
 	/**

@@ -45,6 +45,10 @@ public class BusDriver extends Player {
 		}
 		Crossing crossingA = City.getCrossings().get(random.nextInt(City.getCrossings().size()));
 		Crossing crossingB = City.getCrossings().get(random.nextInt(City.getCrossings().size()));
+
+		while (crossingB == crossingA) {
+			crossingB = City.getCrossings().get(random.nextInt(City.getCrossings().size()));
+		}
 		bus = new Bus(crossingA, crossingB, this);
 		Logger.getGlobal().log(Level.INFO, "Created [Obj]", this);
 	}
