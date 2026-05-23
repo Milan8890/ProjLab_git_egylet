@@ -21,6 +21,13 @@ import graphics.MainPanel;
 import entities.Snowplower;
 import equipment.Head;
 
+/**
+ * A hókotró grafikus megjelenítéséért felelős osztály.
+ * <p>
+ * A modellbeli hókotró aktuális pozíciója és aktív feje alapján választja ki a
+ * megfelelő képet, majd azt a haladási irányhoz igazítva és játékosszínnel
+ * színezve rajzolja ki.
+ */
 public class SnowplowerView {
 	private Snowplower modelSnowplower;
 	private Point2D pos;
@@ -51,13 +58,27 @@ public class SnowplowerView {
 		}
 	}
 
-	public SnowplowerView(Snowplower snowplower, MainPanel mainPanel, Color _color) {
+	/**
+	 * Létrehozza a hókotró grafikus nézetét a hozzá tartozó modellhókotróval,
+	 * főpanellel és megjelenítési színnel.
+	 *
+	 * @param snowplower a kirajzolandó hókotró modellobjektuma
+	 * @param mainPanel  a főpanel, amelyből a pálya nézetei elérhetők
+	 * @param color     a hókotró megjelenítéséhez használt szín
+	 */
+	public SnowplowerView(Snowplower snowplower, MainPanel mainPanel, Color color) {
 		this.modelSnowplower = snowplower;
 		this.mainPanel = mainPanel;
-		color = _color;
+		color = color;
 		this.pos = new Point2D.Double(0, 0);
 	}
 
+	/**
+	 * Kirajzolja a hókotrót az aktuális pozícióján, az aktív fej típusának
+	 * megfelelő képpel és a haladási iránynak megfelelő elforgatással.
+	 *
+	 * @param g a rajzoláshoz használt grafikus kontextus
+	 */
 	public void paint(Graphics2D g) {
 		if (!updatePos())
 			return;
@@ -114,6 +135,13 @@ public class SnowplowerView {
 		g2.dispose();
 	}
 
+	/**
+	 * Frissíti a hókotró kirajzolási pozícióját az aktuális sáv vagy az utolsó
+	 * kereszteződés alapján, és beállítja a rajzoláshoz használt forgatási
+	 * szöget.
+	 *
+	 * @return {@code true}, ha a pozíció sikeresen frissíthető, egyébként  {@code false}
+	 */
 	private boolean updatePos() {
 		if (modelSnowplower == null || mainPanel == null)
 			return false;
@@ -147,6 +175,14 @@ public class SnowplowerView {
 			double dx = endX - startX;
 			double dy = endY - startY;
 			rotationAngle = Math.atan2(dy, dx);
+
+			double length = Math.sqrt(dx * dx + dy * dy);
+			double normalX = -dy / length;
+			double normalY = dx / length;
+
+			plowX += normalX * (MainPanel.LANE_WIDTH / 2.0);
+			plowY += normalY * (MainPanel.LANE_WIDTH / 2.0);
+
 			pos.setLocation(plowX, plowY);
 			return true;
 		}
@@ -165,6 +201,14 @@ public class SnowplowerView {
 		return true;
 	}
 
+	/**
+	 * Visszaadja a hókotró képének a megadott színnel színezett
+	 * változatát, és eltárolja az utolsó színezett képet az ismételt számítás
+	 * elkerülésének érdekében.
+	 *
+	 * @param originalImage az eredeti, színezés nélküli hókotrókép
+	 * @return a színezett hókotrókép, vagy az eredeti kép, ha nincs megadott szín
+	 */
 	private BufferedImage getTintedImage(BufferedImage originalImage) {
 		if (color == null) {
 			return originalImage;
@@ -197,6 +241,14 @@ public class SnowplowerView {
 		return lastTintedImage;
 	}
 
+	/**
+	 * Kezeli a hókotróra érkező kattintást, és sikeres találat esetén
+	 * kiválasztja ezt a hókotrót a főpanelen.
+	 *
+	 * @param x a kattintás x koordinátája
+	 * @param y a kattintás y koordinátája
+	 * @return {@code true}, ha a kattintás ezt a hókotrót találta el, egyébként {@code false}
+	 */
 	public boolean isClicked(int x, int y) {
 		if (!updatePos())
 			return false;
@@ -208,65 +260,5 @@ public class SnowplowerView {
 		mainPanel.setSelectedSnowplower(modelSnowplower);
 		return true;
 	}
-
-
-///TESZT#######################################################################################
-	public static void main(String[] args) {
-		SwingUtilities.invokeLater(() -> {
-			BufferedImage originalImage = imgJegtoro;
-			if (originalImage == null) {
-				System.err.println("Nem sikerult betolteni az Asset/jegtoro.png kepet.");
-				return;
-			}
-
-			SnowplowerView redView = new SnowplowerView(null, null, Color.RED);
-			SnowplowerView greenView = new SnowplowerView(null, null, Color.GREEN);
-			SnowplowerView blueView = new SnowplowerView(null, null, Color.BLUE);
-
-			BufferedImage redImage = redView.getTintedImage(originalImage);
-			BufferedImage greenImage = greenView.getTintedImage(originalImage);
-			BufferedImage blueImage = blueView.getTintedImage(originalImage);
-
-			JPanel panel = new JPanel() {
-				@Override
-				protected void paintComponent(Graphics g) {
-					super.paintComponent(g);
-					Graphics2D g2 = (Graphics2D) g.create();
-					g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-					int imageWidth = 160;
-					int imageHeight = 100;
-					int y = 55;
-
-					g2.drawString("Eredeti", 35, 25);
-					g2.drawImage(originalImage, 20, y, imageWidth, imageHeight, null);
-
-					g2.drawString("Piros", 225, 25);
-					g2.drawImage(redImage, 200, y, imageWidth, imageHeight, null);
-
-					g2.drawString("Zold", 405, 25);
-					g2.drawImage(greenImage, 380, y, imageWidth, imageHeight, null);
-
-					g2.drawString("Kek", 585, 25);
-					g2.drawImage(blueImage, 560, y, imageWidth, imageHeight, null);
-
-					g2.dispose();
-				}
-
-				@Override
-				public Dimension getPreferredSize() {
-					return new Dimension(740, 190);
-				}
-			};
-
-			JFrame frame = new JFrame("SnowplowerView szinezes teszt");
-			frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
-			frame.add(panel);
-			frame.pack();
-			frame.setLocationRelativeTo(null);
-			frame.setVisible(true);
-		});
-	}
-///TESZT VÉGE#######################################################################################
 
 }

@@ -156,6 +156,11 @@ public class Cleaner extends Player {
 		}
 	}
 
+	/**
+	 * Visszaadja a játékos által irányított hókotrók listáját.
+	 * 
+	 * @return a játékos hókotrói
+	 */
 	public List<Snowplower> getSnowplowers() {
 		return snowplowers;
 	}

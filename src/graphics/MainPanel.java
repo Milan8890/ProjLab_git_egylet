@@ -106,11 +106,21 @@ public class MainPanel extends JFrame {
 
 	private MapPanel mapPanel;
 
+	/**
+	 * Létrehozza a fő játékablakot, inicializálja a tesztpályát, a játékosokat,
+	 * a járműnézeteket és a jobb oldali vezérlőpaneleket.
+	 */
 	public MainPanel() {
 		setFocusable(true);
 
 		this.addKeyListener(new KeyAdapter() {
-			// Út hosszabbítása KeyListener
+			/**
+			 * Út hosszabbítása KeyListener.
+			 * Kezeli az útvonalhosszabbítás billentyűparancsait, és a lenyomott
+			 * szám alapján hozzáadja a kiválasztott sávot az aktív jármű útvonalához.
+			 *
+			 * @param e a billentyűesemény
+			 */
 			@Override
 			public void keyPressed(KeyEvent e) {
 
@@ -143,7 +153,7 @@ public class MainPanel extends JFrame {
 					return;
 
 				selectedVehicle.extendPath(lanes.get(pressed - 1));
-				mapPanel.repaint();		//TESZT
+				mapPanel.repaint();
 			}
 		});
 
@@ -202,6 +212,10 @@ public class MainPanel extends JFrame {
 		startGameLoop();
 	}
 
+	/**
+	 * Felépíti az alap tesztpályát kereszteződésekkel, utakkal, sávokkal és
+	 * beállítja a hókotró bázisát.
+	 */
 	private void buildTestMap() {
 		Crossing c1 = new Crossing();
 		Crossing c2 = new Crossing();
@@ -371,6 +385,12 @@ public class MainPanel extends JFrame {
 		City.setSnowplowBase(c11);
 	}
 
+	/**
+	 * Véletlenszerű kezdő- és célkereszteződéssel létrehozza az autókat, majd
+	 * hozzáadja őket a városhoz és a kirajzolható autó nézetekhez.
+	 *
+	 * @param carNumber a létrehozandó autók száma
+	 */
 	private void initCars(int carNumber) {
 		List<Crossing> crossings = City.getCrossings();
 		Color[] colors = { Color.RED, Color.BLUE, Color.GREEN, Color.YELLOW, Color.ORANGE,
@@ -397,8 +417,18 @@ public class MainPanel extends JFrame {
 		}
 	}
 
+	/**
+	 * Létrehozza a térképet kirajzoló panelt, és beállítja a pályaelemek,
+	 * járművek és háttérkép rajzolási sorrendjét.
+	 */
 	private void initMapPanel() {
 		MapPanel rajzPanel = new MapPanel(this) {
+			/**
+			 * Kirajzolja a térkép hátterét, a kereszteződéseket, utakat, sávokat és
+			 * a járműveket.
+			 *
+			 * @param g a rajzoláshoz kapott grafikus kontextus
+			 */
 			@Override
 			protected void paintComponent(Graphics g) {
 				super.paintComponent(g);
@@ -453,6 +483,14 @@ public class MainPanel extends JFrame {
 		mapPanel = rajzPanel;
 	}
 
+	/**
+	 * Létrehoz egy modellszintű utat a két kereszteződés között, 
+	 * majd hozzáadja az út- és sávnézeteket.
+	 *
+	 * @param from   az út kezdő kereszteződése
+	 * @param to     az út cél kereszteződése
+	 * @param savSzam az út sávjainak száma
+	 */
 	private void addRoadWithLanes(Crossing from, Crossing to, int savSzam) {
 		CrossingView fromView = getCrossingView(from);
 		CrossingView toView = getCrossingView(to);
@@ -477,6 +515,13 @@ public class MainPanel extends JFrame {
 		generateAndAddLaneViews(road, utEleje, utVege);
 	}
 
+	/**
+	 * Kiszámolja egy CrossingView középpontját a kirajzolási pozíció és
+	 * a kereszteződés mérete alapján.
+	 *
+	 * @param view a kereszteződés grafikus nézete
+	 * @return a kereszteződés középpontja
+	 */
 	public static Point2D.Double calculateCenter(CrossingView view) {
 		double sugar = CROSSING_SIZE / 2.0;
 		double centerX = view.pos.getX() - 3.0 + sugar;
@@ -484,6 +529,14 @@ public class MainPanel extends JFrame {
 		return new Point2D.Double(centerX, centerY);
 	}
 
+	/**
+	 * Meghatározza egy út kezdő- és végpontját úgy, hogy az út ne a
+	 * kereszteződések középpontjából, hanem azok szélétől induljon.
+	 *
+	 * @param kp1 az első kereszteződés középpontja
+	 * @param kp2 a második kereszteződés középpontja
+	 * @return a kiszámolt útvégpontok tömbje, vagy {@code null}, ha a két pont azonos
+	 */
 	private Point2D.Double[] calculateRoadEndPoints(Point2D.Double kp1, Point2D.Double kp2) {
 		double dx = kp2.x - kp1.x;
 		double dy = kp2.y - kp1.y;
@@ -502,6 +555,14 @@ public class MainPanel extends JFrame {
 		return new Point2D.Double[] { utEleje, utVege };
 	}
 
+	/**
+	 * Létrehozza és eltárolja az adott úthoz tartozó sávnézeteket a sávok
+	 * egymáshoz képesti merőleges eltolásával.
+	 *
+	 * @param road    az út, amelynek sávjaihoz nézeteket kell létrehozni
+	 * @param utEleje az út grafikus kezdőpontja
+	 * @param utVege  az út grafikus végpontja
+	 */
 	private void generateAndAddLaneViews(Road road, Point2D.Double utEleje, Point2D.Double utVege) {
 		double dx = utVege.x - utEleje.x;
 		double dy = utVege.y - utEleje.y;
@@ -531,6 +592,12 @@ public class MainPanel extends JFrame {
 		}
 	}
 
+	/**
+	 * A játékosválasztóból kapott adatok alapján létrehozza a buszvezetőket,
+	 * takarítókat, kezdő járműveiket és azok grafikus nézeteit.
+	 *
+	 * @param playerDataList a játékosválasztó által összeállított játékosadatok
+	 */
 	public void initPlayerViews(List<setupPlayerData> playerDataList) {
 		for (setupPlayerData playerData : playerDataList) {
 
@@ -568,11 +635,17 @@ public class MainPanel extends JFrame {
 		}
 	}
 
+	/**
+	 * Elindítja a játék időzítőjét, amely minden lépésben frissíti a világot,
+	 * az aktív játékos adatait és újrarajzolja a térképet.
+	 */
 	private void startGameLoop() {
+		World.setIsSnowing(true);	//Bekapcsolja a havazást.
 		int delay = 50; 			//1000 ms / 50 ms = 20 tick/sec (fps)
 
 		javax.swing.Timer timer = new javax.swing.Timer(delay, e -> {
 			World.tick();
+    		playerData.setText(getActivePlayerDataText());
 			mapPanel.repaint();
 		});
 
@@ -818,6 +891,11 @@ public class MainPanel extends JFrame {
 		return label;
 	}
 
+	/**
+	 * Összeállítja az aktív játékoshoz tartozó pénz- vagy pontszám szövegét.
+	 *
+	 * @return az aktív játékos adatait megjelenítő szöveg
+	 */
 	private String getActivePlayerDataText() {
 		if (selectedCleaner != null) {
 			return "Pénzed: " + selectedCleaner.getMoney() + " $";
@@ -852,55 +930,62 @@ public class MainPanel extends JFrame {
 			comboBox.addItem(cleaner);
 		}
 		comboBox.addActionListener(
-				new ActionListener() {
+			new ActionListener() {
 
-					@Override
-					public void actionPerformed(ActionEvent e) {
-						Player selectedPlayer = (Player) comboBox.getSelectedItem();
+				/**
+				 * Kezeli az aktív játékos legördülő mezőjének változását, és beállítja
+				 * a kiválasztott buszvezetőt vagy takarítót.
+				 *
+				 * @param e a kiválasztási esemény
+				 */
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					Player selectedPlayer = (Player) comboBox.getSelectedItem();
 
-						if (selectedPlayer == nullPlayer) {
-							selectedBusDriver = null;
+					if (selectedPlayer == nullPlayer) {
+						selectedBusDriver = null;
+						selectedCleaner = null;
+						playerData.setText(getActivePlayerDataText());
+						updateVehiclePanel();
+						return;
+					}
+					for (BusDriver busDriver : busDrivers) {
+						if (busDriver.equals(selectedPlayer)) {
+							selectedBusDriver = busDriver;
 							selectedCleaner = null;
+							selectedSnowplower = null;
 							playerData.setText(getActivePlayerDataText());
 							updateVehiclePanel();
 							return;
 						}
-
-						for (BusDriver busDriver : busDrivers) {
-							if (busDriver.equals(selectedPlayer)) {
-								selectedBusDriver = busDriver;
-								selectedCleaner = null;
-								selectedSnowplower = null;
-								playerData.setText(getActivePlayerDataText());
-								updateVehiclePanel();
-								return;
-							}
-						}
-						for (Cleaner cleaner : cleaners) {
-							if (cleaner.equals(selectedPlayer)) {
-								selectedCleaner = cleaner;
-								selectedBusDriver = null;
-
-								if (selectedCleaner.getSnowplowers().size() < 1) {
-									selectedSnowplower = null;
-									Logger.getGlobal().severe(
-											"ComboBox Snowplower állításánál nincsen egy hókotrója sem az egyik játékosnak.");
-								} else {
-									selectedSnowplower = selectedCleaner.getSnowplowers().get(0);
-								}
-
-								playerData.setText(getActivePlayerDataText());
-								updateVehiclePanel();
-								return;
-							}
-						}
-
 					}
+					for (Cleaner cleaner : cleaners) {
+						if (cleaner.equals(selectedPlayer)) {
+							selectedCleaner = cleaner;
+							selectedBusDriver = null;
 
-				});
+							if (selectedCleaner.getSnowplowers().size() < 1) {
+								selectedSnowplower = null;
+								Logger.getGlobal().severe(
+										"ComboBox Snowplower állításánál nincsen egy hókotrója sem az egyik játékosnak.");
+							} else {
+								selectedSnowplower = selectedCleaner.getSnowplowers().get(0);
+							}
+							playerData.setText(getActivePlayerDataText());
+							updateVehiclePanel();
+							return;
+						}
+					}
+				}
+
+			});
 		return comboBox;
 	}
 
+	/**
+	 * Az aktív játékos típusa alapján megjeleníti a megfelelő járművezérlő
+	 * panelt, majd frissíti a térképet.
+	 */
 	public void updateVehiclePanel() {
 
 		if (selectedBusDriver != null) {
@@ -909,7 +994,7 @@ public class MainPanel extends JFrame {
 		} else if (selectedCleaner != null) {
 			busPanel.setVisible(false);
 			snowplowerPanel.setVisible(true);
-			snowplowerPanel.update();			//Ez jöhet ide?
+			snowplowerPanel.update();
 		} else {
 			busPanel.setVisible(false);
 			snowplowerPanel.setVisible(false);
@@ -925,6 +1010,17 @@ public class MainPanel extends JFrame {
 	 */
 	private DefaultListCellRenderer createActivePlayerComboBoxRenderer() {
 		return new DefaultListCellRenderer() {
+			/**
+			 * Beállítja, hogy a legördülő mező elemei a játékosok megjelenítendő
+			 * nevét mutassák.
+			 *
+			 * @param list         a megjelenített lista
+			 * @param value        az aktuális listaelem értéke
+			 * @param index        az aktuális listaelem indexe
+			 * @param isSelected   jelzi, hogy az elem ki van-e választva
+			 * @param cellHasFocus jelzi, hogy az elem fókuszban van-e
+			 * @return a listaelem megjelenítéséhez használt komponens
+			 */
 			@Override
 			public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected,
 					boolean cellHasFocus) {
@@ -968,6 +1064,10 @@ public class MainPanel extends JFrame {
 		return player.getName();
 	}
 
+	/**
+	 * Újrarajzolja a fő ablakot, és közben frissíti az aktív játékoshoz tartozó
+	 * információs mezőt.
+	 */
 	@Override
 	public void repaint() {
 		// Többi repaint meghívása
@@ -979,26 +1079,5 @@ public class MainPanel extends JFrame {
 		// alapján futtat a main függvény)
 		playerData.setText(getActivePlayerDataText());
 	}
-
-	// TESZT!!!##############################################################################################################
-	/**
-	 * Egyszerű, önálló tesztablakot indít a panel megjelenítéséhez.
-	 *
-	 * @param args parancssori argumentumok
-	 */
-	public static void main(String[] args) {
-		javax.swing.SwingUtilities.invokeLater(() -> {
-			MainPanel mainPanel = new MainPanel();
-
-			javax.swing.JFrame frame = new javax.swing.JFrame("ActivePlayerPanel teszt");
-			frame.setDefaultCloseOperation(javax.swing.JFrame.EXIT_ON_CLOSE);
-			frame.add(mainPanel.activePlayerPanel);
-			frame.pack();
-			frame.setLocationRelativeTo(null);
-			frame.setVisible(true);
-		});
-	}
-	// TESZT
-	// VÉGE!!!##############################################################################################################
-
+	
 }
