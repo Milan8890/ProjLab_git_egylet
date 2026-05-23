@@ -704,6 +704,8 @@ public class SnowplowerPanel extends JPanel {
 			return;
 		}
 		selectedSnowplower.getPath().clear();
+		mainPanel.setSelectedCrossing(null);
+		mainPanel.repaintMap();
 	}
 
 	/**
@@ -713,8 +715,10 @@ public class SnowplowerPanel extends JPanel {
 		if (mainPanel == null) {
 			return;
 		}
-
+		mainPanel.setSelectedCrossing(null);
 		mainPanel.setIsExtendingPath(!mainPanel.getIsExtendingPath());
+		mainPanel.requestFocusInWindow();
+    	mainPanel.repaintMap();
 	}
 
 	// TESZT!!!##############################################################################################################

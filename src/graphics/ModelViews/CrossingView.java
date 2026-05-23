@@ -100,7 +100,7 @@ public class CrossingView {
 			g2.setColor(Color.GREEN);
 		} else if (isSnowplowerBase) {
 			// Hókotróbázis-e
-			g2.setColor(Color.BLUE);
+			g2.setColor(new Color(0, 153, 153));
 		} else {
 			g2.setColor(new Color(30, 144, 255));
 		}
@@ -129,6 +129,7 @@ public class CrossingView {
 			return false;
 
 		mainPanel.setSelectedCrossing(modelCrossing);
+		mainPanel.repaint();
 		return true;
 	}
 }

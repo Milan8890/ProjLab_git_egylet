@@ -150,13 +150,19 @@ public class BusPanel extends JPanel {
 		}
 
 		selectedBus.getPath().clear();
+		mainPanel.setSelectedCrossing(null);
+		mainPanel.repaintMap();
 	}
 
 	/**
 	 * Az útvonal tervezésének állítása.
 	 */
 	private void pressExtPathButton() {
+		mainPanel.setSelectedCrossing(null);		//Nem szép, hogy valami alapból sárga.
 		mainPanel.setIsExtendingPath(!mainPanel.getIsExtendingPath());
+		//Teszt
+		mainPanel.requestFocusInWindow();
+		mainPanel.repaintMap();
 	}
 
 	// TESZT!!!##############################################################################################################

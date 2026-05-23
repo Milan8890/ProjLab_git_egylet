@@ -107,6 +107,8 @@ public class MainPanel extends JFrame {
 	private MapPanel mapPanel;
 
 	public MainPanel() {
+		setFocusable(true);
+
 		this.addKeyListener(new KeyAdapter() {
 			// Út hosszabbítása KeyListener
 			@Override
@@ -137,10 +139,11 @@ public class MainPanel extends JFrame {
 				int pressed = Character.getNumericValue(e.getKeyChar());
 
 				List<Lane> lanes = roadToExtendWith.getLanes();
-				if (lanes.size() > pressed || pressed <= 0)
+				if (lanes.size() < pressed || pressed <= 0)
 					return;
 
 				selectedVehicle.extendPath(lanes.get(pressed - 1));
+				mapPanel.repaint();		//TESZT
 			}
 		});
 
@@ -196,6 +199,7 @@ public class MainPanel extends JFrame {
 			backgroundImage = null;
 		}
 
+		startGameLoop();
 	}
 
 	private void buildTestMap() {
@@ -356,7 +360,6 @@ public class MainPanel extends JFrame {
 		//23-as kereszteződésből induló utak
 		addRoadWithLanes(c23, c17, 2);
 
-		//TESZT
 		City.getCrossings().clear();
 
 		City.getCrossings().addAll(List.of(
@@ -366,7 +369,6 @@ public class MainPanel extends JFrame {
 		));
 
 		City.setSnowplowBase(c11);
-		//TESZT VÉGE--
 	}
 
 	private void initCars(int carNumber) {
@@ -392,7 +394,6 @@ public class MainPanel extends JFrame {
 			Car car = new Car(home, work);
 			City.getCars().add(car);
 			carViews.add(new CarView(car, this, colors[random.nextInt(colors.length)] ));
-			
 		}
 	}
 
@@ -567,6 +568,17 @@ public class MainPanel extends JFrame {
 		}
 	}
 
+	private void startGameLoop() {
+		int delay = 50; 			//1000 ms / 50 ms = 20 tick/sec (fps)
+
+		javax.swing.Timer timer = new javax.swing.Timer(delay, e -> {
+			World.tick();
+			mapPanel.repaint();
+		});
+
+		timer.start();
+	}
+
 	/**
 	 * Visszaadja, hogy a felhasználó éppen útvonalat bővít-e.
 	 *
@@ -731,6 +743,16 @@ public class MainPanel extends JFrame {
 	 */
 	public void setSelectedCrossing(Crossing selectedCrossing) {
 		this.selectedCrossing = selectedCrossing;
+		repaintMap();
+	}
+
+	/**
+	 * Frissíti a térképet.
+	 */
+	public void repaintMap() {
+		if (mapPanel != null) {
+			mapPanel.repaint();
+		}
 	}
 
 	/**
