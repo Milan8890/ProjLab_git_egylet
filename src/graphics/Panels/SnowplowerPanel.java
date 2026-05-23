@@ -80,7 +80,12 @@ public class SnowplowerPanel extends JPanel {
 		setLayout(new GridBagLayout());
 		setBackground(Color.WHITE);
 		setBorder(BorderFactory.createLineBorder(separatorColor, 2));
-		setPreferredSize(new Dimension(300, 520));
+		//setPreferredSize(new Dimension(300, 520));
+		Dimension fixedSize = new Dimension(300, 520);
+		setPreferredSize(fixedSize);
+		setMinimumSize(fixedSize);
+		setMaximumSize(fixedSize);
+
 
 		addSection(createHeadShopSection(separatorColor, normalFont, buttonFont),
 				0, 0.53);
@@ -426,6 +431,12 @@ public class SnowplowerPanel extends JPanel {
 		// gomb.setText(""); // Letörli a szöveget (ha van)
 		Snowplower selectedSnowplower = getSelectedSnowplower();
 
+		//Teszt
+		if (selectedSnowplower == null) {
+			return;
+		}
+		//Teszt vége
+
 		final Color priceCanBuyColor = new Color(20, 150, 55);
 		final Color priceCannotBuyColor = new Color(205, 50, 50);
 		// Pénz alapján szín beállítása
@@ -455,10 +466,11 @@ public class SnowplowerPanel extends JPanel {
 
 		buyDragonListingButton.setVisible(false);
 		dragonPriceLabel.setVisible(false);
-
+		/*
 		if (selectedSnowplower == null) {
 			return;
 		}
+		*/
 
 		for (HeadListing hl : selectedSnowplower.getHeadInventory().getShop()) {
 			// Nem switch, mert const expr-nek kell lennie
@@ -497,8 +509,8 @@ public class SnowplowerPanel extends JPanel {
 	}
 
 	// TODO TESZT csak
-	static Cleaner c = new Cleaner("Andros");
-	static Snowplower sp = Snowplower.createWithBreaker(c);
+	//static Cleaner c = new Cleaner("Andros");
+	//static Snowplower sp = Snowplower.createWithBreaker(c);
 
 	/**
 	 * Lekéri a főpanelen jelenleg kiválasztott hókotrót.
@@ -506,11 +518,12 @@ public class SnowplowerPanel extends JPanel {
 	 * @return a kiválasztott hókotró, vagy {@code null}, ha nincs elérhető főpanel
 	 */
 	private Snowplower getSelectedSnowplower() {
+		/*
 		c.addMoney(10);
 
 		if (sp != null)
 			return sp;
-
+		*/
 		if (mainPanel == null) {
 			return null;
 		}

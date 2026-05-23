@@ -350,6 +350,18 @@ public class MainPanel extends JFrame {
 		addRoadWithLanes(c22, c23, 2);
 		//23-as kereszteződésből induló utak
 		addRoadWithLanes(c23, c17, 2);
+
+		//TESZT
+		City.getCrossings().clear();
+
+		City.getCrossings().addAll(List.of(
+			c1, c2, c3, c4, c5, c6, c7, c8, c9, c10,
+			c11, c12, c13, c14, c15, c16, c17, c18,
+			c19, c20, c21, c22, c23
+		));
+
+		City.setSnowplowBase(c11);
+		//TESZT VÉGE--
 	}
 
 	private void initMapPanel() {
@@ -390,6 +402,14 @@ public class MainPanel extends JFrame {
 
 				for (CarView cv : carViews) {
 					cv.paint(g2);
+				}
+
+				for (SnowplowerView spv : snowplowerViews) {
+					spv.paint(g2);
+				}
+
+				for (BusView bv : busViews) {
+					bv.paint(g2);
 				}
 
 				g2.dispose();
@@ -485,19 +505,30 @@ public class MainPanel extends JFrame {
 				case "Busz":
 					BusDriver bd = new BusDriver(playerData.getName());
 					busDrivers.add(bd);
-					break;
-				case "Hókotró jégtörőfejjel":
 
+					if (bd.getBus() != null) {
+						busViews.add(new BusView(bd.getBus(), this, playerData.getColor()));;
+					}					
+					break;
+
+				case "Hókotró jégtörőfejjel":
 					Cleaner cleaner = new Cleaner(playerData.getName());
-					cleaner.createEjectorSnowplower();
+					cleaner.createBreakerSnowplower();
 					cleaners.add(cleaner);
 
+					Snowplower snowplower = cleaner.getSnowplowers().get(0);
+					snowplowerViews.add(new SnowplowerView(snowplower, this, playerData.getColor()));
 					break;
+
 				case "Hókotró hányófejjel":
 					Cleaner cleaner2 = new Cleaner(playerData.getName());
 					cleaner2.createEjectorSnowplower();
 					cleaners.add(cleaner2);
+
+					Snowplower snowplower2 = cleaner2.getSnowplowers().get(0);
+					snowplowerViews.add(new SnowplowerView(snowplower2, this, playerData.getColor()));
 					break;
+
 				default:
 					Logger.getGlobal().severe("Ismeretlen járműtípus: " + playerData.getVehicle());
 			}

@@ -37,7 +37,13 @@ public class BusPanel extends JPanel {
 		setLayout(new GridBagLayout());
 		setBackground(Color.WHITE);
 		setBorder(BorderFactory.createLineBorder(separatorColor, 2));
-		setPreferredSize(new Dimension(300, 520));
+		//setPreferredSize(new Dimension(300, 520));
+
+		Dimension fixedSize = new Dimension(300, 520);
+		setPreferredSize(fixedSize);
+		setMinimumSize(fixedSize);
+		setMaximumSize(fixedSize);
+
 
 		addFillerSection();
 		addRouteControlSection(createRouteControlSection(normalFont));
