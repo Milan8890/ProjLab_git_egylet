@@ -87,11 +87,11 @@ public abstract class Vehicle {
 			return;
 		}
 
-		if (!stepWaitBecauseOfStuck()) {
+		if (!stepStuckInSnow()) {
 			return;
 		}
 
-		if (!stepStuckInSnow()) {
+		if (!stepWaitBecauseOfStuck()) {
 			return;
 		}
 

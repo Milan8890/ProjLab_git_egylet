@@ -91,24 +91,10 @@ public class SnowplowerPanel extends JPanel {
 		setMinimumSize(fixedSize);
 		//setMaximumSize(fixedSize);
 
-		/*/
-		addSection(createHeadShopSection(separatorColor, normalFont, buttonFont),0, 0.53);
-		addSection(createMaterialShopSection(separatorColor, normalFont, buttonFont), 1, 0.27);
-		addSection(createRouteControlSection(normalFont), 2, 0.20);
-		*/
 		addSection(createHeadShopSection(separatorColor, normalFont, buttonFont), 0, 0.65);
 		addSection(createMaterialShopSection(separatorColor, normalFont, buttonFont), 1, 0.20);
 		addSection(createRouteControlSection(normalFont), 2, 0.15);
 		update();
-	}
-
-	/**
-	 * Frissíti a panelen megjelenő adatokat.
-	 */
-	public void update() {
-		updateActiveHeadText();
-		updateHeadShopSection();
-		updateMaterialShopSection();
 	}
 
 	/**
@@ -521,6 +507,30 @@ public class SnowplowerPanel extends JPanel {
 	}
 
 	/**
+	 * Frissíti a panelen megjelenő adatokat.
+	 */
+	public void update() {
+		updateActiveHeadText();
+		updateHeadShopSection();
+		updateMaterialShopSection();
+	}
+
+	/**
+	 * Frissíti és újrarajzolja a panelt, a térképet, és az aktív játékos panelt.
+	 */
+	private void refreshPanels() {
+		update();
+		revalidate();
+		repaint();
+
+		if (mainPanel != null) {
+			mainPanel.refreshActivePlayerData();  //Pénz miatt.
+			mainPanel.repaintMap();
+		}
+	}
+
+
+	/**
 	 * Lekéri a főpanelen jelenleg kiválasztott hókotrót.
 	 *
 	 * @return a kiválasztott hókotró, vagy {@code null}, ha nincs elérhető főpanel
@@ -541,6 +551,7 @@ public class SnowplowerPanel extends JPanel {
 			return;
 		}
 		selectedSnowplower.getHeadInventory().cycleActiveHead();
+		refreshPanels();
 	}
 
 	/**
@@ -559,8 +570,8 @@ public class SnowplowerPanel extends JPanel {
 				break;
 			}
 		}
-		if (foundHeadListing != null) {
-			selectedSnowplower.getHeadInventory().buyListing(foundHeadListing);
+		if (foundHeadListing != null && selectedSnowplower.getHeadInventory().buyListing(foundHeadListing)) {
+			refreshPanels();
 		}
 	}
 
@@ -579,8 +590,8 @@ public class SnowplowerPanel extends JPanel {
 				break;
 			}
 		}
-		if (foundHeadListing != null) {
-			selectedSnowplower.getHeadInventory().buyListing(foundHeadListing);
+		if (foundHeadListing != null && selectedSnowplower.getHeadInventory().buyListing(foundHeadListing)) {
+			refreshPanels();
 		}
 	}
 
@@ -594,13 +605,13 @@ public class SnowplowerPanel extends JPanel {
 		}
 		HeadListing foundHeadListing = null;
 		for (HeadListing hl : selectedSnowplower.getHeadInventory().getShop()) {
-			if (hl.getHead().getDescription().equals(new Ejector(null).getDescription())) {
+			if (hl.getHead().getDescription().equals(new Breaker(null).getDescription())) {
 				foundHeadListing = hl;
 				break;
 			}
 		}
-		if (foundHeadListing != null) {
-			selectedSnowplower.getHeadInventory().buyListing(foundHeadListing);
+		if (foundHeadListing != null && selectedSnowplower.getHeadInventory().buyListing(foundHeadListing)) {
+			refreshPanels();
 		}
 	}
 
@@ -619,8 +630,8 @@ public class SnowplowerPanel extends JPanel {
 				break;
 			}
 		}
-		if (foundHeadListing != null) {
-			selectedSnowplower.getHeadInventory().buyListing(foundHeadListing);
+		if (foundHeadListing != null && selectedSnowplower.getHeadInventory().buyListing(foundHeadListing)) {
+			refreshPanels();
 		}
 	}
 
@@ -639,8 +650,8 @@ public class SnowplowerPanel extends JPanel {
 				break;
 			}
 		}
-		if (foundHeadListing != null) {
-			selectedSnowplower.getHeadInventory().buyListing(foundHeadListing);
+		if (foundHeadListing != null && selectedSnowplower.getHeadInventory().buyListing(foundHeadListing)) {
+			refreshPanels();
 		}
 	}
 
@@ -659,8 +670,8 @@ public class SnowplowerPanel extends JPanel {
 				break;
 			}
 		}
-		if (foundHeadListing != null) {
-			selectedSnowplower.getHeadInventory().buyListing(foundHeadListing);
+		if (foundHeadListing != null && selectedSnowplower.getHeadInventory().buyListing(foundHeadListing)) {
+			refreshPanels();
 		}
 	}
 
@@ -677,9 +688,7 @@ public class SnowplowerPanel extends JPanel {
 			Snowplower newSnowplower = cleaner.getSnowplowers().get( cleaner.getSnowplowers().size() - 1);
 
 			mainPanel.addSnowplowerView(newSnowplower);
-
-			update();
-			mainPanel.repaintMap();
+			refreshPanels();
 		}
 	}
 
@@ -697,8 +706,7 @@ public class SnowplowerPanel extends JPanel {
 			Snowplower newSnowplower = cleaner.getSnowplowers().get( cleaner.getSnowplowers().size() - 1);
 
 			mainPanel.addSnowplowerView(newSnowplower);
-			update();
-			mainPanel.repaintMap();
+			refreshPanels();
 		}
 	}
 
@@ -710,7 +718,7 @@ public class SnowplowerPanel extends JPanel {
 		if (selectedSnowplower == null) {
 			return;
 		}
-		selectedSnowplower.buySalt();
+		if (selectedSnowplower.buySalt()) refreshPanels();
 	}
 
 	/**
@@ -721,7 +729,7 @@ public class SnowplowerPanel extends JPanel {
 		if (selectedSnowplower == null) {
 			return;
 		}
-		selectedSnowplower.buyBio();
+		if (selectedSnowplower.buyBio()) refreshPanels();
 	}
 
 	/**
@@ -732,7 +740,7 @@ public class SnowplowerPanel extends JPanel {
 		if (selectedSnowplower == null) {
 			return;
 		}
-		selectedSnowplower.buyGravel();
+		if (selectedSnowplower.buyGravel()) refreshPanels();
 	}
 
 	/**

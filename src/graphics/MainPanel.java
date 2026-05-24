@@ -442,18 +442,6 @@ public class MainPanel extends JPanel {
 					g2.drawImage(backgroundImage, 0, 0, 1500, 1000, this);
 				}
 
-//EZZEL MIZU, KELL??
-				/*
-				// racs
-				g2.setColor(Color.LIGHT_GRAY);
-				for (int x = 100; x < 1500; x += 100) {
-					g2.drawLine(x, 0, x, 1000);
-				}
-				for (int y = 100; y < 1000; y += 100) {
-					g2.drawLine(0, y, 1500, y);
-				}
-				*/
-
 				for (CrossingView cv : crossingViews) {
 					cv.paint(g2);
 				}
@@ -482,7 +470,6 @@ public class MainPanel extends JPanel {
 			}
 		};
 
-		// rajzPanel.setBackground(Color.WHITE);
 		mapPanel = rajzPanel;
 	}
 
@@ -652,9 +639,20 @@ public class MainPanel extends JPanel {
 			World.tick();
     		playerData.setText(getActivePlayerDataText());
 			mapPanel.repaint();
+
+			if (snowplowerPanel.isVisible()) {
+				snowplowerPanel.update();
+			}
 		});
 
 		timer.start();
+	}
+
+	/**
+	 * Frissíti az aktív játékos adatait megjelenítő szöveges mezőt.
+	 */
+	public void refreshActivePlayerData() {
+		playerData.setText(getActivePlayerDataText());
 	}
 
 	/**
@@ -849,19 +847,6 @@ public class MainPanel extends JPanel {
 			mapPanel.repaint();
 		}
 	}
-
-	/**
-	 * Frissíti a főpanel megjelenítését.
-	 */
-//EZZEL MIZU, KELL??
-	/*
-	 * ez itt elv nem kell de itthagyom
-	 * public void update() {
-	 * NewMain.notdone("MainPanel update");
-	 * loadActivePlayerComboBox();
-	 * handleActivePlayerSelection();
-	 * }
-	 */
 
 	/**
 	 * Létrehozza az aktív játékost és pénzét megjelenítő panelrészt.
