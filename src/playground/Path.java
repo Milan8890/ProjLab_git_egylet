@@ -71,8 +71,14 @@ public class Path {
 	public void clear() {
 		Logger.getGlobal().log(Level.INFO, "[Obj] cleared", this);
 
+		
+		if(vehicle.isInCrossing()){
+			lastCrossing = vehicle.getLastCrossing();
+		}else{
+			lastCrossing = vehicle.getCurrentLane().getRoad().toCrossing;
+		}
+
 		pathLanes.clear();
-		lastCrossing = vehicle.getLastCrossing();
 	}
 
 	/**

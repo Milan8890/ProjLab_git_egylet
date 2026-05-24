@@ -58,6 +58,9 @@ public class SnowplowerView {
 		}
 	}
 
+
+	Crossing fC;
+
 	/**
 	 * Létrehozza a hókotró grafikus nézetét a hozzá tartozó modellhókotróval,
 	 * főpanellel és megjelenítési színnel.
@@ -71,6 +74,9 @@ public class SnowplowerView {
 		this.mainPanel = mainPanel;
 		this.color = color;
 		this.pos = new Point2D.Double(0, 0);
+
+
+		fC = modelSnowplower.getLastCrossing();
 	}
 
 	/**
@@ -143,6 +149,7 @@ public class SnowplowerView {
 	 * @return {@code true}, ha a pozíció sikeresen frissíthető, egyébként  {@code false}
 	 */
 	private boolean updatePos() {
+
 		if (modelSnowplower == null || mainPanel == null)
 			return false;
 

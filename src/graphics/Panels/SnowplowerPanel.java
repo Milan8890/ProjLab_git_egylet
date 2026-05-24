@@ -745,6 +745,7 @@ public class SnowplowerPanel extends JPanel {
 		}
 		selectedSnowplower.getPath().clear();
 		mainPanel.setSelectedCrossing(null);
+		mainPanel.setIsExtendingPath(false);
 		mainPanel.repaintMap();
 	}
 
