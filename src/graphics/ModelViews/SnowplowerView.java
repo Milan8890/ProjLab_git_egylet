@@ -143,6 +143,7 @@ public class SnowplowerView {
 	 * @return {@code true}, ha a pozíció sikeresen frissíthető, egyébként  {@code false}
 	 */
 	private boolean updatePos() {
+
 		if (modelSnowplower == null || mainPanel == null)
 			return false;
 
