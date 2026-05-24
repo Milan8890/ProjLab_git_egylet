@@ -80,7 +80,6 @@ public class MainPanel extends JPanel {
 	public static final int LANE_WIDTH = 20;
 	public static final float CROSSING_STROKE = 6f;
 
-	private BufferedImage backgroundImage;
 	private List<Cleaner> cleaners = new ArrayList<>();
 	private List<BusDriver> busDrivers = new ArrayList<>();
 	private Map<Cleaner, Color> cleanerColors = new HashMap<>();
@@ -91,7 +90,7 @@ public class MainPanel extends JPanel {
 	private Snowplower selectedSnowplower;
 	private Crossing selectedCrossing;
 
-	private int carNumber = 10;		//Csak, hogy ne hardCodeolva legyen.
+	private int carNumber = 10; // Csak, hogy ne hardCodeolva legyen.
 
 	private List<CrossingView> crossingViews = new ArrayList<>();
 	private List<RoadView> roadViews = new ArrayList<>();
@@ -168,7 +167,7 @@ public class MainPanel extends JPanel {
 		activePlayerPanel = createActivePlayerPanel();
 		snowplowerPanel = new SnowplowerPanel(this);
 		busPanel = new BusPanel(this);
-		initMapPanel();
+		mapPanel = new MapPanel(this);
 
 		setLayout(new BorderLayout());
 
@@ -202,12 +201,6 @@ public class MainPanel extends JPanel {
 
 		add(mapPanel, BorderLayout.CENTER);
 		add(sidePanel, BorderLayout.EAST);
-		
-		try {
-			backgroundImage = ImageIO.read(new File("Asset/zuzmaravaros.png"));
-		} catch (Exception e) {
-			backgroundImage = null;
-		}
 
 		startGameLoop();
 	}
@@ -289,98 +282,97 @@ public class MainPanel extends JPanel {
 		crossingViews.add(new CrossingView(c22, new Point2D.Double(pos22.x + 3, pos22.y + 3), false, this));
 		crossingViews.add(new CrossingView(c23, new Point2D.Double(pos23.x + 3, pos23.y + 3), false, this));
 
-		//1-es kereszteződésből induló utak
+		// 1-es kereszteződésből induló utak
 		addRoadWithLanes(c1, c2, 2);
 		addRoadWithLanes(c1, c7, 2);
-		//2-es kereszteződésből induló utak
+		// 2-es kereszteződésből induló utak
 		addRoadWithLanes(c2, c3, 1);
 		addRoadWithLanes(c2, c1, 2);
-		//3-as kereszteződésből induló utak
+		// 3-as kereszteződésből induló utak
 		addRoadWithLanes(c3, c2, 2);
 		addRoadWithLanes(c3, c4, 2);
 		addRoadWithLanes(c3, c8, 1);
-		//4-es kereszteződésből induló utak
+		// 4-es kereszteződésből induló utak
 		addRoadWithLanes(c4, c3, 2);
 		addRoadWithLanes(c4, c5, 1);
-		//5-ös kereszteződésből induló utak
+		// 5-ös kereszteződésből induló utak
 		addRoadWithLanes(c5, c4, 3);
 		addRoadWithLanes(c5, c11, 1);
-		//6-os kereszteződésből induló utak
+		// 6-os kereszteződésből induló utak
 		addRoadWithLanes(c6, c5, 3);
 		addRoadWithLanes(c6, c12, 1);
-		//7-es kereszteződésből induló utak
+		// 7-es kereszteződésből induló utak
 		addRoadWithLanes(c7, c1, 2);
 		addRoadWithLanes(c7, c13, 2);
-		//8-0s kereszteződésből induló utak
+		// 8-0s kereszteződésből induló utak
 		addRoadWithLanes(c8, c3, 1);
 		addRoadWithLanes(c8, c9, 1);
 		addRoadWithLanes(c8, c13, 1);
-		//9-es kereszteződésből induló utak
+		// 9-es kereszteződésből induló utak
 		addRoadWithLanes(c9, c8, 2);
 		addRoadWithLanes(c9, c10, 2);
-		//10-es kereszteződésből induló utak
+		// 10-es kereszteződésből induló utak
 		addRoadWithLanes(c10, c9, 3);
 		addRoadWithLanes(c10, c11, 1);
 		addRoadWithLanes(c10, c16, 2);
-		//11-es kereszteződésből induló utak
+		// 11-es kereszteződésből induló utak
 		addRoadWithLanes(c11, c5, 2);
 		addRoadWithLanes(c11, c10, 2);
 		addRoadWithLanes(c11, c12, 1);
 		addRoadWithLanes(c11, c17, 1);
-		//12-es kereszteződésből induló utak
+		// 12-es kereszteződésből induló utak
 		addRoadWithLanes(c12, c6, 3);
 		addRoadWithLanes(c12, c11, 2);
 		addRoadWithLanes(c12, c17, 1);
-		//13-as kereszteződésből induló utak
+		// 13-as kereszteződésből induló utak
 		addRoadWithLanes(c13, c7, 1);
 		addRoadWithLanes(c13, c8, 2);
 		addRoadWithLanes(c13, c14, 2);
 		addRoadWithLanes(c13, c18, 2);
-		//14-es kereszteződésből induló utak
+		// 14-es kereszteződésből induló utak
 		addRoadWithLanes(c14, c8, 1);
 		addRoadWithLanes(c14, c15, 1);
 		addRoadWithLanes(c14, c19, 1);
-		//15-ös kereszteződésből induló utak
+		// 15-ös kereszteződésből induló utak
 		addRoadWithLanes(c15, c14, 2);
 		addRoadWithLanes(c15, c9, 2);
 		addRoadWithLanes(c15, c20, 1);
-		//16-os kereszteződésből induló utak
+		// 16-os kereszteződésből induló utak
 		addRoadWithLanes(c16, c10, 2);
 		addRoadWithLanes(c16, c17, 2);
 		addRoadWithLanes(c16, c21, 2);
-		//17-es kereszteződésből induló utak
+		// 17-es kereszteződésből induló utak
 		addRoadWithLanes(c17, c16, 1);
 		addRoadWithLanes(c17, c12, 2);
 		addRoadWithLanes(c17, c22, 1);
-		//18-as kereszteződésből induló utak
+		// 18-as kereszteződésből induló utak
 		addRoadWithLanes(c18, c13, 1);
 		addRoadWithLanes(c18, c19, 2);
-		//19-es kereszteződésből induló utak
+		// 19-es kereszteződésből induló utak
 		addRoadWithLanes(c19, c18, 1);
 		addRoadWithLanes(c19, c14, 1);
 		addRoadWithLanes(c19, c20, 2);
-		//20-as kereszteződésből induló utak
+		// 20-as kereszteződésből induló utak
 		addRoadWithLanes(c20, c19, 1);
 		addRoadWithLanes(c20, c15, 2);
 		addRoadWithLanes(c20, c21, 1);
-		//21-es kereszteződésből induló utak
+		// 21-es kereszteződésből induló utak
 		addRoadWithLanes(c21, c20, 1);
 		addRoadWithLanes(c21, c16, 1);
 		addRoadWithLanes(c21, c22, 3);
-		//21-es kereszteződésből induló utak
+		// 21-es kereszteződésből induló utak
 		addRoadWithLanes(c22, c21, 1);
 		addRoadWithLanes(c22, c17, 1);
 		addRoadWithLanes(c22, c23, 2);
-		//23-as kereszteződésből induló utak
+		// 23-as kereszteződésből induló utak
 		addRoadWithLanes(c23, c17, 2);
 
 		City.getCrossings().clear();
 
 		City.getCrossings().addAll(List.of(
-			c1, c2, c3, c4, c5, c6, c7, c8, c9, c10,
-			c11, c12, c13, c14, c15, c16, c17, c18,
-			c19, c20, c21, c22, c23
-		));
+				c1, c2, c3, c4, c5, c6, c7, c8, c9, c10,
+				c11, c12, c13, c14, c15, c16, c17, c18,
+				c19, c20, c21, c22, c23));
 
 		City.setSnowplowBase(c11);
 	}
@@ -394,9 +386,9 @@ public class MainPanel extends JPanel {
 	private void initCars(int carNumber) {
 		List<Crossing> crossings = City.getCrossings();
 		Color[] colors = { new Color(220, 20, 60), new Color(0, 120, 215), new Color(0, 160, 120),
-    				new Color(255, 140, 0), new Color(170, 80, 220), new Color(255, 80, 120),
-    				new Color(40, 180, 220), new Color(120, 200, 40), new Color(230, 90, 40),
-    				new Color(255, 200, 0)};
+				new Color(255, 140, 0), new Color(170, 80, 220), new Color(255, 80, 120),
+				new Color(40, 180, 220), new Color(120, 200, 40), new Color(230, 90, 40),
+				new Color(255, 200, 0) };
 
 		if (crossings.size() < 2) {
 			Logger.getGlobal().severe("Nincs elég kereszteződés autók létrehozásához.");
@@ -415,70 +407,16 @@ public class MainPanel extends JPanel {
 
 			Car car = new Car(home, work);
 			City.getCars().add(car);
-			carViews.add(new CarView(car, this, colors[random.nextInt(colors.length)] ));
+			carViews.add(new CarView(car, this, colors[random.nextInt(colors.length)]));
 		}
 	}
 
 	/**
-	 * Létrehozza a térképet kirajzoló panelt, és beállítja a pályaelemek,
-	 * járművek és háttérkép rajzolási sorrendjét.
-	 */
-	private void initMapPanel() {
-		MapPanel rajzPanel = new MapPanel(this) {
-			/**
-			 * Kirajzolja a térkép hátterét, a kereszteződéseket, utakat, sávokat és
-			 * a járműveket.
-			 *
-			 * @param g a rajzoláshoz kapott grafikus kontextus
-			 */
-			@Override
-			protected void paintComponent(Graphics g) {
-				super.paintComponent(g);
-
-				Graphics2D g2 = (Graphics2D) g.create();
-				g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-				if (backgroundImage != null) {
-					g2.drawImage(backgroundImage, 0, 0, 1500, 1000, this);
-				}
-
-				for (CrossingView cv : crossingViews) {
-					cv.paint(g2);
-				}
-
-				for (RoadView rv : roadViews) {
-					rv.paint(g2);
-				}
-
-				for (LaneView lv : laneViews) {
-					lv.paint(g2);
-				}
-
-				for (CarView cv : carViews) {
-					cv.paint(g2);
-				}
-
-				for (SnowplowerView spv : snowplowerViews) {
-					spv.paint(g2);
-				}
-
-				for (BusView bv : busViews) {
-					bv.paint(g2);
-				}
-
-				g2.dispose();
-			}
-		};
-
-		mapPanel = rajzPanel;
-	}
-
-	/**
-	 * Létrehoz egy modellszintű utat a két kereszteződés között, 
+	 * Létrehoz egy modellszintű utat a két kereszteződés között,
 	 * majd hozzáadja az út- és sávnézeteket.
 	 *
-	 * @param from   az út kezdő kereszteződése
-	 * @param to     az út cél kereszteződése
+	 * @param from    az út kezdő kereszteződése
+	 * @param to      az út cél kereszteződése
 	 * @param savSzam az út sávjainak száma
 	 */
 	private void addRoadWithLanes(Crossing from, Crossing to, int savSzam) {
@@ -525,7 +463,8 @@ public class MainPanel extends JPanel {
 	 *
 	 * @param kp1 az első kereszteződés középpontja
 	 * @param kp2 a második kereszteződés középpontja
-	 * @return a kiszámolt útvégpontok tömbje, vagy {@code null}, ha a két pont azonos
+	 * @return a kiszámolt útvégpontok tömbje, vagy {@code null}, ha a két pont
+	 *         azonos
 	 */
 	private Point2D.Double[] calculateRoadEndPoints(Point2D.Double kp1, Point2D.Double kp2) {
 		double dx = kp2.x - kp1.x;
@@ -597,8 +536,9 @@ public class MainPanel extends JPanel {
 					busDrivers.add(bd);
 
 					if (bd.getBus() != null) {
-						busViews.add(new BusView(bd.getBus(), this, playerData.getColor()));;
-					}					
+						busViews.add(new BusView(bd.getBus(), this, playerData.getColor()));
+						;
+					}
 					break;
 
 				case "Hókotró jégtörőfejjel":
@@ -632,12 +572,12 @@ public class MainPanel extends JPanel {
 	 * az aktív játékos adatait és újrarajzolja a térképet.
 	 */
 	private void startGameLoop() {
-		World.setIsSnowing(true);	//Bekapcsolja a havazást.
-		int delay = 50; 			//1000 ms / 50 ms = 20 tick/sec (fps)
+		World.setIsSnowing(true); // Bekapcsolja a havazást.
+		int delay = 50; // 1000 ms / 50 ms = 20 tick/sec (fps)
 
 		javax.swing.Timer timer = new javax.swing.Timer(delay, e -> {
 			World.tick();
-    		playerData.setText(getActivePlayerDataText());
+			playerData.setText(getActivePlayerDataText());
 			mapPanel.repaint();
 
 			if (snowplowerPanel.isVisible()) {
@@ -938,55 +878,55 @@ public class MainPanel extends JPanel {
 			comboBox.addItem(cleaner);
 		}
 		comboBox.addActionListener(
-			new ActionListener() {
+				new ActionListener() {
 
-				/**
-				 * Kezeli az aktív játékos legördülő mezőjének változását, és beállítja
-				 * a kiválasztott buszvezetőt vagy takarítót.
-				 *
-				 * @param e a kiválasztási esemény
-				 */
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					Player selectedPlayer = (Player) comboBox.getSelectedItem();
+					/**
+					 * Kezeli az aktív játékos legördülő mezőjének változását, és beállítja
+					 * a kiválasztott buszvezetőt vagy takarítót.
+					 *
+					 * @param e a kiválasztási esemény
+					 */
+					@Override
+					public void actionPerformed(ActionEvent e) {
+						Player selectedPlayer = (Player) comboBox.getSelectedItem();
 
-					if (selectedPlayer == nullPlayer) {
-						selectedBusDriver = null;
-						selectedCleaner = null;
-						playerData.setText(getActivePlayerDataText());
-						updateVehiclePanel();
-						return;
-					}
-					for (BusDriver busDriver : busDrivers) {
-						if (busDriver.equals(selectedPlayer)) {
-							selectedBusDriver = busDriver;
-							selectedCleaner = null;
-							selectedSnowplower = null;
-							playerData.setText(getActivePlayerDataText());
-							updateVehiclePanel();
-							return;
-						}
-					}
-					for (Cleaner cleaner : cleaners) {
-						if (cleaner.equals(selectedPlayer)) {
-							selectedCleaner = cleaner;
+						if (selectedPlayer == nullPlayer) {
 							selectedBusDriver = null;
-
-							if (selectedCleaner.getSnowplowers().size() < 1) {
-								selectedSnowplower = null;
-								Logger.getGlobal().severe(
-										"ComboBox Snowplower állításánál nincsen egy hókotrója sem az egyik játékosnak.");
-							} else {
-								selectedSnowplower = selectedCleaner.getSnowplowers().get(0);
-							}
+							selectedCleaner = null;
 							playerData.setText(getActivePlayerDataText());
 							updateVehiclePanel();
 							return;
 						}
-					}
-				}
+						for (BusDriver busDriver : busDrivers) {
+							if (busDriver.equals(selectedPlayer)) {
+								selectedBusDriver = busDriver;
+								selectedCleaner = null;
+								selectedSnowplower = null;
+								playerData.setText(getActivePlayerDataText());
+								updateVehiclePanel();
+								return;
+							}
+						}
+						for (Cleaner cleaner : cleaners) {
+							if (cleaner.equals(selectedPlayer)) {
+								selectedCleaner = cleaner;
+								selectedBusDriver = null;
 
-			});
+								if (selectedCleaner.getSnowplowers().size() < 1) {
+									selectedSnowplower = null;
+									Logger.getGlobal().severe(
+											"ComboBox Snowplower állításánál nincsen egy hókotrója sem az egyik játékosnak.");
+								} else {
+									selectedSnowplower = selectedCleaner.getSnowplowers().get(0);
+								}
+								playerData.setText(getActivePlayerDataText());
+								updateVehiclePanel();
+								return;
+							}
+						}
+					}
+
+				});
 		return comboBox;
 	}
 

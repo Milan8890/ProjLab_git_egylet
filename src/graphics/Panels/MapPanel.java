@@ -10,6 +10,7 @@ import graphics.ModelViews.*;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.RenderingHints;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
@@ -35,12 +36,12 @@ public class MapPanel extends JPanel {
 	/**
 	 * Kép beolvasása.
 	 */
-	static private void readImage() {		//EZZEL MIZU, SZTEM MAR MUKSZIK, HA IGEN A PR-NAL TOROLD LÉCCI??
+	static private void readImage() { // EZZEL MIZU, SZTEM MAR MUKSZIK, HA IGEN A PR-NAL TOROLD LÉCCI??
 		NewMain.notdone("Nagymagyarország térképe a háttérterünk. Ezt észre kéne venni máshonnan.");
 		try {
-			backgroundImg = ImageIO.read(new File("assets/testing/trianon2.jpeg"));
+			backgroundImg = ImageIO.read(new File("Asset/zuzmaravaros.png"));
 		} catch (Exception e) {
-			System.err.println("Nem sikerült beolvasni a hátteret");
+			Logger.getGlobal().severe("Nem sikerült beolvasni a hátteret");
 		}
 	}
 
@@ -83,20 +84,6 @@ public class MapPanel extends JPanel {
 	}
 
 	/**
-	 * Kirajzolja a háttérképet a térkép méretéhez igazítva.
-	 *
-	 * @param g a rajzoláshoz használt grafikus kontextus
-	 */
-	private void drawBackground(Graphics2D g) {
-		int width = backgroundImg.getWidth();
-		int height = backgroundImg.getHeight();
-
-		g.scale((float) WIDTH / (float) width, (float) HEIGHT / (float) height);
-
-		g.drawImage(backgroundImg, 0, 0, null);
-	}
-
-	/**
 	 * Kirajzolja a térképpanel tartalmát, beleértve a hátteret, a pályaelemeket
 	 * és a járművek grafikus nézeteit.
 	 *
@@ -107,7 +94,11 @@ public class MapPanel extends JPanel {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
 
-		this.drawBackground((Graphics2D) g2d.create());
+		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+		if (backgroundImg != null) {
+			g2d.drawImage(backgroundImg, 0, 0, 1500, 1000, this);
+		}
 
 		if (mainPanel == null) {
 			Logger.getGlobal().severe("No main panel in MapPanel.java");
@@ -139,6 +130,6 @@ public class MapPanel extends JPanel {
 			view.paint((Graphics2D) g2d.create());
 		}
 
-		NewMain.notdone("MapPanel paintComponent"); //EZZEL MIZU??
+		NewMain.notdone("MapPanel paintComponent"); // EZZEL MIZU??
 	}
 }
