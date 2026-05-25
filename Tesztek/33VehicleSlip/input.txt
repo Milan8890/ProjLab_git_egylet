@@ -2,6 +2,7 @@ crossing 2
 road Crossing1 Crossing2 10 1
 car Crossing1 Crossing2
 putvehicle Car1 Lane1_1
-putice Lane1_1 5
+putice Lane1_1 50
+setrand true
 initend
 passtime 200

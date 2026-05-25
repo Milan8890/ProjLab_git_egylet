@@ -253,7 +253,7 @@ public abstract class Vehicle {
 					new Object[] { this, this.path, l });
 
 		}
-		return path.extendPath(l);
+		return success;
 	}
 
 	/**
@@ -346,7 +346,7 @@ public abstract class Vehicle {
 		for (int i = 0; i < allLanes.size(); i++) {
 			Lane l = allLanes.get(i);
 
-			if (l != currentLane && l.getSnow() <= MAX_SNOW_LEVEL) {
+			if (l != currentLane && l.getSnow() <= MAX_SNOW_LEVEL && !l.hasStuckVehicle()) {
 				Logger.getGlobal().log(Level.INFO, "[Obj] switching to [Obj]", new Object[] { this, l });
 				currentLane.removeVehicle(this);
 				this.currentLane = l;

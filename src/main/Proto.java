@@ -557,14 +557,14 @@ public class Proto {
 		}
 		Field roads = City.class.getDeclaredField("roads");
 		roads.setAccessible(true);
-		List<Road> roadsList = (List<Road>) roads.get(null);
+		Set<Road> roadsList = (Set<Road>) roads.get(null);
 		for (Road road : roadsList) {
 			Logger.getGlobal().log(Level.INFO, prefix + "[Obj]", new Object[] { road });
 		}
 
 		Field cars = City.class.getDeclaredField("cars");
 		cars.setAccessible(true);
-		List<Car> carsList = (List<Car>) cars.get(null);
+		Set<Car> carsList = (Set<Car>) cars.get(null);
 		for (Car car : carsList) {
 			Logger.getGlobal().log(Level.INFO, prefix + "[Obj]", new Object[] { car });
 		}
@@ -650,7 +650,7 @@ public class Proto {
 	private void infoObject(BusDriver bd)
 			throws Exception {
 		infoPlayer(bd);
-		Field pointField = bd.getClass().getDeclaredField("points");
+		Field pointField = bd.getClass().getDeclaredField("point");
 		pointField.setAccessible(true);
 		int points = (int) pointField.get(bd);
 		Logger.getGlobal().log(Level.INFO, "INFO [Obj] has " + points + " points", new Object[] { bd });

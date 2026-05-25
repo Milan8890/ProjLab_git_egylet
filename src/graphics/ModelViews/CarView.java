@@ -43,17 +43,6 @@ public class CarView {
 		}
 	}
 
-	//nem tudtam defaultkent = null-t atadni a ctornak, azert van ez.
-	/**
-	 * Létrehozza az autó grafikus nézetét alapértelmezett színnel.
-	 *
-	 * @param car       a kirajzolandó autó modellobjektuma
-	 * @param mainPanel a főpanel, amelyből a pálya nézetei elérhetők
-	 */
-	public CarView(Car car, MainPanel mainPanel) {
-		this(car, mainPanel, null);
-	}
-
 	/**
 	 * Létrehozza az autó grafikus nézetét a megadott megjelenítési színnel.
 	 *

@@ -53,7 +53,7 @@ public class Lane {
 	 * Olvasztja a havat és jeget, kifizeti a játékost.
 	 */
 	public class Salt {
-		private static final double CLEANSNOWAMOUNT = 0.1; // Ezek mennyiek legyenek?
+		private static final double CLEANSNOWAMOUNT = 0.1;
 		private static final double CLEANICEAMOUNT = 0.1;
 		static final double PAY_ICE = 0.2;
 		static final double PAY_SNOW = 0.3;
@@ -98,19 +98,24 @@ public class Lane {
 		 * olvasztott el.
 		 */
 		public void onTick() {
+			double cleanedSnow = Math.min(CLEANSNOWAMOUNT, snowLevel);
+			double cleanedIce = Math.min(CLEANICEAMOUNT, iceLevel);
 
-			int payment = 0;
-			if (snowLevel > CLEANSNOWAMOUNT) {
-				snowLevel -= CLEANSNOWAMOUNT;
-				payment += CLEANSNOWAMOUNT * road.getLength();
+			if (cleanedSnow > 0) {
+				snowLevel -= cleanedSnow;
+				int payment = (int) (cleanedSnow * road.getLength());
+
 				Logger.getGlobal().log(Level.INFO,
 						"[Obj] melted " + CLEANSNOWAMOUNT + " snow from lane, paid [Obj] " + payment + "$",
 						new Object[] { this, owner });
 				owner.addMoney(payment);
 			}
-			if (iceLevel > CLEANICEAMOUNT) {
-				iceLevel -= CLEANICEAMOUNT;
-				payment += CLEANICEAMOUNT * road.getLength() * 2;
+
+
+			if (cleanedIce > 0) {
+				iceLevel -= cleanedIce;
+				int payment = (int) (cleanedIce * road.getLength() * 2);
+
 				Logger.getGlobal().log(Level.INFO,
 						"[Obj] melted " + CLEANICEAMOUNT + " ice from lane, paid [Obj] " + payment + "$",
 						new Object[] { this, owner });
@@ -196,6 +201,9 @@ public class Lane {
 	 * @param c a cleaner, akinek a sója rákerül a sávra
 	 */
 	public void setSalt(Cleaner c) {
+		if (salt != null) {
+			return;
+		}
 		salt = new Salt(c, this);
 		Logger.getGlobal().log(Level.INFO, "[Obj] set [Obj] with [Obj]", new Object[] { this, salt, c });
 	}

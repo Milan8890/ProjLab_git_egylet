@@ -65,8 +65,13 @@ public class World {
 	public static void tick() {
 		elapsedTicks++;
 		Logger.getGlobal().info("\nStarting tick " + elapsedTicks + "\n");
-		for (int i = 0; i < onTickFunctions.size(); i++) {
-			onTickFunctions.get(i).run();
+
+		List<Runnable> tickFunctions = new ArrayList<>(onTickFunctions);
+
+		for (Runnable func : tickFunctions) {
+			if (onTickFunctions.contains(func)) {
+				func.run();
+			}
 		}
 	}
 

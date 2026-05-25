@@ -214,8 +214,14 @@ public class App {
 
 			selectedPlayers.clear();
 			for (int i = 0; i < names.size(); i++) {
+				String playerName = names.get(i).getText().trim();
+
+				if (playerName.isEmpty()) {
+					continue;
+				}
+
 				setupPlayerData playerData = new setupPlayerData();
-				playerData.setName(names.get(i).getText());
+				playerData.setName(playerName);
 				playerData.setColor((String) colors.get(i).getSelectedItem());
 				playerData.setVehicle((String) vehicles.get(i).getSelectedItem());
 				selectedPlayers.add(playerData);

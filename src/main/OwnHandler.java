@@ -165,6 +165,7 @@ public class OwnHandler extends Handler {
 	 * @return az objektum naplózásban használt neve
 	 */
 	private String getOrCreateObjectName(Object o) {
+		if (o == null) return "null";
 		// CSAK ez a két objektum van, aminél felülírhatják egymást
 		if (o.getClass() == Salt.class || o.getClass() == Path.class) {
 			addObject(o);

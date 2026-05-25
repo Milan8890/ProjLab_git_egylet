@@ -4,7 +4,6 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 import graphics.MainPanel;
-import graphics.NewMain;
 import graphics.ModelViews.*;
 
 import java.awt.Dimension;
@@ -25,8 +24,6 @@ import java.util.logging.Logger;
  * járműnézeteket rajzolja ki.
  */
 public class MapPanel extends JPanel {
-	private static final boolean TOROCKAI_LÁSZLÓ_SZIMPATIZÁNS = false;
-
 	MainPanel mainPanel = null;
 
 	private static BufferedImage backgroundImg = null;
@@ -38,11 +35,7 @@ public class MapPanel extends JPanel {
 	 * Kép beolvasása.
 	 */
 	static private void readImage() { // EZZEL MIZU, SZTEM MAR MUKSZIK, HA IGEN A PR-NAL TOROLD LÉCCI??
-		NewMain.notdone("Nagymagyarország térképe a háttérterünk. Ezt észre kéne venni máshonnan.");
 		try {
-			if(TOROCKAI_LÁSZLÓ_SZIMPATIZÁNS)
-				backgroundImg = ImageIO.read(new File("Asset/tl.jpg"));
-			else
 				backgroundImg = ImageIO.read(new File("Asset/zuzmaravaros.png"));
 		} catch (Exception e) {
 			Logger.getGlobal().severe("Nem sikerült beolvasni a hátteret");
@@ -133,7 +126,5 @@ public class MapPanel extends JPanel {
 		for (CarView view : mainPanel.getCarViews()) {
 			view.paint((Graphics2D) g2d.create());
 		}
-
-		NewMain.notdone("MapPanel paintComponent"); // EZZEL MIZU??
 	}
 }

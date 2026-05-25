@@ -46,6 +46,7 @@ public class Sweeper extends Head {
 	public int clean(Lane l) {
 		double snowAmount = l.getSnow();
 		int payment;
+		boolean hadGravel = l.hasGravel();
 
 		if (l.getRoad().getLanes().indexOf(l) == l.getRoad().getLanes().size() - 1) {
 			l.cleanSnow();
@@ -56,8 +57,8 @@ public class Sweeper extends Head {
 			Lane nextLane = l.getRoad().getLanes().get(l.getRoad().getLanes().indexOf(l) + 1);
 			nextLane.addSnow(l.getSnow());
 			l.cleanSnow();
+			nextLane.setGravel(hadGravel);
 			l.setGravel(false);
-			nextLane.setGravel(true);
 
 			payment = (int) (l.getRoad().getLength() * snowAmount * SNOWPUSHPAY);
 		}
