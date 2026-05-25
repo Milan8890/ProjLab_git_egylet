@@ -24,15 +24,15 @@ import playground.Path;
  * Letaposás végzése.
  */
 public abstract class Vehicle {
-	public static final double MAX_SNOW_LEVEL = 10.0;
-	protected static final double SNOW_COVER_LEVEL = 5.0;
-	protected static final double ICE_DANGER_LIMIT = 5.0;
-	protected static final double SLIP_CHANCE = 0.8;
+	public static final double MAX_SNOW_LEVEL = 50.0;
+	protected static final double SNOW_COVER_LEVEL = 30.0;
+	protected static final double ICE_DANGER_LIMIT = 30.0;
+	protected static final double SLIP_CHANCE =  0.01;
 	/**
 	 * A legutóbbi kereszteződés, amin volt.
 	 */
 	Crossing lastCrossing;
-	/**
+	/** 
 	 * Az a sáv amin éppen megy.
 	 */
 	Lane currentLane;

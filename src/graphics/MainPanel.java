@@ -79,6 +79,7 @@ public class MainPanel extends JPanel {
 	public static final int CROSSING_SIZE = 80;
 	public static final int LANE_WIDTH = 20;
 	public static final float CROSSING_STROKE = 6f;
+	private static final int CAR_NUM = 30; // Csak, hogy ne hardCodeolva legyen.
 
 	private List<Cleaner> cleaners = new ArrayList<>();
 	private List<BusDriver> busDrivers = new ArrayList<>();
@@ -90,7 +91,6 @@ public class MainPanel extends JPanel {
 	private Snowplower selectedSnowplower;
 	private Crossing selectedCrossing;
 
-	private int carNumber = 10; // Csak, hogy ne hardCodeolva legyen.
 
 	private List<CrossingView> crossingViews = new ArrayList<>();
 	private List<RoadView> roadViews = new ArrayList<>();
@@ -161,7 +161,7 @@ public class MainPanel extends JPanel {
 
 		buildTestMap();
 
-		initCars(carNumber);
+		initCars(CAR_NUM);
 
 		initPlayerViews(playerDataList);
 		activePlayerPanel = createActivePlayerPanel();
