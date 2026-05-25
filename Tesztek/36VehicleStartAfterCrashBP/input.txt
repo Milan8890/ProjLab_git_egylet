@@ -5,5 +5,5 @@ bus BusDriver1 Crossing1 Crossing2
 putvehicle Bus1 Lane1_1
 crash Bus1 10
 initend
-passtime 30
+passtime 15
 info Bus1

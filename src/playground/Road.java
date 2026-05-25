@@ -21,9 +21,9 @@ import main.World;
  * járműbe, és jelzi nekik. Havazást szimulálva havat rak a sávjaira.
  */
 public class Road {
-	private static final int ONTICKSNOW = 1;
+	private static final double ONTICKSNOW = 0.5;
 	private static final double SNOWCHANCE = 0.03; //0.1 volt, de szerintem ez nagyon sok, főleg teszthez.
-	private static final int REVTIME = 12;
+	private static final int REVTIME = 500;
 	/**
 	 * Az úthoz tartozó sávok listája.
 	 */

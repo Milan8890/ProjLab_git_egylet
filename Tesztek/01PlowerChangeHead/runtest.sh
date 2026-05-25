@@ -9,7 +9,7 @@ SUCCESS=true
 
 echo "$OUTPUT_FILE"
 
-cat "$INPUT_FILE" | java -cp bin main.App > "$OUTPUT_FILE"
+cat "$INPUT_FILE" | java -cp bin graphics.NewMain > "$OUTPUT_FILE"
 
 if grep -q "\\[ERROR\\]" "$OUTPUT_FILE"; then
 	echo "Output still has an [ERROR] in it (severe logging message)."

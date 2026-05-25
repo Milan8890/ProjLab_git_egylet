@@ -104,7 +104,9 @@ public class Car extends Vehicle {
 	 */
 	@Override
 	protected void revive() {
+		super.revive();
 		Logger.getGlobal().log(Level.INFO, "[Obj] after accident, starting again from home", new Object[] { this });
+		this.currentLane.removeVehicle(this);
 		this.lastCrossing = home;
 		this.isGoingHome = false;
 		this.currentLane = null;

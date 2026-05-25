@@ -3,43 +3,25 @@ package graphics;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
-import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.GridLayout;
 import java.awt.Insets;
-import java.awt.LayoutManager;
-import java.awt.Panel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.logging.Logger;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
 import java.awt.geom.Point2D;
-import java.awt.RenderingHints;
-import java.awt.Dimension;
-import java.awt.image.BufferedImage;
-import java.io.File;
-
-import javax.imageio.ImageIO;
-import javax.imageio.plugins.jpeg.JPEGHuffmanTable;
 import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
 import java.awt.BorderLayout;
-import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.JComboBox;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
@@ -59,7 +41,6 @@ import graphics.ModelViews.SnowplowerView;
 import graphics.Panels.BusPanel;
 import graphics.Panels.MapPanel;
 import graphics.Panels.SnowplowerPanel;
-import main.App;
 import main.World;
 import playground.City;
 import playground.Crossing;
@@ -79,6 +60,7 @@ public class MainPanel extends JPanel {
 	public static final int CROSSING_SIZE = 80;
 	public static final int LANE_WIDTH = 20;
 	public static final float CROSSING_STROKE = 6f;
+	private static final int CAR_NUM = 30; // Csak, hogy ne hardCodeolva legyen.
 
 	private List<Cleaner> cleaners = new ArrayList<>();
 	private List<BusDriver> busDrivers = new ArrayList<>();
@@ -90,7 +72,6 @@ public class MainPanel extends JPanel {
 	private Snowplower selectedSnowplower;
 	private Crossing selectedCrossing;
 
-	private int carNumber = 10; // Csak, hogy ne hardCodeolva legyen.
 
 	private List<CrossingView> crossingViews = new ArrayList<>();
 	private List<RoadView> roadViews = new ArrayList<>();
@@ -161,7 +142,7 @@ public class MainPanel extends JPanel {
 
 		buildTestMap();
 
-		initCars(carNumber);
+		initCars(CAR_NUM);
 
 		initPlayerViews(playerDataList);
 		activePlayerPanel = createActivePlayerPanel();
