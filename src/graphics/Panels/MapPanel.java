@@ -25,6 +25,7 @@ import java.util.logging.Logger;
  * járműnézeteket rajzolja ki.
  */
 public class MapPanel extends JPanel {
+	private static final boolean TOROCKAI_LÁSZLÓ_SZIMPATIZÁNS = false;
 
 	MainPanel mainPanel = null;
 
@@ -32,14 +33,17 @@ public class MapPanel extends JPanel {
 
 	private static final int WIDTH = 1500;
 	private static final int HEIGHT = 1000;
-
+	
 	/**
 	 * Kép beolvasása.
 	 */
 	static private void readImage() { // EZZEL MIZU, SZTEM MAR MUKSZIK, HA IGEN A PR-NAL TOROLD LÉCCI??
 		NewMain.notdone("Nagymagyarország térképe a háttérterünk. Ezt észre kéne venni máshonnan.");
 		try {
-			backgroundImg = ImageIO.read(new File("Asset/zuzmaravaros.png"));
+			if(TOROCKAI_LÁSZLÓ_SZIMPATIZÁNS)
+				backgroundImg = ImageIO.read(new File("Asset/tl.jpg"));
+			else
+				backgroundImg = ImageIO.read(new File("Asset/zuzmaravaros.png"));
 		} catch (Exception e) {
 			Logger.getGlobal().severe("Nem sikerült beolvasni a hátteret");
 		}
