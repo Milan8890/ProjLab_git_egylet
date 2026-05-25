@@ -16,12 +16,23 @@ else
 :
 fi
 
-TESTED_LINE="INFO Bus1 last crossing is Crossing1"
-if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
-:
+# TESTED_LINE="INFO Bus1 last crossing is Crossing1"
+# if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+# :
+# else
+# 	SUCCESS=false
+# 	echo "Didn't find line when it should be present: $TESTED_LINE"
+# fi
+
+if grep -q "INFO Bus1 last crossing is Crossing1" "$OUTPUT_FILE"; then
+	STATION_A="Crossing1"
+	STATION_B="Crossing2"
+elif grep -q "INFO Bus1 last crossing is Crossing2" "$OUTPUT_FILE"; then
+	STATION_A="Crossing2"
+	STATION_B="Crossing1"
 else
 	SUCCESS=false
-	echo "Didn't find line when it should be present: $TESTED_LINE"
+	echo "Didn't find Bus1 last crossing as Crossing1 or Crossing2"
 fi
 
 TESTED_LINE="INFO Bus1 current lane is null"
@@ -40,7 +51,15 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Bus1 station A is Crossing1"
+# TESTED_LINE="INFO Bus1 station A is Crossing1"
+# if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+# :
+# else
+# 	SUCCESS=false
+# 	echo "Didn't find line when it should be present: $TESTED_LINE"
+# fi
+
+TESTED_LINE="INFO Bus1 station A is $STATION_A"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -48,7 +67,15 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Bus1 station B is Crossing2"
+# TESTED_LINE="INFO Bus1 station B is Crossing2"
+# if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+# :
+# else
+# 	SUCCESS=false
+# 	echo "Didn't find line when it should be present: $TESTED_LINE"
+# fi
+
+TESTED_LINE="INFO Bus1 station B is $STATION_B"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else

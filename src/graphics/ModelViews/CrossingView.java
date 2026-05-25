@@ -27,18 +27,6 @@ public class CrossingView {
 	private boolean isSnowplowerBase;
 	private MainPanel mainPanel;
 
-	//ez kell?
-	/**
-	 * Létrehozza a kereszteződés grafikus nézetét főpanel-hivatkozás nélkül.
-	 *
-	 * @param modelCrossing   a megjelenített kereszteződés modellobjektuma
-	 * @param pos             a kereszteződés kirajzolási pozíciója
-	 * @param isSnowplowerBase jelzi, hogy a kereszteződés hókotróbázis-e
-	 */
-	public CrossingView(Crossing modelCrossing, Point2D pos, boolean isSnowplowerBase) {
-		this(modelCrossing, pos, isSnowplowerBase, null);
-	}
-
 	/**
 	 * Létrehozza a kereszteződés grafikus nézetét a hozzá tartozó modellel,
 	 * pozícióval, bázisjelöléssel és főpanel-hivatkozással.

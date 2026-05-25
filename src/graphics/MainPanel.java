@@ -60,7 +60,7 @@ public class MainPanel extends JPanel {
 	public static final int CROSSING_SIZE = 80;
 	public static final int LANE_WIDTH = 20;
 	public static final float CROSSING_STROKE = 6f;
-	private static final int CAR_NUM = 30; // Csak, hogy ne hardCodeolva legyen.
+	private static final int CAR_NUM = 30;
 
 	private List<Cleaner> cleaners = new ArrayList<>();
 	private List<BusDriver> busDrivers = new ArrayList<>();
@@ -849,8 +849,7 @@ public class MainPanel extends JPanel {
 		comboBox.setFont(font);
 		comboBox.setRenderer(createActivePlayerComboBoxRenderer());
 
-		nullPlayer = new BusDriver("-");
-		comboBox.addItem(nullPlayer);
+		comboBox.addItem(null); 	//nem lesz invisible busz.
 
 		for (BusDriver busDriver : busDrivers) {
 			comboBox.addItem(busDriver);
@@ -871,9 +870,10 @@ public class MainPanel extends JPanel {
 					public void actionPerformed(ActionEvent e) {
 						Player selectedPlayer = (Player) comboBox.getSelectedItem();
 
-						if (selectedPlayer == nullPlayer) {
+						if (selectedPlayer == null) {
 							selectedBusDriver = null;
 							selectedCleaner = null;
+							selectedSnowplower = null;
 							playerData.setText(getActivePlayerDataText());
 							updateVehiclePanel();
 							return;

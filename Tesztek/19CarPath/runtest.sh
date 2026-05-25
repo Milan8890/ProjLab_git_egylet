@@ -32,7 +32,23 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO PathC_0_1 has lane Lane3_1"
+# ##TESTED_LINE="INFO PathC_0_1 has lane Lane3_1"
+# if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+# :
+# else
+# 	SUCCESS=false
+# 	echo "Didn't find line when it should be present: $TESTED_LINE"
+# fi
+
+# ##TESTED_LINE="INFO PathC_0_1 last crossing is Crossing3"
+# if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+# :
+# else
+# 	SUCCESS=false
+# 	echo "Didn't find line when it should be present: $TESTED_LINE"
+# fi
+
+TESTED_LINE="PathC_0_1 extended with Lane1_1 successfully"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -40,7 +56,15 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO PathC_0_1 last crossing is Crossing3"
+TESTED_LINE="PathC_0_1 extended with Lane3_1 successfully"
+if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+:
+else
+	SUCCESS=false
+	echo "Didn't find line when it should be present: $TESTED_LINE"
+fi
+
+TESTED_LINE="City calculated shortest path from Crossing1 to Crossing3 as PathC_0_1"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else

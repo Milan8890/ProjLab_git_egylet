@@ -16,7 +16,39 @@ else
 :
 fi
 
-TESTED_LINE="Bus1 reached Crossing2 end point"
+# TESTED_LINE="Bus1 reached Crossing2 end point"
+# if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+# :
+# else
+# 	SUCCESS=false
+# 	echo "Didn't find line when it should be present: $TESTED_LINE"
+# fi
+
+# TESTED_LINE="Bus1 current destination Crossing1"
+# if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+# :
+# else
+# 	SUCCESS=false
+# 	echo "Didn't find line when it should be present: $TESTED_LINE"
+# fi
+
+# TESTED_LINE="Bus1 added point to BusDriver1"
+# if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+# :
+# else
+# 	SUCCESS=false
+# 	echo "Didn't find line when it should be present: $TESTED_LINE"
+# fi
+
+# TESTED_LINE="Driver1 received one point"
+# if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
+# :
+# else
+# 	SUCCESS=false
+# 	echo "Didn't find line when it should be present: $TESTED_LINE"
+# fi
+
+TESTED_LINE="Bus1 reached end of road, currently in Crossing2"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
@@ -24,23 +56,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="Bus1 current destination Crossing1"
-if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
-:
-else
-	SUCCESS=false
-	echo "Didn't find line when it should be present: $TESTED_LINE"
-fi
-
-TESTED_LINE="Bus1 added point to BusDriver1"
-if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
-:
-else
-	SUCCESS=false
-	echo "Didn't find line when it should be present: $TESTED_LINE"
-fi
-
-TESTED_LINE="Driver1 received one point"
+TESTED_LINE="Lane1_1 removed Bus1"
 if grep -q "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else

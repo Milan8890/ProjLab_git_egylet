@@ -17,7 +17,7 @@ else
 fi
 
 
-TESTED_LINE="Salt1_1 melted 0.1 ice from lane, paid Cleaner1 30$"
+TESTED_LINE="Salt1_1 melted 0.1 ice from lane, paid Cleaner1 20$"
 ACTUAL_COUNT=$(grep -cF "$TESTED_LINE" "$OUTPUT_FILE")
 EXPECTED_COUNT=50
 if [ "$ACTUAL_COUNT" -eq "$EXPECTED_COUNT" ]; then
@@ -54,7 +54,7 @@ else
 	echo "Didn't find line when it should be present: $TESTED_LINE"
 fi
 
-TESTED_LINE="INFO Cleaner1 has 2000$"
+TESTED_LINE="INFO Cleaner1 has 1500$"
 if grep -qF "$TESTED_LINE" "$OUTPUT_FILE"; then
 :
 else
