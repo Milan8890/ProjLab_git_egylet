@@ -275,7 +275,7 @@ public class Snowplower extends Vehicle {
 	 */
 	public void useSalt(double a) {
 		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + " salt", new Object[] { this });
-		saltAmount -= a; // Ennyi?
+		saltAmount = Math.max(0, saltAmount - a);
 	}
 
 	/**
@@ -285,7 +285,7 @@ public class Snowplower extends Vehicle {
 	 */
 	public void useBio(double a) {
 		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + " bio", new Object[] { this });
-		bioAmount -= a; // Ennyi?
+		bioAmount = Math.max(0, bioAmount - a);
 	}
 
 	/**
@@ -295,7 +295,7 @@ public class Snowplower extends Vehicle {
 	 */
 	public void useGravel(double a) {
 		Logger.getGlobal().log(Level.INFO, "[Obj] used " + a + " gravel", new Object[] { this });
-		gravelAmount -= a; // Ennyi?
+		gravelAmount = Math.max(0, gravelAmount - a);
 	}
 
 	/**

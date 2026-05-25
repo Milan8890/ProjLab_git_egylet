@@ -500,10 +500,20 @@ public class SnowplowerPanel extends JPanel {
 	 */
 	private void updateMaterialShopSection() {
 		Snowplower selectedSnowplower = getSelectedSnowplower();
-		saltAmountText.setText("Só: " + (selectedSnowplower == null ? 0 : selectedSnowplower.getSalt()) + " kg");
-		bioAmountText.setText("Biokerozin: " + (selectedSnowplower == null ? 0 : selectedSnowplower.getBio()) + " l");
+
+		double salt = selectedSnowplower == null ? 0.0 : selectedSnowplower.getSalt();
+		double bio = selectedSnowplower == null ? 0.0 : selectedSnowplower.getBio();
+		double gravel = selectedSnowplower == null ? 0.0 : selectedSnowplower.getGravel();
+			
+		String saltStr = String.format(java.util.Locale.ROOT, "%.1f", salt);
+		String bioStr = String.format(java.util.Locale.ROOT, "%.1f", bio);
+		String gravelStr = String.format(java.util.Locale.ROOT, "%.1f", gravel);
+
+		
+		saltAmountText.setText("Só: " + (selectedSnowplower == null ? 0 : saltStr) + " kg");
+		bioAmountText.setText("Biokerozin: " + (selectedSnowplower == null ? 0 : bioStr) + " l");
 		gravelAmountText
-				.setText("Zúzottkő: " + (selectedSnowplower == null ? 0 : selectedSnowplower.getGravel()) + " kg");
+				.setText("Zúzottkő: " + (selectedSnowplower == null ? 0 : gravelStr) + " kg");
 	}
 
 	/**
@@ -549,6 +559,10 @@ public class SnowplowerPanel extends JPanel {
 		Snowplower selectedSnowplower = getSelectedSnowplower();
 		if (selectedSnowplower == null) {
 			return;
+		}
+		//Csak kereszteződésben tud fejet cserélni.
+		if (!selectedSnowplower.isInCrossing()) {
+		return;
 		}
 		selectedSnowplower.getHeadInventory().cycleActiveHead();
 		refreshPanels();
