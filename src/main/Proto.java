@@ -2,6 +2,7 @@ package main;
 
 import java.io.File;
 import java.lang.reflect.Field;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map.Entry;
@@ -235,7 +236,7 @@ public class Proto {
 		Field fieldSnowplowers = cleaner.getClass().getDeclaredField("snowplowers");
 		fieldSnowplowers.setAccessible(true);
 
-		Set<Snowplower> snowplowers = (Set<Snowplower>) fieldSnowplowers.get(cleaner);
+		ArrayList<Snowplower> snowplowers = (ArrayList<Snowplower>) fieldSnowplowers.get(cleaner);
 
 		snowplowers.add(sp);
 	}
@@ -640,7 +641,7 @@ public class Proto {
 
 		Field spField = c.getClass().getDeclaredField("snowplowers");
 		spField.setAccessible(true);
-		Set<Snowplower> snowplowers = (Set<Snowplower>) spField.get(c);
+		ArrayList<Snowplower> snowplowers = (ArrayList<Snowplower>) spField.get(c);
 		for (Snowplower sp : snowplowers) {
 			Logger.getGlobal().log(Level.INFO, "INFO [Obj] has [Obj]", new Object[] { c, sp });
 		}

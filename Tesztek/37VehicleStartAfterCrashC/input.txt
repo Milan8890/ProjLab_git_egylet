@@ -5,5 +5,5 @@ car Crossing1 Crossing2
 putvehicle Car1 Lane2_1
 crash Car1 10
 initend
-passtime 30
+passtime 15
 info Car1

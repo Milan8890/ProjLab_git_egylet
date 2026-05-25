@@ -1,5 +1,13 @@
 package graphics;
 
+
+
+import java.util.logging.Logger;
+
+import main.OwnHandler;
+import main.Proto;
+import main.World;
+
 public class NewMain {
 	static boolean PLSRUN = true;
 
@@ -19,7 +27,16 @@ public class NewMain {
 		notdone("");
 	}
 
-	public static void main(String[] args) {
-		// Csak egy új main, hogy innen lehessen dolgozni (nincs sok értelme)
-	}
+
+	public static void main(String[] args) throws Exception {
+		Proto proto = new Proto(World.players);
+
+		// Handler beállítása
+		Logger.getGlobal().setUseParentHandlers(false);
+		OwnHandler ownHandler = new OwnHandler(proto.objectMap);
+		Logger.getGlobal().addHandler(ownHandler);
+
+		// Parancsok beolvasása
+		proto.readCommandsFromCommandLine();
+	}	
 }

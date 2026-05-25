@@ -59,6 +59,7 @@ public class App {
 	 * @param args parancssori argumentumok
 	 * @throws Exception ha az indítás közben nem kezelt hiba történik
 	 */
+	
 	public static void main(String[] args) throws Exception {
 
 		// Handler beállítása

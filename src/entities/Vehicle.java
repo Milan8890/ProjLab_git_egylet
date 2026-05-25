@@ -1,12 +1,10 @@
 package entities;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import main.World;
-import playground.City;
 import playground.Crossing;
 import playground.Lane;
 import playground.Path;
@@ -307,6 +305,8 @@ public abstract class Vehicle {
 	 * Alapértelmezetten üres, a leszármazottak (pl. Car) definiálják felül.
 	 */
 	protected void revive() {
+		this.isStuck = false;
+		this.isCrashed = false;
 	}
 
 	/**
