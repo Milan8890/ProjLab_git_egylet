@@ -47,6 +47,7 @@ import playground.Crossing;
 import playground.Lane;
 import playground.Path;
 import playground.Road;
+import playground.Tunnel; // JAVITAS: Beimportalva a Tunnel osztaly, ha kulon csomagban van igazitsd a playground-hoz
 import user.BusDriver;
 import user.Cleaner;
 import user.Player;
@@ -71,7 +72,6 @@ public class MainPanel extends JPanel {
 	private BusDriver selectedBusDriver;
 	private Snowplower selectedSnowplower;
 	private Crossing selectedCrossing;
-
 
 	private List<CrossingView> crossingViews = new ArrayList<>();
 	private List<RoadView> roadViews = new ArrayList<>();
@@ -151,19 +151,15 @@ public class MainPanel extends JPanel {
 		mapPanel = new MapPanel(this);
 
 		setLayout(new BorderLayout());
-
 		// --- JOBB OLDAL: Vezérlő Panel ---
 		JPanel sidePanel = new JPanel(new BorderLayout());
 		sidePanel.setBackground(Color.WHITE);
 		sidePanel.setPreferredSize(new Dimension(320, 1000));
-
 		// --- JOBB OLDAL, FELSŐ: Active Player Panel ---
 		sidePanel.add(activePlayerPanel, BorderLayout.NORTH);
-
 		// --- JOBB OLDAL, ALSÓ: Snowplower / Bus Panel ---
 		JPanel vehicleHolder = new JPanel(new GridBagLayout());
 		vehicleHolder.setBackground(Color.WHITE);
-
 		GridBagConstraints panelGbc = new GridBagConstraints();
 		panelGbc.gridx = 0;
 		panelGbc.gridy = 0;
@@ -214,7 +210,6 @@ public class MainPanel extends JPanel {
 		Crossing c21 = new Crossing();
 		Crossing c22 = new Crossing();
 		Crossing c23 = new Crossing();
-
 		Point2D.Double pos1 = new Point2D.Double(55, 60);
 		Point2D.Double pos2 = new Point2D.Double(245, 12);
 		Point2D.Double pos3 = new Point2D.Double(515, 105);
@@ -238,7 +233,6 @@ public class MainPanel extends JPanel {
 		Point2D.Double pos21 = new Point2D.Double(860, 890);
 		Point2D.Double pos22 = new Point2D.Double(1180, 897);
 		Point2D.Double pos23 = new Point2D.Double(1390, 765);
-
 		crossingViews.add(new CrossingView(c1, new Point2D.Double(pos1.x + 3, pos1.y + 3), false, this));
 		crossingViews.add(new CrossingView(c2, new Point2D.Double(pos2.x + 3, pos2.y + 3), false, this));
 		crossingViews.add(new CrossingView(c3, new Point2D.Double(pos3.x + 3, pos3.y + 3), false, this));
@@ -264,89 +258,89 @@ public class MainPanel extends JPanel {
 		crossingViews.add(new CrossingView(c23, new Point2D.Double(pos23.x + 3, pos23.y + 3), false, this));
 
 		// 1-es kereszteződésből induló utak
-		addRoadWithLanes(c1, c2, 2);
-		addRoadWithLanes(c1, c7, 2);
+		addRoadWithLanes(c1, c2, 2, false);
+		addRoadWithLanes(c1, c7, 2, false);
 		// 2-es kereszteződésből induló utak
-		addRoadWithLanes(c2, c3, 1);
-		addRoadWithLanes(c2, c1, 2);
+		addRoadWithLanes(c2, c3, 1, false);
+		addRoadWithLanes(c2, c1, 2, false);
 		// 3-as kereszteződésből induló utak
-		addRoadWithLanes(c3, c2, 2);
-		addRoadWithLanes(c3, c4, 2);
-		addRoadWithLanes(c3, c8, 1);
+		addRoadWithLanes(c3, c2, 2, false);
+		addRoadWithLanes(c3, c4, 2, false);
+		addRoadWithLanes(c3, c8, 1, false);
 		// 4-es kereszteződésből induló utak
-		addRoadWithLanes(c4, c3, 2);
-		addRoadWithLanes(c4, c5, 1);
+		addRoadWithLanes(c4, c3, 2, false);
+		addRoadWithLanes(c4, c5, 1, false);
 		// 5-ös kereszteződésből induló utak
-		addRoadWithLanes(c5, c4, 3);
-		addRoadWithLanes(c5, c11, 1);
+		addRoadWithLanes(c5, c4, 3, false);
+		addRoadWithLanes(c5, c11, 1, false);
 		// 6-os kereszteződésből induló utak
-		addRoadWithLanes(c6, c5, 3);
-		addRoadWithLanes(c6, c12, 1);
+		addRoadWithLanes(c6, c5, 3, false);
+		addRoadWithLanes(c6, c12, 1, false);
 		// 7-es kereszteződésből induló utak
-		addRoadWithLanes(c7, c1, 2);
-		addRoadWithLanes(c7, c13, 2);
+		addRoadWithLanes(c7, c1, 2, false);
+		addRoadWithLanes(c7, c13, 2, false);
 		// 8-0s kereszteződésből induló utak
-		addRoadWithLanes(c8, c3, 1);
-		addRoadWithLanes(c8, c9, 1);
-		addRoadWithLanes(c8, c13, 1);
+		addRoadWithLanes(c8, c3, 1, false);
+		addRoadWithLanes(c8, c9, 1, false);
+		addRoadWithLanes(c8, c13, 1, false);
 		// 9-es kereszteződésből induló utak
-		addRoadWithLanes(c9, c8, 2);
-		addRoadWithLanes(c9, c10, 2);
+		addRoadWithLanes(c9, c8, 2, false);
+		addRoadWithLanes(c9, c10, 2, false);
 		// 10-es kereszteződésből induló utak
-		addRoadWithLanes(c10, c9, 3);
-		addRoadWithLanes(c10, c11, 1);
-		addRoadWithLanes(c10, c16, 2);
+		addRoadWithLanes(c10, c9, 3, false);
+		addRoadWithLanes(c10, c11, 1, false);
+		addRoadWithLanes(c10, c16, 2, false);
 		// 11-es kereszteződésből induló utak
-		addRoadWithLanes(c11, c5, 2);
-		addRoadWithLanes(c11, c10, 2);
-		addRoadWithLanes(c11, c12, 1);
-		addRoadWithLanes(c11, c17, 1);
+		addRoadWithLanes(c11, c5, 2, false);
+		addRoadWithLanes(c11, c10, 2, false);
+		addRoadWithLanes(c11, c12, 1, false);
+		addRoadWithLanes(c11, c17, 1, false);
 		// 12-es kereszteződésből induló utak
-		addRoadWithLanes(c12, c6, 3);
-		addRoadWithLanes(c12, c11, 2);
-		addRoadWithLanes(c12, c17, 1);
+		addRoadWithLanes(c12, c6, 3, false);
+		addRoadWithLanes(c12, c11, 2, false);
+		addRoadWithLanes(c12, c17, 1, false);
 		// 13-as kereszteződésből induló utak
-		addRoadWithLanes(c13, c7, 1);
-		addRoadWithLanes(c13, c8, 2);
-		addRoadWithLanes(c13, c14, 2);
-		addRoadWithLanes(c13, c18, 2);
+		addRoadWithLanes(c13, c7, 1, false);
+		addRoadWithLanes(c13, c8, 2, false);
+		addRoadWithLanes(c13, c14, 2, false);
+		addRoadWithLanes(c13, c18, 2, false);
 		// 14-es kereszteződésből induló utak
-		addRoadWithLanes(c14, c8, 1);
-		addRoadWithLanes(c14, c15, 1);
-		addRoadWithLanes(c14, c19, 1);
+		addRoadWithLanes(c14, c8, 1, false);
+		addRoadWithLanes(c14, c15, 1, false);
+		addRoadWithLanes(c14, c19, 1, false);
 		// 15-ös kereszteződésből induló utak
-		addRoadWithLanes(c15, c14, 2);
-		addRoadWithLanes(c15, c9, 2);
-		addRoadWithLanes(c15, c20, 1);
+		addRoadWithLanes(c15, c14, 2, false);
+		addRoadWithLanes(c15, c9, 2, false);
+		addRoadWithLanes(c15, c20, 1, false);
 		// 16-os kereszteződésből induló utak
-		addRoadWithLanes(c16, c10, 2);
-		addRoadWithLanes(c16, c17, 2);
-		addRoadWithLanes(c16, c21, 2);
+		addRoadWithLanes(c16, c10, 2, false);
+		addRoadWithLanes(c16, c17, 2, false);
+		addRoadWithLanes(c16, c21, 2, true);
 		// 17-es kereszteződésből induló utak
-		addRoadWithLanes(c17, c16, 1);
-		addRoadWithLanes(c17, c12, 2);
-		addRoadWithLanes(c17, c22, 1);
+		addRoadWithLanes(c17, c16, 1, false);
+		addRoadWithLanes(c17, c12, 2, false);
+		addRoadWithLanes(c17, c22, 1, false);
 		// 18-as kereszteződésből induló utak
-		addRoadWithLanes(c18, c13, 1);
-		addRoadWithLanes(c18, c19, 2);
+		addRoadWithLanes(c18, c13, 1, false);
+		addRoadWithLanes(c18, c19, 2, false);
 		// 19-es kereszteződésből induló utak
-		addRoadWithLanes(c19, c18, 1);
-		addRoadWithLanes(c19, c14, 1);
-		addRoadWithLanes(c19, c20, 2);
+		addRoadWithLanes(c19, c18, 1, false);
+		addRoadWithLanes(c19, c14, 1, false);
+		addRoadWithLanes(c19, c20, 2, false);
 		// 20-as kereszteződésből induló utak
-		addRoadWithLanes(c20, c19, 1);
-		addRoadWithLanes(c20, c15, 2);
-		addRoadWithLanes(c20, c21, 1);
+		addRoadWithLanes(c20, c19, 1, false);
+		addRoadWithLanes(c20, c15, 2, false);
+		addRoadWithLanes(c20, c21, 1, false);
 		// 21-es kereszteződésből induló utak
-		addRoadWithLanes(c21, c20, 1);
-		addRoadWithLanes(c21, c16, 1);
-		addRoadWithLanes(c21, c22, 3);
-		// 21-es kereszteződésből induló utak
-		addRoadWithLanes(c22, c21, 1);
-		addRoadWithLanes(c22, c17, 1);
-		addRoadWithLanes(c22, c23, 2);
+		addRoadWithLanes(c21, c20, 1, false);
+		addRoadWithLanes(c21, c16, 1, true);
+		addRoadWithLanes(c21, c22, 3, false);
+		// 22-es kereszteződésből induló utak
+		addRoadWithLanes(c22, c21, 1, false);
+		addRoadWithLanes(c22, c17, 1, false);
+		addRoadWithLanes(c22, c23, 2, false);
 		// 23-as kereszteződésből induló utak
-		addRoadWithLanes(c23, c17, 2);
+		addRoadWithLanes(c23, c17, 2, false);
 
 		City.getCrossings().clear();
 
@@ -354,7 +348,6 @@ public class MainPanel extends JPanel {
 				c1, c2, c3, c4, c5, c6, c7, c8, c9, c10,
 				c11, c12, c13, c14, c15, c16, c17, c18,
 				c19, c20, c21, c22, c23));
-
 		City.setSnowplowBase(c11);
 	}
 
@@ -370,18 +363,15 @@ public class MainPanel extends JPanel {
 				new Color(255, 140, 0), new Color(170, 80, 220), new Color(255, 80, 120),
 				new Color(40, 180, 220), new Color(120, 200, 40), new Color(230, 90, 40),
 				new Color(255, 200, 0) };
-
 		if (crossings.size() < 2) {
 			Logger.getGlobal().severe("Nincs elég kereszteződés autók létrehozásához.");
 			return;
 		}
 
 		Random random = new Random();
-
 		for (int i = 0; i < carNumber; i++) {
 			Crossing home = crossings.get(random.nextInt(crossings.size()));
 			Crossing work = crossings.get(random.nextInt(crossings.size()));
-
 			while (work == home) {
 				work = crossings.get(random.nextInt(crossings.size()));
 			}
@@ -393,14 +383,16 @@ public class MainPanel extends JPanel {
 	}
 
 	/**
-	 * Létrehoz egy modellszintű utat a két kereszteződés között,
+	 * Létrehoz egy modellszintű utat vagy alagutat a két kereszteződés között,
 	 * majd hozzáadja az út- és sávnézeteket.
 	 *
-	 * @param from    az út kezdő kereszteződése
-	 * @param to      az út cél kereszteződése
-	 * @param savSzam az út sávjainak száma
+	 * @param from     az út kezdő kereszteződése
+	 * @param to       az út cél kereszteződése
+	 * @param savSzam  az út sávjainak száma
+	 * @param isTunnel jelzi, hogy az utszakasz egy alagut-e
 	 */
-	private void addRoadWithLanes(Crossing from, Crossing to, int savSzam) {
+	// JAVITAS: A metodus fuszignaturaja kibovitve az 'isTunnel' flaggel
+	private void addRoadWithLanes(Crossing from, Crossing to, int savSzam, boolean isTunnel) {
 		CrossingView fromView = getCrossingView(from);
 		CrossingView toView = getCrossingView(to);
 
@@ -409,16 +401,20 @@ public class MainPanel extends JPanel {
 
 		Point2D.Double kp1 = calculateCenter(fromView);
 		Point2D.Double kp2 = calculateCenter(toView);
-
 		Point2D.Double[] roadEnds = calculateRoadEndPoints(kp1, kp2);
 		if (roadEnds == null)
 			return;
 
 		Point2D.Double utEleje = roadEnds[0];
 		Point2D.Double utVege = roadEnds[1];
-
 		double valosUtHossz = utEleje.distance(utVege);
-		Road road = new Road(from, to, savSzam, valosUtHossz);
+		
+		Road road;
+		if (isTunnel) {
+			road = new Tunnel(from, to, savSzam, valosUtHossz);
+		} else {
+			road = new Road(from, to, savSzam, valosUtHossz);
+		}
 
 		roadViews.add(new RoadView(road, utEleje, utVege));
 		generateAndAddLaneViews(road, utEleje, utVege);
@@ -445,7 +441,7 @@ public class MainPanel extends JPanel {
 	 * @param kp1 az első kereszteződés középpontja
 	 * @param kp2 a második kereszteződés középpontja
 	 * @return a kiszámolt útvégpontok tömbje, vagy {@code null}, ha a két pont
-	 *         azonos
+	 * azonos
 	 */
 	private Point2D.Double[] calculateRoadEndPoints(Point2D.Double kp1, Point2D.Double kp2) {
 		double dx = kp2.x - kp1.x;
@@ -456,12 +452,9 @@ public class MainPanel extends JPanel {
 
 		double uX = dx / kozepTavolsag;
 		double uY = dy / kozepTavolsag;
-
 		double kulsoPeremSugar = (CROSSING_SIZE / 2.0) + (CROSSING_STROKE / 2.0);
-
 		Point2D.Double utEleje = new Point2D.Double(kp1.x + uX * kulsoPeremSugar, kp1.y + uY * kulsoPeremSugar);
 		Point2D.Double utVege = new Point2D.Double(kp2.x - uX * kulsoPeremSugar, kp2.y - uY * kulsoPeremSugar);
-
 		return new Point2D.Double[] { utEleje, utVege };
 	}
 
@@ -479,17 +472,14 @@ public class MainPanel extends JPanel {
 		double utHossz = Math.sqrt(dx * dx + dy * dy);
 		if (utHossz == 0)
 			return;
-
 		double uX = dx / utHossz;
 		double uY = dy / utHossz;
 
 		double nX = -uY;
 		double nY = uX;
-
 		List<Lane> modelLanes = road.getLanes();
 		for (int i = 0; i < modelLanes.size(); i++) {
 			double merolegesEltolas = 2.5 + (i * LANE_WIDTH);
-
 			double savStartX = utEleje.x + (nX * merolegesEltolas) - (uX * 2.5);
 			double savStartY = utEleje.y + (nY * merolegesEltolas) - (uY * 2.5);
 			double savEndX = utVege.x + (nX * merolegesEltolas) + (uX * 2.5);
@@ -518,7 +508,6 @@ public class MainPanel extends JPanel {
 
 					if (bd.getBus() != null) {
 						busViews.add(new BusView(bd.getBus(), this, playerData.getColor()));
-						;
 					}
 					break;
 
@@ -554,7 +543,7 @@ public class MainPanel extends JPanel {
 	 */
 	private void startGameLoop() {
 		World.setIsSnowing(true); // Bekapcsolja a havazást.
-		int delay = 50; // 1000 ms / 50 ms = 20 tick/sec (fps)
+		int delay = 50;
 
 		javax.swing.Timer timer = new javax.swing.Timer(delay, e -> {
 			World.tick();
@@ -597,7 +586,7 @@ public class MainPanel extends JPanel {
 	 * Visszaadja, hogy a felhasználó éppen útvonalat bővít-e.
 	 *
 	 * @return {@code true}, ha útvonalbővítés folyamatban van, egyébként
-	 *         {@code false}
+	 * {@code false}
 	 */
 	public boolean getIsExtendingPath() {
 		return isExtendingPath;
@@ -620,7 +609,7 @@ public class MainPanel extends JPanel {
 	public CrossingView getCrossingView(Crossing c) {
 		for (CrossingView cv : crossingViews) {
 			if (cv.getCrossing() == c) {
-				return cv;
+                return cv;
 			}
 		}
 		return null;
@@ -691,8 +680,8 @@ public class MainPanel extends JPanel {
 	}
 
 	/**
-	 * Visszaadja a kiválasztott buszvezető játékost. Ha nem buszvezető van
-	 * kiválasztva, null-t.
+	 * Visszaadja a kiválasztott buszvezető játékost.
+	 * Ha nem buszvezető van kiválasztva, null-t.
 	 *
 	 * @return a kiválasztott buszvezető játékos
 	 */
@@ -731,8 +720,7 @@ public class MainPanel extends JPanel {
 
 	/**
 	 * Visszaadja a kiválasztott járművet. Ha nincs ilyen, null-t.
-	 * 
-	 * @return A kiválasztott jármű
+	 * * @return A kiválasztott jármű
 	 */
 	public Vehicle getSelectedVehicle() {
 		Vehicle v = getSelectedBus();
@@ -788,14 +776,12 @@ public class MainPanel extends JPanel {
 		JLabel activePlayerLabel = createActivePlayerLabel("Aktív játékos:", normalFont);
 		playerSelectorComboBox = createActivePlayerComboBox(normalFont);
 		playerData = createActivePlayerInfoText("Pénzed: 0000 $", normalFont, separatorColor);
-
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.gridx = 0;
 		gbc.gridy = 0;
 		gbc.weightx = 1.0;
 		gbc.fill = GridBagConstraints.HORIZONTAL;
 		panel.add(activePlayerLabel, gbc);
-
 		gbc.gridy = 1;
 		gbc.insets = new Insets(2, 0, 12, 0);
 		panel.add(playerSelectorComboBox, gbc);
@@ -837,7 +823,6 @@ public class MainPanel extends JPanel {
 
 	// Nem valós játokos, hogy lehessen üres érték a legördülő mezőben
 	Player nullPlayer;
-
 	/**
 	 * Létrehozza az aktív játékos kiválasztására szolgáló legördülő mezőt.
 	 *
