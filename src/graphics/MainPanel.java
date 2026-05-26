@@ -47,7 +47,7 @@ import playground.Crossing;
 import playground.Lane;
 import playground.Path;
 import playground.Road;
-import playground.Tunnel; // JAVITAS: Beimportalva a Tunnel osztaly, ha kulon csomagban van igazitsd a playground-hoz
+import playground.Tunnel;
 import user.BusDriver;
 import user.Cleaner;
 import user.Player;
