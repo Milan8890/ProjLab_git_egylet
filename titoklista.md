@@ -1,0 +1,24 @@
+- [ ] Kezdőképernyő húzható hókotróval mint a máriós valamibe (super mario 64, lehet húzni az arcát szegénynek)
+- [ ] Privát dc csati
+- [ ] Adózás (mint az énekes?)
+- [ ] Minden nézzen ki szarul
+- [ ] Karambolkor az a greenscreen cop car játszódjon ée
+- [ ] Valami minigame az unstuckhoz
+- [ ] Dbd skill check a kicsúszásra a buszhoz
+- [ ] Úgy összehívni a csapatot, hogy nem szólunk össze nekik, nem tudják hogy projlabos
+- [ ] Utak mozgatása
+- [ ] Lassan összeáll rickrollá
+- [ ] Karambol kritelhet, megöli
+- [ ] Ilyenkor egy perc néma csönd a halottnak, meg egy nyugodjon békében felirat
+- [ ] Egész változtatások PR átnézése hármuk által (csak akkor mergelhet), mielőtt játszanak
+- [ ] Ha nem a támogatott oprendszer, megkérdezi, leáll
+- [ ] Megkérdezi, de érzékeli, és az ellentettjét kell nyomni
+- [ ] Valami pirate dub mint mc ben de arra, hogy ha ráviszed egy felületelemre a kurzorodat, és ilyen yarr valami kalózos szóvicc path extend, ÉS HANGOt JáTSZIK LE mmint felveszem mikrofonon
+- [ ] Random common billentyűgomb kapcsolja be
+- [ ] Subway surfers a sarokban
+- [ ] ZA WARUDO vagy mit mondanak. Megállítás hangeffekttel szépen belassul, mint ahogy az idő abban megáll, elindulás ugyan úgy, hangeffekttel
+- [ ] Skeleton átfut a képernyőn, 👀 láttátok?
+- [ ] Morgan freeman true 
+- [ ] A, I gombokat megnyomva lehessen beszélgetni valami self hosted ai al
+- [ ] Szabó András besétál a játéktérre (oldal és előlprofil), amíg figyel nem szabad lépni (nagytestvér, horror, szíveobogás hangeffekt)
+- [ ] Amikor meghal valaki, fekete fehér effekt + ez játszódik le https://www.youtube.com/watch?v=nQ7Nz81TgGQ
