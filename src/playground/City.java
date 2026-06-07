@@ -35,6 +35,8 @@ public class City {
 	 * A városban lévő autók.
 	 */
 	static Set<Car> cars = new HashSet<>();
+
+	static Set<Bike> bikes = new HashSet<>();
 	/**
 	 * A hókotróbázis.
 	 */
@@ -89,6 +91,10 @@ public class City {
 	 */
 	public static Set<Car> getCars() {
 	    return cars;
+	}
+
+	public static Set<Bike> getBikes() {
+	    return bikes;
 	}
 
 	/**
