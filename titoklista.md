@@ -22,3 +22,4 @@
 - [ ] A, I gombokat megnyomva lehessen beszélgetni valami self hosted ai al
 - [ ] Szabó András besétál a játéktérre (oldal és előlprofil), amíg figyel nem szabad lépni (nagytestvér, horror, szíveobogás hangeffekt)
 - [ ] Amikor meghal valaki, fekete fehér effekt + ez játszódik le https://www.youtube.com/watch?v=nQ7Nz81TgGQ
+- [ ] "Srácok viccet félretéve, van egy bug amit ki kéne javítani": csak rá kell kattintani a képernyőn, és megjelenik lassan a fuckass "fruit of your labor dont touch your rectangle dog - pear baby" természetesen a zenével együtt
