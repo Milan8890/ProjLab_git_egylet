@@ -26,4 +26,5 @@
 - [ ] Legyenek programozós viccek benne (pl dependency injection mint egy beadható szteroid shot)
 - [ ] Valamilyen részt dolgozzunk ki nagyon erősen, aminek semmi köze nincs a feladathoz
 - [ ] -> Subway surfers, ami teljesen játszható, legalább coinnokkal, high score-al.
-- [ ] -> "Realisztikus mód", megnyomod a buszon, és van hangja amikor megáll, lehet állítani a zenét valami zenelejátszón, de torzul, mert egy busz zenelejátszója, utasok köhögnek, stb 
+- [ ] -> "Realisztikus mód", megnyomod a buszon, és van hangja amikor megáll, lehet állítani a zenét valami zenelejátszón, de torzul, mert egy busz zenelejátszója, utasok köhögnek, stb
+- [ ] Github action/rule: LGTM comment automatikusan mergeli a branchet a titkosba
