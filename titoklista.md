@@ -23,3 +23,7 @@
 - [ ] Szabó András besétál a játéktérre (oldal és előlprofil), amíg figyel nem szabad lépni (nagytestvér, horror, szíveobogás hangeffekt)
 - [ ] Amikor meghal valaki, fekete fehér effekt + ez játszódik le https://www.youtube.com/watch?v=nQ7Nz81TgGQ
 - [ ] "Srácok viccet félretéve, van egy bug amit ki kéne javítani": csak rá kell kattintani a képernyőn, és megjelenik lassan a fuckass "fruit of your labor dont touch your rectangle dog - pear baby" természetesen a zenével együtt
+- [ ] Legyenek programozós viccek benne (pl dependency injection mint egy beadható szteroid shot)
+- [ ] Valamilyen részt dolgozzunk ki nagyon erősen, aminek semmi köze nincs a feladathoz
+- [ ] -> Subway surfers, ami teljesen játszható, legalább coinnokkal, high score-al.
+- [ ] -> "Realisztikus mód", megnyomod a buszon, és van hangja amikor megáll, lehet állítani a zenét valami zenelejátszón, de torzul, mert egy busz zenelejátszója, utasok köhögnek, stb 
