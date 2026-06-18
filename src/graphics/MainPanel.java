@@ -408,7 +408,7 @@ public class MainPanel extends JPanel {
 		Point2D.Double utEleje = roadEnds[0];
 		Point2D.Double utVege = roadEnds[1];
 		double valosUtHossz = utEleje.distance(utVege);
-		
+
 		Road road;
 		if (isTunnel) {
 			road = new Tunnel(from, to, savSzam, valosUtHossz);
@@ -441,7 +441,7 @@ public class MainPanel extends JPanel {
 	 * @param kp1 az első kereszteződés középpontja
 	 * @param kp2 a második kereszteződés középpontja
 	 * @return a kiszámolt útvégpontok tömbje, vagy {@code null}, ha a két pont
-	 * azonos
+	 *         azonos
 	 */
 	private Point2D.Double[] calculateRoadEndPoints(Point2D.Double kp1, Point2D.Double kp2) {
 		double dx = kp2.x - kp1.x;
@@ -586,7 +586,7 @@ public class MainPanel extends JPanel {
 	 * Visszaadja, hogy a felhasználó éppen útvonalat bővít-e.
 	 *
 	 * @return {@code true}, ha útvonalbővítés folyamatban van, egyébként
-	 * {@code false}
+	 *         {@code false}
 	 */
 	public boolean getIsExtendingPath() {
 		return isExtendingPath;
@@ -609,7 +609,7 @@ public class MainPanel extends JPanel {
 	public CrossingView getCrossingView(Crossing c) {
 		for (CrossingView cv : crossingViews) {
 			if (cv.getCrossing() == c) {
-                return cv;
+				return cv;
 			}
 		}
 		return null;
@@ -823,6 +823,7 @@ public class MainPanel extends JPanel {
 
 	// Nem valós játokos, hogy lehessen üres érték a legördülő mezőben
 	Player nullPlayer;
+
 	/**
 	 * Létrehozza az aktív játékos kiválasztására szolgáló legördülő mezőt.
 	 *
@@ -834,7 +835,7 @@ public class MainPanel extends JPanel {
 		comboBox.setFont(font);
 		comboBox.setRenderer(createActivePlayerComboBoxRenderer());
 
-		comboBox.addItem(null); 	//nem lesz invisible busz.
+		comboBox.addItem(null); // nem lesz invisible busz.
 
 		for (BusDriver busDriver : busDrivers) {
 			comboBox.addItem(busDriver);

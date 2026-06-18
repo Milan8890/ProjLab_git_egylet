@@ -11,8 +11,8 @@
 - [ ] Karambol kritelhet, megöli
 - [ ] Ilyenkor egy perc néma csönd a halottnak, meg egy nyugodjon békében felirat
 - [ ] Egész változtatások PR átnézése hármuk által (csak akkor mergelhet), mielőtt játszanak
-- [ ] Ha nem a támogatott oprendszer, megkérdezi, leáll
-- [ ] Megkérdezi, de érzékeli, és az ellentettjét kell nyomni
+- [x] Ha nem a támogatott oprendszer, megkérdezi, leáll
+- [x] Megkérdezi, de érzékeli, és az ellentettjét kell nyomni
 - [ ] Valami pirate dub mint mc ben de arra, hogy ha ráviszed egy felületelemre a kurzorodat, és ilyen yarr valami kalózos szóvicc path extend, ÉS HANGOt JáTSZIK LE mmint felveszem mikrofonon
 - [ ] Random common billentyűgomb kapcsolja be
 - [ ] Subway surfers a sarokban

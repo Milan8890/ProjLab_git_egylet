@@ -1,5 +1,11 @@
 package main;
 
+import graphics.MainPanel;
+import graphics.NewMain;
+import graphics.OSCheckFrame;
+import graphics.Panels.BusPanel;
+import graphics.Panels.MapPanel;
+import graphics.Panels.SnowplowerPanel;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -13,29 +19,15 @@ import java.awt.GridBagLayout;
 import java.awt.Insets;
 import java.awt.Rectangle;
 import java.awt.RenderingHints;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 import java.util.function.Consumer;
-
-import graphics.MainPanel;
-import graphics.Panels.BusPanel;
-import graphics.Panels.SnowplowerPanel;
-import graphics.NewMain;
-import graphics.Panels.MapPanel;
-
-import user.BusDriver;
-import user.Cleaner;
-import user.Player;
-import user.setupPlayerData;
-
-import javax.swing.JFrame;
-import javax.swing.WindowConstants;
+import java.util.logging.Logger;
 import javax.swing.BorderFactory;
+import javax.swing.DefaultListCellRenderer;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.DefaultListCellRenderer;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
@@ -44,13 +36,20 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
+import javax.swing.WindowConstants;
 import javax.swing.border.AbstractBorder;
+import main.OwnHandler;
+import user.BusDriver;
+import user.Cleaner;
+import user.Player;
+import user.setupPlayerData;
 
 /**
  * Az alkalmazás belépési pontját és a játékosok kezdőadatainak bekérésére
  * szolgáló grafikus menüt tartalmazza.
  */
 public class App {
+
 	static final Dimension GAME_CONTENT_SIZE = new Dimension(1820, 1000);
 
 	/**
@@ -59,24 +58,28 @@ public class App {
 	 * @param args parancssori argumentumok
 	 * @throws Exception ha az indítás közben nem kezelt hiba történik
 	 */
-	
-	public static void main(String[] args) throws Exception {
 
+	public static void main(String[] args) throws Exception {
 		// Handler beállítása
 		Proto proto = new Proto(World.players);
 		Logger.getGlobal().setUseParentHandlers(false);
 		OwnHandler ownHandler = new OwnHandler(proto.objectMap);
-		ownHandler.isLogging = true;
+		ownHandler.isLogging = false;
+
 		Logger.getGlobal().addHandler(ownHandler);
-		
-		//városfelépítő
+
+		// OS ellenőrzése
+		OSCheckFrame.CheckOS();
+
+		// városfelépítő
 		SwingUtilities.invokeLater(() -> {
-  			JFrame foAblak = new JFrame("Zúzmaraváros");
+			JFrame foAblak = new JFrame("Zúzmaraváros");
 			foAblak.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 			foAblak.setResizable(false);
 
 			JPanel setupPanel = createSetupPanel(playerDataList -> {
-				MainPanel gamePanel = new MainPanel(new ArrayList<>(playerDataList));
+				MainPanel gamePanel = new MainPanel(
+						new ArrayList<>(playerDataList));
 
 				foAblak.setContentPane(gamePanel);
 				foAblak.pack();
@@ -92,25 +95,7 @@ public class App {
 			foAblak.pack();
 			foAblak.setLocationRelativeTo(null);
 			foAblak.setVisible(true);
-        });
-
-		/*
-		// Innen lehet tesztelni
-
-		// for (setupPlayerData player : players) {
-		// System.out.println(player.getName() + " " + player.getColor() + " " +
-		// player.getVehicle());
-		// }
-		// return;
-		// }
-
-		// Új main hívás, persze nem így lesz, csak könnyebben tudok prototipizálni
-		// Meg valszeg majd itt csak létre lesz hozva a Graphics, vagy tudja a rosseb.
-		NewMain.main(args);
-
-		// // Parancsok beolvasása
-		// proto.readCommandsFromCommandLine();
-		*/
+		});
 	}
 
 	/**
@@ -120,10 +105,22 @@ public class App {
 	 * @return a felvett játékosok adatait tartalmazó lista, a képernyőn látható
 	 *         sorok sorrendjében
 	 */
-	public static JPanel createSetupPanel(Consumer<List<setupPlayerData>> onStartGame) {
+	public static JPanel createSetupPanel(
+			Consumer<List<setupPlayerData>> onStartGame) {
 		final String setupMenuTitle = "Játékos hozzáadó menü";
-		final String[] playerColors = { "Bordó", "Barna", "Ibolya", "Lime", "Rózsaszín", "Narancs"};
-		final String[] playerVehicles = { "Busz", "Hókotró jégtörőfejjel", "Hókotró hányófejjel" };
+		final String[] playerColors = {
+				"Bordó",
+				"Barna",
+				"Ibolya",
+				"Lime",
+				"Rózsaszín",
+				"Narancs",
+		};
+		final String[] playerVehicles = {
+				"Busz",
+				"Hókotró jégtörőfejjel",
+				"Hókotró hányófejjel",
+		};
 		final Color titleBackground = new Color(25, 101, 135);
 		final Color menuBorder = new Color(0, 145, 215);
 		final Color controlBorder = new Color(166, 157, 143);
@@ -149,7 +146,8 @@ public class App {
 		title.setForeground(Color.WHITE);
 		title.setFont(titleFont);
 		title.setPreferredSize(new Dimension(menuWidth, 70));
-		title.setBorder(BorderFactory.createMatteBorder(0, 0, 2, 0, menuBorder));
+		title.setBorder(
+				BorderFactory.createMatteBorder(0, 0, 2, 0, menuBorder));
 		menuPanel.add(title, BorderLayout.NORTH);
 
 		JPanel rowsPanel = new JPanel(new GridBagLayout());
@@ -162,39 +160,96 @@ public class App {
 		List<JComboBox<String>> vehicles = new ArrayList<>();
 
 		JScrollPane scrollPane = new JScrollPane(rowsPanel);
-		scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-		scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+		scrollPane.setVerticalScrollBarPolicy(
+				JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+		scrollPane.setHorizontalScrollBarPolicy(
+				JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 		scrollPane.setBorder(BorderFactory.createEmptyBorder());
 		scrollPane.getViewport().setBackground(Color.WHITE);
 		scrollPane.setPreferredSize(new Dimension(menuWidth, menuHeight));
 		scrollPane.getVerticalScrollBar().setUnitIncrement(16);
 		menuPanel.add(scrollPane, BorderLayout.CENTER);
 
-		JButton addPlayerButton = createMenuButton("Játékos hozzáadása", buttonFont, controlBackground,
+		JButton addPlayerButton = createMenuButton(
+				"Játékos hozzáadása",
+				buttonFont,
+				controlBackground,
 				controlBorder);
-		JButton removePlayerButton = createMenuButton("Játékos törlése", buttonFont, controlBackground,
+		JButton removePlayerButton = createMenuButton(
+				"Játékos törlése",
+				buttonFont,
+				controlBackground,
 				controlBorder);
-		JButton startGameButton = createMenuButton("Játék kezdése", buttonFont, controlBackground, controlBorder);
+		JButton startGameButton = createMenuButton(
+				"Játék kezdése",
+				buttonFont,
+				controlBackground,
+				controlBorder);
 
-		addPlayerRow(names, colors, vehicles, playerColors, playerVehicles, menuFont, controlBackground,
+		addPlayerRow(
+				names,
+				colors,
+				vehicles,
+				playerColors,
+				playerVehicles,
+				menuFont,
+				controlBackground,
 				controlBorder);
-		rebuildRowsPanel(rowsPanel, names, colors, vehicles, addPlayerButton, removePlayerButton, startGameButton,
-				menuFont, controlHeight, defaultControlWidth, vehicleControlWidth);
+		rebuildRowsPanel(
+				rowsPanel,
+				names,
+				colors,
+				vehicles,
+				addPlayerButton,
+				removePlayerButton,
+				startGameButton,
+				menuFont,
+				controlHeight,
+				defaultControlWidth,
+				vehicleControlWidth);
 
 		// GOMBOK ACTION LISTENERJE
 		addPlayerButton.addActionListener(e -> {
-			addPlayerRow(names, colors, vehicles, playerColors, playerVehicles, menuFont, controlBackground,
+			addPlayerRow(
+					names,
+					colors,
+					vehicles,
+					playerColors,
+					playerVehicles,
+					menuFont,
+					controlBackground,
 					controlBorder);
-			rebuildRowsPanel(rowsPanel, names, colors, vehicles, addPlayerButton, removePlayerButton,
-					startGameButton, menuFont, controlHeight, defaultControlWidth, vehicleControlWidth);
-			SwingUtilities.invokeLater(() -> scrollPane.getVerticalScrollBar()
+			rebuildRowsPanel(
+					rowsPanel,
+					names,
+					colors,
+					vehicles,
+					addPlayerButton,
+					removePlayerButton,
+					startGameButton,
+					menuFont,
+					controlHeight,
+					defaultControlWidth,
+					vehicleControlWidth);
+			SwingUtilities.invokeLater(() -> scrollPane
+					.getVerticalScrollBar()
 					.setValue(scrollPane.getVerticalScrollBar().getMaximum()));
 		});
 
 		removePlayerButton.addActionListener(e -> {
 			removeLastPlayerRow(names, colors, vehicles);
-			rebuildRowsPanel(rowsPanel, names, colors, vehicles, addPlayerButton, removePlayerButton,
-					startGameButton, menuFont, controlHeight, defaultControlWidth, vehicleControlWidth);
+			rebuildRowsPanel(
+					rowsPanel,
+					names,
+					colors,
+					vehicles,
+					addPlayerButton,
+					removePlayerButton,
+					startGameButton,
+					menuFont,
+					controlHeight,
+					defaultControlWidth,
+					vehicleControlWidth);
 		});
 
 		startGameButton.addActionListener(e -> {
@@ -207,8 +262,11 @@ public class App {
 				}
 			}
 			if (!hasPlayer) {
-				JOptionPane.showMessageDialog( menuPanel, "Legalább egy játékos kell.",
-					"Nincs játékos", JOptionPane.WARNING_MESSAGE);
+				JOptionPane.showMessageDialog(
+						menuPanel,
+						"Legalább egy játékos kell.",
+						"Nincs játékos",
+						JOptionPane.WARNING_MESSAGE);
 				return;
 			}
 
@@ -223,7 +281,8 @@ public class App {
 				setupPlayerData playerData = new setupPlayerData();
 				playerData.setName(playerName);
 				playerData.setColor((String) colors.get(i).getSelectedItem());
-				playerData.setVehicle((String) vehicles.get(i).getSelectedItem());
+				playerData.setVehicle(
+						(String) vehicles.get(i).getSelectedItem());
 				selectedPlayers.add(playerData);
 			}
 			onStartGame.accept(selectedPlayers);
@@ -253,7 +312,11 @@ public class App {
 	 * @param column    az oszlop indexe, ahová a fejléc kerül
 	 * @param menuFont  a fejléc szövegéhez használt betűtípus
 	 */
-	private static void addHeaderLabel(JPanel rowsPanel, String text, int column, Font menuFont) {
+	private static void addHeaderLabel(
+			JPanel rowsPanel,
+			String text,
+			int column,
+			Font menuFont) {
 		JLabel label = new JLabel(text, SwingConstants.LEFT);
 		label.setFont(menuFont);
 
@@ -278,12 +341,28 @@ public class App {
 	 * @param controlBackground a választómezők háttérszíne
 	 * @param controlBorder     a komponensek keretszíne
 	 */
-	private static void addPlayerRow(List<JTextField> names, List<JComboBox<String>> colors,
-			List<JComboBox<String>> vehicles, String[] playerColors, String[] playerVehicles, Font menuFont,
-			Color controlBackground, Color controlBorder) {
+	private static void addPlayerRow(
+			List<JTextField> names,
+			List<JComboBox<String>> colors,
+			List<JComboBox<String>> vehicles,
+			String[] playerColors,
+			String[] playerVehicles,
+			Font menuFont,
+			Color controlBackground,
+			Color controlBorder) {
 		names.add(createNameField(menuFont, controlBorder));
-		colors.add(createComboBox(playerColors, menuFont, controlBackground, controlBorder));
-		vehicles.add(createComboBox(playerVehicles, menuFont, controlBackground, controlBorder));
+		colors.add(
+				createComboBox(
+						playerColors,
+						menuFont,
+						controlBackground,
+						controlBorder));
+		vehicles.add(
+				createComboBox(
+						playerVehicles,
+						menuFont,
+						controlBackground,
+						controlBorder));
 	}
 
 	/**
@@ -293,7 +372,9 @@ public class App {
 	 * @param colors   a játékosszín választó mezők listája
 	 * @param vehicles a jármű választó mezők listája
 	 */
-	private static void removeLastPlayerRow(List<JTextField> names, List<JComboBox<String>> colors,
+	private static void removeLastPlayerRow(
+			List<JTextField> names,
+			List<JComboBox<String>> colors,
 			List<JComboBox<String>> vehicles) {
 		if (names.isEmpty()) {
 			return;
@@ -319,20 +400,46 @@ public class App {
 	 * @param defaultControlWidth az alap mezőszélesség
 	 * @param vehicleControlWidth a járműválasztó mező szélessége
 	 */
-	private static void rebuildRowsPanel(JPanel rowsPanel, List<JTextField> names, List<JComboBox<String>> colors,
-			List<JComboBox<String>> vehicles, JButton addPlayerButton, JButton removePlayerButton,
-			JButton startGameButton, Font menuFont, int controlHeight, int defaultControlWidth,
+	private static void rebuildRowsPanel(
+			JPanel rowsPanel,
+			List<JTextField> names,
+			List<JComboBox<String>> colors,
+			List<JComboBox<String>> vehicles,
+			JButton addPlayerButton,
+			JButton removePlayerButton,
+			JButton startGameButton,
+			Font menuFont,
+			int controlHeight,
+			int defaultControlWidth,
 			int vehicleControlWidth) {
 		rowsPanel.removeAll();
 		addHeader(rowsPanel, menuFont);
 
 		for (int i = 0; i < names.size(); i++) {
 			int row = i + 1;
-			addRowComponent(rowsPanel, names.get(i), row, 0, controlHeight, defaultControlWidth,
+			addRowComponent(
+					rowsPanel,
+					names.get(i),
+					row,
+					0,
+					controlHeight,
+					defaultControlWidth,
 					vehicleControlWidth);
-			addRowComponent(rowsPanel, colors.get(i), row, 1, controlHeight, defaultControlWidth,
+			addRowComponent(
+					rowsPanel,
+					colors.get(i),
+					row,
+					1,
+					controlHeight,
+					defaultControlWidth,
 					vehicleControlWidth);
-			addRowComponent(rowsPanel, vehicles.get(i), row, 2, controlHeight, defaultControlWidth,
+			addRowComponent(
+					rowsPanel,
+					vehicles.get(i),
+					row,
+					2,
+					controlHeight,
+					defaultControlWidth,
 					vehicleControlWidth);
 		}
 
@@ -357,8 +464,14 @@ public class App {
 	 * @param defaultControlWidth az alap mezőszélesség
 	 * @param vehicleControlWidth a járműválasztó mező szélessége
 	 */
-	private static void addRowComponent(JPanel rowsPanel, Component component, int row, int column, int controlHeight,
-			int defaultControlWidth, int vehicleControlWidth) {
+	private static void addRowComponent(
+			JPanel rowsPanel,
+			Component component,
+			int row,
+			int column,
+			int controlHeight,
+			int defaultControlWidth,
+			int vehicleControlWidth) {
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.gridx = column;
 		gbc.gridy = row;
@@ -379,7 +492,11 @@ public class App {
 	 * @param row       a sor indexe
 	 * @param column    az oszlop indexe
 	 */
-	private static void addButton(JPanel rowsPanel, JButton button, int row, int column) {
+	private static void addButton(
+			JPanel rowsPanel,
+			JButton button,
+			int row,
+			int column) {
 		GridBagConstraints gbc = new GridBagConstraints();
 		gbc.gridx = column;
 		gbc.gridy = row;
@@ -418,7 +535,9 @@ public class App {
 	 * @param controlBorder a szövegmező keretszíne
 	 * @return az elkészített szövegmező
 	 */
-	private static JTextField createNameField(Font menuFont, Color controlBorder) {
+	private static JTextField createNameField(
+			Font menuFont,
+			Color controlBorder) {
 		JTextField nameField = new JTextField();
 		nameField.setFont(menuFont);
 		nameField.setBackground(Color.WHITE);
@@ -435,7 +554,10 @@ public class App {
 	 * @param controlBorder     a választómező keretszíne
 	 * @return az elkészített választómező
 	 */
-	private static JComboBox<String> createComboBox(String[] values, Font menuFont, Color controlBackground,
+	private static JComboBox<String> createComboBox(
+			String[] values,
+			Font menuFont,
+			Color controlBackground,
 			Color controlBorder) {
 		JComboBox<String> comboBox = new JComboBox<>(values);
 		comboBox.setFont(menuFont);
@@ -456,7 +578,10 @@ public class App {
 	 * @param controlBorder     a gomb keretszíne
 	 * @return az elkészített gomb
 	 */
-	private static JButton createMenuButton(String text, Font buttonFont, Color controlBackground,
+	private static JButton createMenuButton(
+			String text,
+			Font buttonFont,
+			Color controlBackground,
 			Color controlBorder) {
 		JButton button = new JButton(text);
 		button.setFont(buttonFont);
@@ -470,6 +595,7 @@ public class App {
 	 * Egyszerű, lekerekített sarkú keret Swing komponensekhez.
 	 */
 	private static class RoundedBorder extends AbstractBorder {
+
 		private final Color color;
 		private final int arc;
 
@@ -508,9 +634,17 @@ public class App {
 		 * {@inheritDoc}
 		 */
 		@Override
-		public void paintBorder(Component component, Graphics graphics, int x, int y, int width, int height) {
+		public void paintBorder(
+				Component component,
+				Graphics graphics,
+				int x,
+				int y,
+				int width,
+				int height) {
 			Graphics2D graphics2D = (Graphics2D) graphics.create();
-			graphics2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+			graphics2D.setRenderingHint(
+					RenderingHints.KEY_ANTIALIASING,
+					RenderingHints.VALUE_ANTIALIAS_ON);
 			graphics2D.setColor(color);
 			graphics2D.drawRoundRect(x, y, width - 1, height - 1, arc, arc);
 			graphics2D.dispose();
@@ -520,7 +654,9 @@ public class App {
 	/**
 	 * Belső margóval rendelkező listaelem-megjelenítő a választómezők elemeihez.
 	 */
-	private static class PaddedComboBoxRenderer extends DefaultListCellRenderer {
+	private static class PaddedComboBoxRenderer
+			extends DefaultListCellRenderer {
+
 		/**
 		 * Létrehoz egy belső margót használó választómező-renderert.
 		 */
@@ -531,12 +667,20 @@ public class App {
 		 * {@inheritDoc}
 		 */
 		@Override
-		public Component getListCellRendererComponent(JList<?> list, Object value, int index, boolean isSelected,
+		public Component getListCellRendererComponent(
+				JList<?> list,
+				Object value,
+				int index,
+				boolean isSelected,
 				boolean cellHasFocus) {
-			JLabel label = (JLabel) super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+			JLabel label = (JLabel) super.getListCellRendererComponent(
+					list,
+					value,
+					index,
+					isSelected,
+					cellHasFocus);
 			label.setBorder(BorderFactory.createEmptyBorder(0, 12, 0, 12));
 			return label;
 		}
 	}
-
 }
