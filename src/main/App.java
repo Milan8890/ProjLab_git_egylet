@@ -2,7 +2,7 @@ package main;
 
 import graphics.MainPanel;
 import graphics.NewMain;
-import graphics.OSCheckFrame;
+import graphics.OSVerifier.OSCheckFrame;
 import graphics.Panels.BusPanel;
 import graphics.Panels.MapPanel;
 import graphics.Panels.SnowplowerPanel;

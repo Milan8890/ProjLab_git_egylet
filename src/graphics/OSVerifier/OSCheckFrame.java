@@ -1,32 +1,31 @@
-package graphics;
+package graphics.OSVerifier;
 
 import java.awt.BorderLayout;
-import java.awt.Button;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Point;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Scanner;
-
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 
 public class OSCheckFrame extends JFrame {
-	private String OS;
+	private boolean isOsCorrect = false;
 
-	public OSCheckFrame(String CheckedOs, Point pos) {
-		OS = CheckedOs;
-		JTextField text = new JTextField();
-		text.setText(OS + "-t használsz?");
+	public OSCheckFrame(String CheckedOS, Point pos) {
+		isOsCorrect = realOS.toLowerCase().contains(CheckedOS.toLowerCase());
+
+		JLabel text = new JLabel();
+		text.setText(CheckedOS + "-t használsz?");
 		JButton yesButton = new JButton();
 		yesButton.setText("Igen");
 
@@ -36,7 +35,7 @@ public class OSCheckFrame extends JFrame {
 		yesButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if (OSCheckFrame.realOS.equals(OS)) {
+				if (isOsCorrect) {
 					OSCheckFrame.NOT_OK();
 				} else {
 					OSCheckFrame.OK();
@@ -47,7 +46,7 @@ public class OSCheckFrame extends JFrame {
 		noButton.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				if (OSCheckFrame.realOS.equals(OS)) {
+				if (isOsCorrect) {
 					OSCheckFrame.OK();
 				} else {
 					OSCheckFrame.NOT_OK();
@@ -55,7 +54,7 @@ public class OSCheckFrame extends JFrame {
 			}
 		});
 
-		this.setName(OS + " system check");
+		this.setTitle(CheckedOS + " system check");
 
 		// Set default close operation
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -103,7 +102,7 @@ public class OSCheckFrame extends JFrame {
 	private static OSCheckFrame boyton = null;
 	private static OSCheckFrame girlton = null;
 	private static boolean done = false;
-
+	private static List<Spamton> spamtonlings = new ArrayList<>();
 	private static String realOS;
 
 	/**
@@ -111,11 +110,21 @@ public class OSCheckFrame extends JFrame {
 	 * Válasz után automatikusan visszatér a függvény, és kilövi az ablakokat.
 	 */
 	public static void CheckOS() {
+		realOS = System.getProperty("os.name");
 		girlton = new OSCheckFrame("Windows", new Point(500, 500));
 		boyton = new OSCheckFrame("Linux", new Point(1000, 500));
-		realOS = System.getProperty("os.name");
+		Random r = new Random();
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		double chance = 0.1;
 		while (!done) {
 			try {
+				if (r.nextDouble() < chance) {
+					int x = r.nextInt(100, (int) screenSize.getWidth() - 500);
+					int y = r.nextInt(100, (int) screenSize.getHeight() - 500);
+					Spamton spamton = new Spamton(new Point(x, y));
+					spamtonlings.add(spamton);
+					chance += 0.05;
+				}
 				Thread.sleep(1000);
 			} catch (Exception e) {
 
@@ -123,6 +132,9 @@ public class OSCheckFrame extends JFrame {
 		}
 		girlton.dispose();
 		boyton.dispose();
+		for (var spamtonling : spamtonlings) {
+			spamtonling.dispose();
+		}
 	}
 
 	private static void OK() {
