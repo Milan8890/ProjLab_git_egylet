@@ -93,5 +93,43 @@ public class Bike extends Vehicle{
         this.isStuck = true;
 	}
 
+	@Override
+	protected boolean stepSlipOnIce() {
+		if (currentLane.getIce() > ICE_DANGER_LIMIT) {
+			Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: ice is thick enough",
+					new Object[] { this, currentLane });
+
+			if (currentLane.hasGravel() && currentLane.getSnow() <= SNOW_COVER_LEVEL) {
+				Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: has gravel",
+						new Object[] { this, currentLane });
+				Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: snow is thin enough, not slipping",
+						new Object[] { this, currentLane });
+				return true;
+			} else if (currentLane.hasGravel() && currentLane.getSnow() > SNOW_COVER_LEVEL) {
+				Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: has gravel",
+						new Object[] { this, currentLane });
+				Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: snow is too thick for gravel, slipping",
+						new Object[] { this, currentLane });
+			} else {
+				Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: doesn't have gravel, slipping",
+						new Object[] { this, currentLane });
+			}
+
+			if (World.getRandom(SLIP_CHANCE*10)) {
+				Logger.getGlobal().log(Level.INFO, "[Obj] slipping on [Obj]",
+						new Object[] { this, currentLane.getRoad() });
+				currentLane.getRoad().crashVehicle(this);
+
+				if (this.isCrashed) {
+					return false;
+				}
+			}
+		} else {
+			Logger.getGlobal().log(Level.INFO, "[Obj] slip check on [Obj]: ice is too thin, not slipping",
+					new Object[] { this, currentLane });
+		}
+
+		return true;
+	}
 
 }
