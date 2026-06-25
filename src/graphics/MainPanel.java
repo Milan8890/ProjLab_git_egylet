@@ -29,11 +29,13 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 import entities.Bus;
+import entities.Bike;
 import entities.Car;
 import entities.Snowplower;
 import entities.Vehicle;
 import graphics.ModelViews.BusView;
 import graphics.ModelViews.CarView;
+import graphics.ModelViews.BikeView;
 import graphics.ModelViews.CrossingView;
 import graphics.ModelViews.LaneView;
 import graphics.ModelViews.RoadView;
@@ -79,6 +81,7 @@ public class MainPanel extends JPanel {
 	private List<SnowplowerView> snowplowerViews = new ArrayList<>();
 	private List<BusView> busViews = new ArrayList<>();
 	private List<CarView> carViews = new ArrayList<>();
+	private List<BikeView> bikeViews = new ArrayList<>();
 
 	private JPanel activePlayerPanel;
 	private JComboBox<Player> playerSelectorComboBox;
@@ -379,6 +382,13 @@ public class MainPanel extends JPanel {
 			Car car = new Car(home, work);
 			City.getCars().add(car);
 			carViews.add(new CarView(car, this, colors[random.nextInt(colors.length)]));
+
+			if(i % 2 == 0)
+			{
+				Bike bike = new Bike();
+				City.getBikes().add(bike);
+				bikeViews.add(new BikeView(bike, this, colors[random.nextInt(colors.length)]));
+			}
 		}
 	}
 
@@ -667,6 +677,10 @@ public class MainPanel extends JPanel {
 	 */
 	public List<CarView> getCarViews() {
 		return carViews;
+	}
+
+		public List<BikeView> getBikeViews() {
+		return bikeViews;
 	}
 
 	/**

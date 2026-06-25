@@ -126,5 +126,9 @@ public class MapPanel extends JPanel {
 		for (CarView view : mainPanel.getCarViews()) {
 			view.paint((Graphics2D) g2d.create());
 		}
+
+		for (BikeView view : mainPanel.getBikeViews()) {
+			view.paint((Graphics2D) g2d.create());
+		}
 	}
 }
