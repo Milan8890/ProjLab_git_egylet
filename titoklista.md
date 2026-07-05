@@ -28,3 +28,4 @@
 - [ ] -> Subway surfers, ami teljesen játszható, legalább coinnokkal, high score-al.
 - [ ] -> "Realisztikus mód", megnyomod a buszon, és van hangja amikor megáll, lehet állítani a zenét valami zenelejátszón, de torzul, mert egy busz zenelejátszója, utasok köhögnek, stb
 - [ ] Github action/rule: LGTM comment automatikusan mergeli a branchet a titkosba
+- [ ] Foxy jumpscare 1/10000
