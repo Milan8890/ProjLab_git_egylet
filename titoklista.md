@@ -1,4 +1,4 @@
-- [ ] Kezdőképernyő húzható hókotróval mint a máriós valamibe (super mario 64, lehet húzni az arcát szegénynek)
+-- [ ] Kezdőképernyő húzható hókotróval mint a máriós valamibe (super mario 64, lehet húzni az arcát -szegénynek)
 - [ ] Privát dc csati
 - [ ] Adózás (mint az énekes?)
 - [ ] Minden nézzen ki szarul

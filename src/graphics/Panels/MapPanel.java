@@ -1,9 +1,11 @@
 package graphics.Panels;
 
 import javax.imageio.ImageIO;
+import javax.swing.JButton;
 import javax.swing.JPanel;
 
 import graphics.MainPanel;
+import graphics.Video;
 import graphics.ModelViews.*;
 
 import java.awt.Dimension;
@@ -28,8 +30,10 @@ public class MapPanel extends JPanel {
 
 	private static BufferedImage backgroundImg = null;
 
-	private static final int WIDTH = 1500;
-	private static final int HEIGHT = 1000;
+	//private static final int WIDTH = 1500;
+	//private static final int HEIGHT = 1000;
+	private static final int WIDTH = 750;
+	private static final int HEIGHT = 400;
 	
 	/**
 	 * Kép beolvasása.
@@ -78,6 +82,22 @@ public class MapPanel extends JPanel {
 		});
 
 		this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
+
+		// DELETE
+		Video v = new Video("./Asset/videos/boom.mp4", 100, 100);
+		this.setLayout(null);
+		this.add(v);
+		v.setVisible(true);
+
+		JButton playButton = new JButton("Trigger Video");
+        playButton.setBounds(20, 20, 150, 30);
+        playButton.addActionListener(e -> {
+                // Spawn and play the video at coordinates X: 200, Y: 150
+                v.Play(0, 0);
+            });
+            
+        this.add(playButton);
+		// DELETE
 	}
 
 	/**

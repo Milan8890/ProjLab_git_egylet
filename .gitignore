@@ -12,6 +12,8 @@
 
 # Package Files #
 *.jar
+*.so
+*.properties
 *.war
 *.nar
 *.ear
