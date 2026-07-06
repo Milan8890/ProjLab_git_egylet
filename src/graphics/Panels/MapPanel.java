@@ -30,17 +30,15 @@ public class MapPanel extends JPanel {
 
 	private static BufferedImage backgroundImg = null;
 
-	//private static final int WIDTH = 1500;
-	//private static final int HEIGHT = 1000;
-	private static final int WIDTH = 750;
-	private static final int HEIGHT = 400;
+	private static final int WIDTH = 1500;
+	private static final int HEIGHT = 1000;
 	
 	/**
 	 * Kép beolvasása.
 	 */
 	static private void readImage() { // EZZEL MIZU, SZTEM MAR MUKSZIK, HA IGEN A PR-NAL TOROLD LÉCCI??
 		try {
-				backgroundImg = ImageIO.read(new File("Asset/zuzmaravaros.png"));
+			backgroundImg = ImageIO.read(new File("Asset/zuzmaravaros.png"));
 		} catch (Exception e) {
 			Logger.getGlobal().severe("Nem sikerült beolvasni a hátteret");
 		}
