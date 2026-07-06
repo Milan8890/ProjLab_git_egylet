@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import graphics.MainPanel;
 import graphics.Video;
 import graphics.ModelViews.*;
+import javafx.scene.effect.BlendMode;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -16,6 +17,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.Random;
 import java.util.logging.Logger;
 
 /**

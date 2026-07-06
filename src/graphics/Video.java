@@ -4,6 +4,7 @@ import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.effect.BlendMode;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
@@ -12,8 +13,8 @@ import javax.swing.*;
 import java.io.File;
 
 public class Video extends JFXPanel {
-    private MediaPlayer mediaPlayer;
-    private MediaView mediaView;
+    public MediaPlayer mediaPlayer;
+    public MediaView mediaView;
     private final int width;
     private final int height;
 
@@ -38,7 +39,6 @@ public class Video extends JFXPanel {
                 Media media = new Media(file.toURI().toString());
                 mediaPlayer = new MediaPlayer(media);
                 mediaView = new MediaView(mediaPlayer);
-
                 // Set dimensions
                 mediaView.setFitWidth(width);
                 mediaView.setFitHeight(height);
