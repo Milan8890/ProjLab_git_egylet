@@ -3,6 +3,7 @@ package graphics.Panels;
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.Timer;
 
 import graphics.MainPanel;
 import graphics.Video;
@@ -12,7 +13,12 @@ import javafx.scene.effect.BlendMode;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.KeyEventDispatcher;
+import java.awt.KeyboardFocusManager;
 import java.awt.RenderingHints;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
@@ -35,13 +41,15 @@ public class MapPanel extends JPanel {
 
 	private static final int WIDTH = 1500;
 	private static final int HEIGHT = 1000;
-	
+
+	private static Video szaboAndrasVideo = new Video("./Asset/videos/szaboandrasqte.mp4", WIDTH, HEIGHT);
+
 	/**
 	 * Kép beolvasása.
 	 */
 	static private void readImage() { // EZZEL MIZU, SZTEM MAR MUKSZIK, HA IGEN A PR-NAL TOROLD LÉCCI??
 		try {
-				backgroundImg = ImageIO.read(new File("Asset/zuzmaravaros.png"));
+			backgroundImg = ImageIO.read(new File("Asset/zuzmaravaros.png"));
 		} catch (Exception e) {
 			Logger.getGlobal().severe("Nem sikerült beolvasni a hátteret");
 		}
@@ -55,6 +63,7 @@ public class MapPanel extends JPanel {
 	 */
 	Video v;
 	Video foxy;
+
 	public MapPanel(MainPanel mainPanel) {
 		this.mainPanel = mainPanel;
 		instance = this;
@@ -94,7 +103,7 @@ public class MapPanel extends JPanel {
 		v.setVisible(false);
 
 		// ÚJRAHASZNOSíTANI
-		foxy = new Video("./Asset/videos/foxy.mp4", 854, 480);
+		foxy = new Video("./Asset/videos/foxy.mp4", WIDTH, HEIGHT);
 		this.add(foxy);
 		foxy.setVisible(false);
 
@@ -105,6 +114,73 @@ public class MapPanel extends JPanel {
 			foxy.Play(0, 0);
 		});
 		this.add(foxyButton);
+
+		startAndras();
+	}
+
+	private void game_over() {
+		Video game_over = new Video("./Asset/videos/szaboandrasgameover.mp4", WIDTH, HEIGHT);
+		szaboAndrasVideo.Stop();
+
+		this.add(game_over);
+		game_over.setVisible(true);
+		game_over.Play(0, 0);
+		Timer t = new Timer(5000, e -> {
+			System.exit(0);
+		});
+		t.start();
+	}
+
+	/**
+	 * Elindítja a rettentő Szabó Andrást
+	 */
+	private void startAndras() {
+
+		this.add(szaboAndrasVideo);
+		szaboAndrasVideo.setVisible(false);
+		MouseAdapter dangerlistener = new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				game_over();
+			}
+		};
+		KeyEventDispatcher dangerkey = new KeyEventDispatcher() {
+			@Override
+			public boolean dispatchKeyEvent(KeyEvent e) {
+				// Csak a lenyomásra reagálunk (KEY_PRESSED), a felengedésre nem
+				if (e.getID() == KeyEvent.KEY_PRESSED) {
+					game_over();
+				}
+				// false-t adunk vissza, hogy a Swing normálisan továbbküldje az eseményt a
+				// komponenseknek is
+				return false;
+			}
+		};
+
+		Random rand = new Random();
+
+		int delaySec = 30 + rand.nextInt(150);
+
+		int delay = delaySec * 1000;
+		Timer timer = new Timer(delay, e -> {
+			szaboAndrasVideo.setVisible(true);
+			szaboAndrasVideo.Play(0, 0);
+
+			Timer t2 = new Timer(2000, a -> {
+				szaboAndrasVideo.addMouseListener(dangerlistener);
+				KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(dangerkey);
+				Timer t3 = new Timer(12000, b -> {
+					szaboAndrasVideo.removeMouseListener(dangerlistener);
+					KeyboardFocusManager.getCurrentKeyboardFocusManager().removeKeyEventDispatcher(dangerkey);
+				});
+				t3.setRepeats(false);
+				t3.start();
+			});
+			t2.setRepeats(false);
+			t2.start();
+		});
+		timer.setRepeats(false);
+		timer.start();
 	}
 
 	/**
@@ -159,8 +235,7 @@ public class MapPanel extends JPanel {
 		}
 	}
 
-	public void boom(int x, int y)
-	{
+	public void boom(int x, int y) {
 		v.setVisible(true);
 		v.Play(x, y);
 	}

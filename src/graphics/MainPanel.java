@@ -383,8 +383,7 @@ public class MainPanel extends JPanel {
 			City.getCars().add(car);
 			carViews.add(new CarView(car, this, colors[random.nextInt(colors.length)]));
 
-			if(i % 2 == 0)
-			{
+			if (i % 2 == 0) {
 				Bike bike = new Bike();
 				City.getBikes().add(bike);
 				bikeViews.add(new BikeView(bike, this, colors[random.nextInt(colors.length)]));
@@ -679,7 +678,7 @@ public class MainPanel extends JPanel {
 		return carViews;
 	}
 
-		public List<BikeView> getBikeViews() {
+	public List<BikeView> getBikeViews() {
 		return bikeViews;
 	}
 

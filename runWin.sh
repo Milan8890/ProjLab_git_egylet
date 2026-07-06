@@ -1,3 +1,3 @@
 javac --module-path lib --add-modules javafx.controls,javafx.media,javafx.swing,javafx.graphics,javafx.fxml -d bin src/entities/*.java src/equipment/*.java src/equipment/heads/*.java src/main/*.java src/playground/*.java src/user/*.java src/graphics/OSVerifier/*.java src/graphics/*.java src/graphics/Panels/*.java src/graphics/ModelViews/*.java
 
-java --module-path lib --add-modules javafx.controls,javafx.media,javafx.swing,javafx.graphics,javafx.fxml -Djava.library.path="D:\LE\openjfx-21.0.11_windows-x64_bin-sdk\javafx-sdk-21.0.11\bin" -cp bin main.App
+java --module-path lib --add-modules javafx.controls,javafx.media,javafx.swing,javafx.graphics,javafx.fxml -Djava.library.path="C:\Program Files\openjfx-21.0.11_windows-x64_bin-sdk\javafx-sdk-21.0.11\bin" -cp bin main.App
