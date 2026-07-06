@@ -171,7 +171,6 @@ public class MapPanel extends JPanel {
 				Timer t3 = new Timer(12000, b -> {
 					szaboAndrasVideo.removeMouseListener(dangerlistener);
 					KeyboardFocusManager.getCurrentKeyboardFocusManager().removeKeyEventDispatcher(dangerkey);
-					System.err.println("SAFE");
 				});
 				t3.setRepeats(false);
 				t3.start();
