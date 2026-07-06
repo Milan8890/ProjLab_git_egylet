@@ -52,6 +52,7 @@ public class MapPanel extends JPanel {
 	 * @param mainPanel
 	 */
 	Video v;
+	Video foxy;
 	public MapPanel(MainPanel mainPanel) {
 		this.mainPanel = mainPanel;
 		instance = this;
@@ -89,6 +90,19 @@ public class MapPanel extends JPanel {
 		this.setLayout(null);
 		this.add(v);
 		v.setVisible(false);
+
+		// ÚJRAHASZNOSíTANI
+		foxy = new Video("./Asset/videos/foxy.mp4", 854, 480);
+		this.add(foxy);
+		foxy.setVisible(false);
+
+		JButton foxyButton = new JButton("Foxy");
+		foxyButton.setBounds(10, 10, 80, 30);
+		foxyButton.addActionListener(e -> {
+			foxy.setVisible(true);
+			foxy.Play(0, 0);
+		});
+		this.add(foxyButton);
 	}
 
 	/**
