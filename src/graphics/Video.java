@@ -43,6 +43,18 @@ public class Video extends JFXPanel {
                 mediaView.setFitWidth(width);
                 mediaView.setFitHeight(height);
 
+                mediaPlayer.setOnEndOfMedia(() -> {
+                    SwingUtilities.invokeLater(() -> {
+                        this.setVisible(false);
+                        
+                        // Refresh the parent container so Swing updates visually
+                        if (getParent() != null) {
+                            getParent().revalidate();
+                            getParent().repaint();
+                        }
+                    });
+                });
+
                 // Create the scene graph
                 Group root = new Group(mediaView);
                 Scene scene = new Scene(root, width, height);

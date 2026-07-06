@@ -27,6 +27,7 @@ import java.util.logging.Logger;
  */
 public class MapPanel extends JPanel {
 	MainPanel mainPanel = null;
+	public static MapPanel instance;
 
 	private static BufferedImage backgroundImg = null;
 
@@ -38,7 +39,7 @@ public class MapPanel extends JPanel {
 	 */
 	static private void readImage() { // EZZEL MIZU, SZTEM MAR MUKSZIK, HA IGEN A PR-NAL TOROLD LÉCCI??
 		try {
-			backgroundImg = ImageIO.read(new File("Asset/zuzmaravaros.png"));
+				backgroundImg = ImageIO.read(new File("Asset/zuzmaravaros.png"));
 		} catch (Exception e) {
 			Logger.getGlobal().severe("Nem sikerült beolvasni a hátteret");
 		}
@@ -50,8 +51,11 @@ public class MapPanel extends JPanel {
 	 * 
 	 * @param mainPanel
 	 */
+	Video v;
 	public MapPanel(MainPanel mainPanel) {
 		this.mainPanel = mainPanel;
+		instance = this;
+
 		if (backgroundImg == null) {
 			readImage();
 		}
@@ -81,21 +85,10 @@ public class MapPanel extends JPanel {
 
 		this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
 
-		// DELETE
-		Video v = new Video("./Asset/videos/boom.mp4", 100, 100);
+		v = new Video("./Asset/videos/boom.mp4", 50, 30);
 		this.setLayout(null);
 		this.add(v);
-		v.setVisible(true);
-
-		JButton playButton = new JButton("Trigger Video");
-        playButton.setBounds(20, 20, 150, 30);
-        playButton.addActionListener(e -> {
-                // Spawn and play the video at coordinates X: 200, Y: 150
-                v.Play(0, 0);
-            });
-            
-        this.add(playButton);
-		// DELETE
+		v.setVisible(false);
 	}
 
 	/**
@@ -149,4 +142,11 @@ public class MapPanel extends JPanel {
 			view.paint((Graphics2D) g2d.create());
 		}
 	}
+
+	public void boom(int x, int y)
+	{
+		v.setVisible(true);
+		v.Play(x, y);
+	}
+
 }

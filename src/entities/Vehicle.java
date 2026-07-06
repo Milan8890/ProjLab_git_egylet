@@ -70,6 +70,11 @@ public abstract class Vehicle {
 		this.revTimer = 0;
 	}
 
+	public boolean isCrashed() {
+		return isCrashed;
+	}
+
+
 	/**
 	 * Minden órajelkor meghívódó függvény, kezeli a járművek mozgását.
 	 * Sorban meghívja az alábbi függvényeket. Az egyes lépések igazzal

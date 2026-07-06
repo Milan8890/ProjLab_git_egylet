@@ -18,6 +18,7 @@ import javax.swing.WindowConstants;
 import playground.Crossing;
 import playground.Lane;
 import graphics.MainPanel;
+import graphics.Panels.MapPanel;
 import entities.Car;
 
 /**
@@ -63,10 +64,11 @@ public class CarView {
 	 *
 	 * @param g a rajzoláshoz használt grafikus kontextus
 	 */
+	boolean crashed = false;
 	public void paint(Graphics2D g) {
 		if (carImage == null)
 			return;
-
+		
 		Lane currentLane = modelCar.getCurrentLane();
 		double carX, carY, szog;
 
@@ -143,6 +145,15 @@ public class CarView {
 				null);
 
 		g2.dispose();
+
+		if(modelCar.isCrashed() && !crashed) {
+			crashed = true;
+			MapPanel.instance.boom((int)carX, (int)carY);
+		}
+		else if(!modelCar.isCrashed())
+			crashed = false;
+
+
 	}
 
 	/**
