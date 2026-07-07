@@ -213,6 +213,7 @@ public class MapPanel extends JPanel {
 		int delaySec = 30 + rand.nextInt(150);
 
 		int delay = delaySec * 1000;
+
 		Timer timer = new Timer(delay, e -> {
 			szaboAndrasVideo.setVisible(true);
 			szaboAndrasVideo.Play(0, 0);
@@ -230,7 +231,6 @@ public class MapPanel extends JPanel {
 			t2.setRepeats(false);
 			t2.start();
 		});
-		timer.setRepeats(false);
 		timer.start();
 	}
 
