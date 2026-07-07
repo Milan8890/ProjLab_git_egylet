@@ -119,7 +119,6 @@ public class MapPanel extends JPanel {
 					return;
 				}
 				vonszolt = selected;
-				System.err.println("Vonszolt beállítva");
 			}
 
 			@Override
