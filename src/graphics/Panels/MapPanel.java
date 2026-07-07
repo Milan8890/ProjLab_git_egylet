@@ -133,6 +133,7 @@ public class MapPanel extends JPanel {
 
 		});
 
+		// TODO menjen
 		this.addMouseMotionListener(new MouseAdapter() {
 			@Override
 			public void mouseMoved(MouseEvent e) {
