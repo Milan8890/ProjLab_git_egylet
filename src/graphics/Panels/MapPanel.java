@@ -119,6 +119,7 @@ public class MapPanel extends JPanel {
 					return;
 				}
 				vonszolt = selected;
+				System.err.println("Vonszolt beállítva");
 			}
 
 			@Override
@@ -133,13 +134,12 @@ public class MapPanel extends JPanel {
 
 		});
 
-		// TODO menjen
 		this.addMouseMotionListener(new MouseAdapter() {
 			@Override
-			public void mouseMoved(MouseEvent e) {
-				if (vonszolt == null)
+			public void mouseDragged(MouseEvent e) {
+				if (vonszolt == null) {
 					return;
-				System.err.println("Asd");
+				}
 				int x = e.getX();
 				int y = e.getY();
 				vonszolt.move(x - MainPanel.CROSSING_SIZE / 2, y - MainPanel.CROSSING_SIZE / 2);
