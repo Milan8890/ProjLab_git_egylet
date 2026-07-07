@@ -3,12 +3,14 @@ package graphics.Panels;
 import javax.imageio.ImageIO;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 
 import graphics.MainPanel;
 import graphics.Video;
 import graphics.ModelViews.*;
 import javafx.scene.effect.BlendMode;
+import javafx.scene.input.MouseButton;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
@@ -21,6 +23,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Random;
@@ -41,6 +44,8 @@ public class MapPanel extends JPanel {
 
 	private static final int WIDTH = 1500;
 	private static final int HEIGHT = 1000;
+
+	private static CrossingView vonszolt = null;
 
 	private static Video szaboAndrasVideo = new Video("./Asset/videos/szaboandrasqte.mp4", WIDTH, HEIGHT);
 
@@ -84,7 +89,7 @@ public class MapPanel extends JPanel {
 				int y = e.getY();
 
 				for (CrossingView view : mainPanel.getCrossingViews()) {
-					if (view.isClicked(x, y))
+					if (view.isClickedAndPerformSomeDumbAction(x, y))
 						return;
 				}
 
@@ -92,6 +97,51 @@ public class MapPanel extends JPanel {
 					if (view.isClicked(x, y))
 						return;
 				}
+			}
+
+			@Override
+			public void mousePressed(MouseEvent e) {
+				int x = e.getX();
+				int y = e.getY();
+
+				if (vonszolt != null) {
+					System.err.println("Minek vagy itt");
+					return;
+				}
+
+				CrossingView selected = null;
+				for (CrossingView view : mainPanel.getCrossingViews()) {
+					if (view.isClicked(x, y)) {
+						selected = view;
+					}
+				}
+				if (selected == null) {
+					return;
+				}
+				vonszolt = selected;
+			}
+
+			@Override
+			public void mouseReleased(MouseEvent e) {
+				if (vonszolt == null)
+					return;
+				int x = e.getX();
+				int y = e.getY();
+				vonszolt.move(x - MainPanel.CROSSING_SIZE / 2, y - MainPanel.CROSSING_SIZE / 2);
+				vonszolt = null;
+			}
+
+		});
+
+		this.addMouseMotionListener(new MouseAdapter() {
+			@Override
+			public void mouseMoved(MouseEvent e) {
+				if (vonszolt == null)
+					return;
+				System.err.println("Asd");
+				int x = e.getX();
+				int y = e.getY();
+				vonszolt.move(x - MainPanel.CROSSING_SIZE / 2, y - MainPanel.CROSSING_SIZE / 2);
 			}
 		});
 
@@ -116,6 +166,7 @@ public class MapPanel extends JPanel {
 		this.add(foxyButton);
 
 		startAndras();
+
 	}
 
 	private void game_over() {

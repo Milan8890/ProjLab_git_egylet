@@ -2,6 +2,9 @@ package graphics.ModelViews;
 
 import java.awt.Graphics2D;
 import java.awt.geom.Point2D;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 import entities.Bus;
 
@@ -11,7 +14,9 @@ import java.awt.BasicStroke;
 import playground.City;
 import playground.Crossing;
 import playground.Lane;
+import playground.Road;
 import graphics.MainPanel;
+import graphics.Panels.MapPanel;
 
 /**
  * Egy kereszteződés grafikus nézetét megvalósító osztály.
@@ -31,10 +36,10 @@ public class CrossingView {
 	 * Létrehozza a kereszteződés grafikus nézetét a hozzá tartozó modellel,
 	 * pozícióval, bázisjelöléssel és főpanel-hivatkozással.
 	 *
-	 * @param modelCrossing   a megjelenített kereszteződés modellobjektuma
-	 * @param pos             a kereszteződés kirajzolási pozíciója
+	 * @param modelCrossing    a megjelenített kereszteződés modellobjektuma
+	 * @param pos              a kereszteződés kirajzolási pozíciója
 	 * @param isSnowplowerBase jelzi, hogy a kereszteződés hókotróbázis-e
-	 * @param mainPanel       a főpanel, amelyből az aktuális kijelölések elérhetők
+	 * @param mainPanel        a főpanel, amelyből az aktuális kijelölések elérhetők
 	 */
 	public CrossingView(Crossing modelCrossing, Point2D pos, boolean isSnowplowerBase, MainPanel mainPanel) {
 		this.modelCrossing = modelCrossing;
@@ -53,7 +58,8 @@ public class CrossingView {
 	}
 
 	/**
-	 * Megvizsgálja, hogy ez a kereszteződés az aktívan kiválasztott busz első végállomása-e.
+	 * Megvizsgálja, hogy ez a kereszteződés az aktívan kiválasztott busz első
+	 * végállomása-e.
 	 *
 	 * @return {@code true}, ha ez a kiválasztott busz első végállomása, egyébként
 	 *         {@code false}
@@ -118,17 +124,17 @@ public class CrossingView {
 		}
 		boolean isSnowplowerBase = modelCrossing == City.getSnowplowBase();
 
-//SZERINTEM OKÉSAK A SZÍNEK, ÚGY VAN KB ÖSSZERAKVA, 
-// HOGY A PÁLYA, AUTÓ ÉS EGYÉB JÁRMŰ SZÍNEK ELTÉRJENEK, DE LEHET CSERELGETNI.
+		// SZERINTEM OKÉSAK A SZÍNEK, ÚGY VAN KB ÖSSZERAKVA,
+		// HOGY A PÁLYA, AUTÓ ÉS EGYÉB JÁRMŰ SZÍNEK ELTÉRJENEK, DE LEHET CSERELGETNI.
 		// TODO ha rondák a színek, változtatni!
 		// Szín állítása az alapján, hogy
 		if (isSelectedCrossing) {
 			// Éppen ez van-e kiválasztva
 			g2.setColor(Color.YELLOW);
-		} else if (isSelectedBusStationA() ) {
+		} else if (isSelectedBusStationA()) {
 			// Kiválasztott busz első megállója-e.
 			g2.setColor(new Color(102, 255, 255));
-		} else if (isSelectedBusStationB() ) {
+		} else if (isSelectedBusStationB()) {
 			// Kiválasztott busz második megállója-e.
 			g2.setColor(new Color(178, 102, 255));
 		} else if (isInPathCrossing) {
@@ -164,9 +170,10 @@ public class CrossingView {
 	 *
 	 * @param x a kattintás x koordinátája
 	 * @param y a kattintás y koordinátája
-	 * @return {@code true}, ha a kattintás elég közel van a kereszteződéshez, amúgy {@code false}
+	 * @return {@code true}, ha a kattintás elég közel van a kereszteződéshez, amúgy
+	 *         {@code false}
 	 */
-	public boolean isClicked(int x, int y) {
+	public boolean isClickedAndPerformSomeDumbAction(int x, int y) {
 		if (!updatePos())
 			return false;
 		if (mainPanel == null || !mainPanel.getIsExtendingPath())
@@ -180,5 +187,50 @@ public class CrossingView {
 		mainPanel.setSelectedCrossing(modelCrossing);
 		mainPanel.repaint();
 		return true;
+	}
+
+	/**
+	 * Egy függvény ami tényleg azt csinálja, ami rá van írva.
+	 * Azaz visszaadja, hogy rá kattintottak-e.
+	 */
+	public boolean isClicked(int x, int y) {
+		if (!updatePos())
+			return false;
+		if (mainPanel == null)
+			return false;
+
+		Point2D.Double center = MainPanel.calculateCenter(this);
+		double radius = MainPanel.CROSSING_SIZE / 2.0;
+		if (center.distance(x, y) > radius)
+			return false;
+
+		return true;
+	}
+
+	public void move(double x, double y) {
+		this.pos.setLocation(x, y);
+
+		ArrayList<Road> changingRoads = new ArrayList<>();
+		for (Road r : City.roads) {
+			if (r.getFromCrossing().equals(this.getCrossing()) || r.getToCrossing().equals(this.getCrossing())) {
+				changingRoads.add(r);
+			}
+		}
+
+		for (Road r : changingRoads) {
+			for (RoadView rw : MainPanel.roadViews) {
+				if (rw.modelRoad.equals(r)) {
+					rw.recalculatePosition();
+					for (Lane l : rw.modelRoad.getLanes()) {
+						for (LaneView lw : MainPanel.laneViews) {
+							if (lw.modelLane.equals(l)) {
+								lw.recalculatePosition();
+							}
+						}
+					}
+				}
+			}
+		}
+
 	}
 }

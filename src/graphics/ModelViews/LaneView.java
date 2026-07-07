@@ -4,6 +4,7 @@ import java.awt.Graphics2D;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.util.List;
 import java.util.logging.Logger;
 
 import javax.imageio.ImageIO;
@@ -15,6 +16,7 @@ import java.awt.BasicStroke;
 
 import graphics.NewMain;
 import playground.Lane;
+import playground.Road;
 import graphics.MainPanel;
 
 /**
@@ -68,7 +70,7 @@ public class LaneView {
 	public Point2D startPos;
 	public Point2D endPos;
 
-	private Lane modelLane;
+	public Lane modelLane;
 	private MainPanel mainPanel;
 
 	/**
@@ -242,5 +244,75 @@ public class LaneView {
 			}
 		}
 		return legjobbIndex;
+	}
+
+	public void recalculatePosition() {
+		RoadView roadView = null;
+		for (RoadView rw : MainPanel.roadViews) {
+			if (rw.modelRoad.equals(this.modelLane.getRoad())) {
+				roadView = rw;
+			}
+		}
+		if (roadView == null)
+			return;
+
+		int i = 0;
+		for (i = 0; i < roadView.modelRoad.getLanes().size(); i++) {
+			Lane l = roadView.modelRoad.getLanes().get(i);
+			if (l.equals(this.modelLane)) {
+				break;
+			}
+		}
+
+		Point2D.Double utEleje = new Point2D.Double(roadView.startPos.getX(), roadView.startPos.getY());
+		Point2D.Double utVege = new Point2D.Double(roadView.endPos.getX(), roadView.endPos.getY());
+
+		double dx = utVege.x - utEleje.x;
+		double dy = utVege.y - utEleje.y;
+		double utHossz = Math.sqrt(dx * dx + dy * dy);
+		if (utHossz == 0)
+			return;
+		double uX = dx / utHossz;
+		double uY = dy / utHossz;
+
+		double nX = -uY;
+		double nY = uX;
+		double merolegesEltolas = 2.5 + (i * MainPanel.LANE_WIDTH);
+		double savStartX = utEleje.x + (nX * merolegesEltolas) - (uX * 2.5);
+		double savStartY = utEleje.y + (nY * merolegesEltolas) - (uY * 2.5);
+		double savEndX = utVege.x + (nX * merolegesEltolas) + (uX * 2.5);
+		double savEndY = utVege.y + (nY * merolegesEltolas) + (uY * 2.5);
+
+		Point2D.Double laneStart = new Point2D.Double(savStartX, savStartY);
+		Point2D.Double laneEnd = new Point2D.Double(savEndX, savEndY);
+
+		this.startPos = laneStart;
+		this.endPos = laneEnd;
+	}
+
+	private void generateAndAddLaneViews(Road road, Point2D.Double utEleje, Point2D.Double utVege) {
+		double dx = utVege.x - utEleje.x;
+		double dy = utVege.y - utEleje.y;
+		double utHossz = Math.sqrt(dx * dx + dy * dy);
+		if (utHossz == 0)
+			return;
+		double uX = dx / utHossz;
+		double uY = dy / utHossz;
+
+		double nX = -uY;
+		double nY = uX;
+		List<Lane> modelLanes = road.getLanes();
+		for (int i = 0; i < modelLanes.size(); i++) {
+			double merolegesEltolas = 2.5 + (i * MainPanel.LANE_WIDTH);
+			double savStartX = utEleje.x + (nX * merolegesEltolas) - (uX * 2.5);
+			double savStartY = utEleje.y + (nY * merolegesEltolas) - (uY * 2.5);
+			double savEndX = utVege.x + (nX * merolegesEltolas) + (uX * 2.5);
+			double savEndY = utVege.y + (nY * merolegesEltolas) + (uY * 2.5);
+
+			Point2D.Double laneStart = new Point2D.Double(savStartX, savStartY);
+			Point2D.Double laneEnd = new Point2D.Double(savEndX, savEndY);
+
+			// laneViews.add(new LaneView(modelLanes.get(i), laneStart, laneEnd, this));
+		}
 	}
 }

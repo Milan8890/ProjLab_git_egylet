@@ -75,13 +75,14 @@ public class MainPanel extends JPanel {
 	private Snowplower selectedSnowplower;
 	private Crossing selectedCrossing;
 
-	private List<CrossingView> crossingViews = new ArrayList<>();
-	private List<RoadView> roadViews = new ArrayList<>();
-	private List<LaneView> laneViews = new ArrayList<>();
-	private List<SnowplowerView> snowplowerViews = new ArrayList<>();
-	private List<BusView> busViews = new ArrayList<>();
-	private List<CarView> carViews = new ArrayList<>();
-	private List<BikeView> bikeViews = new ArrayList<>();
+	// Kellett máshol
+	public static List<CrossingView> crossingViews = new ArrayList<>();
+	public static List<RoadView> roadViews = new ArrayList<>();
+	public static List<LaneView> laneViews = new ArrayList<>();
+	public static List<SnowplowerView> snowplowerViews = new ArrayList<>();
+	public static List<BusView> busViews = new ArrayList<>();
+	public static List<CarView> carViews = new ArrayList<>();
+	public static List<BikeView> bikeViews = new ArrayList<>();
 
 	private JPanel activePlayerPanel;
 	private JComboBox<Player> playerSelectorComboBox;
@@ -452,7 +453,7 @@ public class MainPanel extends JPanel {
 	 * @return a kiszámolt útvégpontok tömbje, vagy {@code null}, ha a két pont
 	 *         azonos
 	 */
-	private Point2D.Double[] calculateRoadEndPoints(Point2D.Double kp1, Point2D.Double kp2) {
+	public static Point2D.Double[] calculateRoadEndPoints(Point2D.Double kp1, Point2D.Double kp2) {
 		double dx = kp2.x - kp1.x;
 		double dy = kp2.y - kp1.y;
 		double kozepTavolsag = Math.sqrt(dx * dx + dy * dy);
@@ -615,7 +616,7 @@ public class MainPanel extends JPanel {
 	 *
 	 * @return a kereszteződés nézetek listája
 	 */
-	public CrossingView getCrossingView(Crossing c) {
+	public static CrossingView getCrossingView(Crossing c) {
 		for (CrossingView cv : crossingViews) {
 			if (cv.getCrossing() == c) {
 				return cv;
