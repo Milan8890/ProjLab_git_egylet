@@ -6,7 +6,7 @@
 - [ ] Valami minigame az unstuckhoz
 - [ ] Dbd skill check a kicsúszásra a buszhoz
 - [ ] Úgy összehívni a csapatot, hogy nem szólunk össze nekik, nem tudják hogy projlabos
-- [ ] Utak mozgatása
+- [x] Utak mozgatása
 - [ ] Lassan összeáll rickrollá
 - [ ] Karambol kritelhet, megöli
 - [ ] Ilyenkor egy perc néma csönd a halottnak, meg egy nyugodjon békében felirat

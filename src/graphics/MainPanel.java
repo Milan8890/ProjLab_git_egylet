@@ -7,6 +7,8 @@ import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
+import java.awt.KeyEventDispatcher;
+import java.awt.KeyboardFocusManager;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
@@ -27,6 +29,7 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+import javax.swing.Timer;
 
 import entities.Bus;
 import entities.Bike;
@@ -64,6 +67,8 @@ public class MainPanel extends JPanel {
 	public static final int LANE_WIDTH = 20;
 	public static final float CROSSING_STROKE = 6f;
 	private static final int CAR_NUM = 30;
+
+	public static Timer mainTickTimer;
 
 	private List<Cleaner> cleaners = new ArrayList<>();
 	private List<BusDriver> busDrivers = new ArrayList<>();
@@ -184,6 +189,33 @@ public class MainPanel extends JPanel {
 		add(sidePanel, BorderLayout.EAST);
 
 		startGameLoop();
+		startZaWarudo();
+	}
+
+	private static Sound zaWarudoStoppingSound = new Sound("Asset/sounds/zawarudo_stop.mp3");
+
+	/**
+	 * Játék megállítása space-el + menő hangeffekt
+	 */
+	private void startZaWarudo() {
+
+		KeyEventDispatcher spaceEvent = new KeyEventDispatcher() {
+			@Override
+			public boolean dispatchKeyEvent(KeyEvent e) {
+				// Csak a lenyomásra reagálunk (KEY_PRESSED), a felengedésre nem
+				if (e.getID() == KeyEvent.KEY_PRESSED) {
+					if (e.getKeyChar() == ' ') {
+						System.err.println("Space pressed, playing cool sound effect");
+						zaWarudoStoppingSound.Play();
+					}
+				}
+				// false-t adunk vissza, hogy a Swing normálisan továbbküldje az eseményt a
+				// komponenseknek is
+				return false;
+			}
+		};
+
+		KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(spaceEvent);
 	}
 
 	/**
@@ -554,8 +586,7 @@ public class MainPanel extends JPanel {
 	private void startGameLoop() {
 		World.setIsSnowing(true); // Bekapcsolja a havazást.
 		int delay = 50;
-
-		javax.swing.Timer timer = new javax.swing.Timer(delay, e -> {
+		mainTickTimer = new javax.swing.Timer(delay, e -> {
 			World.tick();
 			playerData.setText(getActivePlayerDataText());
 			mapPanel.repaint();
@@ -565,7 +596,7 @@ public class MainPanel extends JPanel {
 			}
 		});
 
-		timer.start();
+		mainTickTimer.start();
 	}
 
 	/**

@@ -166,7 +166,6 @@ public class MapPanel extends JPanel {
 		this.add(foxyButton);
 
 		startAndras();
-
 	}
 
 	private void game_over() {
