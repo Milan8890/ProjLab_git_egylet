@@ -192,7 +192,7 @@ public class MainPanel extends JPanel {
 		startZaWarudo();
 	}
 
-	private static Sound zaWarudoStoppingSound = new Sound("Asset/sounds/zawarudo_stop.mp3");
+	private static Sound zaWarudoStoppingSound;
 
 	/**
 	 * Játék megállítása space-el + menő hangeffekt
@@ -206,6 +206,7 @@ public class MainPanel extends JPanel {
 				if (e.getID() == KeyEvent.KEY_PRESSED) {
 					if (e.getKeyChar() == ' ') {
 						System.err.println("Space pressed, playing cool sound effect");
+						zaWarudoStoppingSound = new Sound("Asset/sounds/zawarudo_stop.mp3");
 						zaWarudoStoppingSound.Play();
 					}
 				}
