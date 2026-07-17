@@ -68,6 +68,7 @@ public class MainPanel extends JPanel {
 	public static final float CROSSING_STROKE = 6f;
 	private static final int CAR_NUM = 30;
 
+	// za warudo
 	public static Timer mainTickTimer;
 
 	private List<Cleaner> cleaners = new ArrayList<>();
@@ -192,12 +193,18 @@ public class MainPanel extends JPanel {
 		startZaWarudo();
 	}
 
+	// true: felfele megy, amíg 50-et el nem éri
+	// false: lefele megy, amíg 0-t el nem éri
+	public static boolean zaWarudoStopping = false;
 	private static Sound zaWarudoStoppingSound;
+	private static Sound zaWarudoResumingSound;
 
 	/**
 	 * Játék megállítása space-el + menő hangeffekt
 	 */
 	private void startZaWarudo() {
+		zaWarudoResumingSound = new Sound("Asset/sounds/zawarudo_stop.mp3");
+		zaWarudoStoppingSound = new Sound("Asset/sounds/zawarudo_resume.mp3");
 
 		KeyEventDispatcher spaceEvent = new KeyEventDispatcher() {
 			@Override
@@ -205,9 +212,12 @@ public class MainPanel extends JPanel {
 				// Csak a lenyomásra reagálunk (KEY_PRESSED), a felengedésre nem
 				if (e.getID() == KeyEvent.KEY_PRESSED) {
 					if (e.getKeyChar() == ' ') {
-						System.err.println("Space pressed, playing cool sound effect");
-						zaWarudoStoppingSound = new Sound("Asset/sounds/zawarudo_stop.mp3");
-						zaWarudoStoppingSound.Play();
+						if (zaWarudoStopping) {
+							zaWarudoStoppingSound.Play();
+						} else {
+							zaWarudoResumingSound.Play();
+						}
+						zaWarudoStopping = !zaWarudoStopping;
 					}
 				}
 				// false-t adunk vissza, hogy a Swing normálisan továbbküldje az eseményt a
@@ -588,13 +598,28 @@ public class MainPanel extends JPanel {
 		World.setIsSnowing(true); // Bekapcsolja a havazást.
 		int delay = 50;
 		mainTickTimer = new javax.swing.Timer(delay, e -> {
-			World.tick();
+			if (zaWarudoStopping) {
+				if (mainTickTimer.getDelay() < 250) {
+					mainTickTimer.setDelay(mainTickTimer.getDelay() + 10);
+				}
+			} else {
+				if (mainTickTimer.getDelay() > 50) {
+					int newVal = mainTickTimer.getDelay() - 10;
+					mainTickTimer.setDelay(50 < newVal ? newVal : 50);
+				}
+			}
+
+			if (mainTickTimer.getDelay() < 250) {
+				World.tick();
+			}
+
 			playerData.setText(getActivePlayerDataText());
 			mapPanel.repaint();
 
 			if (snowplowerPanel.isVisible()) {
 				snowplowerPanel.update();
 			}
+
 		});
 
 		mainTickTimer.start();

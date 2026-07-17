@@ -2,7 +2,7 @@
 - [ ] Privát dc csati
 - [ ] Adózás (mint az énekes?)
 - [ ] Minden nézzen ki szarul
-- [ ] Karambolkor az a greenscreen cop car játszódjon ée
+- [x] (Robbanás lett) Karambolkor az a greenscreen cop car játszódjon le
 - [ ] Valami minigame az unstuckhoz
 - [ ] Dbd skill check a kicsúszásra a buszhoz
 - [ ] Úgy összehívni a csapatot, hogy nem szólunk össze nekik, nem tudják hogy projlabos
@@ -16,7 +16,7 @@
 - [ ] Valami pirate dub mint mc ben de arra, hogy ha ráviszed egy felületelemre a kurzorodat, és ilyen yarr valami kalózos szóvicc path extend, ÉS HANGOt JáTSZIK LE mmint felveszem mikrofonon
 - [ ] Random common billentyűgomb kapcsolja be
 - [ ] Subway surfers a sarokban
-- [ ] ZA WARUDO vagy mit mondanak. Megállítás hangeffekttel szépen belassul, mint ahogy az idő abban megáll, elindulás ugyan úgy, hangeffekttel
+- [x] ZA WARUDO vagy mit mondanak. Megállítás hangeffekttel szépen belassul, mint ahogy az idő abban megáll, elindulás ugyan úgy, hangeffekttel
 - [ ] Skeleton átfut a képernyőn, 👀 láttátok?
 - [ ] Morgan freeman true 
 - [ ] A, I gombokat megnyomva lehessen beszélgetni valami self hosted ai al
@@ -28,4 +28,4 @@
 - [ ] -> Subway surfers, ami teljesen játszható, legalább coinnokkal, high score-al.
 - [ ] -> "Realisztikus mód", megnyomod a buszon, és van hangja amikor megáll, lehet állítani a zenét valami zenelejátszón, de torzul, mert egy busz zenelejátszója, utasok köhögnek, stb
 - [ ] Github action/rule: LGTM comment automatikusan mergeli a branchet a titkosba
-- [ ] Foxy jumpscare 1/10000
+- [x] (Van helyette gomb) Foxy jumpscare 1/10000
