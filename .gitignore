@@ -28,3 +28,6 @@ hs_err_pid*
 replay_pid*
 
 output.txt
+
+# Szerintem ezt nem kell belerakni, mindenki oldja meg magának
+/lib
